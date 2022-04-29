@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custommodel 
+name="TuneTo" parm1="35" parm2="22" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="" Antialias="1" StrandNames="" NodeNames="" CustomModel="4,5,,6,,7,,,15,,16,,,,35,,36,,37,38,,,,39,,40,,41,,,48,,49,,;,3,,,,8,,,14,,,17,,,33,,34,,,,,,,,,42,,,,47,,,,50,;,,,,,,,,,,19,,18,,,,32,,31,30,,,,,,,,,,,,,,,;,2,,,,9,,,13,,,,,22,25,,,,,,,,,,,43,,,,46,,,,51,;,,,,,,,,,,20,,,,23,,26,,,,,,,,,,,,,45,,,,52,;,1,,,,10,,11,12,,21,,,,24,,27,,28,29,,,,,,44,,,,,53,,54,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;92,,105,,106,,119,,120,,,,,133,,134,,147,,148,,161,,,,83,,82,,69,,68,,55,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;93,,104,,107,,118,,121,,,,,132,,135,,146,,149,,160,,,,84,,81,,70,,67,,56,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;94,,103,,108,,117,,122,,,,,131,,136,,145,,150,,159,,,,85,,80,,71,,66,,57,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;95,,102,,109,,116,,123,,,,,130,,137,,144,,151,,158,,,,86,,79,,72,,65,,58,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;96,,101,,110,,115,,124,,,,,129,,138,,143,,152,,157,,,,87,,78,,73,,64,,59,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;97,,100,,111,,114,,125,,,,,128,,139,,142,,153,,156,,91,,88,,77,,74,,63,,60,;,,,,,,,,,,,,,,,,,,,,,,,90,,,,,,,,,,,;98,,99,,112,,113,,126,,,,,127,,140,,141,,154,,155,,,,89,,76,,75,,62,,61," SourceVersion="2021.30"  >
+<subModel name="TuneToText" layout="horizontal" type="ranges" bufferstyle="Default" line0="1-54">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Dot" layout="horizontal" type="ranges" bufferstyle="Default" line0="90-91">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Lead8" layout="horizontal" type="ranges" bufferstyle="Default" line0="105-106,119,93,121,102,109,116,94,122,124-125,99,112-113,96-97">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Lead9" layout="horizontal" type="ranges" bufferstyle="Default" line0="105-106,119,93-94,102,109,116,123,121-122,124-126">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid0" layout="horizontal" type="ranges" bufferstyle="Default" line0="134,147-148,156-160,140-141,154,128-132">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid1" layout="horizontal" type="ranges" bufferstyle="Default" line0="141-147,140,154,135">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid2" layout="horizontal" type="ranges" bufferstyle="Default" line0="134,147-148,132,159-160,151,143,139,127,140-141,154-155">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid3" layout="horizontal" type="ranges" bufferstyle="Default" line0="134,147-148,159-160,144,151,156-157,140-141,154,128,132">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid4" layout="horizontal" type="ranges" bufferstyle="Default" line0="148-154,130,137,144,158,136,146">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid5" layout="horizontal" type="ranges" bufferstyle="Default" line0="133-134,147-148,161,131-132,136,145,150,156-158,140-141,154,128">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid6" layout="horizontal" type="ranges" bufferstyle="Default" line0="134,147-148,128-132,140-141,154,156-157,137,144,151">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid7" layout="horizontal" type="ranges" bufferstyle="Default" line0="133-134,147-148,161-160,150,144,138,128-127">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid8" layout="horizontal" type="ranges" bufferstyle="Default" line0="134,147-148,159-160,137,144,151,131-132,128-129,140-141,154,156-157">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mid9" layout="horizontal" type="ranges" bufferstyle="Default" line0="134,147-148,131-132,137,144,151,156-160,155">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Last1" layout="horizontal" type="ranges" bufferstyle="Default" line0="69-75,62,76,81">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Last3" layout="horizontal" type="ranges" bufferstyle="Default" line0="68-69,82,56-57,84,65,72,59-60,62,75-76,88">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Last5" layout="horizontal" type="ranges" bufferstyle="Default" line0="55,68-69,82-85,88,62,75-76,58-60,66,71,80">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Last7" layout="horizontal" type="ranges" bufferstyle="Default" line0="55,68-69,82-83,56,89-88,78,72,66">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Last9" layout="horizontal" type="ranges" bufferstyle="Default" line0="68-69,82,84-85,65,72,79,56-61">
+  <ControllerConnection/>
+</subModel>
+</custommodel>
