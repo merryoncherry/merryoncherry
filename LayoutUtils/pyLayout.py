@@ -559,6 +559,7 @@ if __name__ == '__main__':
                         required = True,
                         help='xlights_rgbeffects.xml input file')
     parser.add_argument('--outlayout', type=str, required=False, help='xlights_rgbeffects.xml output')
+    parser.add_argument('--transform', type=str, required = False, help='Transformations; semicolon-delimited list of rotx:<value>, roty:<value>, rotz:value, translate:<xvalue,yvalue,zvalue>, scale:<xvalue,yvalue,zvalue>')
 
     args = parser.parse_args()
 
@@ -566,19 +567,42 @@ if __name__ == '__main__':
     layout = xml.dom.minidom.parse(args.layout)
 
     TextRemover().removeText(layout)
-    txtz = PxTransformTranslate(0, 0, -300)
-    txsx = PxTransformScale(.5,  1,  1)
-    txsy = PxTransformScale( 1, .5,  1)
-    txsz = PxTransformScale( 1,  1, .5)
-    txrx = PxTransformRotate( 6,  0,  0)
-    txry = PxTransformRotate( 0, 30,  0)
-    txrz = PxTransformRotate( 0,  0, 10)
-    txs = []
-    txs.append(txtz)
-    txs.append(txry)
-    txs.append(txrx)
-    t = LayoutTransformVisitor(txs)
-    t.visitRoot(layout)
+
+    if (args.transform):
+        txs = []
+        txstrs = args.transform.split(';')
+        for txstr in txstrs:
+            parts = txstr.split(':')
+            if (len(parts) != 2):
+                raise Exception('transform option is semicolon-delimited list of command:arguments, but found: '+txstr)
+            cmd = parts[0]
+            carg = parts[1]
+            if cmd == 'translate':
+                tcs = carg.split(',')
+                if len(tcs) != 3:
+                    raise Exception('translate option takes x,y,z')
+                txs.append(PxTransformTranslate(float(tcs[0]), float(tcs[1]), float(tcs[2])));
+                pass
+            elif cmd == 'scale':
+                tcs = carg.split(',')
+                if len(tcs) != 3:
+                    raise Exception('translate option takes x,y,z')
+                txs.append(PxTransformScale(float(tcs[0]), float(tcs[1]), float(tcs[2])));
+                pass
+            elif cmd == 'rotx':
+                txs.append(PxTransformRotate(float(carg), 0, 0))
+                pass
+            elif cmd == 'roty':
+                txs.append(PxTransformRotate(0, float(carg), 0))
+                pass
+            elif cmd == 'rotz':
+                txs.append(PxTransformRotate(0, 0, float(carg)))
+                pass
+            else:
+                raise Exception("Not a valid command: "+cmd)
+
+        t = LayoutTransformVisitor(txs)
+        t.visitRoot(layout)
 
     if (args.outlayout):
         with open(args.outlayout,"w") as file_handle:
