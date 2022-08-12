@@ -495,7 +495,7 @@ class LayoutTransformVisitor(Visitor):
         # Scale comes first, then rotation, then location because scaling x always makes it wider
         # Right handed coordinates for rotation, application order X, Y, Z
         otype = vo.getAttribute('DisplayAs')
-        if (otype == 'Image'):
+        if (otype == 'Image' or otype == 'Terrian' or otype == 'Mesh'):
             self.processPSR(vo, 'WorldPosX', 'WorldPosY', 'WorldPosZ', 'ScaleX', 'ScaleY', 'ScaleZ', 'RotateX', 'RotateY', 'RotateZ')
         elif (otype == 'Ruler'): # Not clear if this is correct, but probably doesn't matter
             self.processPt(vo, 'WorldPosX', 'WorldPosY', 'WorldPosZ')
