@@ -27,7 +27,7 @@ import winreg
 # Make sure we're handling return codes
 # Batch render
 # Exercise all other xLights commands via whatever API they support
-# Consider xSchedule in separate dingus
+# Consider keeping xSchedule API in separate class from xLights API
 # Formal unit test package
 
 def getXLightsBinDir():
