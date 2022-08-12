@@ -1,3 +1,14 @@
+# Python module implementing calls to xLights, xSchedule, and xlDo,
+#  with the original intent of automating work, integrating show components,
+#  and regression testing.
+#
+# This module is nothing special, nothing you wouldn't have written yourself
+#     if you only had the time.  You may therefore use this under:
+#
+#   Unlicense (http://unlicense.org/)
+#     or
+#   Creative Commons CC0 (https://creativecommons.org/publicdomain/zero/1.0/legalcode)
+
 import argparse
 import json
 import os
@@ -11,8 +22,13 @@ import winreg
 # python Desktop\xlDo.py -b "M:\Users\Chuck\Source\Repos\xLights\xLights\x64\Release"
 
 # TODOs:
-# Put in version control once reasonably neat and tidy
-# Use xlDo to start xSchedule also
+# Use xlDo to start/stop xSchedule also
+# Do POSTs to xLights
+# Make sure we're handling return codes
+# Batch render
+# Exercise all other xLights commands via whatever API they support
+# Consider xSchedule in separate dingus
+# Formal unit test package
 
 def getXLightsBinDir():
     xlightsDir = "c:\\Program Files\\xLights"
@@ -79,8 +95,20 @@ class XLEnv:
         x = requests.post('http://'+self.xlhost+':'+str(self.xlport)+'/xlDoAutomation', json=cmdjson)
         return json.loads(x.text)
 
-    def xLightsHttp(self, cmd, params):
-        x = requests.get('http://'+self.xlhost+':'+str(self.xlport)+cmd, params=params)
+    def xLightsHttpGet(self, cmd, params):
+        # Sadly, requests uses '+' to escape spaces, xLights can only handle '%20'... so do this
+        # newcmd = urllib.parse.quote(cmd) # cmd better not need spaces fixed, or / goes too?
+        new_send_params = []
+        for (k, v) in params.items():
+            if not v:
+                continue
+            new_send_params.append(k + "=" + urllib.parse.quote(v))
+        x = requests.get('http://'+self.xlhost+':'+str(self.xlport)+'/'+cmd+'?'+('&'.join(new_send_params)))
+        return x.text
+
+    def xLightsHttpPost(self, cmd, cmdjson):
+        x = requests.post('http://'+self.xlhost+':'+str(self.xlport)+'/'+cmd, json=cmdjson)
+        #return json.loads(x.text)
         return x.text
 
     def xScheduleHttpGet(self, cmd, params):
@@ -112,7 +140,7 @@ class XLEnv:
         return self.xlDoHttpJ(j)["version"]
 
     def xlHttpVersion(self):
-        return self.xLightsHttp('/getVersion', {})
+        return self.xLightsHttpGet('/getVersion', {})
 
     def startXLightsInternal(self, knownNotRunning):
         if knownNotRunning:
@@ -174,8 +202,8 @@ class XLEnv:
             self.startXScheduleInternal(False)
         self.xscheduleRunning = 1;
 
-    def batchRenderSeqList(self, seqs):
-        self.startXLights();
+    def batchRenderSeqListCmd(self, seqs):
+        #self.startXLights();
         cmd = '{"cmd":"batchRender", "seqs":['
         i = 0
         for s in seqs:
@@ -185,6 +213,21 @@ class XLEnv:
             cmd = cmd + '"' + s + '"'
         cmd = cmd + '], "promptIssues":"false"}'
         self.xlDoCmd(cmd)
+
+    def batchRenderSeqList(self, seqs):
+        cmd = {"cmd":"batchRender", "seqs":seqs}
+        x = self.xlDoHttpJ(cmd)
+        return x['msg']
+
+    def loopRenderSeqList(self, seqs):
+        for x in seqs:
+            x = self.xLightsHttpPost('openSequence', {'seq':x, 'promptIssues':'false', 'force':'true'})
+            print(x)
+            x = self.xLightsHttpGet('renderAll', {'seq':x, 'highdef':'true'})
+            print(x)
+            x = self.xLightsHttpGet('closeSequence', {'quiet':'true', 'force':'true'})
+            print(x)
+        pass
 
 #    def renderSeqList(self, seqs):
 #        self.startXLights();
@@ -202,6 +245,7 @@ class XLEnv:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     addXLEnvArgs(parser)
+    parser.add_argument('flist', nargs='*', help='list of arguments for command')
     args = parser.parse_args()
 
     xlenv = XLEnv()
@@ -229,4 +273,13 @@ if __name__ == '__main__':
     #print("xLights running: "+str(xlenv.isXLightsRunning(False)))
     #print("xLights running: "+str(xlenv.isXLightsRunning(True))) # This gets wrong answer
 
-    print ("start xSchedule: "+str(xlenv.startXSchedule()))
+    #print ("start xSchedule: "+str(xlenv.startXSchedule()))
+
+    stopXL = False
+    if not xlenv.isXLightsRunning(False):
+        xlenv.startXLights()
+        stopXL = True
+    #x = xlenv.batchRenderSeqList(['CaneMatrix.xsq', 'EffectsOnStars.xsq', 'ShockwaveOnFlakes.xsq'])
+    #x = xlenv.batchRenderSeqList(args.flist)
+    x = xlenv.loopRenderSeqList(['CaneMatrix.xsq', 'EffectsOnStars.xsq', 'ShockwaveOnFlakes.xsq'])
+    print(x)
