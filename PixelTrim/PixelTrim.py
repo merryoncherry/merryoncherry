@@ -1,3 +1,12 @@
+# Python module implementing combining a lot of little xlights custom models into a big one
+#
+# This module is nothing special, nothing you wouldn't have written yourself
+#     if you only had the time.  You may therefore use this under:
+#
+#   Unlicense (http://unlicense.org/)
+#     or
+#   Creative Commons CC0 (https://creativecommons.org/publicdomain/zero/1.0/legalcode)
+
 import copy
 import xml.dom.minidom
 

@@ -1,3 +1,14 @@
+# Python module implementing transformations of the xLights rgbeffects XML file.
+#  The original intent was 3D transformations of the layout, bulk edits, having multiple
+#   show configurations in the same file, etc.
+#
+# This module is nothing special, nothing you wouldn't have written yourself
+#     if you only had the time.  You may therefore use this under:
+#
+#   Unlicense (http://unlicense.org/)
+#     or
+#   Creative Commons CC0 (https://creativecommons.org/publicdomain/zero/1.0/legalcode)
+
 import argparse
 import math
 import sys
