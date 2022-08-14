@@ -9,6 +9,12 @@
 #     or
 #   Creative Commons CC0 (https://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
+#
+# TODO: Make models/3d objects/groups active/inactive / delete
+# TODO: Filter out objects by group or tag (disable or remove)
+# TODO: Merge in controller information
+#
+
 import argparse
 import math
 import sys
@@ -396,6 +402,53 @@ class Visitor:
         self.visitxrgb(n.documentElement)
         pass
 
+class Selection(Visitor):
+    def __init__(self):
+        #self.modelnames = []
+        self.models = {}
+        #self.groupnames = []
+        self.groups = {}
+        #self.objnames = []
+        self.objs = {}
+        self.seltyp = ''
+        self.selval = ''
+        self.layout = None
+
+    def select(self, layout, sel):
+        ss = sel.split('=')
+        self.seltyp = ss[0]
+        if (len(ss) > 1):
+            self.selval = ss[1]
+        self.layout = layout
+        self.visitRoot(layout)
+
+    def addGroup(self, g):
+        self.groups[g.getAttribute('name')] = g
+
+    def addObject(self, o):
+        self.objs[o.getAttribute('name')] = o
+
+    def addModel(self, m):
+        self.models[m.getAttribute('name')] = m
+
+    def visitmodelGroup(self, g):
+        if (self.seltyp == 'Type' and self.selval == 'Group'):
+            self.addGroup(g)
+            return
+        pass
+
+    def visitview_object(self, o):
+        if (self.seltyp == 'Type' and self.selval == 'Obj'):
+            self.addObject(o)
+            return
+        pass
+
+    def visitmodel(self, m):
+        if (self.seltyp == 'Type' and self.selval == 'Model'):
+            self.addModel(m)
+#Model=<regex>, Group=<regex>, Obj=<regex>, TagColor=r,g,b, InactiveModel, InactiveObj, Type=<type>
+
+
 class LayoutTransformVisitor(Visitor):
     def __init__(self, transformers):
         super().__init__()
@@ -570,7 +623,8 @@ if __name__ == '__main__':
                         required = True,
                         help='xlights_rgbeffects.xml input file')
     parser.add_argument('--outlayout', type=str, required=False, help='xlights_rgbeffects.xml output')
-    parser.add_argument('--transform', type=str, required = False, help='Transformations; semicolon-delimited list of rotx:<value>, roty:<value>, rotz:value, translate:<xvalue,yvalue,zvalue>, scale:<xvalue,yvalue,zvalue>')
+    parser.add_argument('--transform', type=str, required=False, help='Transformations; semicolon-delimited list of rotx:<value>, roty:<value>, rotz:value, translate:<xvalue,yvalue,zvalue>, scale:<xvalue,yvalue,zvalue>')
+    parser.add_argument('--edit', type=str, required=False, help='Edits; semicolon-delimited list of edits to make; each edit is <selection>:<action>:arguments.  <selection> is: Model=<regex>, Group=<regex>, Obj=<regex>, TagColor=r,g,b, InactiveModel, InactiveObj, Type=<type>; Action/arguments is one of: active:<true/false>, brighten:<percent, less than 100% is darken>, setbrightness:value, delete:true')
 
     args = parser.parse_args()
 
@@ -614,6 +668,31 @@ if __name__ == '__main__':
 
         t = LayoutTransformVisitor(txs)
         t.visitRoot(layout)
+
+    if (args.edit):
+        edstrs = args.edit.split(';')
+        for editstr in edstrs:
+            parts = editstr.split(':')
+            if (len(parts) != 3):
+                raise Exception('edit option is semicolon-delimited list select:command:arg, but found: '+editstr)
+            sel = parts[0]
+            cmd = parts[1]
+            cmdarg = parts[2]
+            s = Selection()
+            s.select(layout, sel)
+            if (cmd.lower() == 'brighten' or cmd.lower() == 'darken'):
+                bs = float(cmdarg)
+                for x in s.objs.values():
+                    bright = 100.0
+                    if (x.hasAttribute('Brightness')):
+                        bright = float(x.getAttribute('Brightness'))
+                    x.setAttribute('Brightness', str(bright*bs / 100))
+                for x in s.models.values():
+                    bright = 100.0
+                    if (x.hasAttribute('Brightness')):
+                        bright = float(x.getAttribute('Brightness'))
+                    x.setAttribute('Brightness', str(bright*bs / 100.0))
+
 
     if (args.outlayout):
         with open(args.outlayout,"w") as file_handle:
