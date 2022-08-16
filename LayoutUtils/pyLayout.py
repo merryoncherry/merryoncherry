@@ -17,6 +17,7 @@
 
 import argparse
 import math
+import re
 import sys
 import xml.dom.minidom
 
@@ -438,14 +439,16 @@ class Selection(Visitor):
         pass
 
     def visitview_object(self, o):
-        if (self.seltyp == 'Type' and self.selval == 'Obj'):
+        if (self.seltyp == 'Type' and (self.selval == 'Obj' or self.selval == o.getAttribute('DisplayAs'))):
             self.addObject(o)
             return
         pass
 
     def visitmodel(self, m):
-        if (self.seltyp == 'Type' and self.selval == 'Model'):
+        if (self.seltyp == 'Type' and (self.selval == 'Model' or self.selval == m.getAttribute('DisplayAs'))):
             self.addModel(m)
+            return
+        pass
 #Model=<regex>, Group=<regex>, Obj=<regex>, TagColor=r,g,b, InactiveModel, InactiveObj, Type=<type>
 
 
@@ -692,6 +695,14 @@ if __name__ == '__main__':
                     if (x.hasAttribute('Brightness')):
                         bright = float(x.getAttribute('Brightness'))
                     x.setAttribute('Brightness', str(bright*bs / 100.0))
+            if (cmd.lower() == 'active'):
+                val = '1'
+                if (cmdarg == '0' or cmdarg.lower()[0] == 'f'):
+                    val = '0'
+                for x in s.objs.values():
+                    x.setAttribute('Active', val)
+                for x in s.models.values():
+                    x.setAttribute('Active', val)
 
 
     if (args.outlayout):
