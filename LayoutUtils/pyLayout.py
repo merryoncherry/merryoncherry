@@ -10,8 +10,8 @@
 #   Creative Commons CC0 (https://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
 #
-# TODO: Make models/3d objects/groups active/inactive / delete
-# TODO: Filter out objects by group or tag (disable or remove)
+# TODO: Add group members
+# TODO: delete items
 # TODO: Merge in controller information
 #
 
@@ -405,23 +405,32 @@ class Visitor:
 
 class Selection(Visitor):
     def __init__(self):
-        #self.modelnames = []
         self.models = {}
-        #self.groupnames = []
         self.groups = {}
-        #self.objnames = []
         self.objs = {}
+        self.resolveGroups = False
+        self.resolveNames = {} # Searching this iteration
+        self.nextResolveNames = {} # To find next iteration
+        self.resolvedNames = {} # Found past iterations
         self.seltyp = ''
         self.selval = ''
         self.layout = None
 
     def select(self, layout, sel):
+        # Do initial selection
         ss = sel.split('=')
         self.seltyp = ss[0]
         if (len(ss) > 1):
             self.selval = ss[1]
         self.layout = layout
         self.visitRoot(layout)
+        # Resolve group members
+        while self.nextResolveNames:
+            self.resolveGroups = True
+            self.resolveNames = self.nextResolveNames
+            self.nextResolveNames = {}
+            self.visitRoot(layout)
+            self.resolveGroups = False
 
     def addGroup(self, g):
         self.groups[g.getAttribute('name')] = g
@@ -433,19 +442,65 @@ class Selection(Visitor):
         self.models[m.getAttribute('name')] = m
 
     def visitmodelGroup(self, g):
-        if (self.seltyp == 'Type' and self.selval == 'Group'):
+        if (self.resolveGroups):
+            on = g.getAttribute('name')
+            if on in self.resolveNames:
+                if on in self.resolvedNames:
+                    return
+                self.resolvedNames[on] = on
+                self.addGroup(g)
+                for n in g.getAttribute('models').split(','):
+                    nn = n.split('/')[0]
+                    if nn not in self.resolvedNames and nn not in self.resolveNames:
+                        self.nextResolveNames[nn] = nn
+            return;
+        if (self.seltyp.lower() == 'type' and self.selval.lower() == 'group'):
+            self.addGroup(g)
+            return
+        if (self.seltyp.lower() == 'group' and re.match(self.selval, g.getAttribute('name'))):
+            self.addGroup(g)
+            return
+        if (self.seltyp.lower() == 'ingroup' and re.match(self.selval, g.getAttribute('name'))):
+            for n in g.getAttribute('models').split(','):
+                nn = n.split('/')[0]
+                self.nextResolveNames[nn] = nn
+            return
+        if ((self.seltyp.lower() == 'tagcolour' or self.seltyp.lower() == 'tagcolor') and g.hasAttribute('TagColour') and g.getAttribute('TagColour') == self.selval):
             self.addGroup(g)
             return
         pass
 
     def visitview_object(self, o):
-        if (self.seltyp == 'Type' and (self.selval == 'Obj' or self.selval == o.getAttribute('DisplayAs'))):
+        if (self.seltyp.lower() == 'type' and (self.selval.lower() == 'obj' or self.selval.lower() == o.getAttribute('DisplayAs').lower())):
+            self.addObject(o)
+            return
+        if (self.seltyp.lower() == 'obj' and re.match(self.selval, o.getAttribute('name'))):
+            self.addObject(o)
+            return
+        if (self.seltyp.lower() == 'inactiveobj' and o.hasAttribute('Active') and o.getAttribute('Active') == '0'):
             self.addObject(o)
             return
         pass
 
     def visitmodel(self, m):
-        if (self.seltyp == 'Type' and (self.selval == 'Model' or self.selval == m.getAttribute('DisplayAs'))):
+        if (self.resolveGroups):
+            on = m.getAttribute('name')
+            if on in self.resolveNames:
+                if on in self.resolvedNames:
+                    return
+                self.resolvedNames[on] = on
+                self.addModel(m)
+            return;
+        if (self.seltyp.lower() == 'type' and (self.selval.lower() == 'model' or self.selval.lower() == m.getAttribute('DisplayAs').lower())):
+            self.addModel(m)
+            return
+        if (self.seltyp.lower() == 'model' and re.match(self.selval, m.getAttribute('name'))):
+            self.addModel(m)
+            return
+        if (self.seltyp.lower() == 'inactivemodel' and m.hasAttribute('Active') and m.getAttribute('Active') == '0'):
+            self.addModel(m)
+            return
+        if ((self.seltyp.lower() == 'tagcolour' or self.seltyp.lower() == 'tagcolor') and m.hasAttribute('TagColour') and m.getAttribute('TagColour') == self.selval):
             self.addModel(m)
             return
         pass
@@ -627,7 +682,7 @@ if __name__ == '__main__':
                         help='xlights_rgbeffects.xml input file')
     parser.add_argument('--outlayout', type=str, required=False, help='xlights_rgbeffects.xml output')
     parser.add_argument('--transform', type=str, required=False, help='Transformations; semicolon-delimited list of rotx:<value>, roty:<value>, rotz:value, translate:<xvalue,yvalue,zvalue>, scale:<xvalue,yvalue,zvalue>')
-    parser.add_argument('--edit', type=str, required=False, help='Edits; semicolon-delimited list of edits to make; each edit is <selection>:<action>:arguments.  <selection> is: Model=<regex>, Group=<regex>, Obj=<regex>, TagColor=r,g,b, InactiveModel, InactiveObj, Type=<type>; Action/arguments is one of: active:<true/false>, brighten:<percent, less than 100% is darken>, setbrightness:value, delete:true')
+    parser.add_argument('--edit', type=str, required=False, help='Edits; semicolon-delimited list of edits to make; each edit is <selection>:<action>:arguments.  <selection> is: Model=<regex>, Group=<regex>, InGroup=<regex>, Obj=<regex>, TagColour=rgb(r, g, b), InactiveModel, InactiveObj, Type=<type>; Action/arguments is one of: active:<true/false>, brighten:<percent, less than 100% is darken>, setbrightness:value, delete:true')
 
     args = parser.parse_args()
 
