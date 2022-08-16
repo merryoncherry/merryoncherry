@@ -10,8 +10,6 @@
 #   Creative Commons CC0 (https://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
 #
-# TODO: Add group members
-# TODO: delete items
 # TODO: Merge in controller information
 #
 
@@ -219,13 +217,6 @@ class PxTransformRotate(PxTransformBase):
         (x, y, z) = pt;
         return PxTransformBase.rotate(x, y, z, self.rx, self.ry, self.rz)
 
-    #def transformPtScaleRot(self, vec):
-    #    (x, y, z, sx, sy, sz, rx, ry, rz) = vec
-    #    (x, y, z) =  PxTransformBase.rotate(x, y, z, self.rx, self.ry, self.rz)
-    #    # TODO This is wrong if it is a variety of things because of how it is applied
-    #    return (x, y, z, sx, sy, sz, rx+self.rx, ry+self.ry, rz+self.rz)
-
-
 class Visitor:
     def __init__(self):
         pass
@@ -269,7 +260,6 @@ class Visitor:
         pass
 
     def visitmodelGroup(self, mg):
-        # TODO: This needs a lot of work for rotator / deleter / renamer
         #self.printNode(mg)
         pass
 
@@ -281,7 +271,6 @@ class Visitor:
                 self.visitmodelGroup(mg)
 
     def visitmodel(self, m):
-        # TODO: This needs a lot of work for rotator / deleter
         #self.printNode(m)
         pass
 
@@ -673,6 +662,140 @@ class LayoutTransformVisitor(Visitor):
             raise Exception("Didn't know how to process layout model type: "+mtype)
         pass
 
+class Mutator:
+    def __init__(self):
+        pass
+
+    def printNode(self, n):
+        print(n.toprettyxml())
+
+    def visitmodelGroup(self, mg):
+        #self.printNode(mg)
+        return True
+
+    def visitmodelGroups(self, n):
+        if (n.attributes):
+            raise Exception("Unexpected attributes in node tag: "+n.tagName)
+        removes = []
+        for mg in n.childNodes:
+            if mg.nodeType == xml.dom.Node.ELEMENT_NODE:
+                if not self.visitmodelGroup(mg):
+                    removes.append(mg)
+        for m in removes:
+            mg.removeChild(m)
+            m.unlink()
+
+    def visitmodel(self, m):
+        return True
+
+    def visitmodels(self, n):
+        if (n.attributes):
+            raise Exception("Unexpected attributes in node tag: "+n.tagName)
+        removes = []
+        for m in n.childNodes:
+            if m.nodeType == xml.dom.Node.ELEMENT_NODE:
+                if not self.visitmodel(m):
+                    removes.append(m)
+        for m in removes:
+            n.removeChild(m)
+            m.unlink()
+
+    def visitview_object(self, vo):
+        return True
+
+    def visitview_objects(self, n):
+        if (n.attributes):
+            raise Exception("Unexpected attributes in node tag: "+n.tagName)
+        removes = []
+        for vo in n.childNodes:
+            if vo.nodeType == xml.dom.Node.ELEMENT_NODE:
+                if not self.visitview_object(vo):
+                    removes.append(vo)
+        for vo in removes:
+            n.removeChild(vo)
+            vo.unlink()
+        pass
+
+    def visitxrgb(self, n):
+        if (n.tagName != 'xrgb'):
+            raise Exception('Root not "xrgb"')
+        for attrName, attrValue in n.attributes.items():
+            raise Exception('Root "xrgb" unexpected attribute "'+attrName+'"')
+        for cn in n.childNodes:
+            if (cn.nodeType == xml.dom.Node.ELEMENT_NODE):
+                if (cn.tagName == 'colors'):
+                    pass
+                elif (cn.tagName == 'effects'):
+                    pass
+                elif (cn.tagName == 'layoutGroups'):
+                    pass
+                elif (cn.tagName == 'modelGroups'):
+                    self.visitmodelGroups(cn)
+                elif (cn.tagName == 'models'):
+                    self.visitmodels(cn)
+                elif (cn.tagName == 'palettes'):
+                    pass
+                elif (cn.tagName == 'perspectives'):
+                    pass
+                elif (cn.tagName == 'settings'):
+                    pass
+                elif (cn.tagName == 'views'):
+                    pass
+                elif (cn.tagName == 'view_objects'):
+                    self.visitview_objects(cn)
+                elif (cn.tagName == 'Viewpoints'):
+                    pass
+                else:
+                    raise Exception("Unexpected xrgb node tag: "+cn.tagName)
+                pass
+            elif (cn.nodeType == xml.dom.Node.ATTRIBUTE_NODE):
+                pass
+            elif (cn.nodeType == xml.dom.Node.TEXT_NODE):
+                pass
+            else:
+                # CDATA_SECTION_NODE, ENTITY_NODE, PROCESSING_INSTRUCTION_NODE, COMMENT_NODE, DOCUMENT_NODE, DOCUMENT_TYPE_NODE, NOTATION_NODE
+                raise Exception('Strange node type: '+str(cn.nodeType))
+
+    def visitRoot(self, n):
+        self.visitxrgb(n.documentElement)
+        pass
+
+class Deleter(Mutator):
+    def __init__(self):
+        self.sel = None
+        self.layout = None
+        pass
+
+    def visitmodelGroup(self, mg):
+        if mg.getAttribute('name') in self.sel.groups:
+            return False # delete
+        #filter
+        om = mg.getAttribute('models')
+        nm = ""
+        for mn in om.split(','):
+            pmn = mn.split('/')[0]
+            if pmn in self.sel.models:
+                continue
+            if pmn in self.sel.groups:
+                continue
+            if pmn in self.sel.objs:
+                continue
+            if nm:
+                nm = nm + ','
+            nm = nm + mn
+        mg.setAttribute('models', nm)
+        return True
+
+    def visitmodel(self, m):
+        return m.getAttribute('name') not in self.sel.models
+
+    def visitview_object(self, o):
+        return o.getAttribute('name') not in self.sel.objs
+
+    def delete(self, layout, sel):
+        self.sel = sel
+        self.visitRoot(layout)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='xLights layout parser and transformer')
@@ -758,7 +881,11 @@ if __name__ == '__main__':
                     x.setAttribute('Active', val)
                 for x in s.models.values():
                     x.setAttribute('Active', val)
-
+            if (cmd.lower() == 'delete' and (cmdarg.lower()[0] == 't' or cmdarg[0] == '1')):
+                dlt = Deleter()
+                dlt.delete(layout, s)
+                # Go through groups and delete stuff from 'models'
+                # Go through models/groups/objs and delete stuff
 
     if (args.outlayout):
         with open(args.outlayout,"w") as file_handle:
