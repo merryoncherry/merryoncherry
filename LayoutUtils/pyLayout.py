@@ -716,6 +716,22 @@ class Mutator:
             vo.unlink()
         pass
 
+    def visitView(self, n):
+        return True
+
+    def visitViews(self, n):
+        if (n.attributes):
+            raise Exception("Unexpected attributes in node tag: "+n.tagName)
+        removes = []
+        for vi in n.childNodes:
+            if vi.nodeType == xml.dom.Node.ELEMENT_NODE:
+                if not self.visitView(vi):
+                    removes.append(vi)
+        for vi in removes:
+            n.removeChild(vi)
+            vi.unlink()
+        pass
+
     def visitxrgb(self, n):
         if (n.tagName != 'xrgb'):
             raise Exception('Root not "xrgb"')
@@ -740,7 +756,7 @@ class Mutator:
                 elif (cn.tagName == 'settings'):
                     pass
                 elif (cn.tagName == 'views'):
-                    pass
+                    self.visitViews(cn);
                 elif (cn.tagName == 'view_objects'):
                     self.visitview_objects(cn)
                 elif (cn.tagName == 'Viewpoints'):
@@ -766,13 +782,9 @@ class Deleter(Mutator):
         self.layout = None
         pass
 
-    def visitmodelGroup(self, mg):
-        if mg.getAttribute('name') in self.sel.groups:
-            return False # delete
-        #filter
-        om = mg.getAttribute('models')
+    def pruneList(self, mlist):
         nm = ""
-        for mn in om.split(','):
+        for mn in mlist.split(','):
             pmn = mn.split('/')[0]
             if pmn in self.sel.models:
                 continue
@@ -783,6 +795,14 @@ class Deleter(Mutator):
             if nm:
                 nm = nm + ','
             nm = nm + mn
+        return nm
+
+    def visitmodelGroup(self, mg):
+        if mg.getAttribute('name') in self.sel.groups:
+            return False # delete
+        #filter
+        om = mg.getAttribute('models')
+        nm = self.pruneList(om)
         mg.setAttribute('models', nm)
         return True
 
@@ -791,6 +811,12 @@ class Deleter(Mutator):
 
     def visitview_object(self, o):
         return o.getAttribute('name') not in self.sel.objs
+
+    def visitView(self, v):
+        om = v.getAttribute('models')
+        nm = self.pruneList(om)
+        v.setAttribute('models', nm)
+        return True
 
     def delete(self, layout, sel):
         self.sel = sel
