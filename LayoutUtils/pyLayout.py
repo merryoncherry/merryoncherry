@@ -17,6 +17,7 @@ import argparse
 import math
 import re
 import sys
+import textwrap
 import xml.dom.minidom
 
 class TextRemover:
@@ -831,7 +832,28 @@ if __name__ == '__main__':
                         help='xlights_rgbeffects.xml input file')
     parser.add_argument('--outlayout', type=str, required=False, help='xlights_rgbeffects.xml output')
     parser.add_argument('--transform', type=str, required=False, help='Transformations; semicolon-delimited list of rotx:<value>, roty:<value>, rotz:value, translate:<xvalue,yvalue,zvalue>, scale:<xvalue,yvalue,zvalue>')
-    parser.add_argument('--edit', type=str, required=False, help='Edits; semicolon-delimited list of edits to make; each edit is <selection>:<action>:arguments.  <selection> is: Model=<regex>, Group=<regex>, InGroup=<regex>, Obj=<regex>, TagColour=rgb(r, g, b), InactiveModel, InactiveObj, Type=<type>; Action/arguments is one of: active:<true/false>, brighten:<percent, less than 100% is darken>, setbrightness:value, delete:true')
+    parser.add_argument('--edit', type=str, required=False, help=textwrap.dedent('''\
+        Edits: semicolon-delimited list of edits to make.
+        Each edit of is <selection>:<action>:<arguments>.
+
+        selection is one of:
+        --------------------------------
+            Model=<regex>
+            Group=<regex>
+            InGroup=<regex>
+            Obj=<regex>
+            TagColour=rgb(r, g, b)
+            InactiveModel
+            InactiveObj
+            Type=<type>
+            
+        Action/arguments is one of:
+        --------------------------------
+            active:<true/false>,
+            brighten:<percent, less than 100% is darken>,
+            setbrightness:value,
+            delete:true')
+    '''))
 
     args = parser.parse_args()
 
