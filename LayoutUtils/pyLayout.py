@@ -825,14 +825,22 @@ class Deleter(Mutator):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='xLights layout parser and transformer')
-    parser.add_argument('--layout', type=str, # nargs='+',
-                        #nargs = 1,
-                        required = True,
-                        help='xlights_rgbeffects.xml input file')
-    parser.add_argument('--outlayout', type=str, required=False, help='xlights_rgbeffects.xml output')
-    parser.add_argument('--transform', type=str, required=False, help='Transformations; semicolon-delimited list of rotx:<value>, roty:<value>, rotz:value, translate:<xvalue,yvalue,zvalue>, scale:<xvalue,yvalue,zvalue>')
-    parser.add_argument('--edit', type=str, required=False, help=textwrap.dedent('''\
+    parser = argparse.ArgumentParser(description=textwrap.dedent('''\
+        xLights layout file processing, for bulk editing and transforming layout elements,
+            in ways tough to accomplish with xLights by itself.
+
+        Not all operations will leave your layout in a consistent state, and beware networks
+            xml file is not updated.  Keep lots of backup copies.
+
+        General overview:
+            Layout is read in from --layout
+            If data is to be merged in from another layout file, specify with --mergelayout
+            If --transform was asked to perform 3D transformations, perform them
+            If --edit was specified, perform edits
+            If --mergecontrollers was specified, merge in controller information
+            If --outlayout was specified, write the resulting layout to a file
+
+
         Edits: semicolon-delimited list of edits to make.
         Each edit of is <selection>:<action>:<arguments>.
 
@@ -849,11 +857,19 @@ if __name__ == '__main__':
             
         Action/arguments is one of:
         --------------------------------
-            active:<true/false>,
-            brighten:<percent, less than 100% is darken>,
-            setbrightness:value,
-            delete:true')
-    '''))
+            active:<true/false> - Sets the active checkbox
+            brighten:<percent, less than 100%% is darken> - This is the appearance, not what is sent to the controller
+            setbrightness:value - This is the appearance brightness, not what is sent to controller
+            delete:true - This will remove models from the layout
+        '''),
+        formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('--layout', type=str, # nargs='+',
+                        #nargs = 1,
+                        required = True,
+                        help='xlights_rgbeffects.xml input file')
+    parser.add_argument('--outlayout', type=str, required=False, help='xlights_rgbeffects.xml output')
+    parser.add_argument('--transform', type=str, required=False, help='Transformations; semicolon-delimited list of rotx:<value>, roty:<value>, rotz:value, translate:<xvalue,yvalue,zvalue>, scale:<xvalue,yvalue,zvalue>')
+    parser.add_argument('--edit', type=str, required=False, help='''Edits: semicolon-delimited list of edits to make.  Each edit of is <selection>:<action>:<arguments>; see description above.''')
 
     args = parser.parse_args()
 
