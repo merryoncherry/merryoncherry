@@ -863,6 +863,8 @@ if __name__ == '__main__':
             active:<true/false> - Sets the active checkbox
             brighten:<percent, less than 100%% is darken> - This is the appearance, not what is sent to the controller
             setbrightness:value - This is the appearance brightness, not what is sent to controller
+            dimcurveall:<brightness,gamma> - set the brightness (+/- 100)/gamma for all colors together
+            dimcurvergb:<red_bright,red_gamma,green_bright,green_gamma,blue_bright,blue_gamma> - per-color dim curve
             delete:true - This will remove models from the layout
         '''),
         formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -929,6 +931,7 @@ if __name__ == '__main__':
             cmdarg = parts[2]
             s = Selection()
             s.select(layout, sel)
+
             if (cmd.lower() == 'brighten' or cmd.lower() == 'darken'):
                 bs = float(cmdarg)
                 for x in s.objs.values():
@@ -941,6 +944,47 @@ if __name__ == '__main__':
                     if (x.hasAttribute('Brightness')):
                         bright = float(x.getAttribute('Brightness'))
                     x.setAttribute('Brightness', str(bright*bs / 100.0))
+
+            if (cmd.lower() == 'dimcurveall'):
+                cparts = cmdarg.split(',')
+                if (len(cparts) != 2):
+                    raise Exception('dimcurveall requires brightness,gamma')
+                for x in s.models.values():
+                    dcs = x.getElementsByTagName('dimmingCurve')
+                    for dc in dcs:
+                        x.removeChild(dc)
+                        dc.unlink
+                    ndc = layout.createElement('dimmingCurve')
+                    ndca = layout.createElement('all')
+                    ndca.setAttribute('brightness',cparts[0])
+                    ndca.setAttribute('gamma',cparts[1])
+                    ndc.appendChild(ndca)
+                    x.appendChild(ndc)
+
+            if (cmd.lower() == 'dimcurvergb'):
+                cparts = cmdarg.split(',')
+                if (len(cparts) != 6):
+                    raise Exception('dimcurvergb requires brightness,gamma x3 (r,g,b)')
+                for x in s.models.values():
+                    dcs = x.getElementsByTagName('dimmingCurve')
+                    for dc in dcs:
+                        x.removeChild(dc)
+                        dc.unlink
+                    ndc = layout.createElement('dimmingCurve')
+                    ndcr = layout.createElement('red')
+                    ndcr.setAttribute('brightness',cparts[0])
+                    ndcr.setAttribute('gamma',cparts[1])
+                    ndc.appendChild(ndcr)
+                    ndcg = layout.createElement('green')
+                    ndcg.setAttribute('brightness',cparts[2])
+                    ndcg.setAttribute('gamma',cparts[3])
+                    ndc.appendChild(ndcg)
+                    ndcb = layout.createElement('blue')
+                    ndcb.setAttribute('brightness',cparts[4])
+                    ndcb.setAttribute('gamma',cparts[5])
+                    ndc.appendChild(ndcb)
+                    x.appendChild(ndc)
+
             if (cmd.lower() == 'active'):
                 val = '1'
                 if (cmdarg == '0' or cmdarg.lower()[0] == 'f'):
@@ -949,6 +993,7 @@ if __name__ == '__main__':
                     x.setAttribute('Active', val)
                 for x in s.models.values():
                     x.setAttribute('Active', val)
+
             if (cmd.lower() == 'delete' and (cmdarg.lower()[0] == 't' or cmdarg[0] == '1')):
                 dlt = Deleter()
                 dlt.delete(layout, s)
