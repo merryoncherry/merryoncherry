@@ -9,10 +9,6 @@
 #     or
 #   Creative Commons CC0 (https://creativecommons.org/publicdomain/zero/1.0/legalcode)
 
-#
-# TODO: Merge in controller information
-#
-
 import argparse
 import math
 import re
@@ -840,7 +836,6 @@ if __name__ == '__main__':
             Layout is read in from --layout
             If --transform was asked to perform 3D transformations, perform them
             If --edit was specified, perform edits
-            If --mergecontrollers was specified, merge in controller information from specified file
             If --outlayout was specified, write the resulting layout to a file
 
 
@@ -875,7 +870,6 @@ if __name__ == '__main__':
     parser.add_argument('--outlayout', type=str, required=False, help='xlights_rgbeffects.xml output')
     parser.add_argument('--transform', type=str, required=False, help='Transformations; semicolon-delimited list of rotx:<value>, roty:<value>, rotz:value, translate:<xvalue,yvalue,zvalue>, scale:<xvalue,yvalue,zvalue>')
     parser.add_argument('--edit', type=str, required=False, help='''Edits: semicolon-delimited list of edits to make.  Each edit of is <selection>:<action>:<arguments>; see description above.''')
-    parser.add_argument('--mergecontrollers', type=str, required=False, help='If set, merge controller connections and settings from XML file')
 
     args = parser.parse_args()
 
@@ -997,9 +991,6 @@ if __name__ == '__main__':
             if (cmd.lower() == 'delete' and (cmdarg.lower()[0] == 't' or cmdarg[0] == '1')):
                 dlt = Deleter()
                 dlt.delete(layout, s)
-
-    if (args.mergecontrollers):
-        mergelayout = xml.dom.minidom.parse(args.mergelayout)
 
     if (args.outlayout):
         with open(args.outlayout,"w") as file_handle:
