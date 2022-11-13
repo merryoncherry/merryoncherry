@@ -107,7 +107,10 @@ class XLEnv:
         return x.text
 
     def xLightsHttpPost(self, cmd, cmdjson):
-        x = requests.post('http://'+self.xlhost+':'+str(self.xlport)+'/'+cmd, json=cmdjson)
+        #dstr = json.dumps(cmdjson)
+        #print(dstr)
+        hdrs = {'Content-Type': 'application/json'}
+        x = requests.post('http://'+self.xlhost+':'+str(self.xlport)+'/'+cmd, json=cmdjson, headers=hdrs)
         #return json.loads(x.text)
         return x.text
 
@@ -196,6 +199,7 @@ class XLEnv:
         return rv
 
     def changeShowFolder(self):
+        #print ("Change show folder to: "+self.data)
         x = self.xLightsHttpPost('changeShowFolder', {"folder":self.data, "force":"true"})
         print (x)
 
