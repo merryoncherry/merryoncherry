@@ -14,7 +14,7 @@ subprocess.run([
     "LayoutUtils/pyLayout.py", 
     "--layout="+srcrgb,
     "--outlayout="+intrgb,
-    "--edit=InGroup=OnlyForXmas:Delete:true;InGroup=OnlyForFuture:Delete:true;Type=Obj:Brighten:30;Obj=.*_Xmas:Active:false;Model=.*:dimcurveall:0,2.3;Model=TreeFence:dimcurvergb:-14,2.5,0,2.5,0,2.5;Model=MainMatrix:dimcurveall:-60,2.5;Model=Arch Hedge.*:dimcurveall:-60,2.3",
+    "--edit=InGroup=OnlyForXmas:Delete:true;InGroup=OnlyForFuture:Delete:true;Type=Obj:Brighten:30;Obj=.*_Xmas:Active:false;Model=.*:dimcurveall:0,2.3;Model=TreeFence:dimcurvergb:-14,2.5,0,2.5,0,2.5;Model=MainMatrix:dimcurveall:-60,2.5;Model=Arch Hedge.*:dimcurveall:-60,2.3;Model=PPD GE Baby Grand.*:dimcurveall:-30,2.2",
     "--transform=translate:0,0,-300;roty:30"
     ], shell=True, check=True)
 

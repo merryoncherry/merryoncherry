@@ -29,8 +29,9 @@ if False:
     ])
     print (msg)
 
-if False:
+if True:
     msg = xlenv.batchRenderSeqList([
+    "VetsBG.xsq",
     ])
     print (msg)
 

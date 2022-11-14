@@ -203,6 +203,11 @@ class XLEnv:
         x = self.xLightsHttpPost('changeShowFolder', {"folder":self.data, "force":"true"})
         print (x)
 
+    def changeShowFolderXLD(self):
+        #print ("Change show folder to: "+self.data)
+        x = self.xlDoHttpJ({"cmd":'changeShowFolder', "folder":self.data, "force":"true"})
+        print (x)
+
     def startXSchedule(self):
         if self.xscheduleRunning == 0:
             self.startXScheduleInternal(True)
