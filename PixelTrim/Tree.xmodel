@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <custommodel 
-name="Tree" parm1="13" parm2="14" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="0" Antialias="1" StrandNames="" NodeNames="" CustomModel=",,,,,,1,,,,,,;,,,,,2,,18,,,,,;,,,3,,,,,,17,,,;,,,,,,,,,,,,;,,,,4,,,,16,,,,;,,,,,,,,,,,,;,,,5,,,,,,15,,,;,6,,,,,,,,,,14,;,,,,,,,,,,,,;,,,,,,,,,,,,;,7,,,,,,,,,,13,;,,,,,,,,,,,,;8,,,,,,,,,,,,12;,,,9,,,10,,,11,,," SourceVersion="2022.19"  >
+name="Tree" parm1="13" parm2="14" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="0" Antialias="1" StrandNames="" NodeNames="" CustomModel=",,,,,,1,,,,,,;,,,,,2,,18,,,,,;,,,3,,,,,,17,,,;,,,,,,,,,,,,;,,,,4,,,,16,,,,;,,,,,,,,,,,,;,,,5,,,,,,15,,,;,6,,,,,,,,,,14,;,,,,,,,,,,,,;,,,,,,,,,,,,;,7,,,,,,,,,,13,;,,,,,,,,,,,,;8,,,,,,,,,,,12,;,,,9,,,10,,,11,,," SourceVersion="2022.19"  >
 <subModel name="OutlineCCW" layout="horizontal" type="ranges" bufferstyle="Default" line0="1-18">
   <ControllerConnection/>
 </subModel>
@@ -15,10 +15,12 @@ name="Tree" parm1="13" parm2="14" Depth="1" StringType="RGB Nodes" Transparency=
 </subModel>
 <modelGroup selected="0" name="AllPixelTrimTree" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="Tree"/>
 
+<modelGroup selected="0" name="AllPixelTrimTreeCCW" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/OutlineCCW"/>
+
 <modelGroup selected="0" name="AllPixelTrimTreeCW" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/OutlineCW"/>
 
 <modelGroup selected="0" name="AllPixelTrimTreeStars" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Top"/>
 
-<modelGroup selected="0" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" name="AllPixelTrimTreeTops" models="EXPORTEDMODEL/Balls"/>
+<modelGroup selected="0" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" name="AllPixelTrimTreeTips" models="EXPORTEDMODEL/Balls"/>
 
 </custommodel>
