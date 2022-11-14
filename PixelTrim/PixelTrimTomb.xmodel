@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custommodel 
+name="PixelTrimTomb" parm1="19" parm2="25" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="" Antialias="1" StrandNames="" NodeNames="" CustomModel=",,,,,,,,,1,,,,,,,,,;,,,,2,,,,,,,,,,32,,,,;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;,3,,26,,27,,,,28,,,29,,30,,,31,;,,,,,,,,,,,,,,,,,,;,,,25,,,24,,,19,,,16,,15,,,,;,,,,,23,,,,20,,,,,,,,,;4,,,,,,,,,,,,,,,,,,14;,,,22,,,21,,,18,,,17,,,,,,;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;5,,,,,,,,,,,,,,,,,,13;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;6,,,,,,,,,,,,,,,,,,12;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,;7,,,,8,,,,,9,,,,,10,,,,11" SourceVersion="2022.10"  >
+<subModel name="Outline" layout="horizontal" type="ranges" bufferstyle="Default" line0="1-14,31-32">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Outline-CW" layout="horizontal" type="ranges" bufferstyle="Default" line0="1,32-31,14-2">
+  <ControllerConnection/>
+</subModel>
+<subModel name="R" layout="horizontal" type="ranges" bufferstyle="Default" line0="21-27">
+  <ControllerConnection/>
+</subModel>
+<subModel name="I" layout="horizontal" type="ranges" bufferstyle="Default" line0="18-20,28">
+  <ControllerConnection/>
+</subModel>
+<subModel name="P" layout="horizontal" type="ranges" bufferstyle="Default" line0="15-17,29-30">
+  <ControllerConnection/>
+</subModel>
+<subModel name="RIP" layout="horizontal" type="ranges" bufferstyle="Default" line0="15-30">
+  <ControllerConnection/>
+</subModel>
+<modelGroup selected="0" name="PixelTrimTombIs" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/I"/>
+
+<modelGroup selected="0" name="PixelTrimTombOutlinesCCW" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/Outline"/>
+
+<modelGroup selected="0" name="PixelTrimTombOutlinesCW" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/Outline-CW"/>
+
+<modelGroup selected="0" name="PixelTrimTombPs" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/P"/>
+
+<modelGroup selected="0" name="PixelTrimTombRIPs" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/RIP"/>
+
+<modelGroup selected="0" name="PixelTrimTombRs" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/R"/>
+
+<modelGroup selected="0" name="PixelTrimTombs" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="PixelTrimTomb"/>
+
+</custommodel>

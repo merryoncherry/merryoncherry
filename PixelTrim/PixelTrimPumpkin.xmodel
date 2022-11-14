@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custommodel 
+name="PixelTrimPumpkin" parm1="21" parm2="21" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="" Antialias="1" StrandNames="" NodeNames="" CustomModel=",,,,,,,,,,,32,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,1,,,,,,,,,,;,,,,,,,,,,31,,,,,,,,,,;,,,,,,2,,,,,,,30,,,,,,,;,,,,,,,,,,,,,,,,,,,,;,,,3,,,,,,,,,,,,,,29,,,;,,,,,,,,,,,,,,,,,,,,;,,,,,,4,,,,,,,28,,,,,,,;,7,,,,,,,,,,,,,,,,,,25,;,,,,,6,,5,,,,,27,,,26,,,,,;,,,,,,,,,,,,,,,,,,,,;8,,,,,,,,,,,,,,,,,,,,24;,,,,,,,,,,,,,,,,,,,,;,,,,19,,,,20,,,,21,,,,22,,,,;,,,,,,,,,,,,,,,,,,,,;,9,,,,,18,,,,,,,,15,,,,,23,;,,,,,,,,17,,,16,,,,,,,,,;,,,10,,,,,,,,,,,,,,14,,,;,,,,,,,,,,,,,,,,,,,,;,,,,,,11,,,,12,,,,13,,,,,," SourceVersion="2022.10"  >
+<subModel name="Outline" layout="horizontal" type="ranges" bufferstyle="Default" line0="31,2-3,7-14,23-25,29-30">
+  <ControllerConnection/>
+</subModel>
+<subModel name="OutlineCW" layout="horizontal" type="ranges" bufferstyle="Default" line0="31-29,25-23,14-7,3-2">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Stem" layout="horizontal" type="ranges" bufferstyle="Default" line0="1,31-32">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Face" layout="horizontal" type="ranges" bufferstyle="Default" line0="4-6,15-22,26-28">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Pumpkin" layout="horizontal" type="ranges" bufferstyle="Default" line0="1,31-32,2-3,7-14,23-25,29-30">
+  <ControllerConnection/>
+</subModel>
+<modelGroup selected="0" name="PixelTrimPumpkinFaces" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/Face"/>
+
+<modelGroup selected="0" name="PixelTrimPumpkinOutlinesCCW" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/Outline"/>
+
+<modelGroup selected="0" name="PixelTrimPumpkinOutlinesCW" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/OutlineCW"/>
+
+<modelGroup selected="0" name="PixelTrimPumpkinPumpkins" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/Pumpkin"/>
+
+<modelGroup selected="0" name="PixelTrimPumpkinStems" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="EXPORTEDMODEL/Stem"/>
+
+<modelGroup selected="0" name="PixelTrimPumpkins" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="PixelTrimPumpkin"/>
+
+</custommodel>
