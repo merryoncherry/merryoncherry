@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custommodel 
+name="Boscoyo Mega Black Widow" parm1="74" parm2="103" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="" Antialias="1" StrandNames="" NodeNames="" CustomModel=",,,,,,,,,,,,,,,,,,105,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,74,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,57;,,,,,,,,,,,,,,,,,106,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,75,,,,,,,,,,,,,,,,;121,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,58,;,,,,,,,,,,,,,,,,104,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,73,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,120,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,56,,;,,,,,,,,,,,,,,,107,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,76,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,122,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,59,,,;,,,,,,,,,,,,,,,103,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,72,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,119,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,55,,,,;,,,,,,,,,,,,,,,108,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,77,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,123,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,60,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,102,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,71,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,118,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,54,,,,,,;,,,,,,,,,,,,,,,,109,,,,,,,,,,,,,,,,,93,,,,,,85,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,78,,,,,,,,,,,,,,,,;,,,,,,124,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,61,,,,,,,;,,,,,,,,,,,,,,,,,101,,,,,,,,,,,,,,,94,,,,,,,,84,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,70,,,,,,,,,,,,,,,,,;,,,,,,,117,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,53,,,,,,,,;,,,,,,,,,,,,,,,,,,110,,,,,,,,,,,,,92,,,,,,,,,,86,,,,,,,,,,,,,,79,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,125,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,100,,,,,,,,,,,,,95,,,,,,,,83,,,,,,,,,,,,,69,,,,,,,,,,62,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,116,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,80,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,111,,,,,,,,,,,,91,,,90,,,87,,,,,,,,,,,,,,,,,,,,,,52,,,,,,,,,,,,;,,,,,,,,,,,,126,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,68,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,99,,,,,,,96,,,,,,,,,,82,,,,,81,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,115,,,,,,,,,,,,112,,,98,,,,,,,,,,,,,,67,,,,,,,,,,,,,,,,63,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,127,,,,,,,,,,,,,,,,,89,,,,,88,,,,,,,,,,,,,,,,,,51,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,114,,,,,,,,,,97,,,,,,,,,,,,,,,66,,,,,,,,,,64,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,128,,,113,,129,,,,,,,,,,,,,,,,,,49,,,65,,,50,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,145,,,131,,146,,130,,147,,,,,,,,,,,,,,,,,31,48,,,32,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,132,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,47,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,144,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,33,,,,,,,,,,,,,,,,,;,,,,,,,,,,,133,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,46,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,34,,,,,,,,,,,;,,,,,,,,143,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,148,167,,,,,,,,,,,,,,,,30,,,,,,,,,,,,,,,,,,,45,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,166,,,,,,,,,,,,,,,,,,,,,12,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,134,,,,,,,,,,,,,,,,,,,,,,,,,,168,,,,,,,,,,,10,,,,,,,29,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,149,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,35,,,,,,;,,,,,,,,,,,,,,,,,,,,,165,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13,,,,,,,,,,,,,,,,,,,,,;,,,142,,,,,,,,,,,,,,,,,,,,,,,,,169,,,,,,,,,,,,,,,,,9,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,150,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,28,,,,,,,,,,,,,,,44,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,135,,,,,,,,,,,,,,,164,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,14,,,,,,,,,,,,,,,36,,;,,,,,,,,,,,,,,,,,,,,,,,,,170,,,,,,,,,,,,,,,,,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,27,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,151,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,141,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,43,;,,,,,,,,,,,,,163,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,15,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,171,,,,,,,,,,,,,,,,,,,,,,,,,,,7,,,,,,,,,,,,,,,,,,,,,,,;,136,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,37,;,,,,,,,,,,,,152,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,26,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,140,,,,,,,,,,162,,,,,,,,,,,172,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,42,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6,,,,,,,,,,,,16,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,153,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,25,,,,,,,,,38,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,137,,,,,,,,,,,,,,,,,,,,,173,,,,,,,,,,,,,,,,,,,,,,,,,,,5,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,161,,,,,,,,,,,,,,,,,,,,,,,183,,,184,,,185,,,,,,,,,,,,,,,,,,,,,,,,17,,,,,,,,41,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,182,,,,186,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,24,,,,,,,,,,;,,,,,,,,,,154,,,,,,,,,,,,,,,,,,,,,,,,,,181,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,139,,,,,,,,,,,,,,,,,,,,,,174,,,,,,,,,,,,,,,,,,,,,,,4,,,,,,,,,,,,,,,,,,,,,,39,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187,,,,180,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,160,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,18,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,177,,,178,,,179,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,175,,,,,,,,,,,,,,,,,3,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,138,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,40,,,,,;,,,,,,,,,,,155,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,23,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,176,,,,,,,,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,159,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,19,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,156,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,22,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,158,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,20,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,157,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,21,,,,,,,,,,,,,,,,,," SourceVersion="2022.26"  >
+<subModel name="Leg8" layout="horizontal" type="ranges" bufferstyle="Default" line0="30,12,29,13,28,14,27,15,26,16,25,17,24,18,23,19,22,20,21" WorldPosX="248.0000" WorldPosY="100.0000" WorldPosZ="470.0000" ScaleX="0.4932" ScaleY="0.3922" ScaleZ="0.0137" RotateX="0.00000000" RotateY="-90.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="46444">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Leg7" layout="horizontal" type="ranges" bufferstyle="Default" line0="48,32,47,33,46,34,45,35,44,36,43,37,42,38,41,39,40" WorldPosX="248.0000" WorldPosY="100.0000" WorldPosZ="470.0000" ScaleX="0.4932" ScaleY="0.3922" ScaleZ="0.0137" RotateX="0.00000000" RotateY="-90.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="114338">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Leg6" layout="horizontal" type="ranges" bufferstyle="Default" line0="49,65,50,64,51,63,52,62,53,61,54,60,55,59,56,58,57" WorldPosX="248.0000" WorldPosY="100.0000" WorldPosZ="470.0000" ScaleX="0.4932" ScaleY="0.3922" ScaleZ="0.0137" RotateX="0.00000000" RotateY="-90.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="114389">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Leg5" layout="horizontal" type="ranges" bufferstyle="Default" line0="67,81,68,80,69,79,70,78,71,77,72,76,73,75,74" WorldPosX="248.0000" WorldPosY="100.0000" WorldPosZ="470.0000" ScaleX="0.4932" ScaleY="0.3922" ScaleZ="0.0137" RotateX="0.00000000" RotateY="-90.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="114443">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Leg4" layout="horizontal" type="ranges" bufferstyle="Default" line0="148,166,149,165,150,164,151,163,152,162,153,161,154,160,155,159,156,158,157" WorldPosX="248.0000" WorldPosY="100.0000" WorldPosZ="470.0000" ScaleX="0.4932" ScaleY="0.3922" ScaleZ="0.0137" RotateX="0.00000000" RotateY="-90.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="114686">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Leg3" layout="horizontal" type="ranges" bufferstyle="Default" line0="130,146,131,145,132,144,133,143,134,142,135,141,136,140,137,139,138" WorldPosX="248.0000" WorldPosY="100.0000" WorldPosZ="470.0000" ScaleX="0.4932" ScaleY="0.3922" ScaleZ="0.0137" RotateX="0.00000000" RotateY="-90.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="114632">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Leg2" layout="horizontal" type="ranges" bufferstyle="Default" line0="129,113,128,114,127,115,126,116,125,117,124,118,123,119,122,120,121" WorldPosX="248.0000" WorldPosY="100.0000" WorldPosZ="470.0000" ScaleX="0.4932" ScaleY="0.3922" ScaleZ="0.0137" RotateX="0.00000000" RotateY="-90.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="114581">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Leg1" layout="horizontal" type="ranges" bufferstyle="Default" line0="98,112,99,111,100,110,101,109,102,108,103,107,104,106,105" WorldPosX="248.0000" WorldPosY="100.0000" WorldPosZ="470.0000" ScaleX="0.4932" ScaleY="0.3922" ScaleZ="0.0137" RotateX="0.00000000" RotateY="-90.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="114536">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Hour Gllass" layout="horizontal" type="ranges" bufferstyle="Default" line0="177-187">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Mouth" layout="horizontal" type="ranges" bufferstyle="Default" line0="87,83,86,84,85,91,95,92,94,93">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Eyes" layout="horizontal" type="ranges" bufferstyle="Default" line0="89,88">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Body" layout="horizontal" type="ranges" bufferstyle="Default" line0="1-11,31,66,82,90,96,97,147,167-176">
+  <ControllerConnection/>
+</subModel>
+<modelGroup selected="0" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" name="All Boscoyo Widow Spider - GRP" models="Boscoyo Mega Black Widow"/>
+
+<modelGroup selected="0" name="All Boscoyo Widow Spider Bodies" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Body"/>
+
+<modelGroup selected="0" name="All Boscoyo Widow Spider Legs" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg1,EXPORTEDMODEL/Leg2,EXPORTEDMODEL/Leg3,EXPORTEDMODEL/Leg4,EXPORTEDMODEL/Leg5,EXPORTEDMODEL/Leg6,EXPORTEDMODEL/Leg7,EXPORTEDMODEL/Leg8"/>
+
+<modelGroup selected="0" name="All Boscoyo Widow Spiders" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="Boscoyo Mega Black Widow"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="All Boscoyo Widow Spiders Mega" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="Boscoyo Mega Black Widow"/>
+
+<modelGroup selected="0" name="All Spiders" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="Boscoyo Mega Black Widow"/>
+
+<modelGroup selected="0" name="All Spiders Accents" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Hour Gllass"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="All Spiders Bodies" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Body"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="All Spiders Boscoyo Mega Widow Accents" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Hour Gllass"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="All Spiders Boscoyo Mega Widow Bodies" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Body"/>
+
+<modelGroup selected="0" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" name="All Spiders Boscoyo Mega Widow Crawlies" models="EXPORTEDMODEL/Leg1,EXPORTEDMODEL/Leg2,EXPORTEDMODEL/Leg3,EXPORTEDMODEL/Leg4,EXPORTEDMODEL/Leg5,EXPORTEDMODEL/Leg6,EXPORTEDMODEL/Leg7,EXPORTEDMODEL/Leg8"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="All Spiders Boscoyo Mega Widow Eyes" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Eyes"/>
+
+<modelGroup selected="0" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" name="All Spiders Boscoyo Mega Widow Legs" models="EXPORTEDMODEL/Leg1,EXPORTEDMODEL/Leg2,EXPORTEDMODEL/Leg3,EXPORTEDMODEL/Leg4,EXPORTEDMODEL/Leg5,EXPORTEDMODEL/Leg6,EXPORTEDMODEL/Leg7,EXPORTEDMODEL/Leg8"/>
+
+<modelGroup selected="0" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" name="All Spiders Boscoyo Mega Widow Mouths" models="EXPORTEDMODEL/Mouth"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="All Spiders Crawlies" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg1,EXPORTEDMODEL/Leg2,EXPORTEDMODEL/Leg3,EXPORTEDMODEL/Leg4,EXPORTEDMODEL/Leg5,EXPORTEDMODEL/Leg6,EXPORTEDMODEL/Leg7,EXPORTEDMODEL/Leg8"/>
+
+<modelGroup selected="0" name="All Spiders Eyes" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Eyes"/>
+
+<modelGroup selected="0" name="All Spiders Legs" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg1,EXPORTEDMODEL/Leg2,EXPORTEDMODEL/Leg3,EXPORTEDMODEL/Leg4,EXPORTEDMODEL/Leg5,EXPORTEDMODEL/Leg6,EXPORTEDMODEL/Leg7,EXPORTEDMODEL/Leg8"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="All Spiders Legs 1" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg1"/>
+
+<modelGroup selected="0" name="All Spiders Legs 2" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg2"/>
+
+<modelGroup selected="0" name="All Spiders Legs 3" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg3"/>
+
+<modelGroup selected="0" name="All Spiders Legs 4" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg4"/>
+
+<modelGroup selected="0" name="All Spiders Legs 5" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg5"/>
+
+<modelGroup selected="0" name="All Spiders Legs 6" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg6"/>
+
+<modelGroup selected="0" name="All Spiders Legs 7" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg7"/>
+
+<modelGroup selected="0" name="All Spiders Legs 8" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Leg8"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="All Spiders Lower" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="Boscoyo Mega Black Widow"/>
+
+<modelGroup selected="0" name="All Spiders Mouths" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Mouth"/>
+
+<dimensions units="f" width="3.600360" height="4.000440" depth="0.100010"/></custommodel>
