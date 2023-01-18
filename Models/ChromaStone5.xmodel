@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custommodel 
+name="Boscoyo ChromaStone 5 Hedge L" parm1="7" parm2="10" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="" Antialias="1" StrandNames="" NodeNames="" CustomModel=",,13,14,15,,;,,12,,16,,;9,10,11,,17,18,19;,,,,,,;8,7,6,,22,21,20;,,5,,23,,;,,4,,24,,;,,3,,25,,;,,2,,26,,;,,1,,27,," SourceVersion="2022.26"  >
+<modelGroup selected="0" name="All Tombs Small" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="Boscoyo ChromaStone 5 Hedge L"/>
+
+<dimensions units="f" width="1.300020" height="1.999980" depth="0.100020"/></custommodel>
