@@ -28,7 +28,16 @@ def read32bit(f):
     return int(arr[0]) + int(arr[1])*256 + int(arr[2])*65536 + int(arr[3])*65536*256
 
 if __name__ == '__main__':
+    hjson = {}
     with open(sys.argv[1], 'rb') as fh:
         hdr = fh.read(4)
-        print(str(hdr, 'utf-8'))
-    pass
+        shdr = str(hdr, 'utf-8')
+        #print(shdr)
+        if (shdr != 'PSEQ' and shdr != 'ESEQ'):
+            raise Exception("Not a PSEQ file")
+        hjson['hdr4']=shdr
+        off2chdata = read16bit(fh)
+        #print("offset to channel data: "+str(off2chdata))
+        hjson['chdata_offset']=off2chdata
+    print(json.dumps(hjson))
+
