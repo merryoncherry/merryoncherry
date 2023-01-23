@@ -152,10 +152,10 @@ if __name__ == '__main__':
             hjson['headers'] = {}
             vlheaders = {}
             while (fh.tell() + 4 <= off2chdata):
-                print ("At "+str(fh.tell())+" vs " + str(shdrlen))
+                #print ("At "+str(fh.tell())+" vs " + str(shdrlen))
                 hlen = read16bit(fh) - 4
                 hname = str(fh.read(2), 'utf-8')
-                print ("Header "+hname+": "+str(hlen))
+                #print ("Header "+hname+": "+str(hlen))
                 hval = str(fh.read(hlen), 'utf-8')
                 vlheaders[hname] = hval
                 hjson['headers'][hname] = hval
