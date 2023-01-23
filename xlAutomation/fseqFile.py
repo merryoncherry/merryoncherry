@@ -29,6 +29,12 @@ def read32bit(f):
     arr = f.read(4)
     return int(arr[0]) + int(arr[1])*256 + int(arr[2])*65536 + int(arr[3])*65536*256
 
+def allzero(d):
+    for b in d:
+        if b != 0:
+            return False
+    return True
+
 if __name__ == '__main__':
     hjson = {}
     with open(sys.argv[1], 'rb') as fh:
@@ -156,9 +162,12 @@ if __name__ == '__main__':
 
             fh.seek(off2chdata)
 
-        print(json.dumps(hjson, indent=2))
         #print("Decode "+str(nframes)+" frames")
         curframe = 0
+        globalcrc = 0
+
+        hjson['framecrcs']=[]
+
         for blk in compblocklist:
             (sframe, dsz) = blk
             if (sframe != curframe):
@@ -173,6 +182,11 @@ if __name__ == '__main__':
             foffset = 0
             #print("Raw len: "+str(len(raw))+"; step size "+str(stepsz))
             while (foffset < len(raw)) :
+                frame = raw[foffset: foffset + stepsz]
+                if (not allzero(frame)):
+                    crc32 = (binascii.crc32(frame) & 0xFFFFFFFF)
+                    hjson['framecrcs'].append({'frame': curframe, 'crc': crc32})
+                globalcrc = binascii.crc32(frame, globalcrc)
                 foffset += stepsz
                 curframe = curframe + 1
 
@@ -181,3 +195,7 @@ if __name__ == '__main__':
 
         if (curframe != nframes):
             raise Exception("Frame count mismatch")
+
+        hjson['globalcrc'] =  globalcrc & 0xFFFFFFFF
+
+        print(json.dumps(hjson, indent=2))
