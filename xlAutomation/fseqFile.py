@@ -6,12 +6,15 @@ import io
 import json
 import os
 import sys
+import xml.dom.minidom
 import zstandard
 
-def CRC32_from_file(filename):
-    buf = open(filename,'rb').read()
-    buf = (binascii.crc32(buf) & 0xFFFFFFFF)
-    return "%08X" % buf
+# python fseqFile.py c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
+# python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
+# python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas -s  c:\users\chuck\documents\xlightsShows\2022_xmas c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
+# python fseqFile.py "c:\users\Chuck\Documents\xlightsShows\2022_Xmas\Boogie Man.eseq"
+# python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas "c:\users\Chuck\Documents\xlightsShows\2022_Xmas\Boogie Man.eseq"
+# python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas -s  c:\users\chuck\documents\xlightsShows\2022_xmas "c:\users\Chuck\Documents\xlightsShows\2022_Xmas\Boogie Man.eseq"
 
 def read8bit(f):
     arr = f.read(1)
@@ -43,6 +46,33 @@ if __name__ == '__main__':
     parser.add_argument('flist', nargs='*', help='sequence binary files')
 
     args = parser.parse_args()
+
+    controllers = []
+    ctrlbyname = {}
+    models = None
+    if args.xlights:
+        xmodels   = xml.dom.minidom.parse(args.xlights+'/xlights_rgbeffects.xml')
+        xnetworks = xml.dom.minidom.parse(args.xlights+'/xlights_networks.xml')
+
+        xnd = xnetworks.documentElement
+        if (xnd.tagName != 'Networks'):
+            raise Exception('Root not "Networks"')
+        #for attrName, attrValue in n.attributes.items():
+        #    raise Exception('Root "xrgb" unexpected attribute "'+attrName+'"')
+        startch = 1
+        for cn in xnd.childNodes:
+            if cn.nodeType == xml.dom.Node.ATTRIBUTE_NODE or cn.nodeType == xml.dom.Node.TEXT_NODE:
+                continue
+            if cn.tagName != 'Controller':
+                continue
+            controllers.append((startch, cn.getAttribute('Name')))
+            ctrlbyname[cn.getAttribute('Name')] = startch
+            for net in cn.childNodes:
+                if net.nodeType == xml.dom.Node.ATTRIBUTE_NODE or net.nodeType == xml.dom.Node.TEXT_NODE:
+                    continue
+                if (net.tagName != 'network'):
+                    continue
+                startch += int(net.getAttribute('MaxChannels'))
 
     hjson = {}
     with open(args.flist[0], 'rb') as fh:
@@ -207,3 +237,4 @@ if __name__ == '__main__':
         hjson['globalcrc'] =  globalcrc & 0xFFFFFFFF
 
         print(json.dumps(hjson, indent=2))
+        print(str(controllers))
