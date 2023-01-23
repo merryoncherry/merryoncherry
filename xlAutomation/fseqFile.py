@@ -135,6 +135,7 @@ if __name__ == '__main__':
         nframes = 0 # Number of frames
         stepsz = 0 # Size of uncompressed frame
         compblocklist = [] # Bit about reading the file and decompressing
+        chrangelist = []
         comp = 0
         ccount = 0
 
@@ -158,6 +159,7 @@ if __name__ == '__main__':
             nframes = int((fh.tell() - off2chdata) / stepsz)
             compblocklist.append((0, nframes * stepsz))
             fh.seek(off2chdata, os.SEEK_SET)
+            chrangelist.append((modelstart, modelsize))
 
         else:
             off2chdata = read16bit(fh)
@@ -228,12 +230,13 @@ if __name__ == '__main__':
                 # Sparse range map
                 # Sparse ranges: 3 ch num, 3 num ch
                 hjson['chranges'] = []
-                chrangelist = []
                 for i in range(0, nranges):
                     startnum = read24bit(fh)
                     chcount = read24bit(fh)
                     chrangelist.append((startnum, chcount))
                     hjson['chranges'].append({'startch':startnum, 'chcount':chcount})
+            if not chrangelist:
+                chrangelist.append((1, ccount))
 
             hjson['headers'] = {}
             vlheaders = {}
