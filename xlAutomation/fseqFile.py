@@ -11,10 +11,10 @@ import zstandard
 
 # python fseqFile.py c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
 # python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
-# python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas -s  c:\users\chuck\documents\xlightsShows\2022_xmas c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
+# python fseqFile.py -s c:\users\chuck\documents\xlightsShows\2022_xmas\12Days_McKenzie_FPD.xsq -x c:\users\chuck\documents\xlightsShows\2022_xmas c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
 # python fseqFile.py "c:\users\Chuck\Documents\xlightsShows\2022_Xmas\Boogie Man.eseq"
 # python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas "c:\users\Chuck\Documents\xlightsShows\2022_Xmas\Boogie Man.eseq"
-# python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas -s  c:\users\chuck\documents\xlightsShows\2022_xmas "c:\users\Chuck\Documents\xlightsShows\2022_Xmas\Boogie Man.eseq"
+# python fseqFile.py -s "c:\users\chuck\documents\xlightsShows\2022_xmas\Event_NMBCSeq.xsq" -x  c:\users\chuck\documents\xlightsShows\2022_xmas "c:\users\Chuck\Documents\xlightsShows\2022_Xmas\Boogie Man.eseq"
 
 def read8bit(f):
     arr = f.read(1)
@@ -49,18 +49,33 @@ class ModelRec:
     def __repr__(self):
         return self.name + ":" + str(self.startch) + "," + str(self.nch)
 
+class TimingEnt:
+    def __init__(self, label, startms, endms):
+        self.label = label
+        self.startms = startms
+        self.endms = endms
+        self.models = []
+    
+class TimingRec:
+    def __init__(self, name):
+        self.name = name
+        self.entlist = []
+        self.curent = 0
+
 if __name__ == '__main__':
     # Command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
-    parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq files")
-    parser.add_argument('flist', nargs='*', help='sequence binary files')
+    parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq file")
+    parser.add_argument('flist', nargs=1, help='sequence binary files')
 
     args = parser.parse_args()
 
     controllers = []
     ctrlbyname = {}
     models = []
+    ttracks = []
+
     if args.xlights:
         xmodels   = xml.dom.minidom.parse(args.xlights+'/xlights_rgbeffects.xml')
         xnetworks = xml.dom.minidom.parse(args.xlights+'/xlights_networks.xml')
@@ -120,6 +135,32 @@ if __name__ == '__main__':
             if i == len(smodels)-1 :
                 continue
             smodels[i].nch = smodels[i+1].startch - smodels[i].startch
+
+    if args.sequence:
+        xseqd = xml.dom.minidom.parse(args.sequence)
+        xnseq = xseqd.documentElement
+        if (xnseq.tagName != 'xsequence'):
+            raise Exception('Root not "xsequence"')
+        for section in xnseq.childNodes:
+            if section.nodeType == xml.dom.Node.ATTRIBUTE_NODE or section.nodeType == xml.dom.Node.TEXT_NODE:
+                continue
+            if section.tagName != 'ElementEffects':
+                continue
+            for element in section.childNodes:
+                if element.nodeType == xml.dom.Node.ATTRIBUTE_NODE or element.nodeType == xml.dom.Node.TEXT_NODE:
+                    continue
+                if element.tagName != 'Element' or element.getAttribute('type') != 'timing':
+                    continue
+                # Ahah: Timing
+                for tlayer in element.childNodes:
+                    if tlayer.nodeType == xml.dom.Node.ATTRIBUTE_NODE or tlayer.nodeType == xml.dom.Node.TEXT_NODE:
+                        continue
+                    if element.tagName != 'EffectLayer':
+                        continue
+                    trec = TimingRec(element.getAttribute('name'))
+                    ttracks.append(trec)
+                    break
+
 
     hjson = {}
     with open(args.flist[0], 'rb') as fh:
