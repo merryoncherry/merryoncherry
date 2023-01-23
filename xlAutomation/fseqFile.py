@@ -1,4 +1,5 @@
 #Python module to read fseq files and summarize them
+# See https://github.com/FalconChristmas/fpp/blob/master/docs/FSEQ_Sequence_File_Format.txt
 import argparse
 import binascii
 import io
@@ -33,11 +34,82 @@ if __name__ == '__main__':
         hdr = fh.read(4)
         shdr = str(hdr, 'utf-8')
         #print(shdr)
-        if (shdr != 'PSEQ' and shdr != 'ESEQ'):
+        isEseq = True if (shdr == 'ESEQ') else False
+        if (shdr != 'PSEQ' and shdr != 'ESEQ' and shdr != 'FSEQ'):
             raise Exception("Not a PSEQ file")
         hjson['hdr4']=shdr
-        off2chdata = read16bit(fh)
-        #print("offset to channel data: "+str(off2chdata))
-        hjson['chdata_offset']=off2chdata
-    print(json.dumps(hjson))
+        if (isEseq):
+            off2chdata = 20
+            minver = 0
+            majver = 2
+
+            modelcnt = read32bit(fh)
+            stepsz = read32bit(fh)
+            modelstart = read32bit(fh)
+            modelsize = read32bit(fh)
+
+            hjson["modelcount"] = modelcnt
+            hjson["stepsize"] = stepsz
+            hjson["modelstart"] = modelstart
+            hjson["modelsize"] = modelsize
+
+            #Noting the lack of # of frames, or any compression.  This format sucks.
+
+        else:
+            off2chdata = read16bit(fh)
+            minver = read8bit(fh)
+            majver = read8bit(fh)
+
+            isv1 = True if majver == 1 else False
+
+            #print("offset to channel data: "+str(off2chdata))
+            hjson['chdata_offset']=off2chdata
+            #print("Version "+str(majver)+'.'+str(minver))
+            hjson['majver'] = majver
+            hjson['minver'] = minver
+
+            shdrlen = read16bit(fh)
+            ccount = read32bit(fh)
+            nframes = read32bit(fh)
+            stepms = read8bit(fh)
+            reserved = read8bit(fh)
+
+            hjson['fixedhdr'] = shdrlen
+            hjson['channels'] = ccount
+            hjson['frames'] = nframes
+            hjson['msperframe'] = stepms
+            hjson['reserved1'] = reserved
+
+            if (isv1):
+                univcnt = read16bit(fh)
+                univsz = read16bit(fh)
+                gamma = read8bit(fh)
+                colorenc = read8bit(fh)
+                reserved = read16bit(fh)
+                hjson['univcnt'] = univcnt
+                hjson['universesize'] = univsz
+                hjson['gamma'] = gamma
+                hjson['colorenc'] = colorenc
+                hjson['reserved2'] = reserved
+            else:
+                compandblks = read8bit(fh)
+                comp = compandblks & 15
+                blks = compandblks & 240 * 16
+                blks += read8bit(fh)
+                nranges = read8bit(fh)
+                reserved = read8bit(fh)
+                uuid1 = read32bit(fh)
+                uuid2 = read32bit(fh)
+
+                hjson['compression'] = comp
+                hjson['compblks'] = blks
+                hjson['nsparseranges'] = nranges
+                hjson['reserved2'] = reserved
+                hjson['uuid1'] = uuid1
+                hjson['uuid2'] = uuid2
+
+            # Compress block index: 4 frame num, 4 length
+            # Sparse ranges: 3 ch num, 3 num ch
+
+    print(json.dumps(hjson, indent=2))
 
