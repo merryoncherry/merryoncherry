@@ -6,6 +6,7 @@ import io
 import json
 import os
 import sys
+import zstandard
 
 def CRC32_from_file(filename):
     buf = open(filename,'rb').read()
@@ -37,7 +38,14 @@ if __name__ == '__main__':
         isEseq = True if (shdr == 'ESEQ') else False
         if (shdr != 'PSEQ' and shdr != 'ESEQ' and shdr != 'FSEQ'):
             raise Exception("Not a PSEQ file")
-        hjson['hdr4']=shdr
+        hjson['hdr4'] = shdr
+
+        # Things we will need to read the frames
+        nframes = 0 # Number of frames
+        stepsz = 0 # Size of uncompressed frame
+        compblocklist = [] # Bit about reading the file and decompressing
+        comp = 0
+
         if (isEseq):
             off2chdata = 20
             minver = 0
@@ -53,7 +61,11 @@ if __name__ == '__main__':
             hjson["modelstart"] = modelstart
             hjson["modelsize"] = modelsize
 
-            #Noting the lack of # of frames, or any compression.  This format sucks.
+            #Noting the lack of # of frames, frame timing, or any compression.  This format sucks.
+            fh.seek(0, os.SEEK_END)
+            nframes = (fh.tell() - off2chdata) / stepsz
+            compblocklist.append((0, nframes * stepsz))
+            fh.seek(off2chdata, os.SEEK_SET)
 
         else:
             off2chdata = read16bit(fh)
@@ -70,6 +82,7 @@ if __name__ == '__main__':
 
             shdrlen = read16bit(fh)
             ccount = read32bit(fh)
+            stepsz = int((ccount + 3) / 4) * 4
             nframes = read32bit(fh)
             stepms = read8bit(fh)
             reserved = read8bit(fh)
@@ -91,6 +104,9 @@ if __name__ == '__main__':
                 hjson['gamma'] = gamma
                 hjson['colorenc'] = colorenc
                 hjson['reserved2'] = reserved
+
+                # Double check this math, is it rounded up?
+                compblocklist.append((0, nframes*ccnt))
             else:
                 compandblks = read8bit(fh)
                 comp = compandblks & 15
@@ -111,7 +127,6 @@ if __name__ == '__main__':
                 # Compression blocks
                 # Compress block index: 4 frame num, 4 length
                 hjson['compblocklist'] = []
-                compblocklist = []
                 for i in range(0, blks):
                     framenum = read32bit(fh)
                     blocksize = read32bit(fh)
@@ -128,5 +143,41 @@ if __name__ == '__main__':
                     chrangelist.append((startnum, chcount))
                     hjson['chranges'].append({'startch':startnum, 'chcount':chcount})
 
-    print(json.dumps(hjson, indent=2))
+            hjson['headers'] = {}
+            vlheaders = {}
+            while (fh.tell() + 4 <= off2chdata):
+                print ("At "+str(fh.tell())+" vs " + str(shdrlen))
+                hlen = read16bit(fh) - 4
+                hname = str(fh.read(2), 'utf-8')
+                print ("Header "+hname+": "+str(hlen))
+                hval = str(fh.read(hlen), 'utf-8')
+                vlheaders[hname] = hval
+                hjson['headers'][hname] = hval
 
+            fh.seek(off2chdata)
+
+        print(json.dumps(hjson, indent=2))
+        # print("Decode "+str(nframes)+" frames")
+        curframe = 0
+        for blk in compblocklist:
+            (sframe, dsz) = blk
+            if (sframe != curframe):
+                raise Exception("Unexpected start frame "+str(sframe)+" vs "+str(curframe))
+            raw = fh.read(dsz)
+            #print("Read of " + str(dsz) + " got"+str(len(raw)))
+            if (comp == 1):
+                raw = zstandard.ZstdDecompressor().decompress(raw, max_output_size=nframes*stepsz) # This is conservative, covers WHOLE sequence
+            if (comp == 2):
+                raise ("Need to implement zlib")
+
+            foffset = 0
+            #print("Raw len: "+str(len(raw))+"; step size "+str(stepsz))
+            while (foffset < len(raw)) :
+                foffset += stepsz
+                curframe = curframe + 1
+
+            if (foffset != len(raw)):
+                raise Exception("Partial frame")
+
+        if (curframe != nframes):
+            raise Exception("Frame count mismatch")
