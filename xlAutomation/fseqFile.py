@@ -281,11 +281,17 @@ if __name__ == '__main__':
                     sch = m.startch
                     ech = m.startch + m.nch if m.nch > 0 else ccount
 
-                    # This is in error for sparse ranges
-                    msub = frame[sch : ech]
-                    m.crc = binascii.crc32(msub, m.crc)
-                    if not allzero(msub) :
-                        m.empty = False
+                    # See if we have data for the model, considering sparse range
+                    curoff = 0
+                    for schrng in chrangelist:
+                        (rstart, rcnt) = schrng
+                        if sch >= rstart and ech <= rstart+rcnt:
+                            msub = frame[curoff + sch - rstart : curoff + ech - rstart]
+                            m.crc = binascii.crc32(msub, m.crc)
+                            if not allzero(msub) :
+                                m.empty = False
+                        curoff += rcnt
+
 
                 globalcrc = binascii.crc32(frame, globalcrc)
                 foffset += stepsz
