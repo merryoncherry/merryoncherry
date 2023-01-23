@@ -36,8 +36,16 @@ def allzero(d):
     return True
 
 if __name__ == '__main__':
+    # Command line arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
+    parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq files")
+    parser.add_argument('flist', nargs='*', help='sequence binary files')
+
+    args = parser.parse_args()
+
     hjson = {}
-    with open(sys.argv[1], 'rb') as fh:
+    with open(args.flist[0], 'rb') as fh:
         hdr = fh.read(4)
         shdr = str(hdr, 'utf-8')
         #print(shdr)
