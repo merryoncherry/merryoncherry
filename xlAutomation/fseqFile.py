@@ -108,8 +108,25 @@ if __name__ == '__main__':
                 hjson['uuid1'] = uuid1
                 hjson['uuid2'] = uuid2
 
-            # Compress block index: 4 frame num, 4 length
-            # Sparse ranges: 3 ch num, 3 num ch
+                # Compression blocks
+                # Compress block index: 4 frame num, 4 length
+                hjson['compblocklist'] = []
+                compblocklist = []
+                for i in range(0, blks):
+                    framenum = read32bit(fh)
+                    blocksize = read32bit(fh)
+                    compblocklist.append((framenum, blocksize))
+                    hjson['compblocklist'].append({'framenum':framenum, 'blocksize':blocksize})
+
+                # Sparse range map
+                # Sparse ranges: 3 ch num, 3 num ch
+                hjson['chranges'] = []
+                chrangelist = []
+                for i in range(0, nranges):
+                    startnum = read24bit(fh)
+                    chcount = read24bit(fh)
+                    chrangelist.append((startnum, chcount))
+                    hjson['chranges'].append({'startch':startnum, 'chcount':chcount})
 
     print(json.dumps(hjson, indent=2))
 
