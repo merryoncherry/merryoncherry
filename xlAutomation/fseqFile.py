@@ -43,6 +43,8 @@ class ModelRec:
         self.name = name
         self.startch = startch
         self.nch = nch
+        self.empty = True
+        self.crc = 0
 
     def __repr__(self):
         return self.name + ":" + str(self.startch) + "," + str(self.nch)
@@ -134,6 +136,7 @@ if __name__ == '__main__':
         stepsz = 0 # Size of uncompressed frame
         compblocklist = [] # Bit about reading the file and decompressing
         comp = 0
+        ccount = 0
 
         if (isEseq):
             off2chdata = 20
@@ -143,7 +146,7 @@ if __name__ == '__main__':
             modelcnt = read32bit(fh)
             stepsz = read32bit(fh)
             modelstart = read32bit(fh)
-            modelsize = read32bit(fh)
+            ccount = modelsize = read32bit(fh)
 
             hjson["modelcount"] = modelcnt
             hjson["stepsize"] = stepsz
@@ -269,6 +272,18 @@ if __name__ == '__main__':
                 if (not allzero(frame)):
                     crc32 = (binascii.crc32(frame) & 0xFFFFFFFF)
                     hjson['framecrcs'].append({'frame': curframe, 'crc': crc32})
+
+                # Go through each model and do some CRC there
+                for m in smodels:
+                    sch = m.startch
+                    ech = m.startch + m.nch if m.nch > 0 else ccount
+
+                    # This is in error for sparse ranges
+                    msub = frame[sch : ech]
+                    m.crc = binascii.crc32(msub, m.crc)
+                    if not allzero(msub) :
+                        m.empty = False
+
                 globalcrc = binascii.crc32(frame, globalcrc)
                 foffset += stepsz
                 curframe = curframe + 1
@@ -281,6 +296,14 @@ if __name__ == '__main__':
 
         hjson['globalcrc'] =  globalcrc & 0xFFFFFFFF
 
+        # Add model CRCs
+        hjson['modelcrcs'] = []
+        mbyname = sorted(models, key = lambda m : m.name)
+        for m in mbyname:
+            if m.empty:
+                continue
+            hjson['modelcrcs'].append({'name':m.name, 'crc':m.crc & 0xFFFFFFFF})
+
         print(json.dumps(hjson, indent=2))
-        print(str(controllers))
-        print(str(smodels))
+        #print(str(controllers))
+        #print(str(smodels))
