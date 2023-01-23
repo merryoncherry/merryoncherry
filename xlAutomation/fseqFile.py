@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
             #Noting the lack of # of frames, frame timing, or any compression.  This format sucks.
             fh.seek(0, os.SEEK_END)
-            nframes = (fh.tell() - off2chdata) / stepsz
+            nframes = int((fh.tell() - off2chdata) / stepsz)
             compblocklist.append((0, nframes * stepsz))
             fh.seek(off2chdata, os.SEEK_SET)
 
@@ -157,14 +157,14 @@ if __name__ == '__main__':
             fh.seek(off2chdata)
 
         print(json.dumps(hjson, indent=2))
-        # print("Decode "+str(nframes)+" frames")
+        #print("Decode "+str(nframes)+" frames")
         curframe = 0
         for blk in compblocklist:
             (sframe, dsz) = blk
             if (sframe != curframe):
                 raise Exception("Unexpected start frame "+str(sframe)+" vs "+str(curframe))
             raw = fh.read(dsz)
-            #print("Read of " + str(dsz) + " got"+str(len(raw)))
+            #print("Read of " + str(dsz) + " got "+str(len(raw)))
             if (comp == 1):
                 raw = zstandard.ZstdDecompressor().decompress(raw, max_output_size=nframes*stepsz) # This is conservative, covers WHOLE sequence
             if (comp == 2):
