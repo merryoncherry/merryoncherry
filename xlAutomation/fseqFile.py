@@ -350,9 +350,22 @@ if __name__ == '__main__':
                         (rstart, rcnt) = schrng
                         if sch >= rstart and ech <= rstart+rcnt:
                             msub = frame[curoff + sch - rstart : curoff + ech - rstart]
+                            # CRC for model in its entirety
                             m.crc = binascii.crc32(msub, m.crc)
-                            if not allzero(msub) :
+                            allz = allzero(msub)
+                            if not allz :
                                 m.empty = False
+                            # CRC for model in each timing section
+                            for tt in ttracks:
+                                if tt.current >= len(tt.entlist):
+                                    continue
+                                mmm = tt.entlist[tt.current].models
+                                if m.name not in mmm:
+                                    mmm[m.name] = ModelRec(m.name, m.startch, m.nch)
+                                mmm[m.name].crc = binascii.crc32(msub, mmm[m.name].crc)
+                                if not allz:
+                                    mmm[m.name].empty = False
+
                         curoff += rcnt
 
 
