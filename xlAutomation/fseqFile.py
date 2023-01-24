@@ -54,13 +54,14 @@ class TimingEnt:
         self.label = label
         self.startms = startms
         self.endms = endms
-        self.models = []
+        self.crc = 0
+        self.models = {}
 
 class TimingRec:
     def __init__(self, name):
         self.name = name
         self.entlist = []
-        self.curent = 0
+        self.current = 0
 
 if __name__ == '__main__':
     # Command line arguments
@@ -185,6 +186,7 @@ if __name__ == '__main__':
         chrangelist = []
         comp = 0
         ccount = 0
+        stepms = 50
 
         if (isEseq):
             off2chdata = 20
@@ -300,6 +302,7 @@ if __name__ == '__main__':
 
         #print("Decode "+str(nframes)+" frames")
         curframe = 0
+        curms = 0
         globalcrc = 0
 
         hjson['framecrcs']=[]
@@ -323,6 +326,19 @@ if __name__ == '__main__':
                     crc32 = (binascii.crc32(frame) & 0xFFFFFFFF)
                     hjson['framecrcs'].append({'frame': curframe, 'crc': crc32})
 
+                # Advance to current frame and adjust CRC
+                for tt in ttracks:
+                    if tt.current >= len(tt.entlist):
+                        continue
+                    while curms > tt.entlist[tt.current].endms:
+                        tt.current += 1
+                        if tt.current >= len(tt.entlist):
+                            break
+                    if tt.current >= len(tt.entlist):
+                        continue
+                    if curms >= tt.entlist[tt.current].startms:
+                        tt.entlist[tt.current].crc = binascii.crc32(frame, tt.entlist[tt.current].crc)
+
                 # Go through each model and do some CRC there
                 for m in smodels:
                     sch = m.startch
@@ -343,6 +359,7 @@ if __name__ == '__main__':
                 globalcrc = binascii.crc32(frame, globalcrc)
                 foffset += stepsz
                 curframe = curframe + 1
+                curms = curms + stepms
 
             if (foffset != len(raw)):
                 raise Exception("Partial frame")
@@ -365,9 +382,14 @@ if __name__ == '__main__':
         for tt in ttracks:
             hjson['ttracks'][tt.name] = []
             for ent in tt.entlist:
-                o =  {"label": ent.label, "start":ent.startms, "end":ent.endms, "models":[]}
+                o =  {"label": ent.label, "start":ent.startms, "end":ent.endms, 'crc':ent.crc & 0xFFFFFFFF, "models":[]}
                 hjson['ttracks'][tt.name].append(o)
                 o = o["models"]
+                for mn in ent.models.keys():
+                    m = ent.models[mn]
+                    if (m.empty):
+                        continue;
+                    o.append({"name": m.name, "crc": m.crc&0xFFFFFFFF})
 
         print(json.dumps(hjson, indent=2))
         #print(str(controllers))
