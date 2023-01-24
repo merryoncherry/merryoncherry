@@ -55,7 +55,7 @@ class TimingEnt:
         self.startms = startms
         self.endms = endms
         self.models = []
-    
+
 class TimingRec:
     def __init__(self, name):
         self.name = name
@@ -155,10 +155,16 @@ if __name__ == '__main__':
                 for tlayer in element.childNodes:
                     if tlayer.nodeType == xml.dom.Node.ATTRIBUTE_NODE or tlayer.nodeType == xml.dom.Node.TEXT_NODE:
                         continue
-                    if element.tagName != 'EffectLayer':
+                    if tlayer.tagName != 'EffectLayer':
                         continue
-                    trec = TimingRec(element.getAttribute('name'))
+                    trec = TimingRec(tlayer.getAttribute('name'))
                     ttracks.append(trec)
+                    for effect in tlayer.childNodes:
+                        if effect.nodeType == xml.dom.Node.ATTRIBUTE_NODE or effect.nodeType == xml.dom.Node.TEXT_NODE:
+                            continue
+                        if effect.tagName != 'EffectLayer':
+                            continue
+                        trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
                     break
 
 
