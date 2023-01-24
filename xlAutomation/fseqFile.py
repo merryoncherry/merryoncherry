@@ -157,12 +157,12 @@ if __name__ == '__main__':
                         continue
                     if tlayer.tagName != 'EffectLayer':
                         continue
-                    trec = TimingRec(tlayer.getAttribute('name'))
+                    trec = TimingRec(element.getAttribute('name'))
                     ttracks.append(trec)
                     for effect in tlayer.childNodes:
                         if effect.nodeType == xml.dom.Node.ATTRIBUTE_NODE or effect.nodeType == xml.dom.Node.TEXT_NODE:
                             continue
-                        if effect.tagName != 'EffectLayer':
+                        if effect.tagName != 'Effect':
                             continue
                         trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
                     break
@@ -359,6 +359,15 @@ if __name__ == '__main__':
             if m.empty:
                 continue
             hjson['modelcrcs'].append({'name':m.name, 'crc':m.crc & 0xFFFFFFFF})
+
+        # Add CRCs by time
+        hjson['ttracks'] = {}
+        for tt in ttracks:
+            hjson['ttracks'][tt.name] = []
+            for ent in tt.entlist:
+                o =  {"label": ent.label, "start":ent.startms, "end":ent.endms, "models":[]}
+                hjson['ttracks'][tt.name].append(o)
+                o = o["models"]
 
         print(json.dumps(hjson, indent=2))
         #print(str(controllers))
