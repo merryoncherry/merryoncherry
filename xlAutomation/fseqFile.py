@@ -253,8 +253,9 @@ if __name__ == '__main__':
             else:
                 compandblks = read8bit(fh)
                 comp = compandblks & 15
-                blks = compandblks & 240 * 16
+                blks = (compandblks & 240) * 16
                 blks += read8bit(fh)
+                #print ("blocks: "+str(blks))
                 nranges = read8bit(fh)
                 reserved = read8bit(fh)
                 uuid1 = read32bit(fh)
@@ -269,10 +270,18 @@ if __name__ == '__main__':
 
                 # Compression blocks
                 # Compress block index: 4 frame num, 4 length
+                seenEmpty = False
                 hjson['compblocklist'] = []
                 for i in range(0, blks):
                     framenum = read32bit(fh)
                     blocksize = read32bit(fh)
+                    if not blocksize:
+                        seenEmpty = True
+                        if framenum:
+                            raise Exception("Empty block ("+str(i)+") with frame number ("+str(framenum)+") assigned")
+                        continue
+                    if seenEmpty:
+                        raise Exception("Empty blocks followed by nonempty blocks "+str(i))
                     compblocklist.append((framenum, blocksize))
                     hjson['compblocklist'].append({'framenum':framenum, 'blocksize':blocksize})
 
@@ -310,7 +319,7 @@ if __name__ == '__main__':
         for blk in compblocklist:
             (sframe, dsz) = blk
             if (sframe != curframe):
-                raise Exception("Unexpected start frame "+str(sframe)+" vs "+str(curframe))
+                raise Exception("Unexpected start frame "+str(sframe)+" vs "+str(curframe)+" ; " + str(dsz) + " / "+str(len(compblocklist)))
             raw = fh.read(dsz)
             #print("Read of " + str(dsz) + " got "+str(len(raw)))
             if (comp == 1):
