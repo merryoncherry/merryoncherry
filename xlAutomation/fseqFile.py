@@ -68,6 +68,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
     parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq file")
+    parser.add_argument('-o', '--output',   help="Path to output file")
     parser.add_argument('flist', nargs=1, help='sequence binary files')
 
     args = parser.parse_args()
@@ -413,6 +414,11 @@ if __name__ == '__main__':
                         continue;
                     o.append({"name": m.name, "crc": m.crc&0xFFFFFFFF})
 
-        print(json.dumps(hjson, indent=2))
+        if (args.output) :
+            with open(args.output, 'w') as fh:
+                fh.write(json.dumps(hjson, indent=2))
+        else:
+            print(json.dumps(hjson, indent=2))
+
         #print(str(controllers))
         #print(str(smodels))
