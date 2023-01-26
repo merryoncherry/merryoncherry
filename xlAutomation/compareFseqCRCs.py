@@ -13,6 +13,7 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--channels', action='store_true',  help="Compare channels")
     parser.add_argument('-f', '--frames', action='store_true',  help="Compare frames")
     parser.add_argument('-g', '--globalcrc', action='store_true',  help="Compare global crc")
+    parser.add_argument('-m', '--models', action='store_true', help='Compare model crcs')
     #parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq file")
     #parser.add_argument('-o', '--output',   help="Path to output file")
     parser.add_argument('file1', nargs=1, help='base sequence crc summary json file')
@@ -78,6 +79,24 @@ if __name__ == '__main__':
         for f in v1fs.values():
             diff = True
             print ("Frame "+str(f['frame'])+" is black in file2 but present in file1")
+
+    # TODO: It would be nice to have the model type
+    if args.models:
+        v1ms = {}
+        for m in v1['modelcrcs']:
+            v1ms[m['name']] = m
+        for m in v2['modelcrcs']:
+            if m['name'] not in v1ms:
+                diff = True
+                print("Model "+str(m['name'])+" is not in file1 but present in file2")
+            else:
+                if not (m['crc'] == v1ms[m['name']]['crc']):
+                    diff = True
+                    print("Model "+str(m['name'])+" crc differs")
+                del  v1ms[m['name']]
+        for m in v1ms.values():
+            diff = True
+            print ("Model "+str(m['name'])+" is not in file2 but present in file1")
 
     if diff:
         print("Differences found.  Note file1 from "+xlv1+" and file2 from "+xlv2)
