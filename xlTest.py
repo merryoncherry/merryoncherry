@@ -108,6 +108,10 @@ def calcSequenceCRC(args, perf):
         xlAutomation.fseqFile.readSequenceTimingTrack(os.path.join(args.datadir, args.sequence), ttracks)
 
     # Process the CRC and tell us the result
+    fseqn = os.path.join(args.datadir, args.sequence)
+    fseqn = fseqn[:-4] if fseqn[-4:] == '.xsq' else fseqn
+    hjson = xlAutomation.fseqFile.calculateFSEQSummary(fseqn+'.fseq', controllers, ctrlbyname, models, smodels, ttracks)
+    print(json.dumps(hjson, indent=2))
 
     crc_end = time.time()
     if "crc" not in perf:

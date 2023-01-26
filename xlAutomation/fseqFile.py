@@ -156,7 +156,7 @@ def readSequenceTimingTrack(spath, ttracks):
                     trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
                 break
 
-def calculateFSEQSummary(sfile):
+def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttracks):
     hjson = {}
     with open(sfile, 'rb') as fh:
         hdr = fh.read(4)
@@ -424,7 +424,7 @@ if __name__ == '__main__':
     if args.sequence:
         readSequenceTimingTrack(args.sequence, ttracks)
 
-    hjson = calculateFSEQSummary(args.flist[0])
+    hjson = calculateFSEQSummary(args.flist[0], controllers, ctrlbyname, models, smodels, ttracks)
 
     if (args.output) :
         with open(args.output, 'w') as fh:
