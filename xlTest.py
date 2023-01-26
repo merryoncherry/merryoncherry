@@ -1,15 +1,12 @@
 import argparse
 import json
+import os
 import time
 import xlAutomation.xlDo
 
 # python ./xlTest.py --start_xlights -R -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
 
 # TODO:
-# Take sequence name and data dir
-# Change to data dir & time it
-# Open a sequence & time it
-# Save sequence & time it
 # Refactor logic for fseqfile
 # Summarize rendered sequence
 # Refactor logic for compare
@@ -38,22 +35,48 @@ import xlAutomation.xlDo
 #        self.updateExpectedSummary = False
 
 def renderSequence(xlenv, args, perf):
-    start_open = time.time()
-    xlenv.openSequence(args.sequence)
-    end_open = time.time()
-    start_save = time.time()
-    xlenv.saveSequence()
-    end_save = time.time()
-    start_close = time.time()
-    xlenv.closeSequence()
-    end_close = time.time()
+    if 0:
+        start_open = time.time()
+        x = xlenv.openSequence(args.sequence)
+        print(x)
+        end_open = time.time()
 
-    if "render_seq" not in perf:
-        perf['render_seq'] = []
-    perf['render_seq'].append({
-        'start_open': start_open, 'end_open': end_open,
-        'start_save':start_save, 'end_save':end_save,
-        'start_close':start_close, 'end_close':end_close})
+        start_render = time.time()
+        x = xlenv.renderSequence(args.sequence)
+        print(x)
+        end_render = time.time()
+
+        start_save = time.time()
+        x = xlenv.saveSequence()
+        print(x)
+        end_save = time.time()
+
+        start_close = time.time()
+        x = xlenv.closeSequence()
+        print(x)
+        end_close = time.time()
+
+        if "render_seq" not in perf:
+            perf['render_seq'] = []
+        perf['render_seq'].append({
+            'suite': args.suite,
+            'seq_name': args.sequence,
+            'start_open': start_open, 'end_open': end_open,
+            'start_render': start_render, 'end_render': end_render,
+            'start_save':start_save, 'end_save':end_save,
+            'start_close':start_close, 'end_close':end_close})
+    else:
+        start_batch = time.time()
+        xlenv.batchRenderSeqList([args.sequence])
+        end_batch = time.time()
+
+        if "render_batch" not in perf:
+            perf['render_batch'] = []
+
+        perf['render_batch'].append({
+            'suite': args.suite,
+            'seq_name': args.sequence,
+            'start_batch': start_batch, 'end_batch': end_batch})
 
 def switchFolder(xlenv, args, perf):
     if args.datadir:
@@ -68,6 +91,14 @@ def switchFolder(xlenv, args, perf):
 def switchAndRender(xlenv, args, perf):
     switchFolder(xlenv, args, perf)
     renderSequence(xlenv, args, perf)
+
+def calcSequenceCRC(args, perf):
+    crc_start = time.time()
+    #TODO
+    crc_end = time.time()
+    if "crc" not in perf:
+        perf['crc']=[]
+    perf['crc'].append({'suite':args.suite, 'crc_start':crc_start, 'crc_end':crc_end})
 
 def testSequence(args):
     pass
@@ -91,11 +122,14 @@ if __name__ == '__main__':
     # Upper case for actions
     parser.add_argument('-R', '--do_render', action='store_true',  help="Do rendering of all sequences")
     parser.add_argument('-S', '--start_xlights', action='store_true',  help="Start xLights if not running")
+    parser.add_argument('-C', '--calc_crcs', action='store_true', help='Calculate fseq CRC summaries')
 
     # Lower case for paths
     parser.add_argument('-b', '--bindir',  help="Path to xLights binaries")
     parser.add_argument('-d', '--datadir', help="Path to xlights data dir (show folder)")    
     parser.add_argument('-s', '--sequence', help="Path to or name of effect sequence .xsq file")
+    parser.add_argument('-c', '--crcdir', help="Path to CRC summaries of .fseq files")
+    parser.add_argument('-u', '--suite', help="Test suite")
 
     #parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
     #parser.add_argument('-o', '--output',   help="Path to output file")
@@ -126,6 +160,8 @@ if __name__ == '__main__':
     if args.sequence:
         if args.do_render:
             switchAndRender(xlenv, args, perf)
+        if args.calc_crcs:
+            calcSequenceCRC(args, perf)
 
     if stopXlights:
         perf['stop_xLights_start'] = time.time()

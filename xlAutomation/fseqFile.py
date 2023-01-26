@@ -44,6 +44,7 @@ class ModelRec:
         self.startch = startch
         self.nch = nch
         self.empty = True
+        self.typ = ''
         self.crc = 0
 
     def __repr__(self):
@@ -63,6 +64,67 @@ class TimingRec:
         self.entlist = []
         self.current = 0
 
+def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
+    xmodels   = xml.dom.minidom.parse(xldir+'/xlights_rgbeffects.xml')
+    xnetworks = xml.dom.minidom.parse(xldir+'/xlights_networks.xml')
+
+    xnd = xnetworks.documentElement
+    if (xnd.tagName != 'Networks'):
+        raise Exception('Root not "Networks"')
+
+    startch = 1
+    for cn in xnd.childNodes:
+        if cn.nodeType == xml.dom.Node.ATTRIBUTE_NODE or cn.nodeType == xml.dom.Node.TEXT_NODE:
+            continue
+        if cn.tagName != 'Controller':
+            continue
+        controllers.append((startch, cn.getAttribute('Name')))
+        ctrlbyname[cn.getAttribute('Name')] = startch
+        for net in cn.childNodes:
+            if net.nodeType == xml.dom.Node.ATTRIBUTE_NODE or net.nodeType == xml.dom.Node.TEXT_NODE:
+                continue
+            if (net.tagName != 'network'):
+                continue
+            startch += int(net.getAttribute('MaxChannels'))
+
+    xnd = xmodels.documentElement
+    if (xnd.tagName != 'xrgb'):
+        raise Exception('Root not "xrgb"')
+    for grp in xnd.childNodes:
+        if grp.nodeType == xml.dom.Node.ATTRIBUTE_NODE or grp.nodeType == xml.dom.Node.TEXT_NODE:
+            continue
+        if grp.tagName != 'models':
+            continue
+        for mdl in grp.childNodes:
+            if mdl.nodeType == xml.dom.Node.ATTRIBUTE_NODE or mdl.nodeType == xml.dom.Node.TEXT_NODE:
+                continue
+            if (mdl.tagName != 'model'):
+                continue
+            name = mdl.getAttribute('name')
+            chstr = mdl.getAttribute('StartChannel')
+            channel = -1
+            if (chstr[0] >= '0' and chstr[0] <= '9') :
+                channel = int(chstr)
+            elif chstr[0] == '@':
+                continue
+            elif chstr[0] == '!':
+                # TODO Look up controller
+                (ctrlnm,offset) = chstr[1:].split(':')
+                channel = ctrlbyname[ctrlnm]+int(offset)-1
+            else:
+                raise Exception("Unknown channel string: "+chstr)
+            models.append(ModelRec(name, channel, -1))
+
+    # Oh heck how to calculate channels per model
+    #  Will we eventually just have to add specific logic?
+    smodels = sorted(models, key = lambda m : m.startch)
+    for i in range(0, len(smodels)):
+        if i == len(smodels)-1 :
+            continue
+        smodels[i].nch = smodels[i+1].startch - smodels[i].startch
+    for m in smodels:
+        osmodels.append(m)
+
 if __name__ == '__main__':
     # Command line arguments
     parser = argparse.ArgumentParser()
@@ -76,67 +138,11 @@ if __name__ == '__main__':
     controllers = []
     ctrlbyname = {}
     models = []
+    smodels = []
     ttracks = []
 
     if args.xlights:
-        xmodels   = xml.dom.minidom.parse(args.xlights+'/xlights_rgbeffects.xml')
-        xnetworks = xml.dom.minidom.parse(args.xlights+'/xlights_networks.xml')
-
-        xnd = xnetworks.documentElement
-        if (xnd.tagName != 'Networks'):
-            raise Exception('Root not "Networks"')
-        #for attrName, attrValue in n.attributes.items():
-        #    raise Exception('Root "xrgb" unexpected attribute "'+attrName+'"')
-        startch = 1
-        for cn in xnd.childNodes:
-            if cn.nodeType == xml.dom.Node.ATTRIBUTE_NODE or cn.nodeType == xml.dom.Node.TEXT_NODE:
-                continue
-            if cn.tagName != 'Controller':
-                continue
-            controllers.append((startch, cn.getAttribute('Name')))
-            ctrlbyname[cn.getAttribute('Name')] = startch
-            for net in cn.childNodes:
-                if net.nodeType == xml.dom.Node.ATTRIBUTE_NODE or net.nodeType == xml.dom.Node.TEXT_NODE:
-                    continue
-                if (net.tagName != 'network'):
-                    continue
-                startch += int(net.getAttribute('MaxChannels'))
-
-        xnd = xmodels.documentElement
-        if (xnd.tagName != 'xrgb'):
-            raise Exception('Root not "xrgb"')
-        for grp in xnd.childNodes:
-            if grp.nodeType == xml.dom.Node.ATTRIBUTE_NODE or grp.nodeType == xml.dom.Node.TEXT_NODE:
-                continue
-            if grp.tagName != 'models':
-                continue
-            for mdl in grp.childNodes:
-                if mdl.nodeType == xml.dom.Node.ATTRIBUTE_NODE or mdl.nodeType == xml.dom.Node.TEXT_NODE:
-                    continue
-                if (mdl.tagName != 'model'):
-                    continue
-                name = mdl.getAttribute('name')
-                chstr = mdl.getAttribute('StartChannel')
-                channel = -1
-                if (chstr[0] >= '0' and chstr[0] <= '9') :
-                    channel = int(chstr)
-                elif chstr[0] == '@':
-                    continue
-                elif chstr[0] == '!':
-                    # TODO Look up controller
-                    (ctrlnm,offset) = chstr[1:].split(':')
-                    channel = ctrlbyname[ctrlnm]+int(offset)-1
-                else:
-                    raise Exception("Unknown channel string: "+chstr)
-                models.append(ModelRec(name, channel, -1))
-
-        # Oh heck how to calculate channels per model
-        #  Will we eventually just have to add specific logic?
-        smodels = sorted(models, key = lambda m : m.startch)
-        for i in range(0, len(smodels)):
-            if i == len(smodels)-1 :
-                continue
-            smodels[i].nch = smodels[i+1].startch - smodels[i].startch
+        readControllersAndModels(args.xlights, controllers, ctrlbyname, models, smodels)
 
     if args.sequence:
         xseqd = xml.dom.minidom.parse(args.sequence)

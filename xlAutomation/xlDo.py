@@ -246,6 +246,10 @@ class XLEnv:
         x = self.xLightsHttpPost('openSequence', {'seq':seq, 'promptIssues':'false', 'force':'true'})
         return x
 
+    def renderSequence(self, seq):
+        x = self.xLightsHttpGet('renderAll', {'seq':seq, 'highdef':'true'})
+        return x
+
     def saveSequence(self):
         x = self.xLightsHttpGet('saveSequence', {})
         return x
