@@ -128,7 +128,7 @@ if __name__ == '__main__':
                                 if not (m['crc'] == v1ms[m['name']]['crc']):
                                     diff = True
                                     print("    Model "+str(m['name'])+" crc differs")
-                                    del  v1ms[m['name']]
+                                del  v1ms[m['name']]
                         for m in v1ms.values():
                             diff = True
                             print ("Model "+str(m['name'])+" is not in file2 but present in file1")
