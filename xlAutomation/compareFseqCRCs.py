@@ -14,7 +14,7 @@ if __name__ == '__main__':
     parser.add_argument('-f', '--frames', action='store_true',  help="Compare frames")
     parser.add_argument('-g', '--globalcrc', action='store_true',  help="Compare global crc")
     parser.add_argument('-m', '--models', action='store_true', help='Compare model crcs')
-    #parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq file")
+    parser.add_argument('-t', '--timings', action='store_true', help='Compare timing section crcs')
     #parser.add_argument('-o', '--output',   help="Path to output file")
     parser.add_argument('file1', nargs=1, help='base sequence crc summary json file')
     parser.add_argument('file2', nargs=1, help='diff sequence crc summary json file')
@@ -97,6 +97,28 @@ if __name__ == '__main__':
         for m in v1ms.values():
             diff = True
             print ("Model "+str(m['name'])+" is not in file2 but present in file1")
+
+    # TODO: It would be nice to have the effects in this timing region
+    if args.timings:
+        v1ts = {}
+        for tn in v1['ttracks'].keys():
+            for t in v1['ttracks'][tn]:
+                v1ts[(tn,t['start'])] = t
+        for tn in v2['ttracks'].keys():
+            for t in v2['ttracks'][tn]:
+                if (tn,t['start']) not in v1ts:
+                    diff = True
+                    print("Timing "+tn+":"+t['label']+"@"+str(t['start'])+"ms is not in file1 but present in file2")
+                else:
+                    if not (t['crc'] == v1ts[(tn,t['start'])]['crc']):
+                        diff = True
+                        print("Timing "+tn+":"+t['label']+"@"+str(t['start'])+"ms crc differs")
+                    del  v1ts[(tn,t['start'])]
+        for tk in v1ts.keys():
+            diff = True
+            (tn, ts) = tk
+            t = v1ts[tk]
+            print("Timing "+tn+":"+t['label']+"@"+str(t['start'])+"ms is not in file2 but present in file1")
 
     if diff:
         print("Differences found.  Note file1 from "+xlv1+" and file2 from "+xlv2)
