@@ -61,7 +61,7 @@
     <Element type="model" name="StarLayered">
       <EffectLayer>
         <Effect ref="0" name="SingleStrand" startTime="0" endTime="5025" palette="0"/>
-        <Effect ref="1" name="Marquee" selected="1" id="1" startTime="10100" endTime="11100" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="10100" endTime="11100" palette="0"/>
         <Effect ref="2" name="Bars" id="2" startTime="12625" endTime="14925" palette="0"/>
       </EffectLayer>
     </Element>
