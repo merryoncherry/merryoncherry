@@ -3,26 +3,71 @@ import json
 import time
 import xlAutomation.xlDo
 
-class Args:
-    def __init__(self):
-        self.xlightsBin = ""
-        self.showFolder = ""
-        self.suiteFolder = ""
-        self.summaryFolder = ""
-        self.summaryExpectedFolder = ""
-        self.perfFolder = ""
-        self.perfBaselineFolder = ""
-        self.reportFolder = ""
-        self.startXlights = False
-        self.performRender = False
-        self.performSummary = False
-        self.compareSummary = False
-        self.saveJsonReport = False
-        self.printTxtReport = False
-        self.updateExpectedSummary = False
+# python ./xlTest.py --start_xlights -R -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
 
-def renderSequence(args):
-    pass
+# TODO:
+# Take sequence name and data dir
+# Change to data dir & time it
+# Open a sequence & time it
+# Save sequence & time it
+# Refactor logic for fseqfile
+# Summarize rendered sequence
+# Refactor logic for compare
+# Compare it
+# Implement dir scan
+# Save the perf data if asked
+
+#class Args:
+#    do_render
+#    start_xlights
+#    bindir - str
+#    datadir - str
+#    sequence - str
+
+#    def __init__(self):
+#        self.suiteFolder = ""
+#        self.summaryFolder = ""
+#        self.summaryExpectedFolder = ""
+#        self.perfFolder = ""
+#        self.perfBaselineFolder = ""
+#        self.reportFolder = ""
+#        self.performSummary = False
+#        self.compareSummary = False
+#        self.saveJsonReport = False
+#        self.printTxtReport = False
+#        self.updateExpectedSummary = False
+
+def renderSequence(xlenv, args, perf):
+    start_open = time.time()
+    xlenv.openSequence(args.sequence)
+    end_open = time.time()
+    start_save = time.time()
+    xlenv.saveSequence()
+    end_save = time.time()
+    start_close = time.time()
+    xlenv.closeSequence()
+    end_close = time.time()
+
+    if "render_seq" not in perf:
+        perf['render_seq'] = []
+    perf['render_seq'].append({
+        'start_open': start_open, 'end_open': end_open,
+        'start_save':start_save, 'end_save':end_save,
+        'start_close':start_close, 'end_close':end_close})
+
+def switchFolder(xlenv, args, perf):
+    if args.datadir:
+        xlenv.data = args.datadir
+        start = time.time()
+        xlenv.changeShowFolder()
+        end = time.time()
+        if "switch_folder" not in perf:
+            perf['switch_folder'] = []
+        perf['switch_folder'].append({'start': start, 'end': end, 'folder': args.datadir})
+
+def switchAndRender(xlenv, args, perf):
+    switchFolder(xlenv, args, perf)
+    renderSequence(xlenv, args, perf)
 
 def testSequence(args):
     pass
@@ -43,10 +88,16 @@ if __name__ == '__main__':
     # Command line arguments
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-S', '--start_xlights', action='store_true',  help="Start xLights if not running")
+    # Upper case for actions
     parser.add_argument('-R', '--do_render', action='store_true',  help="Do rendering of all sequences")
+    parser.add_argument('-S', '--start_xlights', action='store_true',  help="Start xLights if not running")
+
+    # Lower case for paths
+    parser.add_argument('-b', '--bindir',  help="Path to xLights binaries")
+    parser.add_argument('-d', '--datadir', help="Path to xlights data dir (show folder)")    
+    parser.add_argument('-s', '--sequence', help="Path to or name of effect sequence .xsq file")
+
     #parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
-    #parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq file")
     #parser.add_argument('-o', '--output',   help="Path to output file")
     #parser.add_argument('flist', nargs=1, help='sequence binary files')
 
@@ -57,7 +108,10 @@ if __name__ == '__main__':
     xlenv = None
     if args.start_xlights or args.do_render:
         xlenv = xlAutomation.xlDo.XLEnv()
-        #xlenv.data = 'c:\\Users\\Chuck\\Documents\\xlightsShows\\2022_Halloween'
+        if args.bindir:
+            xlenv.bin = args.bindir
+        if args.datadir:
+            xlenv.data = args.datadir
 
     stopXlights = False
     if args.start_xlights:
@@ -69,7 +123,9 @@ if __name__ == '__main__':
             perf['start_xLights_end'] = time.time()
             stopXlights = True
 
-    #xlenv.changeShowFolder()
+    if args.sequence:
+        if args.do_render:
+            switchAndRender(xlenv, args, perf)
 
     if stopXlights:
         perf['stop_xLights_start'] = time.time()

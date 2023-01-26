@@ -242,6 +242,18 @@ class XLEnv:
             print(x)
         pass
 
+    def openSequence(self, seq):
+        x = self.xLightsHttpPost('openSequence', {'seq':seq, 'promptIssues':'false', 'force':'true'})
+        return x
+
+    def saveSequence(self):
+        x = self.xLightsHttpGet('saveSequence', {})
+        return x
+
+    def closeSequence(self):
+        x = self.xLightsHttpGet('closeSequence', {'quiet':'true', 'force':'true'})
+        return x
+
 #    def renderSeqList(self, seqs):
 #        self.startXLights();
 #        cmd = '{"cmd":"batchRender", "seqs":['
