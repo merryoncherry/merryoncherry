@@ -3,6 +3,7 @@ import json
 import os
 import time
 import xlAutomation.xlDo
+import xlAutomation.fseqFile
 
 # python ./xlTest.py --start_xlights -R -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
 
@@ -94,7 +95,20 @@ def switchAndRender(xlenv, args, perf):
 
 def calcSequenceCRC(args, perf):
     crc_start = time.time()
-    #TODO
+
+    # Read in the context for it
+    controllers = []
+    ctrlbyname = {}
+    models = []
+    smodels = []
+    ttracks = []
+
+    if args.datadir:
+        xlAutomation.fseqFile.readControllersAndModels(args.datadir, controllers, ctrlbyname, models, smodels)
+        xlAutomation.fseqFile.readSequenceTimingTrack(os.path.join(args.datadir, args.sequence), ttracks)
+
+    # Process the CRC and tell us the result
+
     crc_end = time.time()
     if "crc" not in perf:
         perf['crc']=[]

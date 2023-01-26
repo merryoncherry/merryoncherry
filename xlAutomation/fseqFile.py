@@ -125,59 +125,40 @@ def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
     for m in smodels:
         osmodels.append(m)
 
-if __name__ == '__main__':
-    # Command line arguments
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
-    parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq file")
-    parser.add_argument('-o', '--output',   help="Path to output file")
-    parser.add_argument('flist', nargs=1, help='sequence binary files')
-
-    args = parser.parse_args()
-
-    controllers = []
-    ctrlbyname = {}
-    models = []
-    smodels = []
-    ttracks = []
-
-    if args.xlights:
-        readControllersAndModels(args.xlights, controllers, ctrlbyname, models, smodels)
-
-    if args.sequence:
-        xseqd = xml.dom.minidom.parse(args.sequence)
-        xnseq = xseqd.documentElement
-        if (xnseq.tagName != 'xsequence'):
-            raise Exception('Root not "xsequence"')
-        for section in xnseq.childNodes:
-            if section.nodeType == xml.dom.Node.ATTRIBUTE_NODE or section.nodeType == xml.dom.Node.TEXT_NODE:
+def readSequenceTimingTrack(spath, ttracks):
+    xseqd = xml.dom.minidom.parse(spath)
+    xnseq = xseqd.documentElement
+    if (xnseq.tagName != 'xsequence'):
+        raise Exception('Root not "xsequence"')
+    for section in xnseq.childNodes:
+        if section.nodeType == xml.dom.Node.ATTRIBUTE_NODE or section.nodeType == xml.dom.Node.TEXT_NODE:
+            continue
+        if section.tagName != 'ElementEffects':
+            continue
+        for element in section.childNodes:
+            if element.nodeType == xml.dom.Node.ATTRIBUTE_NODE or element.nodeType == xml.dom.Node.TEXT_NODE:
                 continue
-            if section.tagName != 'ElementEffects':
+            if element.tagName != 'Element' or element.getAttribute('type') != 'timing':
                 continue
-            for element in section.childNodes:
-                if element.nodeType == xml.dom.Node.ATTRIBUTE_NODE or element.nodeType == xml.dom.Node.TEXT_NODE:
+            # Ahah: Timing
+            for tlayer in element.childNodes:
+                if tlayer.nodeType == xml.dom.Node.ATTRIBUTE_NODE or tlayer.nodeType == xml.dom.Node.TEXT_NODE:
                     continue
-                if element.tagName != 'Element' or element.getAttribute('type') != 'timing':
+                if tlayer.tagName != 'EffectLayer':
                     continue
-                # Ahah: Timing
-                for tlayer in element.childNodes:
-                    if tlayer.nodeType == xml.dom.Node.ATTRIBUTE_NODE or tlayer.nodeType == xml.dom.Node.TEXT_NODE:
+                trec = TimingRec(element.getAttribute('name'))
+                ttracks.append(trec)
+                for effect in tlayer.childNodes:
+                    if effect.nodeType == xml.dom.Node.ATTRIBUTE_NODE or effect.nodeType == xml.dom.Node.TEXT_NODE:
                         continue
-                    if tlayer.tagName != 'EffectLayer':
+                    if effect.tagName != 'Effect':
                         continue
-                    trec = TimingRec(element.getAttribute('name'))
-                    ttracks.append(trec)
-                    for effect in tlayer.childNodes:
-                        if effect.nodeType == xml.dom.Node.ATTRIBUTE_NODE or effect.nodeType == xml.dom.Node.TEXT_NODE:
-                            continue
-                        if effect.tagName != 'Effect':
-                            continue
-                        trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
-                    break
+                    trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
+                break
 
-
+def calculateFSEQSummary(sfile):
     hjson = {}
-    with open(args.flist[0], 'rb') as fh:
+    with open(sfile, 'rb') as fh:
         hdr = fh.read(4)
         shdr = str(hdr, 'utf-8')
         #print(shdr)
@@ -419,12 +400,37 @@ if __name__ == '__main__':
                     if (m.empty):
                         continue;
                     o.append({"name": m.name, "crc": m.crc&0xFFFFFFFF})
+    return hjson
 
-        if (args.output) :
-            with open(args.output, 'w') as fh:
-                fh.write(json.dumps(hjson, indent=2))
-        else:
-            print(json.dumps(hjson, indent=2))
+if __name__ == '__main__':
+    # Command line arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
+    parser.add_argument('-s', '--sequence', help="Path to effect sequence .xsq file")
+    parser.add_argument('-o', '--output',   help="Path to output file")
+    parser.add_argument('flist', nargs=1, help='sequence binary files')
 
-        #print(str(controllers))
-        #print(str(smodels))
+    args = parser.parse_args()
+
+    controllers = []
+    ctrlbyname = {}
+    models = []
+    smodels = []
+    ttracks = []
+
+    if args.xlights:
+        readControllersAndModels(args.xlights, controllers, ctrlbyname, models, smodels)
+
+    if args.sequence:
+        readSequenceTimingTrack(args.sequence, ttracks)
+
+    hjson = calculateFSEQSummary(args.flist[0])
+
+    if (args.output) :
+        with open(args.output, 'w') as fh:
+            fh.write(json.dumps(hjson, indent=2))
+    else:
+        print(json.dumps(hjson, indent=2))
+
+    #print(str(controllers))
+     #print(str(smodels))
