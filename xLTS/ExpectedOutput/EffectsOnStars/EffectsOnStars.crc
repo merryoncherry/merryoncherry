@@ -12,8 +12,8 @@
   "compblks": 123,
   "nsparseranges": 0,
   "reserved2": 0,
-  "uuid1": 1194276344,
-  "uuid2": 389911,
+  "uuid1": 2468861976,
+  "uuid2": 389919,
   "compblocklist": [
     {
       "framenum": 0,
@@ -3508,46 +3508,26 @@
   "ttracks": {
     "SectionLabel": [
       {
-        "label": "",
-        "start": 0,
-        "end": 0,
-        "crc": 177338491,
-        "models": [
-          {
-            "name": "StarCustom",
-            "crc": 2319811717
-          },
-          {
-            "name": "StarCustomStrands",
-            "crc": 2319811717
-          },
-          {
-            "name": "StarLayered",
-            "crc": 791091517
-          }
-        ]
-      },
-      {
         "label": "Single strand on model",
         "start": 0,
         "end": 5025,
-        "crc": 1431120340,
+        "crc": 576736573,
         "models": [
           {
             "name": "StarCustom",
-            "crc": 3432711163
+            "crc": 286652508
           },
           {
             "name": "StarCustomSpaced",
-            "crc": 2754592518
+            "crc": 251035723
           },
           {
             "name": "StarCustomStrands",
-            "crc": 2685314027
+            "crc": 2105563212
           },
           {
             "name": "StarLayered",
-            "crc": 895462723
+            "crc": 651506985
           }
         ]
       },
