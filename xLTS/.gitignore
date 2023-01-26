@@ -1,5 +1,6 @@
 *.fseq
 *.xbkp
+*.tmp
 xlights_keybindings.xml
 Backup
 xScheduleData
