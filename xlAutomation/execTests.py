@@ -11,7 +11,7 @@ if 0:
         , capture_output=False)
 
 subprocess.run('python compareFseqCRCs.py '
-    " -c "
+    " -c -f "
     " m:\\users\\chuck\\source\\repos\\merryoncherry\\xlts\\expectedoutput\\effectsonstars\\EffectsOnStars.crc "
     " m:\\users\\chuck\\source\\repos\\merryoncherry\\xlts\\expectedoutput\\effectsonstars\\EffectsOnStars.crc.tmp "
     , capture_output=False)
