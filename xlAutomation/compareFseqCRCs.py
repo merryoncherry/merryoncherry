@@ -113,7 +113,27 @@ if __name__ == '__main__':
                     if not (t['crc'] == v1ts[(tn,t['start'])]['crc']):
                         diff = True
                         print("Timing "+tn+":"+t['label']+"@"+str(t['start'])+"ms crc differs")
+
+                        # Print out which models caused it
+                        tm1 = t['models']
+                        tm2 =  v1ts[(tn,t['start'])]['models']
+                        v1ms = {}
+                        for m in tm1:
+                            v1ms[m['name']] = m
+                        for m in tm2:
+                            if m['name'] not in v1ms:
+                                diff = True
+                                print("    Model "+str(m['name'])+" is not in file1 but present in file2")
+                            else:
+                                if not (m['crc'] == v1ms[m['name']]['crc']):
+                                    diff = True
+                                    print("    Model "+str(m['name'])+" crc differs")
+                                    del  v1ms[m['name']]
+                        for m in v1ms.values():
+                            diff = True
+                            print ("Model "+str(m['name'])+" is not in file2 but present in file1")
                     del  v1ts[(tn,t['start'])]
+
         for tk in v1ts.keys():
             diff = True
             (tn, ts) = tk
