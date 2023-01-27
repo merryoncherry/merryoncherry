@@ -6,14 +6,14 @@ import xlAutomation.xlDo
 import xlAutomation.fseqFile
 
 # python ./xlTest.py --start_xlights -R -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
+# python ./xlTest.py --start_xlights -R -C -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
 
 # TODO:
-# Refactor logic for fseqfile
-# Summarize rendered sequence
 # Refactor logic for compare
 # Compare it
 # Implement dir scan
 # Save the perf data if asked
+# try to get the model type
 
 #class Args:
 #    do_render
@@ -29,7 +29,6 @@ import xlAutomation.fseqFile
 #        self.perfFolder = ""
 #        self.perfBaselineFolder = ""
 #        self.reportFolder = ""
-#        self.performSummary = False
 #        self.compareSummary = False
 #        self.saveJsonReport = False
 #        self.printTxtReport = False
@@ -108,12 +107,17 @@ def calcSequenceCRC(args, perf):
         xlAutomation.fseqFile.readSequenceTimingTrack(os.path.join(args.datadir, args.sequence), ttracks)
 
     # Process the CRC and tell us the result
-    fseqn = os.path.join(args.datadir, args.sequence)
-    fseqn = fseqn[:-4] if fseqn[-4:] == '.xsq' else fseqn
-    hjson = xlAutomation.fseqFile.calculateFSEQSummary(fseqn+'.fseq', controllers, ctrlbyname, models, smodels, ttracks)
-    print(json.dumps(hjson, indent=2))
-
+    fseqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence
+    fseqn = os.path.join(args.datadir, fseqbase+'.fseq')
+    hjson = xlAutomation.fseqFile.calculateFSEQSummary(fseqn, controllers, ctrlbyname, models, smodels, ttracks)
+    #print(json.dumps(hjson, indent=2))
     crc_end = time.time()
+
+    if args.summary_target:
+        os.makedirs(args.summary_target, mode = 0o777, exist_ok = True)
+        with open(os.path.join(args.summary_target, fseqbase+'.crc'), 'w') as fh:
+            fh.write(json.dumps(hjson, indent=2))
+
     if "crc" not in perf:
         perf['crc']=[]
     perf['crc'].append({'suite':args.suite, 'crc_start':crc_start, 'crc_end':crc_end})
@@ -144,9 +148,10 @@ if __name__ == '__main__':
 
     # Lower case for paths
     parser.add_argument('-b', '--bindir',  help="Path to xLights binaries")
-    parser.add_argument('-d', '--datadir', help="Path to xlights data dir (show folder)")    
-    parser.add_argument('-s', '--sequence', help="Path to or name of effect sequence .xsq file")
     parser.add_argument('-c', '--crcdir', help="Path to CRC summaries of .fseq files")
+    parser.add_argument('-d', '--datadir', help="Path to xlights data dir (show folder)")    
+    parser.add_argument('-w', '--summary_target', help="Path to write fseq summary")
+    parser.add_argument('-s', '--sequence', help="Name of effect sequence .xsq file")
     parser.add_argument('-u', '--suite', help="Test suite")
 
     #parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
