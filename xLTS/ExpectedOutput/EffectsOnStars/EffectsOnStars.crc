@@ -12,8 +12,8 @@
   "compblks": 123,
   "nsparseranges": 0,
   "reserved2": 0,
-  "uuid1": 2468861976,
-  "uuid2": 389919,
+  "uuid1": 3579193208,
+  "uuid2": 389952,
   "compblocklist": [
     {
       "framenum": 0,
@@ -498,7 +498,7 @@
   ],
   "chranges": [],
   "headers": {
-    "sp": "xLights Windows 2022.26 64bit\u0000"
+    "sp": "xLights Windows 2022.26 64bit"
   },
   "framecrcs": [
     {
@@ -3490,18 +3490,22 @@
   "modelcrcs": [
     {
       "name": "StarCustom",
+      "type": "Custom",
       "crc": 3720630427
     },
     {
       "name": "StarCustomSpaced",
+      "type": "Custom",
       "crc": 2279564377
     },
     {
       "name": "StarCustomStrands",
+      "type": "Custom",
       "crc": 3785755327
     },
     {
       "name": "StarLayered",
+      "type": "Star",
       "crc": 1234111211
     }
   ],
@@ -3515,18 +3519,22 @@
         "models": [
           {
             "name": "StarCustom",
+            "type": "Custom",
             "crc": 286652508
           },
           {
             "name": "StarCustomSpaced",
+            "type": "Custom",
             "crc": 251035723
           },
           {
             "name": "StarCustomStrands",
+            "type": "Custom",
             "crc": 2105563212
           },
           {
             "name": "StarLayered",
+            "type": "Star",
             "crc": 651506985
           }
         ]
@@ -3539,18 +3547,22 @@
         "models": [
           {
             "name": "StarCustom",
+            "type": "Custom",
             "crc": 1997719006
           },
           {
             "name": "StarCustomSpaced",
+            "type": "Custom",
             "crc": 1738207269
           },
           {
             "name": "StarCustomStrands",
+            "type": "Custom",
             "crc": 170789564
           },
           {
             "name": "StarLayered",
+            "type": "Star",
             "crc": 1656081184
           }
         ]
@@ -3563,18 +3575,22 @@
         "models": [
           {
             "name": "StarCustom",
+            "type": "Custom",
             "crc": 2432259351
           },
           {
             "name": "StarCustomSpaced",
+            "type": "Custom",
             "crc": 1934417300
           },
           {
             "name": "StarCustomStrands",
+            "type": "Custom",
             "crc": 1495095738
           },
           {
             "name": "StarLayered",
+            "type": "Star",
             "crc": 1225155573
           }
         ]
@@ -3587,18 +3603,22 @@
         "models": [
           {
             "name": "StarCustom",
+            "type": "Custom",
             "crc": 625913997
           },
           {
             "name": "StarCustomSpaced",
+            "type": "Custom",
             "crc": 2239859998
           },
           {
             "name": "StarCustomStrands",
+            "type": "Custom",
             "crc": 3744619404
           },
           {
             "name": "StarLayered",
+            "type": "Star",
             "crc": 3275611764
           }
         ]
@@ -3611,18 +3631,22 @@
         "models": [
           {
             "name": "StarCustom",
+            "type": "Custom",
             "crc": 2886560208
           },
           {
             "name": "StarCustomSpaced",
+            "type": "Custom",
             "crc": 1296163002
           },
           {
             "name": "StarCustomStrands",
+            "type": "Custom",
             "crc": 766609207
           },
           {
             "name": "StarLayered",
+            "type": "Star",
             "crc": 2584394164
           }
         ]
@@ -3635,18 +3659,22 @@
         "models": [
           {
             "name": "StarCustom",
+            "type": "Custom",
             "crc": 2541809506
           },
           {
             "name": "StarCustomSpaced",
+            "type": "Custom",
             "crc": 1993106952
           },
           {
             "name": "StarCustomStrands",
+            "type": "Custom",
             "crc": 373031301
           },
           {
             "name": "StarLayered",
+            "type": "Star",
             "crc": 3471348521
           }
         ]
@@ -3659,18 +3687,22 @@
         "models": [
           {
             "name": "StarCustom",
+            "type": "Custom",
             "crc": 2154786354
           },
           {
             "name": "StarCustomSpaced",
+            "type": "Custom",
             "crc": 2430341342
           },
           {
             "name": "StarCustomStrands",
+            "type": "Custom",
             "crc": 30638293
           },
           {
             "name": "StarLayered",
+            "type": "Star",
             "crc": 849628059
           }
         ]

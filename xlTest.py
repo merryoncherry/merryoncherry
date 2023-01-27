@@ -135,7 +135,7 @@ def compareSequenceSummary(args, perf, hjson):
     if diff and args.report_target:
         os.makedirs(args.report_target, mode = 0o777, exist_ok = True)
         with open(os.path.join(args.report_target,seqbase+'.rpt'), 'w') as fh:
-            fh.write(tstr.getvalue())
+            fh.write(tgt.getvalue())
 
     cmp_end = time.time()
 

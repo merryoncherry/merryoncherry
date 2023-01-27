@@ -70,7 +70,7 @@ def compareSummaries(v1, v2, args, fh):
             diff = True
             print ("Frame "+str(f['frame'])+" is black in file2 but present in file1", file=fh)
 
-    # TODO: It would be nice to have the model type
+    affectedmt = {}
     if args.models:
         v1ms = {}
         for m in v1['modelcrcs']:
@@ -83,12 +83,13 @@ def compareSummaries(v1, v2, args, fh):
                 if not (m['crc'] == v1ms[m['name']]['crc']):
                     diff = True
                     print("Model "+str(m['name'])+" crc differs", file=fh)
+                    affectedmt[m['type']] = True
                 del  v1ms[m['name']]
         for m in v1ms.values():
             diff = True
             print ("Model "+str(m['name'])+" is not in file2 but present in file1", file=fh)
 
-    # TODO: It would be nice to have the effects in this timing region
+    # TODO: It would be nice to have the effects/effect types in this timing region
     if args.timings:
         v1ts = {}
         for tn in v1['ttracks'].keys():
@@ -131,6 +132,7 @@ def compareSummaries(v1, v2, args, fh):
             print("Timing "+tn+":"+t['label']+"@"+str(t['start'])+"ms is not in file2 but present in file1", file=fh)
 
     if diff:
+        print("Differences found.  Affected model types: "+(", ".join(affectedmt.keys())), file=fh)
         print("Differences found.  Note file1 from "+xlv1+" and file2 from "+xlv2, file=fh)
 
     return diff

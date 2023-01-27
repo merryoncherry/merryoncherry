@@ -39,12 +39,12 @@ def allzero(d):
     return True
 
 class ModelRec:
-    def __init__(self, name, startch, nch):
+    def __init__(self, name, mtype, startch, nch):
         self.name = name
         self.startch = startch
         self.nch = nch
         self.empty = True
-        self.typ = ''
+        self.typ = mtype
         self.crc = 0
 
     def __repr__(self):
@@ -101,6 +101,7 @@ def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
             if (mdl.tagName != 'model'):
                 continue
             name = mdl.getAttribute('name')
+            mtyp = mdl.getAttribute('DisplayAs')
             chstr = mdl.getAttribute('StartChannel')
             channel = -1
             if (chstr[0] >= '0' and chstr[0] <= '9') :
@@ -113,7 +114,7 @@ def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
                 channel = ctrlbyname[ctrlnm]+int(offset)-1
             else:
                 raise Exception("Unknown channel string: "+chstr)
-            models.append(ModelRec(name, channel, -1))
+            models.append(ModelRec(name, mtyp, channel, -1))
 
     # Oh heck how to calculate channels per model
     #  Will we eventually just have to add specific logic?
@@ -358,7 +359,7 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                                     continue
                                 mmm = tt.entlist[tt.current].models
                                 if m.name not in mmm:
-                                    mmm[m.name] = ModelRec(m.name, m.startch, m.nch)
+                                    mmm[m.name] = ModelRec(m.name, m.typ, m.startch, m.nch)
                                 mmm[m.name].crc = binascii.crc32(msub, mmm[m.name].crc)
                                 if not allz:
                                     mmm[m.name].empty = False
@@ -385,7 +386,7 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
         for m in mbyname:
             if m.empty:
                 continue
-            hjson['modelcrcs'].append({'name':m.name, 'crc':m.crc & 0xFFFFFFFF})
+            hjson['modelcrcs'].append({'name':m.name,  'type':m.typ, 'crc':m.crc & 0xFFFFFFFF})
 
         # Add CRCs by time
         hjson['ttracks'] = {}
@@ -399,7 +400,7 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                     m = ent.models[mn]
                     if (m.empty):
                         continue;
-                    o.append({"name": m.name, "crc": m.crc&0xFFFFFFFF})
+                    o.append({"name": m.name, 'type':m.typ, "crc": m.crc&0xFFFFFFFF})
     return hjson
 
 if __name__ == '__main__':
@@ -433,4 +434,4 @@ if __name__ == '__main__':
         print(json.dumps(hjson, indent=2))
 
     #print(str(controllers))
-     #print(str(smodels))
+    #print(str(smodels))
