@@ -19,18 +19,9 @@ import xlAutomation.compareFseqCRCs
 # Save the perf data if asked
 # try to get the model type
 
-#    def __init__(self):
-#        self.suiteFolder = ""
-#        self.summaryFolder = ""
-#        self.summaryExpectedFolder = ""
-#        self.perfFolder = ""
-#        self.perfBaselineFolder = ""
-#        self.reportFolder = ""
-#        self.compareSummary = False
-#        self.printTxtReport = False
-#        self.updateExpectedSummary = False
-
 def renderSequence(xlenv, args, perf):
+    seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence        
+    
     if 0:
         start_open = time.time()
         x = xlenv.openSequence(args.sequence)
@@ -56,7 +47,7 @@ def renderSequence(xlenv, args, perf):
             perf['render_seq'] = []
         perf['render_seq'].append({
             'suite': args.suite,
-            'seq_name': args.sequence,
+            'seq_name': seqbase,
             'start_open': start_open, 'end_open': end_open,
             'start_render': start_render, 'end_render': end_render,
             'start_save':start_save, 'end_save':end_save,
@@ -71,7 +62,7 @@ def renderSequence(xlenv, args, perf):
 
         perf['render_batch'].append({
             'suite': args.suite,
-            'seq_name': args.sequence,
+            'seq_name': seqbase,
             'start_batch': start_batch, 'end_batch': end_batch})
 
 def switchFolder(xlenv, args, perf):
@@ -116,8 +107,45 @@ def calcSequenceCRC(args, perf):
 
     if "crc" not in perf:
         perf['crc']=[]
-    perf['crc'].append({'suite':args.suite, 'crc_start':crc_start, 'crc_end':crc_end})
+    perf['crc'].append({'suite':args.suite, 'seq_name':fseqbase, 'crc_start':crc_start, 'crc_end':crc_end})
     return hjson
+
+def compareSequenceSummary(args, perf, hjson):
+    cmp_start = time.time()
+    seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence
+    if not hjson:
+        # Maybe we were supposed to load it?
+        raise Exception("Not provided enough info to get test CRCs for diff")
+    if not args.summary_expected:
+        raise Exception("Not provided enough info to get baseline CRCs for diff")
+    with open(os.path.join(args.summary_expected,seqbase+'.crc'), 'r') as fh:
+        baseline = json.load(fh)
+    tgt = sys.stdout
+    if args.report_target:
+        tgt = io.StringIO()
+
+    cargs = xlAutomation.compareFseqCRCs.Args()
+    cargs.channels = True
+    cargs.frames = False
+    cargs.globalcrc = True
+    cargs.models = True
+    cargs.timings = True
+
+    diff = xlAutomation.compareFseqCRCs.compareSummaries(baseline, hjson, cargs, tgt)
+
+    if diff and args.report_target:
+        os.makedirs(args.report_target, mode = 0o777, exist_ok = True)
+        with open(os.path.join(args.report_target,seqbase+'.rpt'), 'w') as fh:
+            fh.write(tstr.getvalue())
+
+    cmp_end = time.time()
+
+    if "cmp" not in perf:
+        perf['cmp']=[]
+    perf['cmp'].append({'suite':args.suite, 'seq_name':seqbase, 'cmp_start':cmp_start, 'cmp_end':cmp_end})
+
+    return diff
+
 
 def testSequence(args):
     pass
@@ -181,36 +209,15 @@ if __name__ == '__main__':
             stopXlights = True
 
     if args.sequence:
-        seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence        
+        seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence
         if args.do_render:
             switchAndRender(xlenv, args, perf)
         if args.calc_crcs:
             hjson = calcSequenceCRC(args, perf)
         else:
             hjson = None
-            # TODO: Maybe they mean load it?
         if args.diff_summary:
-            if not hjson:
-                raise Exception("Not provided enough info to get test CRCs for diff")
-            if not args.summary_expected:
-                raise Exception("Not provided enough info to get baseline CRCs for diff")
-            with open(os.path.join(args.summary_expected,seqbase+'.crc'), 'r') as fh:
-                baseline = json.load(fh)
-            tgt = sys.stdout
-            if args.report_target:
-                tstr = io.StringIO()
-                cargs = xlAutomation.compareFseqCRCs.Args()
-                cargs.channels = True
-                cargs.frames = False
-                cargs.globalcrc = True
-                cargs.models = True
-                cargs.timings = True
-
-                diff = xlAutomation.compareFseqCRCs.compareSummaries(baseline, hjson, cargs, tstr)
-                if diff:
-                    os.makedirs(args.report_target, mode = 0o777, exist_ok = True)
-                    with open(os.path.join(args.report_target,seqbase+'.rpt'), 'w') as fh:
-                        fh.write(tstr.getvalue())
+            compareSequenceSummary(args, perf, hjson)
 
     if stopXlights:
         perf['stop_xLights_start'] = time.time()
