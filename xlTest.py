@@ -12,10 +12,10 @@ import xlAutomation.compareFseqCRCs
 # python ./xlTest.py --start_xlights -R -C -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
 # python ./xlTest.py --start_xlights -R -C -D -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq --summary_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\TempResults\EffectsOnStars --summary_expected=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ExpectedOutput\EffectsOnStars --report_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ReportResults\EffectsOnStars
 # python ./xlTest.py --start_xlights -R -C -D -P -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq --summary_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\TempResults\EffectsOnStars --summary_expected=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ExpectedOutput\EffectsOnStars --report_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ReportResults\EffectsOnStars --perf_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\PerfReport\EffectsOnStars
+# python ./xlTest.py --start_xlights -R -C -D -P --suite M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars --summary_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\TempResults\EffectsOnStars --summary_expected=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ExpectedOutput\EffectsOnStars --report_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ReportResults\EffectsOnStars --perf_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\PerfReport\EffectsOnStars
 
 # TODO:
 # Implement dir scan
-# try to get the model type
 # Some kind of perf comparison report
 
 def renderSequence(xlenv, args, perf):
@@ -77,6 +77,14 @@ def switchFolder(xlenv, args, perf):
 def switchAndRender(xlenv, args, perf):
     switchFolder(xlenv, args, perf)
     renderSequence(xlenv, args, perf)
+
+def switchAndRenderSequences(xlenv, args, perf, seqs):
+    switchFolder(xlenv, args, perf)
+    oseq = args.sequence
+    for seq in seqs:
+        args.sequence = seq
+        renderSequence(xlenv, args, perf)
+    args.sequence = oseq
 
 def calcSequenceCRC(args, perf):
     crc_start = time.time()
@@ -146,14 +154,50 @@ def compareSequenceSummary(args, perf, hjson):
     return diff
 
 
-def testSequence(args):
-    pass
+def testSequence(xlenv, args, perf):
+    #seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence
+    diff = False
+    if args.do_render:
+        switchAndRender(xlenv, args, perf)
+    if args.calc_crcs:
+        hjson = calcSequenceCRC(args, perf)
+    else:
+        hjson = None
+    if args.diff_summary:
+        diff = compareSequenceSummary(args, perf, hjson)
+    return diff
 
-def testSequences(args):
-    pass
+def testSequences(xlenv, args, perf, seqs):
+    if args.do_render:
+        switchAndRenderSequences(xlenv, args, perf, seqs)
 
-def testFolder(args):
-    pass
+    oseq = args.sequence
+    diff = False
+    for seq in seqs:
+        args.sequence = seq
+
+        if args.calc_crcs:
+            hjson = calcSequenceCRC(args, perf)
+        else:
+            hjson = None
+        if args.diff_summary:
+            if compareSequenceSummary(args, perf, hjson):
+                diff = True
+
+    args.sequence = oseq
+    return diff
+
+def testSuiteFolder(xlenv, args, perf, pth):
+    flist = os.listdir(pth)
+    slist = []
+    for x in flist:
+        if x.endswith('.xsq'):
+            slist.append(x)
+
+    oddir = args.datadir
+    args.datadir = pth
+    testSequences(xlenv, args, perf, slist)
+    args.datadir = oddir
 
 def testFolders(args):
     pass
@@ -181,7 +225,7 @@ if __name__ == '__main__':
     parser.add_argument('-r', '--report_target', help="Path to write comparison report")
     parser.add_argument('-p', '--perf_target', help="Path to write performance report")
     parser.add_argument('-s', '--sequence', help="Name of effect sequence .xsq file")
-    parser.add_argument('-u', '--suite', help="Test suite")
+    parser.add_argument('-u', '--suite', help="Test suite directory; will run all .xsq in suite")
 
     #parser.add_argument('-x', '--xlights',  help="Path to xlights_rgbeffects.xml and xlights_networks.xml")
     #parser.add_argument('-o', '--output',   help="Path to output file")
@@ -210,15 +254,10 @@ if __name__ == '__main__':
             stopXlights = True
 
     if args.sequence:
-        seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence
-        if args.do_render:
-            switchAndRender(xlenv, args, perf)
-        if args.calc_crcs:
-            hjson = calcSequenceCRC(args, perf)
-        else:
-            hjson = None
-        if args.diff_summary:
-            compareSequenceSummary(args, perf, hjson)
+        testSequence(xlenv, args, perf)
+
+    if args.suite:
+        testSuiteFolder(xlenv, args, perf, args.suite)
 
     if stopXlights:
         perf['stop_xLights_start'] = time.time()
