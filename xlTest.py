@@ -14,8 +14,10 @@ import xlAutomation.compareFseqCRCs
 # python ./xlTest.py --start_xlights -R -C -D -P -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq --summary_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\TempResults\EffectsOnStars --summary_expected=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ExpectedOutput\EffectsOnStars --report_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ReportResults\EffectsOnStars --perf_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\PerfReport\EffectsOnStars
 # python ./xlTest.py --start_xlights -R -C -D -P --suite M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars --summary_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\TempResults\EffectsOnStars --summary_expected=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ExpectedOutput\EffectsOnStars --report_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ReportResults\EffectsOnStars --perf_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\PerfReport\EffectsOnStars
 
+
+# python ./xlTest.py --start_xlights -R -C -P --suite C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Sample --summary_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_TempResults --summary_expected=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_AcceptedResults --report_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Diff --perf_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Perf_2022_26
+
 # TODO:
-# Implement dir scan
 # Some kind of perf comparison report
 
 def renderSequence(xlenv, args, perf):
