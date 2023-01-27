@@ -51,7 +51,7 @@ def compareSummaries(v1, v2, args, fh):
     if args.globalcrc:
         if v1['globalcrc'] != v2['globalcrc']:
             diff = True
-            print("Global CRC differs: "+v1['globalcrc']+" vs "+v2['globalcrc'], file=fh)
+            print("Global CRC differs: "+str(v1['globalcrc'])+" vs "+str(v2['globalcrc']), file=fh)
 
     if args.frames:
         v1fs = {}

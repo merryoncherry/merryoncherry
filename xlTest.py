@@ -1,6 +1,8 @@
 import argparse
+import io
 import json
 import os
+import sys
 import time
 import xlAutomation.xlDo
 import xlAutomation.fseqFile
@@ -12,8 +14,7 @@ import xlAutomation.compareFseqCRCs
  
 
 # TODO:
-# Refactor logic for compare
-# Compare it
+# Compare it to baseline
 # Implement dir scan
 # Save the perf data if asked
 # try to get the model type
@@ -116,6 +117,7 @@ def calcSequenceCRC(args, perf):
     if "crc" not in perf:
         perf['crc']=[]
     perf['crc'].append({'suite':args.suite, 'crc_start':crc_start, 'crc_end':crc_end})
+    return hjson
 
 def testSequence(args):
     pass
@@ -179,10 +181,36 @@ if __name__ == '__main__':
             stopXlights = True
 
     if args.sequence:
+        seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence        
         if args.do_render:
             switchAndRender(xlenv, args, perf)
         if args.calc_crcs:
-            calcSequenceCRC(args, perf)
+            hjson = calcSequenceCRC(args, perf)
+        else:
+            hjson = None
+            # TODO: Maybe they mean load it?
+        if args.diff_summary:
+            if not hjson:
+                raise Exception("Not provided enough info to get test CRCs for diff")
+            if not args.summary_expected:
+                raise Exception("Not provided enough info to get baseline CRCs for diff")
+            with open(os.path.join(args.summary_expected,seqbase+'.crc'), 'r') as fh:
+                baseline = json.load(fh)
+            tgt = sys.stdout
+            if args.report_target:
+                tstr = io.StringIO()
+                cargs = xlAutomation.compareFseqCRCs.Args()
+                cargs.channels = True
+                cargs.frames = False
+                cargs.globalcrc = True
+                cargs.models = True
+                cargs.timings = True
+
+                diff = xlAutomation.compareFseqCRCs.compareSummaries(baseline, hjson, cargs, tstr)
+                if diff:
+                    os.makedirs(args.report_target, mode = 0o777, exist_ok = True)
+                    with open(os.path.join(args.report_target,seqbase+'.rpt'), 'w') as fh:
+                        fh.write(tstr.getvalue())
 
     if stopXlights:
         perf['stop_xLights_start'] = time.time()
@@ -190,18 +218,3 @@ if __name__ == '__main__':
         perf['stop_xLights_end'] = time.time()
 
     print(json.dumps(perf, indent=2))
-
-if 0:
-    if 1:
-        subprocess.run('python fseqFile.py '
-            " -s m:\\users\\chuck\\source\\repos\\merryoncherry\\xlts\\showfolders\\effectsonstars\\EffectsOnStars.xsq "
-            " -x m:\\users\\chuck\\source\\repos\\merryoncherry\\xlts\\showfolders\\effectsonstars "
-            " -o m:\\users\\chuck\\source\\repos\\merryoncherry\\xlts\\expectedoutput\\effectsonstars\\EffectsOnStars.crc.tmp " # Not a good place to put it
-            " m:\\users\\chuck\\source\\repos\\merryoncherry\\xlts\\showfolders\\effectsonstars\\EffectsOnStars.fseq "
-            , capture_output=False)
-
-    subprocess.run('python compareFseqCRCs.py '
-        " -c -f -m -t"
-        " m:\\users\\chuck\\source\\repos\\merryoncherry\\xlts\\expectedoutput\\effectsonstars\\EffectsOnStars.crc "
-        " m:\\users\\chuck\\source\\repos\\merryoncherry\\xlts\\expectedoutput\\effectsonstars\\EffectsOnStars.crc.tmp "
-        , capture_output=False)

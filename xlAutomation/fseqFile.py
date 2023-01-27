@@ -293,7 +293,7 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                 #print ("Header "+hname+": "+str(hlen))
                 hval = str(fh.read(hlen), 'utf-8')
                 vlheaders[hname] = hval
-                hjson['headers'][hname] = hval
+                hjson['headers'][hname] = hval[:-1]
 
             fh.seek(off2chdata)
 
