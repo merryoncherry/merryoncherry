@@ -4,9 +4,12 @@ import os
 import time
 import xlAutomation.xlDo
 import xlAutomation.fseqFile
+import xlAutomation.compareFseqCRCs
 
 # python ./xlTest.py --start_xlights -R -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
 # python ./xlTest.py --start_xlights -R -C -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
+# python ./xlTest.py --start_xlights -R -C -D -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq --summary_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\TempResults\EffectsOnStars --summary_expected=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ExpectedOutput\EffectsOnStars --report_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ReportResults\EffectsOnStars
+ 
 
 # TODO:
 # Refactor logic for compare
@@ -14,13 +17,6 @@ import xlAutomation.fseqFile
 # Implement dir scan
 # Save the perf data if asked
 # try to get the model type
-
-#class Args:
-#    do_render
-#    start_xlights
-#    bindir - str
-#    datadir - str
-#    sequence - str
 
 #    def __init__(self):
 #        self.suiteFolder = ""
@@ -30,7 +26,6 @@ import xlAutomation.fseqFile
 #        self.perfBaselineFolder = ""
 #        self.reportFolder = ""
 #        self.compareSummary = False
-#        self.saveJsonReport = False
 #        self.printTxtReport = False
 #        self.updateExpectedSummary = False
 
@@ -145,12 +140,15 @@ if __name__ == '__main__':
     parser.add_argument('-R', '--do_render', action='store_true',  help="Do rendering of all sequences")
     parser.add_argument('-S', '--start_xlights', action='store_true',  help="Start xLights if not running")
     parser.add_argument('-C', '--calc_crcs', action='store_true', help='Calculate fseq CRC summaries')
+    parser.add_argument('-D', '--diff_summary', action='store_true', help='Diff the CRC summary to expected')
 
     # Lower case for paths
     parser.add_argument('-b', '--bindir',  help="Path to xLights binaries")
     parser.add_argument('-c', '--crcdir', help="Path to CRC summaries of .fseq files")
     parser.add_argument('-d', '--datadir', help="Path to xlights data dir (show folder)")    
     parser.add_argument('-w', '--summary_target', help="Path to write fseq summary")
+    parser.add_argument('-e', '--summary_expected', help="Path to read fseq expected summary for compare")
+    parser.add_argument('-r', '--report_target', help="Path to write comparison report")
     parser.add_argument('-s', '--sequence', help="Name of effect sequence .xsq file")
     parser.add_argument('-u', '--suite', help="Test suite")
 
