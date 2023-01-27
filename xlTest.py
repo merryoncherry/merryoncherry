@@ -11,13 +11,12 @@ import xlAutomation.compareFseqCRCs
 # python ./xlTest.py --start_xlights -R -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
 # python ./xlTest.py --start_xlights -R -C -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
 # python ./xlTest.py --start_xlights -R -C -D -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq --summary_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\TempResults\EffectsOnStars --summary_expected=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ExpectedOutput\EffectsOnStars --report_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ReportResults\EffectsOnStars
- 
+# python ./xlTest.py --start_xlights -R -C -D -P -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq --summary_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\TempResults\EffectsOnStars --summary_expected=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ExpectedOutput\EffectsOnStars --report_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ReportResults\EffectsOnStars --perf_target=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\PerfReport\EffectsOnStars
 
 # TODO:
-# Compare it to baseline
 # Implement dir scan
-# Save the perf data if asked
 # try to get the model type
+# Some kind of perf comparison report
 
 def renderSequence(xlenv, args, perf):
     seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence        
@@ -171,6 +170,7 @@ if __name__ == '__main__':
     parser.add_argument('-S', '--start_xlights', action='store_true',  help="Start xLights if not running")
     parser.add_argument('-C', '--calc_crcs', action='store_true', help='Calculate fseq CRC summaries')
     parser.add_argument('-D', '--diff_summary', action='store_true', help='Diff the CRC summary to expected')
+    parser.add_argument('-P', '--perf_summary', action='store_true', help='Report the performance summary')
 
     # Lower case for paths
     parser.add_argument('-b', '--bindir',  help="Path to xLights binaries")
@@ -179,6 +179,7 @@ if __name__ == '__main__':
     parser.add_argument('-w', '--summary_target', help="Path to write fseq summary")
     parser.add_argument('-e', '--summary_expected', help="Path to read fseq expected summary for compare")
     parser.add_argument('-r', '--report_target', help="Path to write comparison report")
+    parser.add_argument('-p', '--perf_target', help="Path to write performance report")
     parser.add_argument('-s', '--sequence', help="Name of effect sequence .xsq file")
     parser.add_argument('-u', '--suite', help="Test suite")
 
@@ -224,4 +225,11 @@ if __name__ == '__main__':
         xlenv.stopXLights()
         perf['stop_xLights_end'] = time.time()
 
-    print(json.dumps(perf, indent=2))
+    if args.perf_summary:
+        if args.perf_target:
+            os.makedirs(args.perf_target, mode = 0o777, exist_ok = True)
+            with open(os.path.join(args.perf_target, 'perf_report.json'), 'w') as fh:
+                fh.write(json.dumps(perf, indent=2))
+            pass
+        else:
+            print(json.dumps(perf, indent=2))
