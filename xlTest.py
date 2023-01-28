@@ -17,7 +17,11 @@ import xlAutomation.compareFseqCRCs
 
 # python ./xlTest.py --start_xlights -R -C -P --suite C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Sample --summary_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_TempResults --summary_expected=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_AcceptedResults --report_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Diff --perf_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Perf_2022_26
 
-# python ./xlTest.py --start_xlights -R -C -P --suite M:\xL_Test_2021\2021_Aspirational --summary_target= M:\xL_Test_2021\2021_Aspirational_TempResults_2021_39 --summary_expected= M:\xL_Test_2021\2021_Aspirational_AcceptedResults --report_target= M:\xL_Test_2021\2021_Aspirational_Diff --perf_target= M:\xL_Test_2021\2021_Aspirational_Perf_2021_39
+# python ./xlTest.py --start_xlights -R -C -P --suite=M:\xL_Test_2021\2021_Aspirational --summary_target=M:\xL_Test_2021\2021_Aspirational_TempResults_2021_39 --summary_expected=M:\xL_Test_2021\2021_Aspirational_AcceptedResults --report_target=M:\xL_Test_2021\2021_Aspirational_Diff --perf_target=M:\xL_Test_2021\2021_Aspirational_Perf_2021_39
+# python ./xlTest.py --start_xlights -R -C -P --suite=M:\xL_Test_2021\2021_Aspirational --summary_target=M:\xL_Test_2021\2021_Aspirational_TempResults_2022_13 --summary_expected=M:\xL_Test_2021\2021_Aspirational_AcceptedResults --report_target=M:\xL_Test_2021\2021_Aspirational_Diff --perf_target=M:\xL_Test_2021\2021_Aspirational_Perf_2022_13
+# python ./xlTest.py --start_xlights -R -C -P --suite=M:\xL_Test_2021\2021_Aspirational --summary_target=M:\xL_Test_2021\2021_Aspirational_TempResults_2022_26 --summary_expected=M:\xL_Test_2021\2021_Aspirational_AcceptedResults --report_target=M:\xL_Test_2021\2021_Aspirational_Diff --perf_target=M:\xL_Test_2021\2021_Aspirational_Perf_2022_26
+
+# python ./xlTest.py --start_xlights -D --suite=M:\xL_Test_2021\2021_Aspirational --summary_target=M:\xL_Test_2021\2021_Aspirational_TempResults_2022_26 --summary_expected=M:\xL_Test_2021\2021_Aspirational_AcceptedResults --report_target=M:\xL_Test_2021\2021_Aspirational_Diff
 
 # TODO:
 # Some kind of perf comparison report
@@ -124,8 +128,11 @@ def calcSequenceCRC(args, perf):
 def compareSequenceSummary(args, perf, hjson):
     cmp_start = time.time()
     seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence
+    if not hjson and args.summary_target:
+        # We are supposed to load it
+        with open(os.path.join(args.summary_target,seqbase+'.crc'), 'r') as fh:
+            hjson = json.load(fh)
     if not hjson:
-        # Maybe we were supposed to load it?
         raise Exception("Not provided enough info to get test CRCs for diff")
     if not args.summary_expected:
         raise Exception("Not provided enough info to get baseline CRCs for diff")
