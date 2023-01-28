@@ -157,7 +157,7 @@ def readSequenceTimingTrack(spath, ttracks):
                     trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
                 break
 
-def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttracks):
+def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttracks, keepmodelspertiming):
     hjson = {}
     with open(sfile, 'rb') as fh:
         hdr = fh.read(4)
@@ -353,16 +353,17 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                             allz = allzero(msub)
                             if not allz :
                                 m.empty = False
-                            # CRC for model in each timing section
-                            for tt in ttracks:
-                                if tt.current >= len(tt.entlist):
-                                    continue
-                                mmm = tt.entlist[tt.current].models
-                                if m.name not in mmm:
-                                    mmm[m.name] = ModelRec(m.name, m.typ, m.startch, m.nch)
-                                mmm[m.name].crc = binascii.crc32(msub, mmm[m.name].crc)
-                                if not allz:
-                                    mmm[m.name].empty = False
+                            if keepmodelspertiming:
+                                # CRC for model in each timing section
+                                for tt in ttracks:
+                                    if tt.current >= len(tt.entlist):
+                                        continue
+                                    mmm = tt.entlist[tt.current].models
+                                    if m.name not in mmm:
+                                        mmm[m.name] = ModelRec(m.name, m.typ, m.startch, m.nch)
+                                    mmm[m.name].crc = binascii.crc32(msub, mmm[m.name].crc)
+                                    if not allz:
+                                        mmm[m.name].empty = False
 
                         curoff += rcnt
 
@@ -425,7 +426,7 @@ if __name__ == '__main__':
     if args.sequence:
         readSequenceTimingTrack(args.sequence, ttracks)
 
-    hjson = calculateFSEQSummary(args.flist[0], controllers, ctrlbyname, models, smodels, ttracks)
+    hjson = calculateFSEQSummary(args.flist[0], controllers, ctrlbyname, models, smodels, ttracks, True)
 
     if (args.output) :
         with open(args.output, 'w') as fh:

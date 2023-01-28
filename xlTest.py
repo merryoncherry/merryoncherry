@@ -17,6 +17,8 @@ import xlAutomation.compareFseqCRCs
 
 # python ./xlTest.py --start_xlights -R -C -P --suite C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Sample --summary_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_TempResults --summary_expected=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_AcceptedResults --report_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Diff --perf_target=C:\Users\Chuck\Documents\xlightsShows\2022_Xmas_Perf_2022_26
 
+# python ./xlTest.py --start_xlights -R -C -P --suite M:\xL_Test_2021\2021_Aspirational --summary_target= M:\xL_Test_2021\2021_Aspirational_TempResults_2021_39 --summary_expected= M:\xL_Test_2021\2021_Aspirational_AcceptedResults --report_target= M:\xL_Test_2021\2021_Aspirational_Diff --perf_target= M:\xL_Test_2021\2021_Aspirational_Perf_2021_39
+
 # TODO:
 # Some kind of perf comparison report
 
@@ -105,7 +107,7 @@ def calcSequenceCRC(args, perf):
     # Process the CRC and tell us the result
     fseqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence
     fseqn = os.path.join(args.datadir, fseqbase+'.fseq')
-    hjson = xlAutomation.fseqFile.calculateFSEQSummary(fseqn, controllers, ctrlbyname, models, smodels, ttracks)
+    hjson = xlAutomation.fseqFile.calculateFSEQSummary(fseqn, controllers, ctrlbyname, models, smodels, ttracks, args.timing_models)
     #print(json.dumps(hjson, indent=2))
     crc_end = time.time()
 
@@ -139,6 +141,7 @@ def compareSequenceSummary(args, perf, hjson):
     cargs.globalcrc = True
     cargs.models = True
     cargs.timings = True
+    cargs.timing_models = args.timing_models
 
     diff = xlAutomation.compareFseqCRCs.compareSummaries(baseline, hjson, cargs, tgt)
 
@@ -217,6 +220,7 @@ if __name__ == '__main__':
     parser.add_argument('-C', '--calc_crcs', action='store_true', help='Calculate fseq CRC summaries')
     parser.add_argument('-D', '--diff_summary', action='store_true', help='Diff the CRC summary to expected')
     parser.add_argument('-P', '--perf_summary', action='store_true', help='Report the performance summary')
+    parser.add_argument('-l', '--timing_models', action='store_true', help='Keep model info within timing sections')
 
     # Lower case for paths
     parser.add_argument('-b', '--bindir',  help="Path to xLights binaries")

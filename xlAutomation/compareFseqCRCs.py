@@ -15,6 +15,7 @@ class Args:
         self.globalcrc = False
         self.models = False
         self.timings = False
+        self.timing_models = False
 
 def compareSummaries(v1, v2, args, fh):
     xlv1 = v1['headers']['sp'] if 'sp' in v1['headers'] else '<unknown>'
@@ -106,23 +107,24 @@ def compareSummaries(v1, v2, args, fh):
                         print("Timing "+tn+":"+t['label']+"@"+str(t['start'])+"ms crc differs", file=fh)
 
                         # Print out which models caused it
-                        tm1 = t['models']
-                        tm2 =  v1ts[(tn,t['start'])]['models']
-                        v1ms = {}
-                        for m in tm1:
-                            v1ms[m['name']] = m
-                        for m in tm2:
-                            if m['name'] not in v1ms:
-                                diff = True
-                                print("    Model "+str(m['name'])+" is not in file1 but present in file2", file=fh)
-                            else:
-                                if not (m['crc'] == v1ms[m['name']]['crc']):
+                        if args.timing_models and 'models' in t:
+                            tm1 = t['models']
+                            tm2 =  v1ts[(tn,t['start'])]['models']
+                            v1ms = {}
+                            for m in tm1:
+                                v1ms[m['name']] = m
+                            for m in tm2:
+                                if m['name'] not in v1ms:
                                     diff = True
-                                    print("    Model "+str(m['name'])+" crc differs", file=fh)
-                                del  v1ms[m['name']]
-                        for m in v1ms.values():
-                            diff = True
-                            print ("Model "+str(m['name'])+" is not in file2 but present in file1", file=fh)
+                                    print("    Model "+str(m['name'])+" is not in file1 but present in file2", file=fh)
+                                else:
+                                    if not (m['crc'] == v1ms[m['name']]['crc']):
+                                        diff = True
+                                        print("    Model "+str(m['name'])+" crc differs", file=fh)
+                                    del  v1ms[m['name']]
+                            for m in v1ms.values():
+                                diff = True
+                                print ("Model "+str(m['name'])+" is not in file2 but present in file1", file=fh)
                     del  v1ts[(tn,t['start'])]
 
         for tk in v1ts.keys():
@@ -145,6 +147,7 @@ if __name__ == '__main__':
     parser.add_argument('-g', '--globalcrc', action='store_true',  help="Compare global crc")
     parser.add_argument('-m', '--models', action='store_true', help='Compare model crcs')
     parser.add_argument('-t', '--timings', action='store_true', help='Compare timing section crcs')
+    parser.add_argument('-l', '--timing_models', action='store_true', help='Compare model CRCs per timing section')
     #parser.add_argument('-o', '--output',   help="Path to output file")
     parser.add_argument('file1', nargs=1, help='base sequence crc summary json file')
     parser.add_argument('file2', nargs=1, help='diff sequence crc summary json file')
