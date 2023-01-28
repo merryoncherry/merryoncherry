@@ -69,4 +69,34 @@ for j in jsons:
             worksheet.write(row, c, j[ek]-j[k])
     c = c + 1
 
+worksheet = workbook.add_worksheet('BatchRender')
+worksheet.write(0, 0, 'Suite', bold)
+worksheet.write(0, 1, 'Sequence', bold)
+c = 0
+col = 2
+nr = 1
+r = {}
+for j in jsons:
+    c = c + 1
+    if 'render_batch' not in j:
+        continue
+    worksheet.write(0, col, args.files[c-1], bold)
+
+    for o in j['render_batch']:
+        suite = o['suite']
+        seq = o['seq_name']
+        st = o['start_batch']
+        et = o['end_batch']
+        if (suite, seq) in r:
+            row = r[(suite, seq)]
+        else:
+            row = nr
+            nr = nr + 1
+            r[(suite, seq)] = row
+            worksheet.write(row, 0, suite)
+            worksheet.write(row, 1, seq)
+        worksheet.write(row, col, et-st)
+    col = col + 1
+
+
 workbook.close()
