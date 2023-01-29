@@ -25,8 +25,7 @@ import xlAutomation.compareFseqCRCs
 
 # python ./xlTest.py --start_xlights -D --suite=M:\xL_Test_2021\2021_Aspirational --summary_target=M:\xL_Test_2021\2021_Aspirational_TempResults_2022_26 --summary_expected=M:\xL_Test_2021\2021_Aspirational_AcceptedResults --report_target=M:\xL_Test_2021\2021_Aspirational_Diff
 
-# TODO:
-# Some kind of perf comparison report
+# python ./xlTest.py --start_xlights -D --suite=M:\xL_Test_2021\2021_Aspirational --summary_expected=M:\xL_Test_2021\2021_Aspirational_TempResults_2021_39 --summary_target=M:\xL_Test_2021\2021_Aspirational_TempResults_2022_13 --report_target=M:\xL_Test_2021\2021_Aspirational_Diff
 
 def renderSequence(xlenv, args, perf):
     seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence        
