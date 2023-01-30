@@ -12,8 +12,8 @@
   "compblks": 253,
   "nsparseranges": 0,
   "reserved2": 0,
-  "uuid1": 1723905448,
-  "uuid2": 390012,
+  "uuid1": 1985497856,
+  "uuid2": 390014,
   "compblocklist": [
     {
       "framenum": 0,
@@ -53,11 +53,11 @@
     },
     {
       "framenum": 394,
-      "blocksize": 18507
+      "blocksize": 88
     },
     {
       "framenum": 442,
-      "blocksize": 16711
+      "blocksize": 85
     },
     {
       "framenum": 490,
@@ -2420,326 +2420,6 @@
     {
       "frame": 398,
       "crc": 1353042908
-    },
-    {
-      "frame": 400,
-      "crc": 130046139
-    },
-    {
-      "frame": 401,
-      "crc": 3418899086
-    },
-    {
-      "frame": 402,
-      "crc": 3461372183
-    },
-    {
-      "frame": 403,
-      "crc": 2972033762
-    },
-    {
-      "frame": 404,
-      "crc": 3225974263
-    },
-    {
-      "frame": 405,
-      "crc": 2691410847
-    },
-    {
-      "frame": 406,
-      "crc": 3978023666
-    },
-    {
-      "frame": 407,
-      "crc": 3228663094
-    },
-    {
-      "frame": 408,
-      "crc": 848210618
-    },
-    {
-      "frame": 409,
-      "crc": 1304307983
-    },
-    {
-      "frame": 410,
-      "crc": 3796066979
-    },
-    {
-      "frame": 411,
-      "crc": 3162025178
-    },
-    {
-      "frame": 412,
-      "crc": 2723489049
-    },
-    {
-      "frame": 413,
-      "crc": 885544867
-    },
-    {
-      "frame": 414,
-      "crc": 2603052122
-    },
-    {
-      "frame": 415,
-      "crc": 1257105587
-    },
-    {
-      "frame": 416,
-      "crc": 4131729472
-    },
-    {
-      "frame": 417,
-      "crc": 2521661502
-    },
-    {
-      "frame": 418,
-      "crc": 3695752207
-    },
-    {
-      "frame": 419,
-      "crc": 2495340515
-    },
-    {
-      "frame": 420,
-      "crc": 1224926505
-    },
-    {
-      "frame": 421,
-      "crc": 586136540
-    },
-    {
-      "frame": 422,
-      "crc": 1520787038
-    },
-    {
-      "frame": 423,
-      "crc": 2698707956
-    },
-    {
-      "frame": 424,
-      "crc": 4004641135
-    },
-    {
-      "frame": 425,
-      "crc": 2630842499
-    },
-    {
-      "frame": 426,
-      "crc": 2368797178
-    },
-    {
-      "frame": 427,
-      "crc": 2473861879
-    },
-    {
-      "frame": 428,
-      "crc": 2710913089
-    },
-    {
-      "frame": 429,
-      "crc": 1683642211
-    },
-    {
-      "frame": 430,
-      "crc": 4181603238
-    },
-    {
-      "frame": 431,
-      "crc": 2920640800
-    },
-    {
-      "frame": 432,
-      "crc": 349522327
-    },
-    {
-      "frame": 433,
-      "crc": 3511806310
-    },
-    {
-      "frame": 434,
-      "crc": 873477379
-    },
-    {
-      "frame": 435,
-      "crc": 1688432611
-    },
-    {
-      "frame": 436,
-      "crc": 966650436
-    },
-    {
-      "frame": 437,
-      "crc": 919842339
-    },
-    {
-      "frame": 438,
-      "crc": 1118884955
-    },
-    {
-      "frame": 439,
-      "crc": 10391170
-    },
-    {
-      "frame": 440,
-      "crc": 3404483931
-    },
-    {
-      "frame": 441,
-      "crc": 1252346096
-    },
-    {
-      "frame": 442,
-      "crc": 3726154679
-    },
-    {
-      "frame": 443,
-      "crc": 3104789145
-    },
-    {
-      "frame": 444,
-      "crc": 6045371
-    },
-    {
-      "frame": 445,
-      "crc": 1869114952
-    },
-    {
-      "frame": 446,
-      "crc": 896751650
-    },
-    {
-      "frame": 447,
-      "crc": 3225697567
-    },
-    {
-      "frame": 448,
-      "crc": 2820614395
-    },
-    {
-      "frame": 449,
-      "crc": 3983872617
-    },
-    {
-      "frame": 450,
-      "crc": 397478029
-    },
-    {
-      "frame": 451,
-      "crc": 4072025470
-    },
-    {
-      "frame": 452,
-      "crc": 336445264
-    },
-    {
-      "frame": 453,
-      "crc": 3619952100
-    },
-    {
-      "frame": 454,
-      "crc": 1438875924
-    },
-    {
-      "frame": 455,
-      "crc": 497125974
-    },
-    {
-      "frame": 456,
-      "crc": 3044744915
-    },
-    {
-      "frame": 457,
-      "crc": 543998399
-    },
-    {
-      "frame": 458,
-      "crc": 2392643079
-    },
-    {
-      "frame": 459,
-      "crc": 1804172763
-    },
-    {
-      "frame": 460,
-      "crc": 2116244416
-    },
-    {
-      "frame": 461,
-      "crc": 1278411699
-    },
-    {
-      "frame": 462,
-      "crc": 469400127
-    },
-    {
-      "frame": 463,
-      "crc": 255406174
-    },
-    {
-      "frame": 464,
-      "crc": 1103376891
-    },
-    {
-      "frame": 465,
-      "crc": 1241810960
-    },
-    {
-      "frame": 466,
-      "crc": 2233681516
-    },
-    {
-      "frame": 467,
-      "crc": 2723614767
-    },
-    {
-      "frame": 468,
-      "crc": 4235973406
-    },
-    {
-      "frame": 469,
-      "crc": 1632679947
-    },
-    {
-      "frame": 470,
-      "crc": 3531283623
-    },
-    {
-      "frame": 471,
-      "crc": 2920115494
-    },
-    {
-      "frame": 472,
-      "crc": 2950793175
-    },
-    {
-      "frame": 473,
-      "crc": 111169119
-    },
-    {
-      "frame": 474,
-      "crc": 1151137395
-    },
-    {
-      "frame": 475,
-      "crc": 3214685349
-    },
-    {
-      "frame": 476,
-      "crc": 3247660725
-    },
-    {
-      "frame": 477,
-      "crc": 1981059412
-    },
-    {
-      "frame": 478,
-      "crc": 228828308
-    },
-    {
-      "frame": 479,
-      "crc": 780892172
     },
     {
       "frame": 480,
@@ -13550,92 +13230,92 @@
       "crc": 2226252843
     }
   ],
-  "globalcrc": 3751943940,
+  "globalcrc": 3741655751,
   "modelcrcs": [
     {
       "name": "Arches",
       "type": "Arches",
-      "crc": 3886124137
+      "crc": 780941535
     },
     {
       "name": "Candy Canes",
       "type": "Candy Canes",
-      "crc": 284802296
+      "crc": 1407499774
     },
     {
       "name": "Circle",
       "type": "Circle",
-      "crc": 527367830
+      "crc": 1600187574
     },
     {
       "name": "Cube",
       "type": "Cube",
-      "crc": 1133249899
+      "crc": 2599153554
     },
     {
       "name": "Custom",
       "type": "Custom",
-      "crc": 1213466988
+      "crc": 2962642300
     },
     {
       "name": "Icicles",
       "type": "Icicles",
-      "crc": 2618140658
+      "crc": 902889525
     },
     {
       "name": "Matrix",
       "type": "Horiz Matrix",
-      "crc": 2744969428
+      "crc": 231366648
     },
     {
       "name": "Poly Line",
       "type": "Poly Line",
-      "crc": 2664594089
+      "crc": 3415300006
     },
     {
       "name": "Single Line H",
       "type": "Single Line",
-      "crc": 1497342866
+      "crc": 3398589583
     },
     {
       "name": "Single Line V",
       "type": "Single Line",
-      "crc": 272836539
+      "crc": 537306921
     },
     {
       "name": "Sphere",
       "type": "Sphere",
-      "crc": 3703434780
+      "crc": 654832070
     },
     {
       "name": "Spinner",
       "type": "Spinner",
-      "crc": 624622385
+      "crc": 40900166
     },
     {
       "name": "Star",
       "type": "Star",
-      "crc": 1728204336
+      "crc": 1742953954
     },
     {
       "name": "Tree",
       "type": "Tree 360",
-      "crc": 2392613769
+      "crc": 917512534
     },
     {
       "name": "Window Frame",
       "type": "Window Frame",
-      "crc": 37158883
+      "crc": 1360512007
     },
     {
       "name": "Window Frame Door",
       "type": "Window Frame",
-      "crc": 2480555745
+      "crc": 2027795345
     },
     {
       "name": "Wreath",
       "type": "Wreath",
-      "crc": 941076992
+      "crc": 1786030294
     }
   ],
   "ttracks": {
@@ -14109,94 +13789,8 @@
         "label": "Sparkles",
         "start": 10000,
         "end": 12000,
-        "crc": 1404077772,
-        "models": [
-          {
-            "name": "Arches",
-            "type": "Arches",
-            "crc": 744252986
-          },
-          {
-            "name": "Candy Canes",
-            "type": "Candy Canes",
-            "crc": 3200341417
-          },
-          {
-            "name": "Circle",
-            "type": "Circle",
-            "crc": 124178756
-          },
-          {
-            "name": "Cube",
-            "type": "Cube",
-            "crc": 3906870729
-          },
-          {
-            "name": "Custom",
-            "type": "Custom",
-            "crc": 82610362
-          },
-          {
-            "name": "Icicles",
-            "type": "Icicles",
-            "crc": 2904653253
-          },
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 267263671
-          },
-          {
-            "name": "Poly Line",
-            "type": "Poly Line",
-            "crc": 4258286310
-          },
-          {
-            "name": "Single Line H",
-            "type": "Single Line",
-            "crc": 808925470
-          },
-          {
-            "name": "Single Line V",
-            "type": "Single Line",
-            "crc": 1507827639
-          },
-          {
-            "name": "Sphere",
-            "type": "Sphere",
-            "crc": 1352085319
-          },
-          {
-            "name": "Spinner",
-            "type": "Spinner",
-            "crc": 2527912647
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 1967740574
-          },
-          {
-            "name": "Tree",
-            "type": "Tree 360",
-            "crc": 2842015506
-          },
-          {
-            "name": "Window Frame",
-            "type": "Window Frame",
-            "crc": 1623084500
-          },
-          {
-            "name": "Window Frame Door",
-            "type": "Window Frame",
-            "crc": 756170578
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 1130834432
-          }
-        ]
+        "crc": 1668188403,
+        "models": []
       },
       {
         "label": "TimeColor",

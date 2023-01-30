@@ -37,7 +37,7 @@
     <Effect>E_TEXTCTRL_Eff_On_End=0</Effect>
     <Effect>E_TEXTCTRL_Eff_On_End=0,E_TEXTCTRL_On_Cycles=10</Effect>
     <Effect>E_CHECKBOX_On_Shimmer=1,E_TEXTCTRL_Eff_On_End=0</Effect>
-    <Effect>E_TEXTCTRL_On_Cycles=0.0</Effect>
+    <Effect>E_TEXTCTRL_On_Cycles=0.0,X_Effect_RenderDisabled=True</Effect>
     <Effect>E_TEXTCTRL_Eff_On_End=0,E_TEXTCTRL_On_Cycles=0.0</Effect>
     <Effect>E_CHECKBOX_Bars_3D=0,E_CHECKBOX_Bars_Gradient=0,E_CHECKBOX_Bars_Highlight=0,E_CHOICE_Bars_Direction=up,E_SLIDER_Bars_BarCount=1,E_TEXTCTRL_Bars_Cycles=1.0</Effect>
     <Effect>E_CHOICE_Butterfly_Colors=Rainbow,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
@@ -273,7 +273,7 @@
         <Effect ref="1" name="On" id="1" startTime="4000" endTime="6000" palette="1"/>
         <Effect ref="2" name="On" id="2" startTime="6000" endTime="8000" palette="1"/>
         <Effect ref="3" name="On" id="3" startTime="8000" endTime="10000" palette="1"/>
-        <Effect ref="4" name="On" id="4" startTime="10000" endTime="12000" palette="2"/>
+        <Effect ref="4" name="On" selected="1" id="4" startTime="10000" endTime="12000" palette="2"/>
         <Effect ref="5" name="On" id="5" startTime="12000" endTime="14000" palette="3"/>
         <Effect ref="6" name="Bars" id="6" startTime="14000" endTime="16000" palette="4"/>
         <Effect ref="7" name="Butterfly" id="7" startTime="20000" endTime="22000" palette="4"/>
@@ -372,7 +372,7 @@
         <Effect ref="18" name="Plasma" id="13" startTime="68000" endTime="70000" palette="6"/>
         <Effect ref="19" name="Ripple" id="14" startTime="72000" endTime="74000" palette="6"/>
         <Effect ref="39" name="Shape" id="15" startTime="74000" endTime="76000" palette="6"/>
-        <Effect ref="40" name="Shimmer" selected="1" id="16" startTime="76000" endTime="78000" palette="6"/>
+        <Effect ref="40" name="Shimmer" id="16" startTime="76000" endTime="78000" palette="6"/>
         <Effect ref="41" name="Shockwave" id="17" startTime="80000" endTime="82000" palette="6"/>
         <Effect ref="21" name="SingleStrand" id="18" startTime="84000" endTime="86000" palette="6"/>
         <Effect ref="29" name="SingleStrand" id="19" startTime="88000" endTime="90000" palette="6"/>
