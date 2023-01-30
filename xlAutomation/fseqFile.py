@@ -328,7 +328,7 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                 for tt in ttracks:
                     if tt.current >= len(tt.entlist):
                         continue
-                    while curms > tt.entlist[tt.current].endms:
+                    while curms >= tt.entlist[tt.current].endms:
                         tt.current += 1
                         if tt.current >= len(tt.entlist):
                             break

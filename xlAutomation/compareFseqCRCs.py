@@ -116,15 +116,15 @@ def compareSummaries(v1, v2, args, fh):
                             for m in tm2:
                                 if m['name'] not in v1ms:
                                     diff = True
-                                    print("    Model "+str(m['name'])+" is not in file1 but present in file2", file=fh)
+                                    print("    Model "+str(m['name'])+" is not in file1 but present in file2 in "+t['label']+"@"+str(t['start'])+"ms", file=fh)
                                 else:
                                     if not (m['crc'] == v1ms[m['name']]['crc']):
                                         diff = True
-                                        print("    Model "+str(m['name'])+" crc differs", file=fh)
+                                        print("    Model "+str(m['name'])+" crc differs in "+t['label']+"@"+str(t['start'])+"ms", file=fh)
                                     del  v1ms[m['name']]
                             for m in v1ms.values():
                                 diff = True
-                                print ("Model "+str(m['name'])+" is not in file2 but present in file1", file=fh)
+                                print ("    Model "+str(m['name'])+" is not in file2 but present in file1 in "+t['label']+"@"+str(t['start'])+"ms", file=fh)
                     del  v1ts[(tn,t['start'])]
 
         for tk in v1ts.keys():
