@@ -12,14 +12,16 @@ def getText(pnode):
             rc.append(node.data)
     return ''.join(rc)
 
-def setText(pnode, txt):
+def setText(pnode, txt, doc):
     for node in pnode.childNodes:
         if node.nodeType == node.TEXT_NODE:
             node.data = txt
             return
-    raise Exception("No text child found")
+    text = doc.createTextNode('txt')
+    pnode.appendChild(text)
 
 # python xlAutomation\xsqFile.py m:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\SimpleEffectsUnstable.xsq x.xsq
+# python xlAutomation\xsqFile.py --suite M:\xL_Test_2021\2021_Aspirational M:\xL_Test\2021\2021_Stabilized
 
 #head
 #nextid
@@ -148,7 +150,7 @@ def disableUnstableEffects(spath, dpath):
                         disableEffect = True
                     if effect.getAttribute('name') in ['Shape', 'Shimmer', 'Snowflake', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle']:
                         disableEffect = True
-                    if getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=80') >= 0:
+                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=80') >= 0:
                         # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
                         disableEffect = True
                     if disableEffect:
@@ -160,7 +162,7 @@ def disableUnstableEffects(spath, dpath):
                                 txt = txt + ',X_Effect_RenderDisabled=True'
                             else:
                                 txt = 'X_Effect_RenderDisabled=True'
-                            setText(effectsdb[en], txt)
+                            setText(effectsdb[en], txt, xseqd)
                             #print (getText(effectsDB[en]))
                 break
 
@@ -175,7 +177,19 @@ if __name__ == '__main__':
     # Command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('flist', nargs=2, help='sequence binary files')
+    parser.add_argument('-S', '--suite', action='store_true', help='If set, process a directory')
 
     args = parser.parse_args()
 
-    disableUnstableEffects(args.flist[0], args.flist[1])
+    if args.suite:
+        os.makedirs(args.flist[1], mode = 0o777, exist_ok = True)
+        xlist = os.listdir(args.flist[0])
+        slist = []
+        for x in xlist:
+            if x.endswith('.xsq'):
+                slist.append(x)
+        for x in slist:
+            print(x)
+            disableUnstableEffects(os.path.join(args.flist[0], x), os.path.join(args.flist[1], x))
+    else:
+         disableUnstableEffects(args.flist[0], args.flist[1])
