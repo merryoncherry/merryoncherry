@@ -8,6 +8,7 @@ import os
 import sys
 import xml.dom.minidom
 import zstandard
+import xlAutomation.xsqFile
 
 # python fseqFile.py c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
 # python fseqFile.py -x c:\users\chuck\documents\xlightsShows\2022_xmas c:\users\Chuck\Documents\xlightsShows\2022_Xmas\12Days_McKenzie_FPD.fseq
@@ -49,20 +50,6 @@ class ModelRec:
 
     def __repr__(self):
         return self.name + ":" + str(self.startch) + "," + str(self.nch)
-
-class TimingEnt:
-    def __init__(self, label, startms, endms):
-        self.label = label
-        self.startms = startms
-        self.endms = endms
-        self.crc = 0
-        self.models = {}
-
-class TimingRec:
-    def __init__(self, name):
-        self.name = name
-        self.entlist = []
-        self.current = 0
 
 def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
     xmodels   = xml.dom.minidom.parse(xldir+'/xlights_rgbeffects.xml')
@@ -125,37 +112,6 @@ def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
         smodels[i].nch = smodels[i+1].startch - smodels[i].startch
     for m in smodels:
         osmodels.append(m)
-
-def readSequenceTimingTrack(spath, ttracks):
-    xseqd = xml.dom.minidom.parse(spath)
-    xnseq = xseqd.documentElement
-    if (xnseq.tagName != 'xsequence'):
-        raise Exception('Root not "xsequence"')
-    for section in xnseq.childNodes:
-        if section.nodeType == xml.dom.Node.ATTRIBUTE_NODE or section.nodeType == xml.dom.Node.TEXT_NODE:
-            continue
-        if section.tagName != 'ElementEffects':
-            continue
-        for element in section.childNodes:
-            if element.nodeType == xml.dom.Node.ATTRIBUTE_NODE or element.nodeType == xml.dom.Node.TEXT_NODE:
-                continue
-            if element.tagName != 'Element' or element.getAttribute('type') != 'timing':
-                continue
-            # Ahah: Timing
-            for tlayer in element.childNodes:
-                if tlayer.nodeType == xml.dom.Node.ATTRIBUTE_NODE or tlayer.nodeType == xml.dom.Node.TEXT_NODE:
-                    continue
-                if tlayer.tagName != 'EffectLayer':
-                    continue
-                trec = TimingRec(element.getAttribute('name'))
-                ttracks.append(trec)
-                for effect in tlayer.childNodes:
-                    if effect.nodeType == xml.dom.Node.ATTRIBUTE_NODE or effect.nodeType == xml.dom.Node.TEXT_NODE:
-                        continue
-                    if effect.tagName != 'Effect':
-                        continue
-                    trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
-                break
 
 def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttracks, keepmodelspertiming):
     hjson = {}
@@ -424,7 +380,7 @@ if __name__ == '__main__':
         readControllersAndModels(args.xlights, controllers, ctrlbyname, models, smodels)
 
     if args.sequence:
-        readSequenceTimingTrack(args.sequence, ttracks)
+        xlAutomation.xsqFile.readSequenceTimingTrack(args.sequence, ttracks)
 
     hjson = calculateFSEQSummary(args.flist[0], controllers, ctrlbyname, models, smodels, ttracks, True)
 

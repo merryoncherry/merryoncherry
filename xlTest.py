@@ -6,6 +6,7 @@ import sys
 import time
 import xlAutomation.xlDo
 import xlAutomation.fseqFile
+import xlAutomation.xsqFile
 import xlAutomation.compareFseqCRCs
 
 # python ./xlTest.py --start_xlights -R -d M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\EffectsOnStars -s EffectsOnStars.xsq
@@ -109,7 +110,7 @@ def calcSequenceCRC(args, perf):
 
     if args.datadir:
         xlAutomation.fseqFile.readControllersAndModels(args.datadir, controllers, ctrlbyname, models, smodels)
-        xlAutomation.fseqFile.readSequenceTimingTrack(os.path.join(args.datadir, args.sequence), ttracks)
+        xlAutomation.xsqFile.readSequenceTimingTrack(os.path.join(args.datadir, args.sequence), ttracks)
 
     # Process the CRC and tell us the result
     fseqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence
