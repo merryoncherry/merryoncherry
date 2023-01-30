@@ -133,12 +133,12 @@ def disableUnstableEffects(spath, dpath):
             if element.tagName != 'Element' or element.getAttribute('type') != 'model': # Only model, not timing
                 continue
             # Ahah: Model
-            for tlayer in element.childNodes:
-                if tlayer.nodeType == xml.dom.Node.ATTRIBUTE_NODE or tlayer.nodeType == xml.dom.Node.TEXT_NODE:
+            for elayer in element.childNodes:
+                if elayer.nodeType == xml.dom.Node.ATTRIBUTE_NODE or elayer.nodeType == xml.dom.Node.TEXT_NODE:
                     continue
-                if tlayer.tagName != 'EffectLayer':
+                if elayer.tagName != 'EffectLayer':
                     continue
-                for effect in tlayer.childNodes:
+                for effect in elayer.childNodes:
                     if effect.nodeType == xml.dom.Node.ATTRIBUTE_NODE or effect.nodeType == xml.dom.Node.TEXT_NODE:
                         continue
                     if effect.tagName != 'Effect':
@@ -148,14 +148,20 @@ def disableUnstableEffects(spath, dpath):
                         disableEffect = True
                     if effect.getAttribute('name') in ['Shape', 'Shimmer', 'Snowflake', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle']:
                         disableEffect = True
-                    if (getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=80')):
+                    if getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=80') >= 0:
                         # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
                         disableEffect = True
                     if disableEffect:
                         en = int(effect.getAttribute('ref'))
                         txt = getText(effectsdb[en])
-                        if not (txt.find('X_Effect_RenderDisabled=True')):
-                            setText(effectsdb[en]. txt + ',X_Effect_RenderDisabled=True')
+                        if txt.find('X_Effect_RenderDisabled=True') < 0:
+                            #raise Exception('Check it '+str(en)+":"+txt)
+                            if txt:
+                                txt = txt + ',X_Effect_RenderDisabled=True'
+                            else:
+                                txt = 'X_Effect_RenderDisabled=True'
+                            setText(effectsdb[en], txt)
+                            #print (getText(effectsDB[en]))
                 break
 
     with open(dpath,"w") as file_handle:
