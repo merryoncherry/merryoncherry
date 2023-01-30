@@ -208,6 +208,10 @@ class XLEnv:
         x = self.xlDoHttpJ({"cmd":'changeShowFolder', "folder":self.data, "force":"true"})
         print (x)
 
+    def changeShowFolderHttpGet(self):
+        x = self.xLightsHttpGet('changeShowFolder', {'folder':self.data, 'force':'true'})
+        print (x)
+
     def startXSchedule(self):
         if self.xscheduleRunning == 0:
             self.startXScheduleInternal(True)

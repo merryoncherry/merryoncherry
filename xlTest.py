@@ -78,7 +78,8 @@ def switchFolder(xlenv, args, perf):
     if args.datadir:
         xlenv.data = args.datadir
         start = time.time()
-        xlenv.changeShowFolder()
+        #xlenv.changeShowFolder()
+        xlenv.changeShowFolderHttpGet()
         end = time.time()
         if "switch_folder" not in perf:
             perf['switch_folder'] = []
