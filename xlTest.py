@@ -199,6 +199,7 @@ def testSequences(xlenv, args, perf, seqs):
     oseq = args.sequence
     diff = False
     for seq in seqs:
+        print(seq)
         args.sequence = seq
 
         if args.calc_crcs:

@@ -150,7 +150,7 @@ def disableUnstableEffects(spath, dpath):
                         disableEffect = True
                     if effect.getAttribute('name') in ['Shape', 'Shimmer', 'Snowflakes', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle']:
                         disableEffect = True
-                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=80') >= 0:
+                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=') >= 0:
                         # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
                         disableEffect = True
                     if disableEffect:
@@ -167,7 +167,7 @@ def disableUnstableEffects(spath, dpath):
 
     with open(dpath,"w") as file_handle:
         #xseqd.writexml(file_handle, indent='', addindent='  ', newl='\n', encoding=None, standalone=None)
-        xseqd.writexml(file_handle, encoding=None, standalone=None)
+        xseqd.writexml(file_handle, encoding='utf-8', standalone=None)
         file_handle.close()
 
 if __name__ == '__main__':
