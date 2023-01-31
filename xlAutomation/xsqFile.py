@@ -21,7 +21,7 @@ def setText(pnode, txt, doc):
     pnode.appendChild(text)
 
 # python xlAutomation\xsqFile.py m:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\SimpleEffectsUnstable.xsq x.xsq
-# python xlAutomation\xsqFile.py --suite M:\xL_Test_2021\2021_Aspirational M:\xL_Test\2021\2021_Stabilized
+# python xlAutomation\xsqFile.py --suite M:\xL_Test_2021\2021_Aspirational M:\xL_Test_2021\2021_Stabilized
 
 #head
 #nextid
@@ -148,7 +148,7 @@ def disableUnstableEffects(spath, dpath):
                     disableEffect = False
                     if effect.getAttribute('name') in ['Candle', 'Circles', 'Fire', 'Fireworks', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors']:
                         disableEffect = True
-                    if effect.getAttribute('name') in ['Shape', 'Shimmer', 'Snowflake', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle']:
+                    if effect.getAttribute('name') in ['Shape', 'Shimmer', 'Snowflakes', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle']:
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=80') >= 0:
                         # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
@@ -164,7 +164,6 @@ def disableUnstableEffects(spath, dpath):
                                 txt = 'X_Effect_RenderDisabled=True'
                             setText(effectsdb[en], txt, xseqd)
                             #print (getText(effectsDB[en]))
-                break
 
     with open(dpath,"w") as file_handle:
         #xseqd.writexml(file_handle, indent='', addindent='  ', newl='\n', encoding=None, standalone=None)

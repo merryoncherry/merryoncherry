@@ -29,6 +29,15 @@ import xlAutomation.compareFseqCRCs
 
 # python ./xlTest.py --start_xlights -D --suite=M:\xL_Test_2021\2021_Aspirational --summary_expected=M:\xL_Test_2021\2021_Aspirational_TempResults_2021_39 --summary_target=M:\xL_Test_2021\2021_Aspirational_TempResults_2022_13 --report_target=M:\xL_Test_2021\2021_Aspirational_Diff
 
+# Just generate
+# python ./xlTest.py --start_xlights -R -C -P --suite=M:\xL_Test_2021\2021_Stabilized --summary_target=M:\xL_Test_2021\2021_Stabilized_TempResults_2022_13 --perf_target=M:\xL_Test_2021\2021_Stabilized_Perf_2022_13
+# python ./xlTest.py --start_xlights -R -C -P --suite=M:\xL_Test_2021\2021_Stabilized --summary_target=M:\xL_Test_2021\2021_Stabilized_TempResults_2022_26 --perf_target=M:\xL_Test_2021\2021_Stabilized_Perf_2022_26
+# Generate and compare
+# python ./xlTest.py --start_xlights -R -C -P -D --suite=M:\xL_Test_2021\2021_Stabilized --summary_target=M:\xL_Test_2021\2021_Stabilized_TempResults_2022_26 --summary_expected=M:\xL_Test_2021\2021_Stabilized_AcceptedResults --report_target=M:\xL_Test_2021\2021_Stabilized_Diff --perf_target=M:\xL_Test_2021\2021_Stabilized_Perf_2022_26
+# Just diff
+# python ./xlTest.py --start_xlights -D --suite=M:\xL_Test_2021\2021_Stabilized --summary_expected=M:\xL_Test_2021\2021_Stabilized_TempResults_2021_39 --summary_target=M:\xL_Test_2021\2021_Stabilized_TempResults_2022_26 --report_target=M:\xL_Test_2021\2021_Stabilized_Diff
+# For perf, see other script
+
 def renderSequence(xlenv, args, perf):
     seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence        
     
