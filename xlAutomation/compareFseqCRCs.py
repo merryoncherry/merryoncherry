@@ -95,9 +95,13 @@ def compareSummaries(v1, v2, args, fh):
         v1ts = {}
         for tn in v1['ttracks'].keys():
             for t in v1['ttracks'][tn]:
+                if t['start'] == t['end']: # Empty from before upstream bug was fixed
+                    continue
                 v1ts[(tn,t['start'])] = t
         for tn in v2['ttracks'].keys():
             for t in v2['ttracks'][tn]:
+                if t['start'] == t['end']: # Empty from before upstream bug was fixed
+                    continue
                 if (tn,t['start']) not in v1ts:
                     diff = True
                     print("Timing "+tn+":"+t['label']+"@"+str(t['start'])+"ms is not in file1 but present in file2", file=fh)
