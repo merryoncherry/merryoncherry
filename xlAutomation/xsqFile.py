@@ -138,7 +138,7 @@ def disableUnstableEffects(spath, dpath):
             for elayer in element.childNodes:
                 if elayer.nodeType == xml.dom.Node.ATTRIBUTE_NODE or elayer.nodeType == xml.dom.Node.TEXT_NODE:
                     continue
-                if elayer.tagName != 'EffectLayer':
+                if elayer.tagName != 'EffectLayer' and elayer.tagName != 'SubModelEffectLayer':
                     continue
                 for effect in elayer.childNodes:
                     if effect.nodeType == xml.dom.Node.ATTRIBUTE_NODE or effect.nodeType == xml.dom.Node.TEXT_NODE:
@@ -146,16 +146,20 @@ def disableUnstableEffects(spath, dpath):
                     if effect.tagName != 'Effect':
                         continue
                     disableEffect = False
-                    if effect.getAttribute('name') in ['Candle', 'Circles', 'Fire', 'Fireworks', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors']:
+                    if effect.getAttribute('name') in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Kaleidoscope', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors']:
                         disableEffect = True
                     if effect.getAttribute('name') in ['Shape', 'Shimmer', 'Snowflakes', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle']:
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=') >= 0:
                         # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
                         disableEffect = True
+                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_CHECKBOX_MusicSparkles=') >= 0:
+                        disableEffect = True
+                    en = int(effect.getAttribute('ref'))
+                    txt = getText(effectsdb[en])
+                    if txt.find('E_CHECKBOX_Spirals_3D=1')>=0:
+                        disableEffect = True
                     if disableEffect:
-                        en = int(effect.getAttribute('ref'))
-                        txt = getText(effectsdb[en])
                         if txt.find('X_Effect_RenderDisabled=True') < 0:
                             #raise Exception('Check it '+str(en)+":"+txt)
                             if txt:
