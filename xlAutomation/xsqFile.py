@@ -109,6 +109,8 @@ def readSequenceTimingTrack(spath, ttracks):
                         continue
                     if effect.tagName != 'Effect':
                         continue
+                    if effect.getAttribute('startTime') == effect.getAttribute('endTime'): # zero length - skip
+                        continue
                     trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
                 break
 
@@ -154,6 +156,8 @@ def disableUnstableEffects(spath, dpath):
                         # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_CHECKBOX_MusicSparkles=') >= 0:
+                        disableEffect = True
+                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_VALUECURVE_SparkleFrequency=Active=TRUE') >= 0:
                         disableEffect = True
                     en = int(effect.getAttribute('ref'))
                     txt = getText(effectsdb[en])
