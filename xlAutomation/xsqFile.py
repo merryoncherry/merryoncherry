@@ -17,7 +17,7 @@ def setText(pnode, txt, doc):
         if node.nodeType == node.TEXT_NODE:
             node.data = txt
             return
-    text = doc.createTextNode('txt')
+    text = doc.createTextNode(txt)
     pnode.appendChild(text)
 
 # python xlAutomation\xsqFile.py m:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\SimpleEffectsUnstable.xsq x.xsq
@@ -148,14 +148,17 @@ def disableUnstableEffects(spath, dpath):
                     if effect.tagName != 'Effect':
                         continue
                     disableEffect = False
-                    if effect.getAttribute('name') in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Kaleidoscope', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors']:
+                    ename = effect.getAttribute('name')
+                    if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Kaleidoscope', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors']:
                         disableEffect = True
-                    if effect.getAttribute('name') in ['Shape', 'Shimmer', 'Snowflakes', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle']:
+                    if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle', 'Warp', 'Ripple']:
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=') >= 0:
                         # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_CHECKBOX_MusicSparkles=') >= 0:
+                        disableEffect = True
+                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('Type=Random') >= 0: # Weird color gradient blend mode
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_VALUECURVE_SparkleFrequency=Active=TRUE') >= 0:
                         disableEffect = True
@@ -163,6 +166,9 @@ def disableUnstableEffects(spath, dpath):
                     txt = getText(effectsdb[en])
                     if txt.find('E_CHECKBOX_Spirals_3D=1')>=0:
                         disableEffect = True
+                    if ename == 'VU Meter':
+                        if txt.find('Random') >= 0:
+                            disableEffect = True
                     if disableEffect:
                         if txt.find('X_Effect_RenderDisabled=True') < 0:
                             #raise Exception('Check it '+str(en)+":"+txt)
