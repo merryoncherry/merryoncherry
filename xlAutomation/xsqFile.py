@@ -149,19 +149,22 @@ def disableUnstableEffects(spath, dpath):
                         continue
                     disableEffect = False
                     ename = effect.getAttribute('name')
-                    if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Kaleidoscope', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors']:
+                    if ename in ['Candle', 'Faces', 'Kaleidoscope', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors']:
                         disableEffect = True
                     if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle', 'Warp', 'Ripple']:
                         disableEffect = True
-                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=') >= 0:
-                        # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
-                        disableEffect = True
-                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_CHECKBOX_MusicSparkles=') >= 0:
-                        disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('Type=Random') >= 0: # Weird color gradient blend mode
                         disableEffect = True
-                    if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_VALUECURVE_SparkleFrequency=Active=TRUE') >= 0:
-                        disableEffect = True
+                    if not args.dev:
+                        if ename in ['Circles', 'Fire', 'Fireworks']:
+                            disableEffect = True
+                        if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=') >= 0:
+                            # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
+                            disableEffect = True
+                        if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_CHECKBOX_MusicSparkles=') >= 0:
+                            disableEffect = True
+                        if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_VALUECURVE_SparkleFrequency=Active=TRUE') >= 0:
+                            disableEffect = True
                     en = int(effect.getAttribute('ref'))
                     txt = getText(effectsdb[en])
                     if txt.find('E_CHECKBOX_Spirals_3D=1')>=0:
@@ -191,6 +194,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('flist', nargs=2, help='sequence binary files')
     parser.add_argument('-S', '--suite', action='store_true', help='If set, process a directory')
+    parser.add_argument('-V', '--dev', action='store_true', help='Use dev branch, assumes more things are fixed')
 
     args = parser.parse_args()
 
