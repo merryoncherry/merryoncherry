@@ -23,7 +23,7 @@
   </ColorPalettes>
   <EffectDB>
     <Effect>E_CHECKBOX_Faces_Outline=1,E_CHOICE_Faces_Eyes=Auto,E_CHOICE_Faces_FaceDefinition=Default,E_CHOICE_Faces_TimingTrack=Lyrics</Effect>
-    <Effect>E_CHECKBOX_Faces_Fade=1,E_CHECKBOX_Faces_Outline=1,E_CHECKBOX_Faces_SuppressWhenNotSinging=1,E_CHOICE_Faces_Eyes=Auto,E_CHOICE_Faces_FaceDefinition=Default,E_CHOICE_Faces_TimingTrack=Lyrics,E_SPINCTRL_Faces_LeadFrames=4</Effect>
+    <Effect>E_CHECKBOX_Faces_Outline=1,E_CHOICE_Faces_Eyes=Auto,E_CHOICE_Faces_FaceDefinition=Default,E_CHOICE_Faces_TimingTrack=Quiet</Effect>
     <Effect>B_CUSTOM_SubBuffer=32.00x1.18x59.30x100.00x0.00x0.00,E_CHECKBOX_Faces_Outline=1,E_CHOICE_Faces_Eyes=Auto,E_CHOICE_Faces_FaceDefinition=DLF,E_CHOICE_Faces_TimingTrack=Lyrics</Effect>
     <Effect>B_CUSTOM_SubBuffer=22.00x-0.67x49.35x101.00x0.00x0.00,E_CHECKBOX_Faces_Fade=1,E_CHECKBOX_Faces_Outline=1,E_CHECKBOX_Faces_SuppressWhenNotSinging=1,E_CHOICE_Faces_Eyes=Auto,E_CHOICE_Faces_FaceDefinition=DLF,E_CHOICE_Faces_TimingTrack=Lyrics,E_SPINCTRL_Faces_LeadFrames=4</Effect>
   </EffectDB>
@@ -31,8 +31,9 @@
     <DataLayer lor_params="0" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
   </DataLayers>
   <DisplayElements>
-    <Element collapsed="0" type="timing" name="Lyrics" visible="1" views="Master View" active="1"/>
+    <Element collapsed="0" type="timing" name="Lyrics" visible="1" views="Master View" active="0"/>
     <Element collapsed="0" type="timing" name="2s" visible="1" views="" active="0"/>
+    <Element collapsed="0" type="timing" name="Quiet" visible="1" views="" active="1"/>
     <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
     <Element collapsed="0" type="model" name="Tree" visible="1"/>
     <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
@@ -407,13 +408,28 @@
         <Effect label="" startTime="28000" endTime="30000"></Effect>
       </EffectLayer>
     </Element>
+    <Element type="timing" name="Quiet">
+      <EffectLayer>
+        <Effect label="Quiet" startTime="16600" endTime="18625"></Effect>
+      </EffectLayer>
+      <EffectLayer>
+        <Effect label="Quiet" startTime="16600" endTime="18625"></Effect>
+      </EffectLayer>
+      <EffectLayer>
+        <Effect label="etc" startTime="16600" endTime="16650"></Effect>
+        <Effect label="WQ" startTime="16650" endTime="17300"></Effect>
+        <Effect label="AI" startTime="17300" endTime="17925"></Effect>
+        <Effect label="AI" startTime="17925" endTime="18575"></Effect>
+        <Effect label="etc" startTime="18575" endTime="18625"></Effect>
+      </EffectLayer>
+    </Element>
     <Element type="model" name="0_AllDisplay">
       <EffectLayer/>
     </Element>
     <Element type="model" name="Tree">
       <EffectLayer>
         <Effect ref="0" name="Faces" startTime="0" endTime="14100" palette="0"/>
-        <Effect ref="1" name="Faces" id="1" startTime="14100" endTime="29975" palette="0"/>
+        <Effect ref="1" name="Faces" selected="1" id="1" startTime="14100" endTime="29975" palette="0"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Poly Line">
@@ -428,7 +444,7 @@
     <Element type="model" name="Matrix">
       <EffectLayer>
         <Effect ref="2" name="Faces" startTime="0" endTime="14100" palette="0"/>
-        <Effect ref="3" name="Faces" selected="1" id="1" startTime="14100" endTime="29975" palette="0"/>
+        <Effect ref="3" name="Faces" id="1" startTime="14100" endTime="29975" palette="0"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Circle">
