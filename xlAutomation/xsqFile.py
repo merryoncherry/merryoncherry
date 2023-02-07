@@ -149,14 +149,17 @@ def disableUnstableEffects(spath, dpath):
                         continue
                     disableEffect = False
                     ename = effect.getAttribute('name')
-                    if ename in ['Candle', 'Faces', 'Kaleidoscope', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors']:
+                    if ename in ['Kaleidoscope', 'Life', 'Lightning', 'Lines', 'Liquid']:
                         disableEffect = True
-                    if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Snowstorm', 'Strobe', 'Tendril', 'Twinkle', 'Warp', 'Ripple']:
+                    if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Strobe', 'Tendril', 'Warp', 'Ripple']:
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('Type=Random') >= 0: # Weird color gradient blend mode
                         disableEffect = True
                     if not args.dev:
-                        if ename in ['Circles', 'Fire', 'Fireworks']:
+                        if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks',  'Meteors', 'Snowstorm']:
+                            disableEffect = True
+                        if ename in ['Meteors', 'Twinkle']:
+                            # These are sorta stable except on large parallel renders
                             disableEffect = True
                         if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=') >= 0:
                             # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
