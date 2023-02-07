@@ -12,8 +12,8 @@
   "compblks": 253,
   "nsparseranges": 0,
   "reserved2": 0,
-  "uuid1": 1985497856,
-  "uuid2": 390014,
+  "uuid1": 1426446048,
+  "uuid2": 390162,
   "compblocklist": [
     {
       "framenum": 0,
@@ -1022,7 +1022,7 @@
   ],
   "chranges": [],
   "headers": {
-    "sp": "xLights Windows 2022.26 64bit"
+    "sp": "xLights Windows 2023.02 64bit"
   },
   "framecrcs": [
     {
