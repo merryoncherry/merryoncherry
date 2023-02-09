@@ -151,12 +151,12 @@ def disableUnstableEffects(spath, dpath):
                     ename = effect.getAttribute('name')
                     if ename in ['Kaleidoscope', 'Lightning']:
                         disableEffect = True
-                    if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Strobe', 'Tendril', 'Warp', 'Ripple']:
+                    if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Strobe', 'Tendril', 'Ripple']:
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('Type=Random') >= 0: # Weird color gradient blend mode
                         disableEffect = True
                     if not args.dev:
-                        if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Life', 'Lines', 'Liquid', 'Meteors', 'Snowstorm']:
+                        if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Life', 'Lines', 'Liquid', 'Meteors', 'Snowstorm', 'Warp']:
                             disableEffect = True
                         if ename in ['Meteors', 'Twinkle']:
                             # These are sorta stable except on large parallel renders
