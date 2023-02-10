@@ -22,6 +22,7 @@ def setText(pnode, txt, doc):
 
 # python xlAutomation\xsqFile.py m:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\SimpleEffectsUnstable.xsq x.xsq
 # python xlAutomation\xsqFile.py --suite M:\xL_Test_2021\2021_Aspirational M:\xL_Test_2021\2021_Stabilized
+# python xlAutomation\xsqFile.py --dev --suite M:\xL_Test_2021\2021_Aspirational M:\xL_Test_2021\2021_Stabilized
 
 #head
 #nextid
@@ -149,17 +150,17 @@ def disableUnstableEffects(spath, dpath):
                         continue
                     disableEffect = False
                     ename = effect.getAttribute('name')
-                    if ename in ['Kaleidoscope', 'Lightning']:
+                    if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Strobe', 'Ripple']:
                         disableEffect = True
-                    if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Strobe', 'Tendril', 'Ripple']:
+                    if ename in ['Kaleidoscope', 'Meteors', 'Twinkle']:
+                        # These are sorta stable except on large parallel renders
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('Type=Random') >= 0: # Weird color gradient blend mode
                         disableEffect = True
                     if not args.dev:
-                        if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Life', 'Lines', 'Liquid', 'Meteors', 'Snowstorm', 'Warp']:
+                        if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors', 'Snowstorm', 'Warp']:
                             disableEffect = True
-                        if ename in ['Meteors', 'Twinkle']:
-                            # These are sorta stable except on large parallel renders
+                        if ename in ['Tendril']:
                             disableEffect = True
                         if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_SLIDER_SparkleFrequency=') >= 0:
                             # Sorry, we either change color or disable all effects that use the effect with the sparkle in color
