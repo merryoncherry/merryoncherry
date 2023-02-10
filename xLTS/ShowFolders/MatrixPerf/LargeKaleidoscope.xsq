@@ -24,7 +24,7 @@
     <ColorPalette>C_BUTTON_Palette1=#B3000C,C_BUTTON_Palette2=#DC3D2A,C_BUTTON_Palette3=#0DEF42,C_BUTTON_Palette4=#00B32C,C_BUTTON_Palette5=#0D5901,C_BUTTON_Palette6=#394AC1,C_BUTTON_Palette7=#FFFFFF,C_BUTTON_Palette8=#C7B8CB,C_CHECKBOX_Palette6=1</ColorPalette>
   </ColorPalettes>
   <EffectDB>
-    <Effect>E_CHOICE_Warp_Treatment_APPLYLAST=constant,E_CHOICE_Warp_Type=wavy,E_SLIDER_Warp_Speed=28,E_TEXTCTRL1=The warp effect distorts the pixels in the layers below it. The Canvas option in Layer Blending must be enabled for it to work.,E_TEXTCTRL_Warp_Speed=28,T_CHECKBOX_Canvas=1</Effect>
+    <Effect>E_CHOICE_Kaleidoscope_Type=Triangle,E_SLIDER_Kaleidoscope_Rotation=206,E_SLIDER_Kaleidoscope_Size=100,E_SLIDER_Kaleidoscope_X=50,E_SLIDER_Kaleidoscope_Y=40,E_TEXTCTRL1=The warp effect distorts the pixels in the layers below it. The Canvas option in Layer Blending must be enabled for it to work.,T_CHECKBOX_Canvas=1,T_LayersSelected=1|2|3|4</Effect>
     <Effect>E_CHECKBOX_Pictures_PixelOffsets=0,E_CHECKBOX_Pictures_Shimmer=0,E_CHECKBOX_Pictures_TransparentBlack=0,E_CHECKBOX_Pictures_WrapX=0,E_CHOICE_Pictures_Direction=none,E_CHOICE_Scaling=Scale Keep Aspect Ratio,E_FILEPICKER_Pictures_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\MatrixPerf\Media\XLNC_Main_Page.jpg,E_SLIDER_PicturesXC=0,E_SLIDER_PicturesYC=0,E_SLIDER_Pictures_EndScale=100,E_SLIDER_Pictures_StartScale=100,E_TEXTCTRL_Pictures_FrameRateAdj=1.0,E_TEXTCTRL_Pictures_Speed=1.0,E_TEXTCTRL_Pictures_TransparentBlack=0,T_CHOICE_LayerMethod=2 is Unmask,T_TEXTCTRL_Fadein=1</Effect>
     <Effect>E_CHECKBOX_Pictures_PixelOffsets=0,E_CHECKBOX_Pictures_Shimmer=0,E_CHECKBOX_Pictures_TransparentBlack=0,E_CHECKBOX_Pictures_WrapX=0,E_CHOICE_Pictures_Direction=none,E_CHOICE_Scaling=Scale Keep Aspect Ratio,E_FILEPICKER_Pictures_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\MatrixPerf\Media\UserManual-237x300.jpg,E_SLIDER_PicturesXC=0,E_SLIDER_PicturesYC=0,E_SLIDER_Pictures_EndScale=100,E_SLIDER_Pictures_StartScale=100,E_TEXTCTRL_Pictures_FrameRateAdj=1.0,E_TEXTCTRL_Pictures_Speed=1.0,E_TEXTCTRL_Pictures_TransparentBlack=0,T_CHOICE_LayerMethod=2 is Unmask,T_TEXTCTRL_Fadeout=4</Effect>
     <Effect>B_CHOICE_BufferTransform=Rotate CW 90,E_CHECKBOX_Chase_3dFade1=0,E_CHECKBOX_Chase_Group_All=0,E_CHOICE_Chase_Type1=Left-Right,E_CHOICE_SingleStrand_Colors=Palette,E_CHOICE_SingleStrand_FX=Fireworks 1D,E_CHOICE_SingleStrand_FX_Palette=* Colors Only,E_CHOICE_Skips_Direction=Left,E_NOTEBOOK_SSEFFECT_TYPE=Chase,E_SLIDER_Color_Mix1=54,E_SLIDER_FX_Intensity=128,E_SLIDER_FX_Speed=128,E_SLIDER_Number_Chases=2,E_SLIDER_Skips_Advance=0,E_SLIDER_Skips_BandSize=1,E_SLIDER_Skips_SkipSize=1,E_SLIDER_Skips_StartPos=1,E_TEXTCTRL_Chase_Rotations=4,T_CHOICE_LayerMethod=2 is Mask,T_TEXTCTRL_Fadein=.4,T_TEXTCTRL_Fadeout=4</Effect>
@@ -61,7 +61,7 @@
     </Element>
     <Element type="model" name="Matrix_100_80">
       <EffectLayer>
-        <Effect ref="0" name="Warp" selected="1" startTime="225" endTime="17125" palette="0"/>
+        <Effect ref="0" name="Kaleidoscope" selected="1" startTime="125" endTime="17175" palette="0"/>
       </EffectLayer>
       <EffectLayer/>
       <EffectLayer>
