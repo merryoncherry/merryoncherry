@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
+  <head>
+    <version>2023.02</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song></song>
+    <artist></artist>
+    <album></album>
+    <MusicURL></MusicURL>
+    <comment></comment>
+    <sequenceTiming>25 ms</sequenceTiming>
+    <sequenceType>Animation</sequenceType>
+    <mediaFile/>
+    <sequenceDuration>30.000</sequenceDuration>
+    <imageDir/>
+  </head>
+  <nextid>1</nextid>
+  <Jukebox/>
+  <ColorPalettes>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette4=1,C_CHECKBOX_Palette5=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette7=1</ColorPalette>
+  </ColorPalettes>
+  <EffectDB>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
+    <Effect>B_CHOICE_BufferStyle=Per Model Default,E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
+    <Effect>B_CHOICE_BufferStyle=Per Preview,E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=6,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Rainbow,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=2,E_SLIDER_Butterfly_Skip=6,E_SLIDER_Butterfly_Speed=20,E_SLIDER_Butterfly_Style=1</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Reverse,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=2</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=3</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=4</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=6</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=7</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=8</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=9</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=10</Effect>
+    <Effect></Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=6,E_SLIDER_Butterfly_Skip=4,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=1</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=3,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=2</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=3,E_SLIDER_Butterfly_Skip=10,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=3</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=2,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=4</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=2,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=93,E_SLIDER_Butterfly_Style=6</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=1,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=100,E_SLIDER_Butterfly_Style=7</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=4,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=8</Effect>
+    <Effect>E_CHOICE_Butterfly_Colors=Palette,E_CHOICE_Butterfly_Direction=Normal,E_SLIDER_Butterfly_Chunks=8,E_SLIDER_Butterfly_Skip=2,E_SLIDER_Butterfly_Speed=10,E_SLIDER_Butterfly_Style=9</Effect>
+  </EffectDB>
+  <DataLayers>
+    <DataLayer lor_params="0" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
+  </DataLayers>
+  <DisplayElements>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="0"/>
+    <Element collapsed="0" type="timing" name="2s" visible="1" views="" active="1"/>
+    <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree" visible="1"/>
+    <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
+    <Element collapsed="0" type="model" name="Candy Canes" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches" visible="1"/>
+    <Element collapsed="0" type="model" name="Matrix" visible="1"/>
+    <Element collapsed="0" type="model" name="Circle" visible="1"/>
+    <Element collapsed="0" type="model" name="Cube" visible="1"/>
+    <Element collapsed="0" type="model" name="Custom" visible="1"/>
+    <Element collapsed="0" type="model" name="Icicles" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line H" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line V" visible="1"/>
+    <Element collapsed="0" type="model" name="Sphere" visible="1"/>
+    <Element collapsed="0" type="model" name="Spinner" visible="1"/>
+    <Element collapsed="0" type="model" name="Star" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame Door" visible="1"/>
+    <Element collapsed="0" type="model" name="Wreath" visible="1"/>
+  </DisplayElements>
+  <ElementEffects>
+    <Element type="timing" name="New Timing">
+      <EffectLayer/>
+    </Element>
+    <Element type="timing" name="2s">
+      <EffectLayer>
+        <Effect label="" startTime="0" endTime="2000"></Effect>
+        <Effect label="" startTime="2000" endTime="4000"></Effect>
+        <Effect label="" startTime="4000" endTime="6000"></Effect>
+        <Effect label="" startTime="6000" endTime="8000"></Effect>
+        <Effect label="" startTime="8000" endTime="10000"></Effect>
+        <Effect label="" startTime="10000" endTime="12000"></Effect>
+        <Effect label="" startTime="12000" endTime="14000"></Effect>
+        <Effect label="" startTime="14000" endTime="16000"></Effect>
+        <Effect label="" startTime="16000" endTime="18000"></Effect>
+        <Effect label="" startTime="18000" endTime="20000"></Effect>
+        <Effect label="" startTime="20000" endTime="22000"></Effect>
+        <Effect label="" startTime="22000" endTime="24000"></Effect>
+        <Effect label="" startTime="24000" endTime="26000"></Effect>
+        <Effect label="" startTime="26000" endTime="28000"></Effect>
+        <Effect label="" startTime="28000" endTime="30000"></Effect>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="0_AllDisplay">
+      <EffectLayer>
+        <Effect ref="0" name="Butterfly" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Butterfly" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Butterfly" id="2" startTime="4000" endTime="6000" palette="0"/>
+        <Effect ref="3" name="Butterfly" id="3" startTime="6000" endTime="8000" palette="0"/>
+        <Effect ref="4" name="Butterfly" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Butterfly" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Butterfly" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Butterfly" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Butterfly" id="8" startTime="16000" endTime="18000" palette="0"/>
+        <Effect ref="9" name="Butterfly" id="9" startTime="18000" endTime="20000" palette="0"/>
+        <Effect ref="10" name="Butterfly" id="10" startTime="20000" endTime="22000" palette="0"/>
+        <Effect ref="11" name="Butterfly" id="11" startTime="22000" endTime="24000" palette="0"/>
+        <Effect ref="12" name="Butterfly" id="12" startTime="24000" endTime="26000" palette="0"/>
+        <Effect ref="13" name="Butterfly" id="13" startTime="26000" endTime="28000" palette="0"/>
+        <Effect ref="14" name="Butterfly" id="14" startTime="28000" endTime="30000" palette="0"/>
+      </EffectLayer>
+      <EffectLayer>
+        <Effect ref="15" name="On" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Tree">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Poly Line">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Candy Canes">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Arches">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Matrix">
+      <EffectLayer>
+        <Effect ref="0" name="Butterfly" selected="1" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="0" name="Butterfly" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Butterfly" id="2" startTime="4000" endTime="6000" palette="0"/>
+        <Effect ref="16" name="Butterfly" id="3" startTime="6000" endTime="8000" palette="0"/>
+        <Effect ref="4" name="Butterfly" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Butterfly" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Butterfly" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="17" name="Butterfly" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="18" name="Butterfly" id="8" startTime="16000" endTime="18000" palette="0"/>
+        <Effect ref="19" name="Butterfly" id="9" startTime="18000" endTime="20000" palette="0"/>
+        <Effect ref="20" name="Butterfly" id="10" startTime="20000" endTime="22000" palette="0"/>
+        <Effect ref="21" name="Butterfly" id="11" startTime="22000" endTime="24000" palette="0"/>
+        <Effect ref="22" name="Butterfly" id="12" startTime="24000" endTime="26000" palette="0"/>
+        <Effect ref="23" name="Butterfly" id="13" startTime="26000" endTime="28000" palette="0"/>
+        <Effect ref="14" name="Butterfly" id="14" startTime="28000" endTime="30000" palette="0"/>
+      </EffectLayer>
+      <EffectLayer>
+        <Effect ref="15" name="On" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Circle">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Cube">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Custom">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Icicles">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line H">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line V">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Sphere">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Spinner">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame Door">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Wreath">
+      <EffectLayer/>
+    </Element>
+  </ElementEffects>
+  <lastView>0</lastView>
+  <TimingTags>
+    <Tag number="0" position="-1"/>
+    <Tag number="1" position="-1"/>
+    <Tag number="2" position="-1"/>
+    <Tag number="3" position="-1"/>
+    <Tag number="4" position="-1"/>
+    <Tag number="5" position="-1"/>
+    <Tag number="6" position="-1"/>
+    <Tag number="7" position="-1"/>
+    <Tag number="8" position="-1"/>
+    <Tag number="9" position="-1"/>
+  </TimingTags>
+</xsequence>

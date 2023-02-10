@@ -447,4 +447,54 @@
   <testpreset name="chase">
     <channelr start="1" end="3072"/>
   </testpreset>
+  <testpreset name="falcon test">
+    <channelr start="97" end="286"/>
+    <channelr start="8447" end="9976"/>
+  </testpreset>
+  <testpreset name="spinner test">
+    <channelr start="65" end="4144"/>
+  </testpreset>
+  <testpreset name="MatrixTest">
+    <channelr start="1296" end="4751"/>
+  </testpreset>
+  <testpreset name="Roof &amp;amp; Window Trim (Plus Floods)">
+    <channelr start="224" end="1999"/>
+  </testpreset>
+  <testpreset name="Matrix">
+    <channelr start="2000" end="5455"/>
+  </testpreset>
+  <testpreset name="Matrix (Correct)">
+    <channelr start="2372" end="5827"/>
+  </testpreset>
+  <testpreset name="RGB Arches">
+    <channelr start="5828" end="6367"/>
+  </testpreset>
+  <testpreset name="NOEL">
+    <channelr start="5962" end="7144"/>
+  </testpreset>
+  <testpreset name="NOEL Sign">
+    <channelr start="6368" end="7144"/>
+  </testpreset>
+  <testpreset name="singtree">
+    <channelr start="107069" end="107989"/>
+  </testpreset>
+  <testpreset name="TEST 1">
+    <channelr start="0" end="1678"/>
+  </testpreset>
+  <testpreset name="test on"/>
+  <testpreset name="TEST 2">
+    <channelr start="0" end="347"/>
+  </testpreset>
+  <testpreset name="Test Star">
+    <channelr start="9691" end="11220"/>
+  </testpreset>
+  <testpreset name="vv">
+    <channelr start="1" end="510"/>
+  </testpreset>
+  <testpreset name="Test Tree - 1 Only">
+    <channelr start="1" end="510"/>
+  </testpreset>
+  <testpreset name="Test">
+    <channelr start="1" end="510"/>
+  </testpreset>
 </Networks>
