@@ -176,8 +176,8 @@ def disableUnstableEffects(spath, dpath):
                         if ename == 'VU Meter':
                             if txt.find('Random') >= 0:
                                 disableEffect = True
-                    if txt.find('E_CHECKBOX_Spirals_3D=1')>=0:
-                        disableEffect = True
+                        if txt.find('E_CHECKBOX_Spirals_3D=1')>=0:
+                            disableEffect = True
                     if disableEffect:
                         if txt.find('X_Effect_RenderDisabled=True') < 0:
                             #raise Exception('Check it '+str(en)+":"+txt)
