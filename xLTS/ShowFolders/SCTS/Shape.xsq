@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
+  <head>
+    <version>2023.02</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song></song>
+    <artist></artist>
+    <album></album>
+    <MusicURL></MusicURL>
+    <comment></comment>
+    <sequenceTiming>25 ms</sequenceTiming>
+    <sequenceType>Animation</sequenceType>
+    <mediaFile></mediaFile>
+    <sequenceDuration>40.000</sequenceDuration>
+    <imageDir/>
+  </head>
+  <nextid>1</nextid>
+  <Jukebox/>
+  <ColorPalettes>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=Active=TRUE|Id=ID_BUTTON_Palette2|Values=x=0.000^c=#ff0000;x=0.200^c=#ffff00;x=0.400^c=#00ff00;x=0.600^c=#00ffff;x=0.800^c=#0000ff;x=1.000^c=#ff00ff|,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette7=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette4=1</ColorPalette>
+  </ColorPalettes>
+  <EffectDB>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Circle,E_SLIDER_Shape_Growth=10,E_SLIDER_Shape_Lifetime=5,E_SLIDER_Shape_StartSize=1,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=90,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=5,E_TEXTCTRL_Shapes_Direction=90,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Ellipse,E_SLIDER_Shape_Growth=10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Points=5,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=6,E_SLIDER_Shape_Thickness=5,E_SLIDER_Shapes_Direction=90,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=90,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Triangle,E_SLIDER_Shape_Growth=10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=6,E_SLIDER_Shape_Thickness=5,E_SLIDER_Shapes_Direction=90,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=90,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Emoji,E_CHOICE_Shape_SkinTone=Default,E_FONTPICKER_Shape_Font='segoe ui emoji' 10,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_SPINCTRL_Shape_Char=127876,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=1,E_CHOICE_Shape_ObjectToDraw=Square,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=48,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=6,E_TEXTCTRL_Shape_Count=17</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=0,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=0,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=1,E_CHOICE_Shape_ObjectToDraw=Crucifix,E_SLIDER_Shape_CentreX=50,E_SLIDER_Shape_CentreY=50,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_TEXTCTRL_Shape_Count=17</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=0,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Pentagon,E_SLIDER_Shape_Lifetime=26,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0,E_VALUECURVE_Shape_Growth=Active=TRUE|Id=ID_VALUECURVE_Shape_Growth|Type=Ramp Up/Down|Min=-100.00|Max=100.00|P1=-100.00|P2=100.00|P3=-100.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Hexagon,E_SLIDER_Shape_Growth=10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=1,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_FireTimingTrack=New Timing,E_CHOICE_Shape_ObjectToDraw=Octagon,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=10,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Star,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Points=5,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=0,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Heart,E_SLIDER_Shape_CentreX=50,E_SLIDER_Shape_CentreY=50,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0,E_VALUECURVE_Shape_CentreX=Active=TRUE|Id=ID_VALUECURVE_Shape_CentreX|Type=Sine|Min=0.00|Max=100.00|P1=75.00|P2=100.00|P3=10.00|P4=50.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Tree,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=SVG,E_FILEPICKERCTRL_SVG=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\Eo_circle_green_checkmark.svg,E_SLIDER_Shape_Growth=-1,E_SLIDER_Shape_Lifetime=64,E_SLIDER_Shape_StartSize=2,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Present,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Random,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Candy Cane,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Snowflake,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=5,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0,E_VALUECURVE_Shape_Rotation=Active=TRUE|Id=ID_VALUECURVE_Shape_Rotation|Type=Ramp|Min=0.00|Max=360.00|P2=360.00|RV=TRUE|</Effect>
+    <Effect></Effect>
+  </EffectDB>
+  <DataLayers>
+    <DataLayer lor_params="0" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
+  </DataLayers>
+  <DisplayElements>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="0"/>
+    <Element collapsed="0" type="timing" name="2s" visible="1" views="" active="1"/>
+    <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree" visible="1"/>
+    <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
+    <Element collapsed="0" type="model" name="Candy Canes" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches" visible="1"/>
+    <Element collapsed="0" type="model" name="Matrix" visible="1"/>
+    <Element collapsed="0" type="model" name="Circle" visible="1"/>
+    <Element collapsed="0" type="model" name="Cube" visible="1"/>
+    <Element collapsed="0" type="model" name="Custom" visible="1"/>
+    <Element collapsed="0" type="model" name="Icicles" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line H" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line V" visible="1"/>
+    <Element collapsed="0" type="model" name="Sphere" visible="1"/>
+    <Element collapsed="0" type="model" name="Spinner" visible="1"/>
+    <Element collapsed="0" type="model" name="Star" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame Door" visible="1"/>
+    <Element collapsed="0" type="model" name="Wreath" visible="1"/>
+  </DisplayElements>
+  <ElementEffects>
+    <Element type="timing" name="New Timing">
+      <EffectLayer>
+        <Effect label="" startTime="0" endTime="0"></Effect>
+        <Effect label="" startTime="0" endTime="16700"></Effect>
+        <Effect label="" startTime="16700" endTime="17275"></Effect>
+        <Effect label="" startTime="17275" endTime="17825"></Effect>
+      </EffectLayer>
+    </Element>
+    <Element type="timing" name="2s">
+      <EffectLayer>
+        <Effect label="" startTime="0" endTime="2000"></Effect>
+        <Effect label="" startTime="2000" endTime="4000"></Effect>
+        <Effect label="" startTime="4000" endTime="6000"></Effect>
+        <Effect label="" startTime="6000" endTime="8000"></Effect>
+        <Effect label="" startTime="8000" endTime="10000"></Effect>
+        <Effect label="" startTime="10000" endTime="12000"></Effect>
+        <Effect label="" startTime="12000" endTime="14000"></Effect>
+        <Effect label="" startTime="14000" endTime="16000"></Effect>
+        <Effect label="" startTime="16000" endTime="18000"></Effect>
+        <Effect label="" startTime="18000" endTime="20000"></Effect>
+        <Effect label="" startTime="20000" endTime="22000"></Effect>
+        <Effect label="" startTime="22000" endTime="24000"></Effect>
+        <Effect label="" startTime="24000" endTime="26000"></Effect>
+        <Effect label="" startTime="26000" endTime="28000"></Effect>
+        <Effect label="" startTime="28000" endTime="30000"></Effect>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="0_AllDisplay">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Poly Line">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Candy Canes">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Arches">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Matrix">
+      <EffectLayer>
+        <Effect ref="0" name="Shape" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Shape" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Shape" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Shape" id="3" startTime="6000" endTime="8000" palette="0"/>
+        <Effect ref="4" name="Shape" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Shape" id="5" startTime="10000" endTime="12000" palette="1"/>
+        <Effect ref="6" name="Shape" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Shape" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Shape" id="8" startTime="16000" endTime="18000" palette="0"/>
+        <Effect ref="9" name="Shape" id="9" startTime="18000" endTime="20000" palette="2"/>
+        <Effect ref="10" name="Shape" id="10" startTime="20000" endTime="22000" palette="0"/>
+        <Effect ref="11" name="Shape" id="11" startTime="22000" endTime="24000" palette="0"/>
+        <Effect ref="12" name="Shape" id="12" startTime="24000" endTime="26000" palette="0"/>
+        <Effect ref="13" name="Shape" id="13" startTime="26000" endTime="28000" palette="0"/>
+        <Effect ref="14" name="Shape" id="14" startTime="28000" endTime="30000" palette="0"/>
+        <Effect ref="13" name="Shape" id="15" startTime="30000" endTime="32000" palette="0"/>
+        <Effect ref="15" name="Shape" id="16" startTime="32000" endTime="34000" palette="0"/>
+        <Effect ref="16" name="Shape" id="17" startTime="34000" endTime="36000" palette="3"/>
+      </EffectLayer>
+      <EffectLayer>
+        <Effect ref="17" name="On" selected="1" startTime="0" endTime="3975" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Circle">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Cube">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Custom">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Icicles">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line H">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line V">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Sphere">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Spinner">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame Door">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Wreath">
+      <EffectLayer/>
+    </Element>
+  </ElementEffects>
+  <lastView>0</lastView>
+  <TimingTags>
+    <Tag number="0" position="-1"/>
+    <Tag number="1" position="-1"/>
+    <Tag number="2" position="-1"/>
+    <Tag number="3" position="-1"/>
+    <Tag number="4" position="-1"/>
+    <Tag number="5" position="-1"/>
+    <Tag number="6" position="-1"/>
+    <Tag number="7" position="-1"/>
+    <Tag number="8" position="-1"/>
+    <Tag number="9" position="-1"/>
+  </TimingTags>
+</xsequence>
