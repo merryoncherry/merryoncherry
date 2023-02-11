@@ -150,15 +150,19 @@ def disableUnstableEffects(spath, dpath):
                         continue
                     disableEffect = False
                     ename = effect.getAttribute('name')
-                    if ename in ['Shape', 'Shimmer', 'Snowflakes', 'Strobe', 'Ripple']:
+                    if ename in ['Shimmer', 'Snowflakes', 'Strobe', 'Ripple']:
                         disableEffect = True
                     if ename in ['Kaleidoscope', 'Meteors', 'Twinkle']:
                         # These are sorta stable except on large parallel renders
                         disableEffect = True
                     if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('Type=Random') >= 0: # Weird color gradient blend mode
                         disableEffect = True
+
+                    en = int(effect.getAttribute('ref'))
+                    txt = getText(effectsdb[en])
+
                     if not args.dev:
-                        if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors', 'Snowstorm', 'Warp']:
+                        if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors', 'Shape', 'Snowstorm', 'Warp']:
                             disableEffect = True
                         if ename in ['Tendril']:
                             disableEffect = True
@@ -169,13 +173,11 @@ def disableUnstableEffects(spath, dpath):
                             disableEffect = True
                         if effect.hasAttribute('palette') and getText(colors[int(effect.getAttribute('palette'))]).find('C_VALUECURVE_SparkleFrequency=Active=TRUE') >= 0:
                             disableEffect = True
-                    en = int(effect.getAttribute('ref'))
-                    txt = getText(effectsdb[en])
+                        if ename == 'VU Meter':
+                            if txt.find('Random') >= 0:
+                                disableEffect = True
                     if txt.find('E_CHECKBOX_Spirals_3D=1')>=0:
                         disableEffect = True
-                    if ename == 'VU Meter':
-                        if txt.find('Random') >= 0:
-                            disableEffect = True
                     if disableEffect:
                         if txt.find('X_Effect_RenderDisabled=True') < 0:
                             #raise Exception('Check it '+str(en)+":"+txt)
