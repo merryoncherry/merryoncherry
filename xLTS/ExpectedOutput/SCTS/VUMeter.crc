@@ -12,8 +12,8 @@
   "compblks": 108,
   "nsparseranges": 0,
   "reserved2": 0,
-  "uuid1": 4138652744,
-  "uuid2": 390261,
+  "uuid1": 429160152,
+  "uuid2": 390263,
   "compblocklist": [
     {
       "framenum": 0,
@@ -3782,17 +3782,10 @@
         ]
       },
       {
-        "label": "D#5",
-        "start": 1125,
-        "end": 1600,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "B1",
-        "start": 1375,
+        "label": "E4",
+        "start": 1650,
         "end": 1825,
-        "crc": 3317846003,
+        "crc": 3742078891,
         "models": [
           {
             "name": "Candy Canes",
@@ -3840,13 +3833,6 @@
             "crc": 1245066222
           }
         ]
-      },
-      {
-        "label": "E4",
-        "start": 1650,
-        "end": 1825,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "G#5",
@@ -3927,10 +3913,10 @@
         ]
       },
       {
-        "label": "E2",
-        "start": 1875,
+        "label": "G#3",
+        "start": 2125,
         "end": 2600,
-        "crc": 1639317911,
+        "crc": 1412183450,
         "models": [
           {
             "name": "Candy Canes",
@@ -4010,76 +3996,6 @@
         ]
       },
       {
-        "label": "G#3",
-        "start": 2125,
-        "end": 2600,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "B1",
-        "start": 2400,
-        "end": 2850,
-        "crc": 3316173671,
-        "models": [
-          {
-            "name": "Candy Canes",
-            "type": "Candy Canes",
-            "crc": 3876099256
-          },
-          {
-            "name": "Circle",
-            "type": "Circle",
-            "crc": 3606044180
-          },
-          {
-            "name": "Custom",
-            "type": "Custom",
-            "crc": 2965139027
-          },
-          {
-            "name": "Icicles",
-            "type": "Icicles",
-            "crc": 2849545472
-          },
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 527874811
-          },
-          {
-            "name": "Sphere",
-            "type": "Sphere",
-            "crc": 472721480
-          },
-          {
-            "name": "Spinner",
-            "type": "Spinner",
-            "crc": 1819793663
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 3246105223
-          },
-          {
-            "name": "Tree",
-            "type": "Tree 360",
-            "crc": 1339154992
-          },
-          {
-            "name": "Window Frame",
-            "type": "Window Frame",
-            "crc": 2418662299
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 3719855197
-          }
-        ]
-      },
-      {
         "label": "E2",
         "start": 2900,
         "end": 3375,
@@ -4088,57 +4004,57 @@
           {
             "name": "Candy Canes",
             "type": "Candy Canes",
-            "crc": 2517020848
+            "crc": 1248053325
           },
           {
             "name": "Circle",
             "type": "Circle",
-            "crc": 3696982534
+            "crc": 2633133106
           },
           {
             "name": "Custom",
             "type": "Custom",
-            "crc": 2419633682
+            "crc": 2511155248
           },
           {
             "name": "Icicles",
             "type": "Icicles",
-            "crc": 6596037
+            "crc": 701099364
           },
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 3290893551
+            "crc": 2469754158
           },
           {
             "name": "Sphere",
             "type": "Sphere",
-            "crc": 3453499767
+            "crc": 2010703521
           },
           {
             "name": "Spinner",
             "type": "Spinner",
-            "crc": 221732355
+            "crc": 2108590177
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 3828317976
+            "crc": 782963632
           },
           {
             "name": "Tree",
             "type": "Tree 360",
-            "crc": 834365134
+            "crc": 2383466341
           },
           {
             "name": "Window Frame",
             "type": "Window Frame",
-            "crc": 2135928446
+            "crc": 1641313723
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 2454230239
+            "crc": 199860224
           }
         ]
       },
@@ -4196,66 +4112,6 @@
         ]
       },
       {
-        "label": "B2",
-        "start": 3425,
-        "end": 3775,
-        "crc": 3864955432,
-        "models": [
-          {
-            "name": "Candy Canes",
-            "type": "Candy Canes",
-            "crc": 879743045
-          },
-          {
-            "name": "Circle",
-            "type": "Circle",
-            "crc": 3254893650
-          },
-          {
-            "name": "Custom",
-            "type": "Custom",
-            "crc": 3391575366
-          },
-          {
-            "name": "Icicles",
-            "type": "Icicles",
-            "crc": 3257992817
-          },
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 409101041
-          },
-          {
-            "name": "Sphere",
-            "type": "Sphere",
-            "crc": 4082645588
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 1081320082
-          },
-          {
-            "name": "Tree",
-            "type": "Tree 360",
-            "crc": 2084229391
-          },
-          {
-            "name": "Window Frame",
-            "type": "Window Frame",
-            "crc": 3085597715
-          }
-        ]
-      },
-      {
-        "label": "B1",
-        "start": 3600,
-        "end": 3775,
-        "crc": 0,
-        "models": []
-      },
-      {
         "label": "E4",
         "start": 3825,
         "end": 4400,
@@ -4264,93 +4120,79 @@
           {
             "name": "Candy Canes",
             "type": "Candy Canes",
-            "crc": 3159079872
+            "crc": 2250203894
           },
           {
             "name": "Circle",
             "type": "Circle",
-            "crc": 1586638693
+            "crc": 577196385
           },
           {
             "name": "Cube",
             "type": "Cube",
-            "crc": 622584047
+            "crc": 3451643286
           },
           {
             "name": "Custom",
             "type": "Custom",
-            "crc": 1927995108
+            "crc": 1352273707
           },
           {
             "name": "Icicles",
             "type": "Icicles",
-            "crc": 1390766712
+            "crc": 2614688814
           },
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 2526803626
+            "crc": 2464335043
           },
           {
             "name": "Single Line H",
             "type": "Single Line",
-            "crc": 1373549513
+            "crc": 886075421
           },
           {
             "name": "Single Line V",
             "type": "Single Line",
-            "crc": 2418788778
+            "crc": 4112845438
           },
           {
             "name": "Sphere",
             "type": "Sphere",
-            "crc": 1465086991
+            "crc": 2637602875
           },
           {
             "name": "Spinner",
             "type": "Spinner",
-            "crc": 2341240801
+            "crc": 4001545269
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 3820811897
+            "crc": 3171658513
           },
           {
             "name": "Tree",
             "type": "Tree 360",
-            "crc": 3389086989
+            "crc": 3385319912
           },
           {
             "name": "Window Frame",
             "type": "Window Frame",
-            "crc": 4118521552
+            "crc": 2365068037
           },
           {
             "name": "Window Frame Door",
             "type": "Window Frame",
-            "crc": 1939608699
+            "crc": 2392951784
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 836052850
+            "crc": 1159661586
           }
         ]
-      },
-      {
-        "label": "E2",
-        "start": 3950,
-        "end": 4125,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "B0",
-        "start": 4175,
-        "end": 4400,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "C#2",
@@ -4416,137 +4258,67 @@
         ]
       },
       {
-        "label": "E4",
-        "start": 4450,
-        "end": 4800,
-        "crc": 4014278248,
-        "models": [
-          {
-            "name": "Candy Canes",
-            "type": "Candy Canes",
-            "crc": 4124076658
-          },
-          {
-            "name": "Circle",
-            "type": "Circle",
-            "crc": 3779922456
-          },
-          {
-            "name": "Custom",
-            "type": "Custom",
-            "crc": 2135214323
-          },
-          {
-            "name": "Icicles",
-            "type": "Icicles",
-            "crc": 3855777466
-          },
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 3237181252
-          },
-          {
-            "name": "Sphere",
-            "type": "Sphere",
-            "crc": 79187200
-          },
-          {
-            "name": "Spinner",
-            "type": "Spinner",
-            "crc": 724530075
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 1658583007
-          },
-          {
-            "name": "Tree",
-            "type": "Tree 360",
-            "crc": 1006129495
-          },
-          {
-            "name": "Window Frame",
-            "type": "Window Frame",
-            "crc": 3148921731
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 707457802
-          }
-        ]
-      },
-      {
         "label": "B2",
         "start": 4700,
         "end": 4900,
-        "crc": 2373601187,
+        "crc": 3990156799,
         "models": [
           {
             "name": "Candy Canes",
             "type": "Candy Canes",
-            "crc": 906622225
+            "crc": 3262811849
           },
           {
             "name": "Circle",
             "type": "Circle",
-            "crc": 860875596
+            "crc": 2060535683
           },
           {
             "name": "Custom",
             "type": "Custom",
-            "crc": 3766400543
+            "crc": 1588812114
           },
           {
             "name": "Icicles",
             "type": "Icicles",
-            "crc": 1212352576
+            "crc": 71789402
           },
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 3625358149
+            "crc": 654083021
           },
           {
             "name": "Sphere",
             "type": "Sphere",
-            "crc": 990463560
+            "crc": 350472746
           },
           {
             "name": "Spinner",
             "type": "Spinner",
-            "crc": 2769836579
+            "crc": 1342110263
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 605671767
+            "crc": 635970471
           },
           {
             "name": "Tree",
             "type": "Tree 360",
-            "crc": 2383769472
+            "crc": 1511286935
           },
           {
             "name": "Window Frame",
             "type": "Window Frame",
-            "crc": 1808631868
+            "crc": 3532569184
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 4139581849
+            "crc": 3398569798
           }
         ]
-      },
-      {
-        "label": "B0",
-        "start": 4850,
-        "end": 4900,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "A4",
@@ -4612,10 +4384,10 @@
         ]
       },
       {
-        "label": "E4",
-        "start": 4950,
+        "label": "A4",
+        "start": 5225,
         "end": 5400,
-        "crc": 1309601709,
+        "crc": 1795037976,
         "models": [
           {
             "name": "Candy Canes",
@@ -4670,10 +4442,10 @@
         ]
       },
       {
-        "label": "A1",
-        "start": 4950,
+        "label": "F#4",
+        "start": 5450,
         "end": 5700,
-        "crc": 2137861462,
+        "crc": 2059435365,
         "models": [
           {
             "name": "Candy Canes",
@@ -4721,20 +4493,6 @@
             "crc": 2743264403
           }
         ]
-      },
-      {
-        "label": "A4",
-        "start": 5225,
-        "end": 5400,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "F#4",
-        "start": 5450,
-        "end": 5700,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "B1",
@@ -4873,10 +4631,10 @@
         ]
       },
       {
-        "label": "E2",
-        "start": 6000,
+        "label": "G3",
+        "start": 6225,
         "end": 6450,
-        "crc": 3289382322,
+        "crc": 3945762804,
         "models": [
           {
             "name": "Candy Canes",
@@ -4934,13 +4692,6 @@
             "crc": 1102920194
           }
         ]
-      },
-      {
-        "label": "G3",
-        "start": 6225,
-        "end": 6450,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "G#4",
@@ -5004,20 +4755,6 @@
             "crc": 300885433
           }
         ]
-      },
-      {
-        "label": "B1",
-        "start": 6650,
-        "end": 6725,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "G#3",
-        "start": 6775,
-        "end": 6825,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "E2",
@@ -5194,59 +4931,6 @@
         ]
       },
       {
-        "label": "C#2",
-        "start": 7525,
-        "end": 8000,
-        "crc": 1681588603,
-        "models": [
-          {
-            "name": "Candy Canes",
-            "type": "Candy Canes",
-            "crc": 3749973585
-          },
-          {
-            "name": "Circle",
-            "type": "Circle",
-            "crc": 3057643321
-          },
-          {
-            "name": "Custom",
-            "type": "Custom",
-            "crc": 4158718589
-          },
-          {
-            "name": "Icicles",
-            "type": "Icicles",
-            "crc": 1415712764
-          },
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 4190151527
-          },
-          {
-            "name": "Sphere",
-            "type": "Sphere",
-            "crc": 2378995257
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 9986247
-          },
-          {
-            "name": "Tree",
-            "type": "Tree 360",
-            "crc": 1794809442
-          },
-          {
-            "name": "Window Frame",
-            "type": "Window Frame",
-            "crc": 1897192636
-          }
-        ]
-      },
-      {
         "label": "B1",
         "start": 8050,
         "end": 8500,
@@ -5255,64 +4939,70 @@
           {
             "name": "Candy Canes",
             "type": "Candy Canes",
-            "crc": 184086151
+            "crc": 429729007
+          },
+          {
+            "name": "Circle",
+            "type": "Circle",
+            "crc": 3916980043
+          },
+          {
+            "name": "Custom",
+            "type": "Custom",
+            "crc": 1785703684
+          },
+          {
+            "name": "Icicles",
+            "type": "Icicles",
+            "crc": 2342671609
           },
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 4108088384
+            "crc": 914668391
           },
           {
             "name": "Single Line V",
             "type": "Single Line",
-            "crc": 4218842720
+            "crc": 353203721
+          },
+          {
+            "name": "Sphere",
+            "type": "Sphere",
+            "crc": 927312437
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 3815430973
+            "crc": 3113184107
           },
           {
             "name": "Tree",
             "type": "Tree 360",
-            "crc": 452816378
+            "crc": 4033996375
           },
           {
             "name": "Window Frame",
             "type": "Window Frame",
-            "crc": 4273763283
+            "crc": 3087436143
           },
           {
             "name": "Window Frame Door",
             "type": "Window Frame",
-            "crc": 683486699
+            "crc": 2339013954
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 2735090701
+            "crc": 2031822174
           }
         ]
       },
       {
-        "label": "B0",
-        "start": 8275,
-        "end": 8500,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "G3",
-        "start": 8275,
-        "end": 8500,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "D#4",
-        "start": 8275,
+        "label": "C#2",
+        "start": 8550,
         "end": 8750,
-        "crc": 2489078356,
+        "crc": 3645334045,
         "models": [
           {
             "name": "Candy Canes",
@@ -5347,10 +5037,10 @@
         ]
       },
       {
-        "label": "F#4",
-        "start": 8275,
+        "label": "D#2",
+        "start": 8800,
         "end": 9000,
-        "crc": 4156029443,
+        "crc": 2877526958,
         "models": [
           {
             "name": "Candy Canes",
@@ -5383,20 +5073,6 @@
             "crc": 2641626083
           }
         ]
-      },
-      {
-        "label": "C#2",
-        "start": 8550,
-        "end": 8750,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "D#2",
-        "start": 8800,
-        "end": 9000,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "E2",
@@ -5437,24 +5113,10 @@
         ]
       },
       {
-        "label": "G#3",
-        "start": 9325,
-        "end": 9525,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "D#5",
-        "start": 9575,
-        "end": 9800,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "B1",
-        "start": 9575,
+        "label": "B0",
+        "start": 9850,
         "end": 10050,
-        "crc": 778856092,
+        "crc": 2290082037,
         "models": [
           {
             "name": "Candy Canes",
@@ -5499,17 +5161,10 @@
         ]
       },
       {
-        "label": "B0",
-        "start": 9850,
-        "end": 10050,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "E4",
-        "start": 9850,
+        "label": "E2",
+        "start": 10100,
         "end": 10550,
-        "crc": 2129101161,
+        "crc": 1804165466,
         "models": [
           {
             "name": "Matrix",
@@ -5537,20 +5192,6 @@
             "crc": 2712592679
           }
         ]
-      },
-      {
-        "label": "E2",
-        "start": 10100,
-        "end": 10550,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "G#3",
-        "start": 10325,
-        "end": 10550,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "D#5",
@@ -5581,93 +5222,30 @@
         ]
       },
       {
-        "label": "B1",
-        "start": 10600,
-        "end": 11050,
-        "crc": 1266488323,
-        "models": [
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 3458641883
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 1355802640
-          },
-          {
-            "name": "Window Frame Door",
-            "type": "Window Frame",
-            "crc": 1739944336
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 4226542083
-          }
-        ]
-      },
-      {
-        "label": "G#4",
-        "start": 10600,
-        "end": 11575,
-        "crc": 3522232125,
-        "models": [
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 481616656
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 384425712
-          },
-          {
-            "name": "Window Frame Door",
-            "type": "Window Frame",
-            "crc": 3983850470
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 3829930432
-          }
-        ]
-      },
-      {
         "label": "G#5",
         "start": 11100,
         "end": 11300,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "E2",
-        "start": 11100,
-        "end": 11825,
-        "crc": 1709456252,
+        "crc": 3557511141,
         "models": [
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 2913242546
+            "crc": 1709091960
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 2677471818
+            "crc": 2179169759
           },
           {
             "name": "Window Frame Door",
             "type": "Window Frame",
-            "crc": 2835105395
+            "crc": 3150663946
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 2616772024
+            "crc": 3291255024
           }
         ]
       },
@@ -5675,65 +5253,27 @@
         "label": "B1",
         "start": 11625,
         "end": 11975,
-        "crc": 1287444427,
+        "crc": 3005000688,
         "models": [
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 3317140223
+            "crc": 3117903948
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 3083555459
+            "crc": 2211278329
           },
           {
             "name": "Window Frame Door",
             "type": "Window Frame",
-            "crc": 2973181084
+            "crc": 924041037
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 2088577761
-          }
-        ]
-      },
-      {
-        "label": "A4",
-        "start": 11625,
-        "end": 12075,
-        "crc": 1795507335,
-        "models": [
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 295934625
-          },
-          {
-            "name": "Single Line V",
-            "type": "Single Line",
-            "crc": 1579734513
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 250956468
-          },
-          {
-            "name": "Window Frame",
-            "type": "Window Frame",
-            "crc": 1287833803
-          },
-          {
-            "name": "Window Frame Door",
-            "type": "Window Frame",
-            "crc": 1875044274
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 2965813016
+            "crc": 3971059082
           }
         ]
       },
@@ -5746,27 +5286,32 @@
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 1523876673
+            "crc": 2751540530
           },
           {
             "name": "Single Line V",
             "type": "Single Line",
-            "crc": 2309797091
+            "crc": 2973489992
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 3021676043
+            "crc": 283413709
+          },
+          {
+            "name": "Window Frame",
+            "type": "Window Frame",
+            "crc": 1437970728
           },
           {
             "name": "Window Frame Door",
             "type": "Window Frame",
-            "crc": 2863371140
+            "crc": 199655190
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 2098425375
+            "crc": 3200502178
           }
         ]
       },
@@ -5855,29 +5400,6 @@
         ]
       },
       {
-        "label": "B1",
-        "start": 12900,
-        "end": 13125,
-        "crc": 1600356673,
-        "models": [
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 841596901
-          },
-          {
-            "name": "Window Frame Door",
-            "type": "Window Frame",
-            "crc": 1667719939
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 1393057872
-          }
-        ]
-      },
-      {
         "label": "E4",
         "start": 13175,
         "end": 13375,
@@ -5886,30 +5408,30 @@
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 284313239
+            "crc": 4169807727
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 1159929319
+            "crc": 3761129070
           },
           {
             "name": "Window Frame Door",
             "type": "Window Frame",
-            "crc": 2863371140
+            "crc": 3405565910
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 2549329193
+            "crc": 1254548186
           }
         ]
       },
       {
-        "label": "A1",
-        "start": 13175,
+        "label": "A4",
+        "start": 13425,
         "end": 13900,
-        "crc": 1637169701,
+        "crc": 1628154098,
         "models": [
           {
             "name": "Matrix",
@@ -5932,20 +5454,6 @@
             "crc": 688049315
           }
         ]
-      },
-      {
-        "label": "A4",
-        "start": 13425,
-        "end": 13900,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "D#4",
-        "start": 13700,
-        "end": 13825,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "B1",
@@ -5986,10 +5494,10 @@
         ]
       },
       {
-        "label": "A4",
-        "start": 13950,
+        "label": "A2",
+        "start": 14200,
         "end": 14400,
-        "crc": 4149334369,
+        "crc": 738109097,
         "models": [
           {
             "name": "Matrix",
@@ -6014,80 +5522,38 @@
         ]
       },
       {
-        "label": "A2",
-        "start": 14200,
-        "end": 14400,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "A5",
-        "start": 14200,
-        "end": 14650,
-        "crc": 948727201,
-        "models": [
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 4027724299
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 2856950610
-          },
-          {
-            "name": "Window Frame Door",
-            "type": "Window Frame",
-            "crc": 2835105395
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 1250181835
-          }
-        ]
-      },
-      {
-        "label": "E2",
-        "start": 14200,
+        "label": "G#3",
+        "start": 14450,
         "end": 14925,
-        "crc": 1267252153,
+        "crc": 2604211249,
         "models": [
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 788764082
+            "crc": 4121021847
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 2683447829
+            "crc": 1565087338
           },
           {
             "name": "Window Frame Door",
             "type": "Window Frame",
-            "crc": 4289617144
+            "crc": 3983850470
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 1684609262
+            "crc": 505934988
           }
         ]
       },
       {
         "label": "G#3",
-        "start": 14450,
-        "end": 14925,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "G#4",
-        "start": 14450,
+        "start": 14975,
         "end": 15175,
-        "crc": 968580667,
+        "crc": 3282259336,
         "models": [
           {
             "name": "Matrix",
@@ -6110,34 +5576,6 @@
             "crc": 1897704973
           }
         ]
-      },
-      {
-        "label": "B1",
-        "start": 14700,
-        "end": 14925,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "G#2",
-        "start": 14700,
-        "end": 14925,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "G#3",
-        "start": 14975,
-        "end": 15175,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "E2",
-        "start": 15100,
-        "end": 15175,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "B1",
@@ -6168,74 +5606,32 @@
         ]
       },
       {
-        "label": "B4",
-        "start": 15225,
-        "end": 15825,
-        "crc": 1375297896,
-        "models": [
-          {
-            "name": "Matrix",
-            "type": "Horiz Matrix",
-            "crc": 2348199443
-          },
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 1876651800
-          },
-          {
-            "name": "Window Frame Door",
-            "type": "Window Frame",
-            "crc": 2973181084
-          },
-          {
-            "name": "Wreath",
-            "type": "Wreath",
-            "crc": 3855127361
-          }
-        ]
-      },
-      {
-        "label": "F#4",
-        "start": 15475,
-        "end": 15825,
-        "crc": 0,
-        "models": []
-      },
-      {
         "label": "B1",
         "start": 15725,
         "end": 16200,
-        "crc": 2312288625,
+        "crc": 3811084506,
         "models": [
           {
             "name": "Matrix",
             "type": "Horiz Matrix",
-            "crc": 1294970430
+            "crc": 3472188809
           },
           {
             "name": "Star",
             "type": "Star",
-            "crc": 3841486659
+            "crc": 1124903955
           },
           {
             "name": "Window Frame Door",
             "type": "Window Frame",
-            "crc": 2434653160
+            "crc": 717765795
           },
           {
             "name": "Wreath",
             "type": "Wreath",
-            "crc": 111870468
+            "crc": 1036200879
           }
         ]
-      },
-      {
-        "label": "F#4",
-        "start": 16000,
-        "end": 16200,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "C#2",
@@ -6264,19 +5660,6 @@
         ]
       },
       {
-        "label": "D#2",
-        "start": 16750,
-        "end": 17225,
-        "crc": 3449298232,
-        "models": [
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 2083442773
-          }
-        ]
-      },
-      {
         "label": "D#5",
         "start": 17275,
         "end": 17475,
@@ -6285,20 +5668,7 @@
           {
             "name": "Star",
             "type": "Star",
-            "crc": 1137099483
-          }
-        ]
-      },
-      {
-        "label": "E2",
-        "start": 17275,
-        "end": 18000,
-        "crc": 1999667336,
-        "models": [
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 1619424786
+            "crc": 2195021501
           }
         ]
       },
@@ -6306,131 +5676,53 @@
         "label": "G#6",
         "start": 17525,
         "end": 18500,
-        "crc": 2153783350,
+        "crc": 2820705479,
         "models": [
           {
             "name": "Star",
             "type": "Star",
-            "crc": 753523252
+            "crc": 1054658884
           }
         ]
-      },
-      {
-        "label": "E5",
-        "start": 17525,
-        "end": 18750,
-        "crc": 3159167914,
-        "models": [
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 3606062567
-          }
-        ]
-      },
-      {
-        "label": "G#4",
-        "start": 17800,
-        "end": 18000,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "B1",
-        "start": 17800,
-        "end": 18250,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "B5",
-        "start": 18050,
-        "end": 20025,
-        "crc": 4151991935,
-        "models": [
-          {
-            "name": "Star",
-            "type": "Star",
-            "crc": 3218576576
-          }
-        ]
-      },
-      {
-        "label": "E2",
-        "start": 18300,
-        "end": 18750,
-        "crc": 0,
-        "models": []
       },
       {
         "label": "G#4",
         "start": 18800,
         "end": 19025,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "B1",
-        "start": 18800,
-        "end": 19275,
-        "crc": 0,
-        "models": []
+        "crc": 601462346,
+        "models": [
+          {
+            "name": "Star",
+            "type": "Star",
+            "crc": 1437951391
+          }
+        ]
       },
       {
         "label": "G#6",
         "start": 19075,
         "end": 19525,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "E5",
-        "start": 19075,
-        "end": 19775,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "F5",
-        "start": 19075,
-        "end": 19275,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "E2",
-        "start": 19325,
-        "end": 19775,
-        "crc": 0,
-        "models": []
+        "crc": 2981439444,
+        "models": [
+          {
+            "name": "Star",
+            "type": "Star",
+            "crc": 775232164
+          }
+        ]
       },
       {
         "label": "B4",
         "start": 19575,
         "end": 20025,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "G#6",
-        "start": 19575,
-        "end": 20025,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "A4",
-        "start": 19825,
-        "end": 20025,
-        "crc": 0,
-        "models": []
-      },
-      {
-        "label": "B1",
-        "start": 19825,
-        "end": 20175,
-        "crc": 1763043221,
-        "models": []
+        "crc": 476625514,
+        "models": [
+          {
+            "name": "Star",
+            "type": "Star",
+            "crc": 3814300920
+          }
+        ]
       },
       {
         "label": "E2",

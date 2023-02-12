@@ -105,14 +105,20 @@ def readSequenceTimingTrack(spath, ttracks):
                     continue
                 trec = TimingRec(element.getAttribute('name'))
                 ttracks.append(trec)
+                lastetime = 0
                 for effect in tlayer.childNodes:
                     if effect.nodeType == xml.dom.Node.ATTRIBUTE_NODE or effect.nodeType == xml.dom.Node.TEXT_NODE:
                         continue
                     if effect.tagName != 'Effect':
                         continue
-                    if effect.getAttribute('startTime') == effect.getAttribute('endTime'): # zero length - skip
+                    st = int(effect.getAttribute('startTime'))
+                    et = int(effect.getAttribute('endTime'))
+                    if st == et: # zero length - skip
                         continue
-                    trec.entlist.append(TimingEnt(effect.getAttribute('label'), int(effect.getAttribute('startTime')), int(effect.getAttribute('endTime'))))
+                    if st < lastetime: # Overlaps - like polyphonic transcription or such
+                        continue
+                    lastetime = et
+                    trec.entlist.append(TimingEnt(effect.getAttribute('label'), st, et))
                 break
 
 def disableUnstableEffects(spath, dpath):
@@ -150,7 +156,7 @@ def disableUnstableEffects(spath, dpath):
                         continue
                     disableEffect = False
                     ename = effect.getAttribute('name')
-                    if ename in ['Shimmer', 'Snowflakes', 'Strobe', 'Ripple']:
+                    if ename in ['Strobe', 'Ripple']:
                         disableEffect = True
                     if ename in ['Kaleidoscope', 'Meteors', 'Twinkle']:
                         # These are sorta stable except on large parallel renders
@@ -162,6 +168,8 @@ def disableUnstableEffects(spath, dpath):
                     txt = getText(effectsdb[en])
 
                     if not args.dev:
+                        if ename in ['Shimmer', 'Snowflakes', 'Strobe', 'Ripple']:
+                            disableEffect = True
                         if ename in ['Candle', 'Circles', 'Faces', 'Fire', 'Fireworks', 'Life', 'Lightning', 'Lines', 'Liquid', 'Meteors', 'Shape', 'Snowstorm', 'Warp']:
                             disableEffect = True
                         if ename in ['Tendril']:
