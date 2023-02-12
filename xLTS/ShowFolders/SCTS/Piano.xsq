@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
+  <head>
+    <version>2023.02</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song>Batman Smells, Jingle Bells Christmas Holiday Parody (feat. Christmas)</song>
+    <artist>Public Domain Royalty Free Music</artist>
+    <album>Batman Smells, Jingle Bells Christmas Holiday Parody (feat. Christmas)</album>
+    <MusicURL></MusicURL>
+    <comment></comment>
+    <sequenceTiming>25 ms</sequenceTiming>
+    <sequenceType>Media</sequenceType>
+    <mediaFile>M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\BatmanSmells.mp3</mediaFile>
+    <sequenceDuration>26.307</sequenceDuration>
+    <imageDir/>
+  </head>
+  <nextid>1</nextid>
+  <Jukebox/>
+  <ColorPalettes>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=Active=TRUE|Id=ID_BUTTON_Palette4|Values=x=0.000^c=#ff0000;x=0.200^c=#ffff00;x=0.400^c=#00ff00;x=0.600^c=#00ffff;x=0.800^c=#0000ff;x=1.000^c=#ff00ff|,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette5=1</ColorPalette>
+  </ColorPalettes>
+  <EffectDB>
+    <Effect>E_CHECKBOX_Piano_ShowSharps=1,E_CHOICE_Piano_MIDITrack_APPLYLAST=Transcription,E_CHOICE_Piano_Type=True Piano,E_SLIDER_Piano_Scale=100,E_SLIDER_Piano_XOffset=0,E_SPINCTRL_Piano_EndMIDI=72,E_SPINCTRL_Piano_StartMIDI=60</Effect>
+    <Effect>E_CHECKBOX_Piano_ShowSharps=1,E_CHOICE_Piano_MIDITrack_APPLYLAST=Transcription,E_CHOICE_Piano_Type=Bars,E_SLIDER_Piano_Scale=100,E_SLIDER_Piano_XOffset=0,E_SPINCTRL_Piano_EndMIDI=72,E_SPINCTRL_Piano_StartMIDI=60</Effect>
+    <Effect>E_CHECKBOX_Piano_ShowSharps=0,E_CHOICE_Piano_MIDITrack_APPLYLAST=Transcription,E_CHOICE_Piano_Type=Bars,E_SLIDER_Piano_Scale=100,E_SLIDER_Piano_XOffset=0,E_SPINCTRL_Piano_EndMIDI=72,E_SPINCTRL_Piano_StartMIDI=60</Effect>
+    <Effect>E_CHECKBOX_Piano_ShowSharps=0,E_CHOICE_Piano_MIDITrack_APPLYLAST=Transcription,E_CHOICE_Piano_Type=True Piano,E_SLIDER_Piano_Scale=100,E_SLIDER_Piano_XOffset=0,E_SPINCTRL_Piano_EndMIDI=72,E_SPINCTRL_Piano_StartMIDI=60</Effect>
+    <Effect>E_CHECKBOX_Piano_ShowSharps=1,E_CHOICE_Piano_MIDITrack_APPLYLAST=Transcription,E_CHOICE_Piano_Type=True Piano,E_SLIDER_Piano_Scale=100,E_SLIDER_Piano_XOffset=0,E_SPINCTRL_Piano_EndMIDI=70,E_SPINCTRL_Piano_StartMIDI=50</Effect>
+    <Effect>E_CHECKBOX_Piano_ShowSharps=1,E_CHOICE_Piano_MIDITrack_APPLYLAST=Transcription,E_CHOICE_Piano_Type=True Piano,E_SLIDER_Piano_Scale=62,E_SLIDER_Piano_XOffset=10,E_SPINCTRL_Piano_EndMIDI=72,E_SPINCTRL_Piano_StartMIDI=60</Effect>
+    <Effect>E_CHECKBOX_Piano_ShowSharps=1,E_CHOICE_Piano_MIDITrack_APPLYLAST=Transcription,E_CHOICE_Piano_Type=True Piano,E_SLIDER_Piano_XOffset=0,E_SPINCTRL_Piano_EndMIDI=72,E_SPINCTRL_Piano_StartMIDI=60,E_VALUECURVE_Piano_Scale=Active=TRUE|Id=ID_VALUECURVE_Piano_Scale|Type=Ramp Up/Down|Min=0.00|Max=100.00|P2=100.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Piano_ShowSharps=1,E_CHOICE_Piano_MIDITrack_APPLYLAST=,E_CHOICE_Piano_Type=True Piano,E_SLIDER_Piano_Scale=100,E_SLIDER_Piano_XOffset=0,E_SPINCTRL_Piano_EndMIDI=72,E_SPINCTRL_Piano_StartMIDI=60</Effect>
+    <Effect></Effect>
+  </EffectDB>
+  <DataLayers>
+    <DataLayer lor_params="0" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
+  </DataLayers>
+  <DisplayElements>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="0"/>
+    <Element collapsed="0" type="timing" name="2s" visible="1" views="" active="1"/>
+    <Element collapsed="0" type="timing" name="Transcription" visible="1" views="" active="0"/>
+    <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree" visible="1"/>
+    <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
+    <Element collapsed="0" type="model" name="Candy Canes" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches" visible="1"/>
+    <Element collapsed="0" type="model" name="Matrix" visible="1"/>
+    <Element collapsed="0" type="model" name="Circle" visible="1"/>
+    <Element collapsed="0" type="model" name="Cube" visible="1"/>
+    <Element collapsed="0" type="model" name="Custom" visible="1"/>
+    <Element collapsed="0" type="model" name="Icicles" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line H" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line V" visible="1"/>
+    <Element collapsed="0" type="model" name="Sphere" visible="1"/>
+    <Element collapsed="0" type="model" name="Spinner" visible="1"/>
+    <Element collapsed="0" type="model" name="Star" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame Door" visible="1"/>
+    <Element collapsed="0" type="model" name="Wreath" visible="1"/>
+  </DisplayElements>
+  <ElementEffects>
+    <Element type="timing" name="New Timing">
+      <EffectLayer/>
+    </Element>
+    <Element type="timing" name="2s" fixed="2000">
+      <EffectLayer/>
+    </Element>
+    <Element type="timing" name="Transcription">
+      <EffectLayer>
+        <Effect label="G1" startTime="100" endTime="300"></Effect>
+        <Effect label="C#2" startTime="350" endTime="550"></Effect>
+        <Effect label="D#2" startTime="600" endTime="800"></Effect>
+        <Effect label="E2" startTime="950" endTime="1600"></Effect>
+        <Effect label="D#5" startTime="1125" endTime="1600"></Effect>
+        <Effect label="B1" startTime="1375" endTime="1825"></Effect>
+        <Effect label="E4" startTime="1650" endTime="1825"></Effect>
+        <Effect label="G#5" startTime="1875" endTime="2075"></Effect>
+        <Effect label="E2" startTime="1875" endTime="2600"></Effect>
+        <Effect label="G#3" startTime="2125" endTime="2600"></Effect>
+        <Effect label="B1" startTime="2400" endTime="2850"></Effect>
+        <Effect label="E2" startTime="2900" endTime="3375"></Effect>
+        <Effect label="E2" startTime="3425" endTime="3625"></Effect>
+        <Effect label="B2" startTime="3425" endTime="3775"></Effect>
+        <Effect label="B1" startTime="3600" endTime="3775"></Effect>
+        <Effect label="E4" startTime="3825" endTime="4400"></Effect>
+        <Effect label="E2" startTime="3950" endTime="4125"></Effect>
+        <Effect label="B0" startTime="4175" endTime="4400"></Effect>
+        <Effect label="C#2" startTime="4450" endTime="4650"></Effect>
+        <Effect label="E4" startTime="4450" endTime="4800"></Effect>
+        <Effect label="B2" startTime="4700" endTime="4900"></Effect>
+        <Effect label="B0" startTime="4850" endTime="4900"></Effect>
+        <Effect label="A4" startTime="4950" endTime="5175"></Effect>
+        <Effect label="E4" startTime="4950" endTime="5400"></Effect>
+        <Effect label="A1" startTime="4950" endTime="5700"></Effect>
+        <Effect label="A4" startTime="5225" endTime="5400"></Effect>
+        <Effect label="F#4" startTime="5450" endTime="5700"></Effect>
+        <Effect label="B1" startTime="5750" endTime="5950"></Effect>
+        <Effect label="A4" startTime="6000" endTime="6175"></Effect>
+        <Effect label="E2" startTime="6000" endTime="6450"></Effect>
+        <Effect label="G3" startTime="6225" endTime="6450"></Effect>
+        <Effect label="G#4" startTime="6500" endTime="6825"></Effect>
+        <Effect label="B1" startTime="6650" endTime="6725"></Effect>
+        <Effect label="G#3" startTime="6775" endTime="6825"></Effect>
+        <Effect label="E2" startTime="6875" endTime="6950"></Effect>
+        <Effect label="F#2" startTime="7000" endTime="7475"></Effect>
+        <Effect label="F#2" startTime="7525" endTime="7725"></Effect>
+        <Effect label="C#2" startTime="7525" endTime="8000"></Effect>
+        <Effect label="B1" startTime="8050" endTime="8500"></Effect>
+        <Effect label="B0" startTime="8275" endTime="8500"></Effect>
+        <Effect label="G3" startTime="8275" endTime="8500"></Effect>
+        <Effect label="D#4" startTime="8275" endTime="8750"></Effect>
+        <Effect label="F#4" startTime="8275" endTime="9000"></Effect>
+        <Effect label="C#2" startTime="8550" endTime="8750"></Effect>
+        <Effect label="D#2" startTime="8800" endTime="9000"></Effect>
+        <Effect label="E2" startTime="9050" endTime="9800"></Effect>
+        <Effect label="G#3" startTime="9325" endTime="9525"></Effect>
+        <Effect label="D#5" startTime="9575" endTime="9800"></Effect>
+        <Effect label="B1" startTime="9575" endTime="10050"></Effect>
+        <Effect label="B0" startTime="9850" endTime="10050"></Effect>
+        <Effect label="E4" startTime="9850" endTime="10550"></Effect>
+        <Effect label="E2" startTime="10100" endTime="10550"></Effect>
+        <Effect label="G#3" startTime="10325" endTime="10550"></Effect>
+        <Effect label="D#5" startTime="10600" endTime="10825"></Effect>
+        <Effect label="B1" startTime="10600" endTime="11050"></Effect>
+        <Effect label="G#4" startTime="10600" endTime="11575"></Effect>
+        <Effect label="G#5" startTime="11100" endTime="11300"></Effect>
+        <Effect label="E2" startTime="11100" endTime="11825"></Effect>
+        <Effect label="B1" startTime="11625" endTime="11975"></Effect>
+        <Effect label="A4" startTime="11625" endTime="12075"></Effect>
+        <Effect label="E2" startTime="12125" endTime="12325"></Effect>
+        <Effect label="B0" startTime="12375" endTime="12600"></Effect>
+        <Effect label="C#2" startTime="12650" endTime="12850"></Effect>
+        <Effect label="E4" startTime="12900" endTime="13050"></Effect>
+        <Effect label="B1" startTime="12900" endTime="13125"></Effect>
+        <Effect label="E4" startTime="13175" endTime="13375"></Effect>
+        <Effect label="A1" startTime="13175" endTime="13900"></Effect>
+        <Effect label="A4" startTime="13425" endTime="13900"></Effect>
+        <Effect label="D#4" startTime="13700" endTime="13825"></Effect>
+        <Effect label="B1" startTime="13950" endTime="14150"></Effect>
+        <Effect label="A4" startTime="13950" endTime="14400"></Effect>
+        <Effect label="A2" startTime="14200" endTime="14400"></Effect>
+        <Effect label="A5" startTime="14200" endTime="14650"></Effect>
+        <Effect label="E2" startTime="14200" endTime="14925"></Effect>
+        <Effect label="G#3" startTime="14450" endTime="14925"></Effect>
+        <Effect label="G#4" startTime="14450" endTime="15175"></Effect>
+        <Effect label="B1" startTime="14700" endTime="14925"></Effect>
+        <Effect label="G#2" startTime="14700" endTime="14925"></Effect>
+        <Effect label="G#3" startTime="14975" endTime="15175"></Effect>
+        <Effect label="E2" startTime="15100" endTime="15175"></Effect>
+        <Effect label="B1" startTime="15225" endTime="15675"></Effect>
+        <Effect label="B4" startTime="15225" endTime="15825"></Effect>
+        <Effect label="F#4" startTime="15475" endTime="15825"></Effect>
+        <Effect label="B1" startTime="15725" endTime="16200"></Effect>
+        <Effect label="F#4" startTime="16000" endTime="16200"></Effect>
+        <Effect label="C#2" startTime="16250" endTime="16700"></Effect>
+        <Effect label="F#4" startTime="16750" endTime="16975"></Effect>
+        <Effect label="D#2" startTime="16750" endTime="17225"></Effect>
+        <Effect label="D#5" startTime="17275" endTime="17475"></Effect>
+        <Effect label="E2" startTime="17275" endTime="18000"></Effect>
+        <Effect label="G#6" startTime="17525" endTime="18500"></Effect>
+        <Effect label="E5" startTime="17525" endTime="18750"></Effect>
+        <Effect label="G#4" startTime="17800" endTime="18000"></Effect>
+        <Effect label="B1" startTime="17800" endTime="18250"></Effect>
+        <Effect label="B5" startTime="18050" endTime="20025"></Effect>
+        <Effect label="E2" startTime="18300" endTime="18750"></Effect>
+        <Effect label="G#4" startTime="18800" endTime="19025"></Effect>
+        <Effect label="B1" startTime="18800" endTime="19275"></Effect>
+        <Effect label="G#6" startTime="19075" endTime="19525"></Effect>
+        <Effect label="E5" startTime="19075" endTime="19775"></Effect>
+        <Effect label="F5" startTime="19075" endTime="19275"></Effect>
+        <Effect label="E2" startTime="19325" endTime="19775"></Effect>
+        <Effect label="B4" startTime="19575" endTime="20025"></Effect>
+        <Effect label="G#6" startTime="19575" endTime="20025"></Effect>
+        <Effect label="A4" startTime="19825" endTime="20025"></Effect>
+        <Effect label="B1" startTime="19825" endTime="20175"></Effect>
+        <Effect label="E2" startTime="20350" endTime="20550"></Effect>
+        <Effect label="B1" startTime="20600" endTime="20800"></Effect>
+        <Effect label="C2" startTime="20850" endTime="21325"></Effect>
+        <Effect label="G#4" startTime="21375" endTime="26250"></Effect>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="0_AllDisplay">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Poly Line">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Candy Canes">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Arches">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Matrix">
+      <EffectLayer>
+        <Effect ref="0" name="Piano" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="0" name="Piano" id="1" startTime="2000" endTime="4000" palette="1"/>
+        <Effect ref="1" name="Piano" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="2" name="Piano" id="3" startTime="6000" endTime="8000" palette="1"/>
+        <Effect ref="3" name="Piano" id="4" startTime="8000" endTime="10000" palette="1"/>
+        <Effect ref="4" name="Piano" id="5" startTime="10000" endTime="12000" palette="1"/>
+        <Effect ref="5" name="Piano" id="6" startTime="12000" endTime="14000" palette="1"/>
+        <Effect ref="1" name="Piano" selected="1" id="7" startTime="14000" endTime="16000" palette="1"/>
+        <Effect ref="6" name="Piano" id="8" startTime="22000" endTime="24000" palette="2"/>
+        <Effect ref="7" name="Piano" id="9" startTime="24000" endTime="26000" palette="1"/>
+      </EffectLayer>
+      <EffectLayer>
+        <Effect ref="8" name="On" startTime="2000" endTime="4000" palette="3"/>
+        <Effect ref="8" name="On" id="1" startTime="12000" endTime="14000" palette="3"/>
+        <Effect ref="8" name="On" id="2" startTime="14000" endTime="16000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Circle">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Cube">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Custom">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Icicles">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line H">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line V">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Sphere">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Spinner">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame Door">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Wreath">
+      <EffectLayer/>
+    </Element>
+  </ElementEffects>
+  <lastView>0</lastView>
+  <TimingTags>
+    <Tag number="0" position="-1"/>
+    <Tag number="1" position="-1"/>
+    <Tag number="2" position="-1"/>
+    <Tag number="3" position="-1"/>
+    <Tag number="4" position="-1"/>
+    <Tag number="5" position="-1"/>
+    <Tag number="6" position="-1"/>
+    <Tag number="7" position="-1"/>
+    <Tag number="8" position="-1"/>
+    <Tag number="9" position="-1"/>
+  </TimingTags>
+</xsequence>
