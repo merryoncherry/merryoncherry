@@ -34,6 +34,9 @@
     <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Timecurve=8|Values=x=0.070^c=#ff80ff;x=0.230^c=#ff80c0;x=0.500^c=#ffffff;x=0.770^c=#ff0080;x=0.970^c=#8000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette4=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Type=Random|Timecurve=8|Values=x=0.070^c=#ff80ff;x=0.230^c=#ff80c0;x=0.500^c=#ffffff;x=0.770^c=#ff0080;x=0.970^c=#8000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette4=1</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Type=None|Timecurve=8|Values=x=0.070^c=#ff80ff;x=0.230^c=#ff80c0;x=0.500^c=#ffffff;x=0.770^c=#ff0080;x=0.970^c=#8000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Type=Random|Values=x=0.070^c=#ff0000;x=0.230^c=#0000ff;x=0.500^c=#00ff00;x=0.770^c=#ff0000;x=0.970^c=#00ffff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Type=Random|Values=x=0.000^c=#ff0000;x=1.000^c=#00ffff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Type=Random|Timecurve=1|Values=x=0.070^c=#ff0000;x=0.230^c=#0000ff;x=0.500^c=#00ff00;x=0.770^c=#ff0000;x=0.970^c=#00ffff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette4=1</ColorPalette>
   </ColorPalettes>
   <EffectDB>
     <Effect></Effect>
@@ -102,7 +105,7 @@
         <Effect ref="0" name="On" id="11" startTime="22000" endTime="24000" palette="11"/>
         <Effect ref="0" name="On" id="12" startTime="24000" endTime="26000" palette="12"/>
         <Effect ref="0" name="On" id="13" startTime="26000" endTime="28000" palette="13"/>
-        <Effect ref="0" name="On" selected="1" id="14" startTime="28000" endTime="30000" palette="14"/>
+        <Effect ref="0" name="On" id="14" startTime="28000" endTime="30000" palette="14"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Tree">
@@ -118,7 +121,12 @@
       <EffectLayer/>
     </Element>
     <Element type="model" name="Matrix">
-      <EffectLayer/>
+      <EffectLayer>
+        <Effect ref="0" name="On" startTime="0" endTime="2000" palette="14"/>
+        <Effect ref="0" name="On" id="1" startTime="2000" endTime="4000" palette="15"/>
+        <Effect ref="0" name="On" selected="1" id="2" startTime="4000" endTime="6000" palette="16"/>
+        <Effect ref="0" name="On" id="3" startTime="6000" endTime="8000" palette="17"/>
+      </EffectLayer>
     </Element>
     <Element type="model" name="Circle">
       <EffectLayer/>
