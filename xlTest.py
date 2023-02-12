@@ -40,6 +40,7 @@ import xlAutomation.compareFseqCRCs
 # Just diff
 # python ./xlTest.py -D --suite=M:\xL_Test_2021\2021_Stabilized --summary_expected=M:\xL_Test_2021\2021_Stabilized_TempResults_2021_39 --summary_target=M:\xL_Test_2021\2021_Stabilized_TempResults_2022_26 --report_target=M:\xL_Test_2021\2021_Stabilized_Diff
 # python ./xlTest.py -D --timing_models --suite=M:\xL_Test_2021\2021_Stabilized_Unstable --summary_expected=M:\xL_Test_2021\2021_UnstableRes_1 --summary_target=M:\xL_Test_2021\2021_UnstableRes_2 --report_target=M:\xL_Test_2021\2021_Unstable_Diff
+# python ./xlTest.py -D --timing_models --suite=M:\xL_Test_2021\2021_Stabilized --summary_expected=M:\xL_Test_2021\2021_UnstableRes_1 --summary_target=M:\xL_Test_2021\2021_UnstableRes_2 --report_target=M:\xL_Test_2021\2021_Unstable_Diff
 # For perf, see other script
 
 def renderSequence(xlenv, args, perf):

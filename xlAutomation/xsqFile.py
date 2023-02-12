@@ -156,8 +156,6 @@ def disableUnstableEffects(spath, dpath):
                         continue
                     disableEffect = False
                     ename = effect.getAttribute('name')
-                    if ename in ['Strobe', 'Ripple']:
-                        disableEffect = True
                     if ename in ['Kaleidoscope', 'Meteors', 'Twinkle']:
                         # These are sorta stable except on large parallel renders
                         disableEffect = True
