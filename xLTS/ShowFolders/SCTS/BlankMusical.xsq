@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
+  <head>
+    <version>2023.02</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song>Batman Smells, Jingle Bells Christmas Holiday Parody (feat. Christmas)</song>
+    <artist>Public Domain Royalty Free Music</artist>
+    <album>Batman Smells, Jingle Bells Christmas Holiday Parody (feat. Christmas)</album>
+    <MusicURL></MusicURL>
+    <comment></comment>
+    <sequenceTiming>25 ms</sequenceTiming>
+    <sequenceType>Media</sequenceType>
+    <mediaFile>M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\BatmanSmells.mp3</mediaFile>
+    <sequenceDuration>26.307</sequenceDuration>
+    <imageDir></imageDir>
+  </head>
+  <nextid>1</nextid>
+  <Jukebox/>
+  <ColorPalettes/>
+  <EffectDB/>
+  <DataLayers>
+    <DataLayer lor_params="0" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
+  </DataLayers>
+  <DisplayElements>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="0"/>
+    <Element collapsed="0" type="timing" name="2s" visible="1" views="" active="1"/>
+    <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree" visible="1"/>
+    <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
+    <Element collapsed="0" type="model" name="Candy Canes" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches" visible="1"/>
+    <Element collapsed="0" type="model" name="Matrix" visible="1"/>
+    <Element collapsed="0" type="model" name="Circle" visible="1"/>
+    <Element collapsed="0" type="model" name="Cube" visible="1"/>
+    <Element collapsed="0" type="model" name="Custom" visible="1"/>
+    <Element collapsed="0" type="model" name="Icicles" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line H" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line V" visible="1"/>
+    <Element collapsed="0" type="model" name="Sphere" visible="1"/>
+    <Element collapsed="0" type="model" name="Spinner" visible="1"/>
+    <Element collapsed="0" type="model" name="Star" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame Door" visible="1"/>
+    <Element collapsed="0" type="model" name="Wreath" visible="1"/>
+  </DisplayElements>
+  <ElementEffects>
+    <Element type="timing" name="New Timing">
+      <EffectLayer/>
+    </Element>
+    <Element type="timing" name="2s" fixed="2000">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="0_AllDisplay">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Poly Line">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Candy Canes">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Arches">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Matrix">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Circle">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Cube">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Custom">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Icicles">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line H">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line V">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Sphere">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Spinner">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame Door">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Wreath">
+      <EffectLayer/>
+    </Element>
+  </ElementEffects>
+  <lastView>0</lastView>
+  <TimingTags>
+    <Tag number="0" position="-1"/>
+    <Tag number="1" position="-1"/>
+    <Tag number="2" position="-1"/>
+    <Tag number="3" position="-1"/>
+    <Tag number="4" position="-1"/>
+    <Tag number="5" position="-1"/>
+    <Tag number="6" position="-1"/>
+    <Tag number="7" position="-1"/>
+    <Tag number="8" position="-1"/>
+    <Tag number="9" position="-1"/>
+  </TimingTags>
+</xsequence>
