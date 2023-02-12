@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
+  <head>
+    <version>2023.02</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song></song>
+    <artist></artist>
+    <album></album>
+    <MusicURL></MusicURL>
+    <comment></comment>
+    <sequenceTiming>25 ms</sequenceTiming>
+    <sequenceType>Animation</sequenceType>
+    <mediaFile/>
+    <sequenceDuration>30.000</sequenceDuration>
+    <imageDir/>
+  </head>
+  <nextid>1</nextid>
+  <Jukebox/>
+  <ColorPalettes>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ff0000;x=0.200^c=#ffff00;x=0.400^c=#00ff00;x=0.600^c=#00ffff;x=0.800^c=#0000ff;x=1.000^c=#ff00ff|,C_BUTTON_Palette2=#8000FF,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette6=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ff0000;x=0.200^c=#ffff00;x=0.400^c=#00ff00;x=0.600^c=#00ffff;x=0.800^c=#0000ff;x=1.000^c=#ff00ff|,C_BUTTON_Palette2=#8000FF,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette3=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ff0000;x=0.200^c=#ffff00;x=0.400^c=#00ff00;x=0.600^c=#00ffff;x=0.800^c=#0000ff;x=1.000^c=#ff00ff|,C_BUTTON_Palette2=#8000FF,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=Active=TRUE|Id=ID_BUTTON_Palette6|Values=x=0.000^c=#00ff00;x=0.500^c=#ffffff;x=1.000^c=#ff0000|,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette4=1,C_CHECKBOX_Palette6=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ff0000;x=0.200^c=#ffff00;x=0.400^c=#00ff00;x=0.600^c=#00ffff;x=0.800^c=#0000ff;x=1.000^c=#ff00ff|,C_BUTTON_Palette2=#8000FF,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette5=1,C_CHECKBOX_Palette7=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ff0000;x=0.200^c=#ffff00;x=0.400^c=#00ff00;x=0.600^c=#00ffff;x=0.800^c=#0000ff;x=1.000^c=#ff00ff|,C_BUTTON_Palette2=#8000FF,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette3=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ff0000;x=0.200^c=#ffff00;x=0.400^c=#00ff00;x=0.600^c=#00ffff;x=0.800^c=#0000ff;x=1.000^c=#ff00ff|,C_BUTTON_Palette2=#8000FF,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette6=1</ColorPalette>
+  </ColorPalettes>
+  <EffectDB>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=12,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=1,E_CHECKBOX_Marquee_WrapY=1,E_NOTEBOOK_Marquee=Position,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_MarqueeXC=Active=TRUE|Id=ID_VALUECURVE_MarqueeXC|Type=Sine|Min=-100.00|Max=100.00|P1=30.00|P2=-30.00|P3=10.00|RV=TRUE|,E_VALUECURVE_MarqueeYC=Active=TRUE|Id=ID_VALUECURVE_MarqueeYC|Type=Sine|Min=-100.00|Max=100.00|P1=75.00|P2=-40.00|P3=10.00|RV=TRUE|,E_VALUECURVE_Marquee_ScaleX=Active=TRUE|Id=ID_VALUECURVE_Marquee_ScaleX|Type=Ramp Up/Down|Min=1.00|Max=100.00|P1=79.00|P2=100.00|P3=79.00|RV=TRUE|,E_VALUECURVE_Marquee_ScaleY=Active=TRUE|Id=ID_VALUECURVE_Marquee_ScaleY|Type=Ramp Up/Down|Min=1.00|Max=100.00|P1=50.00|P2=100.00|P3=50.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=2</Effect>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=2,E_VALUECURVE_Marquee_Stagger=Active=TRUE|Id=ID_VALUECURVE_Marquee_Stagger|Type=Ramp Up/Down|Min=0.00|Max=50.00|P2=3.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_Marquee_Speed=Active=TRUE|Id=ID_VALUECURVE_Marquee_Speed|Type=Ramp Up/Down|Min=0.00|Max=50.00|P2=5.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=16,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_Marquee_Start=Active=TRUE|Id=ID_VALUECURVE_Marquee_Start|Type=Saw Tooth|Min=0.00|Max=100.00|P2=30.00|P3=2.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=16,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=7,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_Marquee_Start=Active=TRUE|Id=ID_VALUECURVE_Marquee_Start|Type=Saw Tooth|Min=0.00|Max=100.00|P2=30.00|P3=2.00|RV=TRUE|</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=12,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=1,E_CHECKBOX_Marquee_WrapY=1,E_NOTEBOOK_Marquee=Position,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_MarqueeXC=Active=TRUE|Id=ID_VALUECURVE_MarqueeXC|Type=Sine|Min=-100.00|Max=100.00|P1=30.00|P2=-30.00|P3=10.00|RV=TRUE|,E_VALUECURVE_MarqueeYC=Active=TRUE|Id=ID_VALUECURVE_MarqueeYC|Type=Sine|Min=-100.00|Max=100.00|P1=75.00|P2=-40.00|P3=10.00|RV=TRUE|,E_VALUECURVE_Marquee_ScaleX=Active=TRUE|Id=ID_VALUECURVE_Marquee_ScaleX|Type=Ramp Up/Down|Min=1.00|Max=100.00|P1=79.00|P2=100.00|P3=79.00|RV=TRUE|,E_VALUECURVE_Marquee_ScaleY=Active=TRUE|Id=ID_VALUECURVE_Marquee_ScaleY|Type=Ramp Up/Down|Min=1.00|Max=100.00|P1=50.00|P2=100.00|P3=50.00|RV=TRUE|</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=2</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=2,E_VALUECURVE_Marquee_Stagger=Active=TRUE|Id=ID_VALUECURVE_Marquee_Stagger|Type=Ramp Up/Down|Min=0.00|Max=50.00|P2=3.00|RV=TRUE|</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_Marquee_Speed=Active=TRUE|Id=ID_VALUECURVE_Marquee_Speed|Type=Ramp Up/Down|Min=0.00|Max=50.00|P2=5.00|RV=TRUE|</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=16,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_Marquee_Start=Active=TRUE|Id=ID_VALUECURVE_Marquee_Start|Type=Saw Tooth|Min=0.00|Max=100.00|P2=30.00|P3=2.00|RV=TRUE|</Effect>
+    <Effect>B_CHOICE_BufferStyle=Single Line,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=16,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=7,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_Marquee_Start=Active=TRUE|Id=ID_VALUECURVE_Marquee_Start|Type=Saw Tooth|Min=0.00|Max=100.00|P2=30.00|P3=2.00|RV=TRUE|</Effect>
+    <Effect></Effect>
+    <Effect>B_CHOICE_BufferStyle=Layer Star,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>B_CHOICE_BufferStyle=Layer Star,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>B_CHOICE_BufferStyle=Layer Star,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=12,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1</Effect>
+    <Effect>B_CHOICE_BufferStyle=Layer Star,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=1,E_CHECKBOX_Marquee_WrapX=1,E_CHECKBOX_Marquee_WrapY=1,E_NOTEBOOK_Marquee=Position,E_SLIDER_Marquee_Band_Size=12,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=1,E_VALUECURVE_MarqueeXC=Active=TRUE|Id=ID_VALUECURVE_MarqueeXC|Type=Sine|Min=-100.00|Max=100.00|P1=30.00|P2=-30.00|P3=10.00|RV=TRUE|,E_VALUECURVE_MarqueeYC=Active=TRUE|Id=ID_VALUECURVE_MarqueeYC|Type=Sine|Min=-100.00|Max=100.00|P1=75.00|P2=-40.00|P3=10.00|RV=TRUE|,E_VALUECURVE_Marquee_ScaleX=Active=TRUE|Id=ID_VALUECURVE_Marquee_ScaleX|Type=Ramp Up/Down|Min=1.00|Max=100.00|P1=79.00|P2=100.00|P3=79.00|RV=TRUE|,E_VALUECURVE_Marquee_ScaleY=Active=TRUE|Id=ID_VALUECURVE_Marquee_ScaleY|Type=Ramp Up/Down|Min=1.00|Max=100.00|P1=50.00|P2=100.00|P3=50.00|RV=TRUE|</Effect>
+    <Effect>B_CHOICE_BufferStyle=Layer Star,E_CHECKBOX_Marquee_PixelOffsets=0,E_CHECKBOX_Marquee_Reverse=0,E_CHECKBOX_Marquee_WrapX=0,E_CHECKBOX_Marquee_WrapY=0,E_NOTEBOOK_Marquee=Settings,E_SLIDER_MarqueeXC=0,E_SLIDER_MarqueeYC=0,E_SLIDER_Marquee_Band_Size=3,E_SLIDER_Marquee_ScaleX=100,E_SLIDER_Marquee_ScaleY=100,E_SLIDER_Marquee_Skip_Size=0,E_SLIDER_Marquee_Speed=3,E_SLIDER_Marquee_Stagger=0,E_SLIDER_Marquee_Start=0,E_SLIDER_Marquee_Thickness=2</Effect>
+  </EffectDB>
+  <DataLayers>
+    <DataLayer lor_params="0" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
+  </DataLayers>
+  <DisplayElements>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="0"/>
+    <Element collapsed="0" type="timing" name="2s" visible="1" views="" active="1"/>
+    <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree" visible="1"/>
+    <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
+    <Element collapsed="0" type="model" name="Candy Canes" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches" visible="1"/>
+    <Element collapsed="0" type="model" name="Matrix" visible="1"/>
+    <Element collapsed="0" type="model" name="Circle" visible="1"/>
+    <Element collapsed="0" type="model" name="Cube" visible="1"/>
+    <Element collapsed="0" type="model" name="Custom" visible="1"/>
+    <Element collapsed="0" type="model" name="Icicles" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line H" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line V" visible="1"/>
+    <Element collapsed="0" type="model" name="Sphere" visible="1"/>
+    <Element collapsed="0" type="model" name="Spinner" visible="1"/>
+    <Element collapsed="0" type="model" name="Star" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame Door" visible="1"/>
+    <Element collapsed="0" type="model" name="Wreath" visible="1"/>
+  </DisplayElements>
+  <ElementEffects>
+    <Element type="timing" name="New Timing">
+      <EffectLayer/>
+    </Element>
+    <Element type="timing" name="2s">
+      <EffectLayer>
+        <Effect label="" startTime="0" endTime="2000"></Effect>
+        <Effect label="" startTime="2000" endTime="4000"></Effect>
+        <Effect label="" startTime="4000" endTime="6000"></Effect>
+        <Effect label="" startTime="6000" endTime="8000"></Effect>
+        <Effect label="" startTime="8000" endTime="10000"></Effect>
+        <Effect label="" startTime="10000" endTime="12000"></Effect>
+        <Effect label="" startTime="12000" endTime="14000"></Effect>
+        <Effect label="" startTime="14000" endTime="16000"></Effect>
+        <Effect label="" startTime="16000" endTime="18000"></Effect>
+        <Effect label="" startTime="18000" endTime="20000"></Effect>
+        <Effect label="" startTime="20000" endTime="22000"></Effect>
+        <Effect label="" startTime="22000" endTime="24000"></Effect>
+        <Effect label="" startTime="24000" endTime="26000"></Effect>
+        <Effect label="" startTime="26000" endTime="28000"></Effect>
+        <Effect label="" startTime="28000" endTime="30000"></Effect>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="0_AllDisplay">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Poly Line">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Candy Canes">
+      <EffectLayer>
+        <Effect ref="9" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="10" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="11" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="12" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="13" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="14" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="15" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="16" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="17" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="9" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Arches">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Matrix">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+      <EffectLayer>
+        <Effect ref="18" name="On" startTime="0" endTime="30000" palette="5"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Circle">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Cube">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Custom">
+      <EffectLayer>
+        <Effect ref="9" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Icicles">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Single Line H">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Single Line V">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Sphere">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Spinner">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+        <Effect ref="9" name="Marquee" id="10" startTime="20000" endTime="22000" palette="0"/>
+        <Effect ref="10" name="Marquee" id="11" startTime="22000" endTime="24000" palette="0"/>
+        <Effect ref="11" name="Marquee" id="12" startTime="24000" endTime="26000" palette="1"/>
+        <Effect ref="12" name="Marquee" id="13" startTime="26000" endTime="28000" palette="2"/>
+        <Effect ref="13" name="Marquee" id="14" startTime="28000" endTime="30000" palette="0"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Star">
+      <EffectLayer>
+        <Effect ref="9" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="10" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="11" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="12" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="13" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="14" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="15" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="16" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="17" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="9" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+        <Effect ref="19" name="Marquee" id="10" startTime="20000" endTime="22000" palette="0"/>
+        <Effect ref="20" name="Marquee" id="11" startTime="22000" endTime="24000" palette="0"/>
+        <Effect ref="21" name="Marquee" id="12" startTime="24000" endTime="26000" palette="1"/>
+        <Effect ref="22" name="Marquee" id="13" startTime="26000" endTime="28000" palette="2"/>
+        <Effect ref="23" name="Marquee" selected="1" id="14" startTime="28000" endTime="30000" palette="0"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Window Frame">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Window Frame Door">
+      <EffectLayer>
+        <Effect ref="0" name="Marquee" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Marquee" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Marquee" id="2" startTime="4000" endTime="6000" palette="1"/>
+        <Effect ref="3" name="Marquee" id="3" startTime="6000" endTime="8000" palette="2"/>
+        <Effect ref="4" name="Marquee" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Marquee" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Marquee" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="7" name="Marquee" id="7" startTime="14000" endTime="16000" palette="0"/>
+        <Effect ref="8" name="Marquee" id="8" startTime="16000" endTime="18000" palette="3"/>
+        <Effect ref="0" name="Marquee" id="9" startTime="18000" endTime="20000" palette="4"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Wreath">
+      <EffectLayer/>
+    </Element>
+  </ElementEffects>
+  <lastView>0</lastView>
+  <TimingTags>
+    <Tag number="0" position="-1"/>
+    <Tag number="1" position="-1"/>
+    <Tag number="2" position="-1"/>
+    <Tag number="3" position="-1"/>
+    <Tag number="4" position="-1"/>
+    <Tag number="5" position="-1"/>
+    <Tag number="6" position="-1"/>
+    <Tag number="7" position="-1"/>
+    <Tag number="8" position="-1"/>
+    <Tag number="9" position="-1"/>
+  </TimingTags>
+</xsequence>
