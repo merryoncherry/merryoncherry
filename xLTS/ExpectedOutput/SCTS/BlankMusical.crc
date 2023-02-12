@@ -1,0 +1,455 @@
+{
+  "hdr4": "PSEQ",
+  "chdata_offset": 1024,
+  "majver": 2,
+  "minver": 0,
+  "fixedhdr": 896,
+  "channels": 11908,
+  "frames": 1052,
+  "msperframe": 25,
+  "reserved1": 0,
+  "compression": 1,
+  "compblks": 108,
+  "nsparseranges": 0,
+  "reserved2": 0,
+  "uuid1": 4071021744,
+  "uuid2": 390261,
+  "compblocklist": [
+    {
+      "framenum": 0,
+      "blocksize": 19
+    },
+    {
+      "framenum": 10,
+      "blocksize": 19
+    },
+    {
+      "framenum": 20,
+      "blocksize": 19
+    },
+    {
+      "framenum": 30,
+      "blocksize": 19
+    },
+    {
+      "framenum": 40,
+      "blocksize": 19
+    },
+    {
+      "framenum": 50,
+      "blocksize": 19
+    },
+    {
+      "framenum": 60,
+      "blocksize": 19
+    },
+    {
+      "framenum": 70,
+      "blocksize": 19
+    },
+    {
+      "framenum": 80,
+      "blocksize": 19
+    },
+    {
+      "framenum": 90,
+      "blocksize": 19
+    },
+    {
+      "framenum": 100,
+      "blocksize": 19
+    },
+    {
+      "framenum": 110,
+      "blocksize": 19
+    },
+    {
+      "framenum": 120,
+      "blocksize": 19
+    },
+    {
+      "framenum": 130,
+      "blocksize": 19
+    },
+    {
+      "framenum": 140,
+      "blocksize": 19
+    },
+    {
+      "framenum": 150,
+      "blocksize": 19
+    },
+    {
+      "framenum": 160,
+      "blocksize": 19
+    },
+    {
+      "framenum": 170,
+      "blocksize": 19
+    },
+    {
+      "framenum": 180,
+      "blocksize": 19
+    },
+    {
+      "framenum": 190,
+      "blocksize": 19
+    },
+    {
+      "framenum": 200,
+      "blocksize": 19
+    },
+    {
+      "framenum": 210,
+      "blocksize": 19
+    },
+    {
+      "framenum": 220,
+      "blocksize": 19
+    },
+    {
+      "framenum": 230,
+      "blocksize": 19
+    },
+    {
+      "framenum": 240,
+      "blocksize": 19
+    },
+    {
+      "framenum": 250,
+      "blocksize": 19
+    },
+    {
+      "framenum": 260,
+      "blocksize": 19
+    },
+    {
+      "framenum": 270,
+      "blocksize": 19
+    },
+    {
+      "framenum": 280,
+      "blocksize": 19
+    },
+    {
+      "framenum": 290,
+      "blocksize": 19
+    },
+    {
+      "framenum": 300,
+      "blocksize": 19
+    },
+    {
+      "framenum": 310,
+      "blocksize": 19
+    },
+    {
+      "framenum": 320,
+      "blocksize": 19
+    },
+    {
+      "framenum": 330,
+      "blocksize": 19
+    },
+    {
+      "framenum": 340,
+      "blocksize": 19
+    },
+    {
+      "framenum": 350,
+      "blocksize": 19
+    },
+    {
+      "framenum": 360,
+      "blocksize": 19
+    },
+    {
+      "framenum": 370,
+      "blocksize": 19
+    },
+    {
+      "framenum": 380,
+      "blocksize": 19
+    },
+    {
+      "framenum": 390,
+      "blocksize": 19
+    },
+    {
+      "framenum": 400,
+      "blocksize": 19
+    },
+    {
+      "framenum": 410,
+      "blocksize": 19
+    },
+    {
+      "framenum": 420,
+      "blocksize": 19
+    },
+    {
+      "framenum": 430,
+      "blocksize": 19
+    },
+    {
+      "framenum": 440,
+      "blocksize": 19
+    },
+    {
+      "framenum": 450,
+      "blocksize": 19
+    },
+    {
+      "framenum": 460,
+      "blocksize": 19
+    },
+    {
+      "framenum": 470,
+      "blocksize": 19
+    },
+    {
+      "framenum": 480,
+      "blocksize": 19
+    },
+    {
+      "framenum": 490,
+      "blocksize": 19
+    },
+    {
+      "framenum": 500,
+      "blocksize": 19
+    },
+    {
+      "framenum": 510,
+      "blocksize": 19
+    },
+    {
+      "framenum": 520,
+      "blocksize": 19
+    },
+    {
+      "framenum": 530,
+      "blocksize": 19
+    },
+    {
+      "framenum": 540,
+      "blocksize": 19
+    },
+    {
+      "framenum": 550,
+      "blocksize": 19
+    },
+    {
+      "framenum": 560,
+      "blocksize": 19
+    },
+    {
+      "framenum": 570,
+      "blocksize": 19
+    },
+    {
+      "framenum": 580,
+      "blocksize": 19
+    },
+    {
+      "framenum": 590,
+      "blocksize": 19
+    },
+    {
+      "framenum": 600,
+      "blocksize": 19
+    },
+    {
+      "framenum": 610,
+      "blocksize": 19
+    },
+    {
+      "framenum": 620,
+      "blocksize": 19
+    },
+    {
+      "framenum": 630,
+      "blocksize": 19
+    },
+    {
+      "framenum": 640,
+      "blocksize": 19
+    },
+    {
+      "framenum": 650,
+      "blocksize": 19
+    },
+    {
+      "framenum": 660,
+      "blocksize": 19
+    },
+    {
+      "framenum": 670,
+      "blocksize": 19
+    },
+    {
+      "framenum": 680,
+      "blocksize": 19
+    },
+    {
+      "framenum": 690,
+      "blocksize": 19
+    },
+    {
+      "framenum": 700,
+      "blocksize": 19
+    },
+    {
+      "framenum": 710,
+      "blocksize": 19
+    },
+    {
+      "framenum": 720,
+      "blocksize": 19
+    },
+    {
+      "framenum": 730,
+      "blocksize": 19
+    },
+    {
+      "framenum": 740,
+      "blocksize": 19
+    },
+    {
+      "framenum": 750,
+      "blocksize": 19
+    },
+    {
+      "framenum": 760,
+      "blocksize": 19
+    },
+    {
+      "framenum": 770,
+      "blocksize": 19
+    },
+    {
+      "framenum": 780,
+      "blocksize": 19
+    },
+    {
+      "framenum": 790,
+      "blocksize": 19
+    },
+    {
+      "framenum": 800,
+      "blocksize": 19
+    },
+    {
+      "framenum": 810,
+      "blocksize": 19
+    },
+    {
+      "framenum": 820,
+      "blocksize": 19
+    },
+    {
+      "framenum": 830,
+      "blocksize": 19
+    },
+    {
+      "framenum": 840,
+      "blocksize": 19
+    },
+    {
+      "framenum": 850,
+      "blocksize": 19
+    },
+    {
+      "framenum": 860,
+      "blocksize": 19
+    },
+    {
+      "framenum": 870,
+      "blocksize": 19
+    },
+    {
+      "framenum": 880,
+      "blocksize": 19
+    },
+    {
+      "framenum": 890,
+      "blocksize": 19
+    },
+    {
+      "framenum": 900,
+      "blocksize": 19
+    },
+    {
+      "framenum": 910,
+      "blocksize": 19
+    },
+    {
+      "framenum": 920,
+      "blocksize": 19
+    },
+    {
+      "framenum": 930,
+      "blocksize": 19
+    },
+    {
+      "framenum": 940,
+      "blocksize": 19
+    },
+    {
+      "framenum": 950,
+      "blocksize": 19
+    },
+    {
+      "framenum": 960,
+      "blocksize": 19
+    },
+    {
+      "framenum": 970,
+      "blocksize": 19
+    },
+    {
+      "framenum": 980,
+      "blocksize": 19
+    },
+    {
+      "framenum": 990,
+      "blocksize": 19
+    },
+    {
+      "framenum": 1000,
+      "blocksize": 19
+    },
+    {
+      "framenum": 1010,
+      "blocksize": 19
+    },
+    {
+      "framenum": 1020,
+      "blocksize": 19
+    },
+    {
+      "framenum": 1030,
+      "blocksize": 19
+    },
+    {
+      "framenum": 1040,
+      "blocksize": 19
+    },
+    {
+      "framenum": 1050,
+      "blocksize": 18
+    }
+  ],
+  "chranges": [],
+  "headers": {
+    "mf": "M:\\Users\\Chuck\\Source\\Repos\\merryoncherry\\xLTS\\ShowFolders\\SCTS\\Media\\BatmanSmells.mp3",
+    "sp": "xLights Windows 2023.02 64bit"
+  },
+  "framecrcs": [],
+  "globalcrc": 3475691474,
+  "modelcrcs": [],
+  "ttracks": {
+    "New Timing": [],
+    "2s": []
+  }
+}
