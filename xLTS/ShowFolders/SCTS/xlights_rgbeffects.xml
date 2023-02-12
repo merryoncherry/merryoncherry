@@ -24,7 +24,21 @@
       <ControllerConnection Protocol="ws2811"/>
     </model>
     <model DisplayAs="Custom" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm3="1" name="Custom" Controller="No Controller" LayoutGroup="Default" parm2="5" parm1="20" Depth="1" CustomModel="5,,,,9,,,19,20,21,,,,33,34,35,,,,;4,6,,8,10,,18,,,,22,,32,,,,36,,,;3,,7,,11,,17,,,,23,,31,,,,,,,;2,,,,12,,16,,,,24,,30,,,,26,,,;1,,,,13,,,15,14,25,,,,29,28,27,,,," CustomBkgLightness="0" CustomBkgImage="" WorldPosX="-300.0000" WorldPosY="40.0000" WorldPosZ="0.0000" ScaleX="5.0000" ScaleY="6.0000" ScaleZ="0.1000" RotateX="0.00000000" RotateY="0.00000000" RotateZ="0.00000000" versionNumber="5" StartChannel="3614">
+      <stateInfo Name="MOC_Color" CustomColors="1" Type="NodeRange" s1="1-13" s1-Color="#ff0000" s1-Name="1" s2="14-25" s2-Color="#ffffff" s2-Name="2" s3="26-36" s3-Color="#00ff00" s3-Name="3" s4="1-13" s4-Color="#ff0000" s4-Name="4" s5="14-25" s5-Name="4" s6="26-36" s6-Color="#00ff00" s6-Name="4"/>
+      <stateInfo Name="MOC" CustomColors="" Type="NodeRange" s1="1-13" s1-Name="1" s2="14-25" s2-Name="2" s3="26-36" s3-Name="3"/>
       <ControllerConnection Protocol="ws2811"/>
+      <subModel name="M" layout="horizontal" type="ranges" bufferstyle="Default" line0="1-13">
+        <ControllerConnection/>
+      </subModel>
+      <subModel name="O" layout="horizontal" type="ranges" bufferstyle="Default" line0="14-25">
+        <ControllerConnection/>
+      </subModel>
+      <subModel name="C" layout="horizontal" type="ranges" bufferstyle="Default" line0="26-36">
+        <ControllerConnection/>
+      </subModel>
+      <subModel name="MOC" layout="horizontal" type="ranges" bufferstyle="Default" line0="26-36" line1="14-25" line2="1-13">
+        <ControllerConnection/>
+      </subModel>
     </model>
     <model DisplayAs="Icicles" StringType="RGB Nodes" StartSide="B" Dir="L" Antialias="1" PixelSize="2" Transparency="0" parm1="1" parm3="1" name="Icicles" parm2="80" DropPattern="3,4,5,4" Controller="No Controller" LayoutGroup="Default" WorldPosX="-250.0000" WorldPosY="50.0000" WorldPosZ="0.0000" X2="100.000000" Y2="0.000000" Z2="0.000000" RotateX="0.00000000" Height="-1.000000" Shear="0.000000" versionNumber="5" StartChannel="3722">
       <ControllerConnection Protocol="ws2811"/>
