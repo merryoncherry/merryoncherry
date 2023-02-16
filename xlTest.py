@@ -162,6 +162,7 @@ def compareSequenceSummary(args, perf, hjson):
 
     cargs = xlAutomation.compareFseqCRCs.Args()
     cargs.channels = True
+    cargs.versions = False
     cargs.frames = False
     cargs.globalcrc = True
     cargs.models = True
@@ -250,7 +251,6 @@ if __name__ == '__main__':
 
     # Lower case for paths
     parser.add_argument('-b', '--bindir',  help="Path to xLights binaries")
-    parser.add_argument('-c', '--crcdir', help="Path to CRC summaries of .fseq files")
     parser.add_argument('-d', '--datadir', help="Path to xlights data dir (show folder)")    
     parser.add_argument('-w', '--summary_target', help="Path to write fseq summary")
     parser.add_argument('-e', '--summary_expected', help="Path to read fseq expected summary for compare")
