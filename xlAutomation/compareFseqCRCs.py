@@ -16,6 +16,7 @@ class Args:
         self.models = False
         self.timings = False
         self.timing_models = False
+        self.versions = False
 
 def compareSummaries(v1, v2, args, fh):
     xlv1 = v1['headers']['sp'] if 'sp' in v1['headers'] else '<unknown>'
@@ -27,12 +28,13 @@ def compareSummaries(v1, v2, args, fh):
         if v1['hdr4'] != v2['hdr4']:
             diff = True
             print("Header 4 differs: "+v1['hdr4']+" vs "+v2['hdr4'], file=fh)
-        if v1['majver'] != v2['majver']:
-            diff = True
-            print("Major version differs: "+str(v1['majver'])+" vs "+str(v2['majver']), file=fh)
-        if v1['minver'] != v2['minver']:
-            diff = True
-            print("Minor version differs: "+str(v1['minver'])+" vs "+str(v2['minver']), file=fh)
+        if args.versions:
+            if v1['majver'] != v2['majver']:
+                diff = True
+                print("Major version differs: "+str(v1['majver'])+" vs "+str(v2['majver']), file=fh)
+            if v1['minver'] != v2['minver']:
+                diff = True
+                print("Minor version differs: "+str(v1['minver'])+" vs "+str(v2['minver']), file=fh)
         if v1['channels'] != v2['channels']:
             diff = True
             print("Channel count differs: "+str(v1['channels'])+" vs "+str(v2['channels']), file=fh)
@@ -152,6 +154,7 @@ if __name__ == '__main__':
     parser.add_argument('-m', '--models', action='store_true', help='Compare model crcs')
     parser.add_argument('-t', '--timings', action='store_true', help='Compare timing section crcs')
     parser.add_argument('-l', '--timing_models', action='store_true', help='Compare model CRCs per timing section')
+    parser.add_argument('-v', '--versions', action='store_true', help='Compare file format versions')
     #parser.add_argument('-o', '--output',   help="Path to output file")
     parser.add_argument('file1', nargs=1, help='base sequence crc summary json file')
     parser.add_argument('file2', nargs=1, help='diff sequence crc summary json file')
