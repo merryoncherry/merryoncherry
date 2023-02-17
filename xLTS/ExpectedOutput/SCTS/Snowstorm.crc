@@ -2,7 +2,7 @@
   "hdr4": "PSEQ",
   "chdata_offset": 1052,
   "majver": 2,
-  "minver": 0,
+  "minver": 2,
   "fixedhdr": 1016,
   "channels": 11908,
   "frames": 1200,
@@ -12,8 +12,8 @@
   "compblks": 123,
   "nsparseranges": 0,
   "reserved2": 0,
-  "uuid1": 4086197752,
-  "uuid2": 390163,
+  "uuid1": 636626256,
+  "uuid2": 390364,
   "compblocklist": [
     {
       "framenum": 0,
