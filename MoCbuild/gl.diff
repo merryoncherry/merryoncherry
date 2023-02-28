@@ -1,0 +1,54 @@
+diff --git a/xLights/graphics/opengl/DrawGLUtils.cpp b/xLights/graphics/opengl/DrawGLUtils.cpp
+index 6cdf11277..4b3f2d03c 100644
+--- a/xLights/graphics/opengl/DrawGLUtils.cpp
++++ b/xLights/graphics/opengl/DrawGLUtils.cpp
+@@ -318,6 +318,8 @@ public:
+                     LOG_GL_ERRORV(glEnableClientState(GL_TEXTURE_COORD_ARRAY));
+                     LOG_GL_ERRORV(glBindTexture(GL_TEXTURE_2D, pt.image));
+                     LOG_GL_ERRORV(glEnable(GL_TEXTURE_2D));
++                    LOG_GL_ERRORV(glAlphaFunc(GL_NOTEQUAL, 0));
++                    LOG_GL_ERRORV(glEnable(GL_ALPHA_TEST));
+                     LOG_GL_ERRORV(glDisableClientState(GL_COLOR_ARRAY));
+                     LOG_GL_ERRORV(glColor4f(bri, bri, bri, 1.0f));
+                     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+@@ -451,6 +453,8 @@ public:
+                 if (it->enableCapability != 0) {
+                     LOG_GL_ERRORV(glEnable(it->enableCapability));
+                 }
++                LOG_GL_ERRORV(glAlphaFunc(GL_NOTEQUAL, 0));
++                LOG_GL_ERRORV(glEnable(GL_ALPHA_TEST));
+                 LOG_GL_ERRORV(glDrawArrays(it->type, it->start, it->count));
+                 if (it->textureId != -1) {
+                     LOG_GL_ERRORV(glEnableClientState(GL_COLOR_ARRAY));
+@@ -535,6 +539,9 @@ public:
+             LOG_GL_ERRORV(glEnable(enableCapability));
+         }
+ 
++        LOG_GL_ERRORV(glAlphaFunc(GL_NOTEQUAL, 0));
++        LOG_GL_ERRORV(glEnable(GL_ALPHA_TEST));
++
+         LOG_GL_ERRORV(glBindTexture(GL_TEXTURE_2D, va.id));
+         LOG_GL_ERRORV(glEnable(GL_TEXTURE_2D));
+ 
+@@ -727,8 +734,8 @@ void DrawGLUtils::SetViewport(xlGLCanvas &win, int topleft_x, int topleft_y, int
+     
+     if (win.RequiresDepthBuffer()) {
+         LOG_GL_ERRORV(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT));
+-        glEnable(GL_DEPTH_TEST);
+-        glDepthFunc(GL_LEQUAL);
++        LOG_GL_ERRORV(glEnable(GL_DEPTH_TEST));
++        LOG_GL_ERRORV(glDepthFunc(GL_LEQUAL));
+     }
+ }
+ 
+@@ -746,8 +753,8 @@ void DrawGLUtils::SetViewport3D(xlGLCanvas &win, int topleft_x, int topleft_y, i
+     currentCache->Perspective(topleft_x, topleft_y, bottomright_x, bottomright_y, depth);
+ 	LOG_GL_ERRORV(glClearColor(0,0,0,0));   // background color
+ 	LOG_GL_ERRORV(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT));
+-    glEnable(GL_DEPTH_TEST);
+-    glDepthFunc(GL_LEQUAL);
++    LOG_GL_ERRORV(glEnable(GL_DEPTH_TEST));
++    LOG_GL_ERRORV(glDepthFunc(GL_LEQUAL));
+ }
+ 
+ void DrawGLUtils::SetCamera(const glm::mat4& view_matrix) {
