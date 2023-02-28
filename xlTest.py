@@ -43,6 +43,11 @@ import xlAutomation.compareFseqCRCs
 # python ./xlTest.py -D --timing_models --suite=M:\xL_Test_2021\2021_Stabilized --summary_expected=M:\xL_Test_2021\2021_UnstableRes_1 --summary_target=M:\xL_Test_2021\2021_UnstableRes_2 --report_target=M:\xL_Test_2021\2021_Unstable_Diff
 # For perf, see other script
 
+# 2023 Perf
+# python ./xlTest.py -R -C -P --suite=M:\xL_Test_2021\2022_Xmas --summary_target=M:\xL_Test_2022\2022_TempResults_branch --perf_target=M:\xL_Test_2022\2022_Perf_branch
+# python ./xlTest.py -R -C -P --suite=M:\xL_Test_2021\2022_Xmas --summary_target=M:\xL_Test_2022\2022_TempResults_master --perf_target=M:\xL_Test_2022\2022_Perf_master
+
+
 def renderSequence(xlenv, args, perf):
     seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence        
     
