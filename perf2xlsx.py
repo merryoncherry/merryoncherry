@@ -5,7 +5,8 @@ import xlsxwriter
 # Read the JSON of each perf report
 # Order is determined by first file of occurence for item
 
-# python perf2xlsx -o RenderPerfComp.xlsx M:\xL_Test_2021\2021_Aspirational_Perf_2021_39\perf_report.json  M:\xL_Test_2021\2021_Aspirational_Perf_2022_13\perf_report.json  M:\xL_Test_2021\2021_Aspirational_Perf_2022_26\perf_report.json 
+# python perf2xlsx.py -o RenderPerfComp.xlsx M:\xL_Test_2021\2021_Aspirational_Perf_2021_39\perf_report.json  M:\xL_Test_2021\2021_Aspirational_Perf_2022_13\perf_report.json  M:\xL_Test_2021\2021_Aspirational_Perf_2022_26\perf_report.json 
+# python perf2xlsx.py -o RenderPerfComp22.xlsx M:\xL_Test_2022\2022_Perf_master\perf_report.json  M:\xL_Test_2022\2022_Perf_branch\perf_report.json 
 
 # Command line arguments
 parser = argparse.ArgumentParser()
