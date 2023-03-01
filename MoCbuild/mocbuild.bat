@@ -1,8 +1,3 @@
-
-rem Transparent pixels in images should not update Z-buffer
-rem Broken
-rem git apply ..\merryoncherry\MoCbuild\gl.diff
-
 rem Arches don't that zigzag
 git apply ..\merryoncherry\MoCbuild\arch_zigzag.diff
 
