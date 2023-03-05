@@ -13,5 +13,8 @@ git apply ..\merryoncherry\MoCbuild\nowarn.diff
 rem Submodel tools
 git apply ..\merryoncherry\MoCbuild\submodeltools.diff
 
+rem Thread issues in Text and Shape effects
+git apply ..\merryoncherry\MoCbuild\textshapebugs.diff
+
 rem Set version to moc
 git apply ..\merryoncherry\MoCbuild\version.diff
