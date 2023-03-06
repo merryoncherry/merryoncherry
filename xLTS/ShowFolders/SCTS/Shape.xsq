@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
   <head>
-    <version>2023.02</version>
+    <version>2023.03</version>
     <author></author>
     <author-email></author-email>
     <author-website></author-website>
@@ -12,7 +12,7 @@
     <comment></comment>
     <sequenceTiming>25 ms</sequenceTiming>
     <sequenceType>Animation</sequenceType>
-    <mediaFile></mediaFile>
+    <mediaFile/>
     <sequenceDuration>40.000</sequenceDuration>
     <imageDir/>
   </head>
@@ -43,6 +43,8 @@
     <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Random,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
     <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Candy Cane,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shape_Thickness=1,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
     <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Snowflake,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_Rotation=0,E_SLIDER_Shape_StartSize=5,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0,E_VALUECURVE_Shape_Rotation=Active=TRUE|Id=ID_VALUECURVE_Shape_Rotation|Type=Ramp|Min=0.00|Max=360.00|P2=360.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=1,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Emoji,E_CHOICE_Shape_SkinTone=Default,E_FONTPICKER_Shape_Font=bold italic 'showcard gothic' 10 windows-1252,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_SPINCTRL_Shape_Char=65,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
+    <Effect>E_CHECKBOX_Shape_FadeAway=1,E_CHECKBOX_Shape_FireTiming=0,E_CHECKBOX_Shape_HoldColour=1,E_CHECKBOX_Shape_RandomInitial=0,E_CHECKBOX_Shape_RandomLocation=1,E_CHECKBOX_Shape_UseMusic=0,E_CHECKBOX_Shapes_RandomMovement=0,E_CHOICE_Shape_ObjectToDraw=Emoji,E_CHOICE_Shape_SkinTone=Default,E_FONTPICKER_Shape_Font='segoe ui emoji' 20 windows-1252,E_SLIDER_Shape_Growth=-10,E_SLIDER_Shape_Lifetime=25,E_SLIDER_Shape_StartSize=16,E_SLIDER_Shapes_Direction=135,E_SLIDER_Shapes_Velocity=0,E_SPINCTRL_Shape_Char=127875,E_TEXTCTRL_Shape_Count=17,E_TEXTCTRL_Shapes_Direction=135,E_TEXTCTRL_Shapes_Velocity=0</Effect>
     <Effect></Effect>
   </EffectDB>
   <DataLayers>
@@ -73,7 +75,6 @@
   <ElementEffects>
     <Element type="timing" name="New Timing">
       <EffectLayer>
-        <Effect label="" startTime="0" endTime="0"></Effect>
         <Effect label="" startTime="0" endTime="16700"></Effect>
         <Effect label="" startTime="16700" endTime="17275"></Effect>
         <Effect label="" startTime="17275" endTime="17825"></Effect>
@@ -133,9 +134,11 @@
         <Effect ref="13" name="Shape" id="15" startTime="30000" endTime="32000" palette="0"/>
         <Effect ref="15" name="Shape" id="16" startTime="32000" endTime="34000" palette="0"/>
         <Effect ref="16" name="Shape" id="17" startTime="34000" endTime="36000" palette="3"/>
+        <Effect ref="17" name="Shape" id="18" startTime="36000" endTime="38000" palette="0"/>
+        <Effect ref="18" name="Shape" selected="1" id="19" startTime="38000" endTime="40000" palette="0"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="17" name="On" selected="1" startTime="0" endTime="3975" palette="4"/>
+        <Effect ref="19" name="On" startTime="0" endTime="3975" palette="4"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Circle">
