@@ -1,0 +1,205 @@
+diff --git a/xSchedule/ScheduleManager.cpp b/xSchedule/ScheduleManager.cpp
+index c303e5ce8..c34735385 100644
+--- a/xSchedule/ScheduleManager.cpp
++++ b/xSchedule/ScheduleManager.cpp
+@@ -437,11 +437,10 @@ ScheduleManager::~ScheduleManager()
+         delete _listenerManager;
+     }
+ 
+-    while (_overlayData.size() > 0)
++    for (auto it = _overlayData.begin(); it != _overlayData.end(); )
+     {
+-        auto todelete = _overlayData.front();
+-        _overlayData.remove(todelete);
+-        delete todelete;
++        delete *it;
++        it = _overlayData.erase(it);
+     }
+ 
+     if (_xyzzy != nullptr)
+@@ -729,7 +728,7 @@ void ScheduleManager::AllOff()
+             _backgroundPlayList->Frame(_buffer, _outputManager->GetTotalChannels(), true);
+         }
+ 
+-        if (_eventPlayLists.size() > 0)
++        if (!_eventPlayLists.empty())
+         {
+             logger_base.debug("   ... except the event lights.");
+ 
+@@ -738,11 +737,10 @@ void ScheduleManager::AllOff()
+             {
+                 if ((*it)->Frame(_buffer, _outputManager->GetTotalChannels(), true))
+                 {
+-                    auto temp = it;
+-                    ++it;
+-                    (*temp)->Stop();
+-                    delete *temp;
+-                    _eventPlayLists.remove(*temp);
++                    auto temp = *it;
++                    temp->Stop();
++                    delete temp;
++                    it = _eventPlayLists.erase(it);
+                 }
+                 else
+                 {
+@@ -958,11 +956,10 @@ int ScheduleManager::Frame(bool outputframe, xScheduleFrame* frame)
+                 {
+                     if ((*it)->Frame(_buffer, _outputManager->GetTotalChannels(), outputframe))
+                     {
+-                        auto temp = it;
+-                        ++it;
+-                        (*temp)->Stop();
+-                        delete *temp;
+-                        _eventPlayLists.remove(*temp);
++                        auto temp = *it;
++                        temp->Stop();
++                        delete temp;
++                        it = _eventPlayLists.erase(it);
+                     }
+                     else
+                     {
+@@ -1065,18 +1062,17 @@ int ScheduleManager::Frame(bool outputframe, xScheduleFrame* frame)
+                         _backgroundPlayList->Frame(_buffer, totalChannels, outputframe);
+                     }
+ 
+-                    if (_eventPlayLists.size() > 0)
++                    if (!_eventPlayLists.empty())
+                     {
+                         auto it = _eventPlayLists.begin();
+                         while (it != _eventPlayLists.end())
+                         {
+                             if ((*it)->Frame(_buffer, _outputManager->GetTotalChannels(), true))
+                             {
+-                                auto temp = it;
+-                                ++it;
+-                                (*temp)->Stop();
+-                                delete *temp;
+-                                _eventPlayLists.remove(*temp);
++                                auto temp = *it;
++                                temp->Stop();
++                                delete temp;
++                                it = _eventPlayLists.erase(it);
+                             }
+                             else
+                             {
+@@ -1120,7 +1116,7 @@ int ScheduleManager::Frame(bool outputframe, xScheduleFrame* frame)
+             }
+             else
+             {
+-                if (_eventPlayLists.size() > 0)
++                if (!_eventPlayLists.empty())
+                 {
+                     if (outputframe)
+                     {
+@@ -1134,11 +1130,10 @@ int ScheduleManager::Frame(bool outputframe, xScheduleFrame* frame)
+                     {
+                         if ((*it)->Frame(_buffer, _outputManager->GetTotalChannels(), true))
+                         {
+-                            auto temp = it;
+-                            ++it;
+-                            (*temp)->Stop();
+-                            delete *temp;
+-                            _eventPlayLists.remove(*temp);
++                            auto temp = *it;
++                            temp->Stop();
++                            delete temp;
++                            it = _eventPlayLists.erase(it);
+                         }
+                         else
+                         {
+@@ -1170,7 +1165,7 @@ int ScheduleManager::Frame(bool outputframe, xScheduleFrame* frame)
+                         _outputManager->EndFrame();
+                     }
+ 
+-                    if (_eventPlayLists.size() == 0)
++                    if (_eventPlayLists.empty())
+                     {
+                         // last event playlist ended ... turn everything off
+                         _outputManager->AllOff(true);
+@@ -2284,11 +2279,10 @@ bool ScheduleManager::Action(const wxString& command, const wxString& parameters
+                             {
+                                 if ((*it2)->GetId() == p->GetId())
+                                 {
+-                                    auto temp = it2;
+-                                    ++it2;
+-                                    (*temp)->Stop();
+-                                    delete *temp;
+-                                    _eventPlayLists.remove(*temp);
++                                    auto temp = *it2;
++                                    temp->Stop();
++                                    delete temp;
++                                    it2 = _eventPlayLists.erase(it2);
+                                 }
+                                 else
+                                 {
+@@ -2327,11 +2321,10 @@ bool ScheduleManager::Action(const wxString& command, const wxString& parameters
+                                 if ((*it2)->GetId() == p->GetId() &&
+                                     ((*it2)->GetRunningStep()->GetId() == pls->GetId()))
+                                 {
+-                                    auto temp = it2;
+-                                    ++it2;
+-                                    (*temp)->Stop();
+-                                    delete *temp;
+-                                    _eventPlayLists.remove(*temp);
++                                    auto temp = *it2;
++                                    temp->Stop();
++                                    delete temp;
++                                    it2 = _eventPlayLists.erase(it2);
+                                     logger_base.info("Stopped event playlist %s step %s.", (const char*)p->GetNameNoTime().c_str(), (const char *)pls->GetNameNoTime().c_str());
+                                 }
+                                 else
+@@ -2370,11 +2363,10 @@ bool ScheduleManager::Action(const wxString& command, const wxString& parameters
+                         {
+                             if ((*it2)->GetId() == p->GetId())
+                             {
+-                                auto temp = it2;
+-                                ++it2;
+-                                (*temp)->Stop();
+-                                delete *temp;
+-                                _eventPlayLists.remove(*temp);
++                                auto temp = *it2;
++                                temp->Stop();
++                                delete temp;
++                                it2 = _eventPlayLists.erase(it2);
+                                 logger_base.info("Stopped event playlist %s.", (const char*)p->GetNameNoTime().c_str());
+                             }
+                             else
+@@ -2405,11 +2397,10 @@ bool ScheduleManager::Action(const wxString& command, const wxString& parameters
+                             {
+                                 if ((*it2)->GetId() == p->GetId())
+                                 {
+-                                    auto temp = it2;
+-                                    ++it2;
+-                                    (*temp)->Stop();
+-                                    delete *temp;
+-                                    _eventPlayLists.remove(*temp);
++                                    auto temp = *it2;
++                                    temp->Stop();
++                                    delete temp;
++                                    it2 = _eventPlayLists.erase(it2);
+                                 }
+                                 else
+                                 {
+@@ -3252,7 +3243,7 @@ bool ScheduleManager::Action(const wxString& command, const wxString& parameters
+ 
+                     if (p == nullptr && data.length() != 0)
+                     {
+-                        logger_base.debug("Pixel overlay data removed.");
++                        logger_base.debug("Pixel overlay data added.");
+                         p = new PixelData(sc, data, blendMode);
+                         _overlayData.push_back(p);
+                     }
+@@ -3294,6 +3285,13 @@ bool ScheduleManager::Action(const wxString& command, const wxString& parameters
+                                     p->SetColor(c, blendMode);
+                                     break;
+                                 }
++                                else
++                                {
++                                    // This had been adding a second one
++                                    // It is not clear that was intended, this might not be either
++                                    logger_base.debug("Pixel overlay data not changed - length doesn't match.");
++                                }
++                                break;
+                             }
+                         }
+ 

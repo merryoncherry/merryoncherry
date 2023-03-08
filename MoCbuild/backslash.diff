@@ -1,0 +1,197 @@
+diff --git a/xLights/automation/xLightsAutomations.cpp b/xLights/automation/xLightsAutomations.cpp
+index 05ea5eccb..322350920 100644
+--- a/xLights/automation/xLightsAutomations.cpp
++++ b/xLights/automation/xLightsAutomations.cpp
+@@ -87,6 +87,29 @@ inline bool ReadBool(const std::string &v) {
+     return v == "true" || v == "1";
+ }
+ 
++static inline bool ReadMapBool(const std::map<std::string, std::string>& params, const std::string& key, bool dflt)
++{
++    auto it = params.find(key);
++    if (it != params.end()) {
++        return ReadBool(it->second);
++    }
++    return dflt;
++}
++
++static void addPostJSONToParams(std::map<std::string, std::string> &params)
++{
++    if (params["_METHOD"] == "POST" && !params["_DATA"].empty()) {
++        wxString data = params["_DATA"];
++        wxJSONValue val;
++        wxJSONReader reader;
++
++        if (reader.Parse(data, &val) == 0) {
++            for (auto sval : val.GetMemberNames()) {
++                params[sval] = val[sval].AsString();
++            }
++        }
++    }
++}
+ 
+ bool xLightsFrame::ProcessAutomation(std::vector<std::string> &paths,
+                                      std::map<std::string, std::string> &params,
+@@ -103,35 +126,15 @@ bool xLightsFrame::ProcessAutomation(std::vector<std::string> &paths,
+     if (cmd == "getVersion") {
+         return sendResponse(GetDisplayVersionString(), "version", 200, false);
+     } else if (cmd == "openSequence" || cmd == "getOpenSequence" || cmd == "loadSequence") {
+-        wxString fname = "";
++        addPostJSONToParams(params);
+         if (paths.size() > 1) {
+-            fname = wxURI::Unescape(paths[1]);
++            params["seq"] = wxURI::Unescape(paths[1]);
+         }
+-        bool force = false;
+-        bool prompt = false;
++
++        wxString fname = params["seq"];
++        bool force = ReadMapBool(params, "force", false);
++        bool prompt = ReadMapBool(params, "promptIssues", false);
+         
+-        if (params["_METHOD"] == "POST" && !params["_DATA"].empty()) {
+-            wxString data = params["_DATA"];
+-            wxJSONValue val;
+-            wxJSONReader reader;
+-            if (reader.Parse(data, &val) == 0) {
+-                fname = val["seq"].AsString();
+-                if (val.HasMember("promptIssues")) {
+-                    prompt = ReadBool(params["promptIssues"]);
+-                }
+-                if (val.HasMember("force")) {
+-                    force = ReadBool(params["force"]);
+-                }
+-            } else {
+-                fname = "";
+-            }
+-        } else {
+-            if (params["seq"] != "") {
+-                fname = params["seq"];
+-            }
+-            prompt = ReadBool(params["promptIssues"]);
+-            force = ReadBool(params["force"]);
+-        }
+         if (fname.empty()) {
+             if (CurrentSeqXmlFile != nullptr) {
+                 std::string response = wxString::Format("{\"seq\":\"%s\",\"fullseq\":\"%s\",\"media\":\"%s\",\"len\":%u,\"framems\":%u}",
+@@ -480,6 +483,7 @@ bool xLightsFrame::ProcessAutomation(std::vector<std::string> &paths,
+         std::string response = wxString::Format("{\"msg\":\"Sequence checked.\",\"output\":\"%s\"}", JSONSafe(file));
+         return sendResponse(response, "", 200, true);
+     } else if (cmd == "changeShowFolder") {
++        addPostJSONToParams(params);
+         auto shw = params["folder"];
+         if (!wxDir::Exists(shw)) {
+             return sendResponse("Folder does not exist.", "msg", 503, false);
+diff --git a/xSchedule/wxHTTPServer/connection.cpp b/xSchedule/wxHTTPServer/connection.cpp
+index 16c42f41a..0f0346e7a 100644
+--- a/xSchedule/wxHTTPServer/connection.cpp
++++ b/xSchedule/wxHTTPServer/connection.cpp
+@@ -55,7 +55,8 @@ bool HttpConnection::HandleRequest()
+ 	}
+ 	else
+ 	{
+-		HttpRequest request(*this, wxString((char *)input.GetData(), input.GetDataLen()));
++		wxString rs((char *)input.GetData(), input.GetDataLen());
++		HttpRequest request(*this, rs);
+ 
+ 		if (request.Method() == "GET")
+ 		{
+diff --git a/xSchedule/wxHTTPServer/request.cpp b/xSchedule/wxHTTPServer/request.cpp
+index 7b132d03e..331f02ece 100644
+--- a/xSchedule/wxHTTPServer/request.cpp
++++ b/xSchedule/wxHTTPServer/request.cpp
+@@ -27,50 +27,55 @@ HttpRequest::HttpRequest(HttpConnection &connection, const wxString &input) :
+ 
+ void HttpRequest::Parse(const wxString &input)
+ {
+-	wxArrayString rows = wxSplit(input, '\n');
+     _data = "";
+ 
+-	if (rows.Count() > 0)
+-	{
+-		wxArrayString tokens = wxSplit(rows[0], ' ');
++    // Find first row and parse
++    auto rstart = input.Find('\n');
++    if (rstart <= 0) {
++        return;
++    }
++    wxArrayString htokens = wxSplit(input.Mid(0, rstart), ' ');
+ 
+-		if (tokens.Count() > 0)
+-			_method = tokens[0].Trim(true).Trim(false);
+-		if (tokens.Count() > 1)
+-			_uri = tokens[1].Trim(true).Trim(false);
+-		if (tokens.Count() > 2)
+-			_version = tokens[2].Trim(true).Trim(false);
++    if (htokens.Count() > 0)
++        _method = htokens[0].Trim(true).Trim(false);
++    if (htokens.Count() > 1)
++        _uri = htokens[1].Trim(true).Trim(false);
++    if (htokens.Count() > 2)
++        _version = htokens[2].Trim(true).Trim(false);
+ 
+-		wxLogMessage("new request: Method '%s', URI '%s', Version '%s'", _method, _uri, _version);
++    do {
++        ++rstart;
++        auto nxt = rstart;
++        while (nxt < input.Length()) {
++            if (input[nxt] == '\n')
++                break;
++            ++nxt;
++        }
++        // No more newlines found
++        if (nxt >= input.Length()) {
++            rstart = input.Length();
++            break;
++        }
++        // Check for a blank line indicating start of data section
++        if ((nxt == rstart) || (nxt - rstart == 1 && input[rstart] == '\r')) {
++            rstart = nxt + 1;
++            break;
++        }
+ 
+-        int state = 0; // processing headers
++        // An HTTP header
++        wxString hstr = input.Mid(rstart, nxt-rstart);
++        int index = hstr.Find(':');
++        if (index != -1)
++        {
++            wxString key = hstr.Mid(0, index);
++            key.Trim(true).Trim(false);
+ 
+-		for (size_t i = 1; i < rows.Count(); i++)
+-		{
+-            if (state == 0)
+-            {
+-                if (rows[i] == "" || rows[i] == "\r") state = 1;
++            wxString value = hstr.Mid(index + 1);
++            value.Trim(true).Trim(false);
+ 
+-                int index = rows[i].Find(':');
+-
+-                if (index != -1)
+-                {
+-                    wxString key = rows[i].Mid(0, index);
+-                    key.Trim(true).Trim(false);
+-
+-                    wxString value = rows[i].Mid(index + 1);
+-                    value.Trim(true).Trim(false);
+-
+-                    _headers.Add(key, value);
+-                }
+-            }
+-            else if (state == 1)
+-            {
+-                _data += rows[i];
+-
+-                // dont add a carriage return to the last line
+-                if (i < rows.Count() - 1) _data += "\n";
+-            }
+-		}
+-	}
++            _headers.Add(key, value);
++        }
++        rstart = nxt;
++    } while (1);
++    _data = wxString(input, rstart, input.Length() - rstart);
+ }
