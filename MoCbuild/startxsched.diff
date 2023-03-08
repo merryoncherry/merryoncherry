@@ -1,0 +1,84 @@
+diff --git a/xLights/automation/automation.cpp b/xLights/automation/automation.cpp
+index afe72c195..8d06a9ef5 100644
+--- a/xLights/automation/automation.cpp
++++ b/xLights/automation/automation.cpp
+@@ -171,7 +171,7 @@ int Automation(bool verbose, const std::string& ip, int ab, const std::string& t
+                 std::string resp = Curl::HTTPSGet(url, command.ToStdString());
+                 while (resp == "") {
+                     // dont wait more than a minute
+-                    if (loop++ > 60)
++                    if (++loop > 60)
+                         break;
+ 
+                     wxSleep(1);
+@@ -189,6 +189,70 @@ int Automation(bool verbose, const std::string& ip, int ab, const std::string& t
+ 
+                 return 0;
+             }
++            if (val["cmd"].AsString() == "startxSchedule") {
++                std::string params = "";
++                std::string url = "http://" + ip + ":" + std::to_string(80 /*TODO*/) + "/getVersion";
++                if (val["ifNotRunning"].AsString() == "true") {
++                    std::string resp = Curl::HTTPSGet(url, command.ToStdString());
++                    if (resp != "") {
++                        xlDo_Output(script, "{\"res\":200,\"msg\":\"xSchedule was already running.\"}", verbose, false);
++                        return 0;
++                    }
++                }
++
++#ifdef LINUX
++                wxFileName f(wxStandardPaths::Get().GetExecutablePath());
++                wxString appPath(f.GetPath());
++                wxString cmdline(appPath + wxT("/xSchedule") + params + " &");
++                
++                if (system((const char *)cmdline.c_str()) < 0) {
++                    fprintf(stderr, "\u001b[31;1mUnable to start xSchedule.\u001b[0m\n");
++                    return 1;
++                }
++#elif defined(__WXOSX__)
++                std::string p = wxStandardPaths::Get().GetExecutablePath();
++                int idx = p.find_last_of('/');
++                p = p.substr(0, idx);
++                idx = p.find_last_of('/');
++                p = p.substr(0, idx);
++                idx = p.find_last_of('/');
++                p = p.substr(0, idx);
++                wxString s = "open -a " + p + " --args " + params;
++                if (system(s.c_str()) < 0) {
++                    fprintf(stderr, "\u001b[31;1mUnable to start xSchedule.\u001b[0m\n");
++                    return 1;
++                }
++#else
++                long pid = wxExecute("xSchedule.exe" + params);
++                if (pid == 0) {
++                    fprintf(stderr, "\u001b[31;1mUnable to start xSchedule.\u001b[0m\n");
++                    return 1;
++                }
++#endif
++
++                int loop = 0;
++                std::string resp = Curl::HTTPSGet(url, command.ToStdString());
++                while (resp == "") {
++                    // dont wait more than a minute
++                    if (++loop > 60)
++                        break;
++
++                    wxSleep(1);
++                    resp = Curl::HTTPSGet(url, command.ToStdString());
++                }
++
++                if (loop > 60) {
++                    fprintf(stderr, "\u001b[31;1mTimeout waiting for xSchedule to start.\u001b[0m\n");
++                    return 1;
++                }
++
++                xlDo_Output(script, "{\"res\":200,\"msg\":\"xSchedule started.\"}", verbose, true);
++
++                wxSleep(5); // sleep briefly to give xSchedule a chance to start properly so any subsequent commands work ok
++
++                return 0;
++            }
++
+         }
+     }
+     std::string url = "http://" + ip + ":" + std::to_string(::GetxFadePort(ab + 1)) + "/";
