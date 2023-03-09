@@ -10,5 +10,8 @@ git apply ..\merryoncherry\MoCbuild\nowarn.diff
 rem Submodel tools
 git apply ..\merryoncherry\MoCbuild\submodeltools.diff
 
+rem Label size in grids
+git apply ..\merryoncherry\MoCbuild\labelsize.diff
+
 rem Set version to moc
 git apply ..\merryoncherry\MoCbuild\version.diff

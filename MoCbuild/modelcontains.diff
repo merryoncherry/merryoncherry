@@ -1,0 +1,68 @@
+diff --git a/xLights/models/ModelGroup.cpp b/xLights/models/ModelGroup.cpp
+index 909ffb46c..5c2da989f 100644
+--- a/xLights/models/ModelGroup.cpp
++++ b/xLights/models/ModelGroup.cpp
+@@ -198,43 +198,19 @@ bool ModelGroup::ContainsModel(Model* m) const
+ {
+     wxASSERT(m->GetDisplayAs() != "ModelGroup");
+ 
+-    std::list<const Model*> visited;
+-    visited.push_back(this);
+-
+-    bool found = false;
+-    for (auto it = models.begin(); !found && it != models.end(); ++it)
+-    {
+-        if ((*it)->GetDisplayAs() == "ModelGroup")
+-        {
+-            if (std::find(visited.begin(), visited.end(), *it) == visited.end())
+-            {
+-                found |= dynamic_cast<ModelGroup*>(*it)->ContainsModel(m, visited);
+-            }
+-            else
+-            {
+-                // already seen this group so dont follow
+-            }
+-        }
+-        else
+-        {
+-            if (m == *it)
+-            {
+-                found = true;
+-            }
+-        }
+-    }
+-
+-    return found;
+-}
++    std::set<const Model*> visited;
++    return ContainsModel(m, visited);
++ }
+ 
+-bool ModelGroup::ContainsModel(Model* m, std::list<const Model*>& visited) const
++bool ModelGroup::ContainsModel(Model* m, std::set<const Model*>& visited) const
+ {
+-    visited.push_back(this);
++    visited.insert(this);
+ 
+     bool found = false;
+     for (const auto& it : models)
+     {
+-        if (it->GetDisplayAs() == "ModelGroup")
++        std::string da = it->GetDisplayAs();
++        if (da == "ModelGroup")
+         {
+             if (std::find(visited.begin(), visited.end(), it) == visited.end())
+             {
+diff --git a/xLights/models/ModelGroup.h b/xLights/models/ModelGroup.h
+index 6ca4f86ad..040dea5be 100644
+--- a/xLights/models/ModelGroup.h
++++ b/xLights/models/ModelGroup.h
+@@ -53,7 +53,7 @@ class ModelGroup : public ModelWithScreenLocation<BoxedScreenLocation>
+         bool DirectlyContainsModel(Model* m) const;
+         bool DirectlyContainsModel(std::string const& m) const;
+         bool ContainsModel(Model* m) const;
+-        bool ContainsModel(Model* m, std::list<const Model*>& visited) const;
++        bool ContainsModel(Model* m, std::set<const Model*>& visited) const;
+         bool ContainsModelOrSubmodel(Model* m) const;
+         bool ContainsModelOrSubmodel(Model* m, std::list<const Model*>& visited) const;
+         bool OnlyContainsModel(const std::string& name) const;
