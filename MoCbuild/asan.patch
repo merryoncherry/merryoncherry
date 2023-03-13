@@ -1,0 +1,12 @@
+diff --git a/xLights/Xlights.vcxproj b/xLights/Xlights.vcxproj
+index 8b5764fb7..941f8293e 100644
+--- a/xLights/Xlights.vcxproj
++++ b/xLights/Xlights.vcxproj
+@@ -47,6 +47,7 @@
+     <CharacterSet>Unicode</CharacterSet>
+     <SpectreMitigation>false</SpectreMitigation>
+     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
++    <EnableASAN>true</EnableASAN>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+     <ConfigurationType>Application</ConfigurationType>
