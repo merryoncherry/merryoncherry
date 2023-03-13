@@ -87,6 +87,23 @@ class XLEnv:
         #print (cp)
         return str(cp.stdout)
 
+    def startXSDirect(self, showdir = "", playlist = "", timerange = "", jsonlog = "", extevents = "", fseq=""):
+        xsargs = [self.bin+"\\"+"xSchedule.exe"];
+        if (showdir):
+            xsargs.append('--show='+showdir);
+        if (playlist):
+            xsargs.append('--playlist='+playlist);
+        if (timerange): # TODO better version of this that takes 2 dates?
+            xsargs.append('--test='+timerange);
+        if (jsonlog):
+            xsargs.append('--jsonlog='+jsonlog)
+        if (extevents):
+            xsargs.append('--events='+extevents)
+        if (fseq):
+            xsargs.append('--fseq='+fseq)
+        cp = subprocess.run(xsargs, cwd=self.bin, capture_output=False);
+        return str(cp.stdout)
+
     def xlDoHttp(self, cmd):
         x = requests.post('http://'+self.xlhost+':'+str(self.xlport)+'/xlDoAutomation', data=cmd)
         return x.text
@@ -308,11 +325,12 @@ if __name__ == '__main__':
 
     #print ("start xSchedule: "+str(xlenv.startXSchedule()))
 
-    stopXL = False
-    if not xlenv.isXLightsRunning(False):
-        xlenv.startXLights()
-        stopXL = True
+    #stopXL = False
+    #if not xlenv.isXLightsRunning(False):
+    #    xlenv.startXLights()
+    #    stopXL = True
     #x = xlenv.batchRenderSeqList(['CaneMatrix.xsq', 'EffectsOnStars.xsq', 'ShockwaveOnFlakes.xsq'])
     #x = xlenv.batchRenderSeqList(args.flist)
-    x = xlenv.loopRenderSeqList(['CaneMatrix.xsq', 'EffectsOnStars.xsq', 'ShockwaveOnFlakes.xsq'])
-    print(x)
+    #x = xlenv.loopRenderSeqList(['CaneMatrix.xsq', 'EffectsOnStars.xsq', 'ShockwaveOnFlakes.xsq'])
+    #print(x)
+    xlenv.startXSDirect(showdir="", playlist = "", timerange = "2022-12-31 23:58:00;2023-01-01 00:01:00", jsonlog = "", extevents = "", fseq="");
