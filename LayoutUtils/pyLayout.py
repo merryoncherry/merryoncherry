@@ -823,6 +823,39 @@ class Deleter(Mutator):
         self.sel = sel
         self.visitRoot(layout)
 
+class ValidNameBuilder(Visitor):
+    def __init__(self):
+        self.validNames = {}
+
+    def visitmodelGroup(self, g):
+        self.validNames[g.getAttribute('name')] = 1
+
+    def visitmodel(self, m):
+        self.validNames[m.getAttribute('name')] = 1;
+        # Visit submodels
+        for sm in m.childNodes:
+            if sm.nodeType != xml.dom.Node.ELEMENT_NODE:
+                continue
+            if sm.tagName == 'subModel':
+                self.validNames[m.getAttribute('name') + '/' + sm.getAttribute('name')] = 1
+
+class GroupMemberChecker(Visitor):
+    def __init__(self, validNames):
+        self.validNames = validNames
+
+    def visitmodelGroup(self, g):
+        if not g.getAttribute('models'):
+            return
+        for n in g.getAttribute('models').split(','):
+            if n not in self.validNames:
+                print("WARNING: group '"+g.getAttribute('name')+"' contains reference to '"+n+"', which does not exist")
+
+    def visitview(self, v):
+        if not v.getAttribute('models'):
+            return
+        for n in v.getAttribute('models').split(','):
+            if n not in self.validNames:
+                print("WARNING: group '"+g.getAttribute('name')+"' contains reference to '"+n+"', which does not exist")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=textwrap.dedent('''\
@@ -877,6 +910,11 @@ if __name__ == '__main__':
     layout = xml.dom.minidom.parse(args.layout)
 
     TextRemover().removeText(layout)
+
+    vnb = ValidNameBuilder()
+    vnb.visitRoot(layout)
+    gchk = GroupMemberChecker(vnb.validNames)
+    gchk.visitRoot(layout)
 
     if (args.transform):
         txs = []
