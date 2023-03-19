@@ -333,4 +333,8 @@ if __name__ == '__main__':
     #x = xlenv.batchRenderSeqList(args.flist)
     #x = xlenv.loopRenderSeqList(['CaneMatrix.xsq', 'EffectsOnStars.xsq', 'ShockwaveOnFlakes.xsq'])
     #print(x)
-    xlenv.startXSDirect(showdir="", playlist = "", timerange = "2022-12-31 23:58:00;2023-01-01 00:01:00", jsonlog = "", extevents = "", fseq="");
+    
+    shwdir = "m:\\users\chuck\\source\\repos\\merryoncherry\\xLTS\\ShowFolders\\SCTS\\"
+    tempdir = "m:\\users\chuck\\source\\repos\\merryoncherry\\xLTS\\TempResults\\SCTS\\"
+    os.makedirs(tempdir, mode = 0o777, exist_ok = True)
+    xlenv.startXSDirect(showdir=shwdir, playlist = "", timerange = "2022-12-31 23:58:00;2023-01-01 00:01:30", jsonlog = tempdir+"xs_log.json", extevents = "", fseq="");
