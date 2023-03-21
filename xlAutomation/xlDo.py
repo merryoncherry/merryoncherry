@@ -87,14 +87,16 @@ class XLEnv:
         #print (cp)
         return str(cp.stdout)
 
-    def startXSDirect(self, showdir = "", playlist = "", timerange = "", jsonlog = "", extevents = "", fseq=""):
-        xsargs = [self.bin+"\\"+"xSchedule.exe"];
+    def startXSDirect(self, showdir = "", playlist = "", timerange = "", simrange = "", jsonlog = "", extevents = "", fseq=""):
+        xsargs = [self.bin+"\\"+"xSchedule.exe"]
         if (showdir):
-            xsargs.append('--show='+showdir);
+            xsargs.append('--show='+showdir)
         if (playlist):
             xsargs.append('--playlist='+playlist);
         if (timerange): # TODO better version of this that takes 2 dates?
-            xsargs.append('--test='+timerange);
+            xsargs.append('--test='+timerange)
+        if (simrange):
+            xsargs.append('--simulate='+simrange)
         if (jsonlog):
             xsargs.append('--jsonlog='+jsonlog)
         if (extevents):
@@ -337,4 +339,4 @@ if __name__ == '__main__':
     shwdir = "m:\\users\chuck\\source\\repos\\merryoncherry\\xLTS\\ShowFolders\\SCTS\\"
     tempdir = "m:\\users\chuck\\source\\repos\\merryoncherry\\xLTS\\TempResults\\SCTS\\"
     os.makedirs(tempdir, mode = 0o777, exist_ok = True)
-    xlenv.startXSDirect(showdir=shwdir, playlist = "", timerange = "2022-12-31 23:58:00;2023-01-01 00:01:30", jsonlog = tempdir+"xs_log.json", extevents = "", fseq="");
+    xlenv.startXSDirect(showdir=shwdir, playlist = "", simrange = "2022-12-31 23:58:00;2023-01-01 00:01:30", jsonlog = tempdir+"xs_log.json", extevents = "", fseq="");
