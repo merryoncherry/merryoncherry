@@ -1,8 +1,8 @@
 diff --git a/xLights/RenderBuffer.cpp b/xLights/RenderBuffer.cpp
-index e99fe4065..dbbe1567b 100644
+index 813dbc425..1dddde3c3 100644
 --- a/xLights/RenderBuffer.cpp
 +++ b/xLights/RenderBuffer.cpp
-@@ -800,36 +800,11 @@ float RenderBuffer::cos(float rad)
+@@ -895,36 +895,11 @@ float RenderBuffer::cos(float rad)
      return sinTable.cos(rad);
  }
  
@@ -40,10 +40,10 @@ index e99fe4065..dbbe1567b 100644
  uint8_t RenderBuffer::ChannelBlend(uint8_t c1, uint8_t c2, float ratio)
  {
 diff --git a/xLights/RenderBuffer.h b/xLights/RenderBuffer.h
-index 5a540a55e..58fd8f2f2 100644
+index 2573181ba..efe4ad6c2 100644
 --- a/xLights/RenderBuffer.h
 +++ b/xLights/RenderBuffer.h
-@@ -420,6 +420,198 @@ public:
+@@ -435,6 +435,198 @@ public:
  	virtual ~EffectRenderCache();
  };
  
@@ -242,7 +242,7 @@ index 5a540a55e..58fd8f2f2 100644
  class /*NCCDLLEXPORT*/ RenderBuffer {
  public:
      RenderBuffer(xLightsFrame *frame);
-@@ -491,7 +683,6 @@ public:
+@@ -506,7 +698,6 @@ public:
      void Get2ColorAlphaBlend(const xlColor& c1, const xlColor& c2, float ratio, xlColor &color);
      void GetMultiColorBlend(float n, bool circular, xlColor &color, int reserveColors = 0);
      void SetRangeColor(const HSVValue& hsv1, const HSVValue& hsv2, HSVValue& newhsv);
@@ -251,7 +251,7 @@ index 5a540a55e..58fd8f2f2 100644
      const PaletteClass& GetPalette() const { return palette; }
  
 diff --git a/xLights/UtilFunctions.cpp b/xLights/UtilFunctions.cpp
-index b538794fc..77d378890 100644
+index cfda90dbf..670365135 100644
 --- a/xLights/UtilFunctions.cpp
 +++ b/xLights/UtilFunctions.cpp
 @@ -921,13 +921,6 @@ std::string BeforeInt(std::string& s)
@@ -269,7 +269,7 @@ index b538794fc..77d378890 100644
  int ExtractInt(std::string& s)
  {
 diff --git a/xLights/UtilFunctions.h b/xLights/UtilFunctions.h
-index 4486c3b03..6ee435ae7 100644
+index aecbc1460..4229f4e0c 100644
 --- a/xLights/UtilFunctions.h
 +++ b/xLights/UtilFunctions.h
 @@ -99,7 +99,6 @@ inline double rand01()
@@ -302,6 +302,18 @@ index e60f33250..1cd29c679 100644
      void SetValueAt(float offset, float value);
      void DeletePoint(float offset);
      bool IsSetPoint(float offset);
+diff --git a/xLights/Xlights.vcxproj b/xLights/Xlights.vcxproj
+index 1e52ac8df..dfc9e7a62 100644
+--- a/xLights/Xlights.vcxproj
++++ b/xLights/Xlights.vcxproj
+@@ -53,6 +53,7 @@
+     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+     <DefineConstants>
+     </DefineConstants>
++    <EnableASAN>true</EnableASAN>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+     <ConfigurationType>Application</ConfigurationType>
 diff --git a/xLights/effects/CandleEffect.cpp b/xLights/effects/CandleEffect.cpp
 index 1d285892b..f8c26df42 100644
 --- a/xLights/effects/CandleEffect.cpp
@@ -1432,10 +1444,10 @@ index 770a10b44..df984d031 100644
      si->SetUniformInt("PASSINDEX", 0);
      si->SetUniformInt("FRAMEINDEX", _timeMS / buffer.frameTimeInMs);
 diff --git a/xLights/effects/ShapeEffect.cpp b/xLights/effects/ShapeEffect.cpp
-index 6245958a4..0cb5b359a 100644
+index 9d4823540..cbdea589f 100644
 --- a/xLights/effects/ShapeEffect.cpp
 +++ b/xLights/effects/ShapeEffect.cpp
-@@ -260,7 +260,7 @@ bool compare_shapes(const ShapeData* first, const ShapeData* second)
+@@ -261,7 +261,7 @@ bool compare_shapes(const ShapeData* first, const ShapeData* second)
      return first->_oset > second->_oset;
  }
  
@@ -1444,7 +1456,7 @@ index 6245958a4..0cb5b359a 100644
  
  public:
      ShapeRenderCache() { _lastColorIdx = -1; _sinceLastTriggered = 0; }
-@@ -291,12 +291,12 @@ public:
+@@ -292,12 +292,12 @@ public:
          }
      }
  
@@ -1460,7 +1472,7 @@ index 6245958a4..0cb5b359a 100644
          }
          _shapes.push_back(new ShapeData(centre, size, oset, color, shape, angle, speed, holdColour, colourIndex));
      }
-@@ -331,7 +331,7 @@ public:
+@@ -332,7 +332,7 @@ public:
      }
  };
  
@@ -1469,7 +1481,7 @@ index 6245958a4..0cb5b359a 100644
  {
      if (shape == "Circle") {
          return RENDER_SHAPE_CIRCLE;
-@@ -369,7 +369,7 @@ int ShapeEffect::DecodeShape(const std::string& shape)
+@@ -370,7 +370,7 @@ int ShapeEffect::DecodeShape(const std::string& shape)
          return RENDER_SHAPE_SVG;
      }
  
@@ -1478,7 +1490,7 @@ index 6245958a4..0cb5b359a 100644
  }
  
  static int mapSkinTone(const std::string &v) {
-@@ -413,8 +413,6 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -414,8 +414,6 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
  
      int rotation = GetValueCurveInt("Shape_Rotation", 0, SettingsMap, oset, SHAPE_ROTATION_MIN, SHAPE_ROTATION_MAX, buffer.GetStartTimeMS(), buffer.GetEndTimeMS());
  
@@ -1487,7 +1499,7 @@ index 6245958a4..0cb5b359a 100644
      float f = 0.0;
      bool useMusic = SettingsMap.GetBool("CHECKBOX_Shape_UseMusic", false);
      float sensitivity = (float)SettingsMap.GetInt("SLIDER_Shape_Sensitivity", 50) / 100.0;
-@@ -431,12 +429,15 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -432,12 +430,15 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
          }
      }
  
@@ -1504,7 +1516,7 @@ index 6245958a4..0cb5b359a 100644
      std::list<ShapeData*>& _shapes = cache->_shapes;
      int& _lastColorIdx = cache->_lastColorIdx;
      int& _sinceLastTriggered = cache->_sinceLastTriggered;
-@@ -448,7 +449,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -449,7 +450,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
  
      if (buffer.needToInit) {
          buffer.needToInit = false;
@@ -1513,7 +1525,7 @@ index 6245958a4..0cb5b359a 100644
          _sinceLastTriggered = 0;
  
          if (Object_To_Draw == RENDER_SHAPE_EMOJI) {
-@@ -476,7 +477,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -465,7 +466,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
              for (int i = _shapes.size(); i < count; ++i) {
                  wxPoint pt;
                  if (randomLocation) {
@@ -1522,7 +1534,7 @@ index 6245958a4..0cb5b359a 100644
                  } else {
                      pt = wxPoint(xc, yc);
                  }
-@@ -490,10 +491,10 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -479,10 +480,10 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  int os = 0;
                  if (startRandomly)
                  {
@@ -1535,7 +1547,7 @@ index 6245958a4..0cb5b359a 100644
              }
              cache->SortShapes();
          }
-@@ -535,7 +536,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -524,7 +525,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                          wxPoint pt;
                          if (randomLocation)
                          {
@@ -1544,7 +1556,7 @@ index 6245958a4..0cb5b359a 100644
                          }
                          else
                          {
-@@ -549,7 +550,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -538,7 +539,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                              _lastColorIdx = 0;
                          }
  
@@ -1553,7 +1565,7 @@ index 6245958a4..0cb5b359a 100644
                          break;
                      }
                  }
-@@ -567,7 +568,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -556,7 +557,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  wxPoint pt;
                  if (randomLocation)
                  {
@@ -1562,7 +1574,7 @@ index 6245958a4..0cb5b359a 100644
                  }
                  else
                  {
-@@ -581,7 +582,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -570,7 +571,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                      _lastColorIdx = 0;
                  }
  
@@ -1571,7 +1583,7 @@ index 6245958a4..0cb5b359a 100644
              }
  
              // if music is over the trigger level for REPEATTRIGGER frames then we will trigger another firework
-@@ -604,7 +605,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -593,7 +594,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
              wxPoint pt;
              if (randomLocation)
              {
@@ -1580,7 +1592,7 @@ index 6245958a4..0cb5b359a 100644
              }
              else
              {
-@@ -618,7 +619,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -607,7 +608,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  _lastColorIdx = 0;
              }
  
@@ -1590,10 +1602,10 @@ index 6245958a4..0cb5b359a 100644
      }
  
 diff --git a/xLights/effects/ShapeEffect.h b/xLights/effects/ShapeEffect.h
-index 28e10d683..e6f2bba44 100644
+index 213d5cfb7..844909893 100644
 --- a/xLights/effects/ShapeEffect.h
 +++ b/xLights/effects/ShapeEffect.h
-@@ -139,7 +139,7 @@ protected:
+@@ -126,7 +126,7 @@ protected:
      virtual xlEffectPanel* CreatePanel(wxWindow* parent) override;
  
  private:
@@ -2399,11 +2411,11 @@ index dc1aca9ce..75fda9d1f 100644
          }
          int i7 = strobe[x].duration;
 diff --git a/xLights/effects/VUMeterEffect.cpp b/xLights/effects/VUMeterEffect.cpp
-index d56a19d69..9a02d6d09 100644
+index 2606534c0..7bb81d2ef 100644
 --- a/xLights/effects/VUMeterEffect.cpp
 +++ b/xLights/effects/VUMeterEffect.cpp
-@@ -272,7 +272,7 @@ void VUMeterEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Rende
-         );
+@@ -278,7 +278,7 @@ void VUMeterEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Rende
+            SettingsMap.GetBool("CHECKBOX_Regex", false));
  }
  
 -class VUMeterRenderCache : public EffectRenderCache
@@ -2411,7 +2423,7 @@ index d56a19d69..9a02d6d09 100644
  {
  
  public:
-@@ -531,6 +531,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
+@@ -537,6 +537,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
  	if (cache == nullptr) {
  		cache = new VUMeterRenderCache();
  		buffer.infoCache[id] = cache;
@@ -2419,7 +2431,7 @@ index d56a19d69..9a02d6d09 100644
  	}
  	std::list<int>& _timingmarks = cache->_timingmarks;
  	int &_lasttimingmark = cache->_lasttimingmark;
-@@ -546,6 +547,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
+@@ -552,6 +553,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
  	if (buffer.needToInit)
  	{
          buffer.needToInit = false;
@@ -2427,7 +2439,7 @@ index d56a19d69..9a02d6d09 100644
          _lineHistory.clear();
          _nCount = 0;
          _colourindex = -1;
-@@ -2792,9 +2794,10 @@ void VUMeterEffect::RenderLevelBarFrame(RenderBuffer &buffer, int bars, int sens
+@@ -2730,9 +2732,10 @@ void VUMeterEffect::RenderLevelBarFrame(RenderBuffer &buffer, int bars, int sens
              }
  
              if (random && bars > 2) {
@@ -2439,19 +2451,19 @@ index d56a19d69..9a02d6d09 100644
                  }
                  if (lastbar > bars) lastbar = 1;
              }
-@@ -2863,9 +2866,10 @@ void VUMeterEffect::RenderTimingEventBarFrame(RenderBuffer &buffer, int bars, st
-                 }
+@@ -2773,9 +2776,10 @@ void VUMeterEffect::RenderTimingEventBarFrame(RenderBuffer& buffer, int bars, st
+             }
  
-                 if (random && bars > 2) {
-+                    auto cache = static_cast<VUMeterRenderCache*>(buffer.infoCache[id]);
-                     int lb = lastbar;
-                     while (lb == (int)lastbar) {
--                        lastbar = 1 + rand01() * bars;
-+                        lastbar = 1 + cache->prnguniform() * bars;
-                     }
-                     if (lastbar > bars + 1) lastbar = 1;
+             if (random && bars > 2) {
++                auto cache = static_cast<VUMeterRenderCache*>(buffer.infoCache[id]);
+                 int lb = lastbar;
+                 while (lb == (int)lastbar) {
+-                    lastbar = 1 + rand01() * bars;
++                    lastbar = 1 + cache->prnguniform() * bars;
                  }
-@@ -2956,9 +2960,10 @@ void VUMeterEffect::RenderNoteLevelBarFrame(RenderBuffer &buffer, int bars, int
+                 if (lastbar > bars + 1)
+                     lastbar = 1;
+@@ -2861,9 +2865,10 @@ void VUMeterEffect::RenderNoteLevelBarFrame(RenderBuffer &buffer, int bars, int
              }
  
              if (random && bars > 2) {
