@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
+  <head>
+    <version>2023.04</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song>Batman Smells, Jingle Bells Christmas Holiday Parody (feat. Christmas)</song>
+    <artist>Public Domain Royalty Free Music</artist>
+    <album>Batman Smells, Jingle Bells Christmas Holiday Parody (feat. Christmas)</album>
+    <MusicURL></MusicURL>
+    <comment></comment>
+    <sequenceTiming>25 ms</sequenceTiming>
+    <sequenceType>Media</sequenceType>
+    <mediaFile>M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\BatmanSmells.mp3</mediaFile>
+    <sequenceDuration>26.307</sequenceDuration>
+    <imageDir/>
+  </head>
+  <nextid>1</nextid>
+  <Jukebox/>
+  <ColorPalettes>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ffffff;x=0.990^c=#0000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1</ColorPalette>
+  </ColorPalettes>
+  <EffectDB>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music|Min=0.00|Max=360.00|P2=360.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music|Min=0.00|Max=360.00|P1=90.00|P2=110.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Inverted Music|Min=0.00|Max=360.00|P1=170.00|P2=190.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music Trigger Fade|Min=0.00|Max=360.00|P2=360.00|P3=50.00|P4=10.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Toggle|Min=0.00|Max=360.00|TT=New Timing|P1=158.00|P2=201.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Fade Fixed|Min=0.00|Max=360.00|TT=New Timing|P1=180.00|P2=220.00|P3=10.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Fade Proportional|Min=0.00|Max=360.00|TT=New Timing|P1=160.00|P2=200.00|P3=50.00|RV=TRUE|</Effect>
+  </EffectDB>
+  <DataLayers>
+    <DataLayer lor_params="0" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
+  </DataLayers>
+  <DisplayElements>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="1"/>
+    <Element collapsed="0" type="timing" name="2s" visible="1" views="" active="0"/>
+    <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree" visible="1"/>
+    <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
+    <Element collapsed="0" type="model" name="Candy Canes" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches" visible="1"/>
+    <Element collapsed="0" type="model" name="Matrix" visible="1"/>
+    <Element collapsed="0" type="model" name="Circle" visible="1"/>
+    <Element collapsed="0" type="model" name="Cube" visible="1"/>
+    <Element collapsed="0" type="model" name="Custom" visible="1"/>
+    <Element collapsed="0" type="model" name="Icicles" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line H" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line V" visible="1"/>
+    <Element collapsed="0" type="model" name="Sphere" visible="1"/>
+    <Element collapsed="0" type="model" name="Spinner" visible="1"/>
+    <Element collapsed="0" type="model" name="Star" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame Door" visible="1"/>
+    <Element collapsed="0" type="model" name="Wreath" visible="1"/>
+  </DisplayElements>
+  <ElementEffects>
+    <Element type="timing" name="New Timing">
+      <EffectLayer>
+        <Effect label="" startTime="8000" endTime="8400"></Effect>
+        <Effect label="Snowflakes" startTime="8400" endTime="8900"></Effect>
+        <Effect label="Snowflakes" startTime="8900" endTime="9300"></Effect>
+        <Effect label="Snowflakes" startTime="9300" endTime="9900"></Effect>
+        <Effect label="" startTime="9900" endTime="10200"></Effect>
+        <Effect label="Snowflakes" startTime="10200" endTime="10575"></Effect>
+        <Effect label="" startTime="10575" endTime="10875"></Effect>
+        <Effect label="Snowflakes" startTime="10875" endTime="11275"></Effect>
+        <Effect label="Snowflakes" startTime="11275" endTime="11625"></Effect>
+        <Effect label="Snowflakes" startTime="11625" endTime="11950"></Effect>
+        <Effect label="Snowflakes" startTime="12175" endTime="12550"></Effect>
+        <Effect label="Snowflakes" startTime="12550" endTime="12900"></Effect>
+        <Effect label="Snowflakes" startTime="12900" endTime="13275"></Effect>
+        <Effect label="Snowflakes" startTime="13275" endTime="13625"></Effect>
+        <Effect label="Snowflakes" startTime="13625" endTime="13975"></Effect>
+      </EffectLayer>
+    </Element>
+    <Element type="timing" name="2s">
+      <EffectLayer>
+        <Effect label="" startTime="0" endTime="2000"></Effect>
+        <Effect label="" startTime="2000" endTime="4000"></Effect>
+        <Effect label="" startTime="4000" endTime="6000"></Effect>
+        <Effect label="" startTime="6000" endTime="8000"></Effect>
+        <Effect label="" startTime="8000" endTime="10000"></Effect>
+        <Effect label="" startTime="10000" endTime="12000"></Effect>
+        <Effect label="" startTime="12000" endTime="14000"></Effect>
+        <Effect label="" startTime="14000" endTime="16000"></Effect>
+        <Effect label="" startTime="16000" endTime="18000"></Effect>
+        <Effect label="" startTime="18000" endTime="20000"></Effect>
+        <Effect label="" startTime="20000" endTime="22000"></Effect>
+        <Effect label="" startTime="22000" endTime="24000"></Effect>
+        <Effect label="" startTime="24000" endTime="26000"></Effect>
+        <Effect label="" startTime="26000" endTime="28000"></Effect>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="0_AllDisplay">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Poly Line">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Candy Canes">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Arches">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Matrix">
+      <EffectLayer>
+        <Effect ref="0" name="Ripple" startTime="0" endTime="2000" palette="0"/>
+        <Effect ref="1" name="Ripple" id="1" startTime="2000" endTime="4000" palette="0"/>
+        <Effect ref="2" name="Ripple" selected="1" id="2" startTime="4000" endTime="6000" palette="0"/>
+        <Effect ref="3" name="Ripple" id="3" startTime="6000" endTime="8000" palette="0"/>
+        <Effect ref="4" name="Ripple" id="4" startTime="8000" endTime="10000" palette="0"/>
+        <Effect ref="5" name="Ripple" id="5" startTime="10000" endTime="12000" palette="0"/>
+        <Effect ref="6" name="Ripple" id="6" startTime="12000" endTime="14000" palette="0"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Circle">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Cube">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Custom">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Icicles">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line H">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line V">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Sphere">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Spinner">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame Door">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Wreath">
+      <EffectLayer/>
+    </Element>
+  </ElementEffects>
+  <lastView>0</lastView>
+  <TimingTags>
+    <Tag number="0" position="-1"/>
+    <Tag number="1" position="-1"/>
+    <Tag number="2" position="-1"/>
+    <Tag number="3" position="-1"/>
+    <Tag number="4" position="-1"/>
+    <Tag number="5" position="-1"/>
+    <Tag number="6" position="-1"/>
+    <Tag number="7" position="-1"/>
+    <Tag number="8" position="-1"/>
+    <Tag number="9" position="-1"/>
+  </TimingTags>
+</xsequence>
