@@ -302,18 +302,6 @@ index e60f33250..1cd29c679 100644
      void SetValueAt(float offset, float value);
      void DeletePoint(float offset);
      bool IsSetPoint(float offset);
-diff --git a/xLights/Xlights.vcxproj b/xLights/Xlights.vcxproj
-index 1e52ac8df..dfc9e7a62 100644
---- a/xLights/Xlights.vcxproj
-+++ b/xLights/Xlights.vcxproj
-@@ -53,6 +53,7 @@
-     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
-     <DefineConstants>
-     </DefineConstants>
-+    <EnableASAN>true</EnableASAN>
-   </PropertyGroup>
-   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-     <ConfigurationType>Application</ConfigurationType>
 diff --git a/xLights/effects/CandleEffect.cpp b/xLights/effects/CandleEffect.cpp
 index 1d285892b..f8c26df42 100644
 --- a/xLights/effects/CandleEffect.cpp
