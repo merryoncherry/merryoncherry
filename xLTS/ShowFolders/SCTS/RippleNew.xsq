@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
+  <head>
+    <version>2023.06</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song></song>
+    <artist></artist>
+    <album></album>
+    <MusicURL></MusicURL>
+    <comment></comment>
+    <sequenceTiming>25 ms</sequenceTiming>
+    <sequenceType>Animation</sequenceType>
+    <mediaFile></mediaFile>
+    <sequenceDuration>30.000</sequenceDuration>
+    <imageDir></imageDir>
+  </head>
+  <nextid>1</nextid>
+  <Jukebox/>
+  <ColorPalettes>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette7=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#0080FF,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette8=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette5=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#18E7E7,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette7=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=Active=TRUE|Id=ID_BUTTON_Palette7|Timecurve=6|Values=x=0.000^c=#00ffff;x=0.990^c=#0000ff|,C_BUTTON_Palette8=#FF00FF</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#0080FF,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=Active=TRUE|Id=ID_BUTTON_Palette2|Values=x=0.000^c=#ffc1c1;x=1.000^c=#ff0000|,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#8000FF,C_BUTTON_Palette8=Active=TRUE|Id=ID_BUTTON_Palette8|Values=x=0.010^c=#ffffff;x=0.980^c=#ff0080|,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette3=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=Active=TRUE|Id=ID_BUTTON_Palette7|Values=x=0.530^c=#00ffff;x=0.990^c=#0000ff|,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette7=1,C_VALUECURVE_SparkleFrequency=Active=TRUE|Id=ID_VALUECURVE_SparkleFrequency|Type=Custom|Min=0.00|Max=200.00|RV=TRUE|Values=0.00:0.00;0.76:0.00;0.93:0.16;1.00:0.75|</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=Active=TRUE|Id=ID_BUTTON_Palette7|Timecurve=6|Values=x=0.000^c=#00ffff;x=0.990^c=#0000ff|,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette7=1</ColorPalette>
+  </ColorPalettes>
+  <EffectDB>
+    <Effect>E_CHECKBOX_Ripple3D=0,E_CHOICE_Ripple_Draw_Style=Solid Inward,E_CHOICE_Ripple_Movement=Implode,E_CHOICE_Ripple_Object_To_Draw=Polygon,E_SLIDER_RIPPLE_POINTS=5,E_SLIDER_Ripple_Direction=266,E_SLIDER_Ripple_Rotation=12,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=0,E_CHOICE_Ripple_Draw_Style=Lines Inward Ripple,E_CHOICE_Ripple_Movement=Implode,E_CHOICE_Ripple_Object_To_Draw=Square,E_SLIDER_Ripple_Direction=266,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=10,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Lines Outward Ripple,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Circle,E_SLIDER_Ripple_Direction=-39,E_SLIDER_Ripple_Rotation=120,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=8,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=20.0,E_TEXTCTRL_Ripple_Velocity=0.0</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Solid Both Ripple,E_CHOICE_Ripple_Movement=Implode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=20,E_SLIDER_Ripple_XC=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Direction=Active=TRUE|Id=ID_VALUECURVE_Ripple_Direction|Type=Ramp|Min=-360.00|Max=360.00|P1=-45.00|P2=45.00|RV=TRUE|,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Ramp|Min=-360.00|Max=360.00|P1=158.00|P2=-360.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Highlight Both Ripple,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=SVG,E_FILEPICKERCTRL_Ripple_SVG=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\MatrixPerf\Media\flake.svg,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=72,E_SLIDER_Ripple_Thickness=7,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1,E_TEXTCTRL_Ripple_Outline=3.0,E_TEXTCTRL_Ripple_Spacing=3.9,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Direction=Active=TRUE|Id=ID_VALUECURVE_Ripple_Direction|Type=Ramp|Min=-360.00|Max=360.00|P1=-45.00|P2=45.00|RV=TRUE|,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Ramp|Min=-360.00|Max=360.00|P1=-180.00|P2=-360.00|RV=TRUE|,E_VALUECURVE_Ripple_Spacing=Active=TRUE|Id=ID_VALUECURVE_Ripple_Spacing|Type=Ramp Up/Down|Min=1.00|Max=400.00|P1=10.00|P2=100.00|P3=1.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Lines Outward Ripple,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=SVG,E_FILEPICKERCTRL_Ripple_SVG=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\MatrixPerf\Media\Eo_circle_green_checkmark.svg,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=20,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=0.4,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Scale=Active=TRUE|Id=ID_VALUECURVE_Ripple_Scale|Type=Ramp|Min=0.00|Max=500.00|P2=200.00|RV=TRUE|,E_VALUECURVE_Ripple_Spacing=Active=TRUE|Id=ID_VALUECURVE_Ripple_Spacing|Type=Ramp|Min=1.00|Max=400.00|P1=10.00|P2=100.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Highlight Both Ripple,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=5,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=41,E_SLIDER_Ripple_Thickness=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=5.7,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Direction=Active=TRUE|Id=ID_VALUECURVE_Ripple_Direction|Type=Ramp|Min=-360.00|Max=360.00|P1=-45.00|P2=45.00|RV=TRUE|,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Ramp|Min=-360.00|Max=360.00|P1=-160.00|P2=-360.00|RV=TRUE|,E_VALUECURVE_Ripple_XC=Active=TRUE|Id=ID_VALUECURVE_Ripple_XC|Type=Ramp|Min=-100.00|Max=100.00|P1=-100.00|P2=100.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Highlight Outward Ripple,E_CHOICE_Ripple_Movement=Implode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=5,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=120,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=10,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=20.0,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Direction=Active=TRUE|Id=ID_VALUECURVE_Ripple_Direction|Type=Ramp|Min=-360.00|Max=360.00|P1=-45.00|P2=45.00|RV=TRUE|,E_VALUECURVE_Ripple_Velocity=Active=TRUE|Id=ID_VALUECURVE_Ripple_Velocity|Type=Ramp|Min=0.00|Max=300.00|P2=300.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Highlight Inward Ripple,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Heart,E_SLIDER_Ripple_Direction=266,E_SLIDER_Ripple_Rotation=12,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=15,E_SLIDER_Ripple_XC=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Lines Outward Ripple,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Tree,E_SLIDER_Ripple_Direction=266,E_SLIDER_Ripple_Rotation=12,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=20,E_SLIDER_Ripple_XC=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Solid Both Ripple,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Tree,E_SLIDER_Ripple_Direction=266,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_XC=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Ramp|Min=-360.00|Max=360.00|P1=360.00|P2=-360.00|RV=TRUE|,E_VALUECURVE_Ripple_Scale=Active=TRUE|Id=ID_VALUECURVE_Ripple_Scale|Type=Sine|Min=0.00|Max=500.00|P1=75.00|P2=50.00|P3=10.00|P4=180.00|RV=TRUE|,E_VALUECURVE_Ripple_Thickness=Active=TRUE|Id=ID_VALUECURVE_Ripple_Thickness|Type=Ramp Up/Down|Min=1.00|Max=100.00|P1=1.00|P2=20.00|P3=1.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Solid Both Ripple,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Tree,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=12,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=20,E_SLIDER_Ripple_XC=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Direction=Active=TRUE|Id=ID_VALUECURVE_Ripple_Direction|Type=Ramp|Min=-360.00|Max=360.00|P1=-360.00|P2=360.00|RV=TRUE|,E_VALUECURVE_Ripple_Velocity=Active=TRUE|Id=ID_VALUECURVE_Ripple_Velocity|Type=Custom|Min=0.00|Max=300.00|RV=TRUE|Values=0.00:0.00;0.25:0.00;0.50:0.13;0.80:0.00;1.00:0.00|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Lines Both Ripple,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Snow Flake,E_SLIDER_RIPPLE_POINTS=5,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=10,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=1.0,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Ramp|Min=-360.00|Max=360.00|P1=-360.00|P2=-166.00|RV=TRUE|,E_VALUECURVE_Ripple_Scale=Active=TRUE|Id=ID_VALUECURVE_Ripple_Scale|Type=Ramp Up/Down|Min=0.00|Max=500.00|P2=100.00|RV=TRUE|,E_VALUECURVE_Ripple_XC=Active=TRUE|Id=ID_VALUECURVE_Ripple_XC|Type=Sine|Min=-100.00|Max=100.00|P1=75.00|P2=10.00|P3=10.00|RV=TRUE|,E_VALUECURVE_Ripple_YC=Active=TRUE|Id=ID_VALUECURVE_Ripple_YC|Type=Sine|Min=-100.00|Max=100.00|P2=5.00|P3=10.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Highlight Both Ripple,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Present,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=48,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=7,E_SLIDER_Ripple_XC=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=4.4,E_TEXTCTRL_Ripple_Twist=0.0,E_TEXTCTRL_Ripple_Velocity=0.0</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Lines Outward,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Present,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=7,E_SLIDER_Ripple_XC=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=9.4,E_TEXTCTRL_Ripple_Twist=-11.3,E_TEXTCTRL_Ripple_Velocity=3.9</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Solid Outward,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Candy Cane,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=7,E_SLIDER_Ripple_XC=20,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=9.4,E_TEXTCTRL_Ripple_Twist=19.3,E_TEXTCTRL_Ripple_Velocity=3.9,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Ramp|Min=-360.00|Max=360.00|P1=360.00|P2=-360.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Solid Both,E_CHOICE_Ripple_Movement=None,E_CHOICE_Ripple_Object_To_Draw=Circle,E_SLIDER_Ripple_Direction=0,E_SLIDER_Ripple_Rotation=72,E_SLIDER_Ripple_Scale=100,E_SLIDER_Ripple_Thickness=20,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_TEXTCTRL_Ripple_Outline=1.0,E_TEXTCTRL_Ripple_Spacing=5.4,E_TEXTCTRL_Ripple_Twist=19.3,E_TEXTCTRL_Ripple_Velocity=0.0,E_VALUECURVE_Ripple_Scale=Active=TRUE|Id=ID_VALUECURVE_Ripple_Scale|Type=Ramp|Min=0.00|Max=500.00|P2=200.00|RV=TRUE|,E_VALUECURVE_Ripple_Spacing=Active=TRUE|Id=ID_VALUECURVE_Ripple_Spacing|Type=Ramp|Min=1.00|Max=400.00|P1=10.00|P2=100.00|RV=TRUE|</Effect>
+  </EffectDB>
+  <DataLayers>
+    <DataLayer lor_params="6226034" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
+  </DataLayers>
+  <DisplayElements>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="1"/>
+    <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree" visible="1"/>
+    <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
+    <Element collapsed="0" type="model" name="Candy Canes" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches" visible="1"/>
+    <Element collapsed="0" type="model" name="Matrix" visible="1"/>
+    <Element collapsed="0" type="model" name="Circle" visible="1"/>
+    <Element collapsed="0" type="model" name="Cube" visible="1"/>
+    <Element collapsed="0" type="model" name="Custom" visible="1"/>
+    <Element collapsed="0" type="model" name="Icicles" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line H" visible="1"/>
+    <Element collapsed="0" type="model" name="Single Line V" visible="1"/>
+    <Element collapsed="0" type="model" name="Sphere" visible="1"/>
+    <Element collapsed="0" type="model" name="Spinner" visible="1"/>
+    <Element collapsed="0" type="model" name="Star" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame" visible="1"/>
+    <Element collapsed="0" type="model" name="Window Frame Door" visible="1"/>
+    <Element collapsed="0" type="model" name="Wreath" visible="1"/>
+  </DisplayElements>
+  <ElementEffects>
+    <Element type="timing" name="New Timing">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="0_AllDisplay">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Poly Line">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Candy Canes">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Arches">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Matrix">
+      <EffectLayer>
+        <Effect ref="0" name="Ripple" startTime="0" endTime="900" palette="0"/>
+        <Effect ref="1" name="Ripple" id="1" startTime="950" endTime="2375" palette="1"/>
+        <Effect ref="2" name="Ripple" id="2" startTime="2475" endTime="3475" palette="2"/>
+        <Effect ref="3" name="Ripple" id="3" startTime="3575" endTime="7075" palette="3"/>
+        <Effect ref="4" name="Ripple" id="4" startTime="7175" endTime="8175" palette="4"/>
+        <Effect ref="5" name="Ripple" id="5" startTime="8575" endTime="9575" palette="5"/>
+        <Effect ref="6" name="Ripple" id="6" startTime="9875" endTime="11625" palette="3"/>
+        <Effect ref="7" name="Ripple" id="7" startTime="11725" endTime="13175" palette="6"/>
+        <Effect ref="8" name="Ripple" id="8" startTime="13225" endTime="16050" palette="7"/>
+        <Effect ref="9" name="Ripple" id="9" startTime="16125" endTime="18300" palette="8"/>
+        <Effect ref="10" name="Ripple" id="10" startTime="18400" endTime="20575" palette="8"/>
+        <Effect ref="11" name="Ripple" id="11" startTime="20650" endTime="22825" palette="8"/>
+        <Effect ref="12" name="Ripple" id="12" startTime="22925" endTime="24750" palette="9"/>
+        <Effect ref="13" name="Ripple" id="13" startTime="24925" endTime="25625" palette="1"/>
+        <Effect ref="14" name="Ripple" id="14" startTime="25675" endTime="26675" palette="1"/>
+        <Effect ref="15" name="Ripple" id="15" startTime="26775" endTime="27775" palette="10"/>
+        <Effect ref="16" name="Ripple" id="16" startTime="27875" endTime="28875" palette="10"/>
+        <Effect ref="5" name="Ripple" selected="1" id="17" startTime="28925" endTime="29925" palette="5"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Circle">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Cube">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Custom">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Icicles">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line H">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Single Line V">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Sphere">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Spinner">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Window Frame Door">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Wreath">
+      <EffectLayer/>
+    </Element>
+  </ElementEffects>
+  <lastView>0</lastView>
+  <TimingTags>
+    <Tag number="0" position="-1"/>
+    <Tag number="1" position="-1"/>
+    <Tag number="2" position="-1"/>
+    <Tag number="3" position="-1"/>
+    <Tag number="4" position="-1"/>
+    <Tag number="5" position="-1"/>
+    <Tag number="6" position="-1"/>
+    <Tag number="7" position="-1"/>
+    <Tag number="8" position="-1"/>
+    <Tag number="9" position="-1"/>
+  </TimingTags>
+</xsequence>
