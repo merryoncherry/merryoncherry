@@ -11,7 +11,7 @@ rem Label size in grids
 git apply ..\merryoncherry\MoCbuild\labelsize.diff
 
 rem Ripple effect extensions
-git apply ,,\merryoncherry\MoCbuild\ripple.diff
+git apply ,,\merryoncherry\MoCbuild\ripple_svg.diff
 
 rem Set version to moc
 git apply ..\merryoncherry\MoCbuild\version.diff
