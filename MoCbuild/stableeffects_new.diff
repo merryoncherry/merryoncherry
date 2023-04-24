@@ -1,17 +1,3 @@
-diff --git a/dependencies/log4cpp-codegit b/dependencies/log4cpp-codegit
---- a/dependencies/log4cpp-codegit
-+++ b/dependencies/log4cpp-codegit
-@@ -1 +1 @@
--Subproject commit 6448ecddc8d7fdf2179bbce574cec7341181295c
-+Subproject commit 6448ecddc8d7fdf2179bbce574cec7341181295c-dirty
-diff --git a/macOS b/macOS
-index ac98be0a0..61428e8fd 160000
---- a/macOS
-+++ b/macOS
-@@ -1 +1 @@
--Subproject commit ac98be0a02da00d2dd5eb0bd71eddff68ba2cf89
-+Subproject commit 61428e8fdfdeb258dff2b1456883eee8b3764205
-diff --git a/xLights/RenderBuffer.cpp b/xLights/RenderBuffer.cpp
 index 4e751ddf7..c3279bbae 100644
 --- a/xLights/RenderBuffer.cpp
 +++ b/xLights/RenderBuffer.cpp
