@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
   <head>
-    <version>2023.02</version>
+    <version>2023.06</version>
     <author></author>
     <author-email></author-email>
     <author-website></author-website>
@@ -23,7 +23,7 @@
     <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette5=1</ColorPalette>
   </ColorPalettes>
   <EffectDB>
-    <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=0,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_Video_CropBottom=0,E_TEXTCTRL_Video_CropLeft=0,E_TEXTCTRL_Video_CropRight=100,E_TEXTCTRL_Video_CropTop=100,E_TEXTCTRL_Video_Starttime=0.00,E_TEXTCTRL_Video_TransparentBlack=0</Effect>
+    <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=0,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_SampleSpacing=0,E_TEXTCTRL_Video_CropBottom=0,E_TEXTCTRL_Video_CropLeft=0,E_TEXTCTRL_Video_CropRight=100,E_TEXTCTRL_Video_CropTop=100,E_TEXTCTRL_Video_Starttime=0.00,E_TEXTCTRL_Video_TransparentBlack=0</Effect>
     <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=0,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_Video_CropBottom=0,E_TEXTCTRL_Video_CropLeft=0,E_TEXTCTRL_Video_CropRight=100,E_TEXTCTRL_Video_CropTop=100,E_TEXTCTRL_Video_Starttime=6.22,E_TEXTCTRL_Video_TransparentBlack=0</Effect>
     <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=1,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_Video_CropBottom=0,E_TEXTCTRL_Video_CropLeft=0,E_TEXTCTRL_Video_CropRight=100,E_TEXTCTRL_Video_CropTop=100,E_TEXTCTRL_Video_Starttime=6.22,E_TEXTCTRL_Video_TransparentBlack=0</Effect>
     <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=1,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal No Blue,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_Video_CropBottom=0,E_TEXTCTRL_Video_CropLeft=0,E_TEXTCTRL_Video_CropRight=100,E_TEXTCTRL_Video_CropTop=100,E_TEXTCTRL_Video_Starttime=6.22,E_TEXTCTRL_Video_TransparentBlack=0</Effect>
@@ -35,7 +35,8 @@
     <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=0,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_Video_Starttime=0.00,E_TEXTCTRL_Video_TransparentBlack=0,E_VALUECURVE_Video_CropBottom=Active=TRUE|Id=ID_VALUECURVE_Video_CropBottom|Type=Ramp Up/Down|Min=0.00|Max=100.00|P1=100.00|P2=80.00|P3=100.00|RV=TRUE|,E_VALUECURVE_Video_CropLeft=Active=TRUE|Id=ID_VALUECURVE_Video_CropLeft|Type=Ramp Up/Down|Min=0.00|Max=100.00|P2=20.00|RV=TRUE|,E_VALUECURVE_Video_CropRight=Active=TRUE|Id=ID_VALUECURVE_Video_CropRight|Type=Ramp Up/Down|Min=0.00|Max=100.00|P1=100.00|P2=80.00|P3=100.00|RV=TRUE|,E_VALUECURVE_Video_CropTop=Active=TRUE|Id=ID_VALUECURVE_Video_CropTop|Type=Ramp Up/Down|Min=0.00|Max=100.00|P2=25.00|RV=TRUE|</Effect>
     <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=1,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_Video_CropLeft=0,E_TEXTCTRL_Video_CropRight=100,E_TEXTCTRL_Video_Starttime=0.00,E_TEXTCTRL_Video_TransparentBlack=0,E_VALUECURVE_Video_CropBottom=Active=TRUE|Id=ID_VALUECURVE_Video_CropBottom|Type=Ramp Up/Down|Min=0.00|Max=100.00|P1=100.00|P2=80.00|P3=100.00|RV=TRUE|,E_VALUECURVE_Video_CropTop=Active=TRUE|Id=ID_VALUECURVE_Video_CropTop|Type=Ramp Up/Down|Min=0.00|Max=100.00|P2=25.00|RV=TRUE|</Effect>
     <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=1,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_Video_Starttime=0.00,E_TEXTCTRL_Video_TransparentBlack=0,E_VALUECURVE_Video_CropBottom=Active=TRUE|Id=ID_VALUECURVE_Video_CropBottom|Type=Ramp Up/Down|Min=0.00|Max=100.00|P2=20.00|RV=TRUE|,E_VALUECURVE_Video_CropLeft=Active=TRUE|Id=ID_VALUECURVE_Video_CropLeft|Type=Ramp Up/Down|Min=0.00|Max=100.00|P2=20.00|RV=TRUE|,E_VALUECURVE_Video_CropRight=Active=TRUE|Id=ID_VALUECURVE_Video_CropRight|Type=Ramp Up/Down|Min=0.00|Max=100.00|P1=100.00|P2=80.00|P3=100.00|RV=TRUE|,E_VALUECURVE_Video_CropTop=Active=TRUE|Id=ID_VALUECURVE_Video_CropTop|Type=Ramp Up/Down|Min=0.00|Max=100.00|P1=100.00|P2=80.00|P3=100.00|RV=TRUE|</Effect>
-    <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=1,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_Video_CropBottom=0,E_TEXTCTRL_Video_CropTop=100,E_TEXTCTRL_Video_Starttime=0.00,E_TEXTCTRL_Video_TransparentBlack=0,E_VALUECURVE_Video_CropLeft=Active=TRUE|Id=ID_VALUECURVE_Video_CropLeft|Type=Ramp Up/Down|Min=0.00|Max=100.00|P2=20.00|RV=TRUE|,E_VALUECURVE_Video_CropRight=Active=TRUE|Id=ID_VALUECURVE_Video_CropRight|Type=Ramp Up/Down|Min=0.00|Max=100.00|P1=100.00|P2=80.00|P3=100.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=1,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_SampleSpacing=0,E_TEXTCTRL_Video_CropBottom=0,E_TEXTCTRL_Video_CropTop=100,E_TEXTCTRL_Video_Starttime=0.00,E_TEXTCTRL_Video_TransparentBlack=0,E_VALUECURVE_Video_CropLeft=Active=TRUE|Id=ID_VALUECURVE_Video_CropLeft|Type=Ramp Up/Down|Min=0.00|Max=100.00|P2=20.00|RV=TRUE|,E_VALUECURVE_Video_CropRight=Active=TRUE|Id=ID_VALUECURVE_Video_CropRight|Type=Ramp Up/Down|Min=0.00|Max=100.00|P1=100.00|P2=80.00|P3=100.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_SynchroniseWithAudio=0,E_CHECKBOX_Video_AspectRatio=0,E_CHECKBOX_Video_TransparentBlack=0,E_CHOICE_Video_DurationTreatment=Normal,E_FILEPICKERCTRL_Video_Filename=M:\Users\Chuck\Source\Repos\merryoncherry\xLTS\ShowFolders\SCTS\Media\TestTubes.mp4,E_TEXTCTRL_Duration=0:08.000,E_TEXTCTRL_SampleSpacing=4,E_TEXTCTRL_Video_CropBottom=0,E_TEXTCTRL_Video_CropLeft=0,E_TEXTCTRL_Video_CropRight=100,E_TEXTCTRL_Video_CropTop=100,E_TEXTCTRL_Video_Starttime=0.00,E_TEXTCTRL_Video_TransparentBlack=0</Effect>
     <Effect></Effect>
   </EffectDB>
   <DataLayers>
@@ -112,13 +113,14 @@
         <Effect ref="6" name="Video" id="6" startTime="12000" endTime="14000" palette="0"/>
         <Effect ref="7" name="Video" id="7" startTime="14000" endTime="16000" palette="0"/>
         <Effect ref="8" name="Video" id="8" startTime="16000" endTime="18000" palette="0"/>
-        <Effect ref="9" name="Video" selected="1" id="9" startTime="18000" endTime="20000" palette="0"/>
+        <Effect ref="9" name="Video" id="9" startTime="18000" endTime="20000" palette="0"/>
         <Effect ref="10" name="Video" id="10" startTime="20000" endTime="22000" palette="0"/>
         <Effect ref="11" name="Video" id="11" startTime="22000" endTime="24000" palette="0"/>
         <Effect ref="12" name="Video" id="12" startTime="24000" endTime="26000" palette="0"/>
+        <Effect ref="13" name="Video" selected="1" id="13" startTime="26000" endTime="28000" palette="0"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="13" name="On" startTime="0" endTime="29950" palette="1"/>
+        <Effect ref="14" name="On" startTime="0" endTime="29950" palette="1"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Circle">
