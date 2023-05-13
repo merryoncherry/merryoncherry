@@ -1,11 +1,11 @@
 diff --git a/xLights/controllers/FPP.cpp b/xLights/controllers/FPP.cpp
-index f06082294..afb2b0942 100644
+index b6cebd76c..bfb65f5f9 100644
 --- a/xLights/controllers/FPP.cpp
 +++ b/xLights/controllers/FPP.cpp
-@@ -570,14 +570,6 @@ bool FPP::IsDrive() {
+@@ -602,14 +602,6 @@ bool FPP::IsDrive() {
  }
  
- bool FPP::IsVersionAtLeast(uint32_t maj, uint32_t min) const{
+ bool FPP::IsVersionAtLeast(uint32_t maj, uint32_t min, uint32_t patch) const{
 -    static bool hasWarned = false;
 -    if (majorVersion < 6 && !hasWarned) {
 -        hasWarned = true;

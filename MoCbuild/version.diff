@@ -1,16 +1,13 @@
 diff --git a/xLights/xLightsVersion.h b/xLights/xLightsVersion.h
-index 347d78660..53410a3bd 100644
+index 6042aee71..4baa17837 100644
 --- a/xLights/xLightsVersion.h
 +++ b/xLights/xLightsVersion.h
-@@ -18,9 +18,9 @@
- static const wxString xlights_version_string  = "2023.03";
- #endif
+@@ -20,7 +20,7 @@ static const wxString xlights_version_string  = "2023.07";
  #ifdef DEBUG
--static const wxString xlights_qualifier       = " DEBUG";
-+static const wxString xlights_qualifier       = " MoC DEBUG";
+ static const wxString xlights_qualifier       = " DEBUG";
  #else
 -static const wxString xlights_qualifier       = ""; // " BETA,ALPHA,PROD";
-+static const wxString xlights_qualifier       = " MoC"; // " BETA,ALPHA,PROD";
++static const wxString xlights_qualifier       = "MoC"; // " BETA,ALPHA,PROD";
  #endif
  static const wxString xlights_build_date      = __DATE__;
  	
