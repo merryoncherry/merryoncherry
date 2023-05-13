@@ -1,5 +1,5 @@
 diff --git a/xLights/models/ArchesModel.cpp b/xLights/models/ArchesModel.cpp
-index 0a0fc3b58..9b0e706ec 100644
+index 41c12bf8f..d4b41cb6f 100644
 --- a/xLights/models/ArchesModel.cpp
 +++ b/xLights/models/ArchesModel.cpp
 @@ -76,6 +76,9 @@ void ArchesModel::AddTypeProperties(wxPropertyGridInterface* grid, OutputManager
@@ -99,12 +99,12 @@ index 0a0fc3b58..9b0e706ec 100644
          wxString newname = xlights->AllModels.GenerateModelName(name.ToStdString());
          GetModelScreenLocation().Write(ModelXml);
 diff --git a/xLights/models/ArchesModel.h b/xLights/models/ArchesModel.h
-index 4d66cf2fd..8609d4a19 100644
+index e9fb35e9c..29ed8a64e 100644
 --- a/xLights/models/ArchesModel.h
 +++ b/xLights/models/ArchesModel.h
 @@ -23,6 +23,7 @@ class ArchesModel : public ModelWithScreenLocation<ThreePointScreenLocation>
          virtual void InitRenderBufferNodes(const std::string &type, const std::string &camera, const std::string &transform,
-                                            std::vector<NodeBaseClassPtr> &Nodes, int &BufferWi, int &BufferHi, bool deep = false) const override;
+                                            std::vector<NodeBaseClassPtr> &Nodes, int &BufferWi, int &BufferHi, int stagger, bool deep = false) const override;
          virtual int GetNumPhysicalStrings() const override { return 1; }
 +        virtual bool StrandsZigZagOnString() const override { return zigzag; } // MoC - I can't find any callers of this function.
  
