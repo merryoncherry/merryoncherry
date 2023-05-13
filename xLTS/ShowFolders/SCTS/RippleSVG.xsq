@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
   <head>
-    <version>2023.06</version>
+    <version>2023.07</version>
     <author></author>
     <author-email></author-email>
     <author-website></author-website>
@@ -66,7 +66,8 @@
     <DataLayer lor_params="108" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
   </DataLayers>
   <DisplayElements>
-    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="1"/>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View" active="0"/>
+    <Element collapsed="0" type="timing" name="1s" visible="1" views="" active="1"/>
     <Element collapsed="0" type="model" name="0_AllDisplay" visible="1"/>
     <Element collapsed="0" type="model" name="Tree" visible="1"/>
     <Element collapsed="0" type="model" name="Poly Line" visible="1"/>
@@ -88,6 +89,9 @@
   </DisplayElements>
   <ElementEffects>
     <Element type="timing" name="New Timing">
+      <EffectLayer/>
+    </Element>
+    <Element type="timing" name="1s" fixed="1000">
       <EffectLayer/>
     </Element>
     <Element type="model" name="0_AllDisplay">
@@ -129,8 +133,8 @@
         <Effect ref="19" name="Ripple" id="19" startTime="24100" endTime="25100" palette="14"/>
         <Effect ref="20" name="Ripple" id="20" startTime="25225" endTime="26225" palette="13"/>
         <Effect ref="21" name="Ripple" id="21" startTime="26350" endTime="27350" palette="15"/>
-        <Effect ref="22" name="Ripple" selected="1" id="22" startTime="27575" endTime="28575" palette="15"/>
-        <Effect ref="5" name="Ripple" id="23" startTime="28775" endTime="29775" palette="16"/>
+        <Effect ref="22" name="Ripple" id="22" startTime="27575" endTime="28575" palette="15"/>
+        <Effect ref="5" name="Ripple" selected="1" id="23" startTime="28775" endTime="29775" palette="16"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Circle">

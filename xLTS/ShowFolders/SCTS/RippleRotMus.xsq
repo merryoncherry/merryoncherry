@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
   <head>
-    <version>2023.04</version>
+    <version>2023.07</version>
     <author></author>
     <author-email></author-email>
     <author-website></author-website>
@@ -22,13 +22,13 @@
     <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ffffff;x=0.990^c=#0000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1</ColorPalette>
   </ColorPalettes>
   <EffectDB>
-    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music|Min=0.00|Max=360.00|P2=360.00|RV=TRUE|</Effect>
-    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music|Min=0.00|Max=360.00|P1=90.00|P2=110.00|RV=TRUE|</Effect>
-    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Inverted Music|Min=0.00|Max=360.00|P1=170.00|P2=190.00|RV=TRUE|</Effect>
-    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music Trigger Fade|Min=0.00|Max=360.00|P2=360.00|P3=50.00|P4=10.00|RV=TRUE|</Effect>
-    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Toggle|Min=0.00|Max=360.00|TT=New Timing|P1=158.00|P2=201.00|RV=TRUE|</Effect>
-    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Fade Fixed|Min=0.00|Max=360.00|TT=New Timing|P1=180.00|P2=220.00|P3=10.00|RV=TRUE|</Effect>
-    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Fade Proportional|Min=0.00|Max=360.00|TT=New Timing|P1=160.00|P2=200.00|P3=50.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Old,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music|Min=-360.00|Max=360.00|P1=-360.00|P2=360.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Old,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music|Min=-360.00|Max=360.00|P1=-180.00|P2=-140.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Old,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Inverted Music|Min=-360.00|Max=360.00|P1=-20.00|P2=20.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Old,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Music Trigger Fade|Min=-360.00|Max=360.00|P1=-360.00|P2=360.00|P3=50.00|P4=10.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Old,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Toggle|Min=-360.00|Max=360.00|TT=New Timing|P1=-44.00|P2=42.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Old,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Fade Fixed|Min=-360.00|Max=360.00|TT=New Timing|P2=80.00|P3=10.00|RV=TRUE|</Effect>
+    <Effect>E_CHECKBOX_Ripple3D=1,E_CHOICE_Ripple_Draw_Style=Old,E_CHOICE_Ripple_Movement=Explode,E_CHOICE_Ripple_Object_To_Draw=Star,E_SLIDER_RIPPLE_POINTS=7,E_SLIDER_Ripple_Rotation=0,E_SLIDER_Ripple_Thickness=3,E_SLIDER_Ripple_XC=0,E_SLIDER_Ripple_YC=0,E_TEXTCTRL_Ripple_Cycles=1.0,E_VALUECURVE_Ripple_Rotation=Active=TRUE|Id=ID_VALUECURVE_Ripple_Rotation|Type=Timing Track Fade Proportional|Min=-360.00|Max=360.00|TT=New Timing|P1=-40.00|P2=40.00|P3=50.00|RV=TRUE|</Effect>
   </EffectDB>
   <DataLayers>
     <DataLayer lor_params="0" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
@@ -112,11 +112,11 @@
       <EffectLayer>
         <Effect ref="0" name="Ripple" startTime="0" endTime="2000" palette="0"/>
         <Effect ref="1" name="Ripple" id="1" startTime="2000" endTime="4000" palette="0"/>
-        <Effect ref="2" name="Ripple" selected="1" id="2" startTime="4000" endTime="6000" palette="0"/>
+        <Effect ref="2" name="Ripple" id="2" startTime="4000" endTime="6000" palette="0"/>
         <Effect ref="3" name="Ripple" id="3" startTime="6000" endTime="8000" palette="0"/>
         <Effect ref="4" name="Ripple" id="4" startTime="8000" endTime="10000" palette="0"/>
         <Effect ref="5" name="Ripple" id="5" startTime="10000" endTime="12000" palette="0"/>
-        <Effect ref="6" name="Ripple" id="6" startTime="12000" endTime="14000" palette="0"/>
+        <Effect ref="6" name="Ripple" selected="1" id="6" startTime="12000" endTime="14000" palette="0"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Circle">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
   <head>
-    <version>2023.06</version>
+    <version>2023.07</version>
     <author></author>
     <author-email></author-email>
     <author-website></author-website>
@@ -20,13 +20,15 @@
   <Jukebox/>
   <ColorPalettes>
     <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ffffff;x=0.990^c=#0000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1</ColorPalette>
-    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ffffff;x=0.990^c=#0000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF</ColorPalette>
     <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ffffff;x=0.990^c=#0000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette3=1,C_CHECKBOX_Palette4=1,C_CHECKBOX_Palette5=1,C_CHECKBOX_Palette7=1,C_CHECKBOX_Palette8=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=Active=TRUE|Id=ID_BUTTON_Palette1|Values=x=0.000^c=#ffffff;x=0.990^c=#0000ff|,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF</ColorPalette>
   </ColorPalettes>
   <EffectDB>
     <Effect>B_CHOICE_BufferTransform=Rotate CC 90,E_CHECKBOX_Piano_ShowSharps=1,E_CHOICE_Piano_MIDITrack_APPLYLAST=Notes,E_CHOICE_Piano_Type=True Piano,E_SLIDER_Piano_Scale=100,E_SLIDER_Piano_XOffset=0,E_SPINCTRL_Piano_EndMIDI=68,E_SPINCTRL_Piano_StartMIDI=40</Effect>
+    <Effect>E_CHECKBOX_Collapse=1,E_CHECKBOX_Fade=1,E_CHECKBOX_ShowStrings=1,E_CHOICE_Guitar_MIDITrack_APPLYLAST=Notes,E_CHOICE_Guitar_Type=Guitar,E_CHOICE_StringAppearance=On,E_SLIDER_MaxFrets=20</Effect>
+    <Effect>E_CHECKBOX_Collapse=0,E_CHECKBOX_Fade=0,E_CHECKBOX_ShowStrings=0,E_CHECKBOX_VaryWaveLengthOnFret=1,E_CHOICE_Guitar_MIDITrack_APPLYLAST=Notes,E_CHOICE_Guitar_Type=Violin,E_CHOICE_StringAppearance=Wave,E_SLIDER_BaseWaveFactor=10,E_SLIDER_MaxFrets=20,E_SLIDER_StringWaveFactor=0</Effect>
     <Effect>E_CHECKBOX_Collapse=0,E_CHECKBOX_Fade=0,E_CHECKBOX_ShowStrings=0,E_CHOICE_Guitar_MIDITrack_APPLYLAST=Notes,E_CHOICE_Guitar_Type=Guitar,E_CHOICE_StringAppearance=On,E_SLIDER_MaxFrets=20</Effect>
-    <Effect>E_CHECKBOX_Collapse=0,E_CHECKBOX_Fade=0,E_CHECKBOX_ShowStrings=0,E_CHOICE_Guitar_MIDITrack_APPLYLAST=Notes,E_CHOICE_Guitar_Type=Guitar,E_CHOICE_StringAppearance=Wave,E_SLIDER_MaxFrets=20</Effect>
+    <Effect>E_CHECKBOX_Collapse=0,E_CHECKBOX_Fade=0,E_CHECKBOX_ShowStrings=0,E_CHECKBOX_VaryWaveLengthOnFret=1,E_CHOICE_Guitar_MIDITrack_APPLYLAST=Notes,E_CHOICE_Guitar_Type=Guitar,E_CHOICE_StringAppearance=Wave,E_SLIDER_BaseWaveFactor=10,E_SLIDER_MaxFrets=20,E_SLIDER_StringWaveFactor=0</Effect>
   </EffectDB>
   <DataLayers>
     <DataLayer lor_params="7077986" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
@@ -80,7 +82,7 @@
         <Effect label="C3" startTime="5475" endTime="5825"></Effect>
         <Effect label="G3" startTime="5825" endTime="6150"></Effect>
         <Effect label="C4" startTime="6150" endTime="6475"></Effect>
-        <Effect label="F4" selected="1" startTime="6475" endTime="6775"></Effect>
+        <Effect label="F4" startTime="6475" endTime="6775"></Effect>
         <Effect label="A5" startTime="6775" endTime="7050"></Effect>
         <Effect label="" startTime="7050" endTime="7500"></Effect>
         <Effect label="E2" startTime="7500" endTime="8050"></Effect>
@@ -122,6 +124,8 @@
     <Element type="model" name="Tree">
       <EffectLayer>
         <Effect ref="0" name="Piano" startTime="0" endTime="3125" palette="0"/>
+        <Effect ref="1" name="Guitar" selected="1" id="1" startTime="5075" endTime="7050" palette="1"/>
+        <Effect ref="2" name="Guitar" id="2" startTime="7500" endTime="10675" palette="1"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Poly Line">
@@ -135,9 +139,9 @@
     </Element>
     <Element type="model" name="Matrix">
       <EffectLayer>
-        <Effect ref="1" name="Guitar" startTime="0" endTime="3125" palette="1"/>
-        <Effect ref="2" name="Guitar" id="1" startTime="5075" endTime="7050" palette="2"/>
-        <Effect ref="2" name="Guitar" id="2" startTime="7500" endTime="10675" palette="2"/>
+        <Effect ref="3" name="Guitar" startTime="0" endTime="3125" palette="2"/>
+        <Effect ref="4" name="Guitar" id="1" startTime="5075" endTime="7050" palette="1"/>
+        <Effect ref="4" name="Guitar" id="2" startTime="7500" endTime="10675" palette="1"/>
       </EffectLayer>
       <EffectLayer/>
     </Element>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
   <head>
-    <version>2023.02</version>
+    <version>2023.07</version>
     <author></author>
     <author-email></author-email>
     <author-website></author-website>
@@ -30,6 +30,7 @@
     <Effect>E_CHECKBOX_MotionEnabled=1,E_FILEPICKER_SketchBackground=,E_SLIDER_MotionPercentage=15,E_SLIDER_SketchBackgroundOpacity=48,E_SLIDER_Thickness=1,E_TEXTCTRL_SketchDef=0.490716&amp;comma;0.0175163;L0.435564&amp;comma;0.0173168;L0.436271&amp;comma;0.174786;L0.0321957&amp;comma;0.17094;L0.21812&amp;comma;0.374054;L0.105848&amp;comma;0.374764;L0.311564&amp;comma;0.594017;L0.174158&amp;comma;0.596749;L0.45484&amp;comma;0.901005;Q0.493053&amp;comma;0.881147&amp;comma;0.530929&amp;comma;0.899586;L0.824461&amp;comma;0.599586;L0.667346&amp;comma;0.601709;L0.888037&amp;comma;0.373345;L0.77475&amp;comma;0.375473;L0.965797&amp;comma;0.170425;L0.559246&amp;comma;0.173291;L0.55832&amp;comma;0.0166076;L0.504768&amp;comma;0.0175163;L0.490716&amp;comma;0.0175163;c|0.493955&amp;comma;0.894099;Q0.434437&amp;comma;0.884836&amp;comma;0.421587&amp;comma;0.934047;Q0.44864&amp;comma;0.980943&amp;comma;0.496661&amp;comma;0.978048;Q0.553473&amp;comma;0.972837&amp;comma;0.574102&amp;comma;0.928258;Q0.549077&amp;comma;0.885415&amp;comma;0.496999&amp;comma;0.893521;L0.493955&amp;comma;0.894099;L0.493955&amp;comma;0.894099;c</Effect>
     <Effect>E_CHECKBOX_MotionEnabled=1,E_FILEPICKER_SketchBackground=,E_SLIDER_MotionPercentage=15,E_SLIDER_SketchBackgroundOpacity=48,E_TEXTCTRL_SketchDef=0.490716&amp;comma;0.0175163;L0.435564&amp;comma;0.0173168;L0.436271&amp;comma;0.174786;L0.0321957&amp;comma;0.17094;L0.21812&amp;comma;0.374054;L0.105848&amp;comma;0.374764;L0.311564&amp;comma;0.594017;L0.174158&amp;comma;0.596749;L0.45484&amp;comma;0.901005;Q0.493053&amp;comma;0.881147&amp;comma;0.530929&amp;comma;0.899586;L0.824461&amp;comma;0.599586;L0.667346&amp;comma;0.601709;L0.888037&amp;comma;0.373345;L0.77475&amp;comma;0.375473;L0.965797&amp;comma;0.170425;L0.559246&amp;comma;0.173291;L0.55832&amp;comma;0.0166076;L0.504768&amp;comma;0.0175163;L0.490716&amp;comma;0.0175163;c|0.493955&amp;comma;0.894099;Q0.434437&amp;comma;0.884836&amp;comma;0.421587&amp;comma;0.934047;Q0.44864&amp;comma;0.980943&amp;comma;0.496661&amp;comma;0.978048;Q0.553473&amp;comma;0.972837&amp;comma;0.574102&amp;comma;0.928258;Q0.549077&amp;comma;0.885415&amp;comma;0.496999&amp;comma;0.893521;L0.493955&amp;comma;0.894099;L0.493955&amp;comma;0.894099;c,E_VALUECURVE_MotionPercentage=Active=TRUE|Id=ID_VALUECURVE_MotionPercentage|Type=Sine|Min=1.00|Max=100.00|P1=58.00|P2=37.00|P3=10.00|P4=44.00|RV=TRUE|,E_VALUECURVE_Thickness=Active=TRUE|Id=ID_VALUECURVE_Thickness|Type=Ramp Up/Down|Min=1.00|Max=25.00|P1=1.00|P2=3.00|P3=1.00|RV=TRUE|</Effect>
     <Effect>E_CHECKBOX_MotionEnabled=0,E_FILEPICKER_SketchBackground=,E_SLIDER_DrawPercentage=40,E_SLIDER_SketchBackgroundOpacity=48,E_SLIDER_Thickness=1,E_TEXTCTRL_SketchDef=0.391016&amp;comma;0.21875;L0.390703&amp;comma;0.219063;L0.390438&amp;comma;0.21875;L0.171875&amp;comma;0.44375;L0.281703&amp;comma;0.555688;L0.390719&amp;comma;0.443438;L0.718844&amp;comma;0.781234;L0.828125&amp;comma;0.668766;L0.391016&amp;comma;0.21875;L0.391016&amp;comma;0.21875;|0.5&amp;comma;0.96875;C0.241109&amp;comma;0.96875&amp;comma;0.03125&amp;comma;0.758875&amp;comma;0.03125&amp;comma;0.5;C0.03125&amp;comma;0.241125&amp;comma;0.241125&amp;comma;0.03125&amp;comma;0.5&amp;comma;0.03125;C0.758875&amp;comma;0.03125&amp;comma;0.96875&amp;comma;0.241125&amp;comma;0.96875&amp;comma;0.5;C0.96875&amp;comma;0.758875&amp;comma;0.758875&amp;comma;0.96875&amp;comma;0.5&amp;comma;0.96875;L0.5&amp;comma;0.96875;</Effect>
+    <Effect>E_CHECKBOX_MotionEnabled=0,E_FILEPICKER_SketchBackground=,E_SLIDER_DrawPercentage=40,E_SLIDER_SketchBackgroundOpacity=48,E_SLIDER_Thickness=1,E_TEXTCTRL_SketchDef=0.5&amp;comma;0.96875;C0.241109&amp;comma;0.96875&amp;comma;0.03125&amp;comma;0.758875&amp;comma;0.03125&amp;comma;0.5;C0.03125&amp;comma;0.241125&amp;comma;0.241125&amp;comma;0.03125&amp;comma;0.5&amp;comma;0.03125;C0.758875&amp;comma;0.03125&amp;comma;0.96875&amp;comma;0.241125&amp;comma;0.96875&amp;comma;0.5;C0.96875&amp;comma;0.758875&amp;comma;0.758875&amp;comma;0.96875&amp;comma;0.5&amp;comma;0.96875;L0.5&amp;comma;0.96875;|0.391016&amp;comma;0.21875;L0.390703&amp;comma;0.219063;L0.390438&amp;comma;0.21875;L0.171875&amp;comma;0.44375;L0.281703&amp;comma;0.555688;L0.390719&amp;comma;0.443438;L0.718844&amp;comma;0.781234;L0.828125&amp;comma;0.668766;L0.391016&amp;comma;0.21875;L0.391016&amp;comma;0.21875;</Effect>
     <Effect></Effect>
   </EffectDB>
   <DataLayers>
@@ -105,9 +106,10 @@
         <Effect ref="5" name="Sketch" id="5" startTime="10000" endTime="12000" palette="0"/>
         <Effect ref="5" name="Sketch" id="6" startTime="12000" endTime="14000" palette="0"/>
         <Effect ref="5" name="Sketch" selected="1" id="7" startTime="14000" endTime="16000" palette="1"/>
+        <Effect ref="6" name="Sketch" id="8" startTime="16000" endTime="18000" palette="1"/>
       </EffectLayer>
       <EffectLayer>
-        <Effect ref="6" name="On" startTime="12000" endTime="14000" palette="2"/>
+        <Effect ref="7" name="On" startTime="12000" endTime="14000" palette="2"/>
       </EffectLayer>
     </Element>
     <Element type="model" name="Circle">
