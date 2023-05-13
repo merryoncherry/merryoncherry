@@ -47,6 +47,7 @@ import xlAutomation.compareFseqCRCs
 # python ./xlTest.py -R -C -P --suite=M:\xL_Test_2021\2022_Xmas --summary_target=M:\xL_Test_2022\2022_TempResults_branch --perf_target=M:\xL_Test_2022\2022_Perf_branch
 # python ./xlTest.py -R -C -P --suite=M:\xL_Test_2021\2022_Xmas --summary_target=M:\xL_Test_2022\2022_TempResults_master --perf_target=M:\xL_Test_2022\2022_Perf_master
 
+# python ./xlTest.py -R --suite=M:\xL_Test_2021\2022_Crashy
 
 def renderSequence(xlenv, args, perf):
     seqbase = args.sequence[:-4] if args.sequence[-4:] == '.xsq' else args.sequence        
