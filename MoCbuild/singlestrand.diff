@@ -1,9 +1,3 @@
-diff --git a/dependencies/log4cpp-codegit b/dependencies/log4cpp-codegit
---- a/dependencies/log4cpp-codegit
-+++ b/dependencies/log4cpp-codegit
-@@ -1 +1 @@
--Subproject commit 6448ecddc8d7fdf2179bbce574cec7341181295c
-+Subproject commit 6448ecddc8d7fdf2179bbce574cec7341181295c-dirty
 diff --git a/xLights/effects/SingleStrandEffect.cpp b/xLights/effects/SingleStrandEffect.cpp
 index 825b3ca6a..4b6419a96 100644
 --- a/xLights/effects/SingleStrandEffect.cpp

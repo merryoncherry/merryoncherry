@@ -1,5 +1,5 @@
 diff --git a/xLights/RenderBuffer.cpp b/xLights/RenderBuffer.cpp
-index 813dbc425..1dddde3c3 100644
+index 4e751ddf7..c3279bbae 100644
 --- a/xLights/RenderBuffer.cpp
 +++ b/xLights/RenderBuffer.cpp
 @@ -895,36 +895,11 @@ float RenderBuffer::cos(float rad)
@@ -40,10 +40,10 @@ index 813dbc425..1dddde3c3 100644
  uint8_t RenderBuffer::ChannelBlend(uint8_t c1, uint8_t c2, float ratio)
  {
 diff --git a/xLights/RenderBuffer.h b/xLights/RenderBuffer.h
-index 2573181ba..efe4ad6c2 100644
+index f54bae428..e26b2009d 100644
 --- a/xLights/RenderBuffer.h
 +++ b/xLights/RenderBuffer.h
-@@ -435,6 +435,198 @@ public:
+@@ -440,6 +440,198 @@ public:
  	virtual ~EffectRenderCache();
  };
  
@@ -242,7 +242,7 @@ index 2573181ba..efe4ad6c2 100644
  class /*NCCDLLEXPORT*/ RenderBuffer {
  public:
      RenderBuffer(xLightsFrame *frame);
-@@ -506,7 +698,6 @@ public:
+@@ -513,7 +705,6 @@ public:
      void Get2ColorAlphaBlend(const xlColor& c1, const xlColor& c2, float ratio, xlColor &color);
      void GetMultiColorBlend(float n, bool circular, xlColor &color, int reserveColors = 0);
      void SetRangeColor(const HSVValue& hsv1, const HSVValue& hsv2, HSVValue& newhsv);
@@ -251,7 +251,7 @@ index 2573181ba..efe4ad6c2 100644
      const PaletteClass& GetPalette() const { return palette; }
  
 diff --git a/xLights/UtilFunctions.cpp b/xLights/UtilFunctions.cpp
-index cfda90dbf..670365135 100644
+index f11eed5ac..114ad098c 100644
 --- a/xLights/UtilFunctions.cpp
 +++ b/xLights/UtilFunctions.cpp
 @@ -921,13 +921,6 @@ std::string BeforeInt(std::string& s)
@@ -269,7 +269,7 @@ index cfda90dbf..670365135 100644
  int ExtractInt(std::string& s)
  {
 diff --git a/xLights/UtilFunctions.h b/xLights/UtilFunctions.h
-index aecbc1460..4229f4e0c 100644
+index 722ae79a2..80680262c 100644
 --- a/xLights/UtilFunctions.h
 +++ b/xLights/UtilFunctions.h
 @@ -99,7 +99,6 @@ inline double rand01()
@@ -905,12 +905,12 @@ index 5954de708..e96d2a259 100644
                  }
                  break;
 diff --git a/xLights/effects/LightningEffect.cpp b/xLights/effects/LightningEffect.cpp
-index f6fb64e65..9fa039863 100644
+index eed453d7f..bbf515229 100644
 --- a/xLights/effects/LightningEffect.cpp
 +++ b/xLights/effects/LightningEffect.cpp
-@@ -88,6 +88,12 @@ void LightningEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
-     //int botY = SettingsMap.GetInt("SLIDER_Lightning_BOTY", 0);
-     int DIRECTION = GetLightningEffect(SettingsMap["CHOICE_Lightning_Direction"]);
+@@ -129,6 +129,12 @@ void LightningEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+     int width = SettingsMap.GetInt("SLIDER_Lightning_WIDTH", 1);
+     int DIRECTION = GetLightningDirection(SettingsMap["CHOICE_Lightning_Direction"]);
  
 +    EffectRenderStatePRNG prng;
 +    prng.seedConsistently(buffer.curPeriod, buffer.BufferWi, buffer.BufferHt, buffer.GetModelName().c_str(), id);
@@ -918,10 +918,10 @@ index f6fb64e65..9fa039863 100644
 +    prng.prngnext();
 +    prng.prngnext();
 +
-     if (Number_Bolts == 0) {
-         Number_Bolts = 1;
-     }
-@@ -118,17 +124,17 @@ void LightningEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+     Number_Bolts = std::clamp(Number_Bolts, LIGHTNING_BOLTS_MIN, LIGHTNING_BOLTS_MAX);
+     Number_Segments = std::clamp(Number_Segments, LIGHTNING_SEGMENTS_MIN, LIGHTNING_SEGMENTS_MAX);
+     width = std::clamp(width, 1, 7);
+@@ -155,17 +161,17 @@ void LightningEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
  
      int xoffset = curState * botX / 10.0;
      for(int i = 0; i <= segment; i++) {
@@ -943,7 +943,7 @@ index f6fb64e65..9fa039863 100644
                      x2 = xc + topX + (j % Number_Segments);
                  else // but sometimes move 3 units to left.
                      x2 = xc + topX - (3 * (j % Number_Segments));
-@@ -148,11 +154,11 @@ void LightningEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+@@ -185,11 +191,11 @@ void LightningEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
              if (i > (segment / 2)) {
                  int x3 = 0;
                  if (i % 2 == 1) {
@@ -1029,10 +1029,10 @@ index f6ef9b2ce..75a5ccfd5 100644
  
      cache->CreateDestroy(objects, points, buffer.BufferWi, buffer.BufferHt);
 diff --git a/xLights/effects/LiquidEffect.cpp b/xLights/effects/LiquidEffect.cpp
-index 980021b50..6181eab85 100644
+index 7bc1b4827..e22419694 100644
 --- a/xLights/effects/LiquidEffect.cpp
 +++ b/xLights/effects/LiquidEffect.cpp
-@@ -200,7 +200,7 @@ void LiquidEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Render
+@@ -205,7 +205,7 @@ void LiquidEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Render
          );
  }
  
@@ -1041,7 +1041,7 @@ index 980021b50..6181eab85 100644
  public:
      LiquidRenderCache() { _world = nullptr; };
      virtual ~LiquidRenderCache() {
-@@ -386,7 +386,8 @@ xlColor LiquidEffect::GetDespeckleColor(RenderBuffer& buffer, size_t x, size_t y
+@@ -391,7 +391,8 @@ xlColor LiquidEffect::GetDespeckleColor(RenderBuffer& buffer, size_t x, size_t y
      return xlColor(red / count, green / count, blue / count);
  }
  
@@ -1051,7 +1051,7 @@ index 980021b50..6181eab85 100644
  {
      static const float pi2 = 6.283185307f;
      float posx = (float)x * (float)width / 100.0;
-@@ -395,7 +396,7 @@ void LiquidEffect::CreateParticles(b2ParticleSystem* ps, int x, int y, int direc
+@@ -400,7 +401,7 @@ void LiquidEffect::CreateParticles(b2ParticleSystem* ps, int x, int y, int direc
      float velx = (float)velocity * 10.0 * RenderBuffer::cos(pi2 * (float)direction / 360.0);
      float vely = (float)velocity * 10.0 * RenderBuffer::sin(pi2 * (float)direction / 360.0);
  
@@ -1060,7 +1060,7 @@ index 980021b50..6181eab85 100644
      velVariation -= velVariation / 2.0;
  
      velx -= velx * velVariation;
-@@ -459,10 +460,10 @@ void LiquidEffect::CreateParticles(b2ParticleSystem* ps, int x, int y, int direc
+@@ -464,10 +465,10 @@ void LiquidEffect::CreateParticles(b2ParticleSystem* ps, int x, int y, int direc
          if (sourceSize == 0)
          {
              // Randomly pick a position within the emitter's radius.
@@ -1073,7 +1073,7 @@ index 980021b50..6181eab85 100644
              b2Vec2 positionOnUnitCircle(RenderBuffer::sin(angle), RenderBuffer::cos(angle));
  
              // Initial position.
-@@ -473,7 +474,7 @@ void LiquidEffect::CreateParticles(b2ParticleSystem* ps, int x, int y, int direc
+@@ -478,7 +479,7 @@ void LiquidEffect::CreateParticles(b2ParticleSystem* ps, int x, int y, int direc
          else
          {
              // Distance from the center of the circle.
@@ -1082,7 +1082,7 @@ index 980021b50..6181eab85 100644
  
              float offx = distance * RenderBuffer::cos(pi2 * ((float)direction + 90.0) / 360.0);
              float offy = distance * RenderBuffer::sin(pi2 * ((float)direction + 90.0) / 360.0);
-@@ -489,7 +490,7 @@ void LiquidEffect::CreateParticles(b2ParticleSystem* ps, int x, int y, int direc
+@@ -494,7 +495,7 @@ void LiquidEffect::CreateParticles(b2ParticleSystem* ps, int x, int y, int direc
          // give it a lifetime
          if (lifetime > 0)
          {
@@ -1091,7 +1091,7 @@ index 980021b50..6181eab85 100644
              pd.lifetime = randomlt;
          }
          ps->CreateParticle(pd);
-@@ -515,6 +516,8 @@ void LiquidEffect::Step(b2World* world, RenderBuffer &buffer, bool enabled[], in
+@@ -520,6 +521,8 @@ void LiquidEffect::Step(b2World* world, RenderBuffer &buffer, bool enabled[], in
      int x4, int y4, int direction4, int velocity4, int flow4, int sourceSize4, bool flowMusic4, float time
  )
  {
@@ -1100,7 +1100,7 @@ index 980021b50..6181eab85 100644
      // move all existing items
      float32 timeStep = (float)buffer.frameTimeInMs / 1000.0;
      int32 velocityIterations = 6;
-@@ -547,16 +550,16 @@ void LiquidEffect::Step(b2World* world, RenderBuffer &buffer, bool enabled[], in
+@@ -552,16 +555,16 @@ void LiquidEffect::Step(b2World* world, RenderBuffer &buffer, bool enabled[], in
                  switch (i)
                  {
                  case 0:
@@ -1121,7 +1121,7 @@ index 980021b50..6181eab85 100644
                      break;
                  }
                  j++;
-@@ -586,6 +589,7 @@ void LiquidEffect::Render(RenderBuffer &buffer,
+@@ -591,6 +594,7 @@ void LiquidEffect::Render(RenderBuffer &buffer,
      if (cache == nullptr) {
          cache = new LiquidRenderCache();
          buffer.infoCache[id] = cache;
@@ -1129,7 +1129,7 @@ index 980021b50..6181eab85 100644
      }
      b2World*& _world = cache->_world;
  
-@@ -598,6 +602,8 @@ void LiquidEffect::Render(RenderBuffer &buffer,
+@@ -603,6 +607,8 @@ void LiquidEffect::Render(RenderBuffer &buffer,
      {
          buffer.needToInit = false;
  
@@ -1152,7 +1152,7 @@ index fafcfab55..1282aaab9 100644
      void Step(b2World* world, RenderBuffer& buffer, bool enabled[], int lifetime, const std::string& particleType, bool mixcolors,
                int x1, int y1, int direction1, int velocity1, int flow1, int sourceSize1, bool flowMusic1,
 diff --git a/xLights/effects/MeteorsEffect.cpp b/xLights/effects/MeteorsEffect.cpp
-index 14d20c7a7..543a38c29 100644
+index 3b7336dca..928be33af 100644
 --- a/xLights/effects/MeteorsEffect.cpp
 +++ b/xLights/effects/MeteorsEffect.cpp
 @@ -115,7 +115,7 @@ public:
@@ -1172,7 +1172,7 @@ index 14d20c7a7..543a38c29 100644
      }
      return cache;
  }
-@@ -194,6 +195,7 @@ void MeteorsEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Rende
+@@ -195,6 +196,7 @@ void MeteorsEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Rende
  
      if (buffer.needToInit) {
          buffer.needToInit = false;
@@ -1180,29 +1180,38 @@ index 14d20c7a7..543a38c29 100644
          cache->meteors.clear();
          cache->meteorsRadial.clear();
          cache->effectState = mSpeed * buffer.frameTimeInMs / 50;
-@@ -264,16 +266,16 @@ void MeteorsEffect::RenderMeteorsHorizontal(RenderBuffer &buffer, int ColorSchem
-     // create new meteors
+@@ -257,16 +259,16 @@ void MeteorsEffect::HorizontalAddMeteors(RenderBuffer& buffer, int ColorScheme,
  
+     MeteorClass m;
      for (int i = 0; i < buffer.BufferHt; i++) {
 -        if (rand() % 200 < Count) {
 +        if (cache->prngint(200) < Count) {
-             m.x=buffer.BufferWi - 1;
-             m.y=i;
+             m.x = buffer.BufferWi - 1;
+             m.y = i;
  
              switch (ColorScheme) {
-                 case 1:
--                    buffer.SetRangeColor(hsv0,hsv1,m.hsv);
-+                    cache->RandomColorInRange(hsv0,hsv1,m.hsv);
-                     break;
-                 case 2:
--                    buffer.palette.GetHSV(rand()%colorcnt, m.hsv);
-+                    buffer.palette.GetHSV(cache->prngint(colorcnt), m.hsv);
-                     break;
+             case 1:
+-                buffer.SetRangeColor(hsv0, hsv1, m.hsv);
++                cache->RandomColorInRange(hsv0,hsv1,m.hsv);;
+                 break;
+             case 2:
+-                buffer.palette.GetHSV(rand() % colorcnt, m.hsv);
++                buffer.palette.GetHSV(cache->prngint(colorcnt), m.hsv);
+                 break;
              }
              cache->meteors.push_back(m);
-@@ -285,10 +287,16 @@ void MeteorsEffect::RenderMeteorsHorizontal(RenderBuffer &buffer, int ColorSchem
-     std::function<void(MeteorClass &, int)> f = [&buffer, MeteorsEffect, TailLength, mspeed, SwirlIntensity, ColorScheme] (MeteorClass &meteor, int n) {
-         int x,y,dy;
+@@ -281,7 +283,7 @@ void MeteorsEffect::HorizontalMoveMeteors(RenderBuffer& buffer, int mspeed)
+     std::function<void(MeteorClass&, int)> f = [mspeed](MeteorClass& meteor, int n) {
+         meteor.x -= mspeed;
+     };
+-    parallel_for(cache->meteors, f, 500);
++    parallel_for(cache->meteors, f, 99999999);
+ }
+ 
+ void MeteorsEffect::HorizontalRemoveMeteors(RenderBuffer& buffer, int Length)
+@@ -327,10 +329,16 @@ void MeteorsEffect::RenderMeteorsHorizontal(RenderBuffer& buffer, int ColorSchem
+ 
+     std::function<void(MeteorClass&, int)> f = [&buffer, MeteorsEffect, TailLength, SwirlIntensity, ColorScheme](MeteorClass& meteor, int n) {
          HSVValue hsv;
 +
 +        EffectRenderStatePRNG prng;
@@ -1212,35 +1221,53 @@ index 14d20c7a7..543a38c29 100644
 +
          for (int ph = 0; ph <= TailLength; ph++) {
              switch (ColorScheme) {
-                 case 0:
--                    hsv.hue=double(rand() % 1000) / 1000.0;
-+                    hsv.hue = prng.prnguniform();
-                     hsv.saturation=1.0;
-                     hsv.value=1.0;
-                     break;
-@@ -365,16 +373,16 @@ void MeteorsEffect::RenderMeteorsVertical(RenderBuffer &buffer, int ColorScheme,
-     // create new meteors
+             case 0:
+-                hsv.hue = double(rand() % 1000) / 1000.0;
++                hsv.hue = prng.prnguniform();
+                 hsv.saturation = 1.0;
+                 hsv.value = 1.0;
+                 break;
+@@ -357,7 +365,7 @@ void MeteorsEffect::RenderMeteorsHorizontal(RenderBuffer& buffer, int ColorSchem
+             }
+         }
+     };
+-    parallel_for(cache->meteors, f, 500);
++    parallel_for(cache->meteors, f, 99999999);
+ 
+     HorizontalMoveMeteors(buffer, speed);
+ 
+@@ -400,16 +408,16 @@ void MeteorsEffect::VerticalAddMeteors(RenderBuffer& buffer, int ColorScheme, in
+     MeteorClass m;
  
      for (int i = 0; i < buffer.BufferWi; i++) {
 -        if (rand() % 200 < Count) {
 +        if (cache->prngint(200) < Count) {
-             m.x=i;
-             m.y=buffer.BufferHt - 1;
+             m.x = i;
+             m.y = buffer.BufferHt - 1;
  
              switch (ColorScheme) {
-                 case 1:
--                    buffer.SetRangeColor(hsv0,hsv1,m.hsv);
+             case 1:
+-                    buffer.SetRangeColor(hsv0, hsv1, m.hsv);
 +                    cache->RandomColorInRange(hsv0,hsv1,m.hsv);
                      break;
-                 case 2:
--                    buffer.palette.GetHSV(rand()%colorcnt, m.hsv);
+             case 2:
+-                    buffer.palette.GetHSV(rand() % colorcnt, m.hsv);
 +                    buffer.palette.GetHSV(cache->prngint(colorcnt), m.hsv);
                      break;
              }
              cache->meteors.push_back(m);
-@@ -386,10 +394,16 @@ void MeteorsEffect::RenderMeteorsVertical(RenderBuffer &buffer, int ColorScheme,
-     std::function<void(MeteorClass &, int)> f = [&buffer, MeteorsEffect, TailLength, mspeed, SwirlIntensity, ColorScheme] (MeteorClass &meteor, int n) {
-         int x,y,dx;
+@@ -424,7 +432,7 @@ void MeteorsEffect::VerticalMoveMeteors(RenderBuffer& buffer, int mspeed)
+     std::function<void(MeteorClass&, int)> f = [mspeed](MeteorClass& meteor, int n) {
+         meteor.y -= mspeed;
+     };
+-    parallel_for(cache->meteors, f, 500);
++    parallel_for(cache->meteors, f, 99999999);
+ }
+ 
+ void MeteorsEffect::VerticalRemoveMeteors(RenderBuffer& buffer, int Length)
+@@ -470,10 +478,16 @@ void MeteorsEffect::RenderMeteorsVertical(RenderBuffer& buffer, int ColorScheme,
+ 
+     std::function<void(MeteorClass&, int)> f = [&buffer, MeteorsEffect, TailLength, SwirlIntensity, ColorScheme](MeteorClass& meteor, int n) {
          HSVValue hsv;
 +
 +        EffectRenderStatePRNG prng;
@@ -1250,69 +1277,105 @@ index 14d20c7a7..543a38c29 100644
 +
          for (int ph = 0; ph <= TailLength; ph++) {
              switch (ColorScheme) {
-                 case 0:
--                    hsv.hue=double(rand() % 1000) / 1000.0;
-+                    hsv.hue=prng.prnguniform();
-                     hsv.saturation=1.0;
-                     hsv.value=1.0;
-                     break;
-@@ -449,18 +463,18 @@ void MeteorsEffect::RenderIcicleDrip(RenderBuffer &buffer, int ColorScheme, int
+             case 0:
+-                hsv.hue = double(rand() % 1000) / 1000.0;
++                hsv.hue = prng.prnguniform();
+                 hsv.saturation = 1.0;
+                 hsv.value = 1.0;
+                 break;
+@@ -501,7 +515,7 @@ void MeteorsEffect::RenderMeteorsVertical(RenderBuffer& buffer, int ColorScheme,
+             }
+         }
+     };
+-    parallel_for(cache->meteors, f, 500);
++    parallel_for(cache->meteors, f, 99999999);
+ 
+     VerticalMoveMeteors(buffer, speed);
+ 
+@@ -539,17 +553,17 @@ void MeteorsEffect::IcicleAddMeteors(RenderBuffer& buffer, int ColorScheme, int
  
      MeteorClass m;
      for (int i = 0; i < buffer.BufferWi; i++) {
 -        if (rand() % 200 < Count) {
 +        if (cache->prngint(200) < Count) {
-             m.x=i;
-             m.y=buffer.BufferHt - 1;
-             //            m.h = TailLength;
--            m.h = (rand() % (2 * buffer.BufferHt))/3; //somewhat variable length -DJ
+             m.x = i;
+             m.y = buffer.BufferHt - 1;
+-            m.h = (rand() % (2 * buffer.BufferHt)) / 3; // somewhat variable length -DJ
 +            m.h = (cache->prngint(2 * buffer.BufferHt))/3; //somewhat variable length -DJ
  
              switch (ColorScheme) {
-                 case 1:
--                    buffer.SetRangeColor(hsv0,hsv1,m.hsv);
+             case 1:
+-                    buffer.SetRangeColor(hsv0, hsv1, m.hsv);
 +                    cache->RandomColorInRange(hsv0,hsv1,m.hsv);
                      break;
-                 case 2:
--                    buffer.palette.GetHSV(rand()%colorcnt, m.hsv);
+             case 2:
+-                    buffer.palette.GetHSV(rand() % colorcnt, m.hsv);
 +                    buffer.palette.GetHSV(cache->prngint(colorcnt), m.hsv);
                      break;
              }
              cache->meteors.push_back(m);
-@@ -557,13 +571,13 @@ void MeteorsEffect::RenderMeteorsImplode(RenderBuffer &buffer, int ColorScheme,
+@@ -564,7 +578,7 @@ void MeteorsEffect::IcicleMoveMeteors(RenderBuffer& buffer, int mspeed)
+     std::function<void(MeteorClass&, int)> f = [mspeed](MeteorClass& meteor, int n) {
+         meteor.y -= mspeed;
+     };
+-    parallel_for(cache->meteors, f, 500);
++    parallel_for(cache->meteors, f, 99999999);
+ }
  
-     m.cnt=1;
+ void MeteorsEffect::IcicleRemoveMeteors(RenderBuffer& buffer)
+@@ -648,7 +662,7 @@ void MeteorsEffect::RenderIcicleDrip(RenderBuffer& buffer, int ColorScheme, int
+             buffer.SetPixel(x, y, hsv);
+         }
+     };
+-    parallel_for(cache->meteors, f, 500);
++    parallel_for(cache->meteors, f, 99999999);
+ 
+     IcicleMoveMeteors(buffer, speed);
+ 
+@@ -709,14 +723,14 @@ void MeteorsEffect::ImplodeAddMeteors(RenderBuffer& buffer, int ColorScheme, int
+     m.cnt = 1;
+ 
      for (int i = 0; i < MinDimension; i++) {
 -        if (rand() % 200 < Count) {
 +        if (cache->prngint(200) < Count) {
+             double angle;
              if (buffer.BufferHt == 1) {
--                angle=double(rand() % 2) * M_PI;
+-                angle = double(rand() % 2) * M_PI;
 +                angle=double(cache->prngint(2)) * M_PI;
              } else if (buffer.BufferWi == 1) {
--                angle=double(rand() % 2) * M_PI - (M_PI/2.0);
+-                angle = double(rand() % 2) * M_PI - (M_PI / 2.0);
 +                angle=double(cache->prngint(2)) * M_PI - (M_PI/2.0);
              } else {
--                angle=rand01()*2.0*M_PI;
+-                angle = rand01() * 2.0 * M_PI;
 +                angle = cache->prnguniform() * 2.0 * M_PI;
              }
-             m.dx=buffer.cos(angle);
-             m.dy=buffer.sin(angle);
-@@ -574,10 +588,10 @@ void MeteorsEffect::RenderMeteorsImplode(RenderBuffer &buffer, int ColorScheme,
+             m.dx = buffer.cos(angle);
+             m.dy = buffer.sin(angle);
+@@ -727,10 +741,10 @@ void MeteorsEffect::ImplodeAddMeteors(RenderBuffer& buffer, int ColorScheme, int
  
              switch (ColorScheme) {
-                 case 1:
--                    buffer.SetRangeColor(hsv0,hsv1,m.hsv);
-+                    cache->RandomColorInRange(hsv0,hsv1,m.hsv);
-                     break;
-                 case 2:
--                    buffer.palette.GetHSV(rand()%colorcnt, m.hsv);
-+                    buffer.palette.GetHSV(cache->prngint(colorcnt), m.hsv);
-                     break;
+             case 1:
+-                buffer.SetRangeColor(hsv0, hsv1, m.hsv);
++                cache->RandomColorInRange(hsv0,hsv1,m.hsv);;
+                 break;
+             case 2:
+-                buffer.palette.GetHSV(rand() % colorcnt, m.hsv);
++                buffer.palette.GetHSV(cache->prngint(colorcnt), m.hsv);
+                 break;
              }
              cache->meteorsRadial.push_back(m);
-@@ -596,10 +610,15 @@ void MeteorsEffect::RenderMeteorsImplode(RenderBuffer &buffer, int ColorScheme,
-             hdistance = std::max(0.1f, (float)sqrt((x - (float)centerX) * (x - (float)centerX) + (y - (float)centerY) * (y - (float)centerY)) / (float)maxdiag);
-         }
+@@ -763,7 +777,7 @@ void MeteorsEffect::ImplodeMoveMeteors(RenderBuffer& buffer, int mspeed, int xof
+         meteor.y -= meteor.dy * mspeed * hdistance;
+         meteor.cnt++;
+     };
+-    parallel_for(cache->meteorsRadial, f, 500);
++    parallel_for(cache->meteorsRadial, f, 9999999);
+ }
+ 
+ void MeteorsEffect::ImplodeRemoveMeteors(RenderBuffer& buffer, int xoffset, int yoffset)
+@@ -819,10 +833,15 @@ void MeteorsEffect::RenderMeteorsImplode(RenderBuffer& buffer, int ColorScheme,
+     std::function<void(MeteorRadialClass&, int)> f = [&buffer, fadeWithDistance, centerX, centerY, maxdiag, TailLength, ColorScheme](MeteorRadialClass& meteor, int n) {
+         HSVValue hsv;
  
 +        EffectRenderStatePRNG prng;
 +        if (ColorScheme == 0) {
@@ -1321,65 +1384,94 @@ index 14d20c7a7..543a38c29 100644
 +
          for (int ph = 0; ph <= TailLength; ph++) {
              switch (ColorScheme) {
-                 case 0:
--                    hsv.hue=double(rand() % 1000) / 1000.0;
-+                    hsv.hue = prng.prnguniform();
-                     hsv.saturation=1.0;
-                     hsv.value=1.0;
-                     break;
-@@ -694,23 +713,23 @@ void MeteorsEffect::RenderMeteorsExplode(RenderBuffer &buffer, int ColorScheme,
-     m.y=buffer.BufferHt/2+trueyoffset;
-     m.cnt=1;
+             case 0:
+-                hsv.hue = double(rand() % 1000) / 1000.0;
++                hsv.hue = prng.prnguniform();
+                 hsv.saturation = 1.0;
+                 hsv.value = 1.0;
+                 break;
+@@ -858,7 +877,7 @@ void MeteorsEffect::RenderMeteorsImplode(RenderBuffer& buffer, int ColorScheme,
+             }
+         }
+     };
+-    parallel_for(cache->meteorsRadial, f, 500);
++    parallel_for(cache->meteorsRadial, f, 99999999);
+ 
+     ImplodeMoveMeteors(buffer, speed, xoffset, yoffset, fadeWithDistance);
+ 
+@@ -910,24 +929,24 @@ void MeteorsEffect::ExplodeAddMeteors(RenderBuffer& buffer, int ColorScheme, int
+     m.y = buffer.BufferHt / 2 + trueyoffset;
+     m.cnt = 1;
      for (int i = 0; i < MinDimension; i++) {
 -        if (rand() % 200 < Count) {
 +        if (cache->prngint(200) < Count) {
+             double angle;
              if (buffer.BufferHt == 1) {
--                angle=double(rand() % 2) * M_PI;
+-                    angle = double(rand() % 2) * M_PI;
 +                angle=double(cache->prngint(2)) * M_PI;
              } else if (buffer.BufferWi == 1) {
--                angle=double(rand() % 2) * M_PI - (M_PI/2.0);
+-                    angle = double(rand() % 2) * M_PI - (M_PI / 2.0);
 +                angle=double(cache->prngint(2)) * M_PI - (M_PI/2.0);
              } else {
--                angle=rand01()*2.0*M_PI;
+-                    angle = rand01() * 2.0 * M_PI;
 +                angle = cache->prnguniform() * 2.0 * M_PI;
              }
-             m.dx=buffer.cos(angle);
-             m.dy=buffer.sin(angle);
+             m.dx = buffer.cos(angle);
+             m.dy = buffer.sin(angle);
  
              switch (ColorScheme) {
-                 case 1:
--                    buffer.SetRangeColor(hsv0,hsv1,m.hsv);
+             case 1:
+-                    buffer.SetRangeColor(hsv0, hsv1, m.hsv);
 +                    cache->RandomColorInRange(hsv0,hsv1,m.hsv);
                      break;
-                 case 2:
--                    buffer.palette.GetHSV(rand()%colorcnt, m.hsv);
+             case 2:
+-                    buffer.palette.GetHSV(rand() % colorcnt, m.hsv);
 +                    buffer.palette.GetHSV(cache->prngint(colorcnt), m.hsv);
                      break;
              }
              cache->meteorsRadial.push_back(m);
-@@ -730,11 +749,16 @@ void MeteorsEffect::RenderMeteorsExplode(RenderBuffer &buffer, int ColorScheme,
-             hdistance = std::max(0.1f, (float)sqrt((x - (float)centerX) * (x - (float)centerX) + (y - (float)centerY) * (y - (float)centerY)) / (float)maxdiag);
-         }
+@@ -961,7 +980,7 @@ void MeteorsEffect::ExplodeMoveMeteors(RenderBuffer& buffer, int mspeed, int xof
+         meteor.y += meteor.dy * mspeed * hdistance;
+         meteor.cnt++;
+     };
+-    parallel_for(cache->meteorsRadial, f, 500);
++    parallel_for(cache->meteorsRadial, f, 99999999);
+ }
  
+ void MeteorsEffect::ExplodeRemoveMeteors(RenderBuffer& buffer)
+@@ -1017,11 +1036,17 @@ void MeteorsEffect::RenderMeteorsExplode(RenderBuffer& buffer, int ColorScheme,
+ 
+     std::function<void(MeteorRadialClass&, int)> f = [&buffer, fadeWithDistance, centerX, centerY, maxdiag, TailLength, ColorScheme](MeteorRadialClass& meteor, int n) {
+         HSVValue hsv;
++
 +        EffectRenderStatePRNG prng;
 +        if (ColorScheme == 0) {
 +            prng.seedConsistently(meteor.x, meteor.y, n * 100, buffer.BufferWi * 100 + buffer.BufferHt);
 +        }
 +
-         for(int ph = 0; ph <= TailLength; ph++) {
-             //if (ph >= it->cnt) continue;
+         for (int ph = 0; ph <= TailLength; ph++) {
+             // if (ph >= it->cnt) continue;
              switch (ColorScheme) {
-                 case 0:
--                    hsv.hue=double(rand() % 1000) / 1000.0;
-+                    hsv.hue = prng.prnguniform();
-                     hsv.saturation=1.0;
-                     hsv.value=1.0;
-                     break;
+             case 0:
+-                hsv.hue = double(rand() % 1000) / 1000.0;
++                hsv.hue = prng.prnguniform();
+                 hsv.saturation = 1.0;
+                 hsv.value = 1.0;
+                 break;
+@@ -1054,7 +1079,7 @@ void MeteorsEffect::RenderMeteorsExplode(RenderBuffer& buffer, int ColorScheme,
+             }
+         }
+     };
+-    parallel_for(cache->meteorsRadial, f, 500);
++    parallel_for(cache->meteorsRadial, f, 99999999);
+ 
+     ExplodeMoveMeteors(buffer, speed, xoffset, yoffset, fadeWithDistance);
+ 
 diff --git a/xLights/effects/PicturesEffect.cpp b/xLights/effects/PicturesEffect.cpp
-index de22d89d6..ecdd83c3a 100644
+index 6fcadf329..43e8cc30e 100644
 --- a/xLights/effects/PicturesEffect.cpp
 +++ b/xLights/effects/PicturesEffect.cpp
-@@ -942,11 +942,16 @@ void PicturesEffect::Render(RenderBuffer& buffer,
+@@ -949,11 +949,16 @@ void PicturesEffect::Render(RenderBuffer& buffer,
  
      // add shimmer effect which just randomly turns off pixels
      if (shimmer) {
@@ -1432,10 +1524,10 @@ index 770a10b44..df984d031 100644
      si->SetUniformInt("PASSINDEX", 0);
      si->SetUniformInt("FRAMEINDEX", _timeMS / buffer.frameTimeInMs);
 diff --git a/xLights/effects/ShapeEffect.cpp b/xLights/effects/ShapeEffect.cpp
-index 9d4823540..cbdea589f 100644
+index 699782695..48a7bc14d 100644
 --- a/xLights/effects/ShapeEffect.cpp
 +++ b/xLights/effects/ShapeEffect.cpp
-@@ -261,7 +261,7 @@ bool compare_shapes(const ShapeData* first, const ShapeData* second)
+@@ -265,7 +265,7 @@ bool compare_shapes(const ShapeData* first, const ShapeData* second)
      return first->_oset > second->_oset;
  }
  
@@ -1444,7 +1536,7 @@ index 9d4823540..cbdea589f 100644
  
  public:
      ShapeRenderCache() { _lastColorIdx = -1; _sinceLastTriggered = 0; }
-@@ -292,12 +292,12 @@ public:
+@@ -301,12 +301,12 @@ public:
          }
      }
  
@@ -1460,7 +1552,7 @@ index 9d4823540..cbdea589f 100644
          }
          _shapes.push_back(new ShapeData(centre, size, oset, color, shape, angle, speed, holdColour, colourIndex));
      }
-@@ -332,7 +332,7 @@ public:
+@@ -341,7 +341,7 @@ public:
      }
  };
  
@@ -1469,7 +1561,7 @@ index 9d4823540..cbdea589f 100644
  {
      if (shape == "Circle") {
          return RENDER_SHAPE_CIRCLE;
-@@ -370,7 +370,7 @@ int ShapeEffect::DecodeShape(const std::string& shape)
+@@ -379,7 +379,7 @@ int ShapeEffect::DecodeShape(const std::string& shape)
          return RENDER_SHAPE_SVG;
      }
  
@@ -1478,7 +1570,7 @@ index 9d4823540..cbdea589f 100644
  }
  
  static int mapSkinTone(const std::string &v) {
-@@ -414,8 +414,6 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -423,8 +423,6 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
  
      int rotation = GetValueCurveInt("Shape_Rotation", 0, SettingsMap, oset, SHAPE_ROTATION_MIN, SHAPE_ROTATION_MAX, buffer.GetStartTimeMS(), buffer.GetEndTimeMS());
  
@@ -1487,7 +1579,7 @@ index 9d4823540..cbdea589f 100644
      float f = 0.0;
      bool useMusic = SettingsMap.GetBool("CHECKBOX_Shape_UseMusic", false);
      float sensitivity = (float)SettingsMap.GetInt("SLIDER_Shape_Sensitivity", 50) / 100.0;
-@@ -432,12 +430,15 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -441,12 +439,15 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
          }
      }
  
@@ -1504,7 +1596,7 @@ index 9d4823540..cbdea589f 100644
      std::list<ShapeData*>& _shapes = cache->_shapes;
      int& _lastColorIdx = cache->_lastColorIdx;
      int& _sinceLastTriggered = cache->_sinceLastTriggered;
-@@ -449,7 +450,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -458,7 +459,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
  
      if (buffer.needToInit) {
          buffer.needToInit = false;
@@ -1513,7 +1605,7 @@ index 9d4823540..cbdea589f 100644
          _sinceLastTriggered = 0;
  
          if (Object_To_Draw == RENDER_SHAPE_EMOJI) {
-@@ -465,7 +466,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -474,7 +475,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
              for (int i = _shapes.size(); i < count; ++i) {
                  wxPoint pt;
                  if (randomLocation) {
@@ -1522,7 +1614,7 @@ index 9d4823540..cbdea589f 100644
                  } else {
                      pt = wxPoint(xc, yc);
                  }
-@@ -479,10 +480,10 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -488,10 +489,10 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  int os = 0;
                  if (startRandomly)
                  {
@@ -1535,7 +1627,7 @@ index 9d4823540..cbdea589f 100644
              }
              cache->SortShapes();
          }
-@@ -524,7 +525,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -533,7 +534,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                          wxPoint pt;
                          if (randomLocation)
                          {
@@ -1544,7 +1636,7 @@ index 9d4823540..cbdea589f 100644
                          }
                          else
                          {
-@@ -538,7 +539,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -547,7 +548,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                              _lastColorIdx = 0;
                          }
  
@@ -1553,7 +1645,7 @@ index 9d4823540..cbdea589f 100644
                          break;
                      }
                  }
-@@ -556,7 +557,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -565,7 +566,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  wxPoint pt;
                  if (randomLocation)
                  {
@@ -1562,7 +1654,7 @@ index 9d4823540..cbdea589f 100644
                  }
                  else
                  {
-@@ -570,7 +571,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -579,7 +580,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                      _lastColorIdx = 0;
                  }
  
@@ -1571,7 +1663,7 @@ index 9d4823540..cbdea589f 100644
              }
  
              // if music is over the trigger level for REPEATTRIGGER frames then we will trigger another firework
-@@ -593,7 +594,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -602,7 +603,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
              wxPoint pt;
              if (randomLocation)
              {
@@ -1580,7 +1672,7 @@ index 9d4823540..cbdea589f 100644
              }
              else
              {
-@@ -607,7 +608,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -616,7 +617,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  _lastColorIdx = 0;
              }
  
@@ -1622,7 +1714,7 @@ index b912b6324..e6d9e0255 100644
              } else {
                  buffer.palette.GetSpatialColor(ColorIdx, (float)x / (float)buffer.BufferWi, (float)y / (float)buffer.BufferHt, color);
 diff --git a/xLights/effects/SnowflakesEffect.cpp b/xLights/effects/SnowflakesEffect.cpp
-index b6edb760c..775b231f0 100644
+index 402cccba2..d7623ba7a 100644
 --- a/xLights/effects/SnowflakesEffect.cpp
 +++ b/xLights/effects/SnowflakesEffect.cpp
 @@ -133,7 +133,7 @@ static void set_pixel_if_not_color(RenderBuffer &buffer, int x, int y, xlColor t
@@ -1634,7 +1726,49 @@ index b6edb760c..775b231f0 100644
  public:
      SnowflakesRenderCache() : LastSnowflakeCount(0), LastSnowflakeType(0), LastFalling(""), effectState(0) {};
      virtual ~SnowflakesRenderCache() {};
-@@ -180,6 +180,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
+@@ -162,6 +162,8 @@ void SnowflakesEffect::SetDefaultParameters()
+ 
+ void SnowflakesEffect::MoveFlakes(RenderBuffer& buffer, int snowflakeType, const std::string& falling, int count, const xlColor& color1, int& effectState)
+ {
++    SnowflakesRenderCache* cache = (SnowflakesRenderCache*)buffer.infoCache[id];
++
+     int starty = 0;
+     if (falling == "Falling & Accumulating") {
+         starty = 1;
+@@ -180,7 +182,7 @@ void SnowflakesEffect::MoveFlakes(RenderBuffer& buffer, int snowflakeType, const
+                     //  randomly move the flake left or right
+                     if (moves > 0 || (falling == "Falling" && y == 0)) {
+                         int x0;
+-                        switch (rand() % 9) {
++                        switch (cache->prngint(9)) {
+                         case 0:
+                             if (moves & 1) {
+                                 x0 = x - 1;
+@@ -211,8 +213,8 @@ void SnowflakesEffect::MoveFlakes(RenderBuffer& buffer, int snowflakeType, const
+                             } else if ((moves & 5) == 1) {
+                                 x0 = x - 1;
+                             } else {
+-                                switch (rand() % 2) {
+-                                case 0:
++                                switch (cache->prngbool()) {
++                                case true:
+                                     x0 = x + 1;
+                                     break;
+                                 default:
+@@ -259,10 +261,10 @@ void SnowflakesEffect::MoveFlakes(RenderBuffer& buffer, int snowflakeType, const
+     int placedFullCount = 0;
+     while (effectState < count && check < 20) {
+         // find unused space
+-        int x = rand() % buffer.BufferWi;
++        int x = cache->prngint(buffer.BufferWi);
+         if (buffer.GetTempPixel(x, buffer.BufferHt - 1) == xlBLACK) {
+             effectState++;
+-            buffer.SetTempPixel(x, buffer.BufferHt - 1, color1, snowflakeType == 0 ? rand() % 9 : snowflakeType - 1);
++            buffer.SetTempPixel(x, buffer.BufferHt - 1, color1, snowflakeType == 0 ? cache->prngint(9) : snowflakeType - 1);
+ 
+             int nextmoves = possible_downward_moves(buffer, x, buffer.BufferHt - 1);
+             if (nextmoves == 0) {
+@@ -294,6 +296,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
      if (cache == nullptr) {
          cache = new SnowflakesRenderCache();
          buffer.infoCache[id] = cache;
@@ -1642,7 +1776,7 @@ index b6edb760c..775b231f0 100644
      }
  
      int &LastSnowflakeCount = cache->LastSnowflakeCount;
-@@ -194,7 +195,11 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
+@@ -308,7 +311,11 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
      if (buffer.needToInit ||
          (Count != LastSnowflakeCount && falling == "Driving") ||
          SnowflakeType != LastSnowflakeType ||
@@ -1655,9 +1789,9 @@ index b6edb760c..775b231f0 100644
  
          // initialize
          buffer.needToInit = false;
-@@ -219,8 +224,8 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
+@@ -333,8 +340,8 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
              // find unused space
-             for (check = 0; check < 20; check++)
+             for (int check = 0; check < 20; check++)
              {
 -                x = rand() % buffer.BufferWi;
 -                y = y0 + (rand() % delta_y);
@@ -1666,7 +1800,7 @@ index b6edb760c..775b231f0 100644
                  if (buffer.GetTempPixel(x, y) == xlBLACK) {
                      effectState++;
                      break;
-@@ -228,7 +233,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
+@@ -342,7 +349,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
              }
  
              // draw flake, SnowflakeType=0 is random type
@@ -1675,7 +1809,7 @@ index b6edb760c..775b231f0 100644
              {
              case 0:
                  // single node
-@@ -269,7 +274,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
+@@ -383,7 +390,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
                  else
                  {
                      buffer.SetTempPixel(x, y, c1);
@@ -1684,49 +1818,15 @@ index b6edb760c..775b231f0 100644
                      {
                          buffer.SetTempPixel(x - 1, y, c2);
                          buffer.SetTempPixel(x + 1, y, c2);
-@@ -442,7 +447,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
-                         if (moves > 0 || (falling == "Falling" && y == 0))
-                         {
-                             int x0;
--                            switch (rand() % 9)
-+                            switch (cache->prngint(9))
-                             {
-                             case 0:
-                                 if (moves & 1) {
-@@ -481,9 +486,9 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
-                                     x0 = x - 1;
-                                 }
-                                 else {
--                                    switch (rand() % 2)
-+                                    switch (cache->prngbool())
-                                     {
--                                    case 0:
-+                                    case true:
-                                         x0 = x + 1;
-                                         break;
-                                     default:
-@@ -554,10 +559,10 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
-         int placedFullCount = 0;
-         while (effectState < Count && check < 20) {
-             // find unused space
--            int x = rand() % buffer.BufferWi;
-+            int x = cache->prngint(buffer.BufferWi);
-             if (buffer.GetTempPixel(x, buffer.BufferHt - 1) == xlBLACK) {
-                 effectState++;
--                buffer.SetTempPixel(x, buffer.BufferHt - 1, color1, SnowflakeType == 0 ? rand() % 9 : SnowflakeType - 1);
-+                buffer.SetTempPixel(x, buffer.BufferHt - 1, color1, SnowflakeType == 0 ? cache->prngint(9) : SnowflakeType - 1);
- 
-                 int nextmoves = possible_downward_moves(buffer, x, buffer.BufferHt - 1);
-                 if (nextmoves == 0) {
-@@ -611,7 +616,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
-                             set_pixel_if_not_color(buffer, x + 1, y, color2, color1, wrapx, false);
-                         }
-                         else {
--                            if (rand() % 100 > 50)      // % 2 was not so random
-+                            if (cache->prngint(100) > 50)      // ever so slight preference for else branch
-                             {
+@@ -604,7 +611,7 @@ void SnowflakesEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Re
                                  set_pixel_if_not_color(buffer, x - 1, y, color2, color1, wrapx, false);
                                  set_pixel_if_not_color(buffer, x + 1, y, color2, color1, wrapx, false);
+                         } else {
+-                                if (rand() % 100 > 50) // % 2 was not so random
++                                if (cache->prngint(100) > 50) // % 2 was not so random
+                                 {
+                                     set_pixel_if_not_color(buffer, x - 1, y, color2, color1, wrapx, false);
+                                     set_pixel_if_not_color(buffer, x + 1, y, color2, color1, wrapx, false);
 diff --git a/xLights/effects/SnowstormEffect.cpp b/xLights/effects/SnowstormEffect.cpp
 index de4f32a3d..7b01d69da 100644
 --- a/xLights/effects/SnowstormEffect.cpp
@@ -2266,7 +2366,7 @@ index 72f838c2b..45516db2d 100644
  {
  public:
 diff --git a/xLights/effects/TwinkleEffect.cpp b/xLights/effects/TwinkleEffect.cpp
-index dc1aca9ce..75fda9d1f 100644
+index 3375f87ef..3a7a56bb5 100644
 --- a/xLights/effects/TwinkleEffect.cpp
 +++ b/xLights/effects/TwinkleEffect.cpp
 @@ -27,10 +27,6 @@
@@ -2399,11 +2499,11 @@ index dc1aca9ce..75fda9d1f 100644
          }
          int i7 = strobe[x].duration;
 diff --git a/xLights/effects/VUMeterEffect.cpp b/xLights/effects/VUMeterEffect.cpp
-index 2606534c0..7bb81d2ef 100644
+index 7d50e45cd..d6691509e 100644
 --- a/xLights/effects/VUMeterEffect.cpp
 +++ b/xLights/effects/VUMeterEffect.cpp
-@@ -278,7 +278,7 @@ void VUMeterEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Rende
-            SettingsMap.GetBool("CHECKBOX_Regex", false));
+@@ -321,7 +321,7 @@ void VUMeterEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Rende
+            SettingsMap.Get("FILEPICKERCTRL_SVGFile", ""));
  }
  
 -class VUMeterRenderCache : public EffectRenderCache
@@ -2411,7 +2511,7 @@ index 2606534c0..7bb81d2ef 100644
  {
  
  public:
-@@ -537,6 +537,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
+@@ -612,6 +612,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
  	if (cache == nullptr) {
  		cache = new VUMeterRenderCache();
  		buffer.infoCache[id] = cache;
@@ -2419,7 +2519,7 @@ index 2606534c0..7bb81d2ef 100644
  	}
  	std::list<int>& _timingmarks = cache->_timingmarks;
  	int &_lasttimingmark = cache->_lasttimingmark;
-@@ -552,6 +553,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
+@@ -627,6 +628,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
  	if (buffer.needToInit)
  	{
          buffer.needToInit = false;
@@ -2427,7 +2527,7 @@ index 2606534c0..7bb81d2ef 100644
          _lineHistory.clear();
          _nCount = 0;
          _colourindex = -1;
-@@ -2730,9 +2732,10 @@ void VUMeterEffect::RenderLevelBarFrame(RenderBuffer &buffer, int bars, int sens
+@@ -2978,9 +2980,10 @@ void VUMeterEffect::RenderLevelBarFrame(RenderBuffer &buffer, int bars, int sens
              }
  
              if (random && bars > 2) {
@@ -2439,7 +2539,7 @@ index 2606534c0..7bb81d2ef 100644
                  }
                  if (lastbar > bars) lastbar = 1;
              }
-@@ -2773,9 +2776,10 @@ void VUMeterEffect::RenderTimingEventBarFrame(RenderBuffer& buffer, int bars, st
+@@ -3021,9 +3024,10 @@ void VUMeterEffect::RenderTimingEventBarFrame(RenderBuffer& buffer, int bars, st
              }
  
              if (random && bars > 2) {
@@ -2451,7 +2551,7 @@ index 2606534c0..7bb81d2ef 100644
                  }
                  if (lastbar > bars + 1)
                      lastbar = 1;
-@@ -2861,9 +2865,10 @@ void VUMeterEffect::RenderNoteLevelBarFrame(RenderBuffer &buffer, int bars, int
+@@ -3105,9 +3109,10 @@ void VUMeterEffect::RenderNoteLevelBarFrame(RenderBuffer& buffer, int bars, int
              }
  
              if (random && bars > 2) {
@@ -2461,8 +2561,8 @@ index 2606534c0..7bb81d2ef 100644
 -                    lastbar = 1 + rand01() * bars;
 +                    lastbar = 1 + cache->prnguniform() * bars;
                  }
-                 if (lastbar > bars) lastbar = 1;
-             }
+                 if (lastbar > bars)
+                     lastbar = 1;
 diff --git a/xLights/effects/WaveEffect.cpp b/xLights/effects/WaveEffect.cpp
 index 655695805..cf77d5e50 100644
 --- a/xLights/effects/WaveEffect.cpp
@@ -2512,10 +2612,10 @@ index 655695805..cf77d5e50 100644
              }
              buffer.needToInit = false;
 diff --git a/xLights/models/Model.cpp b/xLights/models/Model.cpp
-index c40629773..c678d69d9 100644
+index 56fff2320..d721f92c0 100644
 --- a/xLights/models/Model.cpp
 +++ b/xLights/models/Model.cpp
-@@ -3000,8 +3000,12 @@ void Model::SetFromXml(wxXmlNode* ModelNode, bool zb)
+@@ -3002,8 +3002,12 @@ void Model::SetFromXml(wxXmlNode* ModelNode, bool zb)
      InitModel();
  
      size_t NodeCount = GetNodeCount();
