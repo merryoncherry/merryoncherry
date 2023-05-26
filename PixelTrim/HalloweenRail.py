@@ -325,7 +325,7 @@ def generatePT(directionX, directionY, linePixels, mname, props):
 # This can be arbitrary.  I'm working in inches, 1/2" resolution
 directionX = -2
 directionY = 0
-linePixels = 95
+linePixels = 84
 mname = "HalloweenRailPixelTrim7ft"
 
 props = []
@@ -334,15 +334,11 @@ props = []
 #  offsetX, offsetY, startLinePixel, repeatEvery, maxProps
 with open('PixelTrimTomb.xmodel', newline='') as modelfile:
     dom = xml.dom.minidom.parse(modelfile)
-    props.append(Prop(dom, 1, -4, 1, 12, 2))
+    props.append(Prop(dom, -4, -3, 19, 22, 3))
 
 with open('PixelTrimPumpkin.xmodel', newline='') as modelfile:
     dom = xml.dom.minidom.parse(modelfile)
-    props.append(Prop(dom, 1, -3, 29, 12, 4))
-
-with open('PixelTrimTomb.xmodel', newline='') as modelfile:
-    dom = xml.dom.minidom.parse(modelfile)
-    props.append(Prop(dom, 1, -4, 81, 12, 2))
+    props.append(Prop(dom, 0, -5, 10, 22, 4))
 
 generatePT(directionX, directionY, linePixels, mname, props)
 
