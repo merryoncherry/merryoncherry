@@ -342,4 +342,24 @@ with open('PixelTrimPumpkin.xmodel', newline='') as modelfile:
 
 generatePT(directionX, directionY, linePixels, mname, props)
 
+####
+
+mname = "HalloweenRailPixelTrim4ft"
+directionX = -2
+directionY = 0
+linePixels = 50
+
+props = []
+
+with open('PixelTrimTomb.xmodel', newline='') as modelfile:
+    dom = xml.dom.minidom.parse(modelfile)
+    props.append(Prop(dom, -4, -3, 18, 22, 2))
+
+with open('PixelTrimPumpkin.xmodel', newline='') as modelfile:
+    dom = xml.dom.minidom.parse(modelfile)
+    props.append(Prop(dom, 0, -5, 9, 22, 2))
+
+generatePT(directionX, directionY, linePixels, mname, props)
+
+
 
