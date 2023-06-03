@@ -357,7 +357,15 @@ props = []
 
 with open('Tree.xmodel', newline='') as modelfile:
     dom = xml.dom.minidom.parse(modelfile)
-    props.append(Prop(dom, -2, -4.5, 13, 24, 2))
+    props.append(Prop(dom, -2, -4.5, 18, 24, 3))
+
+with open('MiniFlake1VStem.xmodel', newline='') as modelfile:
+    dom = xml.dom.minidom.parse(modelfile)
+    props.append(Prop(dom, -2, -3, 12, 12, 6))
+
+with open('MiniFlake2VStem.xmodel', newline='') as modelfile:
+    dom = xml.dom.minidom.parse(modelfile)
+    props.append(Prop(dom, -3, -2, 6, 24, 4))
 
 generatePT(directionX, directionY, linePixels, mname, props)
 
@@ -372,7 +380,15 @@ props = []
 
 with open('Tree.xmodel', newline='') as modelfile:
     dom = xml.dom.minidom.parse(modelfile)
-    props.append(Prop(dom, -2, -4.5, 13, 24, 2))
+    props.append(Prop(dom, -2, -4.5, 16, 24, 4))
+
+with open('MiniFlake1VStem.xmodel', newline='') as modelfile:
+    dom = xml.dom.minidom.parse(modelfile)
+    props.append(Prop(dom, -2, -3, 10, 12, 8))
+
+with open('MiniFlake2VStem.xmodel', newline='') as modelfile:
+    dom = xml.dom.minidom.parse(modelfile)
+    props.append(Prop(dom, -3, -2, 4, 24, 5))
 
 generatePT(directionX, directionY, linePixels, mname, props)
 
