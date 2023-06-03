@@ -67,6 +67,10 @@ def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
             continue
         controllers.append((startch, cn.getAttribute('Name')))
         ctrlbyname[cn.getAttribute('Name')] = startch
+        #if cn.hasAttribute('IP'):
+        #    # TODO by address?  Universes are what exactly?
+        #   ctrbyname[cn.getAttribute('IP')] = startch
+        #   pass
         for net in cn.childNodes:
             if net.nodeType == xml.dom.Node.ATTRIBUTE_NODE or net.nodeType == xml.dom.Node.TEXT_NODE:
                 continue
@@ -99,6 +103,15 @@ def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
                 # TODO Look up controller
                 (ctrlnm,offset) = chstr[1:].split(':')
                 channel = ctrlbyname[ctrlnm]+int(offset)-1
+            elif chstr[0] == '#':
+                # Huh, seems to be an IP:universe:channel or universe:channel
+                #(ctrladdr,univ,ch) = chstr[1:].split(':')
+                # TODO we would need to find the channel for the universe or something
+                #channel = ctrlbyname[ctrladdr]
+                continue
+            elif chstr[0] == '>':
+                # Shadow model name:channel such as ">Spinner 2:1"
+                continue
             else:
                 raise Exception("Unknown channel string: "+chstr)
             models.append(ModelRec(name, mtyp, channel, -1))
