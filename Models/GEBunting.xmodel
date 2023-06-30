@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custommodel 
+name="GE_Bunting" parm1="77" parm2="37" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="" Antialias="1" StrandNames="MyCustomModel" NodeNames="" CustomModel="1,,,,,2,,,,3,,,,4,,,,5,,,,6,,,,7,,,,,8,,,,9,,,,10,,,,11,,,,12,,,,13,,,,,14,,,,15,,,,16,,,,17,,,,18,,,,,19;,,,,,,,,,,,,,,,,,,,,,,,,,,,,124,,,213,,,212,,,,,,,,180,,,165,,,164,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,123,,,,,,,,,,,,,,,,,,,,,,,,,,,,26,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,122,,,,,,,,,,,,,,,,,196,,,,,,,,,,,,,,,,,25,,,,,,,,,,,,,,,,,,,,,;,115,,,,,,,,,,,,,,,120,,121,,,,,,,,125,,,214,,,211,,,,,,,,,,,,179,,,166,,,163,,,,,,,27,,,24,,,,,,,,,,,,,,,20,;,,,,,,,,,,,,,119,,,,,,,,,,,126,,,,,,,,,,,,,,,,,,,,,,,,,,,,162,,,,,,,,,,,28,,,,,,,,,,,,,;,,,116,,,,,,,118,,,,,,,,,,,127,,,,,,215,,,,,,,,197,,,195,,,181,,,,,,,,167,,,,,,161,,,,,,,,,,23,,,29,,,,,21,,,;,,,,,114,,,117,,,,,,,,,,128,,,,,,,,,,,,,,210,,,,,,,,,,,,178,,,,,,,,,,,,,,160,,,,,,,,,,,,,22,,,,,;,,,,,,,,,,,,,,,,129,,,,,,,,,216,,,,,,,,,,,,,,,,,,,,,,,,,,168,,,,,,,,,159,,,,,,,,,,,,,,,,;,,,,113,,,,,,,,,,,,,,,,,,,,,,,,221,,,222,,,,198,,,194,,,182,,,,177,,,172,,,,,,,,,,,,,,,,,,,,,,,,30,,,,;,,,,,,,,,,108,,,,,,,,,,,,,217,,,,,,,,,209,,,,,,,,,,,,183,,,,,,,,,169,,,,,,,,,,,,36,,,,,,,,,,,;,,,,,,,,,,,,,,,,,130,,,,218,,,,,219,,,223,,,,,,,,,,,,,,,,,,176,,,171,,,,,170,,,,158,,,,,,,,,,,,,,,,,;,,,112,,,,,,,109,,107,,106,,,,,,,,,,,,,,,,,,,,,,,199,,193,,,,,,,,,,,,,,,,,,,,,,,38,,37,,35,,,,,,,31,,,;,,,,,,,,110,,,,,,,,,,,131,,,,,220,,,224,,,,,208,,204,,,,,,,,188,,184,,,,,175,,,173,,,,,157,,,,,,,,,,,33,,,,,,,,;,,,,,,,,,102,,,,105,,,,,,,,,,,,,,,,,,,,,,,200,,,,192,,,,,,,,,,,,,,,,,,,,,,,39,,,34,,,,,,,,,,;,,,,,,,,,,,103,,,,,,,,,,,135,,,225,,,,,,207,,203,,,,,,,,,,187,,185,,,,,,174,,,156,,,,,,,,,,41,,,,,,,,,,,,;,,,,,111,,,,,,,,,104,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,40,,,,,,,,,32,,,,,;,,,,,,,,,,101,,,,,,,,,,132,,,,136,,,,,,,,,,,,201,,,,191,,,,,,,,,,,,152,,,,153,,,,,,,,,,42,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,206,,,205,,,,,,,,,,189,,,186,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,100,,,,,,,,,,,,134,,,,,,,,137,,,,,,,,,,,,,,,,,,,,,,,,151,,,,,,,,155,,,,,,,,,,,,43,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,138,,,,,,202,,,,,,190,,,,,,150,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,133,,,,,,,,,,,,,,,,142,,,,,,,,,,,,149,,,,,,,,,,,,,,,,154,,,,,,,,,,,,,,,,;,,,,,,,,,99,,,98,,,,,,,,,,,,89,,,,,,,,,,,143,,,,,,145,,,,,,,,,,,55,,,,,,,,,,,,,,,44,,,,,,,,,;,,,,,,,,,,,,,,97,,,,,,91,,90,,,,,,,,,139,,,,,,,144,,,,,,,146,,,,,,,,54,,,53,,,,,,46,,45,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,96,,,,,,,92,,,88,,,,,,,,,,,,,,,,,,,,,,,,,,,,56,,,52,,,,,,,47,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,87,,,,,141,,,,,,,72,,,,,,,148,,,,,57,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,93,,85,,86,,,,,,,,,,,,,,,,,,,,,,,,,,,,,58,,51,,50,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,95,,,,,,,,,,,,,,,,,,,,74,,73,,71,,70,,,,,,,,,,,,,,,,,,,,48,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,84,,,,,,,140,,,,,,,,,,,,,,,,147,,,,,,,59,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,94,,,,,,,,,,,,,,,,,,75,,,,69,,,,,,,,,,,,,,,,,,49,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,80,,,,,,,,,68,,,,,,,,,63,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,83,,,,,,81,,,,,,,,,76,,,,67,,,,,,,,,62,,,,,,60,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,82,,,,,,79,,,,,,,,,,,,,,,64,,,,,,,61,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,78,,,,,,,,,,65,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,77,,,,66,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," SourceVersion="2023.09"  >
+<subModel name="Outline" layout="horizontal" type="ranges" bufferstyle="Default" line0="1-19,112-116,100,111,96-99,95,83,94,78-82,65-66,77,62-64,60-61,48-49,44-47,32,43,21-22,30-31,20,117-123,133-134,132,135,220-219,221,139-142,205,146-149,189,187-188,203-204,154-155,153,156,171,173-172,23-24,28-29,25,27-26">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Stars" layout="horizontal" type="ranges" bufferstyle="Default" line0="101-110,84-93,67-76,50-59,33-42">
+  <ControllerConnection/>
+</subModel>
+<subModel name="StarStrands" layout="horizontal" type="ranges" bufferstyle="Default" line0="106-110,102-101,103-105" line1="89-93,85-84,86-88" line2="72-76,68-67,69-71" line3="55-59,51-50,52-54" line4="38-42,34-33,35-37">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Ruffles" layout="horizontal" type="ranges" bufferstyle="Default" line0="125-131,218-215" line1="222-225,136-138,206-209" line2="199-202,143-145,190-193" line3="183-186,150-152,174-177" line4="167-170,157-163">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Center" layout="horizontal" type="ranges" bufferstyle="Default" line0="8-12,124,164-165,180,212-213,194-197,211,214,198,210,166,178-179,181-182">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Edge" layout="horizontal" type="ranges" bufferstyle="Default" line0="1,115-116,114-111,100-94,83-77,66-60,49-43,32-30,22-19">
+  <ControllerConnection/>
+</subModel>
+<subModel name="MiddleRing" layout="horizontal" type="ranges" bufferstyle="Default" line0="4,120,129-131,135-138,142-145,149-152,156-159,28,16">
+  <ControllerConnection/>
+</subModel>
+<subModel name="InnerRing1" layout="horizontal" type="ranges" bufferstyle="Default" line0="124,214,210,198,194,182,178,166,164">
+  <ControllerConnection/>
+</subModel>
+<subModel name="InnerRing2" layout="horizontal" type="ranges" bufferstyle="Default" line0="213,211,197,195,181,179,165">
+  <ControllerConnection/>
+</subModel>
+<subModel name="InnerRing3" layout="horizontal" type="ranges" bufferstyle="Default" line0="212,196,180">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Spokes" layout="horizontal" type="ranges" bufferstyle="Default" line0="123-117,114" line1="221,219-220,135,132,134-133,97" line2="204-203,205,142,139,141-140,80" line3="188-187,189,149,146,148-147,63" line4="172-171,173,156,153,155-154,46" line5="26-25,27,24,28,23,29,22">
+  <ControllerConnection/>
+</subModel>
+<subModel name="SpokesExtended" layout="horizontal" type="ranges" bufferstyle="Default" line0="123-117,114,116,113,115,112,1,111" line1="221,219-220,135,132,134-133,97-98,96,99,95,100,94" line2="204-203,205,142,139,141-140,80-81,79,82,78,83,77" line3="188-187,189,149,146,148-147,63-64,62,65,61,66,60" line4="172-171,173,156,153,155-154,46-47,45,48,44,49,43" line5="26-25,27,24,28,23,29,22,30,21,31,20,32,19">
+  <ControllerConnection/>
+</subModel>
+<subModel name="TopEdge" layout="horizontal" type="ranges" bufferstyle="Default" line0="2-18">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Other" layout="horizontal" type="ranges" bufferstyle="Default" line0="2-18,165,180,212-213,196,179,211,181,195,197">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Rings5" layout="horizontal" type="ranges" bufferstyle="Default" line0="1,115-116,114-111,100-94,83-77,66-60,49-43,32-30,22-19" line1="4,,120,,129,,130,,131,,135-136,,137,,138,,142,,143,,144-145,,149,,150,,151,,152,156,,157,,158,,159,,28,,16" line2=",,124,,,,,214,,,,210,,,,,198,,,,,194,,,,182,,,,,178,,,,,166,,,,164,," line3=",,,213,,,,,,211,,,,,,197,,,,,,195,,,,,,181,,,,,,179,,,,,,165,," line4=",,,,,,,212,,,,,,,,,,,,,,196,,,,,,,,,,,,,,180,,,,,,">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Rings3" layout="horizontal" type="ranges" bufferstyle="Default" line0="1,115-116,114-111,100-94,83-77,66-60,49-43,32-30,22-19" line1="4,,120,,129,,130,,131,,135-136,,137,,138,,142,,143,,144-145,,149,,150,,151,,152,156,,157,,158,,159,,28,,16" line2=",,124,,,,,214,,,,210,,,,,198,,,,,194,,,,182,,,,,178,,,,,166,,,,164,,">
+  <ControllerConnection/>
+</subModel>
+<subModel name="StarStrands-01" layout="horizontal" type="ranges" bufferstyle="Default" line0="106-110,102-101,103-105">
+  <ControllerConnection/>
+</subModel>
+<subModel name="StarStrands-02" layout="horizontal" type="ranges" bufferstyle="Default" line0="89-93,85-84,86-88">
+  <ControllerConnection/>
+</subModel>
+<subModel name="StarStrands-03" layout="horizontal" type="ranges" bufferstyle="Default" line0="72-76,68-67,69-71">
+  <ControllerConnection/>
+</subModel>
+<subModel name="StarStrands-04" layout="horizontal" type="ranges" bufferstyle="Default" line0="55-59,51-50,52-54">
+  <ControllerConnection/>
+</subModel>
+<subModel name="StarStrands-05" layout="horizontal" type="ranges" bufferstyle="Default" line0="38-42,34-33,35-37">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Ruffles-01" layout="horizontal" type="ranges" bufferstyle="Default" line0="125-131,218-215">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Ruffles-02" layout="horizontal" type="ranges" bufferstyle="Default" line0="222-225,136-138,206-209">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Ruffles-03" layout="horizontal" type="ranges" bufferstyle="Default" line0="199-202,143-145,190-193">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Ruffles-04" layout="horizontal" type="ranges" bufferstyle="Default" line0="183-186,150-152,174-177">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Ruffles-05" layout="horizontal" type="ranges" bufferstyle="Default" line0="167-170,157-163">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Spokes-01" layout="horizontal" type="ranges" bufferstyle="Default" line0="123-117,114">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Spokes-02" layout="horizontal" type="ranges" bufferstyle="Default" line0="221,219-220,135,132,134-133,97">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Spokes-03" layout="horizontal" type="ranges" bufferstyle="Default" line0="204-203,205,142,139,141-140,80">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Spokes-04" layout="horizontal" type="ranges" bufferstyle="Default" line0="188-187,189,149,146,148-147,63">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Spokes-05" layout="horizontal" type="ranges" bufferstyle="Default" line0="172-171,173,156,153,155-154,46">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Spokes-06" layout="horizontal" type="ranges" bufferstyle="Default" line0="26-25,27,24,28,23,29,22">
+  <ControllerConnection/>
+</subModel>
+<subModel name="SpokesExtended-01" layout="horizontal" type="ranges" bufferstyle="Default" line0="123-117,114,116,113,115,112,1,111">
+  <ControllerConnection/>
+</subModel>
+<subModel name="SpokesExtended-02" layout="horizontal" type="ranges" bufferstyle="Default" line0="221,219-220,135,132,134-133,97-98,96,99,95,100,94">
+  <ControllerConnection/>
+</subModel>
+<subModel name="SpokesExtended-03" layout="horizontal" type="ranges" bufferstyle="Default" line0="204-203,205,142,139,141-140,80-81,79,82,78,83,77">
+  <ControllerConnection/>
+</subModel>
+<subModel name="SpokesExtended-04" layout="horizontal" type="ranges" bufferstyle="Default" line0="188-187,189,149,146,148-147,63-64,62,65,61,66,60">
+  <ControllerConnection/>
+</subModel>
+<subModel name="SpokesExtended-05" layout="horizontal" type="ranges" bufferstyle="Default" line0="172-171,173,156,153,155-154,46-47,45,48,44,49,43">
+  <ControllerConnection/>
+</subModel>
+<subModel name="SpokesExtended-06" layout="horizontal" type="ranges" bufferstyle="Default" line0="26-25,27,24,28,23,29,22,30,21,31,20,32,19">
+  <ControllerConnection/>
+</subModel>
+<modelGroup selected="0" name="GE Bunting  GRP" layout="minimalGrid" GridSize="400" LayoutGroup="Default" models="GE_Bunting"/>
+
+<modelGroup selected="0" name="GE Bunting Centers GRP" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Center"/>
+
+<modelGroup selected="0" name="GE Bunting Extended Spokes GRP" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/SpokesExtended-01,EXPORTEDMODEL/SpokesExtended-02,EXPORTEDMODEL/SpokesExtended-03,EXPORTEDMODEL/SpokesExtended-04,EXPORTEDMODEL/SpokesExtended-05,EXPORTEDMODEL/SpokesExtended-06"/>
+
+<modelGroup selected="0" name="GE Bunting Other GRP" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Other"/>
+
+<modelGroup selected="0" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" name="GE Bunting Rings  GRP" models="EXPORTEDMODEL/Edge,EXPORTEDMODEL/MiddleRing,EXPORTEDMODEL/InnerRing1"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="GE Bunting Rings Inner GRP" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/InnerRing1"/>
+
+<modelGroup selected="0" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" name="GE Bunting Rings Middle GRP" models="EXPORTEDMODEL/MiddleRing"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="GE Bunting Rings Outer GRP" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Edge"/>
+
+<modelGroup selected="0" name="GE Bunting Ruffles GRP" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Ruffles-01,EXPORTEDMODEL/Ruffles-02,EXPORTEDMODEL/Ruffles-03,EXPORTEDMODEL/Ruffles-04,EXPORTEDMODEL/Ruffles-05"/>
+
+<modelGroup selected="0" name="GE Bunting Spokes GRP" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Spokes-01,EXPORTEDMODEL/Spokes-02,EXPORTEDMODEL/Spokes-03,EXPORTEDMODEL/Spokes-04,EXPORTEDMODEL/Spokes-05,EXPORTEDMODEL/Spokes-06"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="GE Bunting Stars GRP" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/StarStrands-01,EXPORTEDMODEL/StarStrands-02,EXPORTEDMODEL/StarStrands-03,EXPORTEDMODEL/StarStrands-04,EXPORTEDMODEL/StarStrands-05"/>
+
+</custommodel>
