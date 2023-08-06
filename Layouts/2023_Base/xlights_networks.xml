@@ -1375,4 +1375,139 @@
   <testpreset name="Test">
     <channelr start="1" end="510"/>
   </testpreset>
+  <testpreset name="jj">
+    <channelr start="1" end="900"/>
+  </testpreset>
+  <testpreset name="Roof Left">
+    <channelr start="1" end="552"/>
+  </testpreset>
+  <testpreset name="All Trees">
+    <channelr start="0" end="31"/>
+  </testpreset>
+  <testpreset name="Tree 2">
+    <channelr start="8" end="15"/>
+  </testpreset>
+  <testpreset name="Tree 3">
+    <channelr start="16" end="23"/>
+  </testpreset>
+  <testpreset name="Tree 4">
+    <channelr start="23" end="31"/>
+  </testpreset>
+  <testpreset name="Blue Trees">
+    <channel id="0"/>
+    <channel id="4"/>
+    <channel id="8"/>
+    <channel id="12"/>
+    <channel id="16"/>
+    <channel id="20"/>
+    <channel id="24"/>
+    <channel id="28"/>
+  </testpreset>
+  <testpreset name="Red Trees">
+    <channel id="1"/>
+    <channel id="5"/>
+    <channel id="9"/>
+    <channel id="13"/>
+    <channel id="17"/>
+    <channel id="21"/>
+    <channel id="25"/>
+    <channel id="29"/>
+  </testpreset>
+  <testpreset name="Green Trees">
+    <channel id="2"/>
+    <channel id="6"/>
+    <channel id="10"/>
+    <channel id="14"/>
+    <channel id="18"/>
+    <channel id="22"/>
+    <channel id="26"/>
+    <channel id="30"/>
+  </testpreset>
+  <testpreset name="White Trees">
+    <channel id="3"/>
+    <channel id="7"/>
+    <channel id="11"/>
+    <channel id="15"/>
+    <channel id="19"/>
+    <channel id="23"/>
+    <channel id="27"/>
+    <channel id="31"/>
+  </testpreset>
+  <testpreset name="Family Red">
+    <channel id="512"/>
+    <channel id="515"/>
+    <channel id="518"/>
+    <channel id="521"/>
+    <channel id="524"/>
+    <channel id="527"/>
+    <channel id="530"/>
+    <channel id="533"/>
+    <channel id="536"/>
+    <channel id="539"/>
+    <channel id="542"/>
+    <channel id="545"/>
+    <channel id="548"/>
+    <channel id="551"/>
+    <channel id="554"/>
+    <channel id="557"/>
+    <channel id="560"/>
+    <channel id="563"/>
+    <channel id="566"/>
+    <channel id="569"/>
+  </testpreset>
+  <testpreset name="Windows Red">
+    <channel id="512"/>
+    <channel id="515"/>
+    <channel id="518"/>
+    <channel id="521"/>
+    <channel id="524"/>
+    <channel id="527"/>
+    <channel id="530"/>
+    <channel id="533"/>
+    <channel id="536"/>
+    <channel id="539"/>
+    <channel id="542"/>
+    <channel id="545"/>
+    <channel id="548"/>
+    <channel id="551"/>
+    <channel id="554"/>
+    <channel id="557"/>
+    <channel id="560"/>
+    <channel id="563"/>
+    <channel id="566"/>
+    <channel id="569"/>
+    <channel id="632"/>
+    <channel id="635"/>
+    <channel id="638"/>
+    <channel id="641"/>
+    <channel id="656"/>
+    <channel id="659"/>
+    <channel id="662"/>
+    <channel id="665"/>
+  </testpreset>
+  <testpreset name="color cycle">
+    <channelr start="0" end="4095"/>
+  </testpreset>
+  <testpreset name="RGB Cycle">
+    <channelr start="35" end="4095"/>
+  </testpreset>
+  <testpreset name="sss">
+    <channelr start="1" end="510"/>
+  </testpreset>
+  <testpreset name="Lor">
+    <channelr start="7651" end="8160"/>
+  </testpreset>
+  <testpreset name="Test first 8">
+    <channelr start="7659" end="8160"/>
+  </testpreset>
+  <testpreset name="2 nd Face">
+    <channelr start="7667" end="8160"/>
+  </testpreset>
+  <testpreset name="Face 3">
+    <channelr start="7675" end="8160"/>
+  </testpreset>
+  <testpreset name="4">
+    <channelr start="7699" end="7816"/>
+    <channelr start="7843" end="8160"/>
+  </testpreset>
 </Networks>
