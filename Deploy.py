@@ -1,13 +1,13 @@
 import subprocess
 import xlAutomation.xlDo
 
-srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2022_Base\\xlights_networks.xml"
-intnet="c:\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\xlights_networks.xml"
-dstnet="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\xlights_networks.xml"
+srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_networks.xml"
+intnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
+#dstnet="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
 
-srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2022_Base\\xlights_rgbeffects.xml"
-intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\xlights_rgbeffects.xml"
-dstrgb="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\xlights_rgbeffects.xml"
+srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_rgbeffects.xml"
+intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
+#dstrgb="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
 
 subprocess.run([
     "python",
@@ -23,13 +23,14 @@ subprocess.run([
     srcnet,
     intnet], shell=True, check=True)
 
-subprocess.run([
-    "copy", "/Y",
-    intnet,
-    dstnet], shell=True, check=True)
+if False:
+    subprocess.run([
+        "copy", "/Y",
+        intnet,
+        dstnet], shell=True, check=True)
 
-subprocess.run([
-    "copy","/Y",
-    intrgb,
-    dstrgb], shell=True, check=True)
+    subprocess.run([
+        "copy","/Y",
+        intrgb,
+        dstrgb], shell=True, check=True)
 

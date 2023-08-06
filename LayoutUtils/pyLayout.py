@@ -855,7 +855,7 @@ class GroupMemberChecker(Visitor):
             return
         for n in v.getAttribute('models').split(','):
             if n not in self.validNames:
-                print("WARNING: group '"+g.getAttribute('name')+"' contains reference to '"+n+"', which does not exist")
+                print("WARNING: view '"+v.getAttribute('name')+"' contains reference to '"+n+"', which does not exist")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=textwrap.dedent('''\
