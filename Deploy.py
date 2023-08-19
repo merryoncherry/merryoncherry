@@ -3,11 +3,11 @@ import xlAutomation.xlDo
 
 srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_networks.xml"
 intnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
-#dstnet="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
+dstnet="\\\\msi\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
 
 srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_rgbeffects.xml"
 intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
-#dstrgb="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
+dstrgb="\\\\msi\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
 
 subprocess.run([
     "python",
@@ -23,7 +23,7 @@ subprocess.run([
     srcnet,
     intnet], shell=True, check=True)
 
-if False:
+if True:
     subprocess.run([
         "copy", "/Y",
         intnet,
