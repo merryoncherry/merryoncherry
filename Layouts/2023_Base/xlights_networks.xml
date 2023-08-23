@@ -839,8 +839,24 @@
     <network ComPort="192.168.25.20" BaudRate="2044" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.20" BaudRate="2045" NetworkType="E131" MaxChannels="510"/>
   </Controller>
-  <Controller Id="13000" Name="Wally16_Attic" Description="16 port Wally Scott Attic" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.25.130" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.130" BaudRate="13000" NetworkType="DDP" MaxChannels="8352"/>
+  <Controller Id="1" Name="HP12V32_AtticW" Description="HinksPro 12V 32 4 Attic West" Type="Ethernet" Vendor="HinksPix" Model="PRO" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.25.180" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
+    <network ComPort="192.168.25.180" BaudRate="18000" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.180" BaudRate="18001" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.180" BaudRate="18002" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.180" BaudRate="18003" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.180" BaudRate="18004" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.180" BaudRate="18005" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.180" BaudRate="18006" NetworkType="E131" MaxChannels="300"/>
+    <network ComPort="192.168.25.180" BaudRate="18007" NetworkType="E131" MaxChannels="300"/>
+    <network ComPort="192.168.25.180" BaudRate="18008" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.180" BaudRate="18009" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.180" BaudRate="18010" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.180" BaudRate="18011" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.180" BaudRate="18012" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.180" BaudRate="18013" NetworkType="E131" MaxChannels="66"/>
+  </Controller>
+  <Controller Id="13000" Name="Wally16_Attic" Description="16 port Wally Scott Attic" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Inactive" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.25.130" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.130" BaudRate="13000" NetworkType="DDP" MaxChannels="4176"/>
   </Controller>
   <Controller Id="13200" Name="Wally16_DriveL" Description="Wally 12V 16 Driveway Left Side of Arch" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.27.132" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.27.132" BaudRate="13200" NetworkType="DDP" MaxChannels="24155"/>
@@ -1321,6 +1337,19 @@
   <testpreset name="chase">
     <channelr start="1" end="3072"/>
   </testpreset>
+  <testpreset name="Test Tree - 1 Only">
+    <channelr start="1" end="510"/>
+  </testpreset>
+  <testpreset name="Test">
+    <channelr start="1" end="510"/>
+  </testpreset>
+  <testpreset name="TEST 1">
+    <channelr start="0" end="1678"/>
+  </testpreset>
+  <testpreset name="test on"/>
+  <testpreset name="TEST 2">
+    <channelr start="0" end="347"/>
+  </testpreset>
   <testpreset name="falcon test">
     <channelr start="97" end="286"/>
     <channelr start="8447" end="9976"/>
@@ -1352,23 +1381,10 @@
   <testpreset name="singtree">
     <channelr start="107069" end="107989"/>
   </testpreset>
-  <testpreset name="TEST 1">
-    <channelr start="0" end="1678"/>
-  </testpreset>
-  <testpreset name="test on"/>
-  <testpreset name="TEST 2">
-    <channelr start="0" end="347"/>
-  </testpreset>
   <testpreset name="Test Star">
     <channelr start="9691" end="11220"/>
   </testpreset>
   <testpreset name="vv">
-    <channelr start="1" end="510"/>
-  </testpreset>
-  <testpreset name="Test Tree - 1 Only">
-    <channelr start="1" end="510"/>
-  </testpreset>
-  <testpreset name="Test">
     <channelr start="1" end="510"/>
   </testpreset>
   <testpreset name="jj">
