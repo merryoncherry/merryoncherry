@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Networks computer="MSI2" GlobalFPPProxy="" GlobalForceLocalIP="">
   <suppressframes frames="20"/>
+  <Controller Id="1" Name="HP12V_Lab" Description="" Type="Ethernet" Vendor="HinksPix" Model="PRO" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.25.10" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ComPort="192.168.25.10" BaudRate="1000" NetworkType="E131" MaxChannels="510"/>
+  </Controller>
   <Controller Id="1" Name="LRRO12_Porch" Description="HinksPro LRR Only Porch Roof" Type="Ethernet" Vendor="HinksPix" Model="PRO" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.26.160" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
     <network ComPort="192.168.26.160" BaudRate="16000" NetworkType="E131" MaxChannels="300"/>
     <network ComPort="192.168.26.160" BaudRate="16001" NetworkType="E131" MaxChannels="300"/>
@@ -231,6 +234,9 @@
     <network ComPort="192.168.26.30" BaudRate="3126" NetworkType="E131" MaxChannels="87"/>
     <network ComPort="192.168.26.30" BaudRate="3127" NetworkType="E131" MaxChannels="108"/>
     <network ComPort="192.168.26.30" BaudRate="3128" NetworkType="E131" MaxChannels="498"/>
+  </Controller>
+  <Controller Id="13000" Name="Wally16_PorchW" Description="16 port Wally Scott Front Porch West" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.26.130" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.26.130" BaudRate="13000" NetworkType="DDP" MaxChannels="1"/>
   </Controller>
   <Controller Id="1" Name="HP12V32_WSide" Description="HinksPro 12V 32 4 West House Wall" Type="Ethernet" Vendor="HinksPix" Model="PRO" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.26.90" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
     <network ComPort="192.168.26.90" BaudRate="9000" NetworkType="E131" MaxChannels="300"/>
@@ -867,9 +873,6 @@
     <network ComPort="192.168.25.180" BaudRate="18039" NetworkType="E131" MaxChannels="90"/>
     <network ComPort="192.168.25.180" BaudRate="18040" NetworkType="E131" MaxChannels="90"/>
     <network ComPort="192.168.25.180" BaudRate="18041" NetworkType="E131" MaxChannels="90"/>
-  </Controller>
-  <Controller Id="13000" Name="Wally16_Attic" Description="16 port Wally Scott Attic" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Inactive" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.25.130" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.130" BaudRate="13000" NetworkType="DDP" MaxChannels="1"/>
   </Controller>
   <Controller Id="13200" Name="Wally16_DriveL" Description="Wally 12V 16 Driveway Left Side of Arch" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" IP="192.168.27.132" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.27.132" BaudRate="13200" NetworkType="DDP" MaxChannels="24155"/>
@@ -1534,5 +1537,90 @@
   <testpreset name="4">
     <channelr start="7699" end="7816"/>
     <channelr start="7843" end="8160"/>
+  </testpreset>
+  <testpreset name="asd">
+    <channelr start="1" end="510"/>
+  </testpreset>
+  <testpreset name="Test1">
+    <channelr start="1531" end="2040"/>
+  </testpreset>
+  <testpreset name="testALL">
+    <channelr start="1" end="46080"/>
+  </testpreset>
+  <testpreset name="test arches"/>
+  <testpreset name="Test Arches"/>
+  <testpreset name="2 arches">
+    <channelr start="1" end="300"/>
+  </testpreset>
+  <testpreset name="All Chase - Red/White">
+    <channelr start="1" end="10128"/>
+  </testpreset>
+  <testpreset name="all">
+    <channelr start="1" end="11124"/>
+  </testpreset>
+  <testpreset name="off"/>
+  <testpreset name="revised 2016"/>
+  <testpreset name="megatree">
+    <channelr start="544" end="2307"/>
+  </testpreset>
+  <testpreset name="roofline">
+    <channelr start="2308" end="3099"/>
+  </testpreset>
+  <testpreset name="PEAK">
+    <channelr start="2308" end="2451"/>
+  </testpreset>
+  <testpreset name="star"/>
+  <testpreset name="window 1">
+    <channelr start="1" end="972"/>
+  </testpreset>
+  <testpreset name="Test 1">
+    <channelr start="1" end="10718"/>
+  </testpreset>
+  <testpreset name="E682">
+    <channelr start="2922" end="6610"/>
+  </testpreset>
+  <testpreset name="AC Lights">
+    <channelr start="1" end="473"/>
+    <channelr start="5472" end="5981"/>
+  </testpreset>
+  <testpreset name="lft fan">
+    <channelr start="440" end="1231"/>
+  </testpreset>
+  <testpreset name="testba"/>
+  <testpreset name="Megatree test">
+    <channelr start="249" end="284"/>
+  </testpreset>
+  <testpreset name="FirstEverTest">
+    <channelr start="15166" end="15315"/>
+  </testpreset>
+  <testpreset name="test string">
+    <channelr start="1" end="512"/>
+  </testpreset>
+  <testpreset name="strips test">
+    <channelr start="1" end="3675"/>
+  </testpreset>
+  <testpreset name="Front Door Test">
+    <channelr start="1" end="510"/>
+  </testpreset>
+  <testpreset name="Adams Test">
+    <channelr start="1" end="4096"/>
+  </testpreset>
+  <testpreset name="Test_1">
+    <channelr start="1" end="512"/>
+  </testpreset>
+  <testpreset name="TestTopLeftEave">
+    <channelr start="1" end="510"/>
+  </testpreset>
+  <testpreset name="Test4String">
+    <channelr start="1" end="1260"/>
+  </testpreset>
+  <testpreset name="TestChase">
+    <channelr start="1" end="1260"/>
+  </testpreset>
+  <testpreset name="univ13">
+    <channelr start="6121" end="6630"/>
+  </testpreset>
+  <testpreset name="TestAll">
+    <channelr start="1" end="43008"/>
   </testpreset>
 </Networks>
