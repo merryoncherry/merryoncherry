@@ -1,16 +1,16 @@
 import subprocess
 import xlAutomation.xlDo
 
-srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2022_Base\\xlights_networks.xml"
-intnet="c:\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\xlights_networks.xml"
-dstnet="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\xlights_networks.xml"
+srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_networks.xml"
+intnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
+dstnet="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
 
-srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2022_Base\\xlights_rgbeffects.xml"
-intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\xlights_rgbeffects.xml"
-dstrgb="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\xlights_rgbeffects.xml"
+srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_rgbeffects.xml"
+intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
+dstrgb="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
 
 xlenv = xlAutomation.xlDo.XLEnv()
-xlenv.data = 'c:\\Users\\Chuck\\Documents\\xlightsShows\\2022_Halloween'
+xlenv.data = 'c:\\Users\\Chuck\\Documents\\xlightsShows\\2023_Halloween'
 
 wasRunning = xlenv.isXLightsRunning(True)
 
@@ -19,53 +19,73 @@ if not wasRunning:
 
 xlenv.changeShowFolder()
 
-if False:
+if True:
     msg = xlenv.batchRenderSeqList([
-    "30 Second Jeopardy Spooky.xsq",
-    "30 Second Timer With Jeopardy Thinking Music.xsq",
-    "AddamsFamily_RGBSeq_V0.xsq",
+    #"30 Second Jeopardy Spooky.xsq",
+    #"30 Second Timer With Jeopardy Thinking Music.xsq",
+    "AddamsFamily.xsq",
     "BackgroundTuneTo.xsq",
     "BackgroundTuneToParkOnRight.xsq",
-    "BlueMoon.xsq",
-    "BringMeToLife_Vivid_V0.xsq",
-    "Bruno_RGBSeq_V1.xsq",
-    "CameraWarmup.xsq",
-    "Casper the Friendly Ghost 1950   Intro Opening Lilly.xsq",
-    "DevilWentDownToGeorgia",
-    "DisneyVillainsV0.xsq",
-    "DuHast_V2.xsq",
-    "EnterSandman_MLS.xsq",
-    "evilintro.xsq",
-    "FriendLikeMe_Visionary_V0.xsq",
+    "Bang.xsq",
+    "BarbieGirl.xsq",
+    "Beggin.xsq",
+    #"BlueMoon.xsq",
+    "Bones.xsq",
+    "BringMeToLife.xsq",
+    "Bruno.xsq",
+    #"CameraWarmup.xsq",
+    #"Casper the Friendly Ghost 1950   Intro Opening Lilly.xsq",
+    "DevilInside.xsq",
+    #"DevilWentDownToGeorgia.xsq",
+    "Dragula.xsq",
+    "DuHast.xsq",
+    "Dynamite.xsq",
+    "EnterSandman.xsq",
+    #"evilintro.xsq",
+    "ET.xsq",
+    "Everlong.xsq",
+    #"FriendLikeMe_Visionary_V0.xsq",
     "GhostBustersIntro.xsq",
-    "GhostbustersPPDV2.xsq",
-    "HalloweenHorrorLights_2020_V0.xsq",
-    "HalloweenHorrorLights_2021_V0.xsq",
-    "HalloweenHorrorLights_2022_V1.xsq",
+    "Ghostbusters.xsq",
+    #"HalloweenHorrorLights_2020_V0.xsq",
+    #"HalloweenHorrorLights_2022_V1.xsq",
     ])
     print (msg)
 
-if False:
+if True:
     msg = xlenv.batchRenderSeqList([
     "HauntedHeart.xsq",
-    "IPutASpellOnYou_HocusPocus_RGBSeq_V0.xsq",
-    "MadWorld_V0.xsq",
-    "MasterOfPuppets_Visionary_V1.xsq",
-    "MJ_Mix_MLS.xsq",
-    "Monster_PixelPerfectSeq_V1.xsq",
-    "MonsterMash_xS_V7.xsq",
-    "PurplePeopleEaterPPDV0.xsq",
-    "SeparateWays_StrangerThings_Vivid_V0.xsq",
-    "SeletonSam_BF.xsq",
-    "SmellsLikeTeenSpirit.xsq",
-    "SmoothCriminal_RGBSeq_V0.xsq",
+    "InfernoOfScarySkeletons.xsq",
+    "IPutASpellOnYou.xsq",
+    "Kashmir.xsq",
+    "LightEmUp.xsq",
+    "LivinOnAPrayer.xsq",
+    #"MadWorld_V0.xsq",
+    "Mambo5.xsq",
+    #"MasterOfPuppets_Visionary_V1.xsq",
+    "MJMix.xsq",
+    #"Monster_PixelPerfectSeq_V1.xsq",
+    #"MonsterMash_xS_V7.xsq",
+    "OogieBoogie.xsq",
+    "PurplePeopleEater.xsq",
+    "Rasputin.xsq",
+    "Roar.xsq",
+    #"SeparateWays_StrangerThings_Vivid_V0.xsq",
+    #"SeletonSam_BF.xsq",
+    #"SmellsLikeTeenSpirit.xsq",
+    "SmoothCriminal.xsq",
     "SomebodyWatchingMe.xsq",
-    "ThisIsHalloween_MLS.xsq",
-    "Thriller_V0.xsq",
+    #"ThisIsHalloween_MLS.xsq",
+    #"Thriller_V0.xsq",
+    "ToxicRemix.xsq",
+    "Villains.xsq",
+    "WhenTheLightsComeOn.xsq",
     "WhereEvilGrows.xsq",
-    "WitchDoctorV0.xsq",
-    "Youngblood_Visionary_V1.xsq",
-    "ZombiePPD.xsq",
+    "WitchDoctor.xsq",
+    #"Youngblood_Visionary_V1.xsq",
+    "YouMakeMeFeelLikeItsHalloween.xsq",
+    "YouShookMeAllNightLong.xsq",
+    "Zombie.xsq",
     ])
     print (msg)
 
