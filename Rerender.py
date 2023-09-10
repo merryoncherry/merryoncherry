@@ -17,9 +17,13 @@ wasRunning = xlenv.isXLightsRunning(True)
 if not wasRunning:
     xlenv.startXLights()
 
+print("xLights now running.")
+
 xlenv.changeShowFolder()
 
-if True:
+doall = False
+
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     #"30 Second Jeopardy Spooky.xsq",
     #"30 Second Timer With Jeopardy Thinking Music.xsq",
@@ -36,6 +40,11 @@ if True:
     #"CameraWarmup.xsq",
     #"Casper the Friendly Ghost 1950   Intro Opening Lilly.xsq",
     "DevilInside.xsq",
+    ])
+    print (msg)
+
+if doall or False:
+    msg = xlenv.batchRenderSeqList([
     #"DevilWentDownToGeorgia.xsq",
     "Dragula.xsq",
     "DuHast.xsq",
@@ -52,7 +61,7 @@ if True:
     ])
     print (msg)
 
-if True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "HauntedHeart.xsq",
     "InfernoOfScarySkeletons.xsq",
@@ -73,8 +82,13 @@ if True:
     #"SeparateWays_StrangerThings_Vivid_V0.xsq",
     #"SeletonSam_BF.xsq",
     #"SmellsLikeTeenSpirit.xsq",
+    ])
+    print (msg)
+
+if doall or True:
+    msg = xlenv.batchRenderSeqList([
     "SmoothCriminal.xsq",
-    "SomebodyWatchingMe.xsq",
+    "SomebodysWatchingMe.xsq",
     #"ThisIsHalloween_MLS.xsq",
     #"Thriller_V0.xsq",
     "ToxicRemix.xsq",
@@ -89,7 +103,7 @@ if True:
     ])
     print (msg)
 
-if True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
         "SBSpooky_YouRang_Faster.xsq",
         "SBSpooky_YouRang_V1.xsq",
@@ -113,6 +127,6 @@ if not wasRunning:
 
 subprocess.run([
     "copy", "/Y",
-    "c:\\users\\chuck\\documents\\xlightsShows\\2022_Halloween\\*.fseq",
-    "\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Halloween"], shell=True, check=True)
+    "c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\*.fseq",
+    "\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Halloween"], shell=True, check=True)
 

@@ -64,7 +64,7 @@ class XLEnv:
         self.xlightsRunning = 2
         self.xscheduleRunning = 2
         self.xlhost = "127.0.0.1"
-        self.xlport = 49913
+        self.xlport = 49914
         self.xshost = "127.0.0.1"
         self.xsport = 80
 
