@@ -35,10 +35,6 @@ import xlAutomation.xsqFile
 # H in the range [0, 360), and S, V in the range [0, 1].
 # Will invert the gamma correction as part of calculation
 def rgb_to_hsv(r, g, b, invgamma):
-    r_inv = ((r / max_val) ** (1/gamma)) * max_val
-    g_inv = ((g / max_val) ** (1/gamma)) * max_val
-    b_inv = ((b / max_val) ** (1/gamma)) * max_val
-
     r, g, b = (r / 255.0) ** invgamma, (g / 255.0) ** invgamma, (b / 255.0) ** invgamma
     M, m = max(r, g, b), min(r, g, b)
     C = M - m
@@ -68,10 +64,41 @@ class Histogram:
         self.maxV = 0
         self.nNonBlack = 0
         self.nSamples = 0
-        self.VHist = [0] * 100
-        self.HHist = [0] * 180
-        self.SHist = [0] * 100
-        self.HSHist = [0] * 18000
+        self.HHist = [0] * 181 # Hue histogram; if it is gray it will be elsewhere (GHist)
+        self.GHist = [0] * 101 # Grayscale colors (not in HHist)
+        self.VHist = [0] * 101 # Brightness overall - all nonblack
+        self.SHist = [0] * 101 # Saturation histogram
+        self.HSHist = [0] * (180*101) # Hue and saturation together; grayscale is not in here, see GHist
+
+    def update(self, model, raw):
+        rp = 0
+        l = len(raw)
+        invgamma = 1.0/model.gamma
+        while rp+2 < l:
+            r = raw[rp + model.r]
+            g = raw[rp + model.g]
+            b = raw[rp + model.b]
+            rp = rp + 3
+            self.nSamples = self.nSamples + 1
+            h, s, v = rgb_to_hsv(r, g, b, invgamma)
+
+            if v < self.minV:
+                self.minV = v
+            if v > self.maxV:
+                self.maxV = v
+            if r == 0 and g == 0 and b == 0:
+                continue
+
+            self.nNonBlack = self.nNonBlack + 1
+
+            if (s == 0):
+                self.GHist[int(v * 100)] += 1
+                self.VHist[int(v * 100)] += 1
+            else :
+                self.VHist[int(v * 100)] += 1
+                self.HHist[int(h / 2)] += 1
+                self.SHist[int(s * 100)] += 1
+                self.HSHist[int(h/2) * 101 + int(s*100)] += 1
 
 class CChoice:
     def __init__(self):
@@ -86,6 +113,7 @@ class FrameInfo:
         self.choices = []
         self.nLit = 0
         self.vMax = 0
+        self.ms = 0
 
 def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, frames, srcmodels):
     hjson = {}
@@ -233,8 +261,6 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
         curms = 0
         globalcrc = 0
 
-        hjson['framecrcs']=[]
-
         for blk in compblocklist:
             (sframe, dsz) = blk
             if (sframe != curframe):
@@ -249,9 +275,10 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
             foffset = 0
             #print("Raw len: "+str(len(raw))+"; step size "+str(stepsz))
             while (foffset < len(raw)) :
+                finfo = FrameInfo()
+                hist = Histogram()
+                finfo.ms = curms
                 frame = raw[foffset: foffset + stepsz]
-                #if (not allzero(frame)):
-                #    pass
 
                 # Go through each model and do some CRC there
                 for m in models:
@@ -259,7 +286,7 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                         # Not interested in this model
                         continue
                     sch = m.startch
-                    ech = m.startch + m.nch if m.nch > 0 else ccount
+                    ech = m.startch + m.nch if m.nch >= 0 else ccount
 
                     # See if we have data for the model, considering sparse range
                     curoff = 0
@@ -267,17 +294,22 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                         (rstart, rcnt) = schrng
                         if sch >= rstart and ech <= rstart+rcnt:
                             msub = frame[curoff + sch - rstart : curoff + ech - rstart]
-                            # TODO Do color stuff for  model in its entirety
-                            #m.crc = binascii.crc32(msub, m.crc)
-                            #allz = allzero(msub)
+                            # Do color stuff for model in its entirety
+                            hist.update(m, msub)
                         curoff += rcnt
 
+                #print('Frame '+str(curframe)+' done')
                 foffset += stepsz
                 curframe = curframe + 1
                 curms = curms + stepms
+                frames.append(finfo)
+
+                # TODO: Analyze the info we got
+
 
             if (foffset != len(raw)):
                 raise Exception("Partial frame")
+
 
         if (curframe != nframes):
             raise Exception("Frame count mismatch")
@@ -287,15 +319,15 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
 # TODO: This is a ridiculous amount of work
 #x Read the input file
 #x Read the layout to
-#   establish target model
-#   and color order
-#   and reverse gamma
-#  Read the .fseq file
-#  Get the typical color from the frame - sample or all?
-#   Do this as HSV buckets
+#?  establish target model
+#?  and color order
+#?  and reverse gamma
+#x Read the .fseq file
+#x Get the typical color from the frame - sample or all?
+#?  Do this as HSV buckets
 #   Get a sense of popularity and brightness
 #   Pick out the most popular and knock it out
-#   Pick out the second most popular
+#   Pick out the second to 4th most popular
 #   Get a sense of overall significance energy level
 #   Pick the times to do the changes
 #   Make effects
