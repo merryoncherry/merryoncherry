@@ -26,6 +26,7 @@
 import argparse
 import textwrap
 import sys
+import zstandard
 
 sys.path.append('../merryoncherry')
 import xlAutomation.fseqFile
@@ -84,8 +85,9 @@ class FrameInfo:
     def __init__(self):
         self.choices = []
         self.nLit = 0
+        self.vMax = 0
 
-def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttracks, keepmodelspertiming):
+def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, frames, srcmodels):
     hjson = {}
     with open(sfile, 'rb') as fh:
         hdr = fh.read(4)
@@ -110,10 +112,10 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
             minver = 0
             majver = 2
 
-            modelcnt = read32bit(fh)
-            stepsz = read32bit(fh)
-            modelstart = read32bit(fh)
-            ccount = modelsize = read32bit(fh)
+            modelcnt = xlAutomation.fseqFile.read32bit(fh)
+            stepsz = xlAutomation.fseqFile.read32bit(fh)
+            modelstart = xlAutomation.fseqFile.read32bit(fh)
+            ccount = modelsize = xlAutomation.fseqFile.read32bit(fh)
 
             hjson["modelcount"] = modelcnt
             hjson["stepsize"] = stepsz
@@ -128,24 +130,24 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
             chrangelist.append((modelstart, modelsize))
 
         else:
-            off2chdata = read16bit(fh)
-            minver = read8bit(fh)
-            majver = read8bit(fh)
+            off2chdata = xlAutomation.fseqFile.read16bit(fh)
+            minver = xlAutomation.fseqFile.read8bit(fh)
+            majver = xlAutomation.fseqFile.read8bit(fh)
 
             isv1 = True if majver == 1 else False
 
             #print("offset to channel data: "+str(off2chdata))
-            hjson['chdata_offset']=off2chdata
+            hjson['chdata_offset'] = off2chdata
             #print("Version "+str(majver)+'.'+str(minver))
             hjson['majver'] = majver
             hjson['minver'] = minver
 
-            shdrlen = read16bit(fh)
-            ccount = read32bit(fh)
+            shdrlen = xlAutomation.fseqFile.read16bit(fh)
+            ccount = xlAutomation.fseqFile.read32bit(fh)
             stepsz = int((ccount + 3) / 4) * 4
-            nframes = read32bit(fh)
-            stepms = read8bit(fh)
-            reserved = read8bit(fh)
+            nframes = xlAutomation.fseqFile.read32bit(fh)
+            stepms = xlAutomation.fseqFile.read8bit(fh)
+            reserved = xlAutomation.fseqFile.read8bit(fh)
 
             hjson['fixedhdr'] = shdrlen
             hjson['channels'] = ccount
@@ -154,11 +156,11 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
             hjson['reserved1'] = reserved
 
             if (isv1):
-                univcnt = read16bit(fh)
-                univsz = read16bit(fh)
-                gamma = read8bit(fh)
-                colorenc = read8bit(fh)
-                reserved = read16bit(fh)
+                univcnt = xlAutomation.fseqFile.read16bit(fh)
+                univsz = xlAutomation.fseqFile.read16bit(fh)
+                gamma = xlAutomation.fseqFile.read8bit(fh)
+                colorenc = xlAutomation.fseqFile.read8bit(fh)
+                reserved = xlAutomation.fseqFile.read16bit(fh)
                 hjson['univcnt'] = univcnt
                 hjson['universesize'] = univsz
                 hjson['gamma'] = gamma
@@ -168,15 +170,15 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                 # Double check this math, is it rounded up?
                 compblocklist.append((0, nframes*ccnt))
             else:
-                compandblks = read8bit(fh)
+                compandblks = xlAutomation.fseqFile.read8bit(fh)
                 comp = compandblks & 15
                 blks = (compandblks & 240) * 16
-                blks += read8bit(fh)
+                blks += xlAutomation.fseqFile.read8bit(fh)
                 #print ("blocks: "+str(blks))
-                nranges = read8bit(fh)
-                reserved = read8bit(fh)
-                uuid1 = read32bit(fh)
-                uuid2 = read32bit(fh)
+                nranges = xlAutomation.fseqFile.read8bit(fh)
+                reserved = xlAutomation.fseqFile.read8bit(fh)
+                uuid1 = xlAutomation.fseqFile.read32bit(fh)
+                uuid2 = xlAutomation.fseqFile.read32bit(fh)
 
                 hjson['compression'] = comp
                 hjson['compblks'] = blks
@@ -190,8 +192,8 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                 seenEmpty = False
                 hjson['compblocklist'] = []
                 for i in range(0, blks):
-                    framenum = read32bit(fh)
-                    blocksize = read32bit(fh)
+                    framenum = xlAutomation.fseqFile.read32bit(fh)
+                    blocksize = xlAutomation.fseqFile.read32bit(fh)
                     if not blocksize:
                         seenEmpty = True
                         if framenum:
@@ -206,8 +208,8 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                 # Sparse ranges: 3 ch num, 3 num ch
                 hjson['chranges'] = []
                 for i in range(0, nranges):
-                    startnum = read24bit(fh)
-                    chcount = read24bit(fh)
+                    startnum = xlAutomation.fseqFile.read24bit(fh)
+                    chcount = xlAutomation.fseqFile.read24bit(fh)
                     chrangelist.append((startnum, chcount))
                     hjson['chranges'].append({'startch':startnum, 'chcount':chcount})
             if not chrangelist:
@@ -217,7 +219,7 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
             vlheaders = {}
             while (fh.tell() + 4 <= off2chdata):
                 #print ("At "+str(fh.tell())+" vs " + str(shdrlen))
-                hlen = read16bit(fh) - 4
+                hlen = xlAutomation.fseqFile.read16bit(fh) - 4
                 hname = str(fh.read(2), 'utf-8')
                 #print ("Header "+hname+": "+str(hlen))
                 hval = str(fh.read(hlen), 'utf-8')
@@ -248,25 +250,14 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
             #print("Raw len: "+str(len(raw))+"; step size "+str(stepsz))
             while (foffset < len(raw)) :
                 frame = raw[foffset: foffset + stepsz]
-                if (not allzero(frame)):
-                    crc32 = (binascii.crc32(frame) & 0xFFFFFFFF)
-                    hjson['framecrcs'].append({'frame': curframe, 'crc': crc32})
-
-                # Advance to current frame and adjust CRC
-                for tt in ttracks:
-                    if tt.current >= len(tt.entlist):
-                        continue
-                    while curms >= tt.entlist[tt.current].endms:
-                        tt.current += 1
-                        if tt.current >= len(tt.entlist):
-                            break
-                    if tt.current >= len(tt.entlist):
-                        continue
-                    if curms >= tt.entlist[tt.current].startms:
-                        tt.entlist[tt.current].crc = binascii.crc32(frame, tt.entlist[tt.current].crc)
+                #if (not allzero(frame)):
+                #    pass
 
                 # Go through each model and do some CRC there
-                for m in smodels:
+                for m in models:
+                    if srcmodels and len(srcmodels) and m.name not in srcmodels:
+                        # Not interested in this model
+                        continue
                     sch = m.startch
                     ech = m.startch + m.nch if m.nch > 0 else ccount
 
@@ -276,27 +267,11 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
                         (rstart, rcnt) = schrng
                         if sch >= rstart and ech <= rstart+rcnt:
                             msub = frame[curoff + sch - rstart : curoff + ech - rstart]
-                            # CRC for model in its entirety
-                            m.crc = binascii.crc32(msub, m.crc)
-                            allz = allzero(msub)
-                            if not allz :
-                                m.empty = False
-                            if keepmodelspertiming:
-                                # CRC for model in each timing section
-                                for tt in ttracks:
-                                    if tt.current >= len(tt.entlist):
-                                        continue
-                                    mmm = tt.entlist[tt.current].models
-                                    if m.name not in mmm:
-                                        mmm[m.name] = ModelRec(m.name, m.typ, m.startch, m.nch)
-                                    mmm[m.name].crc = binascii.crc32(msub, mmm[m.name].crc)
-                                    if not allz:
-                                        mmm[m.name].empty = False
-
+                            # TODO Do color stuff for  model in its entirety
+                            #m.crc = binascii.crc32(msub, m.crc)
+                            #allz = allzero(msub)
                         curoff += rcnt
 
-
-                globalcrc = binascii.crc32(frame, globalcrc)
                 foffset += stepsz
                 curframe = curframe + 1
                 curms = curms + stepms
@@ -307,29 +282,6 @@ def calculateFSEQSummary(sfile, controllers, ctrlbyname, models, smodels, ttrack
         if (curframe != nframes):
             raise Exception("Frame count mismatch")
 
-        hjson['globalcrc'] =  globalcrc & 0xFFFFFFFF
-
-        # Add model CRCs
-        hjson['modelcrcs'] = []
-        mbyname = sorted(models, key = lambda m : m.name)
-        for m in mbyname:
-            if m.empty:
-                continue
-            hjson['modelcrcs'].append({'name':m.name,  'type':m.typ, 'crc':m.crc & 0xFFFFFFFF})
-
-        # Add CRCs by time
-        hjson['ttracks'] = {}
-        for tt in ttracks:
-            hjson['ttracks'][tt.name] = []
-            for ent in tt.entlist:
-                o =  {"label": ent.label, "start":ent.startms, "end":ent.endms, 'crc':ent.crc & 0xFFFFFFFF, "models":[]}
-                hjson['ttracks'][tt.name].append(o)
-                o = o["models"]
-                for mn in ent.models.keys():
-                    m = ent.models[mn]
-                    if (m.empty):
-                        continue;
-                    o.append({"name": m.name, 'type':m.typ, "crc": m.crc&0xFFFFFFFF})
     return hjson
 
 # TODO: This is a ridiculous amount of work
@@ -381,18 +333,30 @@ if __name__ == '__main__':
     ctrlbyname = {}
     models = []
     smodels = []
+    ttrack = None
 
     # Get controllers, models, timing tracks
     xlAutomation.fseqFile.readControllersAndModels(args.showdir, controllers, ctrlbyname, models, smodels)
     if args.inxsq:
         ttracks = []
         xlAutomation.xsqFile.readSequenceTimingTrack(args.inxsq, ttracks)
+        if args.timingtrack:
+            for tt in ttracks:
+                if tt.name == args.timingtrack:
+                    ttrack = tt
+            if not ttrack:
+                raise Exception("Timing track name "+args.timingtrack+" not found")
+        elif len(ttracks):
+            ttrack = ttracks[0]
 
     # Get the source model list
     srcmodels = []
     if args.modelsource:
         srcmodels = args.modelsource.split(',')
 
-    # Get the fseq file
+    frames = []
+    # Get the fseq file color summary
+    hjson = {}
+    calculateFSEQColorSummary(hjson, args.fseq, controllers, ctrlbyname, smodels, frames, srcmodels)
 
     # OK
