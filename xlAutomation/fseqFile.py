@@ -47,6 +47,10 @@ class ModelRec:
         self.empty = True
         self.typ = mtype
         self.crc = 0
+        self.simple = False # DMX, more or less than 3 colors, not "simple"
+        self.r = 0 # Offset from first channel assigned to a pixel
+        self.g = 1
+        self.b = 2
 
     def __repr__(self):
         return self.name + ":" + str(self.startch) + "," + str(self.nch)
@@ -114,7 +118,52 @@ def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
                 continue
             else:
                 raise Exception("Unknown channel string: "+chstr)
-            models.append(ModelRec(name, mtyp, channel, -1))
+            nmrec = ModelRec(name, mtyp, channel, -1)
+            if mdl.hasAttribute('StringType'):
+                strtyp = mdl.getAttribute('StringType')
+                if strtyp == 'RGB Nodes':
+                    nmrec.r = 0
+                    nmrec.g = 1
+                    nmrec.b = 2
+                    nmrec.simple = True
+                if strtyp == 'RBG Nodes':
+                    nmrec.r = 0
+                    nmrec.g = 2
+                    nmrec.b = 1
+                    nmrec.simple = True
+                if strtyp == 'GRB Nodes':
+                    nmrec.r = 1
+                    nmrec.g = 0
+                    nmrec.b = 2
+                    nmrec.simple = True
+                if strtyp == 'GBR Nodes':
+                    nmrec.r = 2
+                    nmrec.g = 0
+                    nmrec.b = 1
+                    nmrec.simple = True
+                if strtyp == 'BRG Nodes':
+                    nmrec.r = 1
+                    nmrec.g = 2
+                    nmrec.b = 0
+                    nmrec.simple = True
+                if strtyp == 'BGR Nodes':
+                    nmrec.r = 2
+                    nmrec.g = 1
+                    nmrec.b = 0
+                    nmrec.simple = True
+            for dc in mdl.childNodes:
+                if dc.nodeType == xml.dom.Node.ATTRIBUTE_NODE or dc.nodeType == xml.dom.Node.TEXT_NODE:
+                    continue
+                if (dc.tagName != 'dimmingCurve'):
+                    continue
+                for ddc in dc.childNodes:
+                    if ddc.nodeType == xml.dom.Node.ATTRIBUTE_NODE or ddc.nodeType == xml.dom.Node.TEXT_NODE:
+                        continue
+                    if (ddc.tagName != 'all'):
+                        continue
+                    if ddc.hasAttribute('gamma'):
+                        nmrec.gamma = float(ddc.getAttribute('gamma'))
+            models.append(nmrec)
 
     # Oh heck how to calculate channels per model
     #  Will we eventually just have to add specific logic?
