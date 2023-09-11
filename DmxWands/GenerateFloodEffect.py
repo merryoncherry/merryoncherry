@@ -24,6 +24,7 @@
 #     Use the secondary color also?
 
 import argparse
+import bisect
 import textwrap
 import sys
 import xml.dom
@@ -603,6 +604,32 @@ class SequenceGenerator:
                 adjdata = map.adjustEffect.adjustEffectData(ename, effectdata, palettedata, self.srcDisplayElements[oldname], self.validDisplayElements[toname],
                         self.source_fps, self.target_fps, self.availableMedia)
                 new_el.appendChild(self.createEffect(ename, stime, etime, adjdata, palettedata))
+
+
+class SparseSeq:
+    def __init__(self):
+        self.times = []
+        self.frames = {}
+
+    def insert(self, frame):
+        frames[frame.ms] = frame
+        bisect.insort(self.times, frame.ms)
+
+    def closest(self, time):
+        idx = bisect.bisect_left(self.times, time)
+
+        left = self.times[idx - 1] if idx - 1 >= 0 else None
+        right = self.times[idx] if idx < len(self.times) else None
+
+        lframe = None
+        rframe = None
+        if left:
+            lframe = frames[left]
+        if right:
+            rframe = frames[right]
+
+        return (lframe, rframe)
+
 
 # TODO: This is a ridiculous amount of work
 #x Read the input file
