@@ -152,6 +152,14 @@ class CChoice:
         self.S = 0;
         self.VTyp = 0
 
+    def valid(self):
+        if (self.VTyp > 0):
+            return True
+        return False
+
+    def invalidate(self):
+        self.VTyp = 0
+
 class FrameInfo:
     def __init__(self):
         self.choices = []
@@ -625,7 +633,7 @@ class SparseSeq:
 #   Pick the times to do the changes
 #x   Make effects
 #x Save
-#  Test it
+#x Test it
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=textwrap.dedent('''\
@@ -647,6 +655,8 @@ if __name__ == '__main__':
     # TODO:
     parser.add_argument('--inxsq', type=str, required = False, help='Input .xsq, for timing track to trigger colors')
     parser.add_argument('--timingtrack', type=str, required = False, help = 'Timing track to use as a hint for sending color') # For this you need an input sequence...
+    parser.add_argument('--minpopularity', type=int, default = 10, help = 'Minimum popularity of a color (in tenths of a percent) for it to be considered')
+    parser.add_argument('--ncolors', type=int, default = 1, help = "Number of colors to cycle between as the beats progress")
     # TODO: Color control
     #parser.add_argument('--ncolors', type=int, default=1, help='Number of colors to extract and use')
     #Some tuning of how to handle the energy level?
@@ -707,6 +717,16 @@ if __name__ == '__main__':
     # x  Write out the event with the appropriate shifts
     # x We should make the thing go dark at the end, right?
 
+    # Prune out the unpopular colors
+    for f in frames:
+        for i in range(0, len(f.choices)):
+            if i == 0:
+                pass
+                #continue
+            if f.choices[i].popularity * 1000 < f.nLit * args.minpopularity:
+                f.choices[i].popularity = 0
+                f.choices[i].invalidate()
+
     reqgap = int(args.controlwidth) + int(args.controlgap)
     ss = SparseSeq()
 
@@ -733,8 +753,9 @@ if __name__ == '__main__':
     ee = SeqEnt(frames[nframes-1])
     frames[nframes-1].setBlack()
     ss.insert(ee)
+    ncolors = int(args.ncolors)
 
-    # Generate effects... for now we're spamming it
+    # Generate effects...
     ctime = 0
     i = 0
     while i < len(ss.times):
@@ -746,7 +767,12 @@ if __name__ == '__main__':
                 break
 
         cframe = ss.frames[stime]
-        cc = cframe.frame.choices[0]
+        chosen = 0
+
+        if cframe.event:
+            if ncolors > 1:
+                chosen = ((cframe.tn-1) % ncolors) % 4
+        cc = cframe.frame.choices[chosen]
 
         #print("Event: "+str(i)+" cframe ms "+str(cframe.frame.ms) + " time " + str(stime))
 
