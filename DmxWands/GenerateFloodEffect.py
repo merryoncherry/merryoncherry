@@ -159,6 +159,21 @@ class CChoice:
 
     def invalidate(self):
         self.VTyp = 0
+        self.H = 0
+        self.S = 0
+        self.popularity = 0
+
+    def isDifferent(self, other):
+        if other is None:
+            return True
+        hdiff = abs(self.H - other.H)
+        if hdiff > 6 and hdiff < 354:
+            return True
+        if abs(self.S - other.S) > 10:
+            return True
+        if abs(self.VTyp - other.VTyp) > 10:
+            return True
+        return False
 
 class FrameInfo:
     def __init__(self):
@@ -657,6 +672,7 @@ if __name__ == '__main__':
     parser.add_argument('--timingtrack', type=str, required = False, help = 'Timing track to use as a hint for sending color') # For this you need an input sequence...
     parser.add_argument('--minpopularity', type=int, default = 10, help = 'Minimum popularity of a color (in tenths of a percent) for it to be considered')
     parser.add_argument('--ncolors', type=int, default = 1, help = "Number of colors to cycle between as the beats progress")
+    parser.add_argument('--changecolor', type=int, default = 0, help = "Try to change color when there is an event")
     # TODO: Color control
     #parser.add_argument('--ncolors', type=int, default=1, help='Number of colors to extract and use')
     #Some tuning of how to handle the energy level?
@@ -724,7 +740,7 @@ if __name__ == '__main__':
                 pass
                 #continue
             if f.choices[i].popularity * 1000 < f.nLit * args.minpopularity:
-                f.choices[i].popularity = 0
+                #print("Invalidate choice: "+str(i))
                 f.choices[i].invalidate()
 
     reqgap = int(args.controlwidth) + int(args.controlgap)
@@ -758,6 +774,8 @@ if __name__ == '__main__':
     # Generate effects...
     ctime = 0
     i = 0
+    lastChoice = None
+
     while i < len(ss.times):
         stime = ss.times[i]
         while 1:
@@ -768,11 +786,19 @@ if __name__ == '__main__':
 
         cframe = ss.frames[stime]
         chosen = 0
+        cc = cframe.frame.choices[chosen]
 
         if cframe.event:
             if ncolors > 1:
                 chosen = ((cframe.tn-1) % ncolors) % 4
-        cc = cframe.frame.choices[chosen]
+            cc = cframe.frame.choices[chosen]
+
+            if args.changecolor:
+                for ccc in range(0, 4):
+                    if cframe.frame.choices[(chosen + ccc) % 4].isDifferent(lastChoice):
+                        cc = cframe.frame.choices[(chosen + ccc) % 4]
+                        #print ("Changed by: "+str(ccc))
+                        break
 
         #print("Event: "+str(i)+" cframe ms "+str(cframe.frame.ms) + " time " + str(stime))
 
@@ -781,6 +807,8 @@ if __name__ == '__main__':
             #r, g, b = hsv_to_rgb(cc.H, cc.S, 100)
         else:
             r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
+
+        lastChoice = cc
 
         ctrlstime = max(stime - int(args.controladvance), 0)
         ctrletime = max(stime - int(args.controladvance) + int(args.controlwidth), 0)
