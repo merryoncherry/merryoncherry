@@ -326,9 +326,12 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
 
                     # See if we have data for the model, considering sparse range
                     curoff = 0
+                    #print("Model channel range "+str(sch)+"-"+str(ech))
                     for schrng in chrangelist:
                         (rstart, rcnt) = schrng
+                        #print("Seq channel range "+str(rstart)+"-"+str(rstart+rcnt))
                         if sch >= rstart and ech <= rstart+rcnt:
+                            #print("Using it... @"+str(sch-rstart))
                             msub = frame[curoff + sch - rstart : curoff + ech - rstart]
                             # Do color stuff for model in its entirety
                             #print("Starting model "+m.name)
