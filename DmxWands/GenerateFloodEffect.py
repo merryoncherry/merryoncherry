@@ -390,12 +390,12 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                         cc.VTyp = 100 # We don't have the V typical of that color; if we need it, we'd have to recompute it...
                                       # We could though.  If we aren't making it subservient to another formula anyway...
 
-                    if cc.S > 0:
-                        r, g, b = hsv_to_rgb(cc.H, cc.S, hist.maxV)
-                        #r, g, b = hsv_to_rgb(cc.H, cc.S, 100)
-                    else:
-                        r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
-                    #print ("Picked["+str(i)+"] "+str(r)+","+str(g)+","+str(b)+" @"+str(cc.popularity)+"/"+str(hist.nNonBlack))
+                    #if cc.S > 0:
+                    #    r, g, b = hsv_to_rgb(cc.H, cc.S, hist.maxV)
+                    #    #r, g, b = hsv_to_rgb(cc.H, cc.S, 100)
+                    #else:
+                    #    r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
+                    ##print ("Picked["+str(i)+"] "+str(r)+","+str(g)+","+str(b)+" @"+str(cc.popularity)+"/"+str(hist.nNonBlack))
 
                 finfo.nLit = hist.nNonBlack
                 finfo.vMax = hist.maxV
@@ -615,8 +615,8 @@ class SequenceGenerator:
 #?  Pick out the second to 4th most popular
 #?  Get a sense of overall significance energy level
 #   Pick the times to do the changes
-#   Make effects
-#  Save
+#x   Make effects
+#x Save
 #  Test it
 
 if __name__ == '__main__':
@@ -692,7 +692,15 @@ if __name__ == '__main__':
         stime = ctime 
         etime = stime + hjson['msperframe']
         ctime = etime
-        clrLayer.appendChild(resseq.createOnEffect(stime, etime, 255, 127, 0))
+
+        cc = frames[i].choices[0]
+        if cc.S > 0:
+            r, g, b = hsv_to_rgb(cc.H, cc.S, frames[i].vMax)
+            #r, g, b = hsv_to_rgb(cc.H, cc.S, 100)
+        else:
+            r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
+
+        clrLayer.appendChild(resseq.createOnEffect(stime, etime, r, g, b))
         ctrlLayer.appendChild(resseq.createDmxEffect(stime, etime, int(args.ch1val), int(args.ch2val)))
 
     # Do the write-out
