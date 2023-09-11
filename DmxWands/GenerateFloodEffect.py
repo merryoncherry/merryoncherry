@@ -37,8 +37,8 @@ import xlAutomation.xsqFile
 
 # H in the range [0, 360), and S, V in the range [0, 1].
 # Will invert the gamma correction as part of calculation
-def rgb_to_hsv(r, g, b, invgamma):
-    r, g, b = (r / 255.0) ** invgamma, (g / 255.0) ** invgamma, (b / 255.0) ** invgamma
+def rgb_to_hsv(r, g, b, invgamma, invbright):
+    r, g, b = (r * invbright / 255.0) ** invgamma, (g * invbright / 255.0) ** invgamma, (b * invbright / 255.0) ** invgamma
     M, m = max(r, g, b), min(r, g, b)
     C = M - m
     
@@ -113,13 +113,14 @@ class Histogram:
         rp = 0
         l = len(raw)
         invgamma = 1.0/model.gamma
+        invbright = 1.0/model.brightness
         while rp+2 < l:
             r = raw[rp + model.r]
             g = raw[rp + model.g]
             b = raw[rp + model.b]
             rp = rp + 3
             self.nSamples = self.nSamples + 1
-            h, s, v = rgb_to_hsv(r, g, b, invgamma)
+            h, s, v = rgb_to_hsv(r, g, b, invgamma, invbright)
 
             if v < self.minV:
                 self.minV = v

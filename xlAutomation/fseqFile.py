@@ -51,6 +51,8 @@ class ModelRec:
         self.r = 0 # Offset from first channel assigned to a pixel
         self.g = 1
         self.b = 2
+        self.gamma = 1
+        self.brightness = 1
 
     def __repr__(self):
         return self.name + ":" + str(self.startch) + "," + str(self.nch)
@@ -163,6 +165,8 @@ def readControllersAndModels(xldir, controllers, ctrlbyname, models, osmodels):
                         continue
                     if ddc.hasAttribute('gamma'):
                         nmrec.gamma = float(ddc.getAttribute('gamma'))
+                    if ddc.hasAttribute('brightness'):
+                        nmrec.brightness = min(1.0, (100.0+float(ddc.getAttribute('brightness')))/100.0)
             models.append(nmrec)
 
     # Oh heck how to calculate channels per model
