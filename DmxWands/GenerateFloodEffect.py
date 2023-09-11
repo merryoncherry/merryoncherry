@@ -517,8 +517,8 @@ class SequenceGenerator:
         new_doc = self.xdoc
         new_eff = new_doc.createElement('Effect')
         new_eff.setAttribute('name', ename)
-        new_eff.setAttribute('startTime', stime)
-        new_eff.setAttribute('endTime', etime)
+        new_eff.setAttribute('startTime', str(stime))
+        new_eff.setAttribute('endTime', str(etime))
         neffid = -1
         if effectdata in self.xfEffectToId:
             neffid = self.xfEffectToId[effectdata]
@@ -549,7 +549,7 @@ class SequenceGenerator:
 
     def generateSequence(self):
         # Emit the parts of the doc that have been saved up
-        new_root = self.xdoc
+        new_doc = self.xdoc
         i = 0
         while i < len(self.xfColorById):
             new_clr = new_doc.createElement('ColorPalette')
@@ -562,12 +562,6 @@ class SequenceGenerator:
             self.setText(new_eff, self.xfEffectById[i])
             self.effectdb.appendChild(new_eff)
             i = i + 1
-
-    def cloneChild(self, child, new_doc):
-        new_child = new_doc.createElement(child.tagName)
-        copy_attributes(child, new_child)
-        build_new_doc(child, new_child, new_doc)
-        return new_child
 
     def mapFromEntry(self, eff, oldname, toname):
         new_doc = self.transformedSequence
@@ -691,6 +685,15 @@ if __name__ == '__main__':
 
     ctrlLayer = resseq.createEffectElementLayer(args.targetcontrol)
     clrLayer = resseq.createEffectElementLayer(args.targetcolor)
+
+    # Generate effects... for now we're spamming it
+    ctime = 0
+    for i in range(0, hjson['frames']):
+        stime = ctime 
+        etime = stime + hjson['msperframe']
+        ctime = etime
+        clrLayer.appendChild(resseq.createOnEffect(stime, etime, 255, 127, 0))
+        ctrlLayer.appendChild(resseq.createDmxEffect(stime, etime, int(args.ch1val), int(args.ch2val)))
 
     # Do the write-out
     resseq.generateSequence()
