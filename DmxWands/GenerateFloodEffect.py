@@ -26,6 +26,8 @@
 import argparse
 import textwrap
 import sys
+import xml.dom
+import xml.dom.minidom as minidom
 import zstandard
 
 sys.path.append('../merryoncherry')
@@ -394,7 +396,7 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                         #r, g, b = hsv_to_rgb(cc.H, cc.S, 100)
                     else:
                         r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
-                    print ("Picked["+str(i)+"] "+str(r)+","+str(g)+","+str(b)+" @"+str(cc.popularity)+"/"+str(hist.nNonBlack))
+                    #print ("Picked["+str(i)+"] "+str(r)+","+str(g)+","+str(b)+" @"+str(cc.popularity)+"/"+str(hist.nNonBlack))
 
                 finfo.nLit = hist.nNonBlack
                 finfo.vMax = hist.maxV
@@ -407,6 +409,182 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
             raise Exception("Frame count mismatch")
 
     return hjson
+
+class SequenceGenerator:
+    def __init__(self, framems, nframes):
+        self.framems = framems
+
+        self.xdoc = minidom.Document()
+        self.xsq = self.emptyChild('xsequence')
+        self.xsq.setAttribute('BaseChannel', '0')
+        self.xsq.setAttribute('ChanCtrlBasic', '0')
+        self.xsq.setAttribute('ChanCtrlColor', '0')
+        self.xsq.setAttribute('FixedPointTiming', '1')
+        self.xsq.setAttribute('ModelBlending', 'true')
+        self.xdoc.appendChild(self.xsq)
+
+        self.head = self.emptyChild('head')
+        self.head.appendChild(self.emptyChild('author'))
+        self.head.appendChild(self.emptyChild('author-email'))
+        self.head.appendChild(self.emptyChild('author-website'))
+        self.head.appendChild(self.emptyChild('song'))
+        self.head.appendChild(self.emptyChild('artist'))
+        self.head.appendChild(self.emptyChild('album'))
+        self.head.appendChild(self.emptyChild('MusicURL'))
+        self.head.appendChild(self.emptyChild('comment'))
+        stiming = self.emptyChild('sequenceTiming')
+        self.setText(stiming, str(framems)+' ms')
+        self.head.appendChild(stiming)
+        stype = self.emptyChild('sequenceType')
+        self.setText(stype, 'Animation')
+        self.hear.appendChild(stype)
+        self.head.appendChild(self.emptyChild('mediaFile'))
+        dur = self.emptyChild('sequenceDuration')
+        self.setText(dur, str(framems *  nframes / 1000.0))
+        self.head.appendChild(dur)
+        self.head.appendChild(self.emptyChild('imageDir'))
+        self.xsq.appendChild(self.head)
+
+        self.nextid = self.emptyChild('nextid')
+        self.xsq.appendChild(self.head)
+        
+        self.jukebox = self.emptyChild('Jukebox')
+        self.xsq.appendChild(self.jukebox)
+
+        self.palettes = self.emptyChild('ColorPalettes')
+        self.xsq.appendChild(self.palettes)
+
+        self.effectdb = self.emptyChild('EffectDB')
+        self.xsq.appendChild(self.effectdb)
+
+        self.dlayers = self.emptyChild('DataLayers')
+        self.xsq.appendChild(self.dlayers)
+
+        #<Element collapsed="0" type="model" name="1_All Display" visible="1"/>
+        self.delements = self.emptyChild('DisplayElements')
+        self.xsq.appendChild(self.delements)
+
+        self.eeffects = self.emptyChild('ElementEffects')
+        self.xsq.appendChild(self.eeffects)
+        # <Element type="model" name="1_All Display">
+        #      <EffectLayer>
+        #          <Effect ref="0" name="Ripple" startTime="165950" endTime="167450" palette="0"/>
+
+        self.lastView = self.emptyChild('LastView')
+        setText(lastView, "1")
+        self.xsq.appendChild(self.lastView)
+
+        self.lastView = self.emptyChild('TimingTags')
+        self.xsq.appendChild(self.lastView)
+
+        # Cache parts of the generated sequence
+        self.origColors = {}
+        self.xfColorToId = {}
+        self.xfColorById = []
+        self.origEffects = {}
+        self.xfEffectToId = {}
+        self.xfEffectById = []
+
+    def emptyChild(self, tagName):
+        new_child = self.xdoc.createElement(tagName)
+        return new_child
+
+    def setText(self, pnode, txt):
+        for node in pnode.childNodes:
+            if node.nodeType == node.TEXT_NODE:
+                node.data = txt
+            return
+        text = self.xdoc.createTextNode(txt)
+        pnode.appendChild(text)
+
+    def createEffect(self, ename, stime, etime, effectdata, palettedata):
+        new_doc = self.xdoc
+        new_eff = new_doc.createElement('Effect')
+        new_eff.setAttribute('name', ename)
+        new_eff.setAttribute('startTime', stime)
+        new_eff.setAttribute('endTime', etime)
+        neffid = -1
+        if effectdata in self.xfEffectToId:
+            neffid = self.xfEffectToId[effectdata]
+        else:
+            neffid = len(self.xfEffectById)
+            self.xfEffectById.append(effectdata)
+            self.xfEffectToId[effectdata] = neffid
+        new_eff.setAttribute('ref', str(neffid))
+        palid = -1
+        if palettedata in self.xfColorToId:
+            palid = self.xfColorToId[palettedata]
+        else :
+            palid = len(self.xfColorById)
+            self.xfColorById.append(palettedata)
+            self.xfColorToId[palettedata] = palid
+        new_eff.setAttribute('palette', str(palid))
+        return new_eff
+
+    def createOnEffect(self, stime, etime, r, g, b):
+        pdata = "C_BUTTON_Palette1=#"+'{:02X}{:02X}{:02X}'.format(r, g, b)+",C_BUTTON_Palette2=#000000,C_BUTTON_Palette3=#000000,C_BUTTON_Palette4=#000000,C_BUTTON_Palette5=#000000,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#000000,C_BUTTON_Palette8=#000000,C_CHECKBOX_Palette1=1"
+        edata = "E_TEXTCTRL_Eff_On_Start=100,E_TEXTCTRL_Eff_On_End=100,E_TEXTCTRL_On_Cycles=1"
+        return self.createEffect("On", stime, etime, edata, pdata)
+
+    def generateSequence(self):
+        # Emit the parts of the doc that have been saved up
+        new_root = self.xdoc
+        i = 0
+        while i < len(self.xfColorById):
+            new_clr = new_doc.createElement('ColorPalette')
+            self.setText(new_clr, self.xfColorById[i])
+            self.palettes.appendChild(new_clr)
+            i = i + 1
+        i = 0
+        while i < len(self.xfEffectById):
+            new_eff = new_doc.createElement('Effect')
+            self.setText(new_eff, self.xfEffectById[i])
+            self.effectdb.appendChild(new_eff)
+            i = i + 1
+
+    def cloneChild(self, child, new_doc):
+        new_child = new_doc.createElement(child.tagName)
+        copy_attributes(child, new_child)
+        build_new_doc(child, new_child, new_doc)
+        return new_child
+
+    def mapFromEntry(self, eff, oldname, toname):
+        new_doc = self.transformedSequence
+        # The display element
+        new_delem = new_doc.createElement('Element')
+        new_delem.setAttribute('collapsed', '0')
+        new_delem.setAttribute('type', 'model')
+        new_delem.setAttribute('name', toname)
+        new_delem.setAttribute('visible', '1')
+        self.xfDisplayElements.appendChild(new_delem)
+
+        # The effect and sub effects
+        new_elem = new_doc.createElement('Element')
+        new_elem.setAttribute('type', 'model')
+        new_elem.setAttribute('name', toname)
+        self.xfElementEffects.appendChild(new_elem)
+
+        if not eff.effect:
+            # An empty effect layer seems customary
+            new_el = new_doc.createElement('EffectLayer')
+            new_elem.appendChild(new_el)
+
+        for el in eff.effect:
+            new_el = new_doc.createElement('EffectLayer')
+            new_elem.appendChild(new_el)
+            for effectw in el.effects:
+                effect = effectw.origXML
+                eref = effect.getAttribute('ref')
+                ename = effect.getAttribute('name') # e.g Spirals
+                stime = effect.getAttribute('startTime')
+                etime = effect.getAttribute('endTime')
+                pref = effect.getAttribute('palette')
+                effectdata = self.origEffects[int(eref)]
+                palettedata = self.origColors[int(pref)]
+
+                adjdata = map.adjustEffect.adjustEffectData(ename, effectdata, palettedata, self.srcDisplayElements[oldname], self.validDisplayElements[toname],
+                        self.source_fps, self.target_fps, self.availableMedia)
+                new_el.appendChild(self.createEffect(ename, stime, etime, adjdata, palettedata))
 
 # TODO: This is a ridiculous amount of work
 #x Read the input file
