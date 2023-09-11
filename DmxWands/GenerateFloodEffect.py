@@ -146,12 +146,21 @@ class CChoice:
         self.VTyp = 0
         self.popularity = 0
 
+    def setBlack(self):
+        self.H = 0
+        self.S = 0;
+        self.VTyp = 0
+
 class FrameInfo:
     def __init__(self):
         self.choices = []
         self.nLit = 0
         self.vMax = 0
         self.ms = 0
+
+    def setBlack(self):
+        for cc in self.choices:
+            cc.setBlack()
 
 def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, frames, srcmodels):
     with open(sfile, 'rb') as fh:
@@ -343,12 +352,12 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                 #print('Frame '+str(curframe)+' done')
                 foffset += stepsz
                 curframe = curframe + 1
-                curms = curms + stepms
+
+                #print ("Frame #"+str(len(frames))+"/"+str(curms)+" done")
                 frames.append(finfo)
+                curms = curms + stepms
 
-                #print ("Frame #"+str(curms)+" done")
-
-                # TODO: Analyze the info we got
+                # Analyze the info we got
                 for i in range(4):
                     gpop = 0
                     bg = 0
@@ -396,10 +405,9 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
 
                     #if cc.S > 0:
                     #    r, g, b = hsv_to_rgb(cc.H, cc.S, hist.maxV)
-                    #    #r, g, b = hsv_to_rgb(cc.H, cc.S, 100)
                     #else:
                     #    r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
-                    ##print ("Picked["+str(i)+"] "+str(r)+","+str(g)+","+str(b)+" @"+str(cc.popularity)+"/"+str(hist.nNonBlack))
+                    #print ("Picked["+str(i)+"] "+str(r)+","+str(g)+","+str(b)+" @"+str(cc.popularity)+"/"+str(hist.nNonBlack))
 
                 finfo.nLit = hist.nNonBlack
                 finfo.vMax = hist.maxV
@@ -567,44 +575,12 @@ class SequenceGenerator:
             self.effectdb.appendChild(new_eff)
             i = i + 1
 
-    def mapFromEntry(self, eff, oldname, toname):
-        new_doc = self.transformedSequence
-        # The display element
-        new_delem = new_doc.createElement('Element')
-        new_delem.setAttribute('collapsed', '0')
-        new_delem.setAttribute('type', 'model')
-        new_delem.setAttribute('name', toname)
-        new_delem.setAttribute('visible', '1')
-        self.xfDisplayElements.appendChild(new_delem)
-
-        # The effect and sub effects
-        new_elem = new_doc.createElement('Element')
-        new_elem.setAttribute('type', 'model')
-        new_elem.setAttribute('name', toname)
-        self.xfElementEffects.appendChild(new_elem)
-
-        if not eff.effect:
-            # An empty effect layer seems customary
-            new_el = new_doc.createElement('EffectLayer')
-            new_elem.appendChild(new_el)
-
-        for el in eff.effect:
-            new_el = new_doc.createElement('EffectLayer')
-            new_elem.appendChild(new_el)
-            for effectw in el.effects:
-                effect = effectw.origXML
-                eref = effect.getAttribute('ref')
-                ename = effect.getAttribute('name') # e.g Spirals
-                stime = effect.getAttribute('startTime')
-                etime = effect.getAttribute('endTime')
-                pref = effect.getAttribute('palette')
-                effectdata = self.origEffects[int(eref)]
-                palettedata = self.origColors[int(pref)]
-
-                adjdata = map.adjustEffect.adjustEffectData(ename, effectdata, palettedata, self.srcDisplayElements[oldname], self.validDisplayElements[toname],
-                        self.source_fps, self.target_fps, self.availableMedia)
-                new_el.appendChild(self.createEffect(ename, stime, etime, adjdata, palettedata))
-
+class SeqEnt:
+    def __init__(self, frame):
+        self.frame = frame
+        self.ms = frame.ms
+        self.event = False # If there was a trigger event vs just a fill - we want a color change here
+        self.tn = 0 # Time number
 
 class SparseSeq:
     def __init__(self):
@@ -612,8 +588,9 @@ class SparseSeq:
         self.frames = {}
 
     def insert(self, frame):
-        frames[frame.ms] = frame
-        bisect.insort(self.times, frame.ms)
+        if frame.ms not in self.frames:
+            bisect.insort(self.times, frame.ms)
+        self.frames[frame.ms] = frame
 
     def closest(self, time):
         idx = bisect.bisect_left(self.times, time)
@@ -635,12 +612,12 @@ class SparseSeq:
 #x Read the input file
 #x Read the layout to
 #x  establish target model
-#?  and color order
-#?  and reverse gamma
+#x  and color order
+#x  and reverse gamma
 #x Read the .fseq file
 #x Get the typical color from the frame - sample or all?
-#?  Do this as HSV buckets
-#?  Get a sense of popularity and brightness
+#x  Do this as HSV buckets
+#x  Get a sense of popularity and brightness
 #?  Pick out the most popular and knock it out
 #?  Pick out the second to 4th most popular
 #?  Get a sense of overall significance energy level
@@ -662,8 +639,8 @@ if __name__ == '__main__':
     parser.add_argument('--ch1val', type=int, default=85, help = 'Control Channel 1 (ID) value')
     parser.add_argument('--ch2val', type=int, default=0, help = 'Control Channel 2 (Group) value') 
     parser.add_argument('--targetcolor', type=str, default = 'DmxWands', help = 'Target model for colors')
-    parser.add_argument('--controladvance', type=int, default=50, help = 'Milliseconds to advance the timing of the control strobe')
-    parser.add_argument('--coloradvance', type=int, default=50, help = 'Milliseconds to advance the timing of the color')
+    parser.add_argument('--controladvance', type=int, default=0, help = 'Milliseconds to advance the timing of the control strobe')
+    parser.add_argument('--coloradvance', type=int, default=0, help = 'Milliseconds to advance the timing of the color')
     parser.add_argument('--controlwidth', type=int, default=75, help = 'Milliseconds to hold the control signal')
     parser.add_argument('--controlgap', type=int, default=50, help = 'Minimum milliseconds of gap to wait between control pulses')
     # TODO:
@@ -707,7 +684,9 @@ if __name__ == '__main__':
     calculateFSEQColorSummary(hjson, args.fseq, controllers, ctrlbyname, smodels, frames, srcmodels)
 
     # OK - Start generating a sequence
-    resseq = SequenceGenerator(hjson['msperframe'], hjson['frames'])
+    framems = hjson['msperframe']
+    nframes = hjson['frames']
+    resseq = SequenceGenerator(framems, hjson['frames'])
 
     # Add the two display elements
     resseq.createDisplayElement(args.targetcontrol)
@@ -716,22 +695,73 @@ if __name__ == '__main__':
     ctrlLayer = resseq.createEffectElementLayer(args.targetcontrol)
     clrLayer = resseq.createEffectElementLayer(args.targetcolor)
 
+    # So, the overall plan:
+    # Make a list of the change points we want, with data about the change
+    # x Start with the timing marks, if given
+    #   Look for high-energy transitions that need precise timing
+    #   Look for fillers - sufficient change to warrant an update
+    #   Do the emission:
+    #    Select a color (change colors if desired)
+    #    If it is the same, suppress
+    # x  Write out the event with the appropriate shifts
+    # x We should make the thing go dark at the end, right?
+
+    reqgap = int(args.controlwidth) + int(args.controlgap)
+    ss = SparseSeq()
+
+    if ttrack:
+        for te in ttrack.entlist:
+            # We will create two, if there's another timing it will just overwrite it
+            sfn = int(te.startms / framems)
+            efn = int(te.endms / framems)
+            if efn == sfn:
+                continue
+            bn = 0
+            try:
+                bn = int(te.label)
+            except:
+                pass
+            se = SeqEnt(frames[sfn])
+            se.event = True
+            se.tn = bn
+            ss.insert(se)
+            ee = SeqEnt(frames[efn])
+            ss.insert(ee)
+
+    seqend = framems * nframes
+    ee = SeqEnt(frames[nframes-1])
+    frames[nframes-1].setBlack()
+    ss.insert(ee)
+
     # Generate effects... for now we're spamming it
     ctime = 0
-    for i in range(0, hjson['frames']):
-        stime = ctime 
-        etime = stime + hjson['msperframe']
-        ctime = etime
+    i = 0
+    while i < len(ss.times):
+        stime = ss.times[i]
+        while 1:
+            i = i+1
+            etime = ss.times[i] if i < len(ss.times) else seqend
+            if etime - stime >= reqgap or i >= len(ss.times):
+                break
 
-        cc = frames[i].choices[0]
+        cframe = ss.frames[stime]
+        cc = cframe.frame.choices[0]
+
+        #print("Event: "+str(i)+" cframe ms "+str(cframe.frame.ms) + " time " + str(stime))
+
         if cc.S > 0:
-            r, g, b = hsv_to_rgb(cc.H, cc.S, frames[i].vMax)
+            r, g, b = hsv_to_rgb(cc.H, cc.S, cframe.frame.vMax)
             #r, g, b = hsv_to_rgb(cc.H, cc.S, 100)
         else:
             r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
 
-        clrLayer.appendChild(resseq.createOnEffect(stime, etime, r, g, b))
-        ctrlLayer.appendChild(resseq.createDmxEffect(stime, etime, int(args.ch1val), int(args.ch2val)))
+        ctrlstime = max(stime - int(args.controladvance), 0)
+        ctrletime = max(stime - int(args.controladvance) + int(args.controlwidth), 0)
+        clrstime = max(stime - int(args.coloradvance), 0)
+        clretime = max(etime - int(args.coloradvance), 0)
+
+        clrLayer.appendChild(resseq.createOnEffect(clrstime, clretime, r, g, b))
+        ctrlLayer.appendChild(resseq.createDmxEffect(ctrlstime, ctrletime, int(args.ch1val), int(args.ch2val)))
 
     # Do the write-out
     resseq.generateSequence()
