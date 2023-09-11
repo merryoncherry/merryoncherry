@@ -330,7 +330,9 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                         if sch >= rstart and ech <= rstart+rcnt:
                             msub = frame[curoff + sch - rstart : curoff + ech - rstart]
                             # Do color stuff for model in its entirety
+                            #print("Starting model "+m.name)
                             hist.update(m, msub)
+                            #print("Finished model "+m.name)
                         curoff += rcnt
 
                 #print('Frame '+str(curframe)+' done')
@@ -338,6 +340,8 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                 curframe = curframe + 1
                 curms = curms + stepms
                 frames.append(finfo)
+
+                #print ("Frame #"+str(curms)+" done")
 
                 # TODO: Analyze the info we got
                 for i in range(4):
