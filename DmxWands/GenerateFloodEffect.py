@@ -496,6 +496,23 @@ class SequenceGenerator:
         text = self.xdoc.createTextNode(txt)
         pnode.appendChild(text)
 
+    def createDisplayElement(self, name):
+        new_child = self.xdoc.createElement('Element')
+        new_child.setAttribute('collapsed', '0')
+        new_child.setAttribute('type', 'model')
+        new_child.setAttribute('name', name)
+        new_child.setAttribute('visible', '1')
+        self.delements.appendChild(new_child)
+
+    def createEffectElementLayer(self, mname):
+        newEE = self.emptyChild('Element')
+        newEE.setAttribute('type', 'model')
+        newEE.setAttribute('name', mname)
+        self.eeffects.appendChild(newEE)
+        newEL = self.emptyChild('EffectLayer')
+        newEE.appendChild(newEL)
+        return newEL
+
     def createEffect(self, ename, stime, etime, effectdata, palettedata):
         new_doc = self.xdoc
         new_eff = new_doc.createElement('Effect')
@@ -524,6 +541,11 @@ class SequenceGenerator:
         pdata = "C_BUTTON_Palette1=#"+'{:02X}{:02X}{:02X}'.format(r, g, b)+",C_BUTTON_Palette2=#000000,C_BUTTON_Palette3=#000000,C_BUTTON_Palette4=#000000,C_BUTTON_Palette5=#000000,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#000000,C_BUTTON_Palette8=#000000,C_CHECKBOX_Palette1=1"
         edata = "E_TEXTCTRL_Eff_On_Start=100,E_TEXTCTRL_Eff_On_End=100,E_TEXTCTRL_On_Cycles=1"
         return self.createEffect("On", stime, etime, edata, pdata)
+
+    def createDmxEffect(self, stime, etime, ch1, ch2):
+        pdata = "C_BUTTON_Palette1=#000000,C_BUTTON_Palette2=#000000,C_BUTTON_Palette3=#000000,C_BUTTON_Palette4=#000000,C_BUTTON_Palette5=#000000,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#000000,C_BUTTON_Palette8=#000000,C_CHECKBOX_Palette1=1"
+        edata = "E_CHECKBOX_INVDMX1=0,E_CHECKBOX_INVDMX2=0,E_NOTEBOOK1=Channels 1-10,E_SLIDER_DMX1="+str(ch1)+",E_SLIDER_DMX2="+str(ch2)
+        return self.createEffect("DMX", stime, etime, edata, pdata)        
 
     def generateSequence(self):
         # Emit the parts of the doc that have been saved up
@@ -660,8 +682,17 @@ if __name__ == '__main__':
     hjson = {}
     calculateFSEQColorSummary(hjson, args.fseq, controllers, ctrlbyname, smodels, frames, srcmodels)
 
-    # OK
+    # OK - Start generating a sequence
     resseq = SequenceGenerator(hjson['msperframe'], hjson['frames'])
+
+    # Add the two display elements
+    resseq.createDisplayElement(args.targetcontrol)
+    resseq.createDisplayElement(args.targetcolor)
+
+    ctrlLayer = resseq.createEffectElementLayer(args.targetcontrol)
+    clrLayer = resseq.createEffectElementLayer(args.targetcolor)
+
+    # Do the write-out
     resseq.generateSequence()
     with open(args.outxsq, "w") as f:
         f.write(resseq.xdoc.toprettyxml(indent="  "))
