@@ -179,6 +179,9 @@ class FrameInfo:
     def __init__(self):
         self.choices = []
         self.nLit = 0
+        self.pctLit = 0
+        self.pctBright = 0
+        self.vAvg = 0 # Among the lit ones, you can water down by pctLit to get overall
         self.vMax = 0
         self.ms = 0
 
@@ -433,6 +436,17 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                     #    r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
                     #print ("Picked["+str(i)+"] "+str(r)+","+str(g)+","+str(b)+" @"+str(cc.popularity)+"/"+str(hist.nNonBlack))
 
+                if hist.nNonBlack:
+                    vtot = 0
+                    btot = 0
+                    for i in range(1, len(hist.VHist)):
+                        vtot += i * hist.VHist[i]
+                        if i >= 50:
+                            btot += hist.VHist[i]
+                    finfo.pctLit = hist.nNonBlack * 100 / hist.nSamples
+                    finfo.pctBright = btot * 100 / hist.nSamples
+                    finfo.vAvg = vtot / hist.nNonBlack
+
                 finfo.nLit = hist.nNonBlack
                 finfo.vMax = hist.maxV
 
@@ -604,6 +618,7 @@ class SeqEnt:
         self.frame = frame
         self.ms = frame.ms
         self.event = False # If there was a trigger event vs just a fill - we want a color change here
+        self.colorFidelity = False # Hint that we ought to take popular color, not just change
         self.tn = 0 # Time number
 
 class SparseSeq:
@@ -616,6 +631,14 @@ class SparseSeq:
             bisect.insort(self.times, frame.ms)
         self.frames[frame.ms] = frame
 
+    def insertIfSpaced(self, frame, gap):
+        (l, r) = self.closest(frame.ms)
+        if l and frame.ms - l.ms < gap:
+            return
+        if r and r.ms - frame.ms < gap:
+            return
+        self.insert(frame)
+
     def closest(self, time):
         idx = bisect.bisect_left(self.times, time)
 
@@ -625,14 +648,14 @@ class SparseSeq:
         lframe = None
         rframe = None
         if left:
-            lframe = frames[left]
+            lframe = self.frames[left]
         if right:
-            rframe = frames[right]
+            rframe = self.frames[right]
 
         return (lframe, rframe)
 
 
-# TODO: This is a ridiculous amount of work
+# TODO:
 #x Read the input file
 #x Read the layout to
 #x  establish target model
@@ -642,8 +665,8 @@ class SparseSeq:
 #x Get the typical color from the frame - sample or all?
 #x  Do this as HSV buckets
 #x  Get a sense of popularity and brightness
-#?  Pick out the most popular and knock it out
-#?  Pick out the second to 4th most popular
+#x  Pick out the most popular and knock it out
+#x  Pick out the second to 4th most popular
 #?  Get a sense of overall significance energy level
 #   Pick the times to do the changes
 #x   Make effects
@@ -667,16 +690,21 @@ if __name__ == '__main__':
     parser.add_argument('--coloradvance', type=int, default=0, help = 'Milliseconds to advance the timing of the color')
     parser.add_argument('--controlwidth', type=int, default=75, help = 'Milliseconds to hold the control signal')
     parser.add_argument('--controlgap', type=int, default=50, help = 'Minimum milliseconds of gap to wait between control pulses')
-    # TODO:
     parser.add_argument('--inxsq', type=str, required = False, help='Input .xsq, for timing track to trigger colors')
     parser.add_argument('--timingtrack', type=str, required = False, help = 'Timing track to use as a hint for sending color') # For this you need an input sequence...
     parser.add_argument('--minpopularity', type=int, default = 10, help = 'Minimum popularity of a color (in tenths of a percent) for it to be considered')
     parser.add_argument('--ncolors', type=int, default = 1, help = "Number of colors to cycle between as the beats progress")
     parser.add_argument('--changecolor', type=int, default = 0, help = "Try to change color when there is an event")
-    # TODO: Color control
-    #parser.add_argument('--ncolors', type=int, default=1, help='Number of colors to extract and use')
-    #Some tuning of how to handle the energy level?
-    #Ramp up / down?
+
+    # Jump control
+    parser.add_argument('--brightjumpamt', type=int, default = 50, help = "Brightness Jump Event: If brightness jumps by this amount, count it as an event")
+    parser.add_argument('--brightjumparea', type=int, default = 50, help = 'Brightness Jump Event: To count as a brightness jump, at least this much must be lit')
+    parser.add_argument('--brightdropamt', type=int, default = 50, help = "Brightness Drop Event: If brightness jumps by this amount, count it as an event")
+    parser.add_argument('--brightdroparea', type=int, default = 50, help = 'Brightness Drop Event: To count as a brightness jump, at least this much must have been lit')
+
+    # TODO: Color control - color change event
+
+    # TODO: Some tuning of how to handle the energy level?
 
     args = parser.parse_args()
 
@@ -765,11 +793,26 @@ if __name__ == '__main__':
             ee = SeqEnt(frames[efn])
             ss.insert(ee)
 
+    # Black at the end
     seqend = framems * nframes
     ee = SeqEnt(frames[nframes-1])
     frames[nframes-1].setBlack()
     ss.insert(ee)
     ncolors = int(args.ncolors)
+
+    # Look for brightness triggers
+    for i in range(1, len(frames)):
+        cf = frames[i]
+        pf = frames[i-1]
+        if cf.pctLit >= args.brightjumparea and cf.vAvg - (pf.vAvg * pf.pctLit / cf.pctLit) >= args.brightjumpamt:
+            es = SeqEnt(cf)
+            es.event = True
+            es.colorFidelity = True
+            ss.insertIfSpaced(es, reqgap)
+        if pf.pctLit >= args.brightdroparea and pf.vAvg - (cf.vAvg * cf.pctLit / pf.pctLit) >= args.brightdropamt:
+            es = SeqEnt(cf)
+            es.event = True
+            ss.insertIfSpaced(es, reqgap)
 
     # Generate effects...
     ctime = 0
@@ -793,7 +836,7 @@ if __name__ == '__main__':
                 chosen = ((cframe.tn-1) % ncolors) % 4
             cc = cframe.frame.choices[chosen]
 
-            if args.changecolor:
+            if args.changecolor and not cframe.colorFidelity:
                 for ccc in range(0, 4):
                     if cframe.frame.choices[(chosen + ccc) % 4].isDifferent(lastChoice):
                         cc = cframe.frame.choices[(chosen + ccc) % 4]
