@@ -153,7 +153,6 @@ class FrameInfo:
         self.ms = 0
 
 def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, frames, srcmodels):
-    hjson = {}
     with open(sfile, 'rb') as fh:
         hdr = fh.read(4)
         shdr = str(hdr, 'utf-8')
@@ -437,7 +436,7 @@ class SequenceGenerator:
         self.head.appendChild(stiming)
         stype = self.emptyChild('sequenceType')
         self.setText(stype, 'Animation')
-        self.hear.appendChild(stype)
+        self.head.appendChild(stype)
         self.head.appendChild(self.emptyChild('mediaFile'))
         dur = self.emptyChild('sequenceDuration')
         self.setText(dur, str(framems *  nframes / 1000.0))
@@ -471,7 +470,7 @@ class SequenceGenerator:
         #          <Effect ref="0" name="Ripple" startTime="165950" endTime="167450" palette="0"/>
 
         self.lastView = self.emptyChild('LastView')
-        setText(lastView, "1")
+        self.setText(self.lastView, "1")
         self.xsq.appendChild(self.lastView)
 
         self.lastView = self.emptyChild('TimingTags')
@@ -662,3 +661,7 @@ if __name__ == '__main__':
     calculateFSEQColorSummary(hjson, args.fseq, controllers, ctrlbyname, smodels, frames, srcmodels)
 
     # OK
+    resseq = SequenceGenerator(hjson['msperframe'], hjson['frames'])
+    resseq.generateSequence()
+    with open(args.outxsq, "w") as f:
+        f.write(resseq.xdoc.toprettyxml(indent="  "))
