@@ -58,16 +58,52 @@ def rgb_to_hsv(r, g, b, invgamma):
     # Return
     return H, S, M
 
+# S and V are 0-100
+def hsv_to_rgb(h, s, v):
+    s = s / 100.0
+    v = v / 100.0
+
+    if (s < 0.0 or s > 1.0):
+        raise Exception("HSV S out of range")
+    if (v < 0.0 or v > 1.0):
+        raise Exception("HSV V out of range")
+
+    if s == 0:
+        r = g = b = v
+    else:
+        h /= 60.0  # sector 0 to 5
+        i = int(h)
+        f = h - i  # fractional part of h
+        p = v * (1 - s)
+        q = v * (1 - s * f)
+        t = v * (1 - s * (1 - f))
+        
+        if i == 0:
+            r, g, b = v, t, p
+        elif i == 1:
+            r, g, b = q, v, p
+        elif i == 2:
+            r, g, b = p, v, t
+        elif i == 3:
+            r, g, b = p, q, v
+        elif i == 4:
+            r, g, b = t, p, v
+        else:  # i == 5
+            r, g, b = v, p, q
+
+    return int(r * 255), int(g * 255), int(b * 255)
+
+
 class Histogram:
     def __init__(self):
         self.minV = 1
         self.maxV = 0
         self.nNonBlack = 0
         self.nSamples = 0
-        self.HHist = [0] * 181 # Hue histogram; if it is gray it will be elsewhere (GHist)
+        #self.HHist = [0] * 181 # Hue histogram; if it is gray it will be elsewhere (GHist)
         self.GHist = [0] * 101 # Grayscale colors (not in HHist)
         self.VHist = [0] * 101 # Brightness overall - all nonblack
-        self.SHist = [0] * 101 # Saturation histogram
+        #self.SHist = [0] * 101 # Saturation histogram
         self.HSHist = [0] * (180*101) # Hue and saturation together; grayscale is not in here, see GHist
 
     def update(self, model, raw):
@@ -84,8 +120,8 @@ class Histogram:
 
             if v < self.minV:
                 self.minV = v
-            if v > self.maxV:
-                self.maxV = v
+            if v*100 > self.maxV:
+                self.maxV = v * 100
             if r == 0 and g == 0 and b == 0:
                 continue
 
@@ -96,15 +132,14 @@ class Histogram:
                 self.VHist[int(v * 100)] += 1
             else :
                 self.VHist[int(v * 100)] += 1
-                self.HHist[int(h / 2)] += 1
-                self.SHist[int(s * 100)] += 1
+                #self.HHist[int(h / 2)] += 1
+                #self.SHist[int(s * 100)] += 1
                 self.HSHist[int(h/2) * 101 + int(s*100)] += 1
 
 class CChoice:
     def __init__(self):
         self.H = 0
         self.S = 0
-        self.VMax = 0
         self.VTyp = 0
         self.popularity = 0
 
@@ -305,7 +340,60 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                 frames.append(finfo)
 
                 # TODO: Analyze the info we got
+                for i in range(4):
+                    gpop = 0
+                    bg = 0
+                    for v in range(0, len(hist.GHist)):
+                        if hist.GHist[v] > gpop:
+                            bg = v
+                            gpop = hist.GHist[v]
 
+                    bc = 0
+                    bh = 0
+                    bs = 0
+                    for h in range(0, 180):
+                        for s in range (0, 101):
+                            if hist.HSHist[h*101+s] > bc:
+                                bc = hist.HSHist[h*101+s]
+                                bh = h
+                                bs = s
+
+                    cc = CChoice()
+                    finfo.choices.append(cc)
+
+                    if (bc == 0 and gpop == 0):
+                        continue # There simply is not any color
+
+                    if (gpop > bc):
+                        # Do gray
+                        for v in range(bg-5, bg+6):
+                            if v > 0 and v <= 100:
+                                cc.popularity += hist.GHist[v]
+                                hist.GHist[v] = 0
+                        cc.H = 0
+                        cc.S = 0
+                        cc.VTyp = bg
+                    else:
+                        # Do color
+                        for h in range(bh-4, bh+5):
+                            for s in range(bs-5, bs+6):
+                                if s > 0 and s <= 100:
+                                    cc.popularity += hist.HSHist[(h%180)*101+s]
+                                    hist.HSHist[(h%180)*101+s] = 0
+                        cc.H = bh*2
+                        cc.S = bs
+                        cc.VTyp = 100 # We don't have the V typical of that color; if we need it, we'd have to recompute it...
+                                      # We could though.  If we aren't making it subservient to another formula anyway...
+
+                    if cc.S > 0:
+                        r, g, b = hsv_to_rgb(cc.H, cc.S, hist.maxV)
+                        #r, g, b = hsv_to_rgb(cc.H, cc.S, 100)
+                    else:
+                        r, g, b = hsv_to_rgb(cc.H, cc.S, cc.VTyp)
+                    print ("Picked["+str(i)+"] "+str(r)+","+str(g)+","+str(b)+" @"+str(cc.popularity)+"/"+str(hist.nNonBlack))
+
+                finfo.nLit = hist.nNonBlack
+                finfo.vMax = hist.maxV
 
             if (foffset != len(raw)):
                 raise Exception("Partial frame")
@@ -319,16 +407,16 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
 # TODO: This is a ridiculous amount of work
 #x Read the input file
 #x Read the layout to
-#?  establish target model
+#x  establish target model
 #?  and color order
 #?  and reverse gamma
 #x Read the .fseq file
 #x Get the typical color from the frame - sample or all?
 #?  Do this as HSV buckets
-#   Get a sense of popularity and brightness
-#   Pick out the most popular and knock it out
-#   Pick out the second to 4th most popular
-#   Get a sense of overall significance energy level
+#?  Get a sense of popularity and brightness
+#?  Pick out the most popular and knock it out
+#?  Pick out the second to 4th most popular
+#?  Get a sense of overall significance energy level
 #   Pick the times to do the changes
 #   Make effects
 #  Save
