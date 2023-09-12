@@ -711,7 +711,7 @@ if __name__ == '__main__':
     parser.add_argument('--controlgap', type=int, default=50, help = 'Minimum milliseconds of gap to wait between control pulses')
     parser.add_argument('--inxsq', type=str, required = False, help='Input .xsq, for timing track to trigger colors')
     parser.add_argument('--timingtrack', type=str, required = False, help = 'Timing track to use as a hint for sending color') # For this you need an input sequence...
-    parser.add_argument('--ttracklast', type=int, default = 0, help = 'Timing track applied last, after other detection')
+    parser.add_argument('--ttracklast', type=int, default = 1, help = 'Timing track applied last, after other detection')
     parser.add_argument('--minpopularity', type=int, default = 10, help = 'Minimum popularity of a color (in tenths of a percent) for it to be considered')
     parser.add_argument('--ncolors', type=int, default = 1, help = "Number of colors to cycle between as the beats progress")
     parser.add_argument('--changecolor', type=int, default = 0, help = "Try to change color when there is an event")
@@ -723,7 +723,7 @@ if __name__ == '__main__':
     parser.add_argument('--brightdroparea', type=int, default = 50, help = 'Brightness Drop Event: To count as a brightness jump, at least this much must have been lit')
 
     # Turn off if value drops a lot from when it was turned on
-    parser.add_argument('--offondrop', type=int, default = 75, help = 'Turn off when brightness drops by this percent')
+    parser.add_argument('--offondrop', type=int, default = 50, help = 'Turn off when brightness drops by this percent')
 
     parser.add_argument('--colorjumpamt', type=int, default = 25, help = "Color proportion jump event: If a color becomes most popular and jumps by this amount, count it as an event")
     parser.add_argument('--colorjumparea', type=int, default = 50, help = "Color proportion jump event: If a color becomes more popular and covers this much area, count it as an event")
