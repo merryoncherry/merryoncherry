@@ -39,6 +39,10 @@ import xlAutomation.xsqFile
 # Will invert the gamma correction as part of calculation
 def rgb_to_hsv(r, g, b, invgamma, invbright):
     r, g, b = (r * invbright / 255.0) ** invgamma, (g * invbright / 255.0) ** invgamma, (b * invbright / 255.0) ** invgamma
+    r = min(r, 1.0)
+    g = min(g, 1.0)
+    b = min(b, 1.0)
+
     M, m = max(r, g, b), min(r, g, b)
     C = M - m
     
@@ -187,6 +191,11 @@ class FrameInfo:
         self.ms = 0
 
     def setBlack(self):
+        self.vAvg = 0
+        self.vMax = 0
+        self.pctLit = 0
+        self.pctBright = 0
+        self.nLit = 0
         for cc in self.choices:
             cc.setBlack()
 
@@ -641,6 +650,14 @@ class SparseSeq:
             return
         self.insert(frame)
 
+    def isSpaced(self, ms, gap):
+        (l, r) = self.closest(ms)
+        if l and ms - l.ms < gap:
+            return False
+        if r and r.ms - ms < gap:
+            return False
+        return True
+
     def closest(self, time):
         idx = bisect.bisect_left(self.times, time)
 
@@ -669,7 +686,7 @@ class SparseSeq:
 #x  Get a sense of popularity and brightness
 #x  Pick out the most popular and knock it out
 #x  Pick out the second to 4th most popular
-#?  Get a sense of overall significance energy level
+#x  Get a sense of overall significance energy level
 #   Pick the times to do the changes
 #x   Make effects
 #x Save
@@ -694,6 +711,7 @@ if __name__ == '__main__':
     parser.add_argument('--controlgap', type=int, default=50, help = 'Minimum milliseconds of gap to wait between control pulses')
     parser.add_argument('--inxsq', type=str, required = False, help='Input .xsq, for timing track to trigger colors')
     parser.add_argument('--timingtrack', type=str, required = False, help = 'Timing track to use as a hint for sending color') # For this you need an input sequence...
+    parser.add_argument('--ttracklast', type=int, default = 0, help = 'Timing track applied last, after other detection')
     parser.add_argument('--minpopularity', type=int, default = 10, help = 'Minimum popularity of a color (in tenths of a percent) for it to be considered')
     parser.add_argument('--ncolors', type=int, default = 1, help = "Number of colors to cycle between as the beats progress")
     parser.add_argument('--changecolor', type=int, default = 0, help = "Try to change color when there is an event")
@@ -703,6 +721,9 @@ if __name__ == '__main__':
     parser.add_argument('--brightjumparea', type=int, default = 50, help = 'Brightness Jump Event: To count as a brightness jump, at least this much must be lit')
     parser.add_argument('--brightdropamt', type=int, default = 50, help = "Brightness Drop Event: If brightness jumps by this amount, count it as an event")
     parser.add_argument('--brightdroparea', type=int, default = 50, help = 'Brightness Drop Event: To count as a brightness jump, at least this much must have been lit')
+
+    # Turn off if value drops a lot from when it was turned on
+    parser.add_argument('--offondrop', type=int, default = 75, help = 'Turn off when brightness drops by this percent')
 
     parser.add_argument('--colorjumpamt', type=int, default = 25, help = "Color proportion jump event: If a color becomes most popular and jumps by this amount, count it as an event")
     parser.add_argument('--colorjumparea', type=int, default = 50, help = "Color proportion jump event: If a color becomes more popular and covers this much area, count it as an event")
@@ -723,7 +744,7 @@ if __name__ == '__main__':
 
     # Get controllers, models, timing tracks
     xlAutomation.fseqFile.readControllersAndModels(args.showdir, controllers, ctrlbyname, models, smodels)
-    if args.inxsq:
+    if args.inxsq and args.timingtrack:
         ttracks = []
         xlAutomation.xsqFile.readSequenceTimingTrack(args.inxsq, ttracks)
         if args.timingtrack:
@@ -761,10 +782,11 @@ if __name__ == '__main__':
     # Make a list of the change points we want, with data about the change
     # x Start with the timing marks, if given
     #   Look for high-energy transitions that need precise timing
+    #   Should we consider energy drops?  Or following the value profile in some way?
     #   Look for fillers - sufficient change to warrant an update
     #   Do the emission:
-    #    Select a color (change colors if desired)
-    #    If it is the same, suppress
+    # x  Select a color (change colors if desired)
+    # ?  If it is the same, suppress
     # x  Write out the event with the appropriate shifts
     # x We should make the thing go dark at the end, right?
 
@@ -781,11 +803,13 @@ if __name__ == '__main__':
     reqgap = int(args.controlwidth) + int(args.controlgap)
     ss = SparseSeq()
 
-    if ttrack:
+    if ttrack and not args.ttracklast:
         for te in ttrack.entlist:
             # We will create two, if there's another timing it will just overwrite it
             sfn = int(te.startms / framems)
             efn = int(te.endms / framems)
+            if sfn >= len(frames) or efn >= len(frames):
+                continue
             if efn == sfn:
                 continue
             bn = 0
@@ -834,6 +858,45 @@ if __name__ == '__main__':
                     es.event = True
                     es.colorFidelity = True
                     ss.insertIfSpaced(es, reqgap)
+
+    if ttrack and args.ttracklast:
+        for te in ttrack.entlist:
+            # We will create two, if there's another timing it will just overwrite it
+            sfn = int(te.startms / framems)
+            efn = int(te.endms / framems)
+            if sfn >= len(frames) or efn >= len(frames):
+                continue
+            if efn == sfn:
+                continue
+            bn = 0
+            try:
+                bn = int(te.label)
+            except:
+                pass
+            se = SeqEnt(frames[sfn])
+            se.event = True
+            se.tn = bn
+            ss.insertIfSpaced(se, reqgap)
+
+    if args.offondrop:
+        lastevt = None
+        curms = 0
+        for i in range(0, len(frames)):
+            curms = i * framems
+            if curms in ss.frames:
+                lastevt = ss.frames[curms]
+                continue
+            if not lastevt:
+                continue
+            if lastevt.frame.vMax == 0:
+                continue
+            #print ("curms: "+str(curms)+" drop "+str(100 - (100 * frames[i].vMax / lastevt.frame.vMax)))
+            if 100 - (100 * frames[i].vMax / lastevt.frame.vMax) > args.offondrop:
+                if ss.isSpaced(curms, reqgap):
+                    frames[i].setBlack()
+                    se = SeqEnt(frames[i])
+                    ss.insertIfSpaced(se, reqgap)
+                    lastevt = se
 
     # Generate effects...
     ctime = 0
