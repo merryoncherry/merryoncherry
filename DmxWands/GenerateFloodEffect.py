@@ -179,6 +179,7 @@ class FrameInfo:
     def __init__(self):
         self.choices = []
         self.nLit = 0
+        self.nPixels = 0
         self.pctLit = 0
         self.pctBright = 0
         self.vAvg = 0 # Among the lit ones, you can water down by pctLit to get overall
@@ -448,6 +449,7 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                     finfo.vAvg = vtot / hist.nNonBlack
 
                 finfo.nLit = hist.nNonBlack
+                finfo.nPixels = hist.nSamples
                 finfo.vMax = hist.maxV
 
             if (foffset != len(raw)):
@@ -702,9 +704,14 @@ if __name__ == '__main__':
     parser.add_argument('--brightdropamt', type=int, default = 50, help = "Brightness Drop Event: If brightness jumps by this amount, count it as an event")
     parser.add_argument('--brightdroparea', type=int, default = 50, help = 'Brightness Drop Event: To count as a brightness jump, at least this much must have been lit')
 
+    parser.add_argument('--colorjumpamt', type=int, default = 25, help = "Color proportion jump event: If a color becomes most popular and jumps by this amount, count it as an event")
+    parser.add_argument('--colorjumparea', type=int, default = 50, help = "Color proportion jump event: If a color becomes more popular and covers this much area, count it as an event")
+
     # TODO: Color control - color change event
 
     # TODO: Some tuning of how to handle the energy level?
+
+    # TODO: Just fill in with the popular color - that mode is a bit tricky
 
     args = parser.parse_args()
 
@@ -804,15 +811,29 @@ if __name__ == '__main__':
     for i in range(1, len(frames)):
         cf = frames[i]
         pf = frames[i-1]
-        if cf.pctLit >= args.brightjumparea and cf.vAvg - (pf.vAvg * pf.pctLit / cf.pctLit) >= args.brightjumpamt:
+        if args.brightjumpamt > 0 and cf.pctLit >= args.brightjumparea and cf.vAvg - (pf.vAvg * pf.pctLit / cf.pctLit) >= args.brightjumpamt:
             es = SeqEnt(cf)
             es.event = True
             es.colorFidelity = True
             ss.insertIfSpaced(es, reqgap)
-        if pf.pctLit >= args.brightdroparea and pf.vAvg - (cf.vAvg * cf.pctLit / pf.pctLit) >= args.brightdropamt:
+        if args.brightdropamt > 0 and pf.pctLit >= args.brightdroparea and pf.vAvg - (cf.vAvg * cf.pctLit / pf.pctLit) >= args.brightdropamt:
             es = SeqEnt(cf)
             es.event = True
             ss.insertIfSpaced(es, reqgap)
+
+        if args.colorjumpamt > 0:
+            amtpopular = 100 * cf.choices[0].popularity / cf.nPixels
+            if amtpopular > args.colorjumparea:
+                pctpopular = 100 * cf.choices[0].popularity / cf.nLit
+                prevpop = 0
+                for c in pf.choices:
+                    if not c.isDifferent(cf.choices[0]) and c.popularity > 0:
+                        prevpop = 100 * c.popularity / pf.nLit
+                if pctpopular - prevpop >= args.colorjumpamt:
+                    es = SeqEnt(cf)
+                    es.event = True
+                    es.colorFidelity = True
+                    ss.insertIfSpaced(es, reqgap)
 
     # Generate effects...
     ctime = 0
