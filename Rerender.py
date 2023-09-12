@@ -22,6 +22,7 @@ print("xLights now running.")
 xlenv.changeShowFolder()
 
 doall = False
+#doall = True
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
@@ -61,12 +62,12 @@ if doall or False:
     ])
     print (msg)
 
-if doall or False:
+if doall or True:
     msg = xlenv.batchRenderSeqList([
     "HauntedHeart.xsq",
     "InfernoOfScarySkeletons.xsq",
     "IPutASpellOnYou.xsq",
-    "Kashmir.xsq",
+    "Kashmir.xsq", # This one abended once
     "LightEmUp.xsq",
     "LivinOnAPrayer.xsq",
     #"MadWorld_V0.xsq",
@@ -103,7 +104,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or False:
+if doall or True:
     msg = xlenv.batchRenderSeqList([
         "SBSpooky_YouRang_Faster.xsq",
         "SBSpooky_YouRang_V1.xsq",
