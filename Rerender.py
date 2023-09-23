@@ -22,10 +22,11 @@ print("xLights now running.")
 xlenv.changeShowFolder()
 
 doall = False
-#doall = True
+doall = True
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
+    "1983In3.xsq",
     #"30 Second Jeopardy Spooky.xsq",
     #"30 Second Timer With Jeopardy Thinking Music.xsq",
     "AddamsFamily.xsq",
@@ -40,6 +41,7 @@ if doall or False:
     "Bruno.xsq",
     #"CameraWarmup.xsq",
     #"Casper the Friendly Ghost 1950   Intro Opening Lilly.xsq",
+    "CryLittleSister.xsq",
     "DevilInside.xsq",
     ])
     print (msg)
@@ -59,6 +61,7 @@ if doall or False:
     "Ghostbusters.xsq",
     #"HalloweenHorrorLights_2020_V0.xsq",
     #"HalloweenHorrorLights_2022_V1.xsq",
+    "HalloweenTheme.xsq",
     ])
     print (msg)
 
@@ -77,10 +80,12 @@ if doall or True:
     #"Monster_PixelPerfectSeq_V1.xsq",
     #"MonsterMash_xS_V7.xsq",
     "OogieBoogie.xsq",
+    "Paradise.xsq",
+    "ProperEducation.xsq",
     "PurplePeopleEater.xsq",
     "Rasputin.xsq",
     "Roar.xsq",
-    #"SeparateWays_StrangerThings_Vivid_V0.xsq",
+    "SeparateWays.xsq",
     #"SeletonSam_BF.xsq",
     #"SmellsLikeTeenSpirit.xsq",
     ])
@@ -94,9 +99,11 @@ if doall or True:
     #"Thriller_V0.xsq",
     "ToxicRemix.xsq",
     "Villains.xsq",
+    "WatchingMePortals.xsq",
     "WhenTheLightsComeOn.xsq",
     "WhereEvilGrows.xsq",
     "WitchDoctor.xsq",
+    "WitchesAreBack.xsq",
     #"Youngblood_Visionary_V1.xsq",
     "YouMakeMeFeelLikeItsHalloween.xsq",
     "YouShookMeAllNightLong.xsq",
