@@ -12,18 +12,10 @@ route ADD 192.168.27.0 MASK 255.255.255.0 192.168.27.1 METRIC 1
 
 #192.168.25.8 ???
 
-#192.168.27.50
-#192.168.27.60
-#192.168.27.70
-#192.168.27.80
-#192.168.27.110
 #192.168.27.120 # Alphapix
 #192.168.27.140 # HP5V Tree
-#192.168.27.132
-#192.168.27.134
-#192.168.27.150
-#192.168.27.156
-#192.168.27.158
+#192.168.27.134 # Wally Wings
+#192.168.27.156 # Kulp W Fence
 
 netsh interface ipv4 add neighbors "Ethernet" "192.168.25.5" "02-fe-00-40-00-1a"
 netsh interface ipv4 add neighbors "Ethernet" "192.168.25.10" "82-a5-73-51-3c-02"
@@ -43,6 +35,7 @@ netsh interface ipv4 add neighbors "Ethernet" "192.168.27.60" "ca-61-60-df-95-f6
 netsh interface ipv4 add neighbors "Ethernet" "192.168.27.70" "82-7c-2f-bb-41-d0"
 netsh interface ipv4 add neighbors "Ethernet" "192.168.27.80" "32-11-b5-93-7a-cf"
 netsh interface ipv4 add neighbors "Ethernet" "192.168.27.110" "ea-69-c9-b8-06-b1"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.27.132" "24-76-25-ef-e4-bd"
 netsh interface ipv4 add neighbors "Ethernet" "192.168.27.150" "60-b6-e1-17-e6-5d"
 netsh interface ipv4 add neighbors "Ethernet" "192.168.27.158" "00-02-02-04-61-8f"
 
