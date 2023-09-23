@@ -7,7 +7,7 @@ route ADD 192.168.27.0 MASK 255.255.255.0 192.168.27.1 METRIC 1
 # netsh interface ipv4 add neighbors "NetworkInterfaceName" "IPAddress" "MACAddress"
 #
 # Ethernet
-# USBHub26
+# USBHubEth26
 # USBHub27
 
 #192.168.25.8 ???
@@ -24,11 +24,11 @@ netsh interface ipv4 add neighbors "Ethernet" "192.168.25.100" "36-21-75-c0-4f-e
 netsh interface ipv4 add neighbors "Ethernet" "192.168.25.152" "98-f0-7b-5b-ae-28"
 netsh interface ipv4 add neighbors "Ethernet" "192.168.25.180" "be-b4-04-12-11-67"
 
-netsh interface ipv4 add neighbors "USBHub26" "192.168.26.30" "ee-97-d7-23-5a-da"
-netsh interface ipv4 add neighbors "USBHub26" "192.168.26.90" "4e-d4-8c-7c-f7-3e"
-netsh interface ipv4 add neighbors "USBHub26" "192.168.26.130" "24-76-25-f2-1f-cc"
-netsh interface ipv4 add neighbors "USBHub26" "192.168.26.154" "98-f0-7b-a8-24-16"
-netsh interface ipv4 add neighbors "USBHub26" "192.168.26.160" "22-fb-f2-d3-60-13"
+netsh interface ipv4 add neighbors "USBHubEth26" "192.168.26.30" "ee-97-d7-23-5a-da"
+netsh interface ipv4 add neighbors "USBHubEth26" "192.168.26.90" "4e-d4-8c-7c-f7-3e"
+netsh interface ipv4 add neighbors "USBHubEth26" "192.168.26.130" "24-76-25-f2-1f-cc"
+netsh interface ipv4 add neighbors "USBHubEth26" "192.168.26.154" "98-f0-7b-a8-24-16"
+netsh interface ipv4 add neighbors "USBHubEth26" "192.168.26.160" "22-fb-f2-d3-60-13"
 
 netsh interface ipv4 add neighbors "USBHub27" "192.168.27.50" "ce-39-7e-b7-6e-f8"
 netsh interface ipv4 add neighbors "USBHub27" "192.168.27.60" "ca-61-60-df-95-f6"
