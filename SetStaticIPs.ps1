@@ -38,4 +38,10 @@ netsh interface ipv4 add neighbors "Ethernet" "192.168.25.100" "36-21-75-c0-4f-e
 netsh interface ipv4 add neighbors "Ethernet" "192.168.25.152" "98-f0-7b-5b-ae-28"
 netsh interface ipv4 add neighbors "Ethernet" "192.168.25.180" "be-b4-04-12-11-67"
 
+netsh interface ipv4 add neighbors "Ethernet" "192.168.26.30" "ee-97-d7-23-5a-da"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.26.90" "4e-d4-8c-7c-f7-3e"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.26.130" "24-76-25-f2-1f-cc"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.26.154" "98-f0-7b-a8-24-16"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.26.160" "22-fb-f2-d3-60-13"
+
 
