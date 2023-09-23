@@ -12,12 +12,6 @@ route ADD 192.168.27.0 MASK 255.255.255.0 192.168.27.1 METRIC 1
 
 #192.168.25.8 ???
 
-#192.168.26.30
-#192.168.26.90
-#192.168.26.130
-#192.168.26.154
-#192.168.26.160
-
 #192.168.27.50
 #192.168.27.60
 #192.168.27.70
@@ -44,4 +38,11 @@ netsh interface ipv4 add neighbors "Ethernet" "192.168.26.130" "24-76-25-f2-1f-c
 netsh interface ipv4 add neighbors "Ethernet" "192.168.26.154" "98-f0-7b-a8-24-16"
 netsh interface ipv4 add neighbors "Ethernet" "192.168.26.160" "22-fb-f2-d3-60-13"
 
+netsh interface ipv4 add neighbors "Ethernet" "192.168.27.50" "ce-39-7e-b7-6e-f8"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.27.60" "ca-61-60-df-95-f6"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.27.70" "82-7c-2f-bb-41-d0"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.27.80" "32-11-b5-93-7a-cf"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.27.110" "ea-69-c9-b8-06-b1"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.27.150" "60-b6-e1-17-e6-5d"
+netsh interface ipv4 add neighbors "Ethernet" "192.168.27.158" "00-02-02-04-61-8f"
 
