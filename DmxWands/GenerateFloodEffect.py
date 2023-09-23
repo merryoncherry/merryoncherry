@@ -113,7 +113,7 @@ class Histogram:
         #self.SHist = [0] * 101 # Saturation histogram
         self.HSHist = [0] * (180*101) # Hue and saturation together; grayscale is not in here, see GHist
 
-    def update(self, model, raw):
+    def update(self, model, raw, args):
         rp = 0
         l = len(raw)
         invgamma = 1.0/model.gamma
@@ -130,7 +130,7 @@ class Histogram:
                 self.minV = v
             if v*100 > self.maxV:
                 self.maxV = v * 100
-            if r == 0 and g == 0 and b == 0:
+            if r <= args.thresholdv and g <= args.thresholdv and b <= args.thresholdv:
                 continue
 
             self.nNonBlack = self.nNonBlack + 1
@@ -167,15 +167,15 @@ class CChoice:
         self.S = 0
         self.popularity = 0
 
-    def isDifferent(self, other):
+    def isDifferent(self, other, args):
         if other is None:
             return True
         hdiff = abs(self.H - other.H)
-        if hdiff > 6 and hdiff < 354:
+        if hdiff > args.similarityh and hdiff < 360 - args.similarityh:
             return True
-        if abs(self.S - other.S) > 10:
+        if abs(self.S - other.S) > args.similaritys:
             return True
-        if abs(self.VTyp - other.VTyp) > 10:
+        if abs(self.VTyp - other.VTyp) > args.similarityv:
             return True
         return False
 
@@ -199,7 +199,7 @@ class FrameInfo:
         for cc in self.choices:
             cc.setBlack()
 
-def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, frames, srcmodels):
+def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, frames, srcmodels, args):
     with open(sfile, 'rb') as fh:
         hdr = fh.read(4)
         shdr = str(hdr, 'utf-8')
@@ -333,7 +333,7 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                 hlen = xlAutomation.fseqFile.read16bit(fh) - 4
                 hname = str(fh.read(2), 'utf-8')
                 #print ("Header "+hname+": "+str(hlen))
-                hval = str(fh.read(hlen), 'utf-8')
+                hval = str(fh.read(hlen), 'utf-8', errors='ignore')
                 vlheaders[hname] = hval
                 hjson['headers'][hname] = hval[:-1]
 
@@ -382,7 +382,7 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                             msub = frame[curoff + sch - rstart : curoff + ech - rstart]
                             # Do color stuff for model in its entirety
                             #print("Starting model "+m.name)
-                            hist.update(m, msub)
+                            hist.update(m, msub, args)
                             #print("Finished model "+m.name)
                         curoff += rcnt
 
@@ -430,8 +430,8 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                         cc.VTyp = bg
                     else:
                         # Do color
-                        for h in range(bh-4, bh+5):
-                            for s in range(bs-5, bs+6):
+                        for h in range(bh-args.similarityh, bh+1+args.similarityh):
+                            for s in range(bs-args.similaritys, bs+1+args.similaritys):
                                 if s > 0 and s <= 100:
                                     cc.popularity += hist.HSHist[(h%180)*101+s]
                                     hist.HSHist[(h%180)*101+s] = 0
@@ -719,18 +719,22 @@ if __name__ == '__main__':
     # Jump control
     parser.add_argument('--brightjumpamt', type=int, default = 50, help = "Brightness Jump Event: If brightness jumps by this amount, count it as an event")
     parser.add_argument('--brightjumparea', type=int, default = 50, help = 'Brightness Jump Event: To count as a brightness jump, at least this much must be lit')
+
+    # Some tuning of how to handle the energy level?
     parser.add_argument('--brightdropamt', type=int, default = 50, help = "Brightness Drop Event: If brightness jumps by this amount, count it as an event")
     parser.add_argument('--brightdroparea', type=int, default = 50, help = 'Brightness Drop Event: To count as a brightness jump, at least this much must have been lit')
 
     # Turn off if value drops a lot from when it was turned on
     parser.add_argument('--offondrop', type=int, default = 50, help = 'Turn off when brightness drops by this percent')
 
+    # Color control - color change event
     parser.add_argument('--colorjumpamt', type=int, default = 25, help = "Color proportion jump event: If a color becomes most popular and jumps by this amount, count it as an event")
     parser.add_argument('--colorjumparea', type=int, default = 50, help = "Color proportion jump event: If a color becomes more popular and covers this much area, count it as an event")
 
-    # TODO: Color control - color change event
-
-    # TODO: Some tuning of how to handle the energy level?
+    parser.add_argument('--similarityh', type=int, default = 6, help = "Hue similarity")
+    parser.add_argument('--similaritys', type=int, default = 10, help = "Saturation similarity")
+    parser.add_argument('--similarityv', type=int, default = 20, help = "Value similarity")
+    parser.add_argument('--thresholdv', type=int, default = 2, help = "Value threshold - below this it is too dark for color fidelity")
 
     # TODO: Just fill in with the popular color - that mode is a bit tricky
 
@@ -764,7 +768,7 @@ if __name__ == '__main__':
     frames = []
     # Get the fseq file color summary
     hjson = {}
-    calculateFSEQColorSummary(hjson, args.fseq, controllers, ctrlbyname, smodels, frames, srcmodels)
+    calculateFSEQColorSummary(hjson, args.fseq, controllers, ctrlbyname, smodels, frames, srcmodels, args)
 
     # OK - Start generating a sequence
     framems = hjson['msperframe']
@@ -851,7 +855,7 @@ if __name__ == '__main__':
                 pctpopular = 100 * cf.choices[0].popularity / cf.nLit
                 prevpop = 0
                 for c in pf.choices:
-                    if not c.isDifferent(cf.choices[0]) and c.popularity > 0:
+                    if not c.isDifferent(cf.choices[0], args) and c.popularity > 0:
                         prevpop = 100 * c.popularity / pf.nLit
                 if pctpopular - prevpop >= args.colorjumpamt:
                     es = SeqEnt(cf)
@@ -922,7 +926,7 @@ if __name__ == '__main__':
 
             if args.changecolor and not cframe.colorFidelity:
                 for ccc in range(0, 4):
-                    if cframe.frame.choices[(chosen + ccc) % 4].isDifferent(lastChoice):
+                    if cframe.frame.choices[(chosen + ccc) % 4].isDifferent(lastChoice, args):
                         cc = cframe.frame.choices[(chosen + ccc) % 4]
                         #print ("Changed by: "+str(ccc))
                         break
