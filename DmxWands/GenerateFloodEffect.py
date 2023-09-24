@@ -734,7 +734,7 @@ if __name__ == '__main__':
     parser.add_argument('--similarityh', type=int, default = 6, help = "Hue similarity")
     parser.add_argument('--similaritys', type=int, default = 10, help = "Saturation similarity")
     parser.add_argument('--similarityv', type=int, default = 20, help = "Value similarity")
-    parser.add_argument('--thresholdv', type=int, default = 2, help = "Value threshold - below this it is too dark for color fidelity")
+    parser.add_argument('--thresholdv', type=int, default = 5, help = "Value threshold - below this it is too dark for color fidelity")
 
     # TODO: Just fill in with the popular color - that mode is a bit tricky
 
