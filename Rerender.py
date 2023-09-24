@@ -30,6 +30,7 @@ if doall or False:
     #"30 Second Jeopardy Spooky.xsq",
     #"30 Second Timer With Jeopardy Thinking Music.xsq",
     "AddamsFamily.xsq",
+    "Astronaut.xsq",
     "BackgroundTuneTo.xsq",
     "BackgroundTuneToParkOnRight.xsq",
     "Bang.xsq",
@@ -49,6 +50,7 @@ if doall or False:
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     #"DevilWentDownToGeorgia.xsq",
+    "DontLetMeDown.xsq",
     "Dragula.xsq",
     "DuHast.xsq",
     "Dynamite.xsq",
@@ -56,6 +58,7 @@ if doall or False:
     #"evilintro.xsq",
     "ET.xsq",
     "Everlong.xsq",
+    "EyeOfTheTiger.xsq",
     #"FriendLikeMe_Visionary_V0.xsq",
     "GhostBustersIntro.xsq",
     "Ghostbusters.xsq",
@@ -73,7 +76,7 @@ if doall or True:
     "Kashmir.xsq", # This one abended once
     "LightEmUp.xsq",
     "LivinOnAPrayer.xsq",
-    #"MadWorld_V0.xsq",
+    "MadWorld_V0.xsq",
     "Mambo5.xsq",
     #"MasterOfPuppets_Visionary_V1.xsq",
     "MJMix.xsq",
