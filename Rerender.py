@@ -26,12 +26,20 @@ doall = True
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
+    "BackgroundTuneTo.xsq",
+    "BackgroundTuneToParkOnRight.xsq",
+    #"CameraWarmup.xsq",
+    "StaticIntroSeq.xsq",
+    ])
+    print (msg)
+
+if doall or False:
+    msg = xlenv.batchRenderSeqList([
     "1983In3.xsq",
     #"30 Second Jeopardy Spooky.xsq",
     #"30 Second Timer With Jeopardy Thinking Music.xsq",
     "AddamsFamily.xsq",
-    "BackgroundTuneTo.xsq",
-    "BackgroundTuneToParkOnRight.xsq",
+    "Astronaut.xsq",
     "Bang.xsq",
     "BarbieGirl.xsq",
     "Beggin.xsq",
@@ -39,16 +47,17 @@ if doall or False:
     "Bones.xsq",
     "BringMeToLife.xsq",
     "Bruno.xsq",
-    #"CameraWarmup.xsq",
     #"Casper the Friendly Ghost 1950   Intro Opening Lilly.xsq",
     "CryLittleSister.xsq",
+    "Degradation.xsq",
     "DevilInside.xsq",
     ])
     print (msg)
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
-    #"DevilWentDownToGeorgia.xsq",
+    "DevilWentDownToGeorgia_xS.xsq",
+    "DontLetMeDown.xsq",
     "Dragula.xsq",
     "DuHast.xsq",
     "Dynamite.xsq",
@@ -56,9 +65,11 @@ if doall or False:
     #"evilintro.xsq",
     "ET.xsq",
     "Everlong.xsq",
+    "EyeOfTheTiger.xsq",
     #"FriendLikeMe_Visionary_V0.xsq",
     "GhostBustersIntro.xsq",
     "Ghostbusters.xsq",
+    "GrimGrinningGhosts.xsq",
     #"HalloweenHorrorLights_2020_V0.xsq",
     #"HalloweenHorrorLights_2022_V1.xsq",
     "HalloweenTheme.xsq",
@@ -70,18 +81,20 @@ if doall or True:
     "HauntedHeart.xsq",
     "InfernoOfScarySkeletons.xsq",
     "IPutASpellOnYou.xsq",
+    "JokerThief.xsq",
     "Kashmir.xsq", # This one abended once
     "LightEmUp.xsq",
     "LivinOnAPrayer.xsq",
-    #"MadWorld_V0.xsq",
+    "MadWorld_V0.xsq",
     "Mambo5.xsq",
     #"MasterOfPuppets_Visionary_V1.xsq",
     "MJMix.xsq",
     #"Monster_PixelPerfectSeq_V1.xsq",
-    #"MonsterMash_xS_V7.xsq",
+    "MonsterMash_xS.xsq",
     "OogieBoogie.xsq",
     "Paradise.xsq",
     "ProperEducation.xsq",
+    "Psycho.xsq",
     "PurplePeopleEater.xsq",
     "Rasputin.xsq",
     "Roar.xsq",
@@ -96,7 +109,8 @@ if doall or True:
     "SmoothCriminal.xsq",
     "SomebodysWatchingMe.xsq",
     #"ThisIsHalloween_MLS.xsq",
-    #"Thriller_V0.xsq",
+    "ThisIsHalloween_xS.xsq",
+    "Thriller_xS_TA.xsq",
     "ToxicRemix.xsq",
     "Villains.xsq",
     "WatchingMePortals.xsq",
