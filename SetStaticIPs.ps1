@@ -35,6 +35,7 @@ netsh interface ipv4 add neighbors "USBHub27" "192.168.27.60" "ca-61-60-df-95-f6
 netsh interface ipv4 add neighbors "USBHub27" "192.168.27.70" "82-7c-2f-bb-41-d0"
 netsh interface ipv4 add neighbors "USBHub27" "192.168.27.80" "32-11-b5-93-7a-cf"
 netsh interface ipv4 add neighbors "USBHub27" "192.168.27.110" "ea-69-c9-b8-06-b1"
+netsh interface ipv4 add neighbors "USBHub27" "192.168.27.120" "00-00-00-49-48-46"
 netsh interface ipv4 add neighbors "USBHub27" "192.168.27.132" "24-76-25-ef-e4-bd"
 netsh interface ipv4 add neighbors "USBHub27" "192.168.27.150" "60-b6-e1-17-e6-5d"
 netsh interface ipv4 add neighbors "USBHub27" "192.168.27.158" "00-02-02-04-61-8f"
