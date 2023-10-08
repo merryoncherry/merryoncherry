@@ -22,13 +22,13 @@ print("xLights now running.")
 xlenv.changeShowFolder()
 
 doall = False
-doall = True
+#doall = True
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
+    "Announcement.xsq",
     "BackgroundTuneTo.xsq",
     "BackgroundTuneToParkOnRight.xsq",
-    #"CameraWarmup.xsq",
     "StaticIntroSeq.xsq",
     ])
     print (msg)
@@ -36,15 +36,17 @@ if doall or False:
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     "1983In3.xsq",
-    #"30 Second Jeopardy Spooky.xsq",
-    #"30 Second Timer With Jeopardy Thinking Music.xsq",
+    "30 Second Jeopardy Spooky.xsq",
+    "30 Second Timer With Jeopardy Thinking Music.xsq",
     "AddamsFamily.xsq",
     "Astronaut.xsq",
     "Bang.xsq",
     "BarbieGirl.xsq",
     "Beggin.xsq",
-    #"BlueMoon.xsq",
+    "BlackMagic.xsq",
+    "BloodyMary_BF.xsq",
     "Bones.xsq",
+    "BooToYou.xsq",
     "BringMeToLife.xsq",
     "Bruno.xsq",
     #"Casper the Friendly Ghost 1950   Intro Opening Lilly.xsq",
@@ -62,9 +64,9 @@ if doall or False:
     "DuHast.xsq",
     "Dynamite.xsq",
     "EnterSandman.xsq",
-    #"evilintro.xsq",
+    "evilintro.xsq",
     "ET.xsq",
-    "Everlong.xsq",
+    "Everlong_Adj.xsq", # Abended once
     "EyeOfTheTiger.xsq",
     #"FriendLikeMe_Visionary_V0.xsq",
     "GhostBustersIntro.xsq",
@@ -81,26 +83,30 @@ if doall or True:
     "HauntedHeart.xsq",
     "InfernoOfScarySkeletons.xsq",
     "IPutASpellOnYou.xsq",
+    "IPutASpellOnYou_Hawkins.xsq",
+    "IWantCandy.xsq",
     "JokerThief.xsq",
-    "Kashmir.xsq", # This one abended once
+    "Kashmir.xsq", # Abended once
+    "LadiesAndGentlemen.xsq",
     "LightEmUp.xsq",
     "LivinOnAPrayer.xsq",
-    "MadWorld_V0.xsq",
+    "MadWorld.xsq",
     "Mambo5.xsq",
     #"MasterOfPuppets_Visionary_V1.xsq",
     "MJMix.xsq",
     #"Monster_PixelPerfectSeq_V1.xsq",
     "MonsterMash_xS.xsq",
+    "OneWayOrAnother.xsq",
     "OogieBoogie.xsq",
-    "Paradise.xsq",
+    "Paradise.xsq", # Abended once
     "ProperEducation.xsq",
     "Psycho.xsq",
     "PurplePeopleEater.xsq",
     "Rasputin.xsq",
     "Roar.xsq",
     "SeparateWays.xsq",
-    #"SeletonSam_BF.xsq",
-    #"SmellsLikeTeenSpirit.xsq",
+    "SkeletonSam_BF.xsq",
+    "SmellsLikeTeenSpirit.xsq",
     ])
     print (msg)
 
@@ -108,20 +114,24 @@ if doall or True:
     msg = xlenv.batchRenderSeqList([
     "SmoothCriminal.xsq",
     "SomebodysWatchingMe.xsq",
-    #"ThisIsHalloween_MLS.xsq",
+    "SomebodysWatchingMeRemix.xsq",
+    "SpookyScarySkeletons_MLS.xsq",
+    "StrangerThingsRemix.xsq",
+    "SweetDreams.xsq",
+    "TheSpook.xsq",
+    "ThisIsHalloween_MLS.xsq",
     "ThisIsHalloween_xS.xsq",
     "Thriller_xS_TA.xsq",
     "ToxicRemix.xsq",
     "Villains.xsq",
     "WatchingMePortals.xsq",
-    "WhenTheLightsComeOn.xsq",
     "WhereEvilGrows.xsq",
     "WitchDoctor.xsq",
     "WitchesAreBack.xsq",
     #"Youngblood_Visionary_V1.xsq",
     "YouMakeMeFeelLikeItsHalloween.xsq",
     "YouShookMeAllNightLong.xsq",
-    "Zombie.xsq",
+    "Zombie.xsq", # Abended once
     ])
     print (msg)
 
