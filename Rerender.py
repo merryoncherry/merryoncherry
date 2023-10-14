@@ -22,7 +22,7 @@ print("xLights now running.")
 xlenv.changeShowFolder()
 
 doall = False
-#doall = True
+doall = True
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
@@ -50,6 +50,7 @@ if doall or False:
     "BringMeToLife.xsq",
     "Bruno.xsq",
     #"Casper the Friendly Ghost 1950   Intro Opening Lilly.xsq",
+    "CottonEyeJoe.xsq",
     "CryLittleSister.xsq",
     "Degradation.xsq",
     "DevilInside.xsq",
@@ -81,6 +82,7 @@ if doall or False:
 if doall or True:
     msg = xlenv.batchRenderSeqList([
     "HauntedHeart.xsq",
+    "Heathens.xsq",
     "InfernoOfScarySkeletons.xsq",
     "IPutASpellOnYou.xsq",
     "IPutASpellOnYou_Hawkins.xsq",
@@ -94,8 +96,9 @@ if doall or True:
     "Mambo5.xsq",
     #"MasterOfPuppets_Visionary_V1.xsq",
     "MJMix.xsq",
-    #"Monster_PixelPerfectSeq_V1.xsq",
+    "Monster_PPS.xsq",
     "MonsterMash_xS.xsq",
+    "Mony.xsq",
     "OneWayOrAnother.xsq",
     "OogieBoogie.xsq",
     "Paradise.xsq", # Abended once
@@ -103,7 +106,10 @@ if doall or True:
     "Psycho.xsq",
     "PurplePeopleEater.xsq",
     "Rasputin.xsq",
+    "RaveInTheGrave.xsq",
     "Roar.xsq",
+    "RunningUpThatHill.xsq",
+    "Secret.xsq",
     "SeparateWays.xsq",
     "SkeletonSam_BF.xsq",
     "SmellsLikeTeenSpirit.xsq",
@@ -122,6 +128,7 @@ if doall or True:
     "ThisIsHalloween_MLS.xsq",
     "ThisIsHalloween_xS.xsq",
     "Thriller_xS_TA.xsq",
+    "Tocatta.xsq",
     "ToxicRemix.xsq",
     "Villains.xsq",
     "WatchingMePortals.xsq",
@@ -151,6 +158,19 @@ if doall or True:
         "SBSpooky_SkeletonInsideYou.xsq",
         "SBSpooky_MonsterMash.xsq",
         "SBSpooky_GhostJoke.xsq",
+
+        "SBBarbie.xsq",
+        "SBBubbles.xsq",
+        "SBCoffin.xsq",
+        "SBGhoulFriend.xsq",
+        "SBLightEmUp.xsq",
+        "SBPainInTheNeck.xsq",
+        "SBShopping.xsq",
+        "SBSquash.xsq",
+        "SBVampirates.xsq",
+        "SBWarts.xsq",
+        "SBWhichWitch.xsq",
+        "SBWitchesGetStitches.xsq",
     ])
     print (msg)
 
