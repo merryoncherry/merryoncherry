@@ -42,6 +42,7 @@ if doall or False:
     "Astronaut.xsq",
     "Bang.xsq",
     "BarbieGirl.xsq",
+    "Beetlejuice.xsq",
     "Beggin.xsq",
     "BlackMagic.xsq",
     "BloodyMary_BF.xsq",
@@ -69,6 +70,7 @@ if doall or False:
     "ET.xsq",
     "Everlong_Adj.xsq", # Abended once
     "EyeOfTheTiger.xsq",
+    "Frankenstein.xsq",
     #"FriendLikeMe_Visionary_V0.xsq",
     "GhostBustersIntro.xsq",
     "Ghostbusters.xsq",
@@ -132,10 +134,11 @@ if doall or True:
     "ToxicRemix.xsq",
     "Villains.xsq",
     "WatchingMePortals.xsq",
+    "WelcomeToMyNightmare.xsq",
     "WhereEvilGrows.xsq",
     "WitchDoctor.xsq",
     "WitchesAreBack.xsq",
-    #"Youngblood_Visionary_V1.xsq",
+    "YoungBlood.xsq",
     "YouMakeMeFeelLikeItsHalloween.xsq",
     "YouShookMeAllNightLong.xsq",
     "Zombie.xsq", # Abended once
