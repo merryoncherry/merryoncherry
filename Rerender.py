@@ -22,7 +22,7 @@ print("xLights now running.")
 xlenv.changeShowFolder()
 
 doall = False
-doall = True
+#doall = True
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
@@ -47,6 +47,7 @@ if doall or False:
     "Beggin.xsq",
     "BlackMagic.xsq",
     "BloodyMary_BF.xsq",
+    "BloodyMary_HHL.xsq",
     "Bluey.xsq",
     "Bones.xsq",
     "BooToYou.xsq",
@@ -71,9 +72,10 @@ if doall or False:
     "evilintro.xsq",
     "ET.xsq",
     "Everlong_Adj.xsq", # Abended once
+    "Everybody.xsq",
     "EyeOfTheTiger.xsq",
     "Frankenstein.xsq",
-    #"FriendLikeMe_Visionary_V0.xsq",
+    "FriendLikeMe.xsq",
     "GhostBustersIntro.xsq",
     "Ghostbusters.xsq",
     "GrimGrinningGhosts.xsq",
@@ -83,7 +85,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "HauntedHeart.xsq",
     "Heathens.xsq",
@@ -92,6 +94,7 @@ if doall or True:
     "IPutASpellOnYou_Hawkins.xsq",
     "IWantCandy.xsq",
     "JokerThief.xsq",
+    "JohnWilliams.xsq",
     "Kashmir.xsq", # Abended once
     "LadiesAndGentlemen.xsq",
     "LightEmUp.xsq",
@@ -120,7 +123,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "SmoothCriminal.xsq",
     "SomebodysWatchingMe.xsq",
@@ -128,6 +131,7 @@ if doall or True:
     "SpookyScarySkeletons_MLS.xsq",
     "StayinInBlack.xsq",
     "StrangerThingsRemix.xsq",
+    "Superstition.xsq",
     "SweetDreams.xsq",
     "TheSpook.xsq",
     "ThisIsHalloween_MLS.xsq",
@@ -149,7 +153,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
         "SBSpooky_YouRang_Faster.xsq",
         "SBSpooky_YouRang_V1.xsq",
