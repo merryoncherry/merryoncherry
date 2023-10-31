@@ -1096,7 +1096,7 @@ name="PPD GE MOAW" parm1="454" parm2="462" Depth="1" StringType="RGB Nodes" Tran
 <subModel name="Whirliwig Odd" layout="horizontal" type="ranges" bufferstyle="Default" line0="5,70,135,200,265,330,395,460,525,590" line1="13,78,143,208,273,338,403,468,533,598" line2="21,86,151,216,281,346,411,476,541,606" line3="29,94,159,224,289,354,419,484,549,614" line4="37,102,167,232,297,362,427,492,557,622" line5="45,110,175,240,305,370,435,500,565,630" line6="53,118,183,248,313,378,443,508,573,638" line7="61,126,191,256-257,322,387,452,517,582">
   <ControllerConnection/>
 </subModel>
-<subModel name="Feather 1" layout="horizontal" type="ranges" bufferstyle="Default" line0="4,68,132,196,A2260,324,388,453,390,326,262,198,134,70,6">
+<subModel name="Feather 1" layout="horizontal" type="ranges" bufferstyle="Default" line0="4,68,132,196,260,324,388,453,390,326,262,198,134,70,6">
   <ControllerConnection/>
 </subModel>
 <subModel name="Feather 2" layout="horizontal" type="ranges" bufferstyle="Default" line0="8,72,136,200,264,328,392,457,394,330,266,202,138,74,10">
