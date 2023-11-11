@@ -1,16 +1,16 @@
 import subprocess
 import xlAutomation.xlDo
 
-srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_networks.xml"
-intnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Xmas\\xlights_networks.xml"
-dstnet="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Xmas\\xlights_networks.xml"
+srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2022_Base\\xlights_networks.xml"
+intnet="c:\\users\\chuck\\documents\\xlightsShows\\2022_Xmas\\xlights_networks.xml"
+dstnet="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Xmas\\xlights_networks.xml"
 
-srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_rgbeffects.xml"
-intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Xmas\\xlights_rgbeffects.xml"
-dstrgb="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Xmas\\xlights_rgbeffects.xml"
+srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2022_Base\\xlights_rgbeffects.xml"
+intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2022_Xmas\\xlights_rgbeffects.xml"
+dstrgb="\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Xmas\\xlights_rgbeffects.xml"
 
 xlenv = xlAutomation.xlDo.XLEnv()
-xlenv.data = 'c:\\Users\\Chuck\\Documents\\xlightsShows\\2023_Xmas'
+xlenv.data = 'c:\\Users\\Chuck\\Documents\\xlightsShows\\2022_Xmas'
 
 wasRunning = xlenv.isXLightsRunning(True)
 
@@ -19,13 +19,9 @@ if not wasRunning:
 
 xlenv.changeShowFolder()
 
-doall = False
-#doall = True
-
-if doall or True:
+if False:
     msg = xlenv.batchRenderSeqList([
-    "BlessTheUSA.xsq",
-    "GBTUSA_AFM.xsq",
+    "GodBlessTheUSA.xsq",
     "MyHero.xsq",
     "ROCKInTheUSA.xsq",
     "PartyInTheUSA.xsq",
@@ -33,7 +29,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or False:
+if True:
     msg = xlenv.batchRenderSeqList([
     "BackgroundPleaseParkWings.xsq",
     "BackgroundTuneToEndOfStreet.xsq",
@@ -49,7 +45,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or False:
+if False:
     msg = xlenv.batchRenderSeqList([
     "12Days_McKenzie_FPD.xsq",
     "12Days_SNC_PPD.xsq",
@@ -71,7 +67,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or False:
+if False:
     msg = xlenv.batchRenderSeqList([
     "Crystallize_LS_SeqSol.xsq",
     "DanceofTheSugarPlum_FPD.xsq",
@@ -139,7 +135,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or False:
+if True:
     msg = xlenv.batchRenderSeqList([
     "TwasTheNightBeforeChristmas_xS.xsq",
     "UpOnTheHouseTop_Ptx.xsq",
@@ -154,7 +150,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or False:
+if True:
     msg = xlenv.batchRenderSeqList([
     "AWholeNewWorld_RGB.xsq",
     "AllTheSmallThings_PPD.xsq",
@@ -206,6 +202,6 @@ subprocess.run([
 
 subprocess.run([
     "copy", "/Y",
-    "c:\\users\\chuck\\documents\\xlightsShows\\2023_Xmas\\*.fseq",
-    "\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Xmas"], shell=True, check=True)
+    "c:\\users\\chuck\\documents\\xlightsShows\\2022_Xmas\\*.fseq",
+    "\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Xmas"], shell=True, check=True)
 
