@@ -29,7 +29,7 @@ if False:
     ])
     print (msg)
 
-if True:
+if False:
     msg = xlenv.batchRenderSeqList([
     "BackgroundPleaseParkWings.xsq",
     "BackgroundTuneToEndOfStreet.xsq",
@@ -45,7 +45,7 @@ if True:
     ])
     print (msg)
 
-if False:
+if True:
     msg = xlenv.batchRenderSeqList([
     "12Days_McKenzie_FPD.xsq",
     "12Days_SNC_PPD.xsq",
@@ -67,7 +67,7 @@ if False:
     ])
     print (msg)
 
-if False:
+if True:
     msg = xlenv.batchRenderSeqList([
     "Crystallize_LS_SeqSol.xsq",
     "DanceofTheSugarPlum_FPD.xsq",
@@ -190,18 +190,19 @@ if True:
 if not wasRunning:
    xlenv.stopXLights()
 
-subprocess.run([
-    "copy", "/Y",
-    intnet,
-    dstnet], shell=True, check=True)
+if False:
+    subprocess.run([
+        "copy", "/Y",
+        intnet,
+        dstnet], shell=True, check=True)
 
-subprocess.run([
-    "copy","/Y",
-    intrgb,
-    dstrgb], shell=True, check=True)
+    subprocess.run([
+        "copy","/Y",
+        intrgb,
+        dstrgb], shell=True, check=True)
 
-subprocess.run([
-    "copy", "/Y",
-    "c:\\users\\chuck\\documents\\xlightsShows\\2022_Xmas\\*.fseq",
-    "\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Xmas"], shell=True, check=True)
+    subprocess.run([
+        "copy", "/Y",
+        "c:\\users\\chuck\\documents\\xlightsShows\\2022_Xmas\\*.fseq",
+        "\\\\desktop-kara3a2\\users\\chuck\\documents\\xlightsShows\\2022_Xmas"], shell=True, check=True)
 

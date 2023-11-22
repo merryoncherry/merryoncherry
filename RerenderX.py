@@ -53,12 +53,14 @@ if doall or False:
     msg = xlenv.batchRenderSeqList([
     #"12Days_McKenzie_FPD.xsq",
     #"12Days_SNC_PPD.xsq",
-    "AllIReallyWantForChristmas",
+    "AllIReallyWantForChristmas.xsq",
+    "BecauseImSanta.xsq",
     #"CarolOfTheBells_Barlowgirl.xsq",
     #"CarolOfTheBells_Epic_SeqSol.xsq",
     #"CarolOfTheBells_LS_RGBSeq.xsq",
     #"ChildrenChristmasMix_xS.xsq",
     #"ChristmasCanCan_MLS.xsq",
+    "ChristmasCanon_SSS.xsq",
     "ChristmasDontBeLate.xsq",
     #"ChristmasInParadise_UsTheDuo_Showstopper.xsq",
     #"ChristmasNutchracker_PPD.xsq",
@@ -66,6 +68,8 @@ if doall or False:
     #"ChristmasTreat_Showstopper.xsq",
     #"ChristmasTwist_Showstopper.xsq",
     #"ChristmasWithoutYou_AvaMax_RGBSeq.xsq",
+    "ChristmasWithoutYou_SSS.xsq",
+    "ComeOnChristmas_SSS.xsq",
     #"CozyLittleChristmas_Showstopper.xsq",
     #"Clark_Try5.xsq",
     ])
@@ -83,6 +87,7 @@ if doall or False:
     #"DontBeAJerk_Spongebob_PPD.xsq",
     #"DontStopTheSantaMan.xsq",
     #"FavoriteTimeOfYear_PPD.xsq",
+    "FeelsLikeChristmas.xsq",
     #"FelizNavidad_Showstopper.xsq",
     #"FrostyTheSnowman2022_Showstopper.xsq",
     #"GrandmaGotRunOver_PPD.xsq",
@@ -94,6 +99,7 @@ if doall or False:
     #"HollyJollyChristmas_Ives_xS.xsq",
     #"HomeForTheHolidays_PerryComo_PPD.xsq",
     #"IceStorm_Vivid.xsq",
+    "ImGonnaBeWarm.xsq",
     #"ItMustBeSanta_PPD.xsq",
     #"ItsBeginningToLookALotLikeChristmas_Buble_Showstopper.xsq",
     #"JingALing_JJ.xsq",
@@ -106,6 +112,11 @@ if doall or False:
     #"LightOfChristmas_PPD_V2.xsq",
     #"LittleStNick_PPD.xsq",
     #"MarshmallowWorld_FB_PPD.xsq",
+    ])
+    print (msg)
+
+if doall or False:
+    msg = xlenv.batchRenderSeqList([
     #"MeleKalikimaka_gdrive.xsq",
     #"MeleKalikimaka_MLS.xsq",
     "MeleKalikimaka_SSS.xsq",
@@ -132,6 +143,7 @@ if doall or False:
     #"StepIntoChristmas_PPD.xsq",
     #"SugarAndBooze_PPD.xsq",
     #"TakinCareOfChristmas_xS.xsq",
+    "ThatTimeOfYear.xsq",
     #"TheChristmasSong_EFL.xsq",
     #"TheChristmasSong_xS.xsq",
     #"ToySack_BobRivers_xS.xsq",
@@ -148,8 +160,10 @@ if doall or False:
     #"WeThreeGentlemen_xS.xsq",
     #"WeWishYouAMerryChristmas_Weezer_PPD.xsq",
     #"WhatChristmasMeansToMe_SW_PPD.xsq",
+    "WhenIAmOlder.xsq",
     #"WhereAreYouChristmasFaithHillPPD.xsq",
     #"WhiteChristmas_Drifters_PPD.xsq",
+    "WizardsInWinter_SSS.xsq",
     #"WonderfulChristmastime_UsTheDuo_PPD.xsq",
     #"xSClassicMedley.xsq",
     ])
