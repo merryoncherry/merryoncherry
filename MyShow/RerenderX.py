@@ -1,4 +1,8 @@
 import subprocess
+
+import sys
+sys.path.append('../merryoncherry')
+
 import xlAutomation.xlDo
 
 srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_networks.xml"
@@ -20,7 +24,7 @@ if not wasRunning:
 xlenv.changeShowFolder()
 
 doall = False
-doall = True
+#doall = True
 
 if doall and False:
     msg = xlenv.batchRenderSeqList([
@@ -33,7 +37,7 @@ if doall and False:
     ])
     print (msg)
 
-if doall or False:
+if doall or True:
     msg = xlenv.batchRenderSeqList([
     #"BackgroundPleaseParkWings.xsq",
     #"BackgroundTuneToEndOfStreet.xsq",
@@ -46,7 +50,7 @@ if doall or False:
     #"SB-KeepRight.xsq",
     #"SB-ParkAndTune.xsq",
     #"SB-TakePhotos.xsq",
-    "XmasBG_V1",
+    "XmasBG_V1.xsq",
     ])
     print (msg)
 
@@ -74,6 +78,7 @@ if doall or False:
     #"ChristmasWithoutYou_AvaMax_RGBSeq.xsq",
     "ChristmasWithoutYou_SSS.xsq",
     "ComeOnChristmas_SSS.xsq",
+    "CountOnChristmas_PPD.xsq",
     "CozyLittleChristmas_SSS.xsq",
     "CozyLittleChristmasTreeFarm_PPD.xsq",
     "ClarkIntro.xsq",
@@ -87,7 +92,6 @@ if doall or False:
     #"DarleneLoveBabyPleaseComeHome.xsq",
     #"DiddlySquat_Vivid.xsq",
     #"DiscoSanta_NOEL_PPD.xsq",
-    #"DominickTheDonkey_gdrive.xsq",
     "Dominick_PPD.xsq",
     "DominickToItalian.xsq",
     #"DontBeAJerk_Spongebob_PPD.xsq",
@@ -97,7 +101,7 @@ if doall or False:
     "FelizNavidad_SSS.xsq",
     "FrostyTheSnowman.xsq",
     "GoTellSantaBaby_PPD.xsq",
-    #"GrandmaGotRunOver_PPD.xsq",
+    "GrandmaGotRunOver_PPD.xsq",
     #"GrinchClassic_xS.xsq",
     "HappyHolidays_PPD.xsq",
     #"HaveYourselfAMerryLittleChristmas_DW_PPD.xsq",
@@ -144,6 +148,7 @@ if doall or False:
     #"SantaBringMyBabyBack_Train_PPD.xsq",
     "SantaCantYouHearMe_PPD.xsq",
     #"SantaClaus_Panama_PPD.xsq",
+    "SantaSings_BS.xsq",
     "SantaTellMe_SSS.xsq",
     "Sarajevo_SSS.xsq",
     "SB-ChuckBLilJohnWet.xsq",
@@ -181,7 +186,7 @@ if doall or False:
     #"WhatChristmasMeansToMe_SW_PPD.xsq",
     "WhenIAmOlder.xsq",
     "WhenYouBelieve_PPD.xsq",
-    #"WhereAreYouChristmasFaithHillPPD.xsq",
+    "WhereAreYouChristmasFaithHillPPD.xsq",
     #"WhiteChristmas_Drifters_PPD.xsq",
     "WhiteChristmas_SSS.xsq",
     "WizardsInWinter_SSS.xsq",

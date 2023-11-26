@@ -1,4 +1,8 @@
 import subprocess
+
+import sys
+sys.path.append('../merryoncherry')
+
 import xlAutomation.xlDo
 
 srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_networks.xml"
