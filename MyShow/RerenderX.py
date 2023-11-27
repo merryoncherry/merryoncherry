@@ -24,7 +24,7 @@ if not wasRunning:
 xlenv.changeShowFolder()
 
 doall = False
-#doall = True
+doall = True
 
 if doall and False:
     msg = xlenv.batchRenderSeqList([
@@ -109,7 +109,7 @@ if doall or False:
     #"HereComesSantaClaus_Bing_PPD.xsq",
     #"HereComesSantaClaus_Bing_xS.xsq",
     "HolidayRoad_SSS.xsq",
-    #"HollyJollyChristmas_Buble_PPD.xsq",
+    "HollyJollyChristmas_Buble_PPD.xsq",
     #"HollyJollyChristmas_Ives_xS.xsq",
     "HollyJollyChristmas_SSS.xsq",
     #"HomeForTheHolidays_PerryComo_PPD.xsq",
@@ -125,6 +125,7 @@ if doall or False:
     #"JingleJingleJingle_PPD.xsq",
     #"JoyToTheWorld_BobRivers_PPD.xsq",
     #"LetItSnow_Buble_MLS.xsq",
+    "LetItSnow_RLLS_PPD.xsq",
     #"LightOfChristmas_PPD.xsq",
     #"LightOfChristmas_PPD_V2.xsq",
     #"LittleStNick_PPD.xsq",
@@ -142,6 +143,7 @@ if doall or False:
     "Nutrocker_PPD.xsq",
     "OComeEmmanuel_SSS.xsq",
     #"QueenOfTheWinterNight_TSO_PPD.xsq",
+    "RockinAround_Duffield_PPD.xsq",
     #"RockinAround_Newsong_PPD.xsq",
     "RockinAroundTheChristmasTree_SSS.xsq",
     "RudolphTRNRD_SSS.xsq",
@@ -182,6 +184,7 @@ if doall or False:
     #"UpOnTheHouseTop_Ptx.xsq",
     #"WeNeedALittleChristmas_xS.xsq",
     #"WeThreeGentlemen_xS.xsq",
+    "WeThreeKings_PPD.xsq",
     #"WeWishYouAMerryChristmas_Weezer_PPD.xsq",
     #"WhatChristmasMeansToMe_SW_PPD.xsq",
     "WhenIAmOlder.xsq",
@@ -189,6 +192,7 @@ if doall or False:
     "WhereAreYouChristmasFaithHillPPD.xsq",
     #"WhiteChristmas_Drifters_PPD.xsq",
     "WhiteChristmas_SSS.xsq",
+    "WinterWonderland_SG_PPD.xsq",
     "WizardsInWinter_SSS.xsq",
     #"WonderfulChristmastime_UsTheDuo_PPD.xsq",
     #"xSClassicMedley.xsq",
