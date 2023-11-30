@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custommodel 
+name="Boscoyo Holly" parm1="65" parm2="24" Depth="1" StringType="RGB Nodes" Transparency="0" PixelSize="2" ModelBrightness="" Antialias="1" StrandNames="MyCustomModel" NodeNames="" CustomModel=",,,,,,,,,,,,,,,,,,,,,,,,,,,,77,,78,,,,,,84,,85,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,76,,,,,79,,,83,,,,,86,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,75,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,40,,,,,,,,,,,,,,80,,82,,,,,,87,,,,,,,,132,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,41,,,,,,74,,,,,,,,81,,,,,,,,,,,,133,,,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,,39,,,42,,,,,,,73,,,71,,,,,,,,88,,,,,,134,,,131,,,,,,,,,,,,,,,,;,,,,,,,,,,,,,,,,,38,,,,,,43,,,,,,,72,,70,,,,90,,89,,,136,,135,,,,,,130,,,,,,127,,,,,,,,,;,,,,,,,,,,,35,,36,,37,,,,,,,,,,44,,45,,,,,,,69,,,91,,137,,,,,,,,,,,,129,,128,,,,,,,,,,,;,,,,,,,,,,,34,,,,,,,,,,,,,,,,,60,,61,,,,,68,,,138,,,,,,,,,,,,,,,,,126,,,,,,,,,;,,,,,,,,,,,,,,,,,,,,,,,,,,,46,1,62,,,,,,,,92,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,,33,,,,,,,,,,,,,,,59,,,,,,,,,,,67,,,,139,,,,,,,,,,,,,,,125,,,,,,,,,;,,,,,,,,,32,,,,,,,,,,,,,,47,,,,2,,,63,,,,,66,,,93,,,,140,,,,,,,,,,,,,,124,,,,,,,,;,,,,,,,31,,,,,,,,,,,,,,58,,,,,,,,,,64,,,,,,,,,,,,,141,,,,,,,,,,,,,,123,122,,121,,,;,,,,29,30,,,,,,,,,,,,,,,48,,,,,,,3,,,,,,65,,,,,94,,,,,,,142,,,,,,,,,,,,,,,,,,,;,,,,28,,,,,,,,,,,,49,,57,,,,,,,,4,,,,,,,,,,,,,,,,,,,,,143,,,,,,,,,,,,,120,,,,;,,,,,,,,,,,,,,56,,,,,,,,,,,,,,,,,,,,,,,,95,,,,,,,,,,,144,,145,,,,,,,,,,,,,;,,,,27,,,,,,,,50,,,,,,,,,,,,,,,5,,,,,,,,,,,,,,,,,,,,,,,,,,146,,,,,,,119,,,,;,,,,,,,,,,55,,,,,,,,,,,,,,8,7,,,,,,,,,,,,96,98,,99,,,,,,,,,,,,,,147,,,,,,,,,,;,,,26,,,,,,51,,,,,,,,,,,,,9,,,,,6,,,,,,,,,,97,,,,,100,101,,,,,,,,,,,,,148,,,,118,,,,;,,25,,,52,,54,,,,,,,,,,,,,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,149,,150,117,,,;,24,,53,,,,,,,,,,,15,,14,,,11,,,,,,,,,,,,,,,,,,,,,,,,,102,,104,,105,106,,107,,,,,111,,112,,,113,116,,115;23,22,,,21,,20,,,,,,16,,,,,,13,,,,,,,,,,,,,,,,,,,,,,,,,,103,,,,,,,,108,,,110,,,,,,,114,,;,,,,,,,,19,,17,,,,,,,,,12,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,;,,,,,,,,,18,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,109,,,,,,,,,,," SourceVersion="2023.19"  >
+<subModel name="Left Leaf" layout="horizontal" type="ranges" line0="1-60">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Left Leaf Outline" layout="horizontal" type="ranges" line0="1-45,60">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Left Leaf Centerline" layout="horizontal" type="ranges" line0="46-59">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Right Leaf" layout="horizontal" type="ranges" line0="91-150">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Right Leaf Outline" layout="horizontal" type="ranges" line0="91-137">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Right Leaf Centerline" layout="horizontal" type="ranges" line0="138-150">
+  <ControllerConnection/>
+</subModel>
+<subModel name="All Berries" layout="horizontal" type="ranges" line0="61-90">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Berry 1" layout="horizontal" type="ranges" line0="61-70">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Berry 2" layout="horizontal" type="ranges" line0="71-80">
+  <ControllerConnection/>
+</subModel>
+<subModel name="Berry 3" layout="horizontal" type="ranges" line0="81-90">
+  <ControllerConnection/>
+</subModel>
+<modelGroup selected="0" LayoutGroup="Default" name="Door Wreath" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="Boscoyo Holly"/>
+
+<modelGroup selected="0" LayoutGroup="Default" name="Door Wreath Stars" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Berry 1,EXPORTEDMODEL/Berry 2,EXPORTEDMODEL/Berry 3">
+  <ControllerConnection/>
+</modelGroup>
+
+</custommodel>
