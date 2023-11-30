@@ -25,6 +25,8 @@ name="Boscoyo Ice Queen Snowflake" parm1="81" parm2="69" Depth="1" StringType="R
 <subModel name="Outer Star" layout="horizontal" type="ranges" line0="279,278,280,282,283,284,295,297,299,298,362,361,363,365,367,378,380,382,381,445,444,446,448,450,449,461,463,464,465,30,29,31,33,34,35,46,48,50,49,113,112,114,116,118,129,131,133,132,196,195,197,199,201,200,212,214,216,215">
   <ControllerConnection/>
 </subModel>
+<modelGroup selected="0" name="Snowflake Arms" LayoutGroup="Default" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Main Arms Outline,EXPORTEDMODEL/Short Arms Outline"/>
+
 <modelGroup selected="0" LayoutGroup="Default" name="Snowflake Rings" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Inner Star 1,EXPORTEDMODEL/Inner Star 2,EXPORTEDMODEL/Outer Star">
   <ControllerConnection/>
 </modelGroup>
