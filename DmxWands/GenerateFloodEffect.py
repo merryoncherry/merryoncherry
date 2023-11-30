@@ -364,10 +364,12 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                 frame = raw[foffset: foffset + stepsz]
 
                 # Go through each model and do some CRC there
+                foundModels = {}
                 for m in models:
                     if srcmodels and len(srcmodels) and m.name not in srcmodels:
                         # Not interested in this model
                         continue
+                    foundModels[m.name] = m
                     sch = m.startch
                     ech = m.startch + m.nch if m.nch >= 0 else ccount
 
@@ -385,6 +387,13 @@ def calculateFSEQColorSummary(hjson, sfile, controllers, ctrlbyname, models, fra
                             hist.update(m, msub, args)
                             #print("Finished model "+m.name)
                         curoff += rcnt
+
+                if srcmodels and len(srcmodels) != len(foundModels):
+                    print("ERROR: We did not find all your models: "+",".join(srcmodels))
+                    for mn in srcmodels:
+                        if mn not in foundModels:
+                            print("  -- "+mn+" not found")
+                    exit(-1)
 
                 #print('Frame '+str(curframe)+' done')
                 foffset += stepsz
