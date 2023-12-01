@@ -24,7 +24,7 @@ if not wasRunning:
 xlenv.changeShowFolder()
 
 doall = False
-doall = True
+#doall = True
 
 if doall and False:
     msg = xlenv.batchRenderSeqList([
@@ -37,7 +37,7 @@ if doall and False:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     #"BackgroundPleaseParkWings.xsq",
     #"BackgroundTuneToEndOfStreet.xsq",
@@ -127,6 +127,8 @@ if doall or False:
     "JingleBells_Glee_PPD.xsq",
     "JingleJingleJingle_PPD.xsq",
     "JoyToTheWorld_BobRivers_PPD.xsq",
+    "JoyToTheWorld_LS_PPD.xsq",
+    "KidOnChristmas_PPD.xsq",
     #"LetItSnow_Buble_MLS.xsq",
     "LetItSnow_RLLS_PPD.xsq",
     #"LightOfChristmas_PPD.xsq",
@@ -159,7 +161,12 @@ if doall or False:
     "Sarajevo_SSS.xsq",
     "SB-ChuckBLilJohnWet.xsq",
     "SeasonsUponUs.xsq",
-    "ShakeUpChristmas_PPD",
+    ])
+    print (msg)
+
+if doall or True:
+    msg = xlenv.batchRenderSeqList([
+    "ShakeUpChristmas_PPD.xsq",
     "SiberianSleighRide.xsq",
     #"SilverBells_xS.xsq",
     "SkinnySanta_PPD.xsq",
