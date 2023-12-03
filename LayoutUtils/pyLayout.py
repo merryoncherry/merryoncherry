@@ -348,8 +348,8 @@ class Visitor:
     def visitxrgb(self, n):
         if (n.tagName != 'xrgb'):
             raise Exception('Root not "xrgb"')
-        for attrName, attrValue in n.attributes.items():
-            raise Exception('Root "xrgb" unexpected attribute "'+attrName+'"')
+        #for attrName, attrValue in n.attributes.items():
+        #    raise Exception('Root "xrgb" unexpected attribute "'+attrName+'"')
         for cn in n.childNodes:
             if (cn.nodeType == xml.dom.Node.ELEMENT_NODE):
                 if (cn.tagName == 'colors'):
@@ -736,8 +736,8 @@ class Mutator:
     def visitxrgb(self, n):
         if (n.tagName != 'xrgb'):
             raise Exception('Root not "xrgb"')
-        for attrName, attrValue in n.attributes.items():
-            raise Exception('Root "xrgb" unexpected attribute "'+attrName+'"')
+        #for attrName, attrValue in n.attributes.items():
+        #    raise Exception('Root "xrgb" unexpected attribute "'+attrName+'"')
         for cn in n.childNodes:
             if (cn.nodeType == xml.dom.Node.ELEMENT_NODE):
                 if (cn.tagName == 'colors'):

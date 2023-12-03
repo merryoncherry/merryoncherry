@@ -138,7 +138,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or False:
+if doall or True:
     msg = xlenv.batchRenderSeqList([
     "MeleKalikimaka_SSS.xsq",
     #"Mistletoe_Bieber_xS.xsq",
@@ -152,6 +152,7 @@ if doall or False:
     "RockinAround_Newsong_PPD.xsq",
     "RockinAroundTheChristmasTree_SSS.xsq",
     "RudolphTRNRD_SSS.xsq",
+    "RunRunRudolph_KC_EFL.xsq".
     "RunRunRudolph_KC_PPD.xsq",
     "SantaBringMyBabyBack_Train_PPD.xsq",
     "SantaCantYouHearMe_PPD.xsq",
@@ -164,7 +165,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "ShakeUpChristmas_PPD.xsq",
     "SiberianSleighRide.xsq",
@@ -176,7 +177,7 @@ if doall or True:
     "SleighRide_Ptx_SSS.xsq",
     #"SnoopysChristmas_SSol.xsq",
     #"SnowMiserHeatMiser_SeqSol.xsq",
-    #"SnowWaltz_EFL.xsq",
+    "SnowWaltz_EFL.xsq",
     "SomedayAtChristmas_PPD.xsq",
     "StepIntoChristmas_PPD.xsq",
     "SugarAndBooze_PPD.xsq",
@@ -198,6 +199,7 @@ if doall or False:
     #"WeThreeGentlemen_xS.xsq",
     "WeThreeKings_PPD.xsq",
     "WeWishYouAMerryChristmas_Weezer_PPD.xsq",
+    "WhatChristmasMeansToMe_EFL.xsq",
     "WhatChristmasMeansToMe_SW_PPD.xsq",
     "WhenIAmOlder.xsq",
     "WhenYouBelieve_PPD.xsq",
