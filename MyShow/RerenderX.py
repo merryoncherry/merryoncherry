@@ -52,14 +52,13 @@ if doall or False:
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
-    #"12Days_McKenzie_FPD.xsq",
     "12Days_SNC_PPD.xsq",
     "AllIReallyWantForChristmas.xsq",
     "AllIWantForChristmas_RGBS.xsq",
     "BecauseImSanta.xsq",
     "BlueChristmas_SSS.xsq",
     "CarolOfTheBells_Barlowgirl.xsq",
-    #"CarolOfTheBells_Epic_SeqSol.xsq",
+    "CarolOfTheBells_Epic_SeqSol.xsq",
     "CarolOfTheBells_LS_RGBSeq.xsq",
     "ChildrenChristmasMix_xS.xsq",
     "ChristmasCanCan_MLS.xsq",
@@ -89,7 +88,7 @@ if doall or False:
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
-    #"Crystallize_LS_SeqSol.xsq",
+    "Crystallize_LS_SeqSol.xsq",
     "Crystallize_xS.xsq",
     "DanceofTheSugarPlum_FPD.xsq",
     "DarleneLoveBabyPleaseComeHome.xsq",
@@ -99,6 +98,7 @@ if doall or False:
     "DominickToItalian.xsq",
     "DontBeAJerk_Spongebob_PPD.xsq",
     "DontStopTheSantaMan.xsq",
+    "DubstepSnowman_VLS.xsq",
     "EverybodyLovesXmas_xS.xsq",
     "FavoriteTimeOfYear_PPD.xsq",
     "FeelsLikeChristmas.xsq",
@@ -145,6 +145,7 @@ if doall or False:
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     "MeleKalikimaka_SSS.xsq",
+    "Misers_SeqSol.xsq",
     "Mistletoe_Bieber_xS.xsq",
     "MrSanta_PPD.xsq",
     "MyFavoriteThings_SSS.xsq",
@@ -181,9 +182,8 @@ if doall or False:
     "SleighRide_Mathis_xS.xsq",
     "SleighRide_Ptx_PPD.xsq",
     "SleighRide_Ptx_SSS.xsq",
-    #"SnoopysChristmas_SSol.xsq",
+    "SnoopysChristmas_SSol.xsq",
     "SnowflakeShuffle_PPS.xsq",
-    #"SnowMiserHeatMiser_SeqSol.xsq",
     "SnowWaltz_EFL.xsq",
     "SomedayAtChristmas_PPD.xsq",
     "StepIntoChristmas_PPD.xsq",
@@ -194,14 +194,13 @@ if doall or False:
     "TheChristmasSong_xS.xsq",
     "ToySack_BobRivers_xS.xsq",
     "TSOChistmasMedley_xS.xsq",
-    #"TSO_Sarajevo_MLS.xsq",
     ])
     print (msg)
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     "TwasTheNightBeforeChristmas_xS.xsq",
-    #"UpOnTheHouseTop_Ptx.xsq",
+    "UpOnTheHouseTop_Ptx_SeqSol.xsq",
     "WeNeedALittleChristmas_xS.xsq",
     "WeThreeGentlemen_xS.xsq",
     "WeThreeKings_PPD.xsq",
@@ -226,7 +225,7 @@ if doall or False:
     #"AWholeNewWorld_RGB.xsq",
     "AllTheSmallThings_PPD.xsq",
     "AuldLangSyne_MC_PPD.xsq",
-    #"BeOurGuest_SeqSol.xsq",
+    "BeOurGuest_SeqSol.xsq",
     #"CrazyLittleThingCalledLove_PPD.xsq",
     #"DangerZone_BF.xsq",
     "DisneyPrincesses_MLS.xsq",
@@ -235,16 +234,15 @@ if doall or False:
     "FinalCountdown_PPD.xsq",
     "Footloose_PPD.xsq",
     "GetThisPartyStarted_SSS.xsq",
-    #"GreatestShow_XATW.xsq",
     "Happy_MLS.xsq",
     "HowFarIllGo_PPD.xsq",
-    #"IceIceBaby_Visionary.xsq",
+    "IceIceBaby_VLS.xsq",
     #"Levitating_BF.xsq",
-    #"LittleMermaidMashup_Visionary.xsq",
+    "LittleMermaidMashup_VLS.xsq",
     #"LivinOnAPrayer_RGB.xsq",
     "Mambo5_PPD.xsq",
     "Memories_PPD.xsq",
-    #"NutcrackerRussianDance_Visionary.xsq",
+    "NutcrackerRussianDance_VLS.xsq",
     "PokerFace_PPD.xsq",
     #"Rasputin_RGB.xsq",
     #"Roar_RGB.xsq",
@@ -252,11 +250,10 @@ if doall or False:
     "SpaceMan_xS.xsq",
     "SWOTRB_xS.xsq",
     #"TakeOnMe_MLS.xsq",
-    #"WeDontTalkAboutBruno_RGB.xsq",
     "WhatElseCanIDo_PPD.xsq",
     "WWWDWBH_xS.xsq",
+    "YouSpinMe_VLS.xsq",
     #"YouveGotAFriendInMe_SeqSol.xsq",
-    #"Zero_XATW.xsq",
     ])
     print (msg)
 
