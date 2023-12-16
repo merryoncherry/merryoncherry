@@ -53,6 +53,7 @@ if doall or False:
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     "12Days_SNC_PPD.xsq",
+    "AChristmasWish_RGBS.xsq",
     "AllIReallyWantForChristmas.xsq",
     "AllIWantForChristmas_RGBS.xsq",
     "BecauseImSanta.xsq",
@@ -73,6 +74,7 @@ if doall or False:
     "ChristmasOfLove_PPD.xsq",
     "ChristmasParadise_Vivid.xsq",
     "ChristmasRickRoll.xsq",
+    "ChristmasStorm_SSS.xsq",
     "ChristmasTreat_SSS.xsq",
     "ChristmasTreeFarm_PPD.xsq",
     "ChristmasTwist_SSS.xsq",
@@ -88,6 +90,7 @@ if doall or False:
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
+    "CrazyForChristmas_RGBS.xsq",
     "Crystallize_LS_SeqSol.xsq",
     "Crystallize_xS.xsq",
     "DanceofTheSugarPlum_FPD.xsq",
@@ -107,6 +110,7 @@ if doall or False:
     "GoTellSantaBaby_PPD.xsq",
     "GrandmaGotRunOver_PPD.xsq",
     "GrinchClassic_xS.xsq",
+    "GroovyXmas_SeqSol.xsq",
     "HappyHolidays_PPD.xsq",
     "HaveYourselfAMerryLittleChristmas_DW_PPD.xsq",
     "HaveYourselfAMerryLittleXmas_SSS.xsq",
@@ -216,6 +220,7 @@ if doall or False:
     "WizardsInWinter_PPD.xsq",
     "WizardsInWinter_SSS.xsq",
     "WonderfulChristmastime_UsTheDuo_PPD.xsq",
+    "WrapMeUp_Innovative.xsq",
     "xSClassicMedley.xsq",
     ])
     print (msg)
@@ -226,7 +231,8 @@ if doall or False:
     "AllTheSmallThings_PPD.xsq",
     "AuldLangSyne_MC_PPD.xsq",
     "BeOurGuest_SeqSol.xsq",
-    #"CrazyLittleThingCalledLove_PPD.xsq",
+    "CrazyForChristmas_RGBS.xsq",
+    "CrazyLittleThingCalledLove_PPD.xsq",
     #"DangerZone_BF.xsq",
     "DisneyPrincesses_MLS.xsq",
     "DontStop_SSS.xsq",
@@ -237,23 +243,21 @@ if doall or False:
     "Happy_MLS.xsq",
     "HowFarIllGo_PPD.xsq",
     "IceIceBaby_VLS.xsq",
+    "IJustCantWait_SeqSol.xsq",
     #"Levitating_BF.xsq",
     "LittleMermaidMashup_VLS.xsq",
-    #"LivinOnAPrayer_RGB.xsq",
     "Mambo5_PPD.xsq",
     "Memories_PPD.xsq",
     "NutcrackerRussianDance_VLS.xsq",
     "PokerFace_PPD.xsq",
-    #"Rasputin_RGB.xsq",
-    #"Roar_RGB.xsq",
     "ShutUpAndDance_PPD.xsq",
     "SpaceMan_xS.xsq",
     "SWOTRB_xS.xsq",
-    #"TakeOnMe_MLS.xsq",
     "WhatElseCanIDo_PPD.xsq",
     "WWWDWBH_xS.xsq",
+    "YoureWelcome_SeqSol.xsq",
     "YouSpinMe_VLS.xsq",
-    #"YouveGotAFriendInMe_SeqSol.xsq",
+    "YouveGotAFriendInMe_SeqSol.xsq",
     ])
     print (msg)
 
