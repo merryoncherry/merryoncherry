@@ -204,6 +204,7 @@ if doall or False:
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     "TwasTheNightBeforeChristmas_xS.xsq",
+    "UnderneathTheTree_RGB.xsq",
     "UpOnTheHouseTop_Ptx_SeqSol.xsq",
     "WeNeedALittleChristmas_xS.xsq",
     "WeThreeGentlemen_xS.xsq",
@@ -227,7 +228,7 @@ if doall or False:
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
-    #"AWholeNewWorld_RGB.xsq",
+    "AWholeNewWorld_RGB.xsq",
     "AllTheSmallThings_PPD.xsq",
     "AuldLangSyne_MC_PPD.xsq",
     "BeOurGuest_SeqSol.xsq",
