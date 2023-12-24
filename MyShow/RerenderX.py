@@ -24,7 +24,7 @@ if not wasRunning:
 xlenv.changeShowFolder()
 
 doall = False
-#doall = True
+doall = True
 
 if doall and False:
     msg = xlenv.batchRenderSeqList([
@@ -70,6 +70,7 @@ if doall or False:
     "ChristmasEveryDay_xS.xsq",
     "ChristmasInParadise.xsq",
     "ChristmasInTheSand_PPD.xsq",
+    "ChristmasLike_PPS.xsq",
     "ChristmasMedleyVoctave_PPS.xsq",
     "ChristmasNutchracker_PPD.xsq",
     "ChristmasOfLove_PPD.xsq",
@@ -97,6 +98,7 @@ if doall or False:
     "Crystallize_xS.xsq",
     "DanceofTheSugarPlum_FPD.xsq",
     "DarleneLoveBabyPleaseComeHome.xsq",
+    "DeckTheHalls_WarPigs.xsq",
     "DiddlySquat_Vivid.xsq",
     "DiscoSanta_NOEL_PPD.xsq",
     "Dominick_PPD.xsq",
@@ -133,6 +135,7 @@ if doall or False:
     "IBelieveInSanta_RGB.xsq",
     "IceStorm_Vivid.xsq",
     "ImGonnaBeWarm.xsq",
+    "ImGood_BF.xsq",
     "ItMustBeSanta_PPD.xsq",
     "ItsTheMostWonderfulTimeOfTheYear_SSS.xsq",
     "IBTLALLC_SSS.xsq",
@@ -148,6 +151,7 @@ if doall or False:
     "KidOnChristmas_PPD.xsq",
     "LetItSnow_RLLS_PPD.xsq",
     "LittleStNick_PPD.xsq",
+    "MarshmallowWorld_Dean.xsq",
     "MarshmallowWorld_FB_PPD.xsq",
     ])
     print (msg)
@@ -170,6 +174,7 @@ if doall or False:
     "RockinAroundTheChristmasTree_SSS.xsq",
     "RTRNRD_RC_RGB.xsq",
     "RudolphTRNRD_SSS.xsq",
+    "RunRunRudolph_Berry.xsq",
     "RunRunRudolph_KC_EFL.xsq",
     "RunRunRudolph_KC_PPD.xsq",
     "SantaBringMyBabyBack_Train_PPD.xsq",
@@ -232,6 +237,7 @@ if doall or False:
     "WizardsInWinter_SSS.xsq",
     "WonderfulChristmastime_UsTheDuo_PPD.xsq",
     "WrapMeUp_Innovative.xsq",
+    "WWW_HCSC_PPD.xsq",
     "xSClassicMedley.xsq",
     ])
     print (msg)
@@ -245,7 +251,8 @@ if doall or False:
     "CornfieldChase_Innovative.xsq",
     "CrazyForChristmas_RGBS.xsq",
     "CrazyLittleThingCalledLove_PPD.xsq",
-    #"DangerZone_BF.xsq",
+    "DangerZone_BF.xsq",
+    "DisneyLoveSongs_BF.xsq",
     "DisneyPrincesses_MLS.xsq",
     "DontStop_SSS.xsq",
     "FancyLike_SSS.xsq",
@@ -256,7 +263,8 @@ if doall or False:
     "HowFarIllGo_PPD.xsq",
     "IceIceBaby_VLS.xsq",
     "IJustCantWait_SeqSol.xsq",
-    #"Levitating_BF.xsq",
+    "JohnWilliams.xsq",
+    "Levitating_BF.xsq",
     "LifeIsAHighway_RGB.xsq",
     "LittleMermaidMashup_VLS.xsq",
     "Mambo5_PPD.xsq",
