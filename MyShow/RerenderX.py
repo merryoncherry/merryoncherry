@@ -244,6 +244,8 @@ if doall or False:
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
+    "1983_Vivid.xsq",
+    "1986_Vivid.xsq",
     "AWholeNewWorld_RGB.xsq",
     "AllTheSmallThings_PPD.xsq",
     "AuldLangSyne_MC_PPD.xsq",
@@ -259,6 +261,7 @@ if doall or False:
     "FinalCountdown_PPD.xsq",
     "Footloose_PPD.xsq",
     "GetThisPartyStarted_SSS.xsq",
+    "GreatestShow_XATW.xsq",
     "Happy_MLS.xsq",
     "HowFarIllGo_PPD.xsq",
     "IceIceBaby_VLS.xsq",
@@ -279,6 +282,7 @@ if doall or False:
     "YoureWelcome_SeqSol.xsq",
     "YouSpinMe_VLS.xsq",
     "YouveGotAFriendInMe_SeqSol.xsq",
+    "Zero_XATW.xsq",
     ])
     print (msg)
 
