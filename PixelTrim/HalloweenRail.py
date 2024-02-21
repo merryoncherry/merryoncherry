@@ -2,7 +2,7 @@ import copy
 import xml.dom.minidom
 
 #
-# The goal of this program is to make an xLigts custom model
+# The goal of this program is to make an xLights custom model
 #  by assembling a central light string and custom models at regular
 #  intervals along the way.
 #
