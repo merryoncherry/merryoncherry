@@ -259,4 +259,4 @@ name="Showstopper Snowflake Rail" parm1="222" parm2="256" Depth="1" StringType="
 
 <modelGroup selected="0" LayoutGroup="Default" name="Wreath Rings Lesser" GridSize="400" XCentreOffset="0" YCentreOffset="0" DefaultCamera="2D" layout="minimalGrid" TagColour="black" models="EXPORTEDMODEL/Rings"/>
 
-<dimensions units="f" width="4.000100" height="4.000950" depth="0.099450"/></custommodel>
+<dimensions units="f" width="3.5" height="3.83333" depth="0.099450"/></custommodel>
