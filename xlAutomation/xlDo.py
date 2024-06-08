@@ -339,4 +339,5 @@ if __name__ == '__main__':
     shwdir = "m:\\users\chuck\\source\\repos\\merryoncherry\\xLTS\\ShowFolders\\SCTS\\"
     tempdir = "m:\\users\chuck\\source\\repos\\merryoncherry\\xLTS\\TempResults\\SCTS\\"
     os.makedirs(tempdir, mode = 0o777, exist_ok = True)
-    xlenv.startXSDirect(showdir=shwdir, playlist = "", simrange = "2022-12-31 23:58:00;2023-01-01 00:01:30", jsonlog = tempdir+"xs_log.json", extevents = "", fseq="");
+    #xlenv.startXSDirect(showdir=shwdir, playlist = "", simrange = "2022-12-31 23:58:00;2023-01-01 00:01:30", jsonlog = tempdir+"xs_log.json", extevents = "", fseq="");
+    xlenv.startXSDirect(showdir=shwdir, playlist = "", simrange = "2022-12-01 00:00:00;2025-01-01 00:01:30", jsonlog = tempdir+"xs_log.json", extevents = "", fseq="");
