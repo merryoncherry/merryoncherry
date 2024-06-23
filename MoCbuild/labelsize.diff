@@ -1,8 +1,8 @@
 diff --git a/xLights/ModelFaceDialog.cpp b/xLights/ModelFaceDialog.cpp
-index 1cb96d64c..c24c72505 100644
+index 1fc8793b2..9937e1b71 100644
 --- a/xLights/ModelFaceDialog.cpp
 +++ b/xLights/ModelFaceDialog.cpp
-@@ -177,7 +177,6 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
+@@ -175,7 +175,6 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
  	SingleNodeGrid->SetMinSize(wxDLG_UNIT(CoroPanel,wxSize(-1,200)));
  	SingleNodeGrid->EnableEditing(true);
  	SingleNodeGrid->EnableGridLines(true);
@@ -10,7 +10,7 @@ index 1cb96d64c..c24c72505 100644
  	SingleNodeGrid->SetRowLabelSize(150);
  	SingleNodeGrid->SetDefaultColSize(200, true);
  	SingleNodeGrid->SetColLabelValue(0, _("Nodes"));
-@@ -224,7 +223,6 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
+@@ -222,7 +221,6 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
  	NodeRangeGrid->SetMinSize(wxDLG_UNIT(NodeRangePanel,wxSize(-1,200)));
  	NodeRangeGrid->EnableEditing(true);
  	NodeRangeGrid->EnableGridLines(true);
@@ -18,7 +18,7 @@ index 1cb96d64c..c24c72505 100644
  	NodeRangeGrid->SetRowLabelSize(150);
  	NodeRangeGrid->SetDefaultColSize(200, true);
  	NodeRangeGrid->SetColLabelValue(0, _("Nodes"));
-@@ -280,7 +278,6 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
+@@ -289,7 +287,6 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
  	MatrixModelsGrid->SetMinSize(wxDLG_UNIT(Matrix,wxSize(-1,200)));
  	MatrixModelsGrid->EnableEditing(true);
  	MatrixModelsGrid->EnableGridLines(true);
@@ -26,7 +26,7 @@ index 1cb96d64c..c24c72505 100644
  	MatrixModelsGrid->SetRowLabelSize(150);
  	MatrixModelsGrid->SetDefaultColSize(200, true);
  	MatrixModelsGrid->SetColLabelValue(0, _("Eyes Open"));
-@@ -373,6 +370,10 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
+@@ -385,6 +382,10 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
  
      FaceTypeChoice->ChangeSelection(NODE_RANGE_FACE);
  
@@ -38,10 +38,10 @@ index 1cb96d64c..c24c72505 100644
      FlexGridSizer1->SetSizeHints(this);
      Center();
 diff --git a/xLights/ModelStateDialog.cpp b/xLights/ModelStateDialog.cpp
-index 8c980fbc6..786e9e9b4 100644
+index aff536d26..7516679ae 100644
 --- a/xLights/ModelStateDialog.cpp
 +++ b/xLights/ModelStateDialog.cpp
-@@ -160,7 +160,6 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
+@@ -161,7 +161,6 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
  	SingleNodeGrid->SetMinSize(wxDLG_UNIT(CoroPanel,wxSize(-1,200)));
  	SingleNodeGrid->EnableEditing(true);
  	SingleNodeGrid->EnableGridLines(true);
@@ -49,7 +49,7 @@ index 8c980fbc6..786e9e9b4 100644
  	SingleNodeGrid->SetDefaultColSize(150, true);
  	SingleNodeGrid->SetColLabelValue(0, _("State"));
  	SingleNodeGrid->SetColLabelValue(1, _("Nodes"));
-@@ -191,7 +190,6 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
+@@ -190,7 +189,6 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
  	NodeRangeGrid->SetMinSize(wxDLG_UNIT(NodeRangePanel,wxSize(-1,200)));
  	NodeRangeGrid->EnableEditing(true);
  	NodeRangeGrid->EnableGridLines(true);
@@ -57,7 +57,7 @@ index 8c980fbc6..786e9e9b4 100644
  	NodeRangeGrid->SetDefaultColSize(150, true);
  	NodeRangeGrid->SetColLabelValue(0, _("State"));
  	NodeRangeGrid->SetColLabelValue(1, _("Nodes"));
-@@ -266,6 +264,9 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
+@@ -258,6 +256,9 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
  
      StateTypeChoice->ChangeSelection(NODE_RANGE_STATE);
  
@@ -68,10 +68,10 @@ index 8c980fbc6..786e9e9b4 100644
      FlexGridSizer1->SetSizeHints(this);
      Center();
 diff --git a/xLights/SubModelsDialog.cpp b/xLights/SubModelsDialog.cpp
-index 01af4b3f3..66ed3cdf8 100644
+index 7a1ff3da7..b6abb4542 100644
 --- a/xLights/SubModelsDialog.cpp
 +++ b/xLights/SubModelsDialog.cpp
-@@ -254,7 +254,6 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -241,7 +241,6 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
  	NodesGrid->CreateGrid(5,1);
  	NodesGrid->EnableEditing(true);
  	NodesGrid->EnableGridLines(true);
@@ -79,7 +79,7 @@ index 01af4b3f3..66ed3cdf8 100644
  	NodesGrid->SetDefaultColSize(160, true);
  	NodesGrid->SetColLabelValue(0, _("Node Ranges"));
  	NodesGrid->SetRowLabelValue(0, _("Strand   1"));
-@@ -270,19 +269,19 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -257,19 +256,19 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
  	FlexGridSizer4->Add(FlexGridSizer8, 1, wxALL|wxEXPAND, 5);
  	FlexGridSizer5 = new wxFlexGridSizer(0, 1, 0, 0);
  	AddRowButton = new wxButton(Panel1, ID_BUTTON1, _("Add Row"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
@@ -106,7 +106,7 @@ index 01af4b3f3..66ed3cdf8 100644
  	FlexGridSizer4->Add(FlexGridSizer5, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxFIXED_MINSIZE, 0);
  	Panel1->SetSizer(FlexGridSizer4);
  	FlexGridSizer4->Fit(Panel1);
-@@ -356,6 +355,8 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -350,6 +349,8 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
  	Connect(wxID_ANY,wxEVT_INIT_DIALOG,(wxObjectEventFunction)&SubModelsDialog::OnInit);
  	//*)
  
@@ -116,7 +116,7 @@ index 01af4b3f3..66ed3cdf8 100644
      Connect(wxID_ANY, EVT_SMDROP, (wxObjectEventFunction)&SubModelsDialog::OnDrop);
      Connect(ID_GRID1, wxEVT_GRID_CELL_CHANGED,(wxObjectEventFunction)&SubModelsDialog::OnNodesGridCellChange);
 diff --git a/xLights/wxsmith/ModelFaceDialog.wxs b/xLights/wxsmith/ModelFaceDialog.wxs
-index 1d2569c26..299cf4d23 100644
+index 20798d2df..c55f337ec 100644
 --- a/xLights/wxsmith/ModelFaceDialog.wxs
 +++ b/xLights/wxsmith/ModelFaceDialog.wxs
 @@ -107,7 +107,6 @@
@@ -127,15 +127,15 @@ index 1d2569c26..299cf4d23 100644
  																<labelcolwidth>150</labelcolwidth>
  																<defaultcolsize>200</defaultcolsize>
  																<collabels>
-@@ -195,7 +194,6 @@
+@@ -196,7 +195,6 @@
  															<object class="wxGrid" name="ID_GRID3" variable="NodeRangeGrid" member="yes">
  																<cols>2</cols>
- 																<rows>18</rows>
+ 																<rows>28</rows>
 -																<labelrowheight>20</labelrowheight>
  																<labelcolwidth>150</labelcolwidth>
  																<defaultcolsize>200</defaultcolsize>
  																<collabels>
-@@ -304,7 +302,6 @@
+@@ -317,7 +315,6 @@
  															<object class="wxGrid" name="ID_GRID1" variable="MatrixModelsGrid" member="yes">
  																<cols>2</cols>
  																<rows>10</rows>
@@ -144,7 +144,7 @@ index 1d2569c26..299cf4d23 100644
  																<defaultcolsize>200</defaultcolsize>
  																<collabels>
 diff --git a/xLights/wxsmith/ModelStateDialog.wxs b/xLights/wxsmith/ModelStateDialog.wxs
-index a532d70ea..be125ad76 100644
+index dc3e17d75..16cb82f49 100644
 --- a/xLights/wxsmith/ModelStateDialog.wxs
 +++ b/xLights/wxsmith/ModelStateDialog.wxs
 @@ -117,7 +117,6 @@
@@ -164,18 +164,18 @@ index a532d70ea..be125ad76 100644
  														<defaultcolsize>150</defaultcolsize>
  														<collabels>
 diff --git a/xLights/wxsmith/SubModelsDialog.wxs b/xLights/wxsmith/SubModelsDialog.wxs
-index d9c162fbb..91624febb 100644
+index 37dd93f4b..6d9d9114b 100644
 --- a/xLights/wxsmith/SubModelsDialog.wxs
 +++ b/xLights/wxsmith/SubModelsDialog.wxs
-@@ -222,7 +222,6 @@
- 																	<object class="wxGrid" name="ID_GRID1" subclass="StretchGrid" variable="NodesGrid" member="yes">
+@@ -223,7 +223,6 @@
+ 																	<object class="wxGrid" name="ID_GRID1" variable="NodesGrid" member="yes">
  																		<cols>1</cols>
  																		<rows>5</rows>
 -																		<labelrowheight>18</labelrowheight>
  																		<defaultcolsize>160</defaultcolsize>
  																		<collabels>
  																			<item>Node Ranges</item>
-@@ -280,7 +279,7 @@
+@@ -281,7 +280,7 @@
  																		<label>Add Row</label>
  																		<handler function="OnAddRowButtonClick" entry="EVT_BUTTON" />
  																	</object>
@@ -184,7 +184,7 @@ index d9c162fbb..91624febb 100644
  																	<border>5</border>
  																	<option>1</option>
  																</object>
-@@ -289,7 +288,7 @@
+@@ -290,7 +289,7 @@
  																		<label>Delete Row</label>
  																		<handler function="OnDeleteRowButtonClick" entry="EVT_BUTTON" />
  																	</object>
@@ -193,7 +193,7 @@ index d9c162fbb..91624febb 100644
  																	<border>5</border>
  																	<option>1</option>
  																</object>
-@@ -298,7 +297,7 @@
+@@ -299,7 +298,7 @@
  																		<label>^</label>
  																		<handler function="OnButton_MoveUpClick" entry="EVT_BUTTON" />
  																	</object>
@@ -202,7 +202,7 @@ index d9c162fbb..91624febb 100644
  																	<border>5</border>
  																	<option>1</option>
  																</object>
-@@ -307,7 +306,7 @@
+@@ -308,7 +307,7 @@
  																		<label>v</label>
  																		<handler function="OnButton_MoveDownClick" entry="EVT_BUTTON" />
  																	</object>
@@ -211,7 +211,7 @@ index d9c162fbb..91624febb 100644
  																	<border>5</border>
  																	<option>1</option>
  																</object>
-@@ -316,7 +315,7 @@
+@@ -317,7 +316,7 @@
  																		<label>Reverse Row</label>
  																		<handler function="OnButton_ReverseRowClick" entry="EVT_BUTTON" />
  																	</object>
@@ -220,7 +220,7 @@ index d9c162fbb..91624febb 100644
  																	<border>5</border>
  																	<option>1</option>
  																</object>
-@@ -325,7 +324,7 @@
+@@ -326,7 +325,7 @@
  																		<label>Sort Row</label>
  																		<handler function="OnButton_SortRowClick" entry="EVT_BUTTON" />
  																	</object>
@@ -229,7 +229,7 @@ index d9c162fbb..91624febb 100644
  																	<border>5</border>
  																	<option>1</option>
  																</object>
-@@ -334,7 +333,7 @@
+@@ -335,7 +334,7 @@
  																		<label>Draw Model</label>
  																		<handler function="OnButton_Draw_ModelClick" entry="EVT_BUTTON" />
  																	</object>

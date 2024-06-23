@@ -1,5 +1,5 @@
 diff --git a/xLights/ModelFaceDialog.cpp b/xLights/ModelFaceDialog.cpp
-index 83d59f4ec..a3d7cd7fd 100644
+index 1fc8793b2..271e60992 100644
 --- a/xLights/ModelFaceDialog.cpp
 +++ b/xLights/ModelFaceDialog.cpp
 @@ -65,6 +65,8 @@ const long ModelFaceDialog::ID_CHOICE3 = wxNewId();
@@ -19,7 +19,7 @@ index 83d59f4ec..a3d7cd7fd 100644
  	wxFlexGridSizer* FlexGridSizer1;
  	wxFlexGridSizer* FlexGridSizer2;
  	wxFlexGridSizer* FlexGridSizer3;
-@@ -146,10 +149,10 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
+@@ -145,10 +148,10 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
  	FlexGridSizer7 = new wxFlexGridSizer(0, 5, 0, 0);
  	FlexGridSizer7->AddGrowableCol(1);
  	StaticText3 = new wxStaticText(Panel3, ID_STATICTEXT2, _("Name:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
@@ -32,7 +32,7 @@ index 83d59f4ec..a3d7cd7fd 100644
  	AddButton = new wxButton(Panel3, ID_BUTTON3, _("Add"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
  	FlexGridSizer7->Add(AddButton, 1, wxTOP|wxBOTTOM|wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
  	ButtonImport = new wxButton(Panel3, ID_BUTTON_IMPORT, _("..."), wxDefaultPosition, wxSize(20,-1), 0, wxDefaultValidator, _T("ID_BUTTON_IMPORT"));
-@@ -158,6 +161,13 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
+@@ -157,6 +160,13 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
  	DeleteButton = new wxButton(Panel3, ID_BUTTON4, _("Delete"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
  	FlexGridSizer7->Add(DeleteButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
  	FlexGridSizer4->Add(FlexGridSizer7, 1, wxALL|wxEXPAND, 5);
@@ -46,7 +46,7 @@ index 83d59f4ec..a3d7cd7fd 100644
  	FaceTypeChoice = new wxChoicebook(Panel3, ID_CHOICEBOOK1, wxDefaultPosition, wxDefaultSize, 0, _T("ID_CHOICEBOOK1"));
  	CoroPanel = new wxPanel(FaceTypeChoice, ID_PANEL2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL2"));
  	FlexGridSizer2 = new wxFlexGridSizer(0, 2, 0, 0);
-@@ -369,6 +379,7 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
+@@ -382,6 +392,7 @@ ModelFaceDialog::ModelFaceDialog(wxWindow* parent, OutputManager* outputManager,
      modelPreview->Connect(wxEVT_MOTION, (wxObjectEventFunction)&ModelFaceDialog::OnPreviewMouseMove, nullptr, this);
      modelPreview->Connect(wxEVT_LEAVE_WINDOW, (wxObjectEventFunction)&ModelFaceDialog::OnPreviewMouseLeave, nullptr, this);
      modelPreview->Connect(wxEVT_LEFT_DCLICK, (wxObjectEventFunction)&ModelFaceDialog::OnPreviewLeftDClick, nullptr, this);
@@ -54,7 +54,7 @@ index 83d59f4ec..a3d7cd7fd 100644
  
      FaceTypeChoice->ChangeSelection(NODE_RANGE_FACE);
  
-@@ -429,6 +440,8 @@ void ModelFaceDialog::SetFaceInfo(Model *cls, std::map< std::string, std::map<st
+@@ -442,6 +453,8 @@ void ModelFaceDialog::SetFaceInfo(Model *cls, std::map< std::string, std::map<st
  			}
  		}
  
@@ -63,7 +63,7 @@ index 83d59f4ec..a3d7cd7fd 100644
          faceData[name] = info;
      }
  
-@@ -437,9 +450,11 @@ void ModelFaceDialog::SetFaceInfo(Model *cls, std::map< std::string, std::map<st
+@@ -450,9 +463,11 @@ void ModelFaceDialog::SetFaceInfo(Model *cls, std::map< std::string, std::map<st
          FaceTypeChoice->Enable();
          NameChoice->SetSelection(0);
          SelectFaceModel(NameChoice->GetString(NameChoice->GetSelection()).ToStdString());
@@ -75,7 +75,7 @@ index 83d59f4ec..a3d7cd7fd 100644
      }
  
      wxArrayString names;
-@@ -544,6 +559,10 @@ void ModelFaceDialog::SelectFaceModel(const std::string &name) {
+@@ -570,6 +585,10 @@ void ModelFaceDialog::SelectFaceModel(const std::string &name) {
          }
          MatrixImagePlacementChoice->SetStringSelection(w);
      }
@@ -86,7 +86,7 @@ index 83d59f4ec..a3d7cd7fd 100644
  }
  
  void ModelFaceDialog::OnMatrixNameChoiceSelect(wxCommandEvent& event)
-@@ -563,6 +582,7 @@ void ModelFaceDialog::OnButtonMatrixAddClicked(wxCommandEvent& event)
+@@ -589,6 +608,7 @@ void ModelFaceDialog::OnButtonMatrixAddClicked(wxCommandEvent& event)
              NameChoice->Enable();
              FaceTypeChoice->Enable();
              DeleteButton->Enable();
@@ -94,7 +94,7 @@ index 83d59f4ec..a3d7cd7fd 100644
  
              // set the default type of face based on the model type
              if (model->GetDisplayAs() == "Matrix" || StartsWith(model->GetDisplayAs(), "Tree")) {
-@@ -611,6 +631,7 @@ void ModelFaceDialog::OnButtonMatrixDeleteClick(wxCommandEvent& event)
+@@ -637,6 +657,7 @@ void ModelFaceDialog::OnButtonMatrixDeleteClick(wxCommandEvent& event)
              NameChoice->Disable();
              FaceTypeChoice->Disable();
              DeleteButton->Disable();
@@ -102,7 +102,7 @@ index 83d59f4ec..a3d7cd7fd 100644
          }
      }
  }
-@@ -1123,6 +1144,14 @@ void ModelFaceDialog::OnNodeRangeGridCellSelect(wxGridEvent& event)
+@@ -1169,6 +1190,14 @@ void ModelFaceDialog::OnNodeRangeGridCellSelect(wxGridEvent& event)
      event.Skip();
  }
  
@@ -117,7 +117,7 @@ index 83d59f4ec..a3d7cd7fd 100644
  void ModelFaceDialog::PaintFace(wxDC& dc, int x, int y, const char* xpm[])
  {
      wxImage i(xpm);
-@@ -1498,6 +1527,7 @@ void ModelFaceDialog::ImportFacesFromModel()
+@@ -1552,6 +1581,7 @@ void ModelFaceDialog::ImportFacesFromModel()
          NameChoice->Enable();
          FaceTypeChoice->Enable();
          DeleteButton->Enable();
@@ -125,7 +125,7 @@ index 83d59f4ec..a3d7cd7fd 100644
  
          NameChoice->SetSelection(NameChoice->GetCount() - 1);
          NameChoice->SetStringSelection(NameChoice->GetString(NameChoice->GetCount() - 1));
-@@ -1535,6 +1565,7 @@ void ModelFaceDialog::ImportFaces(const wxString& filename)
+@@ -1589,6 +1619,7 @@ void ModelFaceDialog::ImportFaces(const wxString& filename)
              NameChoice->Enable();
              FaceTypeChoice->Enable();
              DeleteButton->Enable();
@@ -134,7 +134,7 @@ index 83d59f4ec..a3d7cd7fd 100644
              NameChoice->SetSelection(NameChoice->GetCount()-1);
              NameChoice->SetStringSelection(NameChoice->GetString(NameChoice->GetCount() - 1));
 diff --git a/xLights/ModelFaceDialog.h b/xLights/ModelFaceDialog.h
-index b40a1b5de..68beadd36 100644
+index 292f01166..57caf1ee9 100644
 --- a/xLights/ModelFaceDialog.h
 +++ b/xLights/ModelFaceDialog.h
 @@ -26,6 +26,7 @@
@@ -164,7 +164,7 @@ index b40a1b5de..68beadd36 100644
      static const long ID_PANEL4;
      static const long ID_CHECKBOX1;
      static const long ID_GRID_COROFACES;
-@@ -158,6 +163,7 @@ private:
+@@ -161,6 +166,7 @@ private:
      void OnPreviewLeftDClick(wxMouseEvent& event);
      void OnPreviewMouseMove(wxMouseEvent& event);
      void OnTimer1Trigger(wxTimerEvent& event);
@@ -173,7 +173,7 @@ index b40a1b5de..68beadd36 100644
      DECLARE_EVENT_TABLE()
  
 diff --git a/xLights/ModelGroupPanel.cpp b/xLights/ModelGroupPanel.cpp
-index 3b47ecee2..7544b2f61 100644
+index 6a27984a3..d2cf58f6c 100755
 --- a/xLights/ModelGroupPanel.cpp
 +++ b/xLights/ModelGroupPanel.cpp
 @@ -87,6 +87,7 @@ public:
@@ -184,7 +184,7 @@ index 3b47ecee2..7544b2f61 100644
  const long ModelGroupPanel::ID_CHOICE1 = wxNewId();
  const long ModelGroupPanel::ID_STATICTEXT12 = wxNewId();
  const long ModelGroupPanel::ID_CHOICE2 = wxNewId();
-@@ -143,6 +144,7 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
+@@ -144,6 +145,7 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
  	wxFlexGridSizer* FlexGridSizer6;
  	wxStaticText* StaticText4;
  	wxStaticText* StaticText6;
@@ -192,7 +192,7 @@ index 3b47ecee2..7544b2f61 100644
  
  	Create(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("wxID_ANY"));
  	Panel_Sizer = new wxFlexGridSizer(0, 1, 0, 0);
-@@ -154,11 +156,15 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
+@@ -155,11 +157,15 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
  	FlexGridSizer6 = new wxFlexGridSizer(0, 2, 0, 0);
  	FlexGridSizer6->AddGrowableCol(1);
  	StaticText5 = new wxStaticText(this, ID_STATICTEXT5, _("Model Group Name:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT5"));
@@ -211,7 +211,7 @@ index 3b47ecee2..7544b2f61 100644
  	ChoiceModelLayoutType = new wxChoice(this, ID_CHOICE1, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE1"));
  	ChoiceModelLayoutType->SetSelection( ChoiceModelLayoutType->Append(_("Grid as per preview")) );
  	ChoiceModelLayoutType->Append(_("Minimal Grid"));
-@@ -177,11 +183,11 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
+@@ -178,11 +184,11 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
  	ChoiceModelLayoutType->Append(_("Default Model As A Pixel"));
  	FlexGridSizer6->Add(ChoiceModelLayoutType, 1, wxALL|wxEXPAND, 2);
  	StaticText12 = new wxStaticText(this, ID_STATICTEXT12, _("Default Camera:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT12"));
@@ -226,8 +226,8 @@ index 3b47ecee2..7544b2f61 100644
  	SizeSpinCtrl = new wxSpinCtrl(this, ID_SPINCTRL1, _T("400"), wxDefaultPosition, wxDefaultSize, 0, 10, 2000, 400, _T("ID_SPINCTRL1"));
  	SizeSpinCtrl->SetValue(_T("400"));
  	FlexGridSizer6->Add(SizeSpinCtrl, 1, wxALL|wxEXPAND, 2);
-@@ -202,15 +208,15 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
- 	SpinCtrl_YCentreOffset = new wxSpinCtrl(this, ID_SPINCTRL3, _T("0"), wxDefaultPosition, wxDefaultSize, 0, -1000, 1000, 0, _T("ID_SPINCTRL3"));
+@@ -203,15 +209,15 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
+ 	SpinCtrl_YCentreOffset = new wxSpinCtrl(this, ID_SPINCTRL3, _T("0"), wxDefaultPosition, wxDefaultSize, wxTE_PROCESS_ENTER, -5000, 5000, 0, _T("ID_SPINCTRL3"));
  	SpinCtrl_YCentreOffset->SetValue(_T("0"));
  	FlexGridSizer4->Add(SpinCtrl_YCentreOffset, 1, wxALL|wxEXPAND, 2);
 -	FlexGridSizer6->Add(FlexGridSizer4, 1, wxALL|wxEXPAND, 5);
@@ -246,7 +246,7 @@ index 3b47ecee2..7544b2f61 100644
  	CheckBox_ShowSubmodels = new wxCheckBox(this, ID_CHECKBOX1, _("Show SubModels to Add"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
  	CheckBox_ShowSubmodels->SetValue(true);
  	FlexGridSizer6->Add(CheckBox_ShowSubmodels, 1, wxALL|wxEXPAND, 2);
-@@ -301,6 +307,7 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
+@@ -302,6 +308,7 @@ ModelGroupPanel::ModelGroupPanel(wxWindow* parent, ModelManager &Models, LayoutP
  	//*)
  
      Connect(ID_LISTCTRL2, wxEVT_CONTEXT_MENU, (wxObjectEventFunction)&ModelGroupPanel::OnListBoxModelsInGroupItemRClick);
@@ -254,7 +254,7 @@ index 3b47ecee2..7544b2f61 100644
  
      ChoicePreviews->Append("Default");
      ChoicePreviews->Append("All Previews");
-@@ -473,6 +480,11 @@ void ModelGroupPanel::UpdatePanel(const std::string& group)
+@@ -481,6 +488,11 @@ void ModelGroupPanel::UpdatePanel(const std::string& group)
              }
          }
  
@@ -266,7 +266,7 @@ index 3b47ecee2..7544b2f61 100644
          auto dc = e->GetAttribute("DefaultCamera", "2D");
          Choice_DefaultCamera->SetStringSelection(dc);
          if (Choice_DefaultCamera->GetStringSelection() != dc) {
-@@ -733,6 +745,8 @@ void ModelGroupPanel::SaveGroupChanges()
+@@ -745,6 +757,8 @@ void ModelGroupPanel::SaveGroupChanges(bool centreUpdate)
      }
      e->DeleteAttribute("DefaultCamera");
      e->AddAttribute("DefaultCamera", Choice_DefaultCamera->GetStringSelection());
@@ -275,7 +275,7 @@ index 3b47ecee2..7544b2f61 100644
      switch (ChoiceModelLayoutType->GetSelection()) {
      case 0:
          e->AddAttribute("layout", "grid");
-@@ -1375,6 +1389,22 @@ void ModelGroupPanel::OnChoice_DefaultCameraSelect(wxCommandEvent& event)
+@@ -1428,6 +1442,22 @@ void ModelGroupPanel::OnChoice_DefaultCameraSelect(wxCommandEvent& event)
      SaveGroupChanges();
  }
  
@@ -299,7 +299,7 @@ index 3b47ecee2..7544b2f61 100644
  {
      ModelGroup* g = (ModelGroup*)mModels[mGroup];
 diff --git a/xLights/ModelGroupPanel.h b/xLights/ModelGroupPanel.h
-index cfe462bdf..0d265261a 100644
+index 506c6c531..18c57dbf3 100755
 --- a/xLights/ModelGroupPanel.h
 +++ b/xLights/ModelGroupPanel.h
 @@ -94,6 +94,7 @@ public:
@@ -318,7 +318,7 @@ index cfe462bdf..0d265261a 100644
  	static const long ID_CHOICE1;
  	static const long ID_STATICTEXT12;
  	static const long ID_CHOICE2;
-@@ -174,6 +176,8 @@ private:
+@@ -175,6 +177,8 @@ private:
  	void OnButtonAliasesClick(wxCommandEvent& event);
  	//*)
  
@@ -328,7 +328,7 @@ index cfe462bdf..0d265261a 100644
  
  	void OnDrop(wxCommandEvent& event);
 diff --git a/xLights/ModelStateDialog.cpp b/xLights/ModelStateDialog.cpp
-index aba7befae..e148761d9 100644
+index aff536d26..2b0fc16a7 100644
 --- a/xLights/ModelStateDialog.cpp
 +++ b/xLights/ModelStateDialog.cpp
 @@ -48,6 +48,8 @@ const long ModelStateDialog::ID_CHOICE3 = wxNewId();
@@ -348,7 +348,7 @@ index aba7befae..e148761d9 100644
  	wxFlexGridSizer* PreviewSizer;
  	wxPanel* CoroPanel;
  	wxPanel* NodeRangePanel;
-@@ -134,7 +137,7 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
+@@ -133,7 +136,7 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
  	FlexGridSizer7->Add(StaticText3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
  	NameChoice = new wxChoice(Panel3, ID_CHOICE3, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE3"));
  	NameChoice->SetMinSize(wxDLG_UNIT(Panel3,wxSize(100,-1)));
@@ -356,8 +356,8 @@ index aba7befae..e148761d9 100644
 +	FlexGridSizer7->Add(NameChoice, 1, wxALL|wxEXPAND, 2);
  	AddButton = new wxButton(Panel3, ID_BUTTON3, _("Add"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
  	FlexGridSizer7->Add(AddButton, 1, wxTOP|wxBOTTOM|wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
- 	Button_Import = new wxButton(Panel3, ID_BUTTON_IMPORT, _("..."), wxDefaultPosition, wxSize(20,-1), 0, wxDefaultValidator, _T("ID_BUTTON_IMPORT"));
-@@ -143,6 +146,13 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
+ 	Button_Import = new wxButton(Panel3, ID_BUTTON_IMPORT, _T("..."), wxDefaultPosition, wxSize(20,-1), 0, wxDefaultValidator, _T("ID_BUTTON_IMPORT"));
+@@ -142,6 +145,13 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
  	DeleteButton = new wxButton(Panel3, ID_BUTTON4, _("Delete"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
  	FlexGridSizer7->Add(DeleteButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
  	FlexGridSizer4->Add(FlexGridSizer7, 1, wxALL|wxEXPAND, 5);
@@ -371,7 +371,7 @@ index aba7befae..e148761d9 100644
  	StateTypeChoice = new wxChoicebook(Panel3, ID_CHOICEBOOK1, wxDefaultPosition, wxDefaultSize, 0, _T("ID_CHOICEBOOK1"));
  	CoroPanel = new wxPanel(StateTypeChoice, ID_PANEL2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL2"));
  	FlexGridSizer2 = new wxFlexGridSizer(0, 1, 0, 0);
-@@ -265,6 +275,7 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
+@@ -255,6 +265,7 @@ ModelStateDialog::ModelStateDialog(wxWindow* parent, OutputManager* outputManage
      modelPreview->Connect(wxEVT_MOTION, (wxObjectEventFunction)&ModelStateDialog::OnPreviewMouseMove, nullptr, this);
      modelPreview->Connect(wxEVT_LEAVE_WINDOW, (wxObjectEventFunction)&ModelStateDialog::OnPreviewMouseLeave, nullptr, this);
      modelPreview->Connect(wxEVT_LEFT_DCLICK, (wxObjectEventFunction)&ModelStateDialog::OnPreviewLeftDClick, nullptr, this);
@@ -379,7 +379,7 @@ index aba7befae..e148761d9 100644
  
      StateTypeChoice->ChangeSelection(NODE_RANGE_STATE);
  
-@@ -319,16 +330,20 @@ void ModelStateDialog::SetStateInfo(Model* cls, std::map<std::string, std::map<s
+@@ -305,16 +316,20 @@ void ModelStateDialog::SetStateInfo(Model* cls, std::map<std::string, std::map<s
              }
          }
  
@@ -400,7 +400,7 @@ index aba7befae..e148761d9 100644
          StateTypeChoice->Disable();
      }
  
-@@ -442,6 +457,10 @@ void ModelStateDialog::SelectStateModel(const std::string &name) {
+@@ -429,6 +444,10 @@ void ModelStateDialog::SelectStateModel(const std::string &name) {
          CustomColorNodeRanges->SetValue(SetGrid(NodeRangeGrid, info));
      }
      SelectRow(grid, -1);
@@ -411,7 +411,7 @@ index aba7befae..e148761d9 100644
  }
  
  void ModelStateDialog::OnMatrixNameChoiceSelect(wxCommandEvent& event)
-@@ -460,6 +479,7 @@ void ModelStateDialog::OnButtonMatrixAddClicked(wxCommandEvent& event)
+@@ -447,6 +466,7 @@ void ModelStateDialog::OnButtonMatrixAddClicked(wxCommandEvent& event)
              NameChoice->SetStringSelection(n);
              NameChoice->Enable();
              DeleteButton->Enable();
@@ -419,7 +419,7 @@ index aba7befae..e148761d9 100644
  
              // set the default type of state based on model type
              if (model->GetDisplayAs() == "Custom") {
-@@ -499,6 +519,7 @@ void ModelStateDialog::OnButtonMatrixDeleteClick(wxCommandEvent& event)
+@@ -486,6 +506,7 @@ void ModelStateDialog::OnButtonMatrixDeleteClick(wxCommandEvent& event)
              NameChoice->Disable();
              StateTypeChoice->Disable();
              DeleteButton->Disable();
@@ -427,7 +427,7 @@ index aba7befae..e148761d9 100644
          }
      }
      ValidateWindow();
-@@ -953,6 +974,7 @@ void ModelStateDialog::OnButton_7SegmentClick(wxCommandEvent& event)
+@@ -940,6 +961,7 @@ void ModelStateDialog::OnButton_7SegmentClick(wxCommandEvent& event)
  void ModelStateDialog::ValidateWindow()
  {
      if (NameChoice->GetStringSelection() == "") {
@@ -435,7 +435,7 @@ index aba7befae..e148761d9 100644
          NodeRangeGrid->Disable();
          SingleNodeGrid->Disable();
          Button_7Seg->Disable();
-@@ -960,6 +982,7 @@ void ModelStateDialog::ValidateWindow()
+@@ -947,6 +969,7 @@ void ModelStateDialog::ValidateWindow()
          CustomColorSingleNode->Disable();
          CustomColorNodeRanges->Disable();
      } else {
@@ -443,7 +443,7 @@ index aba7befae..e148761d9 100644
          NodeRangeGrid->Enable();
          SingleNodeGrid->Enable();
          Button_7Seg->Enable();
-@@ -1113,6 +1136,7 @@ void ModelStateDialog::ImportStatesFromModel()
+@@ -1100,6 +1123,7 @@ void ModelStateDialog::ImportStatesFromModel()
          NameChoice->Enable();
          StateTypeChoice->Enable();
          DeleteButton->Enable();
@@ -451,7 +451,7 @@ index aba7befae..e148761d9 100644
  
          NameChoice->SetSelection(NameChoice->GetCount() - 1);
          NameChoice->SetStringSelection(NameChoice->GetString(NameChoice->GetCount() - 1));
-@@ -1151,6 +1175,7 @@ void ModelStateDialog::ImportStates(const wxString & filename)
+@@ -1138,6 +1162,7 @@ void ModelStateDialog::ImportStates(const wxString & filename)
              NameChoice->Enable();
              StateTypeChoice->Enable();
              DeleteButton->Enable();
@@ -459,7 +459,7 @@ index aba7befae..e148761d9 100644
  
              NameChoice->SetSelection(NameChoice->GetCount() - 1);
              NameChoice->SetStringSelection(NameChoice->GetString(NameChoice->GetCount() - 1));
-@@ -1434,6 +1459,14 @@ void ModelStateDialog::OnPreviewMouseMove(wxMouseEvent& event)
+@@ -1421,6 +1446,14 @@ void ModelStateDialog::OnPreviewMouseMove(wxMouseEvent& event)
      }
  }
  
@@ -475,7 +475,7 @@ index aba7befae..e148761d9 100644
  {
      if (modelPreview == nullptr || !modelPreview->StartDrawing(mPointSize)) return;
 diff --git a/xLights/ModelStateDialog.h b/xLights/ModelStateDialog.h
-index 473300569..c1680e45c 100644
+index 99037eb3e..18f011ba8 100644
 --- a/xLights/ModelStateDialog.h
 +++ b/xLights/ModelStateDialog.h
 @@ -22,6 +22,7 @@
@@ -495,7 +495,7 @@ index 473300569..c1680e45c 100644
 +    wxTextCtrl* TextCtrl_ModelStateDescription;
      //*)
  
-     void SetStateInfo(Model* cls, std::map<std::string, std::map<std::string, std::string>>& info);
+     void SetStateInfo(Model* cls, std::map<std::string, std::map<std::string, std::string>> const& info);
 @@ -74,6 +77,8 @@ protected:
      static const long ID_BUTTON3;
      static const long ID_BUTTON_IMPORT;
@@ -513,11 +513,23 @@ index 473300569..c1680e45c 100644
  
      DECLARE_EVENT_TABLE()
  
+diff --git a/xLights/SpecialOptions.h b/xLights/SpecialOptions.h
+index 95a627187..9afac308e 100644
+--- a/xLights/SpecialOptions.h
++++ b/xLights/SpecialOptions.h
+@@ -12,7 +12,6 @@
+ 
+ #include <string>
+ 
+-
+ // Special options are read from an xml file in the show folder
+ // its use is for options we want the user to be able to set when required but not common enough to put in the UI
+ 
 diff --git a/xLights/SubModelsDialog.cpp b/xLights/SubModelsDialog.cpp
-index 4a6a34e9e..495cc5e54 100644
+index 7a1ff3da7..fa8e0a87c 100644
 --- a/xLights/SubModelsDialog.cpp
 +++ b/xLights/SubModelsDialog.cpp
-@@ -70,6 +70,8 @@ const long SubModelsDialog::ID_BUTTON10 = wxNewId();
+@@ -71,6 +71,8 @@ const long SubModelsDialog::ID_BUTTON10 = wxNewId();
  const long SubModelsDialog::ID_PANEL4 = wxNewId();
  const long SubModelsDialog::ID_STATICTEXT_NAME = wxNewId();
  const long SubModelsDialog::ID_TEXTCTRL_NAME = wxNewId();
@@ -526,7 +538,7 @@ index 4a6a34e9e..495cc5e54 100644
  const long SubModelsDialog::ID_STATICTEXT2 = wxNewId();
  const long SubModelsDialog::ID_CHOICE_BUFFER_STYLE = wxNewId();
  const long SubModelsDialog::ID_CHECKBOX1 = wxNewId();
-@@ -250,12 +252,16 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -212,12 +214,16 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
  	FlexGridSizer3 = new wxFlexGridSizer(0, 1, 0, 0);
  	FlexGridSizer3->AddGrowableCol(0);
  	FlexGridSizer3->AddGrowableRow(1);
@@ -546,7 +558,7 @@ index 4a6a34e9e..495cc5e54 100644
  	FlexGridSizer3->Add(FlexGridSizer7, 1, wxALL|wxEXPAND, 0);
  	TypeNotebook = new wxNotebook(Panel3, ID_NOTEBOOK1, wxDefaultPosition, wxDefaultSize, 0, _T("ID_NOTEBOOK1"));
  	Panel1 = new wxPanel(TypeNotebook, ID_PANEL2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL2"));
-@@ -394,6 +400,7 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -357,6 +363,7 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
      Connect(wxID_ANY, wxEVT_CLOSE_WINDOW, (wxObjectEventFunction)&SubModelsDialog::OnCancel);
      Connect(wxID_CANCEL, wxEVT_BUTTON, (wxObjectEventFunction)&SubModelsDialog::OnCancel);
      Connect(ID_TEXTCTRL_NAME, wxEVT_COMMAND_TEXT_ENTER, (wxObjectEventFunction)&SubModelsDialog::ApplySubmodelName);
@@ -554,7 +566,7 @@ index 4a6a34e9e..495cc5e54 100644
  
      TextCtrl_Name->Bind(wxEVT_KILL_FOCUS, &SubModelsDialog::OnTextCtrl_NameText_KillFocus, this);
  
-@@ -632,6 +639,7 @@ void SubModelsDialog::SaveXML(Model *m)
+@@ -606,6 +613,7 @@ void SubModelsDialog::SaveXML(Model *m)
      for (auto a = _subModels.begin(); a != _subModels.end(); ++a) {
          child = new wxXmlNode(wxXML_ELEMENT_NODE, "subModel");
          child->AddAttribute("name", (*a)->name);
@@ -562,7 +574,7 @@ index 4a6a34e9e..495cc5e54 100644
          child->AddAttribute("layout", (*a)->vertical ? "vertical" : "horizontal");
          child->AddAttribute("type", (*a)->isRanges ? "ranges" : "subbuffer");
          child->AddAttribute("bufferstyle", (*a)->bufferStyle);
-@@ -1225,6 +1233,19 @@ void SubModelsDialog::ApplySubmodelName()
+@@ -1218,6 +1226,19 @@ void SubModelsDialog::ApplySubmodelName()
      ValidateWindow();
  }
  
@@ -582,7 +594,7 @@ index 4a6a34e9e..495cc5e54 100644
  void SubModelsDialog::OnTextCtrl_NameText_KillFocus(wxFocusEvent& event)
  {
      ApplySubmodelName();
-@@ -2044,6 +2065,7 @@ void SubModelsDialog::ValidateWindow()
+@@ -2037,6 +2058,7 @@ void SubModelsDialog::ValidateWindow()
      {
          ListCtrl_SubModels->Disable();
          TextCtrl_Name->Disable();
@@ -590,7 +602,7 @@ index 4a6a34e9e..495cc5e54 100644
          DeleteButton->Disable();
          ButtonCopy->Disable();
          NodesGrid->Disable();
-@@ -2124,6 +2146,7 @@ void SubModelsDialog::ValidateWindow()
+@@ -2117,6 +2139,7 @@ void SubModelsDialog::ValidateWindow()
          {
              TypeNotebook->Enable();
              TextCtrl_Name->Enable();
@@ -598,7 +610,7 @@ index 4a6a34e9e..495cc5e54 100644
  
              int index = GetSelectedIndex();
              bool clash = false;
-@@ -2149,9 +2172,11 @@ void SubModelsDialog::ValidateWindow()
+@@ -2142,9 +2165,11 @@ void SubModelsDialog::ValidateWindow()
          {
              TypeNotebook->Disable();
              TextCtrl_Name->Disable();
@@ -610,7 +622,7 @@ index 4a6a34e9e..495cc5e54 100644
          DeleteButton->Disable();
          ButtonCopy->Disable();
          NodesGrid->Disable();
-@@ -2186,6 +2211,7 @@ void SubModelsDialog::Select(const wxString &name)
+@@ -2179,6 +2204,7 @@ void SubModelsDialog::Select(const wxString &name)
  
      ListCtrl_SubModels->EnsureVisible(idx);
      TextCtrl_Name->SetValue(name);
@@ -618,7 +630,7 @@ index 4a6a34e9e..495cc5e54 100644
  
      if (sm->isRanges) {
          TypeNotebook->SetSelection(0);
-@@ -3216,6 +3242,7 @@ void SubModelsDialog::ReadSubModelXML(wxXmlNode* xmlData)
+@@ -3223,6 +3249,7 @@ void SubModelsDialog::ReadSubModelXML(wxXmlNode* xmlData)
              SubModelInfo *sm = new SubModelInfo(name);
              sm->name = name;
              sm->oldName = name;
@@ -626,7 +638,7 @@ index 4a6a34e9e..495cc5e54 100644
              sm->isRanges = child->GetAttribute("type", "ranges") == "ranges";
              sm->vertical = child->GetAttribute("layout") == "vertical";
              sm->subBuffer = child->GetAttribute("subBuffer");
-@@ -3536,6 +3563,7 @@ void SubModelsDialog::ImportCustomModel(std::string filename)
+@@ -3543,6 +3570,7 @@ void SubModelsDialog::ImportCustomModel(std::string filename)
                          {
                              auto smname = n->GetAttribute("name");
                              SubModelInfo* sm2 = new SubModelInfo(name + "-" + smname);
@@ -635,10 +647,10 @@ index 4a6a34e9e..495cc5e54 100644
                              sm2->strands.clear();
                              sm2->isRanges = n->GetAttribute("type", "") == "ranges";
 diff --git a/xLights/SubModelsDialog.h b/xLights/SubModelsDialog.h
-index 7f79a1f43..ab6f347ab 100644
+index 4d62922c6..fc707e7da 100644
 --- a/xLights/SubModelsDialog.h
 +++ b/xLights/SubModelsDialog.h
-@@ -104,6 +104,7 @@ class SubModelsDialog : public wxDialog
+@@ -90,6 +90,7 @@ class SubModelsDialog : public wxDialog
  
          wxString name;
          wxString oldName;
@@ -646,7 +658,7 @@ index 7f79a1f43..ab6f347ab 100644
          bool vertical{false};
          bool isRanges{true};
          wxString subBuffer;
-@@ -175,7 +176,9 @@ public:
+@@ -161,7 +162,9 @@ public:
      wxStaticText* StaticText1;
      wxStaticText* StaticText2;
      wxStaticText* StaticTextName;
@@ -656,7 +668,7 @@ index 7f79a1f43..ab6f347ab 100644
      //*)
  
  protected:
-@@ -194,6 +197,8 @@ protected:
+@@ -180,6 +183,8 @@ protected:
      static const long ID_PANEL4;
      static const long ID_STATICTEXT_NAME;
      static const long ID_TEXTCTRL_NAME;
@@ -665,7 +677,7 @@ index 7f79a1f43..ab6f347ab 100644
      static const long ID_STATICTEXT2;
      static const long ID_CHOICE_BUFFER_STYLE;
      static const long ID_CHECKBOX1;
-@@ -268,6 +273,7 @@ protected:
+@@ -255,6 +260,7 @@ protected:
      void FixNodes(wxXmlNode* n, const std::string& attribute, std::map<int, int>& nodeMap);
  
      void ApplySubmodelName();
@@ -674,10 +686,10 @@ index 7f79a1f43..ab6f347ab 100644
      void ValidateWindow();
      void Select(const wxString &name);
 diff --git a/xLights/models/Model.cpp b/xLights/models/Model.cpp
-index 2b26eec2f..f9c746634 100644
+index 24c7922c2..afb557924 100644
 --- a/xLights/models/Model.cpp
 +++ b/xLights/models/Model.cpp
-@@ -2504,6 +2504,7 @@ void Model::ParseStateInfo(wxXmlNode* f, std::map<std::string, std::map<std::str
+@@ -2557,6 +2557,7 @@ void Model::ParseStateInfo(wxXmlNode* f, FaceStateData& stateInfo) {
      wxXmlAttribute* att = f->GetAttributes();
      while (att != nullptr) {
          if (att->GetName() != "Name") {
@@ -686,7 +698,7 @@ index 2b26eec2f..f9c746634 100644
                  stateInfo[name][att->GetName().ToStdString()] = att->GetValue();
              }
 diff --git a/xLights/wxsmith/ModelFaceDialog.wxs b/xLights/wxsmith/ModelFaceDialog.wxs
-index 1d2569c26..5319274ef 100644
+index 20798d2df..62ecbf354 100644
 --- a/xLights/wxsmith/ModelFaceDialog.wxs
 +++ b/xLights/wxsmith/ModelFaceDialog.wxs
 @@ -27,7 +27,7 @@
@@ -738,7 +750,7 @@ index 1d2569c26..5319274ef 100644
  								<object class="wxChoicebook" name="ID_CHOICEBOOK1" variable="FaceTypeChoice" member="yes">
  									<handler function="OnFaceTypeChoicePageChanged" entry="EVT_CHOICEBOOK_PAGE_CHANGED" />
 diff --git a/xLights/wxsmith/ModelGroupPanel.wxs b/xLights/wxsmith/ModelGroupPanel.wxs
-index 5ef2a5047..9c7b9d6f9 100644
+index c6d916fcc..8566367d1 100755
 --- a/xLights/wxsmith/ModelGroupPanel.wxs
 +++ b/xLights/wxsmith/ModelGroupPanel.wxs
 @@ -20,7 +20,7 @@
@@ -843,7 +855,7 @@ index 5ef2a5047..9c7b9d6f9 100644
  							</object>
  							<object class="sizeritem">
 diff --git a/xLights/wxsmith/ModelStateDialog.wxs b/xLights/wxsmith/ModelStateDialog.wxs
-index a532d70ea..d79148e60 100644
+index dc3e17d75..6221fdf2d 100644
 --- a/xLights/wxsmith/ModelStateDialog.wxs
 +++ b/xLights/wxsmith/ModelStateDialog.wxs
 @@ -36,7 +36,7 @@
@@ -886,10 +898,10 @@ index a532d70ea..d79148e60 100644
  								<object class="wxChoicebook" name="ID_CHOICEBOOK1" variable="StateTypeChoice" member="yes">
  									<handler function="OnStateTypeChoicePageChanged" entry="EVT_CHOICEBOOK_PAGE_CHANGED" />
 diff --git a/xLights/wxsmith/SubModelsDialog.wxs b/xLights/wxsmith/SubModelsDialog.wxs
-index d61c36b68..6c3d368d7 100644
+index 37dd93f4b..402b38e1e 100644
 --- a/xLights/wxsmith/SubModelsDialog.wxs
 +++ b/xLights/wxsmith/SubModelsDialog.wxs
-@@ -145,14 +145,14 @@
+@@ -147,14 +147,14 @@
  									<growablerows>1</growablerows>
  									<object class="sizeritem">
  										<object class="wxFlexGridSizer" variable="FlexGridSizer7" member="no">
@@ -907,7 +919,7 @@ index d61c36b68..6c3d368d7 100644
  												<option>1</option>
  											</object>
  											<object class="sizeritem">
-@@ -162,7 +162,21 @@
+@@ -164,7 +164,21 @@
  													<handler function="OnTextCtrl_NameText_Change" entry="EVT_TEXT" />
  												</object>
  												<flag>wxALL|wxEXPAND</flag>

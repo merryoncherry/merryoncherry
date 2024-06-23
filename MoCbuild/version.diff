@@ -1,8 +1,8 @@
 diff --git a/xLights/ScriptsDialog.cpp b/xLights/ScriptsDialog.cpp
-index 6ebf0fed7..c34b97762 100644
+index b0cf12bc0..3fd27ffa6 100644
 --- a/xLights/ScriptsDialog.cpp
 +++ b/xLights/ScriptsDialog.cpp
-@@ -291,8 +291,8 @@ void ScriptsDialog::Run_Python_Script(wxString const& filepath) const
+@@ -290,8 +290,8 @@ void ScriptsDialog::Run_Python_Script(wxString const& filepath) const
  
  void ScriptsDialog::OnButton_DownloadClick(wxCommandEvent& event)
  {
@@ -14,7 +14,7 @@ index 6ebf0fed7..c34b97762 100644
      wxJSONValue val;
      wxJSONReader reader;
 diff --git a/xLights/ShaderDownloadDialog.cpp b/xLights/ShaderDownloadDialog.cpp
-index adfc75abc..bbea7ccd5 100644
+index d3e49ad23..0a1226dda 100644
 --- a/xLights/ShaderDownloadDialog.cpp
 +++ b/xLights/ShaderDownloadDialog.cpp
 @@ -31,6 +31,8 @@
@@ -26,7 +26,7 @@ index adfc75abc..bbea7ccd5 100644
  #include "utils/Curl.h"
  #undef min
  #undef max
-@@ -364,7 +366,7 @@ wxXmlDocument* ShaderDownloadDialog::GetXMLFromURL(wxURI url, std::string& filen
+@@ -359,7 +361,7 @@ wxXmlDocument* ShaderDownloadDialog::GetXMLFromURL(wxURI url, std::string& filen
  
  bool ShaderDownloadDialog::LoadTree(wxProgressDialog* prog, int low, int high)
  {
@@ -35,6 +35,18 @@ index adfc75abc..bbea7ccd5 100644
  
      bool rc = true;
      std::string filename;
+diff --git a/xLights/SpecialOptions.h b/xLights/SpecialOptions.h
+index 95a627187..9afac308e 100644
+--- a/xLights/SpecialOptions.h
++++ b/xLights/SpecialOptions.h
+@@ -12,7 +12,6 @@
+ 
+ #include <string>
+ 
+-
+ // Special options are read from an xml file in the show folder
+ // its use is for options we want the user to be able to set when required but not common enough to put in the UI
+ 
 diff --git a/xLights/TipOfTheDayDialog.cpp b/xLights/TipOfTheDayDialog.cpp
 index 2175f9320..2bf7f43e7 100644
 --- a/xLights/TipOfTheDayDialog.cpp
@@ -58,7 +70,7 @@ index 2175f9320..2bf7f43e7 100644
  
  #define USE_GITHUB_HOSTED_TOD
 diff --git a/xLights/VendorModelDialog.cpp b/xLights/VendorModelDialog.cpp
-index 2c43f83bf..cfb151401 100644
+index de4d06e43..539449cd2 100644
 --- a/xLights/VendorModelDialog.cpp
 +++ b/xLights/VendorModelDialog.cpp
 @@ -27,6 +27,7 @@
@@ -69,21 +81,21 @@ index 2c43f83bf..cfb151401 100644
  
  class MModel;
  
-@@ -848,9 +849,9 @@ wxXmlDocument* VendorModelDialog::GetXMLFromURL(wxURI url, std::string& filename
- 
+@@ -838,10 +839,9 @@ wxXmlDocument* VendorModelDialog::GetXMLFromURL(wxURI url, std::string& filename
  bool VendorModelDialog::LoadTree(wxProgressDialog* prog, int low, int high)
  {
--    const std::string vendorlink = "https://nutcracker123.com/xlights/vendors/xlights_vendors.xml";
--    const std::string vendorlinkbackup = "https://github.com/xLightsSequencer/xLights/raw/master/download/xlights_vendors.xml";
--    //const std::string vendorlink = "http://localhost/xlights_vendors.xml";
+     static log4cpp::Category& logger_base = log4cpp::Category::getInstance(std::string("log_base"));
+-
+-    const std::string vendorlink = "https://raw.githubusercontent.com/xLightsSequencer/xLights/master/download/xlights_vendors.xml";
 +    const std::string vendorlink = "https://github.com/" XLIGHTS_GH_BRANCH "/raw/master/download/xlights_vendors.xml";
-+    const std::string vendorlinkbackup = "https://nutcracker123.com/xlights/vendors/xlights_vendors.xml";
+     const std::string vendorlinkbackup = "https://nutcracker123.com/xlights/vendors/xlights_vendors.xml";
+-    //const std::string vendorlink = "http://localhost/xlights_vendors.xml";
 +    // const std::string vendorlink = "http://localhost/xlights_vendors.xml";
  
      std::string filename;
      if (prog != nullptr)
 diff --git a/xLights/VendorMusicDialog.cpp b/xLights/VendorMusicDialog.cpp
-index a9e5050e7..f2e1f88f7 100644
+index 43939d374..8c3eaddbc 100644
 --- a/xLights/VendorMusicDialog.cpp
 +++ b/xLights/VendorMusicDialog.cpp
 @@ -21,6 +21,7 @@
@@ -94,7 +106,7 @@ index a9e5050e7..f2e1f88f7 100644
  
  CachedFileDownloader& VendorMusicDialog::GetCache() {
      return CachedFileDownloader::GetDefaultCache();
-@@ -220,8 +221,8 @@ wxXmlDocument* VendorMusicDialog::GetXMLFromURL(wxURI url, std::string& filename
+@@ -211,8 +212,8 @@ wxXmlDocument* VendorMusicDialog::GetXMLFromURL(wxURI url, std::string& filename
  
  bool VendorMusicDialog::LoadTree(std::string hash)
  {
@@ -106,10 +118,10 @@ index a9e5050e7..f2e1f88f7 100644
  
      std::string filename;
 diff --git a/xLights/models/Model.cpp b/xLights/models/Model.cpp
-index 2b26eec2f..46d3f8182 100644
+index 24c7922c2..675f255c5 100644
 --- a/xLights/models/Model.cpp
 +++ b/xLights/models/Model.cpp
-@@ -5923,7 +5923,7 @@ Model* Model::GetXlightsModel(Model* model, std::string& last_model, xLightsFram
+@@ -5998,7 +5998,7 @@ Model* Model::GetXlightsModel(Model* model, std::string& last_model, xLightsFram
                      // the user has decided they dont want it then treat them like an adult
                      if (!xlights->GetIgnoreVendorModelRecommendations()) {
  #endif
@@ -119,10 +131,10 @@ index 2b26eec2f..46d3f8182 100644
                          if (json == "") {
                              json = wxStandardPaths::Get().GetResourcesDir() + "/model_vendor_mapping.json";
 diff --git a/xLights/xLightsMain.cpp b/xLights/xLightsMain.cpp
-index 93d58dc13..6002ab663 100644
+index d9b79b392..2231fd617 100644
 --- a/xLights/xLightsMain.cpp
 +++ b/xLights/xLightsMain.cpp
-@@ -6642,13 +6642,13 @@ void xLightsFrame::OnMenuItem_File_NewXLightsInstance(wxCommandEvent& event)
+@@ -6723,13 +6723,13 @@ void xLightsFrame::OnMenuItem_File_NewXLightsInstance(wxCommandEvent& event)
  void xLightsFrame::OnMenuItem_Help_ReleaseNotesSelected(wxCommandEvent& event)
  {
  #ifdef __WXOSX__
@@ -138,7 +150,7 @@ index 93d58dc13..6002ab663 100644
      }
      ::wxLaunchDefaultBrowser(loc);
  #else
-@@ -6663,7 +6663,7 @@ void xLightsFrame::OnMenuItem_Help_ReleaseNotesSelected(wxCommandEvent& event)
+@@ -6744,7 +6744,7 @@ void xLightsFrame::OnMenuItem_Help_ReleaseNotesSelected(wxCommandEvent& event)
  
  void xLightsFrame::OnMenuItem_Help_Isue_TrackerSelected(wxCommandEvent& event)
  {
@@ -147,7 +159,7 @@ index 93d58dc13..6002ab663 100644
  }
  
  void xLightsFrame::OnMenuItem_Help_FacebookSelected(wxCommandEvent& event)
-@@ -8601,7 +8601,7 @@ bool xLightsFrame::CheckForUpdate(int maxRetries, bool canSkipUpdates, bool show
+@@ -8651,7 +8651,7 @@ bool xLightsFrame::CheckForUpdate(int maxRetries, bool canSkipUpdates, bool show
  #ifdef LINUX
      wxString hostname = wxT("www.adebenham.com");
      wxString path = wxT("/wp-content/uploads/xlights/latest.php");
@@ -157,15 +169,15 @@ index 93d58dc13..6002ab663 100644
  #else
  #ifdef __WXOSX__
 diff --git a/xLights/xLightsVersion.h b/xLights/xLightsVersion.h
-index 6507f39fc..b21783c4b 100644
+index 5b5f3d7ed..876be8fb5 100644
 --- a/xLights/xLightsVersion.h
 +++ b/xLights/xLightsVersion.h
-@@ -20,11 +20,15 @@ static const wxString xlights_version_string  = "2024.00.1";
+@@ -20,11 +20,15 @@ static const wxString xlights_version_string  = "2024.11.1";
  #ifdef DEBUG
  static const wxString xlights_qualifier       = " DEBUG";
  #else
 -static const wxString xlights_qualifier       = ""; // " BETA,ALPHA,PROD";
-+static const wxString xlights_qualifier       = "MoC"; // " BETA,ALPHA,PROD";
++static const wxString xlights_qualifier       = " MoC"; // " BETA,ALPHA,PROD";
  #endif
  static const wxString xlights_build_date      = __DATE__;
  	
