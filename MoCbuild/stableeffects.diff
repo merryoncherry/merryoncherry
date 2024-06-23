@@ -1,8 +1,27 @@
+diff --git a/xLights/PixelBuffer.cpp b/xLights/PixelBuffer.cpp
+index 57744ea19..09ee818fe 100644
+--- a/xLights/PixelBuffer.cpp
++++ b/xLights/PixelBuffer.cpp
+@@ -3060,11 +3060,13 @@ void PixelBufferClass::CalcOutput(int EffectPeriod, const std::vector<bool>& val
+ 
+     if (hasSparkles && sparklesVector.size() < layers[0]->buffer.Nodes.size()) {
+         // initialize the sparkle info
++        // Sparkles are determined in advance
++        EffectRenderStatePRNG prng;
+         size_t sz = sparklesVector.size();
+         size_t nc = layers[0]->buffer.Nodes.size();
+         sparklesVector.resize(nc);
+         while (sz < nc) {
+-            sparklesVector[sz++] = rand() % 10000;
++            sparklesVector[sz++] = prng.prngint(10000);
+         }
+         sparkles = &sparklesVector[0];
+     }
 diff --git a/xLights/RenderBuffer.cpp b/xLights/RenderBuffer.cpp
-index 4c43ed52f..7a69366fc 100644
+index d163e26c4..5efba7b7e 100644
 --- a/xLights/RenderBuffer.cpp
 +++ b/xLights/RenderBuffer.cpp
-@@ -891,36 +891,11 @@ float RenderBuffer::cos(float rad)
+@@ -876,36 +876,11 @@ float RenderBuffer::cos(float rad)
      return sinTable.cos(rad);
  }
  
@@ -40,10 +59,10 @@ index 4c43ed52f..7a69366fc 100644
  uint8_t RenderBuffer::ChannelBlend(uint8_t c1, uint8_t c2, float ratio)
  {
 diff --git a/xLights/RenderBuffer.h b/xLights/RenderBuffer.h
-index a44687751..37c809ce0 100644
+index bd18a755c..0a3d376ee 100644
 --- a/xLights/RenderBuffer.h
 +++ b/xLights/RenderBuffer.h
-@@ -440,6 +440,198 @@ public:
+@@ -441,6 +441,198 @@ public:
  	virtual ~EffectRenderCache();
  };
  
@@ -116,7 +135,7 @@ index a44687751..37c809ce0 100644
 +    {
 +        return prngint(100) < pct_true;
 +    }
-+
++    
 +    // Random int in the closed interval [mn, mx]
 +    int32_t prngintc(int32_t mn, int32_t mx)
 +    {
@@ -241,7 +260,7 @@ index a44687751..37c809ce0 100644
 +
  class /*NCCDLLEXPORT*/ RenderBuffer {
  public:
-     RenderBuffer(xLightsFrame *frame);
+     RenderBuffer(xLightsFrame *frame, PixelBufferClass *pbc, const Model *m);
 @@ -521,7 +713,6 @@ public:
      void Get2ColorAlphaBlend(const xlColor& c1, const xlColor& c2, float ratio, xlColor &color);
      void GetMultiColorBlend(float n, bool circular, xlColor &color, int reserveColors = 0);
@@ -281,7 +300,7 @@ index d74e96774..0a4d8c432 100644
  void SaveInt(const std::string& tag, int value);
  int LoadInt(const std::string& tag, int defaultValue);
 diff --git a/xLights/ValueCurve.h b/xLights/ValueCurve.h
-index e9a7686a5..f8d377701 100644
+index 9e736625b..2cd87d352 100644
 --- a/xLights/ValueCurve.h
 +++ b/xLights/ValueCurve.h
 @@ -148,9 +148,15 @@ public:
@@ -299,11 +318,11 @@ index e9a7686a5..f8d377701 100644
 +        _active = !_active;
 +        if (_active) RenderType();
 +    }
-     void SetValueAt(float offset, float value);
+     void SetValueAt(float offset, float value, bool force = false);
      void DeletePoint(float offset);
      bool IsSetPoint(float offset);
 diff --git a/xLights/effects/CandleEffect.cpp b/xLights/effects/CandleEffect.cpp
-index c651dd1fd..615794c71 100644
+index 2a5422bc3..77f3169dc 100644
 --- a/xLights/effects/CandleEffect.cpp
 +++ b/xLights/effects/CandleEffect.cpp
 @@ -61,7 +61,7 @@ struct CandleState
@@ -507,7 +526,7 @@ index 280fc62a8..23e3361b1 100644
                  effectObjects[ii]._dx = spd * cos(angle);
                  effectObjects[ii]._dy = spd * sin(angle);
 diff --git a/xLights/effects/FacesEffect.cpp b/xLights/effects/FacesEffect.cpp
-index 1c7574da6..4f12d1fb3 100644
+index f0ce6e375..f092a31e3 100644
 --- a/xLights/effects/FacesEffect.cpp
 +++ b/xLights/effects/FacesEffect.cpp
 @@ -30,7 +30,7 @@
@@ -542,7 +561,7 @@ index 1c7574da6..4f12d1fb3 100644
                  cache->blinkEndTime = buffer.curPeriod * buffer.frameTimeInMs + 101; //100ms blink
                  eye = "Closed";
              } else if ((buffer.curPeriod * buffer.frameTimeInMs) < cache->blinkEndTime) {
-@@ -924,9 +926,9 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
+@@ -935,9 +937,9 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
  
      FacesRenderCache* cache = (FacesRenderCache*)buffer.infoCache[id];
      if (cache == nullptr) {
@@ -554,7 +573,7 @@ index 1c7574da6..4f12d1fb3 100644
          buffer.infoCache[id] = cache;
      }
  
-@@ -1037,7 +1039,7 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
+@@ -1054,7 +1056,7 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
                  if ((buffer.curPeriod * buffer.frameTimeInMs) >= cache->nextBlinkTime) {
                      //calculate the blink time taking into account user selection
                      int maxEyeDelay = GetMaxEyeDelay( eyeBlinkFreq );
@@ -563,7 +582,7 @@ index 1c7574da6..4f12d1fb3 100644
                      cache->blinkEndTime = buffer.curPeriod * buffer.frameTimeInMs + 101; // 100ms blink
                      eyes = "Closed";
                  } else if ((buffer.curPeriod * buffer.frameTimeInMs) < cache->blinkEndTime) {
-@@ -1091,7 +1093,7 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
+@@ -1108,7 +1110,7 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
                      if ((buffer.curPeriod * buffer.frameTimeInMs) >= cache->nextBlinkTime) {
                          if ((startms + 150) >= (buffer.curPeriod * buffer.frameTimeInMs)) {
                              // don't want to blink RIGHT at the start of the rest, delay a little bit
@@ -572,7 +591,7 @@ index 1c7574da6..4f12d1fb3 100644
  
                              // also don't want it right at the end
                              if ((tmp + 130) > endms) {
-@@ -1102,7 +1104,7 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
+@@ -1119,7 +1121,7 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
                          } else {
                              //calculate the blink time taking into account user selection
                              int maxEyeDelay = GetMaxEyeDelay(eyeBlinkFreq);
@@ -581,7 +600,7 @@ index 1c7574da6..4f12d1fb3 100644
                              cache->blinkEndTime = buffer.curPeriod * buffer.frameTimeInMs + 101; // 100ms blink
                              eyes = "Closed";
                          }
-@@ -1119,7 +1121,7 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
+@@ -1136,7 +1138,7 @@ void FacesEffect::RenderFaces(RenderBuffer& buffer,
                  if ((buffer.curPeriod * buffer.frameTimeInMs) >= cache->nextBlinkTime) {
                      //calculate the blink time, taking into account user selection
                      int maxEyeDelay = GetMaxEyeDelay(eyeBlinkFreq);
@@ -591,7 +610,7 @@ index 1c7574da6..4f12d1fb3 100644
                      eyes = "Closed";
                  } else if ((buffer.curPeriod * buffer.frameTimeInMs) < cache->blinkEndTime) {
 diff --git a/xLights/effects/FireEffect.cpp b/xLights/effects/FireEffect.cpp
-index 3361ab9ce..a0d9050dd 100644
+index 9cba617b1..14fd595f5 100644
 --- a/xLights/effects/FireEffect.cpp
 +++ b/xLights/effects/FireEffect.cpp
 @@ -152,7 +152,8 @@ static int GetLocation(const std::string &location) {
@@ -604,16 +623,16 @@ index 3361ab9ce..a0d9050dd 100644
  public:
      FireRenderCache() {};
      virtual ~FireRenderCache() {};
-@@ -241,6 +242,7 @@ void FireEffect::Render(Effect* effect, const SettingsMap& SettingsMap, RenderBu
+@@ -234,6 +235,7 @@ void FireEffect::Render(Effect* effect, const SettingsMap& SettingsMap, RenderBu
      float mod_state = 4.0;
      if (buffer.needToInit) {
          buffer.needToInit = false;
 +        cache->seedConsistently(buffer.curPeriod, buffer.BufferWi, buffer.BufferHt, buffer.GetModelName().c_str(), id);
-         cache->FireBuffer.resize(maxMHt * maxMWi);
-         for (size_t i = 0; i < cache->FireBuffer.size(); ++i) {
-             cache->FireBuffer[i] = 0;
-@@ -250,7 +252,7 @@ void FireEffect::Render(Effect* effect, const SettingsMap& SettingsMap, RenderBu
-     }
+ 
+         cache->maxBuffer = buffer.GetMaxBuffer(SettingsMap);
+         int w = std::max(buffer.BufferWi, cache->maxBuffer.x);
+@@ -262,7 +264,7 @@ void FireEffect::Render(Effect* effect, const SettingsMap& SettingsMap, RenderBu
+     
      // build fire
      for (int x = 0; x < maxMWi; ++x) {
 -        int r = x % 2 == 0 ? 190 + (rand() % 10) : 100 + (rand() % 50);
@@ -621,7 +640,7 @@ index 3361ab9ce..a0d9050dd 100644
          SetFireBuffer(x, 0, r, cache->FireBuffer, maxMWi, maxMHt);
      }
      int step = 255 * 100 / curHt / HeightPct;
-@@ -280,7 +282,7 @@ void FireEffect::Render(Effect* effect, const SettingsMap& SettingsMap, RenderBu
+@@ -292,7 +294,7 @@ void FireEffect::Render(Effect* effect, const SettingsMap& SettingsMap, RenderBu
              }
              int new_index = n > 0 ? sum / n : 0;
              if (new_index > 0) {
@@ -631,10 +650,10 @@ index 3361ab9ce..a0d9050dd 100644
                      new_index = 0;
                  if (new_index >= FirePalette.size())
 diff --git a/xLights/effects/FireworksEffect.cpp b/xLights/effects/FireworksEffect.cpp
-index b464c967c..83bd27cc2 100644
+index f7cc98694..04eab1dfe 100644
 --- a/xLights/effects/FireworksEffect.cpp
 +++ b/xLights/effects/FireworksEffect.cpp
-@@ -74,7 +74,8 @@ class FireworkParticle
+@@ -71,7 +71,8 @@ class FireworkParticle
      int _age = 0;
  
  public:
@@ -644,7 +663,7 @@ index b464c967c..83bd27cc2 100644
      {
          _width = width;
          _height = height;
-@@ -92,8 +93,8 @@ public:
+@@ -89,8 +90,8 @@ public:
  
          _fps = 1000.0 / frameMS;
  
@@ -655,7 +674,7 @@ index b464c967c..83bd27cc2 100644
          _vx = 3.0 * vx / 100 + explosionVelocity * cos(angle);
          _vy = 3.0 * -vy / 100 + explosionVelocity * sin(angle);
      }
-@@ -165,12 +166,13 @@ class Firework
+@@ -162,12 +163,13 @@ class Firework
      std::vector<FireworkParticle> _particles;
  
  public:
@@ -671,7 +690,7 @@ index b464c967c..83bd27cc2 100644
          }
      }
  
-@@ -207,7 +209,7 @@ public:
+@@ -204,7 +206,7 @@ public:
      }
  };
  
@@ -680,7 +699,7 @@ index b464c967c..83bd27cc2 100644
  public:
      FireworksRenderCache() {};
      virtual ~FireworksRenderCache() {};
-@@ -305,7 +307,7 @@ void FireworksEffect::SetPanelTimingTracks() const
+@@ -302,7 +304,7 @@ void FireworksEffect::SetPanelTimingTracks() const
      wxPostEvent(fp, event);
  }
  
@@ -689,7 +708,7 @@ index b464c967c..83bd27cc2 100644
  {
      int startX;
      int startY;
-@@ -317,7 +319,7 @@ std::pair<int,int> FireworksEffect::GetFireworkLocation(int width, int height, i
+@@ -314,7 +316,7 @@ std::pair<int,int> FireworksEffect::GetFireworkLocation(int width, int height, i
      {
          int x25 = static_cast<int>(0.25f * width);
          int x75 = static_cast<int>(0.75f * width);
@@ -698,7 +717,7 @@ index b464c967c..83bd27cc2 100644
      }
  
      if (overridey >= 0)
-@@ -328,7 +330,7 @@ std::pair<int,int> FireworksEffect::GetFireworkLocation(int width, int height, i
+@@ -325,7 +327,7 @@ std::pair<int,int> FireworksEffect::GetFireworkLocation(int width, int height, i
      {
          int y25 = static_cast<int>(0.25f * height);
          int y75 = static_cast<int>(0.75f * height);
@@ -707,7 +726,7 @@ index b464c967c..83bd27cc2 100644
      }
      return { startX, startY };
  }
-@@ -381,12 +383,13 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+@@ -377,12 +379,13 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
  
      if (buffer.needToInit) {
          buffer.needToInit = false;
@@ -722,7 +741,7 @@ index b464c967c..83bd27cc2 100644
              }
          }
  
-@@ -404,8 +407,8 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+@@ -400,8 +403,8 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
              // trigger if it was not previously triggered or has been triggered for REPEATTRIGGER frames
              if (sinceLastTriggered == 0 || sinceLastTriggered > REPEATTRIGGER)
              {
@@ -733,7 +752,7 @@ index b464c967c..83bd27cc2 100644
                  fireworks.push_back(Firework(particleCount,
                      location.first, location.second,
                      xVelocity, yVelocity,
-@@ -413,7 +416,7 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+@@ -409,7 +412,7 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
                      colourIndex, holdColour,
                      particleVelocity,
                      buffer.BufferWi, buffer.BufferHt,
@@ -742,7 +761,7 @@ index b464c967c..83bd27cc2 100644
              }
  
              // if music is over the trigger level for REPEATTRIGGER frames then we will trigger another firework
-@@ -453,8 +456,8 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+@@ -449,8 +452,8 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
                      if (buffer.curPeriod == el->GetEffect(j)->GetStartTimeMS() / buffer.frameTimeInMs ||
                          buffer.curPeriod == el->GetEffect(j)->GetEndTimeMS() / buffer.frameTimeInMs)
                      {
@@ -753,7 +772,7 @@ index b464c967c..83bd27cc2 100644
                          fireworks.push_back(Firework(particleCount,
                              location.first, location.second,
                              xVelocity, yVelocity,
-@@ -462,7 +465,7 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+@@ -458,7 +461,7 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
                              colourIndex, holdColour,
                              particleVelocity,
                              buffer.BufferWi, buffer.BufferHt,
@@ -762,7 +781,7 @@ index b464c967c..83bd27cc2 100644
                          break;
                      }
                  }
-@@ -476,8 +479,8 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+@@ -472,8 +475,8 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
          {
              if (it == buffer.curPeriod)
              {
@@ -773,7 +792,7 @@ index b464c967c..83bd27cc2 100644
                  fireworks.push_back(Firework(particleCount,
                      location.first, location.second,
                      xVelocity, yVelocity,
-@@ -485,7 +488,7 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
+@@ -481,7 +484,7 @@ void FireworksEffect::Render(Effect *effect, const SettingsMap &SettingsMap, Ren
                      colourIndex, holdColour,
                      particleVelocity,
                      buffer.BufferWi, buffer.BufferHt,
@@ -1037,7 +1056,7 @@ index 2490810e9..e0b96ad42 100644
  
      cache->CreateDestroy(objects, points, buffer.BufferWi, buffer.BufferHt);
 diff --git a/xLights/effects/LiquidEffect.cpp b/xLights/effects/LiquidEffect.cpp
-index 6559c881b..9ad984628 100644
+index 6def12ef1..54e5dec9e 100644
 --- a/xLights/effects/LiquidEffect.cpp
 +++ b/xLights/effects/LiquidEffect.cpp
 @@ -226,7 +226,7 @@ void LiquidEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Render
@@ -1108,7 +1127,7 @@ index 6559c881b..9ad984628 100644
      // move all existing items
      // If frame time is 50ms then time advances by 0.05s
      float32 timeStep = (float)buffer.frameTimeInMs / 1000.0;
-@@ -625,16 +628,16 @@ void LiquidEffect::Step(b2World* world, RenderBuffer &buffer, bool enabled[], in
+@@ -624,16 +627,16 @@ void LiquidEffect::Step(b2World* world, RenderBuffer &buffer, bool enabled[], in
                  switch (i)
                  {
                  case 0:
@@ -1129,7 +1148,7 @@ index 6559c881b..9ad984628 100644
                      break;
                  }
                  ++j;
-@@ -664,6 +667,7 @@ void LiquidEffect::Render(RenderBuffer &buffer,
+@@ -663,6 +666,7 @@ void LiquidEffect::Render(RenderBuffer &buffer,
      if (cache == nullptr) {
          cache = new LiquidRenderCache();
          buffer.infoCache[id] = cache;
@@ -1137,7 +1156,7 @@ index 6559c881b..9ad984628 100644
      }
      b2World*& _world = cache->_world;
  
-@@ -676,6 +680,8 @@ void LiquidEffect::Render(RenderBuffer &buffer,
+@@ -675,6 +679,8 @@ void LiquidEffect::Render(RenderBuffer &buffer,
      {
          buffer.needToInit = false;
  
@@ -1162,7 +1181,7 @@ index 6ec8e22d7..1eb607daf 100644
      void Step(b2World* world, RenderBuffer& buffer, bool enabled[], int lifetime, const std::string& particleType, bool mixcolors,
                int x1, int y1, int direction1, int velocity1, int flow1, int sourceSize1, bool flowMusic1,
 diff --git a/xLights/effects/MeteorsEffect.cpp b/xLights/effects/MeteorsEffect.cpp
-index bdeb23310..bdebdf669 100644
+index 8bbba8361..0a903fcbf 100644
 --- a/xLights/effects/MeteorsEffect.cpp
 +++ b/xLights/effects/MeteorsEffect.cpp
 @@ -115,7 +115,7 @@ public:
@@ -1478,10 +1497,10 @@ index bdeb23310..bdebdf669 100644
      ExplodeMoveMeteors(buffer, speed, xoffset, yoffset, fadeWithDistance);
  
 diff --git a/xLights/effects/PicturesEffect.cpp b/xLights/effects/PicturesEffect.cpp
-index 213894ab4..df4e91e8a 100644
+index e0d19912e..3f537fd28 100644
 --- a/xLights/effects/PicturesEffect.cpp
 +++ b/xLights/effects/PicturesEffect.cpp
-@@ -954,11 +954,16 @@ void PicturesEffect::Render(RenderBuffer& buffer,
+@@ -946,11 +946,16 @@ void PicturesEffect::Render(RenderBuffer& buffer,
  
      // add shimmer effect which just randomly turns off pixels
      if (shimmer) {
@@ -1500,7 +1519,7 @@ index 213894ab4..df4e91e8a 100644
                      if (color != xlBLACK) {
                          buffer.ProcessPixel(x, y, c, false);
 diff --git a/xLights/effects/RenderableEffect.h b/xLights/effects/RenderableEffect.h
-index 18631c660..b2084fee0 100644
+index 1e6652228..4d604a7af 100644
 --- a/xLights/effects/RenderableEffect.h
 +++ b/xLights/effects/RenderableEffect.h
 @@ -31,6 +31,7 @@ class wxSpinCtrl;
@@ -1512,10 +1531,10 @@ index 18631c660..b2084fee0 100644
  class RenderableEffect
  {
 diff --git a/xLights/effects/ShaderEffect.cpp b/xLights/effects/ShaderEffect.cpp
-index 0849e59c6..d45f23eb6 100644
+index 1329f66cc..3743904af 100644
 --- a/xLights/effects/ShaderEffect.cpp
 +++ b/xLights/effects/ShaderEffect.cpp
-@@ -1184,8 +1184,15 @@ void ShaderEffect::Render(Effect* eff, const SettingsMap& SettingsMap, RenderBuf
+@@ -1193,8 +1193,15 @@ void ShaderEffect::Render(Effect* eff, const SettingsMap& SettingsMap, RenderBuf
      si->SetUniform1f("TIMEDELTA", (GLfloat)(buffer.frameTimeInMs /1000.f));
  
      if (si->HasUniform("DATE")) {
@@ -1534,10 +1553,10 @@ index 0849e59c6..d45f23eb6 100644
      si->SetUniformInt("NUMCOLORS", buffer.GetColorCount());
      si->SetUniformInt("PASSINDEX", 0);
 diff --git a/xLights/effects/ShapeEffect.cpp b/xLights/effects/ShapeEffect.cpp
-index 22a4a2903..1e13613a6 100644
+index 8f0a36ce8..09307327d 100644
 --- a/xLights/effects/ShapeEffect.cpp
 +++ b/xLights/effects/ShapeEffect.cpp
-@@ -270,7 +270,7 @@ bool compare_shapes(const ShapeData* first, const ShapeData* second)
+@@ -269,7 +269,7 @@ bool compare_shapes(const ShapeData* first, const ShapeData* second)
      return first->_oset > second->_oset;
  }
  
@@ -1546,7 +1565,7 @@ index 22a4a2903..1e13613a6 100644
  
  public:
      ShapeRenderCache() { _lastColorIdx = -1; _sinceLastTriggered = 0; }
-@@ -344,12 +344,12 @@ public:
+@@ -343,12 +343,12 @@ public:
          }
      }
  
@@ -1562,7 +1581,7 @@ index 22a4a2903..1e13613a6 100644
          }
          _shapes.push_back(new ShapeData(centre, size, oset, color, shape, angle, speed, holdColour, colourIndex));
      }
-@@ -384,7 +384,7 @@ public:
+@@ -383,7 +383,7 @@ public:
      }
  };
  
@@ -1571,7 +1590,7 @@ index 22a4a2903..1e13613a6 100644
  {
      if (shape == "Circle") {
          return RENDER_SHAPE_CIRCLE;
-@@ -422,7 +422,7 @@ int ShapeEffect::DecodeShape(const std::string& shape)
+@@ -421,7 +421,7 @@ int ShapeEffect::DecodeShape(const std::string& shape)
          return RENDER_SHAPE_SVG;
      }
  
@@ -1580,7 +1599,7 @@ index 22a4a2903..1e13613a6 100644
  }
  
  static int mapSkinTone(const std::string &v) {
-@@ -468,8 +468,6 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -467,8 +467,6 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
  
      int rotation = GetValueCurveInt("Shape_Rotation", 0, SettingsMap, oset, SHAPE_ROTATION_MIN, SHAPE_ROTATION_MAX, buffer.GetStartTimeMS(), buffer.GetEndTimeMS());
  
@@ -1589,7 +1608,7 @@ index 22a4a2903..1e13613a6 100644
      float f = 0.0;
      bool useMusic = SettingsMap.GetBool("CHECKBOX_Shape_UseMusic", false);
      float sensitivity = (float)SettingsMap.GetInt("SLIDER_Shape_Sensitivity", 50) / 100.0;
-@@ -486,12 +484,15 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -484,12 +482,15 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
          }
      }
  
@@ -1606,7 +1625,7 @@ index 22a4a2903..1e13613a6 100644
      std::list<ShapeData*>& _shapes = cache->_shapes;
      int& _lastColorIdx = cache->_lastColorIdx;
      int& _sinceLastTriggered = cache->_sinceLastTriggered;
-@@ -504,6 +505,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -502,6 +503,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
      if (buffer.needToInit) {
          buffer.needToInit = false;
  
@@ -1614,7 +1633,7 @@ index 22a4a2903..1e13613a6 100644
          cache->SetFilter(filterLabel, useRegex);
  
          _sinceLastTriggered = 0;
-@@ -521,7 +523,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -519,7 +521,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
              for (int i = _shapes.size(); i < count; ++i) {
                  wxPoint pt;
                  if (randomLocation) {
@@ -1623,7 +1642,7 @@ index 22a4a2903..1e13613a6 100644
                  } else {
                      pt = wxPoint(xc, yc);
                  }
-@@ -535,10 +537,10 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -533,10 +535,10 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  int os = 0;
                  if (startRandomly)
                  {
@@ -1636,7 +1655,7 @@ index 22a4a2903..1e13613a6 100644
              }
              cache->SortShapes();
          }
-@@ -580,7 +582,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -578,7 +580,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                          wxPoint pt;
                          if (randomLocation)
                          {
@@ -1645,7 +1664,7 @@ index 22a4a2903..1e13613a6 100644
                          }
                          else
                          {
-@@ -594,7 +596,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -592,7 +594,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                              _lastColorIdx = 0;
                          }
  
@@ -1654,7 +1673,7 @@ index 22a4a2903..1e13613a6 100644
                          break;
                      }
                  }
-@@ -612,7 +614,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -610,7 +612,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  wxPoint pt;
                  if (randomLocation)
                  {
@@ -1663,7 +1682,7 @@ index 22a4a2903..1e13613a6 100644
                  }
                  else
                  {
-@@ -626,7 +628,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -624,7 +626,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                      _lastColorIdx = 0;
                  }
  
@@ -1672,7 +1691,7 @@ index 22a4a2903..1e13613a6 100644
              }
  
              // if music is over the trigger level for REPEATTRIGGER frames then we will trigger another firework
-@@ -649,7 +651,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -647,7 +649,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
              wxPoint pt;
              if (randomLocation)
              {
@@ -1681,7 +1700,7 @@ index 22a4a2903..1e13613a6 100644
              }
              else
              {
-@@ -663,7 +665,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
+@@ -661,7 +663,7 @@ void ShapeEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderB
                  _lastColorIdx = 0;
              }
  
@@ -2004,7 +2023,7 @@ index 5a0023f21..bcf84093f 100644
          // work out the normal to the point being drawn
          float tt = ((R - r) / r) * t;
 diff --git a/xLights/effects/StrobeEffect.cpp b/xLights/effects/StrobeEffect.cpp
-index 93df7c105..a25ce4ffb 100644
+index 452798a3f..ada6ee2d0 100644
 --- a/xLights/effects/StrobeEffect.cpp
 +++ b/xLights/effects/StrobeEffect.cpp
 @@ -66,7 +66,7 @@ public:
@@ -2081,7 +2100,7 @@ index 93df7c105..a25ce4ffb 100644
                  buffer.SetPixel(x, y + 1, color);
                  buffer.SetPixel(x - 1, y, color);
 diff --git a/xLights/effects/TendrilEffect.cpp b/xLights/effects/TendrilEffect.cpp
-index 6b23aa6b4..22835e073 100644
+index 55744bb4d..3e0f8024c 100644
 --- a/xLights/effects/TendrilEffect.cpp
 +++ b/xLights/effects/TendrilEffect.cpp
 @@ -30,6 +30,52 @@
@@ -2426,7 +2445,7 @@ index 3fb0c3829..5f88a6e7a 100644
 -void TwinkleEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderBuffer &buffer) {
 -    
 +void TwinkleEffect::Render(Effect *effect, const SettingsMap &SettingsMap, RenderBuffer &buffer)
-+{
++{   
      float oset = buffer.GetEffectTimeIntervalPosition();
      int Count = GetValueCurveInt("Twinkle_Count", 3, SettingsMap, oset, TWINKLE_COUNT_MIN, TWINKLE_COUNT_MAX, buffer.GetStartTimeMS(), buffer.GetEndTimeMS());
      int Steps = GetValueCurveInt("Twinkle_Steps", 30, SettingsMap, oset, TWINKLE_STEPS_MIN, TWINKLE_STEPS_MAX, buffer.GetStartTimeMS(), buffer.GetEndTimeMS());
@@ -2508,10 +2527,10 @@ index 3fb0c3829..5f88a6e7a 100644
          }
          int i7 = strobe[x].duration;
 diff --git a/xLights/effects/VUMeterEffect.cpp b/xLights/effects/VUMeterEffect.cpp
-index f5135adde..bfedd2c5e 100644
+index c1d1eddc6..8b4a8bcd8 100644
 --- a/xLights/effects/VUMeterEffect.cpp
 +++ b/xLights/effects/VUMeterEffect.cpp
-@@ -321,7 +321,7 @@ void VUMeterEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Rende
+@@ -322,7 +322,7 @@ void VUMeterEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Rende
             SettingsMap.Get("FILEPICKERCTRL_SVGFile", ""));
  }
  
@@ -2520,7 +2539,7 @@ index f5135adde..bfedd2c5e 100644
  {
  
  public:
-@@ -612,6 +612,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
+@@ -535,6 +535,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
  	if (cache == nullptr) {
  		cache = new VUMeterRenderCache();
  		buffer.infoCache[id] = cache;
@@ -2528,7 +2547,7 @@ index f5135adde..bfedd2c5e 100644
  	}
  	std::list<int>& _timingmarks = cache->_timingmarks;
  	int &_lasttimingmark = cache->_lasttimingmark;
-@@ -627,6 +628,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
+@@ -550,6 +551,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
  	if (buffer.needToInit)
  	{
          buffer.needToInit = false;
@@ -2536,7 +2555,7 @@ index f5135adde..bfedd2c5e 100644
          _lineHistory.clear();
          _nCount = 0;
          _colourindex = -1;
-@@ -2970,9 +2972,10 @@ void VUMeterEffect::RenderLevelBarFrame(RenderBuffer &buffer, int bars, int sens
+@@ -2872,9 +2874,10 @@ void VUMeterEffect::RenderLevelBarFrame(RenderBuffer &buffer, int bars, int sens
              }
  
              if (random && bars > 2) {
@@ -2548,7 +2567,7 @@ index f5135adde..bfedd2c5e 100644
                  }
                  if (lastbar > bars) lastbar = 1;
              }
-@@ -3013,9 +3016,10 @@ void VUMeterEffect::RenderTimingEventBarFrame(RenderBuffer& buffer, int bars, st
+@@ -2914,9 +2917,10 @@ void VUMeterEffect::RenderTimingEventBarFrame(RenderBuffer& buffer, int bars, st
              }
  
              if (random && bars > 2) {
@@ -2560,7 +2579,7 @@ index f5135adde..bfedd2c5e 100644
                  }
                  if (lastbar > bars)
                      lastbar = 1;
-@@ -3097,9 +3101,10 @@ void VUMeterEffect::RenderNoteLevelBarFrame(RenderBuffer& buffer, int bars, int
+@@ -3004,9 +3008,10 @@ void VUMeterEffect::RenderNoteLevelBarFrame(RenderBuffer& buffer, int bars, int
              }
  
              if (random && bars > 2) {
@@ -2620,22 +2639,3 @@ index 04af1f814..8b681d5b1 100644
                  }
              }
              buffer.needToInit = false;
-diff --git a/xLights/models/Model.cpp b/xLights/models/Model.cpp
-index 3c0db0f77..f327f47cc 100644
---- a/xLights/models/Model.cpp
-+++ b/xLights/models/Model.cpp
-@@ -3055,8 +3055,12 @@ void Model::SetFromXml(wxXmlNode* ModelNode, bool zb)
-     InitModel();
- 
-     size_t NodeCount = GetNodeCount();
--    for (size_t i = 0; i < NodeCount; ++i) {
--        Nodes[i]->sparkle = rand() % 10000;
-+
-+    // Sparkles are determined in advance
-+    EffectRenderStatePRNG prng;
-+    prng.seedConsistently(StartChannel, 0, NumberOfStrings, name.c_str(), 0);
-+    for (size_t i = 0; i < NodeCount; i++) {
-+        Nodes[i]->sparkle = prng.prngint(10000);
-     }
- 
-     wxXmlNode* f = ModelNode->GetChildren();
