@@ -1519,7 +1519,7 @@ index e0d19912e..3f537fd28 100644
                      if (color != xlBLACK) {
                          buffer.ProcessPixel(x, y, c, false);
 diff --git a/xLights/effects/RenderableEffect.h b/xLights/effects/RenderableEffect.h
-index 1e6652228..4d604a7af 100644
+index 9815e25e9..522a4ce37 100644
 --- a/xLights/effects/RenderableEffect.h
 +++ b/xLights/effects/RenderableEffect.h
 @@ -31,6 +31,7 @@ class wxSpinCtrl;
