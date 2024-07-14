@@ -68,10 +68,10 @@ index aff536d26..7516679ae 100644
      FlexGridSizer1->SetSizeHints(this);
      Center();
 diff --git a/xLights/SubModelsDialog.cpp b/xLights/SubModelsDialog.cpp
-index 7a1ff3da7..b6abb4542 100644
+index f04f03f3b..24844de55 100644
 --- a/xLights/SubModelsDialog.cpp
 +++ b/xLights/SubModelsDialog.cpp
-@@ -241,7 +241,6 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -242,7 +242,6 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
  	NodesGrid->CreateGrid(5,1);
  	NodesGrid->EnableEditing(true);
  	NodesGrid->EnableGridLines(true);
@@ -79,7 +79,7 @@ index 7a1ff3da7..b6abb4542 100644
  	NodesGrid->SetDefaultColSize(160, true);
  	NodesGrid->SetColLabelValue(0, _("Node Ranges"));
  	NodesGrid->SetRowLabelValue(0, _("Strand   1"));
-@@ -257,19 +256,19 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -258,19 +257,19 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
  	FlexGridSizer4->Add(FlexGridSizer8, 1, wxALL|wxEXPAND, 5);
  	FlexGridSizer5 = new wxFlexGridSizer(0, 1, 0, 0);
  	AddRowButton = new wxButton(Panel1, ID_BUTTON1, _("Add Row"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
@@ -106,7 +106,7 @@ index 7a1ff3da7..b6abb4542 100644
  	FlexGridSizer4->Add(FlexGridSizer5, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxFIXED_MINSIZE, 0);
  	Panel1->SetSizer(FlexGridSizer4);
  	FlexGridSizer4->Fit(Panel1);
-@@ -350,6 +349,8 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -351,6 +350,8 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
  	Connect(wxID_ANY,wxEVT_INIT_DIALOG,(wxObjectEventFunction)&SubModelsDialog::OnInit);
  	//*)
  
