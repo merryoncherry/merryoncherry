@@ -526,10 +526,10 @@ index 95a627187..9afac308e 100644
  // its use is for options we want the user to be able to set when required but not common enough to put in the UI
  
 diff --git a/xLights/SubModelsDialog.cpp b/xLights/SubModelsDialog.cpp
-index 7a1ff3da7..fa8e0a87c 100644
+index f04f03f3b..2b569e279 100644
 --- a/xLights/SubModelsDialog.cpp
 +++ b/xLights/SubModelsDialog.cpp
-@@ -71,6 +71,8 @@ const long SubModelsDialog::ID_BUTTON10 = wxNewId();
+@@ -72,6 +72,8 @@ const long SubModelsDialog::ID_BUTTON10 = wxNewId();
  const long SubModelsDialog::ID_PANEL4 = wxNewId();
  const long SubModelsDialog::ID_STATICTEXT_NAME = wxNewId();
  const long SubModelsDialog::ID_TEXTCTRL_NAME = wxNewId();
@@ -538,7 +538,7 @@ index 7a1ff3da7..fa8e0a87c 100644
  const long SubModelsDialog::ID_STATICTEXT2 = wxNewId();
  const long SubModelsDialog::ID_CHOICE_BUFFER_STYLE = wxNewId();
  const long SubModelsDialog::ID_CHECKBOX1 = wxNewId();
-@@ -212,12 +214,16 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -213,12 +215,16 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
  	FlexGridSizer3 = new wxFlexGridSizer(0, 1, 0, 0);
  	FlexGridSizer3->AddGrowableCol(0);
  	FlexGridSizer3->AddGrowableRow(1);
@@ -558,7 +558,7 @@ index 7a1ff3da7..fa8e0a87c 100644
  	FlexGridSizer3->Add(FlexGridSizer7, 1, wxALL|wxEXPAND, 0);
  	TypeNotebook = new wxNotebook(Panel3, ID_NOTEBOOK1, wxDefaultPosition, wxDefaultSize, 0, _T("ID_NOTEBOOK1"));
  	Panel1 = new wxPanel(TypeNotebook, ID_PANEL2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL2"));
-@@ -357,6 +363,7 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
+@@ -358,6 +364,7 @@ SubModelsDialog::SubModelsDialog(wxWindow* parent, OutputManager* om) :
      Connect(wxID_ANY, wxEVT_CLOSE_WINDOW, (wxObjectEventFunction)&SubModelsDialog::OnCancel);
      Connect(wxID_CANCEL, wxEVT_BUTTON, (wxObjectEventFunction)&SubModelsDialog::OnCancel);
      Connect(ID_TEXTCTRL_NAME, wxEVT_COMMAND_TEXT_ENTER, (wxObjectEventFunction)&SubModelsDialog::ApplySubmodelName);
@@ -566,7 +566,7 @@ index 7a1ff3da7..fa8e0a87c 100644
  
      TextCtrl_Name->Bind(wxEVT_KILL_FOCUS, &SubModelsDialog::OnTextCtrl_NameText_KillFocus, this);
  
-@@ -606,6 +613,7 @@ void SubModelsDialog::SaveXML(Model *m)
+@@ -607,6 +614,7 @@ void SubModelsDialog::SaveXML(Model *m)
      for (auto a = _subModels.begin(); a != _subModels.end(); ++a) {
          child = new wxXmlNode(wxXML_ELEMENT_NODE, "subModel");
          child->AddAttribute("name", (*a)->name);
@@ -574,7 +574,7 @@ index 7a1ff3da7..fa8e0a87c 100644
          child->AddAttribute("layout", (*a)->vertical ? "vertical" : "horizontal");
          child->AddAttribute("type", (*a)->isRanges ? "ranges" : "subbuffer");
          child->AddAttribute("bufferstyle", (*a)->bufferStyle);
-@@ -1218,6 +1226,19 @@ void SubModelsDialog::ApplySubmodelName()
+@@ -1219,6 +1227,19 @@ void SubModelsDialog::ApplySubmodelName()
      ValidateWindow();
  }
  
@@ -594,7 +594,7 @@ index 7a1ff3da7..fa8e0a87c 100644
  void SubModelsDialog::OnTextCtrl_NameText_KillFocus(wxFocusEvent& event)
  {
      ApplySubmodelName();
-@@ -2037,6 +2058,7 @@ void SubModelsDialog::ValidateWindow()
+@@ -2038,6 +2059,7 @@ void SubModelsDialog::ValidateWindow()
      {
          ListCtrl_SubModels->Disable();
          TextCtrl_Name->Disable();
@@ -602,7 +602,7 @@ index 7a1ff3da7..fa8e0a87c 100644
          DeleteButton->Disable();
          ButtonCopy->Disable();
          NodesGrid->Disable();
-@@ -2117,6 +2139,7 @@ void SubModelsDialog::ValidateWindow()
+@@ -2118,6 +2140,7 @@ void SubModelsDialog::ValidateWindow()
          {
              TypeNotebook->Enable();
              TextCtrl_Name->Enable();
@@ -610,7 +610,7 @@ index 7a1ff3da7..fa8e0a87c 100644
  
              int index = GetSelectedIndex();
              bool clash = false;
-@@ -2142,9 +2165,11 @@ void SubModelsDialog::ValidateWindow()
+@@ -2143,9 +2166,11 @@ void SubModelsDialog::ValidateWindow()
          {
              TypeNotebook->Disable();
              TextCtrl_Name->Disable();
@@ -622,7 +622,7 @@ index 7a1ff3da7..fa8e0a87c 100644
          DeleteButton->Disable();
          ButtonCopy->Disable();
          NodesGrid->Disable();
-@@ -2179,6 +2204,7 @@ void SubModelsDialog::Select(const wxString &name)
+@@ -2180,6 +2205,7 @@ void SubModelsDialog::Select(const wxString &name)
  
      ListCtrl_SubModels->EnsureVisible(idx);
      TextCtrl_Name->SetValue(name);
@@ -630,7 +630,7 @@ index 7a1ff3da7..fa8e0a87c 100644
  
      if (sm->isRanges) {
          TypeNotebook->SetSelection(0);
-@@ -3223,6 +3249,7 @@ void SubModelsDialog::ReadSubModelXML(wxXmlNode* xmlData)
+@@ -3224,6 +3250,7 @@ void SubModelsDialog::ReadSubModelXML(wxXmlNode* xmlData)
              SubModelInfo *sm = new SubModelInfo(name);
              sm->name = name;
              sm->oldName = name;
@@ -638,7 +638,7 @@ index 7a1ff3da7..fa8e0a87c 100644
              sm->isRanges = child->GetAttribute("type", "ranges") == "ranges";
              sm->vertical = child->GetAttribute("layout") == "vertical";
              sm->subBuffer = child->GetAttribute("subBuffer");
-@@ -3543,6 +3570,7 @@ void SubModelsDialog::ImportCustomModel(std::string filename)
+@@ -3532,6 +3559,7 @@ void SubModelsDialog::ImportCustomModel(std::string filename)
                          {
                              auto smname = n->GetAttribute("name");
                              SubModelInfo* sm2 = new SubModelInfo(name + "-" + smname);
@@ -686,7 +686,7 @@ index 4d62922c6..fc707e7da 100644
      void ValidateWindow();
      void Select(const wxString &name);
 diff --git a/xLights/models/Model.cpp b/xLights/models/Model.cpp
-index 24c7922c2..afb557924 100644
+index 9d68f6e6d..2b7b5fe58 100644
 --- a/xLights/models/Model.cpp
 +++ b/xLights/models/Model.cpp
 @@ -2557,6 +2557,7 @@ void Model::ParseStateInfo(wxXmlNode* f, FaceStateData& stateInfo) {

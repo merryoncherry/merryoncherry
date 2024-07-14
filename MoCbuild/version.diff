@@ -35,18 +35,6 @@ index d3e49ad23..0a1226dda 100644
  
      bool rc = true;
      std::string filename;
-diff --git a/xLights/SpecialOptions.h b/xLights/SpecialOptions.h
-index 95a627187..9afac308e 100644
---- a/xLights/SpecialOptions.h
-+++ b/xLights/SpecialOptions.h
-@@ -12,7 +12,6 @@
- 
- #include <string>
- 
--
- // Special options are read from an xml file in the show folder
- // its use is for options we want the user to be able to set when required but not common enough to put in the UI
- 
 diff --git a/xLights/TipOfTheDayDialog.cpp b/xLights/TipOfTheDayDialog.cpp
 index 2175f9320..2bf7f43e7 100644
 --- a/xLights/TipOfTheDayDialog.cpp
