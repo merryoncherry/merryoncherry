@@ -1,5 +1,5 @@
 diff --git a/xLights/PixelBuffer.cpp b/xLights/PixelBuffer.cpp
-index 57744ea19..09ee818fe 100644
+index a07a79b50..bb5eeee69 100644
 --- a/xLights/PixelBuffer.cpp
 +++ b/xLights/PixelBuffer.cpp
 @@ -3060,11 +3060,13 @@ void PixelBufferClass::CalcOutput(int EffectPeriod, const std::vector<bool>& val
@@ -18,7 +18,7 @@ index 57744ea19..09ee818fe 100644
          sparkles = &sparklesVector[0];
      }
 diff --git a/xLights/RenderBuffer.cpp b/xLights/RenderBuffer.cpp
-index d163e26c4..5efba7b7e 100644
+index d4b6e82d2..942db7ae6 100644
 --- a/xLights/RenderBuffer.cpp
 +++ b/xLights/RenderBuffer.cpp
 @@ -876,36 +876,11 @@ float RenderBuffer::cos(float rad)
@@ -59,10 +59,10 @@ index d163e26c4..5efba7b7e 100644
  uint8_t RenderBuffer::ChannelBlend(uint8_t c1, uint8_t c2, float ratio)
  {
 diff --git a/xLights/RenderBuffer.h b/xLights/RenderBuffer.h
-index bd18a755c..0a3d376ee 100644
+index 33c7f171e..fdabc10e4 100644
 --- a/xLights/RenderBuffer.h
 +++ b/xLights/RenderBuffer.h
-@@ -441,6 +441,198 @@ public:
+@@ -442,6 +442,198 @@ public:
  	virtual ~EffectRenderCache();
  };
  
@@ -261,7 +261,7 @@ index bd18a755c..0a3d376ee 100644
  class /*NCCDLLEXPORT*/ RenderBuffer {
  public:
      RenderBuffer(xLightsFrame *frame, PixelBufferClass *pbc, const Model *m);
-@@ -521,7 +713,6 @@ public:
+@@ -522,7 +714,6 @@ public:
      void Get2ColorAlphaBlend(const xlColor& c1, const xlColor& c2, float ratio, xlColor &color);
      void GetMultiColorBlend(float n, bool circular, xlColor &color, int reserveColors = 0);
      void SetRangeColor(const HSVValue& hsv1, const HSVValue& hsv2, HSVValue& newhsv);
@@ -270,23 +270,24 @@ index bd18a755c..0a3d376ee 100644
      const PaletteClass& GetPalette() const { return palette; }
  
 diff --git a/xLights/UtilFunctions.cpp b/xLights/UtilFunctions.cpp
-index ff124c6e0..30ae077c9 100644
+index 42dd7d809..87071e694 100644
 --- a/xLights/UtilFunctions.cpp
 +++ b/xLights/UtilFunctions.cpp
-@@ -933,13 +933,6 @@ std::string BeforeInt(std::string& s)
+@@ -841,14 +841,6 @@ std::string BeforeInt(std::string& s) {
      return res;
  }
  
 -int intRand(const int& min, const int& max) {
 -    static thread_local std::mt19937* generator = nullptr;
--    if (!generator) generator = new std::mt19937(clock() + std::hash<std::thread::id>{}(std::this_thread::get_id()));
+-    if (!generator)
+-        generator = new std::mt19937(clock() + std::hash<std::thread::id>{}(std::this_thread::get_id()));
 -    std::uniform_int_distribution<int> distribution(min, max);
 -    return distribution(*generator);
 -}
 -
  // Extract any leading number ... strip it from the input string
- int ExtractInt(std::string& s)
- {
+ int ExtractInt(std::string& s) {
+     size_t i = 0;
 diff --git a/xLights/UtilFunctions.h b/xLights/UtilFunctions.h
 index d74e96774..0a4d8c432 100644
 --- a/xLights/UtilFunctions.h
@@ -300,10 +301,10 @@ index d74e96774..0a4d8c432 100644
  void SaveInt(const std::string& tag, int value);
  int LoadInt(const std::string& tag, int defaultValue);
 diff --git a/xLights/ValueCurve.h b/xLights/ValueCurve.h
-index 9e736625b..2cd87d352 100644
+index 55dcf5dd3..42518b290 100644
 --- a/xLights/ValueCurve.h
 +++ b/xLights/ValueCurve.h
-@@ -148,9 +148,15 @@ public:
+@@ -150,9 +150,15 @@ public:
      float GetOutputValueAtDivided(float offset, long startMS, long endMS);
      float GetMaxValueDivided();
      float GetScaledValue(float offset) const;
@@ -1531,7 +1532,7 @@ index 9815e25e9..522a4ce37 100644
  class RenderableEffect
  {
 diff --git a/xLights/effects/ShaderEffect.cpp b/xLights/effects/ShaderEffect.cpp
-index 1329f66cc..3743904af 100644
+index 1cef09a61..ef30c39a4 100644
 --- a/xLights/effects/ShaderEffect.cpp
 +++ b/xLights/effects/ShaderEffect.cpp
 @@ -1193,8 +1193,15 @@ void ShaderEffect::Render(Effect* eff, const SettingsMap& SettingsMap, RenderBuf
@@ -2527,10 +2528,10 @@ index 3fb0c3829..5f88a6e7a 100644
          }
          int i7 = strobe[x].duration;
 diff --git a/xLights/effects/VUMeterEffect.cpp b/xLights/effects/VUMeterEffect.cpp
-index c1d1eddc6..8b4a8bcd8 100644
+index a3f00b03c..15a8b8979 100644
 --- a/xLights/effects/VUMeterEffect.cpp
 +++ b/xLights/effects/VUMeterEffect.cpp
-@@ -322,7 +322,7 @@ void VUMeterEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Rende
+@@ -320,7 +320,7 @@ void VUMeterEffect::Render(Effect* effect, const SettingsMap& SettingsMap, Rende
             SettingsMap.Get("FILEPICKERCTRL_SVGFile", ""));
  }
  
@@ -2539,7 +2540,7 @@ index c1d1eddc6..8b4a8bcd8 100644
  {
  
  public:
-@@ -535,6 +535,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
+@@ -533,6 +533,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
  	if (cache == nullptr) {
  		cache = new VUMeterRenderCache();
  		buffer.infoCache[id] = cache;
@@ -2547,7 +2548,7 @@ index c1d1eddc6..8b4a8bcd8 100644
  	}
  	std::list<int>& _timingmarks = cache->_timingmarks;
  	int &_lasttimingmark = cache->_lasttimingmark;
-@@ -550,6 +551,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
+@@ -548,6 +549,7 @@ void VUMeterEffect::Render(RenderBuffer &buffer, SequenceElements *elements, int
  	if (buffer.needToInit)
  	{
          buffer.needToInit = false;
@@ -2555,7 +2556,7 @@ index c1d1eddc6..8b4a8bcd8 100644
          _lineHistory.clear();
          _nCount = 0;
          _colourindex = -1;
-@@ -2872,9 +2874,10 @@ void VUMeterEffect::RenderLevelBarFrame(RenderBuffer &buffer, int bars, int sens
+@@ -2843,9 +2845,10 @@ void VUMeterEffect::RenderLevelBarFrame(RenderBuffer &buffer, int bars, int sens
              }
  
              if (random && bars > 2) {
@@ -2567,7 +2568,7 @@ index c1d1eddc6..8b4a8bcd8 100644
                  }
                  if (lastbar > bars) lastbar = 1;
              }
-@@ -2914,9 +2917,10 @@ void VUMeterEffect::RenderTimingEventBarFrame(RenderBuffer& buffer, int bars, st
+@@ -2885,9 +2888,10 @@ void VUMeterEffect::RenderTimingEventBarFrame(RenderBuffer& buffer, int bars, st
              }
  
              if (random && bars > 2) {
@@ -2579,7 +2580,7 @@ index c1d1eddc6..8b4a8bcd8 100644
                  }
                  if (lastbar > bars)
                      lastbar = 1;
-@@ -3004,9 +3008,10 @@ void VUMeterEffect::RenderNoteLevelBarFrame(RenderBuffer& buffer, int bars, int
+@@ -2975,9 +2979,10 @@ void VUMeterEffect::RenderNoteLevelBarFrame(RenderBuffer& buffer, int bars, int
              }
  
              if (random && bars > 2) {

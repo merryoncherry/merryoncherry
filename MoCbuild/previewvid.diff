@@ -1,8 +1,8 @@
 diff --git a/xLights/LayoutPanel.cpp b/xLights/LayoutPanel.cpp
-index 96453a441..bef0120f5 100644
+index 00c72ae36..8bb50a71d 100644
 --- a/xLights/LayoutPanel.cpp
 +++ b/xLights/LayoutPanel.cpp
-@@ -477,7 +477,15 @@ LayoutPanel::LayoutPanel(wxWindow* parent, xLightsFrame *xl, wxPanel* sequencer)
+@@ -478,7 +478,15 @@ LayoutPanel::LayoutPanel(wxWindow* parent, xLightsFrame *xl, wxPanel* sequencer)
      wxConfigBase* config = wxConfigBase::Get();
      int msp = config->Read("LayoutModelSplitterSash", -1);
      int sp = config->Read("LayoutMainSplitterSash", -1);
@@ -20,10 +20,10 @@ index 96453a441..bef0120f5 100644
  
      CheckBox_3D->SetValue(is_3d);
 diff --git a/xLights/TabSequence.cpp b/xLights/TabSequence.cpp
-index 8cc42ed26..64e6656f3 100644
+index 0870c326a..ca474384e 100644
 --- a/xLights/TabSequence.cpp
 +++ b/xLights/TabSequence.cpp
-@@ -1158,10 +1158,11 @@ void xLightsFrame::OpenAndCheckSequence(const wxArrayString& origFilenames, bool
+@@ -1172,10 +1172,11 @@ void xLightsFrame::OpenAndCheckSequence(const wxArrayString& origFilenames, bool
  
  void xLightsFrame::OpenRenderAndSaveSequencesF(const wxArrayString& origFileNames, int flags)
  {
@@ -37,7 +37,7 @@ index 8cc42ed26..64e6656f3 100644
      static log4cpp::Category &logger_base = log4cpp::Category::getInstance(std::string("log_base"));
  
      if (origFilenames.IsEmpty()) {
-@@ -1234,7 +1235,7 @@ void xLightsFrame::OpenRenderAndSaveSequences(const wxArrayString &origFilenames
+@@ -1248,7 +1249,7 @@ void xLightsFrame::OpenRenderAndSaveSequences(const wxArrayString &origFilenames
      RenderIseqData(true, nullptr); // render ISEQ layers below the Nutcracker layer
      logger_base.info("   iseq below effects done.");
      ProgressBar->SetValue(10);
@@ -46,7 +46,7 @@ index 8cc42ed26..64e6656f3 100644
          static log4cpp::Category &logger_base = log4cpp::Category::getInstance(std::string("log_base"));
          logger_base.info("   Effects done.");
          ProgressBar->SetValue(90);
-@@ -1259,12 +1260,18 @@ void xLightsFrame::OpenRenderAndSaveSequences(const wxArrayString &origFilenames
+@@ -1273,12 +1274,18 @@ void xLightsFrame::OpenRenderAndSaveSequences(const wxArrayString &origFilenames
              mSavedChangeCount = _sequenceElements.GetChangeCount();
              mLastAutosaveCount = mSavedChangeCount;
  
@@ -67,10 +67,10 @@ index 8cc42ed26..64e6656f3 100644
      } );
  }
 diff --git a/xLights/UtilFunctions.cpp b/xLights/UtilFunctions.cpp
-index ff124c6e0..538a346b0 100644
+index 42dd7d809..ea9cb9b03 100644
 --- a/xLights/UtilFunctions.cpp
 +++ b/xLights/UtilFunctions.cpp
-@@ -64,13 +64,21 @@
+@@ -63,32 +63,49 @@
  #define thread_local __thread
  #endif
  
@@ -80,10 +80,9 @@ index ff124c6e0..538a346b0 100644
 +{
 +    popupsDisabled = true;
 +}
- 
- void DisplayError(const std::string& err, wxWindow* win)
- {
-     static log4cpp::Category &logger_base = log4cpp::Category::getInstance(std::string("log_base"));
++
+ void DisplayError(const std::string& err, wxWindow* win) {
+     static log4cpp::Category& logger_base = log4cpp::Category::getInstance(std::string("log_base"));
  
      logger_base.error("DisplayError: %s", (const char*)err.c_str());
 -    wxMessageBox(err, "Error", wxICON_ERROR | wxOK, win);
@@ -92,9 +91,8 @@ index ff124c6e0..538a346b0 100644
 +    }
  }
  
- void DisplayWarning(const std::string& warn, wxWindow* win)
-@@ -78,7 +86,9 @@ void DisplayWarning(const std::string& warn, wxWindow* win)
-     static log4cpp::Category &logger_base = log4cpp::Category::getInstance(std::string("log_base"));
+ void DisplayWarning(const std::string& warn, wxWindow* win) {
+     static log4cpp::Category& logger_base = log4cpp::Category::getInstance(std::string("log_base"));
  
      logger_base.warn("DisplayWarning: %s", (const char*)warn.c_str());
 -    wxMessageBox(warn, "Warning", wxICON_WARNING | wxOK, win);
@@ -103,9 +101,8 @@ index ff124c6e0..538a346b0 100644
 +    }
  }
  
- void DisplayInfo(const std::string& info, wxWindow* win)
-@@ -86,7 +96,10 @@ void DisplayInfo(const std::string& info, wxWindow* win)
-     static log4cpp::Category &logger_base = log4cpp::Category::getInstance(std::string("log_base"));
+ void DisplayInfo(const std::string& info, wxWindow* win) {
+     static log4cpp::Category& logger_base = log4cpp::Category::getInstance(std::string("log_base"));
  
      logger_base.info("DisplayInfo: %s", (const char*)info.c_str());
 -    wxMessageBox(info, "Information", wxICON_INFORMATION | wxOK, win);
@@ -115,9 +112,8 @@ index ff124c6e0..538a346b0 100644
 +    }
  }
  
- void DisplayCrit(const std::string& crit, wxWindow* win)
-@@ -94,7 +107,10 @@ void DisplayCrit(const std::string& crit, wxWindow* win)
-     static log4cpp::Category &logger_base = log4cpp::Category::getInstance(std::string("log_base"));
+ void DisplayCrit(const std::string& crit, wxWindow* win) {
+     static log4cpp::Category& logger_base = log4cpp::Category::getInstance(std::string("log_base"));
  
      logger_base.crit("DisplayCrit: %s", (const char*)crit.c_str());
 -    wxMessageBox(crit, "CRITICAL", wxICON_ERROR | wxOK, win);
@@ -127,7 +123,7 @@ index ff124c6e0..538a346b0 100644
 +    }
  }
  
- std::string DecodeIPError(wxSocketError err)
+ std::string DecodeIPError(wxSocketError err) {
 diff --git a/xLights/UtilFunctions.h b/xLights/UtilFunctions.h
 index d74e96774..add89e1cb 100644
 --- a/xLights/UtilFunctions.h
@@ -248,10 +244,10 @@ index 8caae1454..10e98047b 100644
  
  #ifdef __WXOSX__
 diff --git a/xLights/xLightsApp.cpp b/xLights/xLightsApp.cpp
-index 5de9e80ed..931204915 100644
+index ceea53d5f..1c000a5c0 100644
 --- a/xLights/xLightsApp.cpp
 +++ b/xLights/xLightsApp.cpp
-@@ -529,6 +529,9 @@ bool xLightsApp::OnInit()
+@@ -528,6 +528,9 @@ bool xLightsApp::OnInit()
      {
          { wxCMD_LINE_SWITCH, "h", "help", "displays help on the command line parameters", wxCMD_LINE_VAL_NONE, wxCMD_LINE_OPTION_HELP },
          { wxCMD_LINE_SWITCH, "r", "render", "render files and exit"},
@@ -261,7 +257,7 @@ index 5de9e80ed..931204915 100644
          { wxCMD_LINE_SWITCH, "cs", "checksequence", "run check sequence and exit" },
          { wxCMD_LINE_OPTION, "m", "media", "specify media directory"},
          { wxCMD_LINE_OPTION, "s", "show", "specify show directory" },
-@@ -606,6 +609,7 @@ bool xLightsApp::OnInit()
+@@ -605,6 +608,7 @@ bool xLightsApp::OnInit()
  #endif
  
      int ab = 0;
@@ -269,7 +265,7 @@ index 5de9e80ed..931204915 100644
      std::string readOnlyZipFile = "";
  
      wxCmdLineParser parser(cmdLineDesc, argc, argv);
-@@ -633,6 +637,13 @@ bool xLightsApp::OnInit()
+@@ -632,6 +636,13 @@ bool xLightsApp::OnInit()
              ab = 2;
          }
  
@@ -283,7 +279,7 @@ index 5de9e80ed..931204915 100644
          if (parser.Found("m", &mediaDir)) {
              logger_base.info("-m: Media directory set to %s.", (const char *)mediaDir.c_str());
              info += _("Setting media directory to ") + mediaDir + "\n";
-@@ -683,6 +694,7 @@ bool xLightsApp::OnInit()
+@@ -682,6 +693,7 @@ bool xLightsApp::OnInit()
      if (readOnlyZipFile == "" &&  parser.Found("r")) {
          logger_base.info("-r: Render mode is ON");
          renderOnlyMode = true;
@@ -291,7 +287,7 @@ index 5de9e80ed..931204915 100644
      }
  
      wxFileName xsqFile;
-@@ -720,7 +732,7 @@ bool xLightsApp::OnInit()
+@@ -719,7 +731,7 @@ bool xLightsApp::OnInit()
      BitmapCache::SetupArtProvider();
      if (wxsOK)
      {
@@ -300,7 +296,7 @@ index 5de9e80ed..931204915 100644
          if (Frame->CurrentDir == "") {
              logger_base.info("Show directory not set");
          }
-@@ -733,7 +745,8 @@ bool xLightsApp::OnInit()
+@@ -732,7 +744,8 @@ bool xLightsApp::OnInit()
      __frame = topFrame;
  
      if (renderOnlyMode) {
@@ -311,7 +307,7 @@ index 5de9e80ed..931204915 100644
  
      if (readOnlyZipFile != "") {
 diff --git a/xLights/xLightsMain.cpp b/xLights/xLightsMain.cpp
-index 0937765e9..7a356d5ac 100644
+index 8b47ff2b7..fed28e027 100644
 --- a/xLights/xLightsMain.cpp
 +++ b/xLights/xLightsMain.cpp
 @@ -590,14 +590,15 @@ xLightsFrame *xLightsFrame::GetFrame() {
@@ -332,7 +328,7 @@ index 0937765e9..7a356d5ac 100644
  {
      static log4cpp::Category& logger_base = log4cpp::Category::getInstance(std::string("log_base"));
      logger_base.debug("xLightsFrame being constructed.");
-@@ -3329,8 +3330,10 @@ void xLightsFrame::OnMenuItem_File_Export_VideoSelected(wxCommandEvent& event)
+@@ -3339,8 +3340,10 @@ void xLightsFrame::OnMenuItem_File_Export_VideoSelected(wxCommandEvent& event)
      ExportVideoPreview(pExportDlg.GetPath());
  }
  
@@ -344,7 +340,7 @@ index 0937765e9..7a356d5ac 100644
      int frameCount = _seqData.NumFrames();
  
      if (CurrentSeqXmlFile == nullptr || frameCount == 0) {
-@@ -3357,7 +3360,6 @@ bool xLightsFrame::ExportVideoPreview(wxString const& path)
+@@ -3367,7 +3370,6 @@ bool xLightsFrame::ExportVideoPreview(wxString const& path)
  
      wxStopWatch sw;
  
@@ -352,7 +348,7 @@ index 0937765e9..7a356d5ac 100644
      logger_base.debug("Writing house-preview video to %s.", (const char*)path.c_str());
  
      int width = housePreview->getWidth();
-@@ -3409,7 +3411,9 @@ bool xLightsFrame::ExportVideoPreview(wxString const& path)
+@@ -3419,7 +3421,9 @@ bool xLightsFrame::ExportVideoPreview(wxString const& path)
          };
          videoExporter.setGetVideoCallback(videoLambda);
  
@@ -364,7 +360,7 @@ index 0937765e9..7a356d5ac 100644
          emsg = (const char*)re.what();
          logger_base.error("Error exporting video : %s", (const char*)re.what());
 diff --git a/xLights/xLightsMain.h b/xLights/xLightsMain.h
-index fc85110cc..9c160ae21 100644
+index d7ef4008e..35b9a6d68 100644
 --- a/xLights/xLightsMain.h
 +++ b/xLights/xLightsMain.h
 @@ -286,7 +286,7 @@ class xLightsFrame: public xlFrame
@@ -385,7 +381,7 @@ index fc85110cc..9c160ae21 100644
  
  	void SetAudioControls();
      void ImportXLights(const wxFileName &filename, std::string const& mapFile = std::string());
-@@ -1428,7 +1428,8 @@ public:
+@@ -1429,7 +1429,8 @@ public:
      unsigned int modelsChangeCount;
      bool _renderMode = false;
      bool _checkSequenceMode = false;
@@ -395,7 +391,7 @@ index fc85110cc..9c160ae21 100644
      void SuspendAutoSave(bool dosuspend) { _suspendAutoSave = dosuspend; }
      void ClearLastPeriod();
      void WriteVirFile(const wxString& filename, long numChans, unsigned int startFrame, unsigned int endFrame, SeqDataType *dataBuf); //       Vixen *.vir
-@@ -1541,8 +1542,9 @@ protected:
+@@ -1542,8 +1543,9 @@ protected:
      void CreateMissingDirectories(wxString targetDirName, wxString lastCreatedDirectory, std::string& errors);
      static constexpr int RENDER_EXIT_ON_DONE = 1;
      static constexpr int RENDER_ALREADY_RETRIED = 2;
@@ -406,16 +402,3 @@ index fc85110cc..9c160ae21 100644
      void OpenAndCheckSequence(const wxArrayString& origFilenames, bool exitOnDone);
      std::string OpenAndCheckSequence(const std::string& origFilenames);
      void AddAllModelsToSequence();
-diff --git a/xSchedule/PlayList/PlayList.cpp b/xSchedule/PlayList/PlayList.cpp
-index a4fd118cd..5a8d519e2 100644
---- a/xSchedule/PlayList/PlayList.cpp
-+++ b/xSchedule/PlayList/PlayList.cpp
-@@ -682,7 +682,7 @@ void PlayList::Start(bool loop, bool random, int loops, const std::string& step)
-         static log4cpp::Category &logger_base = log4cpp::Category::getInstance(std::string("log_base"));
-         logger_base.info("******** Playlist %s starting to play.", (const char*)GetName().c_str());
-         logger_base.info("********     %s %s %s",
--            (const char*)(_looping ? wxString::Format("LOOPING%s" , (_loops > 0 ? wxString::Format(" Loops %d", _loops) : wxString(""))).c_str() : ""),
-+            (const char*)(_looping ? (wxString("LOOPING") + (_loops > 0 ? wxString::Format(" Loops %d", _loops) : wxString(""))).c_str() : wxString("").c_str()),
-             (const char*)(IsRandom() ? "RANDOM" : ""),
-             (const char*)(step == "" ? step.c_str() : wxString::Format("Step: %s", step).c_str())
-         );

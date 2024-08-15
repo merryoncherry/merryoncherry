@@ -686,10 +686,10 @@ index 4d62922c6..fc707e7da 100644
      void ValidateWindow();
      void Select(const wxString &name);
 diff --git a/xLights/models/Model.cpp b/xLights/models/Model.cpp
-index 9d68f6e6d..2b7b5fe58 100644
+index dadf7dc22..1c223c006 100644
 --- a/xLights/models/Model.cpp
 +++ b/xLights/models/Model.cpp
-@@ -2557,6 +2557,7 @@ void Model::ParseStateInfo(wxXmlNode* f, FaceStateData& stateInfo) {
+@@ -2588,6 +2588,7 @@ void Model::ParseStateInfo(wxXmlNode* f, FaceStateData& stateInfo) {
      wxXmlAttribute* att = f->GetAttributes();
      while (att != nullptr) {
          if (att->GetName() != "Name") {
