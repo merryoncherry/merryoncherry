@@ -10,27 +10,8 @@
   <Controller Id="1" Name="HP12V_Lab" Description="" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.10" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ComPort="192.168.25.10" BaudRate="1000" NetworkType="E131" MaxChannels="510"/>
   </Controller>
-  <Controller Id="1" Name="LRRO12_Porch" Description="HinksPro LRR Only Porch Roof" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.160" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
-    <network ComPort="192.168.25.160" BaudRate="16000" NetworkType="E131" MaxChannels="510"/>
-    <network ComPort="192.168.25.160" BaudRate="16001" NetworkType="E131" MaxChannels="138"/>
-    <network ComPort="192.168.25.160" BaudRate="16002" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.160" BaudRate="16003" NetworkType="E131" MaxChannels="90"/>
-    <network ComPort="192.168.25.160" BaudRate="16004" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.160" BaudRate="16005" NetworkType="E131" MaxChannels="90"/>
-    <network ComPort="192.168.25.160" BaudRate="16006" NetworkType="E131" MaxChannels="84"/>
-    <network ComPort="192.168.25.160" BaudRate="16007" NetworkType="E131" MaxChannels="510"/>
-    <network ComPort="192.168.25.160" BaudRate="16008" NetworkType="E131" MaxChannels="138"/>
-    <network ComPort="192.168.25.160" BaudRate="16009" NetworkType="E131" MaxChannels="360"/>
-    <network ComPort="192.168.25.160" BaudRate="16010" NetworkType="E131" MaxChannels="180"/>
-    <network ComPort="192.168.25.160" BaudRate="16011" NetworkType="E131" MaxChannels="180"/>
-    <network ComPort="192.168.25.160" BaudRate="16012" NetworkType="E131" MaxChannels="360"/>
-    <network ComPort="192.168.25.160" BaudRate="16013" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.160" BaudRate="16014" NetworkType="E131" MaxChannels="90"/>
-    <network ComPort="192.168.25.160" BaudRate="16015" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.160" BaudRate="16016" NetworkType="E131" MaxChannels="90"/>
-    <network ComPort="192.168.25.160" BaudRate="16017" NetworkType="E131" MaxChannels="84"/>
-    <network ComPort="192.168.25.160" BaudRate="16018" NetworkType="E131" MaxChannels="120"/>
-    <network ComPort="192.168.25.160" BaudRate="16019" NetworkType="E131" MaxChannels="60"/>
+  <Controller Id="1" Name="LRRO12_Porch" Description="HinksPro LRR Only Porch Roof" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Inactive" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.160" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
+    <network ComPort="192.168.25.160" BaudRate="16000" NetworkType="E131" MaxChannels="60"/>
   </Controller>
   <Controller Id="-1" Name="HP12V32_PorchRoof" Description="HinksPro 12V 32 4 Porch Roof" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.30" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
     <network ComPort="192.168.25.30" BaudRate="3000" NetworkType="E131" MaxChannels="510"/>
@@ -115,7 +96,7 @@
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.137" BaudRate="13700" NetworkType="DDP" MaxChannels="13353"/>
   </Controller>
   <Controller Id="13900" Name="Wally16_EastSide" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.139" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.139" BaudRate="13900" NetworkType="DDP" MaxChannels="1"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.139" BaudRate="13900" NetworkType="DDP" MaxChannels="3324"/>
   </Controller>
   <Controller Id="1" Name="HP12V32_WSide" Description="HinksPro 12V 32 4 West House Wall" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.90" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
     <network ComPort="192.168.25.90" BaudRate="9000" NetworkType="E131" MaxChannels="300"/>
