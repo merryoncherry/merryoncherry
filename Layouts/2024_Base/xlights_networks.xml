@@ -81,10 +81,10 @@
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.129" BaudRate="12900" NetworkType="DDP" MaxChannels="9801"/>
   </Controller>
   <Controller Id="13000" Name="Wally16_Porch_W_M" Description="16 port Wally Scott Front Porch West" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.130" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.130" BaudRate="13000" NetworkType="DDP" MaxChannels="10911"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.130" BaudRate="13000" NetworkType="DDP" MaxChannels="9951"/>
   </Controller>
   <Controller Id="13100" Name="Wally16_Porch_W_S" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.131" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.131" BaudRate="13100" NetworkType="DDP" MaxChannels="4362"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.131" BaudRate="13100" NetworkType="DDP" MaxChannels="5322"/>
   </Controller>
   <Controller Id="13300" Name="Wally16_Porch_S_W" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.133" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.133" BaudRate="13300" NetworkType="DDP" MaxChannels="4650"/>
@@ -171,21 +171,22 @@
     <network ComPort="192.168.25.90" BaudRate="9069" NetworkType="E131" MaxChannels="300"/>
     <network ComPort="192.168.25.90" BaudRate="9070" NetworkType="E131" MaxChannels="300"/>
     <network ComPort="192.168.25.90" BaudRate="9071" NetworkType="E131" MaxChannels="30"/>
-    <network ComPort="192.168.25.90" BaudRate="9072" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.90" BaudRate="9073" NetworkType="E131" MaxChannels="120"/>
-    <network ComPort="192.168.25.90" BaudRate="9074" NetworkType="E131" MaxChannels="240"/>
-    <network ComPort="192.168.25.90" BaudRate="9075" NetworkType="E131" MaxChannels="120"/>
-    <network ComPort="192.168.25.90" BaudRate="9076" NetworkType="E131" MaxChannels="300"/>
+    <network ComPort="192.168.25.90" BaudRate="9072" NetworkType="E131" MaxChannels="267"/>
+    <network ComPort="192.168.25.90" BaudRate="9073" NetworkType="E131" MaxChannels="60"/>
+    <network ComPort="192.168.25.90" BaudRate="9074" NetworkType="E131" MaxChannels="120"/>
+    <network ComPort="192.168.25.90" BaudRate="9075" NetworkType="E131" MaxChannels="240"/>
+    <network ComPort="192.168.25.90" BaudRate="9076" NetworkType="E131" MaxChannels="120"/>
     <network ComPort="192.168.25.90" BaudRate="9077" NetworkType="E131" MaxChannels="300"/>
     <network ComPort="192.168.25.90" BaudRate="9078" NetworkType="E131" MaxChannels="300"/>
     <network ComPort="192.168.25.90" BaudRate="9079" NetworkType="E131" MaxChannels="300"/>
-    <network ComPort="192.168.25.90" BaudRate="9080" NetworkType="E131" MaxChannels="84"/>
-    <network ComPort="192.168.25.90" BaudRate="9081" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.90" BaudRate="9082" NetworkType="E131" MaxChannels="90"/>
-    <network ComPort="192.168.25.90" BaudRate="9083" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.90" BaudRate="9084" NetworkType="E131" MaxChannels="90"/>
-    <network ComPort="192.168.25.90" BaudRate="9085" NetworkType="E131" MaxChannels="510"/>
-    <network ComPort="192.168.25.90" BaudRate="9086" NetworkType="E131" MaxChannels="138"/>
+    <network ComPort="192.168.25.90" BaudRate="9080" NetworkType="E131" MaxChannels="300"/>
+    <network ComPort="192.168.25.90" BaudRate="9081" NetworkType="E131" MaxChannels="84"/>
+    <network ComPort="192.168.25.90" BaudRate="9082" NetworkType="E131" MaxChannels="60"/>
+    <network ComPort="192.168.25.90" BaudRate="9083" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.90" BaudRate="9084" NetworkType="E131" MaxChannels="60"/>
+    <network ComPort="192.168.25.90" BaudRate="9085" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.90" BaudRate="9086" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.90" BaudRate="9087" NetworkType="E131" MaxChannels="138"/>
   </Controller>
   <Controller Id="15400" Name="Kulp12V16_BPorch" Description="Kulp 12V 16 by back porch" Type="Ethernet" Vendor="KulpLights" Model="K16A-B" Variant="No Expansion" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.154" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.154" BaudRate="15400" NetworkType="DDP" MaxChannels="8556"/>
