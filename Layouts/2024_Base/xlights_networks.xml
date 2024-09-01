@@ -392,6 +392,10 @@
     <network ComPort="192.168.25.50" BaudRate="5034" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.50" BaudRate="5035" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.50" BaudRate="5036" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.50" BaudRate="5037" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.50" BaudRate="5038" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.50" BaudRate="5039" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.50" BaudRate="5040" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="19200" Name="Experience16_FrontStair" Description="" Type="Ethernet" Vendor="Experience Lights" Model="Genius Pro 16 Port" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.192" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.192" BaudRate="19200" NetworkType="DDP" MaxChannels="7302"/>
@@ -527,13 +531,13 @@
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.134" BaudRate="13400" NetworkType="DDP" MaxChannels="13878"/>
   </Controller>
   <Controller Id="15000" Name="Kulp12V32_ArchR" Description="Kulp 32 A B Right of Drive" Type="Ethernet" Vendor="KulpLights" Model="K32A-B" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.150" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.150" BaudRate="15000" NetworkType="DDP" MaxChannels="16221"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.150" BaudRate="15000" NetworkType="DDP" MaxChannels="19941"/>
   </Controller>
   <Controller Id="15800" Name="K40DPB_Cubes" Description="K40D PB Cube Controller" Type="Ethernet" Vendor="KulpLights" Model="K40D-PB" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.158" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.158" BaudRate="15800" NetworkType="DDP" MaxChannels="25500"/>
   </Controller>
   <Controller Id="15400" Name="Kulp12V16_WalkL" Description="Kulp 12V 16 by front walk L" Type="Ethernet" Vendor="KulpLights" Model="K16A-B" Variant="No Expansion" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.154" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.154" BaudRate="15400" NetworkType="DDP" MaxChannels="3765"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.154" BaudRate="15400" NetworkType="DDP" MaxChannels="7977"/>
   </Controller>
   <Controller Id="15900" Name="Wally16_WalkR" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.159" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.159" BaudRate="15900" NetworkType="DDP" MaxChannels="1"/>
