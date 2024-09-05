@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Networks computer="MSI2" GlobalFPPProxy="" GlobalForceLocalIP="" AutoUpdateFromBase="0" BaseShowDir="">
   <suppressframes frames="20"/>
-  <Controller Id="1" Name="Falcon16_DMX" Description="" Type="Ethernet" Vendor="Falcon" Model="F16V4" Variant="16 Local Ports" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.5" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ComPort="192.168.25.5" BaudRate="500" NetworkType="E131" MaxChannels="510"/>
+  <Controller Id="1" Name="HP12V_Lab" Description="" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.10" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ComPort="192.168.25.10" BaudRate="1000" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="800" Name="Wally_Lab" Description="WB1616_12V_DMX Lab" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.8" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.8" BaudRate="800" NetworkType="DDP" MaxChannels="1"/>
   </Controller>
-  <Controller Id="1" Name="HP12V_Lab" Description="" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.10" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ComPort="192.168.25.10" BaudRate="1000" NetworkType="E131" MaxChannels="510"/>
+  <Controller Id="1" Name="Falcon16_DMX" Description="" Type="Ethernet" Vendor="Falcon" Model="F16V4" Variant="16 Local Ports" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.5" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ComPort="192.168.25.5" BaudRate="500" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="15200" Name="Kulp12V32_Attic" Description="Kulp Attic N" Type="Ethernet" Vendor="KulpLights" Model="K32A-B" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.152" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.152" BaudRate="15200" NetworkType="DDP" MaxChannels="11460"/>
@@ -351,7 +351,7 @@
     <network ComPort="192.168.25.90" BaudRate="9046" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.90" BaudRate="9047" NetworkType="E131" MaxChannels="138"/>
   </Controller>
-  <Controller Id="19100" Name="Experience16_SideStair" Description="" Type="Ethernet" Vendor="Experience Lights" Model="Genius Pro 16 Port" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.191" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+  <Controller Id="19100" Name="Experience16_SideStair" Description="" Type="Ethernet" Vendor="Experience Lights" Model="Genius Pixel 16" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.191" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.191" BaudRate="19100" NetworkType="DDP" MaxChannels="10893"/>
   </Controller>
   <Controller Id="1" Name="HP12V32_SWFrontYard" Description="32Port 4LR HP Front Yard Left SW" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.50" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
@@ -398,10 +398,10 @@
     <network ComPort="192.168.25.50" BaudRate="5040" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="19200" Name="Experience16_FrontStair" Description="" Type="Ethernet" Vendor="Experience Lights" Model="Genius Pro 16 Port" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.192" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.192" BaudRate="19200" NetworkType="DDP" MaxChannels="11616"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.192" BaudRate="19200" NetworkType="DDP" MaxChannels="5472"/>
   </Controller>
   <Controller Id="19400" Name="ExperienceLR_FrontTrees" Description="" Type="Ethernet" Vendor="Experience Lights" Model="Genius Long Range" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.194" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.194" BaudRate="19400" NetworkType="DDP" MaxChannels="19200"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.194" BaudRate="19400" NetworkType="DDP" MaxChannels="25344"/>
   </Controller>
   <Controller Id="1" Name="HP12V32_SEFrontYard" Description="HP 12V 32 4LRR East Front Yard" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.110" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
     <network ComPort="192.168.25.110" BaudRate="11000" NetworkType="E131" MaxChannels="510"/>
