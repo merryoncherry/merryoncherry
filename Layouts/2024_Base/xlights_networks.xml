@@ -65,7 +65,7 @@
     <network ComPort="192.168.25.180" BaudRate="18048" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.180" BaudRate="18049" NetworkType="E131" MaxChannels="60"/>
   </Controller>
-  <Controller Id="45" Name="HP12V48_AtticMatrix" Description="48 port strip matrix" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.100" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+  <Controller Id="45" Name="HP12V48_AtticMatrix" Description="48 port strip matrix" Type="Ethernet" Vendor="HinksPix" Model="PRO V3" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.100" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ComPort="192.168.25.100" BaudRate="10000" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.100" BaudRate="10001" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.100" BaudRate="10002" NetworkType="E131" MaxChannels="510"/>
@@ -548,7 +548,7 @@
   <Controller Id="15900" Name="Wally16_WalkR" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.159" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.159" BaudRate="15900" NetworkType="DDP" MaxChannels="12420"/>
   </Controller>
-  <Controller Id="1" Name="HP12V48_SEFrontYard" Description="HinksPro 12V 48" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.80" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+  <Controller Id="1" Name="HP12V48_SEFrontYard" Description="HinksPro 12V 48" Type="Ethernet" Vendor="HinksPix" Model="PRO V3" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.80" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ComPort="192.168.25.80" BaudRate="8000" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.80" BaudRate="8001" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.80" BaudRate="8002" NetworkType="E131" MaxChannels="510"/>
@@ -575,7 +575,7 @@
     <network ComPort="192.168.25.80" BaudRate="8023" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="19300" Name="Experience32_EYard" Description="" Type="Ethernet" Vendor="Experience Lights" Model="Genius Pro 32 Port" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.193" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.193" BaudRate="19300" NetworkType="DDP" MaxChannels="19227"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.193" BaudRate="19300" NetworkType="DDP" MaxChannels="25227"/>
   </Controller>
   <Controller Id="2" Name="Ap5V_EFenceTree" Description="Alphapix 5V Tree" Type="Ethernet" Vendor="HolidayCoro" Model="AlphaPix Flex" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.120" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ComPort="192.168.25.120" BaudRate="12000" NetworkType="E131" MaxChannels="510"/>
