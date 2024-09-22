@@ -152,7 +152,7 @@
     <network ComPort="192.168.25.100" BaudRate="10083" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.100" BaudRate="10084" NetworkType="E131" MaxChannels="510"/>
   </Controller>
-  <Controller Id="1" Name="HP12V48_Attic" Description="48 port props S wall" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.20" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+  <Controller Id="1" Name="HP12V48_Attic" Description="48 port props S wall" Type="Ethernet" Vendor="HinksPix" Model="PRO V3" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.20" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ComPort="192.168.25.20" BaudRate="2000" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.20" BaudRate="2001" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.20" BaudRate="2002" NetworkType="E131" MaxChannels="510"/>
