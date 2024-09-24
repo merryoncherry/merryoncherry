@@ -1,5 +1,5 @@
 false
-1851
+1856
 1_All Display
 1_All Display FPG
 1_All Display No Matrix
@@ -260,6 +260,7 @@ All Matrix Horiz VWire
 All Matrix House
 All Matrix House Except Main
 All Matrix House Flat
+All Matrix P5 Tomb
 All Matrix Post Even
 All Matrix Post Odd
 All Matrix Posts
@@ -623,6 +624,10 @@ Boscoyo_HiRes_Singing_Angry_Pumpkin
 Boscoyo_HiRes_Singing_Happy_Pumpkin_No3
 Boscoyo_HiRes_Singing_Pumpkin
 Boscoyo_HiRes_Singing_Pumpkin_Bow
+Boscoyo_Megastone_P5 1 Matrix
+Boscoyo_Megastone_P5 2 Matrix
+Boscoyo_Megastone_P5 3 Matrix
+Boscoyo_Megastone_P5 4 Matrix
 Crazy Kid 3
 Crazy kid 1
 Crazy kid 2
@@ -2111,6 +2116,7 @@ All Matrix Horiz VWire			All Matrix Horiz VWire	white
 All Matrix House			All Matrix House	white
 All Matrix House Except Main			All Matrix House Except Main	white
 All Matrix House Flat			All Matrix House Flat	white
+All Matrix P5 Tomb			All Mini-Matrix	white
 All Matrix Post Even			All Matrix Post Even	white
 All Matrix Post Odd			All Matrix Post Odd	white
 All Matrix Posts			All Matrix Posts	white
@@ -3337,6 +3343,10 @@ Boscoyo_HiRes_Singing_Pumpkin_Bow	MouthU		Boscoyo_HiRes_Singing_Pumpkin_Bow/Mout
 Boscoyo_HiRes_Singing_Pumpkin_Bow	MouthWQ		Boscoyo_HiRes_Singing_Pumpkin_Bow/MouthWQ	white
 Boscoyo_HiRes_Singing_Pumpkin_Bow	EyesOpen		Boscoyo_HiRes_Singing_Pumpkin_Bow/EyesOpen	white
 Boscoyo_HiRes_Singing_Pumpkin_Bow	EyesClosed		Boscoyo_HiRes_Singing_Pumpkin_Bow/EyesClosed	white
+Boscoyo_Megastone_P5 1 Matrix			Matrix KBR Window HD	white
+Boscoyo_Megastone_P5 2 Matrix			Matrix KBR Window HD	white
+Boscoyo_Megastone_P5 3 Matrix			Matrix KBR Window HD	white
+Boscoyo_Megastone_P5 4 Matrix			Matrix KBR Window HD	white
 Crazy Kid 3			Crazy Kid 3	white
 Crazy Kid 3	Bones Leg		Crazy Kid 3/Bones Leg	white
 Crazy Kid 3	Bones Shirt circles		Crazy Kid 3/Bones Shirt circles	white
