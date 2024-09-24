@@ -2339,6 +2339,9 @@ All Prop Outlines Xmas			All Prop Outlines Xmas	white
 All Props Layered			All Props Layered	white
 All Props Layered Minus Outer			All Props Layered Minus Outer	white
 All Props Layered Minus Outer Middle			All Props Layered Minus Outer Middle	white
+All RBLs Drive L			All Floods	white
+All RBLs Front			All Floods	white
+All RBLs Hedge			All Floods	white
 All Rings			All Rings	white
 All Roof			All Roof	white
 All Roof First Floor And Icicles			All Roof First Floor And Icicles	white
@@ -2379,6 +2382,7 @@ All Snowflakes Dedicated Spokes J			All Snowflakes Dedicated Spokes J	white
 All Snowflakes Dedicated Tips			All Snowflakes Dedicated Tips	white
 All Snowflakes Dedicated Yard			All Snowflakes Dedicated Yard	white
 All Snowflakes House			All Snowflakes House	white
+All Spider CCC			All Boscoyo Widow Spiders Reg	white
 All Spiders			All Spiders	white
 All Spiders Accents			All Spiders Accents	white
 All Spiders Bodies			All Spiders Bodies	white
@@ -2394,6 +2398,12 @@ All Spiders Boscoyo Widow Crawlies			All Spiders Boscoyo Widow Crawlies	white
 All Spiders Boscoyo Widow Eyes			All Spiders Boscoyo Widow Eyes	white
 All Spiders Boscoyo Widow Legs			All Spiders Boscoyo Widow Legs	white
 All Spiders Boscoyo Widow Mouths			All Spiders Boscoyo Widow Mouths	white
+All Spiders CCC Accent			All Spiders Boscoyo Widow Accents	white
+All Spiders CCC Body			All Spiders Boscoyo Widow Bodies	white
+All Spiders CCC Crawlies			All Spiders Boscoyo Mega Widow Crawlies	white
+All Spiders CCC Eyes			All Spiders Boscoyo Mega Widow Eyes	white
+All Spiders CCC Legs			All Spiders Boscoyo Widow Legs	white
+All Spiders CCC Mouth			All Spiders Boscoyo Widow Mouths	white
 All Spiders Crawlies			All Spiders Crawlies	white
 All Spiders Eyes			All Spiders Eyes	white
 All Spiders Left			All Spiders Left	white
@@ -2532,12 +2542,22 @@ All Vertical Strip House Upper			All Vertical Strip House Upper	white
 All Vertical Strip Lefts			All Vertical Strip Lefts	white
 All Vertical Strip Rights			All Vertical Strip Rights	white
 All Vertical Strip_GBP_minimalGrid4002D			All Vertical Strip_GBP_minimalGrid4002D	white
+All Web CCC			All Webs Corner	white
 All Webs			All Webs	white
 All Webs Arms			All Webs Arms	white
+All Webs CCC Outline			All Webs Rings Corner Outer	white
+All Webs CCC Rings			All Webs Rings Corner	white
+All Webs CCC Spokes			All Webs Spokes Corner	white
 All Webs Corner			All Webs Corner	white
 All Webs Fill			All Webs Fill	white
 All Webs Half			All Webs Half	white
 All Webs MOAW			All Webs MOAW	white
+All Webs MoC			All Webs MOAW	white
+All Webs MoC Alert			All Webs Spokes MOAW Odd	white
+All Webs MoC Rings			All Webs Rings MOAW	white
+All Webs MoC Spinner			All Webs Spinners MOA	white
+All Webs MoC Spokes			All Webs Spokes MOAW	white
+All Webs MoC Zigzag			All Webs Spokes MOAW Even	white
 All Webs Rings			All Webs Rings	white
 All Webs Rings Corner			All Webs Rings Corner	white
 All Webs Rings Corner BP S			All Webs Rings Corner BP S	white
@@ -2551,6 +2571,7 @@ All Webs Rings Half Landing			All Webs Rings Half Landing	white
 All Webs Rings Half Outer			All Webs Rings Half Outer	white
 All Webs Rings MOAW			All Webs Rings MOAW	white
 All Webs Rings MOAW Outer			All Webs Rings MOAW Outer	white
+All Webs Spinner			All Webs Spinners	white
 All Webs Spinners			All Webs Spinners	white
 All Webs Spinners Corner			All Webs Spinners Corner	white
 All Webs Spinners Half			All Webs Spinners Half	white
@@ -3518,6 +3539,13 @@ Boscoyo_Megastone_P5 1 Matrix			Matrix KBR Window HD	white
 Boscoyo_Megastone_P5 2 Matrix			Matrix KBR Window HD	white
 Boscoyo_Megastone_P5 3 Matrix			Matrix KBR Window HD	white
 Boscoyo_Megastone_P5 4 Matrix			Matrix KBR Window HD	white
+CCC 23 in spider L			Boscoyo Black widow spider L	white
+CCC 23 in spider R			Boscoyo Black widow spider R	white
+CCC Spider web 24in LL			GE Web Corner BP S	white
+CCC Spider web 24in LR			GE Web Corner FP W	white
+CCC Spider web 24in RL			GE Web Corner FP SW	white
+CCC Spider web 24in RR			GE Web Corner FP SE	white
+ChromaGlow Tombs			All Floods	white
 Crazy Kid 3			Crazy Kid 3	white
 Crazy Kid 3	Bones Leg		Crazy Kid 3/Bones Leg	white
 Crazy Kid 3	Bones Shirt circles		Crazy Kid 3/Bones Shirt circles	white
