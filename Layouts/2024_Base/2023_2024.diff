@@ -1,25 +1,3 @@
-0a1,5
-> 
-> > crazts@0.0.1 makefullxmap
-> > tsc && node --max-old-space-size=40960 dist/test/MakeFullXmap.js --source_show_folder c:\Users\Chuck\Documents\xlightsShows\2024_Halloween
-> 
-> Trying: c:\Users\Chuck\Documents\xlightsShows\2024_Halloween
-2c7
-< 1851
----
-> 2068
-73a79
-> All Arches Insane
-75a82,84
-> All Arches Mini
-> All Arches Peacock Inner
-> All Arches Peacock Single
-88a98
-> All Arches Strands Insane
-171a182
-> All Canes Insane
-172a184
-> All Canes NSR
 253a266,273
 > All Lamps EFL
 > All Lamps EFL BPT
@@ -40,11 +18,6 @@
 > All RBLs Drive L
 > All RBLs Front
 > All RBLs Hedge
-332a361
-> All Snowflakes Dedicated Arms EFL24
-335a365,366
-> All Snowflakes Dedicated Arms N
-> All Snowflakes Dedicated Arms Sarah
 354a386
 > All Spider CCC
 369a402,415
@@ -76,10 +49,6 @@
 > All Stars MiniMega Trees
 432a485
 > All Stars Peace Poles Insane
-436a490
-> All Stars Showstopper Mini
-438a493
-> All Stars SpiralX
 440a496
 > All Tombs Base
 452a509,510
@@ -88,15 +57,6 @@
 479a538,541
 > All Trees MiniMega
 > All Trees MiniMega with Stars
-> All Trees Showstopper
-> All Trees Showstopper With Stars
-484a547,552
-> All Trees Spiral SpiralX
-> All Trees Spiral SpiralX Balls
-> All Trees Spiral SpiralX Green
-> All Trees Spiral SpiralX Outline
-> All Trees Spiral SpiralX Spiral
-> All Trees Spiral SpiralX with Stars
 506a575
 > All Web CCC
 508a578,582
@@ -220,10 +180,6 @@
 > MegaMiniTree-L1
 > MegaMiniTree-L2
 > MoCWeb 2000
-1443a1623
-> PPD Wreath DiamondArms - Dazzler
-1445a1626
-> PPD Wreath DiamondArms - StarGazer
 1602a1784,1804
 > RBL Drive L 1
 > RBL Drive L 2
@@ -269,18 +225,6 @@
 > TreeMiniMega 2
 > TreeMiniMega 3
 > TreeMiniMega 4
-1924a2147
-> All Arches Insane			All Arches Insane	white
-1926a2150,2152
-> All Arches Mini			All Arches Mini	white
-> All Arches Peacock Inner			All Arches Peacock Inner	white
-> All Arches Peacock Single			All Arches Peacock Single	white
-1939a2166
-> All Arches Strands Insane			All Arches Strands Insane	white
-2022a2250
-> All Canes Insane			All Canes Insane	white
-2023a2252
-> All Canes NSR			All Canes NSR	white
 2104a2334,2341
 > All Lamps EFL			All Lamps EFL	white
 > All Lamps EFL BPT			All Lamps EFL BPT	white
@@ -301,11 +245,6 @@
 > All RBLs Drive L			All RBLs Drive L	white
 > All RBLs Front			All RBLs Front	white
 > All RBLs Hedge			All RBLs Hedge	white
-2183a2429
-> All Snowflakes Dedicated Arms EFL24			All Snowflakes Dedicated Arms EFL24	white
-2186a2433,2434
-> All Snowflakes Dedicated Arms N			All Snowflakes Dedicated Arms N	white
-> All Snowflakes Dedicated Arms Sarah			All Snowflakes Dedicated Arms Sarah	white
 2205a2454
 > All Spider CCC			All Spider CCC	white
 2220a2470,2483
@@ -339,8 +278,6 @@
 > All Stars Peace Poles Insane			All Stars Peace Poles Insane	white
 2287a2558
 > All Stars Showstopper Mini			All Stars Showstopper Mini	white
-2289a2561
-> All Stars SpiralX			All Stars SpiralX	white
 2291a2564
 > All Tombs Base			All Tombs Base	white
 2303a2577,2578
@@ -349,15 +286,6 @@
 2330a2606,2609
 > All Trees MiniMega			All Trees MiniMega	white
 > All Trees MiniMega with Stars			All Trees MiniMega with Stars	white
-> All Trees Showstopper			All Trees Showstopper	white
-> All Trees Showstopper With Stars			All Trees Showstopper With Stars	white
-2335a2615,2620
-> All Trees Spiral SpiralX			All Trees Spiral SpiralX	white
-> All Trees Spiral SpiralX Balls			All Trees Spiral SpiralX Balls	white
-> All Trees Spiral SpiralX Green			All Trees Spiral SpiralX Green	white
-> All Trees Spiral SpiralX Outline			All Trees Spiral SpiralX Outline	white
-> All Trees Spiral SpiralX Spiral			All Trees Spiral SpiralX Spiral	white
-> All Trees Spiral SpiralX with Stars			All Trees Spiral SpiralX with Stars	white
 2357a2643
 > All Web CCC			All Web CCC	white
 2359a2646,2650
@@ -876,10 +804,6 @@
 > GE Flying Bat Jr 4	Wing up		GE Flying Bat Jr 4/Wing up	white
 > GE Flying Bat Jr 4	Wing Down		GE Flying Bat Jr 4/Wing Down	white
 > GE Flying Bat Jr 4	EYES		GE Flying Bat Jr 4/EYES	white
-4716a5512
-> GE Insane Cane Candle GRP			GE Insane Cane Candle GRP	white
-4720a5517
-> GE Insane Cane Flame GRP			GE Insane Cane Flame GRP	white
 7407a8205,8999
 > GE Rosa Tomb - GRP			GE Rosa Tomb - GRP	white
 > GE Rosa Tomb 1			GE Rosa Tomb 1	white
@@ -1757,227 +1681,6 @@
 > MoCWeb 2000	ZigZag-08		MoCWeb 2000/ZigZag-08	white
 > MoCWeb 2000	ZigZag-09		MoCWeb 2000/ZigZag-09	white
 > MoCWeb 2000	ZigZag-10		MoCWeb 2000/ZigZag-10	white
-9287a10960,10972
-> PPD GE BOAW DR	Spokes		PPD GE BOAW DR/Spokes	white
-> PPD GE BOAW DR	Spokes (V)		PPD GE BOAW DR/Spokes (V)	white
-> PPD GE BOAW DR	Hooks CCW		PPD GE BOAW DR/Hooks CCW	white
-> PPD GE BOAW DR	Hooks CW		PPD GE BOAW DR/Hooks CW	white
-> PPD GE BOAW DR	Zig Zags		PPD GE BOAW DR/Zig Zags	white
-> PPD GE BOAW DR	Snowflake Spoke 01		PPD GE BOAW DR/Snowflake Spoke 01	white
-> PPD GE BOAW DR	Snowflake Spoke 02		PPD GE BOAW DR/Snowflake Spoke 02	white
-> PPD GE BOAW DR	Snowflake Spoke 03		PPD GE BOAW DR/Snowflake Spoke 03	white
-> PPD GE BOAW DR	Snowflake Spoke 04		PPD GE BOAW DR/Snowflake Spoke 04	white
-> PPD GE BOAW DR	Snowflake Spoke 05		PPD GE BOAW DR/Snowflake Spoke 05	white
-> PPD GE BOAW DR	Snowflake Spoke 06		PPD GE BOAW DR/Snowflake Spoke 06	white
-> PPD GE BOAW DR	Snowflake Spokes		PPD GE BOAW DR/Snowflake Spokes	white
-> PPD GE BOAW DR	Rings		PPD GE BOAW DR/Rings	white
-9650a11336,11348
-> PPD GE BOAW Land	Spokes		PPD GE BOAW Land/Spokes	white
-> PPD GE BOAW Land	Spokes (V)		PPD GE BOAW Land/Spokes (V)	white
-> PPD GE BOAW Land	Hooks CCW		PPD GE BOAW Land/Hooks CCW	white
-> PPD GE BOAW Land	Hooks CW		PPD GE BOAW Land/Hooks CW	white
-> PPD GE BOAW Land	Zig Zags		PPD GE BOAW Land/Zig Zags	white
-> PPD GE BOAW Land	Snowflake Spoke 01		PPD GE BOAW Land/Snowflake Spoke 01	white
-> PPD GE BOAW Land	Snowflake Spoke 02		PPD GE BOAW Land/Snowflake Spoke 02	white
-> PPD GE BOAW Land	Snowflake Spoke 03		PPD GE BOAW Land/Snowflake Spoke 03	white
-> PPD GE BOAW Land	Snowflake Spoke 04		PPD GE BOAW Land/Snowflake Spoke 04	white
-> PPD GE BOAW Land	Snowflake Spoke 05		PPD GE BOAW Land/Snowflake Spoke 05	white
-> PPD GE BOAW Land	Snowflake Spoke 06		PPD GE BOAW Land/Snowflake Spoke 06	white
-> PPD GE BOAW Land	Snowflake Spokes		PPD GE BOAW Land/Snowflake Spokes	white
-> PPD GE BOAW Land	Rings		PPD GE BOAW Land/Rings	white
-10051a11750,11754
-> PPD GE Baby Grand Illusion L	Snowflake Spokes		PPD GE Baby Grand Illusion L/Snowflake Spokes	white
-> PPD GE Baby Grand Illusion L	Hooks CCW		PPD GE Baby Grand Illusion L/Hooks CCW	white
-> PPD GE Baby Grand Illusion L	Hooks CW		PPD GE Baby Grand Illusion L/Hooks CW	white
-> PPD GE Baby Grand Illusion L	Spoke  (V)		PPD GE Baby Grand Illusion L/Spoke  (V)	white
-> PPD GE Baby Grand Illusion L	Rings		PPD GE Baby Grand Illusion L/Rings	white
-10452a12156,12160
-> PPD GE Baby Grand Illusion R	Snowflake Spokes		PPD GE Baby Grand Illusion R/Snowflake Spokes	white
-> PPD GE Baby Grand Illusion R	Hooks CCW		PPD GE Baby Grand Illusion R/Hooks CCW	white
-> PPD GE Baby Grand Illusion R	Hooks CW		PPD GE Baby Grand Illusion R/Hooks CW	white
-> PPD GE Baby Grand Illusion R	Spoke  (V)		PPD GE Baby Grand Illusion R/Spoke  (V)	white
-> PPD GE Baby Grand Illusion R	Rings		PPD GE Baby Grand Illusion R/Rings	white
-11412a13121,13130
-> PPD GE MOAW	Spokes		PPD GE MOAW/Spokes	white
-> PPD GE MOAW	Spokes (V)		PPD GE MOAW/Spokes (V)	white
-> PPD GE MOAW	Hooks CCW		PPD GE MOAW/Hooks CCW	white
-> PPD GE MOAW	Hooks CW		PPD GE MOAW/Hooks CW	white
-> PPD GE MOAW	Feathers		PPD GE MOAW/Feathers	white
-> PPD GE MOAW	Radiation Even		PPD GE MOAW/Radiation Even	white
-> PPD GE MOAW	Zig Zags		PPD GE MOAW/Zig Zags	white
-> PPD GE MOAW	Radiation Odd		PPD GE MOAW/Radiation Odd	white
-> PPD GE MOAW	Rings		PPD GE MOAW/Rings	white
-> PPD GE MOAW	Matrix		PPD GE MOAW/Matrix	white
-11899a13618,13661
-> PPD GE Rosa Grande	OuterBalls (V)		PPD GE Rosa Grande/OuterBalls (V)	white
-> PPD GE Rosa Grande	Peacock Feathers		PPD GE Rosa Grande/Peacock Feathers	white
-> PPD GE Rosa Grande	Cascade		PPD GE Rosa Grande/Cascade	white
-> PPD GE Rosa Grande	Cascade Odd		PPD GE Rosa Grande/Cascade Odd	white
-> PPD GE Rosa Grande	Cascade (V)		PPD GE Rosa Grande/Cascade (V)	white
-> PPD GE Rosa Grande	Cascade Even		PPD GE Rosa Grande/Cascade Even	white
-> PPD GE Rosa Grande	Burst		PPD GE Rosa Grande/Burst	white
-> PPD GE Rosa Grande	Burst Odd		PPD GE Rosa Grande/Burst Odd	white
-> PPD GE Rosa Grande	Burst Even		PPD GE Rosa Grande/Burst Even	white
-> PPD GE Rosa Grande	Flower - Large		PPD GE Rosa Grande/Flower - Large	white
-> PPD GE Rosa Grande	Cascade Odd (V)		PPD GE Rosa Grande/Cascade Odd (V)	white
-> PPD GE Rosa Grande	Cascade Even (V)		PPD GE Rosa Grande/Cascade Even (V)	white
-> PPD GE Rosa Grande	Fountain 2 (V)		PPD GE Rosa Grande/Fountain 2 (V)	white
-> PPD GE Rosa Grande	Center Swirl Left		PPD GE Rosa Grande/Center Swirl Left	white
-> PPD GE Rosa Grande	Center Swirl Right		PPD GE Rosa Grande/Center Swirl Right	white
-> PPD GE Rosa Grande	Spokes		PPD GE Rosa Grande/Spokes	white
-> PPD GE Rosa Grande	Spokes (V)		PPD GE Rosa Grande/Spokes (V)	white
-> PPD GE Rosa Grande	Twist		PPD GE Rosa Grande/Twist	white
-> PPD GE Rosa Grande	Balls Stacked Odd		PPD GE Rosa Grande/Balls Stacked Odd	white
-> PPD GE Rosa Grande	Balls Stacked		PPD GE Rosa Grande/Balls Stacked	white
-> PPD GE Rosa Grande	Fountain 1 (V)		PPD GE Rosa Grande/Fountain 1 (V)	white
-> PPD GE Rosa Grande	Fountan 1B (V)		PPD GE Rosa Grande/Fountan 1B (V)	white
-> PPD GE Rosa Grande	Extended Peacock		PPD GE Rosa Grande/Extended Peacock	white
-> PPD GE Rosa Grande	Full Peacock		PPD GE Rosa Grande/Full Peacock	white
-> PPD GE Rosa Grande	Outer Decorations		PPD GE Rosa Grande/Outer Decorations	white
-> PPD GE Rosa Grande	Scoops		PPD GE Rosa Grande/Scoops	white
-> PPD GE Rosa Grande	Snowflake1		PPD GE Rosa Grande/Snowflake1	white
-> PPD GE Rosa Grande	Snowflake2		PPD GE Rosa Grande/Snowflake2	white
-> PPD GE Rosa Grande	Stacked Balls		PPD GE Rosa Grande/Stacked Balls	white
-> PPD GE Rosa Grande	Arrows - Cupid		PPD GE Rosa Grande/Arrows - Cupid	white
-> PPD GE Rosa Grande	Cupid Arrows		PPD GE Rosa Grande/Cupid Arrows	white
-> PPD GE Rosa Grande	Arrows - Cupid Long		PPD GE Rosa Grande/Arrows - Cupid Long	white
-> PPD GE Rosa Grande	Cupid Arrows Long		PPD GE Rosa Grande/Cupid Arrows Long	white
-> PPD GE Rosa Grande	Arrows - Double		PPD GE Rosa Grande/Arrows - Double	white
-> PPD GE Rosa Grande	Feather Filled Long		PPD GE Rosa Grande/Feather Filled Long	white
-> PPD GE Rosa Grande	Feather Filled Long Odd		PPD GE Rosa Grande/Feather Filled Long Odd	white
-> PPD GE Rosa Grande	Feather Filled Long Even		PPD GE Rosa Grande/Feather Filled Long Even	white
-> PPD GE Rosa Grande	Feather Filled Short		PPD GE Rosa Grande/Feather Filled Short	white
-> PPD GE Rosa Grande	Feather Filled Short Odd		PPD GE Rosa Grande/Feather Filled Short Odd	white
-> PPD GE Rosa Grande	Feather Filled Short Even		PPD GE Rosa Grande/Feather Filled Short Even	white
-> PPD GE Rosa Grande	Long Stem Tulip		PPD GE Rosa Grande/Long Stem Tulip	white
-> PPD GE Rosa Grande	Tulip		PPD GE Rosa Grande/Tulip	white
-> PPD GE Rosa Grande	Daisy		PPD GE Rosa Grande/Daisy	white
-> PPD GE Rosa Grande	Double Daisy		PPD GE Rosa Grande/Double Daisy	white
-12069d13830
-< PPD GE RosaWreath Lg	Balls - Stacked		PPD GE RosaWreath Lg/Balls - Stacked	white
-12077d13837
-< PPD GE RosaWreath Lg	Flower - Medium		PPD GE RosaWreath Lg/Flower - Medium	white
-12081d13840
-< PPD GE RosaWreath Lg	Flower - Big Petals		PPD GE RosaWreath Lg/Flower - Big Petals	white
-12095d13853
-< PPD GE RosaWreath Lg	Zig Zag		PPD GE RosaWreath Lg/Zig Zag	white
-12171d13928
-< PPD GE RosaWreath Lg	Burst		PPD GE RosaWreath Lg/Burst	white
-12173d13929
-< PPD GE RosaWreath Lg	Burst - Even		PPD GE RosaWreath Lg/Burst - Even	white
-12216a13973,13991
-> PPD GE RosaWreath Lg	Burst		PPD GE RosaWreath Lg/Burst	white
-> PPD GE RosaWreath Lg	Cascade (V)		PPD GE RosaWreath Lg/Cascade (V)	white
-> PPD GE RosaWreath Lg	Burst - Even		PPD GE RosaWreath Lg/Burst - Even	white
-> PPD GE RosaWreath Lg	Cascade - Odd (V)		PPD GE RosaWreath Lg/Cascade - Odd (V)	white
-> PPD GE RosaWreath Lg	Cascade Even (V)		PPD GE RosaWreath Lg/Cascade Even (V)	white
-> PPD GE RosaWreath Lg	Snowflake 1		PPD GE RosaWreath Lg/Snowflake 1	white
-> PPD GE RosaWreath Lg	Snowflake 2		PPD GE RosaWreath Lg/Snowflake 2	white
-> PPD GE RosaWreath Lg	Twist		PPD GE RosaWreath Lg/Twist	white
-> PPD GE RosaWreath Lg	Flower - Medium		PPD GE RosaWreath Lg/Flower - Medium	white
-> PPD GE RosaWreath Lg	Flower - Big Petals		PPD GE RosaWreath Lg/Flower - Big Petals	white
-> PPD GE RosaWreath Lg	Balls - Stacked		PPD GE RosaWreath Lg/Balls - Stacked	white
-> PPD GE RosaWreath Lg	Long Stem Tulip		PPD GE RosaWreath Lg/Long Stem Tulip	white
-> PPD GE RosaWreath Lg	Half Moons		PPD GE RosaWreath Lg/Half Moons	white
-> PPD GE RosaWreath Lg	Inner Ring		PPD GE RosaWreath Lg/Inner Ring	white
-> PPD GE RosaWreath Lg	Zig Zag		PPD GE RosaWreath Lg/Zig Zag	white
-> PPD GE RosaWreath Lg	Bowling Pin		PPD GE RosaWreath Lg/Bowling Pin	white
-> PPD GE RosaWreath Lg	Center Swirl Right		PPD GE RosaWreath Lg/Center Swirl Right	white
-> PPD GE RosaWreath Lg	Center Swirl Left		PPD GE RosaWreath Lg/Center Swirl Left	white
-> PPD GE RosaWreath Lg	Double Zig Zag		PPD GE RosaWreath Lg/Double Zig Zag	white
-12386d14160
-< PPD GE RosaWreath Sm Up SW	Balls - Stacked		PPD GE RosaWreath Sm Up SW/Balls - Stacked	white
-12394d14167
-< PPD GE RosaWreath Sm Up SW	Flower - Medium		PPD GE RosaWreath Sm Up SW/Flower - Medium	white
-12398d14170
-< PPD GE RosaWreath Sm Up SW	Flower - Big Petals		PPD GE RosaWreath Sm Up SW/Flower - Big Petals	white
-12412d14183
-< PPD GE RosaWreath Sm Up SW	Zig Zag		PPD GE RosaWreath Sm Up SW/Zig Zag	white
-12488d14258
-< PPD GE RosaWreath Sm Up SW	Burst		PPD GE RosaWreath Sm Up SW/Burst	white
-12490d14259
-< PPD GE RosaWreath Sm Up SW	Burst - Even		PPD GE RosaWreath Sm Up SW/Burst - Even	white
-12533a14303,14321
-> PPD GE RosaWreath Sm Up SW	Burst		PPD GE RosaWreath Sm Up SW/Burst	white
-> PPD GE RosaWreath Sm Up SW	Cascade (V)		PPD GE RosaWreath Sm Up SW/Cascade (V)	white
-> PPD GE RosaWreath Sm Up SW	Burst - Even		PPD GE RosaWreath Sm Up SW/Burst - Even	white
-> PPD GE RosaWreath Sm Up SW	Cascade - Odd (V)		PPD GE RosaWreath Sm Up SW/Cascade - Odd (V)	white
-> PPD GE RosaWreath Sm Up SW	Cascade Even (V)		PPD GE RosaWreath Sm Up SW/Cascade Even (V)	white
-> PPD GE RosaWreath Sm Up SW	Snowflake 1		PPD GE RosaWreath Sm Up SW/Snowflake 1	white
-> PPD GE RosaWreath Sm Up SW	Snowflake 2		PPD GE RosaWreath Sm Up SW/Snowflake 2	white
-> PPD GE RosaWreath Sm Up SW	Twist		PPD GE RosaWreath Sm Up SW/Twist	white
-> PPD GE RosaWreath Sm Up SW	Flower - Medium		PPD GE RosaWreath Sm Up SW/Flower - Medium	white
-> PPD GE RosaWreath Sm Up SW	Flower - Big Petals		PPD GE RosaWreath Sm Up SW/Flower - Big Petals	white
-> PPD GE RosaWreath Sm Up SW	Balls - Stacked		PPD GE RosaWreath Sm Up SW/Balls - Stacked	white
-> PPD GE RosaWreath Sm Up SW	Long Stem Tulip		PPD GE RosaWreath Sm Up SW/Long Stem Tulip	white
-> PPD GE RosaWreath Sm Up SW	Half Moons		PPD GE RosaWreath Sm Up SW/Half Moons	white
-> PPD GE RosaWreath Sm Up SW	Inner Ring		PPD GE RosaWreath Sm Up SW/Inner Ring	white
-> PPD GE RosaWreath Sm Up SW	Zig Zag		PPD GE RosaWreath Sm Up SW/Zig Zag	white
-> PPD GE RosaWreath Sm Up SW	Bowling Pin		PPD GE RosaWreath Sm Up SW/Bowling Pin	white
-> PPD GE RosaWreath Sm Up SW	Center Swirl Right		PPD GE RosaWreath Sm Up SW/Center Swirl Right	white
-> PPD GE RosaWreath Sm Up SW	Center Swirl Left		PPD GE RosaWreath Sm Up SW/Center Swirl Left	white
-> PPD GE RosaWreath Sm Up SW	Double Zig Zag		PPD GE RosaWreath Sm Up SW/Double Zig Zag	white
-12909a14698,14699
-> PPD GE Square Peg	Spokes (V)		PPD GE Square Peg/Spokes (V)	white
-> PPD GE Square Peg	FlakeArmsAll (V)		PPD GE Square Peg/FlakeArmsAll (V)	white
-13001d14790
-< PPD Wreath  - W	Ring5		PPD Wreath  - W/Ring5	white
-13008d14796
-< PPD Wreath  - W	Ring12		PPD Wreath  - W/Ring12	white
-13084d14871
-< PPD Wreath  - W	Petals		PPD Wreath  - W/Petals	white
-13086d14872
-< PPD Wreath  - W	Petals1		PPD Wreath  - W/Petals1	white
-13088,13095d14873
-< PPD Wreath  - W	Valley1		PPD Wreath  - W/Valley1	white
-< PPD Wreath  - W	Valley2		PPD Wreath  - W/Valley2	white
-< PPD Wreath  - W	Valley3		PPD Wreath  - W/Valley3	white
-< PPD Wreath  - W	Valley4		PPD Wreath  - W/Valley4	white
-< PPD Wreath  - W	Valley5		PPD Wreath  - W/Valley5	white
-< PPD Wreath  - W	Valley6		PPD Wreath  - W/Valley6	white
-< PPD Wreath  - W	Valley7		PPD Wreath  - W/Valley7	white
-< PPD Wreath  - W	Valley8		PPD Wreath  - W/Valley8	white
-13100,13102d14877
-< PPD Wreath  - W	Triangles		PPD Wreath  - W/Triangles	white
-< PPD Wreath  - W	Triangles 2		PPD Wreath  - W/Triangles 2	white
-< PPD Wreath  - W	Trees		PPD Wreath  - W/Trees	white
-13105d14879
-< PPD Wreath  - W	Wreath		PPD Wreath  - W/Wreath	white
-13231a15006,15035
-> PPD Wreath  - W	Flake-2		PPD Wreath  - W/Flake-2	white
-> PPD Wreath  - W	Flake-3		PPD Wreath  - W/Flake-3	white
-> PPD Wreath  - W	Flake-4		PPD Wreath  - W/Flake-4	white
-> PPD Wreath  - W	Flake-5		PPD Wreath  - W/Flake-5	white
-> PPD Wreath  - W	WaveCCW		PPD Wreath  - W/WaveCCW	white
-> PPD Wreath  - W	WaveCW		PPD Wreath  - W/WaveCW	white
-> PPD Wreath  - W	Valleys		PPD Wreath  - W/Valleys	white
-> PPD Wreath  - W	Linear Valleys		PPD Wreath  - W/Linear Valleys	white
-> PPD Wreath  - W	Petals1		PPD Wreath  - W/Petals1	white
-> PPD Wreath  - W	Diamond Arms		PPD Wreath  - W/Diamond Arms	white
-> PPD Wreath  - W	Wreath		PPD Wreath  - W/Wreath	white
-> PPD Wreath  - W	Triangles 2		PPD Wreath  - W/Triangles 2	white
-> PPD Wreath  - W	PetalsInside		PPD Wreath  - W/PetalsInside	white
-> PPD Wreath  - W	Petals		PPD Wreath  - W/Petals	white
-> PPD Wreath  - W	Inner Petals		PPD Wreath  - W/Inner Petals	white
-> PPD Wreath  - W	PetalsMiddle		PPD Wreath  - W/PetalsMiddle	white
-> PPD Wreath  - W	Trees		PPD Wreath  - W/Trees	white
-> PPD Wreath  - W	Triangles		PPD Wreath  - W/Triangles	white
-> PPD Wreath  - W	Ring5		PPD Wreath  - W/Ring5	white
-> PPD Wreath  - W	Ring12		PPD Wreath  - W/Ring12	white
-> PPD Wreath  - W	Ring23		PPD Wreath  - W/Ring23	white
-> PPD Wreath  - W	Valley1		PPD Wreath  - W/Valley1	white
-> PPD Wreath  - W	Valley2		PPD Wreath  - W/Valley2	white
-> PPD Wreath  - W	Valley3		PPD Wreath  - W/Valley3	white
-> PPD Wreath  - W	Valley4		PPD Wreath  - W/Valley4	white
-> PPD Wreath  - W	Valley5		PPD Wreath  - W/Valley5	white
-> PPD Wreath  - W	Valley6		PPD Wreath  - W/Valley6	white
-> PPD Wreath  - W	Valley7		PPD Wreath  - W/Valley7	white
-> PPD Wreath  - W	Valley8		PPD Wreath  - W/Valley8	white
-> PPD Wreath  - W	SubModel-1		PPD Wreath  - W/SubModel-1	white
-13246a15051
-> PPD Wreath DiamondArms - Dazzler			PPD Wreath DiamondArms - Dazzler	white
-13248a15054
-> PPD Wreath DiamondArms - StarGazer			PPD Wreath DiamondArms - StarGazer	white
 13465a15272,15292
 > RBL Drive L 1			RBL Drive L 1	white
 > RBL Drive L 2			RBL Drive L 2	white
@@ -2000,87 +1703,6 @@
 > RBL Hedge High 3			RBL Hedge High 3	white
 > RBL Hedge High 4			RBL Hedge High 4	white
 > RBL Hedge High 5			RBL Hedge High 5	white
-14319,14320d16145
-< StarFence	Arms		StarFence/Arms	white
-< StarFence	Tips		StarFence/Tips	white
-14323a16149,16187
-> StarFence	Arms		StarFence/Arms	white
-> StarFence	Tips		StarFence/Tips	white
-> StarFence	ArmsSSS		StarFence/ArmsSSS	white
-> StarFence	Explosion		StarFence/Explosion	white
-> StarFence	Tailed Explosion		StarFence/Tailed Explosion	white
-> StarFence	Half L		StarFence/Half L	white
-> StarFence	Half R		StarFence/Half R	white
-> StarFence	Half and Half		StarFence/Half and Half	white
-> StarFence	Outer Star 1		StarFence/Outer Star 1	white
-> StarFence	Layer 2 From Outside		StarFence/Layer 2 From Outside	white
-> StarFence	Layer 3 From Outside		StarFence/Layer 3 From Outside	white
-> StarFence	Layer 4 From Outside		StarFence/Layer 4 From Outside	white
-> StarFence	Layer 5 From Outside		StarFence/Layer 5 From Outside	white
-> StarFence	Inner Star 6		StarFence/Inner Star 6	white
-> StarFence	Outer 3 Layers		StarFence/Outer 3 Layers	white
-> StarFence	Inner 3 Layers		StarFence/Inner 3 Layers	white
-> StarFence	Odd Layers		StarFence/Odd Layers	white
-> StarFence	Even Layers		StarFence/Even Layers	white
-> StarFence	Thick Star Tips		StarFence/Thick Star Tips	white
-> StarFence	Star Tips - Nested		StarFence/Star Tips - Nested	white
-> StarFence	Center Spinner		StarFence/Center Spinner	white
-> StarFence	Arm Spinner		StarFence/Arm Spinner	white
-> StarFence	Arcs1		StarFence/Arcs1	white
-> StarFence	Arcs2		StarFence/Arcs2	white
-> StarFence	Arcs3		StarFence/Arcs3	white
-> StarFence	Arcs4		StarFence/Arcs4	white
-> StarFence	Arcs5		StarFence/Arcs5	white
-> StarFence	Arcs6		StarFence/Arcs6	white
-> StarFence	Arcs7		StarFence/Arcs7	white
-> StarFence	Arcs8		StarFence/Arcs8	white
-> StarFence	Arcs1S		StarFence/Arcs1S	white
-> StarFence	Arcs2S		StarFence/Arcs2S	white
-> StarFence	Arcs3S		StarFence/Arcs3S	white
-> StarFence	Arcs4S		StarFence/Arcs4S	white
-> StarFence	Arcs5S		StarFence/Arcs5S	white
-> StarFence	Arcs6S		StarFence/Arcs6S	white
-> StarFence	Arcs7S		StarFence/Arcs7S	white
-> StarFence	Arcs8S		StarFence/Arcs8S	white
-> StarFence	Peaks		StarFence/Peaks	white
-14335a16200,16248
-> StarFlowerBed	ArmsSSS		StarFlowerBed/ArmsSSS	white
-> StarFlowerBed	Explosion		StarFlowerBed/Explosion	white
-> StarFlowerBed	Tailed Explosion		StarFlowerBed/Tailed Explosion	white
-> StarFlowerBed	Half L		StarFlowerBed/Half L	white
-> StarFlowerBed	Half R		StarFlowerBed/Half R	white
-> StarFlowerBed	Half and Half		StarFlowerBed/Half and Half	white
-> StarFlowerBed	Outer Star 1		StarFlowerBed/Outer Star 1	white
-> StarFlowerBed	Layer 2 From Outside		StarFlowerBed/Layer 2 From Outside	white
-> StarFlowerBed	Layer 3 From Outside		StarFlowerBed/Layer 3 From Outside	white
-> StarFlowerBed	Layer 4 From Outside		StarFlowerBed/Layer 4 From Outside	white
-> StarFlowerBed	Layer 5 From Outside		StarFlowerBed/Layer 5 From Outside	white
-> StarFlowerBed	Inner Star 6		StarFlowerBed/Inner Star 6	white
-> StarFlowerBed	Outer 3 Layers		StarFlowerBed/Outer 3 Layers	white
-> StarFlowerBed	Inner 3 Layers		StarFlowerBed/Inner 3 Layers	white
-> StarFlowerBed	Odd Layers		StarFlowerBed/Odd Layers	white
-> StarFlowerBed	Even Layers		StarFlowerBed/Even Layers	white
-> StarFlowerBed	Thick Star Tips		StarFlowerBed/Thick Star Tips	white
-> StarFlowerBed	Star Tips - Nested		StarFlowerBed/Star Tips - Nested	white
-> StarFlowerBed	Center Spinner		StarFlowerBed/Center Spinner	white
-> StarFlowerBed	Arm Spinner		StarFlowerBed/Arm Spinner	white
-> StarFlowerBed	Arcs1		StarFlowerBed/Arcs1	white
-> StarFlowerBed	Arcs2		StarFlowerBed/Arcs2	white
-> StarFlowerBed	Arcs3		StarFlowerBed/Arcs3	white
-> StarFlowerBed	Arcs4		StarFlowerBed/Arcs4	white
-> StarFlowerBed	Arcs5		StarFlowerBed/Arcs5	white
-> StarFlowerBed	Arcs6		StarFlowerBed/Arcs6	white
-> StarFlowerBed	Arcs7		StarFlowerBed/Arcs7	white
-> StarFlowerBed	Arcs8		StarFlowerBed/Arcs8	white
-> StarFlowerBed	Arcs1S		StarFlowerBed/Arcs1S	white
-> StarFlowerBed	Arcs2S		StarFlowerBed/Arcs2S	white
-> StarFlowerBed	Arcs3S		StarFlowerBed/Arcs3S	white
-> StarFlowerBed	Arcs4S		StarFlowerBed/Arcs4S	white
-> StarFlowerBed	Arcs5S		StarFlowerBed/Arcs5S	white
-> StarFlowerBed	Arcs6S		StarFlowerBed/Arcs6S	white
-> StarFlowerBed	Arcs7S		StarFlowerBed/Arcs7S	white
-> StarFlowerBed	Arcs8S		StarFlowerBed/Arcs8S	white
-> StarFlowerBed	Peaks		StarFlowerBed/Peaks	white
 > StarInsanePoleL1			StarInsanePoleL1	white
 > StarInsanePoleL2			StarInsanePoleL2	white
 > StarInsanePoleL3			StarInsanePoleL3	white
