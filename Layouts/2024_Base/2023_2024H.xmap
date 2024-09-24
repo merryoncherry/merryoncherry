@@ -3562,6 +3562,18 @@ CCC Spider web 24in LR			GE Web Corner FP W	white
 CCC Spider web 24in RL			GE Web Corner FP SW	white
 CCC Spider web 24in RR			GE Web Corner FP SE	white
 ChromaGlow Tombs			All Floods	white
+ChromaGlow_TombStone-1			GE Cross 1 Double Row L	white
+ChromaGlow_TombStone-1	Default		GE Cross 1 Double Row L/Outer	white
+ChromaGlow_TombStone-2			Cross 2 Filled L	white
+ChromaGlow_TombStone-2	Default		Cross 2 Filled L/OuterCross	white
+ChromaGlow_TombStone-3			GE Cross 3 L	white
+ChromaGlow_TombStone-3	Default		GE Cross 3 L/Cross	white
+ChromaGlow_TombStone-4			GE Cross 3 R	white
+ChromaGlow_TombStone-4	Default		GE Cross 3 R/Cross	white
+ChromaGlow_TombStone-5			Cross 2 Filled R	white
+ChromaGlow_TombStone-5	Default		Cross 2 Filled R/OuterCross	white
+ChromaGlow_TombStone-6			GE Cross 1 Double Row R	white
+ChromaGlow_TombStone-6	Default		GE Cross 1 Double Row R/Outer	white
 Crazy Kid 3			Crazy Kid 3	white
 Crazy Kid 3	Bones Leg		Crazy Kid 3/Bones Leg	white
 Crazy Kid 3	Bones Shirt circles		Crazy Kid 3/Bones Shirt circles	white
@@ -3624,7 +3636,7 @@ CylinderTree			CylinderTree	white
 Decorated Tree L			Decorated Tree L	white
 Decorated Tree R			Decorated Tree R	white
 DmxWands			DmxWands	white
-DmxWands5Ch			DmxWands5Ch	white
+DmxWands5Ch			DmxWands	white
 DmxWandsCtrl			DmxWandsCtrl	white
 Door Wreath			Door Wreath	white
 Door Wreath Stars			Door Wreath Stars	white
@@ -4082,7 +4094,8 @@ DriveHalloweenVerticalPixelTrimR	Tri2_10		DriveHalloweenVerticalPixelTrimR/Tri2_
 DriveHalloweenVerticalPixelTrimR	Tri3_10		DriveHalloweenVerticalPixelTrimR/Tri3_10	white
 DriveHalloweenVerticalPixelTrimR	Outward_20		DriveHalloweenVerticalPixelTrimR/Outward_20	white
 DriveHalloweenVerticalPixelTrimR	Around_20		DriveHalloweenVerticalPixelTrimR/Around_20	white
-EFL_SnowGlobe	Default		NorthPole	white
+EFL_SnowGlobe	Base		NorthPole/Pole	white
+EFL_SnowGlobe	Globe		NorthPole/Bulb	white
 EFL_SnowGlobe	Matrix		MatrixHedge	white
 EFL_SnowGlobe	Outline		NorthPole/Outline	white
 Entire Outline			Entire Outline	white
@@ -4883,6 +4896,10 @@ GE Fairy Wing Sm Feathers Mid GRP			GE Fairy Wing Sm Feathers Mid GRP	white
 GE Fairy Wing Sm Feathers Top GRP			GE Fairy Wing Sm Feathers Top GRP	white
 GE Fairy Wing Sm GRP			GE Fairy Wing Sm GRP	white
 GE Fairy Wing Sm Outline GRP			GE Fairy Wing Sm Outline GRP	white
+GE Flying Bat Jr 1	Wing up		GE Bat 50 W L	white
+GE Flying Bat Jr 2	Wing up		GE Bat 50 W R	white
+GE Flying Bat Jr 3	Wing up		GE Bat 50 S L	white
+GE Flying Bat Jr 4	Wing up		GE Bat 50 S R	white
 GE Franken Monster			GE Franken Monster	white
 GE Franken Monster	Outline		GE Franken Monster/Outline	white
 GE Franken Monster	Forehead Cut		GE Franken Monster/Forehead Cut	white
@@ -7635,14 +7652,38 @@ GE Rosa Grande Web Spoke GRP			GE Rosa Grande Web Spoke GRP	white
 GE Rosa Grande Wreath Rings Inner			GE Rosa Grande Wreath Rings Inner	white
 GE Rosa Wreath GRP			GE Rosa Wreath GRP	white
 GE Rosa Tomb - GRP			All Tombs Primary	white
+GE Rosa Tomb 1	Cross Outline		GE Cross 1 Double Row L	white
+GE Rosa Tomb 1	Cross Spinner		PPD GE Hattitude Quartet 1/Spinner	white
 GE Rosa Tomb 1	Default		GE Tombwarp W Skull LL 1	white
+GE Rosa Tomb 1	TombSpinner		PPD Wreath  - W	white
+GE Rosa Tomb 2	Cross Outline		Cross 2 Filled L	white
+GE Rosa Tomb 2	Cross Spinner		PPD GE Hattitude Quartet 2/Spinner	white
 GE Rosa Tomb 2	Default		GE Tomb Warp RIP L	white
+GE Rosa Tomb 2	TombSpinner		PPD Wreath  - W	white
+GE Rosa Tomb 3	Cross Outline		Cross 2 Filled L/OuterCross	white
+GE Rosa Tomb 3	Cross Spinner		PPD GE Hattitude Quartet 3/Spinner	white
 GE Rosa Tomb 3	Default		GE Tombwarp W Skull L	white
+GE Rosa Tomb 3	TombSpinner		PPD Wreath  - W	white
+GE Rosa Tomb 4	Cross Outline		GE Cross 3 L	white
+GE Rosa Tomb 4	Cross Spinner		PPD GE Hattitude Quartet 4/Spinner	white
 GE Rosa Tomb 4	Default		GE Tomb Warp RIP LR 4	white
+GE Rosa Tomb 4	TombSpinner		PPD Wreath  - W	white
+GE Rosa Tomb 5	Cross Outline		GE Cross 3 R	white
+GE Rosa Tomb 5	Cross Spinner		PPD GE Hattitude Quartet 1/Spinner	white
 GE Rosa Tomb 5	Default		GE Tomb Warp RIP RL 5	white
+GE Rosa Tomb 5	TombSpinner		PPD Wreath  - W	white
+GE Rosa Tomb 6	Cross Outline		Cross 2 Filled R/OuterCross	white
+GE Rosa Tomb 6	Cross Spinner		PPD GE Hattitude Quartet 2/Spinner	white
 GE Rosa Tomb 6	Default		GE Tombwarp W Skull R	white
+GE Rosa Tomb 6	TombSpinner		PPD Wreath  - W	white
+GE Rosa Tomb 7	Cross Outline		Cross 2 Filled R	white
+GE Rosa Tomb 7	Cross Spinner		PPD GE Hattitude Quartet 3/Spinner	white
 GE Rosa Tomb 7	Default		GE Tomb Warp RIP R	white
+GE Rosa Tomb 7	TombSpinner		PPD Wreath  - W	white
+GE Rosa Tomb 8	Cross Outline		GE Cross 1 Double Row R	white
+GE Rosa Tomb 8	Cross Spinner		PPD GE Hattitude Quartet 4/Spinner	white
 GE Rosa Tomb 8	Default		GE Tombwarp W Skull RR 8	white
+GE Rosa Tomb 8	TombSpinner		PPD Wreath  - W	white
 GE Rosa Tombs Crosses			All Crosses Dedicated	white
 GE Rosa Tombs Crosses Highlights			All Stars Except Mega	white
 GE Rosa Tombs Rosa			PPD Wreath - GRP	white
