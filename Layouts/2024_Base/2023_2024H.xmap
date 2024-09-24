@@ -2274,6 +2274,14 @@ All Icicles			All Icicles	white
 All Icicles Every 4			All Icicles Every 4	white
 All Icicles Tips			All Icicles Tips	white
 All Icicles Tips All			All Icicles Tips All	white
+All Lamps EFL			All Prop Outlines Tomb	white
+All Lamps EFL BPT			All Vertical Bullet	white
+All Lamps EFL Bows			All Floods	white
+All Lamps EFL Light			All Floods	white
+All Lamps EFL Matrix			All Mini-Matrix	white
+All Lamps EFL Nubs			All Stars Except Mega	white
+All Lamps EFL Outline			All Tree Tubes	white
+All Lamps EFL Ribbon			All Vertical Strip	white
 All Matrix			All Matrix	white
 All Matrix Big			All Matrix Big	white
 All Matrix Big Except Main			All Matrix Big Except Main	white
@@ -2427,10 +2435,12 @@ All Spiders Right			All Spiders Right	white
 All Spiders Upper			All Spiders Upper	white
 All Spinners			All Spinners	white
 All Spinners As Groups			All Spinners As Groups	white
+All Spinners EFL Radio			All Spinners Quartet Inner As Groups	white
 All Spinners Ground			All Spinners Ground	white
 All Spinners Hattitude As Groups			All Spinners Hattitude As Groups	white
 All Spinners Inner Third Quartet			All Spinners Inner Third Quartet	white
 All Spinners Middle Third Quartet			All Spinners Middle Third Quartet	white
+All Spinners Outer Rings EFL Radio			All Spinners Rings Outer Quartet Inner	white
 All Spinners Outer Third Quartet			All Spinners Outer Third Quartet	white
 All Spinners Quartet As Groups			All Spinners Quartet As Groups	white
 All Spinners Quartet Inner			All Spinners Quartet Inner	white
@@ -2438,9 +2448,11 @@ All Spinners Quartet Inner As Groups			All Spinners Quartet Inner As Groups	whit
 All Spinners Quartet Outer			All Spinners Quartet Outer	white
 All Spinners Quartet Outer As Groups			All Spinners Quartet Outer As Groups	white
 All Spinners Radiation			All Spinners Radiation	white
+All Spinners Radiation EFL Radio			All Spinners Radiation Quartet	white
 All Spinners Radiation Even			All Spinners Radiation Even	white
 All Spinners Radiation Odd			All Spinners Radiation Odd	white
 All Spinners Radiation Quartet			All Spinners Radiation Quartet	white
+All Spinners Rings EFL Radio			All Spinners Rings Inner Quartet Inner	white
 All Spinners Rings Inner			All Spinners Rings Inner	white
 All Spinners Rings Inner Concentric			All Spinners Rings Inner Concentric	white
 All Spinners Rings Inner Ground			All Spinners Rings Inner Ground	white
@@ -2455,6 +2467,7 @@ All Spinners Rings Tiny			All Spinners Rings Tiny	white
 All Spinners Spoke Groups			All Spinners Spoke Groups	white
 All Spinners Spokes			All Spinners Spokes	white
 All Spinners Spokes Dragonfly			All Spinners Spokes Dragonfly	white
+All Spinners Spokes EFL Radio			All Spinners Spokes Quartet Inner	white
 All Spinners Spokes Ground			All Spinners Spokes Ground	white
 All Spinners Spokes Quartet Inner			All Spinners Spokes Quartet Inner	white
 All Spinners Spokes Quartet Outer			All Spinners Spokes Quartet Outer	white
@@ -2466,6 +2479,7 @@ All Stars Except Mega			All Stars Except Mega	white
 All Stars Med Trees			All Stars Med Trees	white
 All Stars Mega			All Stars Mega	white
 All Stars Mini Trees			All Stars Mini Trees	white
+All Stars MiniMega Trees			All Stars Med Trees	white
 All Stars Peace Poles			All Stars Peace Poles	white
 All Stars Peace Poles Insane			All Stars Peace Poles Large	white
 All Stars Peace Poles Large			All Stars Peace Poles Large	white
@@ -2515,6 +2529,8 @@ All Trees Med With Stars			All Trees Med With Stars	white
 All Trees Mega			All Trees Mega	white
 All Trees Mini			All Trees Mini	white
 All Trees Mini With Stars			All Trees Mini With Stars	white
+All Trees MiniMega			All Trees Med	white
+All Trees MiniMega with Stars			All Trees Med With Stars	white
 All Trees Small			All Trees Small	white
 All Trees Small With Stars			All Trees Small With Stars	white
 All Trees Spiral			All Trees Spiral	white
@@ -4066,6 +4082,9 @@ DriveHalloweenVerticalPixelTrimR	Tri2_10		DriveHalloweenVerticalPixelTrimR/Tri2_
 DriveHalloweenVerticalPixelTrimR	Tri3_10		DriveHalloweenVerticalPixelTrimR/Tri3_10	white
 DriveHalloweenVerticalPixelTrimR	Outward_20		DriveHalloweenVerticalPixelTrimR/Outward_20	white
 DriveHalloweenVerticalPixelTrimR	Around_20		DriveHalloweenVerticalPixelTrimR/Around_20	white
+EFL_SnowGlobe	Default		NorthPole	white
+EFL_SnowGlobe	Matrix		MatrixHedge	white
+EFL_SnowGlobe	Outline		NorthPole/Outline	white
 Entire Outline			Entire Outline	white
 Eyes Crosses SE			Eyes Crosses SE	white
 Eyes Crosses SW			Eyes Crosses SW	white
