@@ -1,0 +1,2105 @@
+0a1,5
+> 
+> > crazts@0.0.1 makefullxmap
+> > tsc && node --max-old-space-size=40960 dist/test/MakeFullXmap.js --source_show_folder c:\Users\Chuck\Documents\xlightsShows\2024_Halloween
+> 
+> Trying: c:\Users\Chuck\Documents\xlightsShows\2024_Halloween
+2c7
+< 1851
+---
+> 2068
+73a79
+> All Arches Insane
+75a82,84
+> All Arches Mini
+> All Arches Peacock Inner
+> All Arches Peacock Single
+88a98
+> All Arches Strands Insane
+171a182
+> All Canes Insane
+172a184
+> All Canes NSR
+253a266,273
+> All Lamps EFL
+> All Lamps EFL BPT
+> All Lamps EFL Bows
+> All Lamps EFL Light
+> All Lamps EFL Matrix
+> All Lamps EFL Nubs
+> All Lamps EFL Outline
+> All Lamps EFL Ribbon
+262a283
+> All Matrix P5 Tomb
+293a315,317
+> All Peace Stakes Insane
+> All Peace Stakes Insane Even
+> All Peace Stakes Insane Odd
+314a339,342
+> All RBLs
+> All RBLs Drive L
+> All RBLs Front
+> All RBLs Hedge
+332a361
+> All Snowflakes Dedicated Arms EFL24
+335a365,366
+> All Snowflakes Dedicated Arms N
+> All Snowflakes Dedicated Arms Sarah
+354a386
+> All Spider CCC
+369a402,415
+> All Spiders CCC Accent
+> All Spiders CCC Body
+> All Spiders CCC Crawlies
+> All Spiders CCC Eyes
+> All Spiders CCC Legs
+> All Spiders CCC Legs 1
+> All Spiders CCC Legs 2
+> All Spiders CCC Legs 3
+> All Spiders CCC Legs 4
+> All Spiders CCC Legs 5
+> All Spiders CCC Legs 6
+> All Spiders CCC Legs 7
+> All Spiders CCC Legs 8
+> All Spiders CCC Mouth
+392a439
+> All Spinners EFL Radio
+396a444
+> All Spinners Outer Rings EFL Radio
+403a452
+> All Spinners Radiation EFL Radio
+406a456
+> All Spinners Rings EFL Radio
+420a471
+> All Spinners Spokes EFL Radio
+431a483
+> All Stars MiniMega Trees
+432a485
+> All Stars Peace Poles Insane
+436a490
+> All Stars Showstopper Mini
+438a493
+> All Stars SpiralX
+440a496
+> All Tombs Base
+452a509,510
+> All Tombs Outline
+> All Tombs P5
+479a538,541
+> All Trees MiniMega
+> All Trees MiniMega with Stars
+> All Trees Showstopper
+> All Trees Showstopper With Stars
+484a547,552
+> All Trees Spiral SpiralX
+> All Trees Spiral SpiralX Balls
+> All Trees Spiral SpiralX Green
+> All Trees Spiral SpiralX Outline
+> All Trees Spiral SpiralX Spiral
+> All Trees Spiral SpiralX with Stars
+506a575
+> All Web CCC
+508a578,582
+> All Webs CCC Alert
+> All Webs CCC Fill
+> All Webs CCC Outline
+> All Webs CCC Rings
+> All Webs CCC Spokes
+512a587,596
+> All Webs MoC
+> All Webs MoC Alert
+> All Webs MoC Arms
+> All Webs MoC Blades
+> All Webs MoC Fill
+> All Webs MoC Rings
+> All Webs MoC Sections
+> All Webs MoC Spinner
+> All Webs MoC Spokes
+> All Webs MoC Zigzag
+525a610
+> All Webs Spinner
+625a711,731
+> Boscoyo_Megastone_P5 1
+> Boscoyo_Megastone_P5 1 Matrix
+> Boscoyo_Megastone_P5 2
+> Boscoyo_Megastone_P5 2 Matrix
+> Boscoyo_Megastone_P5 3
+> Boscoyo_Megastone_P5 3 Matrix
+> Boscoyo_Megastone_P5 4
+> Boscoyo_Megastone_P5 4 Matrix
+> CCC 23 in spider L
+> CCC 23 in spider R
+> CCC Spider web 24in LL
+> CCC Spider web 24in LR
+> CCC Spider web 24in RL
+> CCC Spider web 24in RR
+> ChromaGlow Tombs
+> ChromaGlow_TombStone-1
+> ChromaGlow_TombStone-2
+> ChromaGlow_TombStone-3
+> ChromaGlow_TombStone-4
+> ChromaGlow_TombStone-5
+> ChromaGlow_TombStone-6
+658a765,768
+> EFL_Lamppost_ESide
+> EFL_Lamppost_WCorner
+> EFL_Radio
+> EFL_SnowGlobe
+765a876
+> GE Bunting 4
+841a953,956
+> GE Flying Bat Jr 1
+> GE Flying Bat Jr 2
+> GE Flying Bat Jr 3
+> GE Flying Bat Jr 4
+860a976
+> GE Insane Cane Candle GRP
+864a981
+> GE Insane Cane Flame GRP
+1056a1174,1232
+> GE Rosa Tomb - GRP
+> GE Rosa Tomb 1
+> GE Rosa Tomb 2
+> GE Rosa Tomb 3
+> GE Rosa Tomb 4
+> GE Rosa Tomb 5
+> GE Rosa Tomb 6
+> GE Rosa Tomb 7
+> GE Rosa Tomb 8
+> GE Rosa Tomb Bat Body GRP
+> GE Rosa Tomb Cross Ring GRP
+> GE Rosa Tomb Cross Spinner GRP
+> GE Rosa Tomb Eyes GRP
+> GE Rosa Tomb Flake GRP
+> GE Rosa Tomb GRP
+> GE Rosa Tomb Gourds GRP
+> GE Rosa Tomb Highlilghts GRP
+> GE Rosa Tomb Outline GRP
+> GE Rosa Tomb Paddles GRP
+> GE Rosa Tomb Rings GRP
+> GE Rosa Tomb Spokes GRP
+> GE Rosa Tomb Stars GRP
+> GE Rosa Tomb Tomb Ring GRP
+> GE Rosa Tomb Tomb Spokes GRP
+> GE Rosa Tomb Tombstone Lower GRP
+> GE Rosa Tomb Warp GRP
+> GE Rosa Tomb Wings Down GRP
+> GE Rosa Tomb Wings GRP
+> GE Rosa Tomb Wings Up GRP
+> GE Rosa Tombs Bats
+> GE Rosa Tombs Bats Eyes
+> GE Rosa Tombs Bats Outline
+> GE Rosa Tombs Bats Wings Down
+> GE Rosa Tombs Bats Wings Up
+> GE Rosa Tombs Crosses
+> GE Rosa Tombs Crosses Highlights
+> GE Rosa Tombs Rosa
+> GE Rosa Tombs Rosa Arms
+> GE Rosa Tombs Rosa Balls
+> GE Rosa Tombs Rosa Hook CCW
+> GE Rosa Tombs Rosa Hook CW
+> GE Rosa Tombs Rosa Outline
+> GE Rosa Tombs Rosa Petals Lg
+> GE Rosa Tombs Rosa Petals Sm
+> GE Rosa Tombs Rosa Rings
+> GE Rosa Tombs Rosa Sm
+> GE Rosa Tombs Rosa Spiral CCW
+> GE Rosa Tombs Rosa Spiral CW
+> GE Rosa Tombs Rosa Spokes
+> GE Rosa Tombs Rosa Star
+> GE Rosa Tombs Rosa Wavy
+> GE Rosa Tombs Spinner
+> GE Rosa Tombs Spinner Alert
+> GE Rosa Tombs Spinner Outline
+> GE Rosa Tombs Spinner Rings
+> GE Rosa Tombs Spinner Spokes
+> GE Rosa Tombs Tomb Design
+> GE Rosa Tombs Tomb Full
+> GE Rosa Tombs Tomb Short
+1378a1555,1557
+> MegaMiniTree-L1
+> MegaMiniTree-L2
+> MoCWeb 2000
+1443a1623
+> PPD Wreath DiamondArms - Dazzler
+1445a1626
+> PPD Wreath DiamondArms - StarGazer
+1602a1784,1804
+> RBL Drive L 1
+> RBL Drive L 2
+> RBL Drive L 3
+> RBL Drive L 4
+> RBL Front 1
+> RBL Front 2
+> RBL Front 3
+> RBL Front 4
+> RBL Front 5
+> RBL Front 6
+> RBL Hedge 1
+> RBL Hedge 2
+> RBL Hedge 3
+> RBL Hedge 4
+> RBL Hedge 5
+> RBL Hedge 6
+> RBL Hedge High 1
+> RBL Hedge High 2
+> RBL Hedge High 3
+> RBL Hedge High 4
+> RBL Hedge High 5
+1662a1865,1876
+> StarInsanePoleL1
+> StarInsanePoleL2
+> StarInsanePoleL3
+> StarInsanePoleL4
+> StarInsanePoleL5
+> StarInsanePoleR1
+> StarInsanePoleR2
+> StarInsanePoleR3
+> StarInsanePoleR4
+> StarInsanePoleR5
+> StarMegaMini L1
+> StarMegaMini L2
+1666a1881,1884
+> StarMiniMega1
+> StarMiniMega2
+> StarMiniMega3
+> StarMiniMega4
+1710a1929,1932
+> TreeMiniMega 1
+> TreeMiniMega 2
+> TreeMiniMega 3
+> TreeMiniMega 4
+1924a2147
+> All Arches Insane			All Arches Insane	white
+1926a2150,2152
+> All Arches Mini			All Arches Mini	white
+> All Arches Peacock Inner			All Arches Peacock Inner	white
+> All Arches Peacock Single			All Arches Peacock Single	white
+1939a2166
+> All Arches Strands Insane			All Arches Strands Insane	white
+2022a2250
+> All Canes Insane			All Canes Insane	white
+2023a2252
+> All Canes NSR			All Canes NSR	white
+2104a2334,2341
+> All Lamps EFL			All Lamps EFL	white
+> All Lamps EFL BPT			All Lamps EFL BPT	white
+> All Lamps EFL Bows			All Lamps EFL Bows	white
+> All Lamps EFL Light			All Lamps EFL Light	white
+> All Lamps EFL Matrix			All Lamps EFL Matrix	white
+> All Lamps EFL Nubs			All Lamps EFL Nubs	white
+> All Lamps EFL Outline			All Lamps EFL Outline	white
+> All Lamps EFL Ribbon			All Lamps EFL Ribbon	white
+2113a2351
+> All Matrix P5 Tomb			All Matrix P5 Tomb	white
+2144a2383,2385
+> All Peace Stakes Insane			All Peace Stakes Insane	white
+> All Peace Stakes Insane Even			All Peace Stakes Insane Even	white
+> All Peace Stakes Insane Odd			All Peace Stakes Insane Odd	white
+2165a2407,2410
+> All RBLs			All RBLs	white
+> All RBLs Drive L			All RBLs Drive L	white
+> All RBLs Front			All RBLs Front	white
+> All RBLs Hedge			All RBLs Hedge	white
+2183a2429
+> All Snowflakes Dedicated Arms EFL24			All Snowflakes Dedicated Arms EFL24	white
+2186a2433,2434
+> All Snowflakes Dedicated Arms N			All Snowflakes Dedicated Arms N	white
+> All Snowflakes Dedicated Arms Sarah			All Snowflakes Dedicated Arms Sarah	white
+2205a2454
+> All Spider CCC			All Spider CCC	white
+2220a2470,2483
+> All Spiders CCC Accent			All Spiders CCC Accent	white
+> All Spiders CCC Body			All Spiders CCC Body	white
+> All Spiders CCC Crawlies			All Spiders CCC Crawlies	white
+> All Spiders CCC Eyes			All Spiders CCC Eyes	white
+> All Spiders CCC Legs			All Spiders CCC Legs	white
+> All Spiders CCC Legs 1			All Spiders CCC Legs 1	white
+> All Spiders CCC Legs 2			All Spiders CCC Legs 2	white
+> All Spiders CCC Legs 3			All Spiders CCC Legs 3	white
+> All Spiders CCC Legs 4			All Spiders CCC Legs 4	white
+> All Spiders CCC Legs 5			All Spiders CCC Legs 5	white
+> All Spiders CCC Legs 6			All Spiders CCC Legs 6	white
+> All Spiders CCC Legs 7			All Spiders CCC Legs 7	white
+> All Spiders CCC Legs 8			All Spiders CCC Legs 8	white
+> All Spiders CCC Mouth			All Spiders CCC Mouth	white
+2243a2507
+> All Spinners EFL Radio			All Spinners EFL Radio	white
+2247a2512
+> All Spinners Outer Rings EFL Radio			All Spinners Outer Rings EFL Radio	white
+2254a2520
+> All Spinners Radiation EFL Radio			All Spinners Radiation EFL Radio	white
+2257a2524
+> All Spinners Rings EFL Radio			All Spinners Rings EFL Radio	white
+2271a2539
+> All Spinners Spokes EFL Radio			All Spinners Spokes EFL Radio	white
+2282a2551
+> All Stars MiniMega Trees			All Stars MiniMega Trees	white
+2283a2553
+> All Stars Peace Poles Insane			All Stars Peace Poles Insane	white
+2287a2558
+> All Stars Showstopper Mini			All Stars Showstopper Mini	white
+2289a2561
+> All Stars SpiralX			All Stars SpiralX	white
+2291a2564
+> All Tombs Base			All Tombs Base	white
+2303a2577,2578
+> All Tombs Outline			All Tombs Outline	white
+> All Tombs P5			All Tombs P5	white
+2330a2606,2609
+> All Trees MiniMega			All Trees MiniMega	white
+> All Trees MiniMega with Stars			All Trees MiniMega with Stars	white
+> All Trees Showstopper			All Trees Showstopper	white
+> All Trees Showstopper With Stars			All Trees Showstopper With Stars	white
+2335a2615,2620
+> All Trees Spiral SpiralX			All Trees Spiral SpiralX	white
+> All Trees Spiral SpiralX Balls			All Trees Spiral SpiralX Balls	white
+> All Trees Spiral SpiralX Green			All Trees Spiral SpiralX Green	white
+> All Trees Spiral SpiralX Outline			All Trees Spiral SpiralX Outline	white
+> All Trees Spiral SpiralX Spiral			All Trees Spiral SpiralX Spiral	white
+> All Trees Spiral SpiralX with Stars			All Trees Spiral SpiralX with Stars	white
+2357a2643
+> All Web CCC			All Web CCC	white
+2359a2646,2650
+> All Webs CCC Alert			All Webs CCC Alert	white
+> All Webs CCC Fill			All Webs CCC Fill	white
+> All Webs CCC Outline			All Webs CCC Outline	white
+> All Webs CCC Rings			All Webs CCC Rings	white
+> All Webs CCC Spokes			All Webs CCC Spokes	white
+2363a2655,2664
+> All Webs MoC			All Webs MoC	white
+> All Webs MoC Alert			All Webs MoC Alert	white
+> All Webs MoC Arms			All Webs MoC Arms	white
+> All Webs MoC Blades			All Webs MoC Blades	white
+> All Webs MoC Fill			All Webs MoC Fill	white
+> All Webs MoC Rings			All Webs MoC Rings	white
+> All Webs MoC Sections			All Webs MoC Sections	white
+> All Webs MoC Spinner			All Webs MoC Spinner	white
+> All Webs MoC Spokes			All Webs MoC Spokes	white
+> All Webs MoC Zigzag			All Webs MoC Zigzag	white
+2376a2678
+> All Webs Spinner			All Webs Spinner	white
+3339a3642,4000
+> Boscoyo_Megastone_P5 1			Boscoyo_Megastone_P5 1	white
+> Boscoyo_Megastone_P5 1	Inner		Boscoyo_Megastone_P5 1/Inner	white
+> Boscoyo_Megastone_P5 1	Outline		Boscoyo_Megastone_P5 1/Outline	white
+> Boscoyo_Megastone_P5 1	Default		Boscoyo_Megastone_P5 1/Default	white
+> Boscoyo_Megastone_P5 1	Base		Boscoyo_Megastone_P5 1/Base	white
+> Boscoyo_Megastone_P5 1	Arch		Boscoyo_Megastone_P5 1/Arch	white
+> Boscoyo_Megastone_P5 1 Matrix			Boscoyo_Megastone_P5 1 Matrix	white
+> Boscoyo_Megastone_P5 2			Boscoyo_Megastone_P5 2	white
+> Boscoyo_Megastone_P5 2	Inner		Boscoyo_Megastone_P5 2/Inner	white
+> Boscoyo_Megastone_P5 2	Outline		Boscoyo_Megastone_P5 2/Outline	white
+> Boscoyo_Megastone_P5 2	Default		Boscoyo_Megastone_P5 2/Default	white
+> Boscoyo_Megastone_P5 2	Base		Boscoyo_Megastone_P5 2/Base	white
+> Boscoyo_Megastone_P5 2	Arch		Boscoyo_Megastone_P5 2/Arch	white
+> Boscoyo_Megastone_P5 2 Matrix			Boscoyo_Megastone_P5 2 Matrix	white
+> Boscoyo_Megastone_P5 3			Boscoyo_Megastone_P5 3	white
+> Boscoyo_Megastone_P5 3	Inner		Boscoyo_Megastone_P5 3/Inner	white
+> Boscoyo_Megastone_P5 3	Outline		Boscoyo_Megastone_P5 3/Outline	white
+> Boscoyo_Megastone_P5 3	Default		Boscoyo_Megastone_P5 3/Default	white
+> Boscoyo_Megastone_P5 3	Base		Boscoyo_Megastone_P5 3/Base	white
+> Boscoyo_Megastone_P5 3	Arch		Boscoyo_Megastone_P5 3/Arch	white
+> Boscoyo_Megastone_P5 3 Matrix			Boscoyo_Megastone_P5 3 Matrix	white
+> Boscoyo_Megastone_P5 4			Boscoyo_Megastone_P5 4	white
+> Boscoyo_Megastone_P5 4	Inner		Boscoyo_Megastone_P5 4/Inner	white
+> Boscoyo_Megastone_P5 4	Outline		Boscoyo_Megastone_P5 4/Outline	white
+> Boscoyo_Megastone_P5 4	Default		Boscoyo_Megastone_P5 4/Default	white
+> Boscoyo_Megastone_P5 4	Base		Boscoyo_Megastone_P5 4/Base	white
+> Boscoyo_Megastone_P5 4	Arch		Boscoyo_Megastone_P5 4/Arch	white
+> Boscoyo_Megastone_P5 4 Matrix			Boscoyo_Megastone_P5 4 Matrix	white
+> CCC 23 in spider L			CCC 23 in spider L	white
+> CCC 23 in spider L	Hour glass		CCC 23 in spider L/Hour glass	white
+> CCC 23 in spider L	Leg-1		CCC 23 in spider L/Leg-1	white
+> CCC 23 in spider L	Leg-2		CCC 23 in spider L/Leg-2	white
+> CCC 23 in spider L	Leg-3		CCC 23 in spider L/Leg-3	white
+> CCC 23 in spider L	Leg-4		CCC 23 in spider L/Leg-4	white
+> CCC 23 in spider L	Leg-5		CCC 23 in spider L/Leg-5	white
+> CCC 23 in spider L	Leg-6		CCC 23 in spider L/Leg-6	white
+> CCC 23 in spider L	Leg-7		CCC 23 in spider L/Leg-7	white
+> CCC 23 in spider L	Leg-8		CCC 23 in spider L/Leg-8	white
+> CCC 23 in spider L	Mouth		CCC 23 in spider L/Mouth	white
+> CCC 23 in spider L	Eyes		CCC 23 in spider L/Eyes	white
+> CCC 23 in spider L	Body		CCC 23 in spider L/Body	white
+> CCC 23 in spider L	Default		CCC 23 in spider L/Default	white
+> CCC 23 in spider L	Outline		CCC 23 in spider L/Outline	white
+> CCC 23 in spider R			CCC 23 in spider R	white
+> CCC 23 in spider R	Hour glass		CCC 23 in spider R/Hour glass	white
+> CCC 23 in spider R	Leg-1		CCC 23 in spider R/Leg-1	white
+> CCC 23 in spider R	Leg-2		CCC 23 in spider R/Leg-2	white
+> CCC 23 in spider R	Leg-3		CCC 23 in spider R/Leg-3	white
+> CCC 23 in spider R	Leg-4		CCC 23 in spider R/Leg-4	white
+> CCC 23 in spider R	Leg-5		CCC 23 in spider R/Leg-5	white
+> CCC 23 in spider R	Leg-6		CCC 23 in spider R/Leg-6	white
+> CCC 23 in spider R	Leg-7		CCC 23 in spider R/Leg-7	white
+> CCC 23 in spider R	Leg-8		CCC 23 in spider R/Leg-8	white
+> CCC 23 in spider R	Mouth		CCC 23 in spider R/Mouth	white
+> CCC 23 in spider R	Eyes		CCC 23 in spider R/Eyes	white
+> CCC 23 in spider R	Body		CCC 23 in spider R/Body	white
+> CCC 23 in spider R	Default		CCC 23 in spider R/Default	white
+> CCC 23 in spider R	Outline		CCC 23 in spider R/Outline	white
+> CCC Spider web 24in LL			CCC Spider web 24in LL	white
+> CCC Spider web 24in LL	Outer row		CCC Spider web 24in LL/Outer row	white
+> CCC Spider web 24in LL	Inner row 1		CCC Spider web 24in LL/Inner row 1	white
+> CCC Spider web 24in LL	Inner row 2		CCC Spider web 24in LL/Inner row 2	white
+> CCC Spider web 24in LL	Inner row 3		CCC Spider web 24in LL/Inner row 3	white
+> CCC Spider web 24in LL	Inner dot		CCC Spider web 24in LL/Inner dot	white
+> CCC Spider web 24in LL	Section 1		CCC Spider web 24in LL/Section 1	white
+> CCC Spider web 24in LL	Section 2		CCC Spider web 24in LL/Section 2	white
+> CCC Spider web 24in LL	Section 3		CCC Spider web 24in LL/Section 3	white
+> CCC Spider web 24in LL	Section 4		CCC Spider web 24in LL/Section 4	white
+> CCC Spider web 24in LL	Section 5		CCC Spider web 24in LL/Section 5	white
+> CCC Spider web 24in LL	Section 6		CCC Spider web 24in LL/Section 6	white
+> CCC Spider web 24in LL	Section 7		CCC Spider web 24in LL/Section 7	white
+> CCC Spider web 24in LL	Section 8		CCC Spider web 24in LL/Section 8	white
+> CCC Spider web 24in LL	Sub section 1		CCC Spider web 24in LL/Sub section 1	white
+> CCC Spider web 24in LL	Sub section 2		CCC Spider web 24in LL/Sub section 2	white
+> CCC Spider web 24in LL	Sub section 3		CCC Spider web 24in LL/Sub section 3	white
+> CCC Spider web 24in LL	Sub section 4		CCC Spider web 24in LL/Sub section 4	white
+> CCC Spider web 24in LL	Sub section 5		CCC Spider web 24in LL/Sub section 5	white
+> CCC Spider web 24in LL	Sub section 6		CCC Spider web 24in LL/Sub section 6	white
+> CCC Spider web 24in LL	Sub section 7		CCC Spider web 24in LL/Sub section 7	white
+> CCC Spider web 24in LL	Sub section 8		CCC Spider web 24in LL/Sub section 8	white
+> CCC Spider web 24in LL	Small section 1		CCC Spider web 24in LL/Small section 1	white
+> CCC Spider web 24in LL	Small section 2		CCC Spider web 24in LL/Small section 2	white
+> CCC Spider web 24in LL	Small section 3		CCC Spider web 24in LL/Small section 3	white
+> CCC Spider web 24in LL	Small section 4		CCC Spider web 24in LL/Small section 4	white
+> CCC Spider web 24in LL	Small section 5		CCC Spider web 24in LL/Small section 5	white
+> CCC Spider web 24in LL	Small section 6		CCC Spider web 24in LL/Small section 6	white
+> CCC Spider web 24in LL	Small section 7		CCC Spider web 24in LL/Small section 7	white
+> CCC Spider web 24in LL	Small section 8		CCC Spider web 24in LL/Small section 8	white
+> CCC Spider web 24in LL	Default		CCC Spider web 24in LL/Default	white
+> CCC Spider web 24in LL	Outline		CCC Spider web 24in LL/Outline	white
+> CCC Spider web 24in LL	Ring1		CCC Spider web 24in LL/Ring1	white
+> CCC Spider web 24in LL	Ring2		CCC Spider web 24in LL/Ring2	white
+> CCC Spider web 24in LL	Ring3		CCC Spider web 24in LL/Ring3	white
+> CCC Spider web 24in LL	Ring4		CCC Spider web 24in LL/Ring4	white
+> CCC Spider web 24in LL	Spokes		CCC Spider web 24in LL/Spokes	white
+> CCC Spider web 24in LL	Spokes-01		CCC Spider web 24in LL/Spokes-01	white
+> CCC Spider web 24in LL	Spokes-02		CCC Spider web 24in LL/Spokes-02	white
+> CCC Spider web 24in LL	Spokes-03		CCC Spider web 24in LL/Spokes-03	white
+> CCC Spider web 24in LL	Spokes-04		CCC Spider web 24in LL/Spokes-04	white
+> CCC Spider web 24in LL	Spokes-05		CCC Spider web 24in LL/Spokes-05	white
+> CCC Spider web 24in LL	Spokes-06		CCC Spider web 24in LL/Spokes-06	white
+> CCC Spider web 24in LL	Spokes-07		CCC Spider web 24in LL/Spokes-07	white
+> CCC Spider web 24in LL	Spokes-08		CCC Spider web 24in LL/Spokes-08	white
+> CCC Spider web 24in LL	Webbing		CCC Spider web 24in LL/Webbing	white
+> CCC Spider web 24in LL	Webbing-01		CCC Spider web 24in LL/Webbing-01	white
+> CCC Spider web 24in LL	Webbing-02		CCC Spider web 24in LL/Webbing-02	white
+> CCC Spider web 24in LL	Webbing-03		CCC Spider web 24in LL/Webbing-03	white
+> CCC Spider web 24in LL	Webbing-04		CCC Spider web 24in LL/Webbing-04	white
+> CCC Spider web 24in LL	Webbing-05		CCC Spider web 24in LL/Webbing-05	white
+> CCC Spider web 24in LL	Webbing-06		CCC Spider web 24in LL/Webbing-06	white
+> CCC Spider web 24in LL	Webbing-07		CCC Spider web 24in LL/Webbing-07	white
+> CCC Spider web 24in LL	Webbing-08		CCC Spider web 24in LL/Webbing-08	white
+> CCC Spider web 24in LL	Alerts		CCC Spider web 24in LL/Alerts	white
+> CCC Spider web 24in LL	Alerts-01		CCC Spider web 24in LL/Alerts-01	white
+> CCC Spider web 24in LL	Alerts-02		CCC Spider web 24in LL/Alerts-02	white
+> CCC Spider web 24in LL	Alerts-03		CCC Spider web 24in LL/Alerts-03	white
+> CCC Spider web 24in LL	Alerts-04		CCC Spider web 24in LL/Alerts-04	white
+> CCC Spider web 24in LL	Alerts-05		CCC Spider web 24in LL/Alerts-05	white
+> CCC Spider web 24in LL	Alerts-06		CCC Spider web 24in LL/Alerts-06	white
+> CCC Spider web 24in LL	Alerts-07		CCC Spider web 24in LL/Alerts-07	white
+> CCC Spider web 24in LL	Alerts-08		CCC Spider web 24in LL/Alerts-08	white
+> CCC Spider web 24in LR			CCC Spider web 24in LR	white
+> CCC Spider web 24in LR	Outer row		CCC Spider web 24in LR/Outer row	white
+> CCC Spider web 24in LR	Inner row 1		CCC Spider web 24in LR/Inner row 1	white
+> CCC Spider web 24in LR	Inner row 2		CCC Spider web 24in LR/Inner row 2	white
+> CCC Spider web 24in LR	Inner row 3		CCC Spider web 24in LR/Inner row 3	white
+> CCC Spider web 24in LR	Inner dot		CCC Spider web 24in LR/Inner dot	white
+> CCC Spider web 24in LR	Section 1		CCC Spider web 24in LR/Section 1	white
+> CCC Spider web 24in LR	Section 2		CCC Spider web 24in LR/Section 2	white
+> CCC Spider web 24in LR	Section 3		CCC Spider web 24in LR/Section 3	white
+> CCC Spider web 24in LR	Section 4		CCC Spider web 24in LR/Section 4	white
+> CCC Spider web 24in LR	Section 5		CCC Spider web 24in LR/Section 5	white
+> CCC Spider web 24in LR	Section 6		CCC Spider web 24in LR/Section 6	white
+> CCC Spider web 24in LR	Section 7		CCC Spider web 24in LR/Section 7	white
+> CCC Spider web 24in LR	Section 8		CCC Spider web 24in LR/Section 8	white
+> CCC Spider web 24in LR	Sub section 1		CCC Spider web 24in LR/Sub section 1	white
+> CCC Spider web 24in LR	Sub section 2		CCC Spider web 24in LR/Sub section 2	white
+> CCC Spider web 24in LR	Sub section 3		CCC Spider web 24in LR/Sub section 3	white
+> CCC Spider web 24in LR	Sub section 4		CCC Spider web 24in LR/Sub section 4	white
+> CCC Spider web 24in LR	Sub section 5		CCC Spider web 24in LR/Sub section 5	white
+> CCC Spider web 24in LR	Sub section 6		CCC Spider web 24in LR/Sub section 6	white
+> CCC Spider web 24in LR	Sub section 7		CCC Spider web 24in LR/Sub section 7	white
+> CCC Spider web 24in LR	Sub section 8		CCC Spider web 24in LR/Sub section 8	white
+> CCC Spider web 24in LR	Small section 1		CCC Spider web 24in LR/Small section 1	white
+> CCC Spider web 24in LR	Small section 2		CCC Spider web 24in LR/Small section 2	white
+> CCC Spider web 24in LR	Small section 3		CCC Spider web 24in LR/Small section 3	white
+> CCC Spider web 24in LR	Small section 4		CCC Spider web 24in LR/Small section 4	white
+> CCC Spider web 24in LR	Small section 5		CCC Spider web 24in LR/Small section 5	white
+> CCC Spider web 24in LR	Small section 6		CCC Spider web 24in LR/Small section 6	white
+> CCC Spider web 24in LR	Small section 7		CCC Spider web 24in LR/Small section 7	white
+> CCC Spider web 24in LR	Small section 8		CCC Spider web 24in LR/Small section 8	white
+> CCC Spider web 24in LR	Default		CCC Spider web 24in LR/Default	white
+> CCC Spider web 24in LR	Outline		CCC Spider web 24in LR/Outline	white
+> CCC Spider web 24in LR	Ring1		CCC Spider web 24in LR/Ring1	white
+> CCC Spider web 24in LR	Ring2		CCC Spider web 24in LR/Ring2	white
+> CCC Spider web 24in LR	Ring3		CCC Spider web 24in LR/Ring3	white
+> CCC Spider web 24in LR	Ring4		CCC Spider web 24in LR/Ring4	white
+> CCC Spider web 24in LR	Spokes		CCC Spider web 24in LR/Spokes	white
+> CCC Spider web 24in LR	Spokes-01		CCC Spider web 24in LR/Spokes-01	white
+> CCC Spider web 24in LR	Spokes-02		CCC Spider web 24in LR/Spokes-02	white
+> CCC Spider web 24in LR	Spokes-03		CCC Spider web 24in LR/Spokes-03	white
+> CCC Spider web 24in LR	Spokes-04		CCC Spider web 24in LR/Spokes-04	white
+> CCC Spider web 24in LR	Spokes-05		CCC Spider web 24in LR/Spokes-05	white
+> CCC Spider web 24in LR	Spokes-06		CCC Spider web 24in LR/Spokes-06	white
+> CCC Spider web 24in LR	Spokes-07		CCC Spider web 24in LR/Spokes-07	white
+> CCC Spider web 24in LR	Spokes-08		CCC Spider web 24in LR/Spokes-08	white
+> CCC Spider web 24in LR	Webbing		CCC Spider web 24in LR/Webbing	white
+> CCC Spider web 24in LR	Webbing-01		CCC Spider web 24in LR/Webbing-01	white
+> CCC Spider web 24in LR	Webbing-02		CCC Spider web 24in LR/Webbing-02	white
+> CCC Spider web 24in LR	Webbing-03		CCC Spider web 24in LR/Webbing-03	white
+> CCC Spider web 24in LR	Webbing-04		CCC Spider web 24in LR/Webbing-04	white
+> CCC Spider web 24in LR	Webbing-05		CCC Spider web 24in LR/Webbing-05	white
+> CCC Spider web 24in LR	Webbing-06		CCC Spider web 24in LR/Webbing-06	white
+> CCC Spider web 24in LR	Webbing-07		CCC Spider web 24in LR/Webbing-07	white
+> CCC Spider web 24in LR	Webbing-08		CCC Spider web 24in LR/Webbing-08	white
+> CCC Spider web 24in LR	Alerts		CCC Spider web 24in LR/Alerts	white
+> CCC Spider web 24in LR	Alerts-01		CCC Spider web 24in LR/Alerts-01	white
+> CCC Spider web 24in LR	Alerts-02		CCC Spider web 24in LR/Alerts-02	white
+> CCC Spider web 24in LR	Alerts-03		CCC Spider web 24in LR/Alerts-03	white
+> CCC Spider web 24in LR	Alerts-04		CCC Spider web 24in LR/Alerts-04	white
+> CCC Spider web 24in LR	Alerts-05		CCC Spider web 24in LR/Alerts-05	white
+> CCC Spider web 24in LR	Alerts-06		CCC Spider web 24in LR/Alerts-06	white
+> CCC Spider web 24in LR	Alerts-07		CCC Spider web 24in LR/Alerts-07	white
+> CCC Spider web 24in LR	Alerts-08		CCC Spider web 24in LR/Alerts-08	white
+> CCC Spider web 24in RL			CCC Spider web 24in RL	white
+> CCC Spider web 24in RL	Outer row		CCC Spider web 24in RL/Outer row	white
+> CCC Spider web 24in RL	Inner row 1		CCC Spider web 24in RL/Inner row 1	white
+> CCC Spider web 24in RL	Inner row 2		CCC Spider web 24in RL/Inner row 2	white
+> CCC Spider web 24in RL	Inner row 3		CCC Spider web 24in RL/Inner row 3	white
+> CCC Spider web 24in RL	Inner dot		CCC Spider web 24in RL/Inner dot	white
+> CCC Spider web 24in RL	Section 1		CCC Spider web 24in RL/Section 1	white
+> CCC Spider web 24in RL	Section 2		CCC Spider web 24in RL/Section 2	white
+> CCC Spider web 24in RL	Section 3		CCC Spider web 24in RL/Section 3	white
+> CCC Spider web 24in RL	Section 4		CCC Spider web 24in RL/Section 4	white
+> CCC Spider web 24in RL	Section 5		CCC Spider web 24in RL/Section 5	white
+> CCC Spider web 24in RL	Section 6		CCC Spider web 24in RL/Section 6	white
+> CCC Spider web 24in RL	Section 7		CCC Spider web 24in RL/Section 7	white
+> CCC Spider web 24in RL	Section 8		CCC Spider web 24in RL/Section 8	white
+> CCC Spider web 24in RL	Sub section 1		CCC Spider web 24in RL/Sub section 1	white
+> CCC Spider web 24in RL	Sub section 2		CCC Spider web 24in RL/Sub section 2	white
+> CCC Spider web 24in RL	Sub section 3		CCC Spider web 24in RL/Sub section 3	white
+> CCC Spider web 24in RL	Sub section 4		CCC Spider web 24in RL/Sub section 4	white
+> CCC Spider web 24in RL	Sub section 5		CCC Spider web 24in RL/Sub section 5	white
+> CCC Spider web 24in RL	Sub section 6		CCC Spider web 24in RL/Sub section 6	white
+> CCC Spider web 24in RL	Sub section 7		CCC Spider web 24in RL/Sub section 7	white
+> CCC Spider web 24in RL	Sub section 8		CCC Spider web 24in RL/Sub section 8	white
+> CCC Spider web 24in RL	Small section 1		CCC Spider web 24in RL/Small section 1	white
+> CCC Spider web 24in RL	Small section 2		CCC Spider web 24in RL/Small section 2	white
+> CCC Spider web 24in RL	Small section 3		CCC Spider web 24in RL/Small section 3	white
+> CCC Spider web 24in RL	Small section 4		CCC Spider web 24in RL/Small section 4	white
+> CCC Spider web 24in RL	Small section 5		CCC Spider web 24in RL/Small section 5	white
+> CCC Spider web 24in RL	Small section 6		CCC Spider web 24in RL/Small section 6	white
+> CCC Spider web 24in RL	Small section 7		CCC Spider web 24in RL/Small section 7	white
+> CCC Spider web 24in RL	Small section 8		CCC Spider web 24in RL/Small section 8	white
+> CCC Spider web 24in RL	Default		CCC Spider web 24in RL/Default	white
+> CCC Spider web 24in RL	Outline		CCC Spider web 24in RL/Outline	white
+> CCC Spider web 24in RL	Ring1		CCC Spider web 24in RL/Ring1	white
+> CCC Spider web 24in RL	Ring2		CCC Spider web 24in RL/Ring2	white
+> CCC Spider web 24in RL	Ring3		CCC Spider web 24in RL/Ring3	white
+> CCC Spider web 24in RL	Ring4		CCC Spider web 24in RL/Ring4	white
+> CCC Spider web 24in RL	Spokes		CCC Spider web 24in RL/Spokes	white
+> CCC Spider web 24in RL	Spokes-01		CCC Spider web 24in RL/Spokes-01	white
+> CCC Spider web 24in RL	Spokes-02		CCC Spider web 24in RL/Spokes-02	white
+> CCC Spider web 24in RL	Spokes-03		CCC Spider web 24in RL/Spokes-03	white
+> CCC Spider web 24in RL	Spokes-04		CCC Spider web 24in RL/Spokes-04	white
+> CCC Spider web 24in RL	Spokes-05		CCC Spider web 24in RL/Spokes-05	white
+> CCC Spider web 24in RL	Spokes-06		CCC Spider web 24in RL/Spokes-06	white
+> CCC Spider web 24in RL	Spokes-07		CCC Spider web 24in RL/Spokes-07	white
+> CCC Spider web 24in RL	Spokes-08		CCC Spider web 24in RL/Spokes-08	white
+> CCC Spider web 24in RL	Webbing		CCC Spider web 24in RL/Webbing	white
+> CCC Spider web 24in RL	Webbing-01		CCC Spider web 24in RL/Webbing-01	white
+> CCC Spider web 24in RL	Webbing-02		CCC Spider web 24in RL/Webbing-02	white
+> CCC Spider web 24in RL	Webbing-03		CCC Spider web 24in RL/Webbing-03	white
+> CCC Spider web 24in RL	Webbing-04		CCC Spider web 24in RL/Webbing-04	white
+> CCC Spider web 24in RL	Webbing-05		CCC Spider web 24in RL/Webbing-05	white
+> CCC Spider web 24in RL	Webbing-06		CCC Spider web 24in RL/Webbing-06	white
+> CCC Spider web 24in RL	Webbing-07		CCC Spider web 24in RL/Webbing-07	white
+> CCC Spider web 24in RL	Webbing-08		CCC Spider web 24in RL/Webbing-08	white
+> CCC Spider web 24in RL	Alerts		CCC Spider web 24in RL/Alerts	white
+> CCC Spider web 24in RL	Alerts-01		CCC Spider web 24in RL/Alerts-01	white
+> CCC Spider web 24in RL	Alerts-02		CCC Spider web 24in RL/Alerts-02	white
+> CCC Spider web 24in RL	Alerts-03		CCC Spider web 24in RL/Alerts-03	white
+> CCC Spider web 24in RL	Alerts-04		CCC Spider web 24in RL/Alerts-04	white
+> CCC Spider web 24in RL	Alerts-05		CCC Spider web 24in RL/Alerts-05	white
+> CCC Spider web 24in RL	Alerts-06		CCC Spider web 24in RL/Alerts-06	white
+> CCC Spider web 24in RL	Alerts-07		CCC Spider web 24in RL/Alerts-07	white
+> CCC Spider web 24in RL	Alerts-08		CCC Spider web 24in RL/Alerts-08	white
+> CCC Spider web 24in RR			CCC Spider web 24in RR	white
+> CCC Spider web 24in RR	Outer row		CCC Spider web 24in RR/Outer row	white
+> CCC Spider web 24in RR	Inner row 1		CCC Spider web 24in RR/Inner row 1	white
+> CCC Spider web 24in RR	Inner row 2		CCC Spider web 24in RR/Inner row 2	white
+> CCC Spider web 24in RR	Inner row 3		CCC Spider web 24in RR/Inner row 3	white
+> CCC Spider web 24in RR	Inner dot		CCC Spider web 24in RR/Inner dot	white
+> CCC Spider web 24in RR	Section 1		CCC Spider web 24in RR/Section 1	white
+> CCC Spider web 24in RR	Section 2		CCC Spider web 24in RR/Section 2	white
+> CCC Spider web 24in RR	Section 3		CCC Spider web 24in RR/Section 3	white
+> CCC Spider web 24in RR	Section 4		CCC Spider web 24in RR/Section 4	white
+> CCC Spider web 24in RR	Section 5		CCC Spider web 24in RR/Section 5	white
+> CCC Spider web 24in RR	Section 6		CCC Spider web 24in RR/Section 6	white
+> CCC Spider web 24in RR	Section 7		CCC Spider web 24in RR/Section 7	white
+> CCC Spider web 24in RR	Section 8		CCC Spider web 24in RR/Section 8	white
+> CCC Spider web 24in RR	Sub section 1		CCC Spider web 24in RR/Sub section 1	white
+> CCC Spider web 24in RR	Sub section 2		CCC Spider web 24in RR/Sub section 2	white
+> CCC Spider web 24in RR	Sub section 3		CCC Spider web 24in RR/Sub section 3	white
+> CCC Spider web 24in RR	Sub section 4		CCC Spider web 24in RR/Sub section 4	white
+> CCC Spider web 24in RR	Sub section 5		CCC Spider web 24in RR/Sub section 5	white
+> CCC Spider web 24in RR	Sub section 6		CCC Spider web 24in RR/Sub section 6	white
+> CCC Spider web 24in RR	Sub section 7		CCC Spider web 24in RR/Sub section 7	white
+> CCC Spider web 24in RR	Sub section 8		CCC Spider web 24in RR/Sub section 8	white
+> CCC Spider web 24in RR	Small section 1		CCC Spider web 24in RR/Small section 1	white
+> CCC Spider web 24in RR	Small section 2		CCC Spider web 24in RR/Small section 2	white
+> CCC Spider web 24in RR	Small section 3		CCC Spider web 24in RR/Small section 3	white
+> CCC Spider web 24in RR	Small section 4		CCC Spider web 24in RR/Small section 4	white
+> CCC Spider web 24in RR	Small section 5		CCC Spider web 24in RR/Small section 5	white
+> CCC Spider web 24in RR	Small section 6		CCC Spider web 24in RR/Small section 6	white
+> CCC Spider web 24in RR	Small section 7		CCC Spider web 24in RR/Small section 7	white
+> CCC Spider web 24in RR	Small section 8		CCC Spider web 24in RR/Small section 8	white
+> CCC Spider web 24in RR	Default		CCC Spider web 24in RR/Default	white
+> CCC Spider web 24in RR	Outline		CCC Spider web 24in RR/Outline	white
+> CCC Spider web 24in RR	Ring1		CCC Spider web 24in RR/Ring1	white
+> CCC Spider web 24in RR	Ring2		CCC Spider web 24in RR/Ring2	white
+> CCC Spider web 24in RR	Ring3		CCC Spider web 24in RR/Ring3	white
+> CCC Spider web 24in RR	Ring4		CCC Spider web 24in RR/Ring4	white
+> CCC Spider web 24in RR	Spokes		CCC Spider web 24in RR/Spokes	white
+> CCC Spider web 24in RR	Spokes-01		CCC Spider web 24in RR/Spokes-01	white
+> CCC Spider web 24in RR	Spokes-02		CCC Spider web 24in RR/Spokes-02	white
+> CCC Spider web 24in RR	Spokes-03		CCC Spider web 24in RR/Spokes-03	white
+> CCC Spider web 24in RR	Spokes-04		CCC Spider web 24in RR/Spokes-04	white
+> CCC Spider web 24in RR	Spokes-05		CCC Spider web 24in RR/Spokes-05	white
+> CCC Spider web 24in RR	Spokes-06		CCC Spider web 24in RR/Spokes-06	white
+> CCC Spider web 24in RR	Spokes-07		CCC Spider web 24in RR/Spokes-07	white
+> CCC Spider web 24in RR	Spokes-08		CCC Spider web 24in RR/Spokes-08	white
+> CCC Spider web 24in RR	Webbing		CCC Spider web 24in RR/Webbing	white
+> CCC Spider web 24in RR	Webbing-01		CCC Spider web 24in RR/Webbing-01	white
+> CCC Spider web 24in RR	Webbing-02		CCC Spider web 24in RR/Webbing-02	white
+> CCC Spider web 24in RR	Webbing-03		CCC Spider web 24in RR/Webbing-03	white
+> CCC Spider web 24in RR	Webbing-04		CCC Spider web 24in RR/Webbing-04	white
+> CCC Spider web 24in RR	Webbing-05		CCC Spider web 24in RR/Webbing-05	white
+> CCC Spider web 24in RR	Webbing-06		CCC Spider web 24in RR/Webbing-06	white
+> CCC Spider web 24in RR	Webbing-07		CCC Spider web 24in RR/Webbing-07	white
+> CCC Spider web 24in RR	Webbing-08		CCC Spider web 24in RR/Webbing-08	white
+> CCC Spider web 24in RR	Alerts		CCC Spider web 24in RR/Alerts	white
+> CCC Spider web 24in RR	Alerts-01		CCC Spider web 24in RR/Alerts-01	white
+> CCC Spider web 24in RR	Alerts-02		CCC Spider web 24in RR/Alerts-02	white
+> CCC Spider web 24in RR	Alerts-03		CCC Spider web 24in RR/Alerts-03	white
+> CCC Spider web 24in RR	Alerts-04		CCC Spider web 24in RR/Alerts-04	white
+> CCC Spider web 24in RR	Alerts-05		CCC Spider web 24in RR/Alerts-05	white
+> CCC Spider web 24in RR	Alerts-06		CCC Spider web 24in RR/Alerts-06	white
+> CCC Spider web 24in RR	Alerts-07		CCC Spider web 24in RR/Alerts-07	white
+> CCC Spider web 24in RR	Alerts-08		CCC Spider web 24in RR/Alerts-08	white
+> ChromaGlow Tombs			ChromaGlow Tombs	white
+> ChromaGlow_TombStone-1			ChromaGlow_TombStone-1	white
+> ChromaGlow_TombStone-1	Border Outside in		ChromaGlow_TombStone-1/Border Outside in	white
+> ChromaGlow_TombStone-1	Horizontals Lower		ChromaGlow_TombStone-1/Horizontals Lower	white
+> ChromaGlow_TombStone-1	Horizontals Upper		ChromaGlow_TombStone-1/Horizontals Upper	white
+> ChromaGlow_TombStone-1	Verticals		ChromaGlow_TombStone-1/Verticals	white
+> ChromaGlow_TombStone-1	Verticals rt and lt		ChromaGlow_TombStone-1/Verticals rt and lt	white
+> ChromaGlow_TombStone-1	Default		ChromaGlow_TombStone-1/Default	white
+> ChromaGlow_TombStone-1	Outline		ChromaGlow_TombStone-1/Outline	white
+> ChromaGlow_TombStone-2			ChromaGlow_TombStone-2	white
+> ChromaGlow_TombStone-2	Border Outside in		ChromaGlow_TombStone-2/Border Outside in	white
+> ChromaGlow_TombStone-2	Horizontals Lower		ChromaGlow_TombStone-2/Horizontals Lower	white
+> ChromaGlow_TombStone-2	Horizontals Upper		ChromaGlow_TombStone-2/Horizontals Upper	white
+> ChromaGlow_TombStone-2	Verticals		ChromaGlow_TombStone-2/Verticals	white
+> ChromaGlow_TombStone-2	Verticals rt and lt		ChromaGlow_TombStone-2/Verticals rt and lt	white
+> ChromaGlow_TombStone-2	Default		ChromaGlow_TombStone-2/Default	white
+> ChromaGlow_TombStone-2	Outline		ChromaGlow_TombStone-2/Outline	white
+> ChromaGlow_TombStone-3			ChromaGlow_TombStone-3	white
+> ChromaGlow_TombStone-3	Border Outside in		ChromaGlow_TombStone-3/Border Outside in	white
+> ChromaGlow_TombStone-3	Horizontals Lower		ChromaGlow_TombStone-3/Horizontals Lower	white
+> ChromaGlow_TombStone-3	Horizontals Upper		ChromaGlow_TombStone-3/Horizontals Upper	white
+> ChromaGlow_TombStone-3	Verticals		ChromaGlow_TombStone-3/Verticals	white
+> ChromaGlow_TombStone-3	Verticals rt and lt		ChromaGlow_TombStone-3/Verticals rt and lt	white
+> ChromaGlow_TombStone-3	Default		ChromaGlow_TombStone-3/Default	white
+> ChromaGlow_TombStone-3	Outline		ChromaGlow_TombStone-3/Outline	white
+> ChromaGlow_TombStone-4			ChromaGlow_TombStone-4	white
+> ChromaGlow_TombStone-4	Border Outside in		ChromaGlow_TombStone-4/Border Outside in	white
+> ChromaGlow_TombStone-4	Horizontals Lower		ChromaGlow_TombStone-4/Horizontals Lower	white
+> ChromaGlow_TombStone-4	Horizontals Upper		ChromaGlow_TombStone-4/Horizontals Upper	white
+> ChromaGlow_TombStone-4	Verticals		ChromaGlow_TombStone-4/Verticals	white
+> ChromaGlow_TombStone-4	Verticals rt and lt		ChromaGlow_TombStone-4/Verticals rt and lt	white
+> ChromaGlow_TombStone-4	Default		ChromaGlow_TombStone-4/Default	white
+> ChromaGlow_TombStone-4	Outline		ChromaGlow_TombStone-4/Outline	white
+> ChromaGlow_TombStone-5			ChromaGlow_TombStone-5	white
+> ChromaGlow_TombStone-5	Border Outside in		ChromaGlow_TombStone-5/Border Outside in	white
+> ChromaGlow_TombStone-5	Horizontals Lower		ChromaGlow_TombStone-5/Horizontals Lower	white
+> ChromaGlow_TombStone-5	Horizontals Upper		ChromaGlow_TombStone-5/Horizontals Upper	white
+> ChromaGlow_TombStone-5	Verticals		ChromaGlow_TombStone-5/Verticals	white
+> ChromaGlow_TombStone-5	Verticals rt and lt		ChromaGlow_TombStone-5/Verticals rt and lt	white
+> ChromaGlow_TombStone-5	Default		ChromaGlow_TombStone-5/Default	white
+> ChromaGlow_TombStone-5	Outline		ChromaGlow_TombStone-5/Outline	white
+> ChromaGlow_TombStone-6			ChromaGlow_TombStone-6	white
+> ChromaGlow_TombStone-6	Border Outside in		ChromaGlow_TombStone-6/Border Outside in	white
+> ChromaGlow_TombStone-6	Horizontals Lower		ChromaGlow_TombStone-6/Horizontals Lower	white
+> ChromaGlow_TombStone-6	Horizontals Upper		ChromaGlow_TombStone-6/Horizontals Upper	white
+> ChromaGlow_TombStone-6	Verticals		ChromaGlow_TombStone-6/Verticals	white
+> ChromaGlow_TombStone-6	Verticals rt and lt		ChromaGlow_TombStone-6/Verticals rt and lt	white
+> ChromaGlow_TombStone-6	Default		ChromaGlow_TombStone-6/Default	white
+> ChromaGlow_TombStone-6	Outline		ChromaGlow_TombStone-6/Outline	white
+3859a4521,4599
+> EFL_Lamppost_ESide			EFL_Lamppost_ESide	white
+> EFL_Lamppost_ESide	outline		EFL_Lamppost_ESide/outline	white
+> EFL_Lamppost_ESide	bow		EFL_Lamppost_ESide/bow	white
+> EFL_Lamppost_ESide	ribbon		EFL_Lamppost_ESide/ribbon	white
+> EFL_Lamppost_ESide	ribbon and bow		EFL_Lamppost_ESide/ribbon and bow	white
+> EFL_Lamppost_ESide	light		EFL_Lamppost_ESide/light	white
+> EFL_Lamppost_ESide	Default		EFL_Lamppost_ESide/Default	white
+> EFL_Lamppost_ESide	OutlineFull		EFL_Lamppost_ESide/OutlineFull	white
+> EFL_Lamppost_ESide	Matrix		EFL_Lamppost_ESide/Matrix	white
+> EFL_Lamppost_ESide	bowcenter		EFL_Lamppost_ESide/bowcenter	white
+> EFL_Lamppost_ESide	bowcrease		EFL_Lamppost_ESide/bowcrease	white
+> EFL_Lamppost_ESide	BowOutline		EFL_Lamppost_ESide/BowOutline	white
+> EFL_Lamppost_ESide	RibbonVert		EFL_Lamppost_ESide/RibbonVert	white
+> EFL_Lamppost_ESide	Base		EFL_Lamppost_ESide/Base	white
+> EFL_Lamppost_ESide	Top		EFL_Lamppost_ESide/Top	white
+> EFL_Lamppost_ESide	Nub		EFL_Lamppost_ESide/Nub	white
+> EFL_Lamppost_ESide	Pole		EFL_Lamppost_ESide/Pole	white
+> EFL_Lamppost_WCorner			EFL_Lamppost_WCorner	white
+> EFL_Lamppost_WCorner	outline		EFL_Lamppost_WCorner/outline	white
+> EFL_Lamppost_WCorner	bow		EFL_Lamppost_WCorner/bow	white
+> EFL_Lamppost_WCorner	ribbon		EFL_Lamppost_WCorner/ribbon	white
+> EFL_Lamppost_WCorner	ribbon and bow		EFL_Lamppost_WCorner/ribbon and bow	white
+> EFL_Lamppost_WCorner	light		EFL_Lamppost_WCorner/light	white
+> EFL_Lamppost_WCorner	Default		EFL_Lamppost_WCorner/Default	white
+> EFL_Lamppost_WCorner	OutlineFull		EFL_Lamppost_WCorner/OutlineFull	white
+> EFL_Lamppost_WCorner	Matrix		EFL_Lamppost_WCorner/Matrix	white
+> EFL_Lamppost_WCorner	bowcenter		EFL_Lamppost_WCorner/bowcenter	white
+> EFL_Lamppost_WCorner	bowcrease		EFL_Lamppost_WCorner/bowcrease	white
+> EFL_Lamppost_WCorner	BowOutline		EFL_Lamppost_WCorner/BowOutline	white
+> EFL_Lamppost_WCorner	RibbonVert		EFL_Lamppost_WCorner/RibbonVert	white
+> EFL_Lamppost_WCorner	Base		EFL_Lamppost_WCorner/Base	white
+> EFL_Lamppost_WCorner	Top		EFL_Lamppost_WCorner/Top	white
+> EFL_Lamppost_WCorner	Nub		EFL_Lamppost_WCorner/Nub	white
+> EFL_Lamppost_WCorner	Pole		EFL_Lamppost_WCorner/Pole	white
+> EFL_Radio			EFL_Radio	white
+> EFL_Radio	Outline		EFL_Radio/Outline	white
+> EFL_Radio	Handle		EFL_Radio/Handle	white
+> EFL_Radio	Tune to Matrix		EFL_Radio/Tune to Matrix	white
+> EFL_Radio	VU1		EFL_Radio/VU1	white
+> EFL_Radio	VU2		EFL_Radio/VU2	white
+> EFL_Radio	Speaker Angled 1		EFL_Radio/Speaker Angled 1	white
+> EFL_Radio	Speaker Circles		EFL_Radio/Speaker Circles	white
+> EFL_Radio	Speaker Star		EFL_Radio/Speaker Star	white
+> EFL_Radio	Speaker outlines		EFL_Radio/Speaker outlines	white
+> EFL_Radio	Large matrix		EFL_Radio/Large matrix	white
+> EFL_Radio	5x5 Spinners		EFL_Radio/5x5 Spinners	white
+> EFL_Radio	Horizontals		EFL_Radio/Horizontals	white
+> EFL_Radio	Verticals		EFL_Radio/Verticals	white
+> EFL_Radio	Full Spinner		EFL_Radio/Full Spinner	white
+> EFL_Radio	Left Speaker		EFL_Radio/Left Speaker	white
+> EFL_Radio	Right Speaker		EFL_Radio/Right Speaker	white
+> EFL_Radio	Left Speaker Outline		EFL_Radio/Left Speaker Outline	white
+> EFL_Radio	Right Speaker Outline		EFL_Radio/Right Speaker Outline	white
+> EFL_Radio	Left Speaker Circle 1		EFL_Radio/Left Speaker Circle 1	white
+> EFL_Radio	Left Speaker Circle 2		EFL_Radio/Left Speaker Circle 2	white
+> EFL_Radio	Left Speaker Circle 3		EFL_Radio/Left Speaker Circle 3	white
+> EFL_Radio	Left Speaker Circle 4		EFL_Radio/Left Speaker Circle 4	white
+> EFL_Radio	Right Speaker Circle 1		EFL_Radio/Right Speaker Circle 1	white
+> EFL_Radio	Right Speaker Circle 2		EFL_Radio/Right Speaker Circle 2	white
+> EFL_Radio	Right Speaker Circle 3		EFL_Radio/Right Speaker Circle 3	white
+> EFL_Radio	Right Speaker Circle 4		EFL_Radio/Right Speaker Circle 4	white
+> EFL_Radio	Default		EFL_Radio/Default	white
+> EFL_Radio	OutlineAll		EFL_Radio/OutlineAll	white
+> EFL_Radio	SpinnerShortLeft		EFL_Radio/SpinnerShortLeft	white
+> EFL_Radio	SpinnerShortRight		EFL_Radio/SpinnerShortRight	white
+> EFL_Radio	SpinnerAlertLeft		EFL_Radio/SpinnerAlertLeft	white
+> EFL_Radio	SpinnerAlertRight		EFL_Radio/SpinnerAlertRight	white
+> EFL_Radio	SpinnerLeft		EFL_Radio/SpinnerLeft	white
+> EFL_Radio	SpinnerRight		EFL_Radio/SpinnerRight	white
+> EFL_SnowGlobe			EFL_SnowGlobe	white
+> EFL_SnowGlobe	Base		EFL_SnowGlobe/Base	white
+> EFL_SnowGlobe	Base Diamond		EFL_SnowGlobe/Base Diamond	white
+> EFL_SnowGlobe	Matrix		EFL_SnowGlobe/Matrix	white
+> EFL_SnowGlobe	Globe		EFL_SnowGlobe/Globe	white
+> EFL_SnowGlobe	Matrix Bottom		EFL_SnowGlobe/Matrix Bottom	white
+> EFL_SnowGlobe	MatrixTop		EFL_SnowGlobe/MatrixTop	white
+> EFL_SnowGlobe	Strands		EFL_SnowGlobe/Strands	white
+> EFL_SnowGlobe	3D Shade		EFL_SnowGlobe/3D Shade	white
+> EFL_SnowGlobe	Outline		EFL_SnowGlobe/Outline	white
+4196a4937,4975
+> GE Bunting 4			GE Bunting 4	white
+> GE Bunting 4	Outline		GE Bunting 4/Outline	white
+> GE Bunting 4	Stars		GE Bunting 4/Stars	white
+> GE Bunting 4	StarStrands		GE Bunting 4/StarStrands	white
+> GE Bunting 4	Ruffles		GE Bunting 4/Ruffles	white
+> GE Bunting 4	Center		GE Bunting 4/Center	white
+> GE Bunting 4	Edge		GE Bunting 4/Edge	white
+> GE Bunting 4	MiddleRing		GE Bunting 4/MiddleRing	white
+> GE Bunting 4	InnerRing1		GE Bunting 4/InnerRing1	white
+> GE Bunting 4	InnerRing2		GE Bunting 4/InnerRing2	white
+> GE Bunting 4	InnerRing3		GE Bunting 4/InnerRing3	white
+> GE Bunting 4	Spokes		GE Bunting 4/Spokes	white
+> GE Bunting 4	SpokesExtended		GE Bunting 4/SpokesExtended	white
+> GE Bunting 4	TopEdge		GE Bunting 4/TopEdge	white
+> GE Bunting 4	Other		GE Bunting 4/Other	white
+> GE Bunting 4	Rings5		GE Bunting 4/Rings5	white
+> GE Bunting 4	Rings3		GE Bunting 4/Rings3	white
+> GE Bunting 4	StarStrands-01		GE Bunting 4/StarStrands-01	white
+> GE Bunting 4	StarStrands-02		GE Bunting 4/StarStrands-02	white
+> GE Bunting 4	StarStrands-03		GE Bunting 4/StarStrands-03	white
+> GE Bunting 4	StarStrands-04		GE Bunting 4/StarStrands-04	white
+> GE Bunting 4	StarStrands-05		GE Bunting 4/StarStrands-05	white
+> GE Bunting 4	Ruffles-01		GE Bunting 4/Ruffles-01	white
+> GE Bunting 4	Ruffles-02		GE Bunting 4/Ruffles-02	white
+> GE Bunting 4	Ruffles-03		GE Bunting 4/Ruffles-03	white
+> GE Bunting 4	Ruffles-04		GE Bunting 4/Ruffles-04	white
+> GE Bunting 4	Ruffles-05		GE Bunting 4/Ruffles-05	white
+> GE Bunting 4	Spokes-01		GE Bunting 4/Spokes-01	white
+> GE Bunting 4	Spokes-02		GE Bunting 4/Spokes-02	white
+> GE Bunting 4	Spokes-03		GE Bunting 4/Spokes-03	white
+> GE Bunting 4	Spokes-04		GE Bunting 4/Spokes-04	white
+> GE Bunting 4	Spokes-05		GE Bunting 4/Spokes-05	white
+> GE Bunting 4	Spokes-06		GE Bunting 4/Spokes-06	white
+> GE Bunting 4	SpokesExtended-01		GE Bunting 4/SpokesExtended-01	white
+> GE Bunting 4	SpokesExtended-02		GE Bunting 4/SpokesExtended-02	white
+> GE Bunting 4	SpokesExtended-03		GE Bunting 4/SpokesExtended-03	white
+> GE Bunting 4	SpokesExtended-04		GE Bunting 4/SpokesExtended-04	white
+> GE Bunting 4	SpokesExtended-05		GE Bunting 4/SpokesExtended-05	white
+> GE Bunting 4	SpokesExtended-06		GE Bunting 4/SpokesExtended-06	white
+4657a5437,5452
+> GE Flying Bat Jr 1			GE Flying Bat Jr 1	white
+> GE Flying Bat Jr 1	Wing up		GE Flying Bat Jr 1/Wing up	white
+> GE Flying Bat Jr 1	Wing Down		GE Flying Bat Jr 1/Wing Down	white
+> GE Flying Bat Jr 1	EYES		GE Flying Bat Jr 1/EYES	white
+> GE Flying Bat Jr 2			GE Flying Bat Jr 2	white
+> GE Flying Bat Jr 2	Wing up		GE Flying Bat Jr 2/Wing up	white
+> GE Flying Bat Jr 2	Wing Down		GE Flying Bat Jr 2/Wing Down	white
+> GE Flying Bat Jr 2	EYES		GE Flying Bat Jr 2/EYES	white
+> GE Flying Bat Jr 3			GE Flying Bat Jr 3	white
+> GE Flying Bat Jr 3	Wing up		GE Flying Bat Jr 3/Wing up	white
+> GE Flying Bat Jr 3	Wing Down		GE Flying Bat Jr 3/Wing Down	white
+> GE Flying Bat Jr 3	EYES		GE Flying Bat Jr 3/EYES	white
+> GE Flying Bat Jr 4			GE Flying Bat Jr 4	white
+> GE Flying Bat Jr 4	Wing up		GE Flying Bat Jr 4/Wing up	white
+> GE Flying Bat Jr 4	Wing Down		GE Flying Bat Jr 4/Wing Down	white
+> GE Flying Bat Jr 4	EYES		GE Flying Bat Jr 4/EYES	white
+4716a5512
+> GE Insane Cane Candle GRP			GE Insane Cane Candle GRP	white
+4720a5517
+> GE Insane Cane Flame GRP			GE Insane Cane Flame GRP	white
+7407a8205,8999
+> GE Rosa Tomb - GRP			GE Rosa Tomb - GRP	white
+> GE Rosa Tomb 1			GE Rosa Tomb 1	white
+> GE Rosa Tomb 1	Bat Body		GE Rosa Tomb 1/Bat Body	white
+> GE Rosa Tomb 1	Bat Eyes		GE Rosa Tomb 1/Bat Eyes	white
+> GE Rosa Tomb 1	Bat Flying Wings Up		GE Rosa Tomb 1/Bat Flying Wings Up	white
+> GE Rosa Tomb 1	Bat Flying Wings Down		GE Rosa Tomb 1/Bat Flying Wings Down	white
+> GE Rosa Tomb 1	Tomb Full Outline		GE Rosa Tomb 1/Tomb Full Outline	white
+> GE Rosa Tomb 1	Cross Outline		GE Rosa Tomb 1/Cross Outline	white
+> GE Rosa Tomb 1	Cross Highlights		GE Rosa Tomb 1/Cross Highlights	white
+> GE Rosa Tomb 1	Cross Spinner Outline		GE Rosa Tomb 1/Cross Spinner Outline	white
+> GE Rosa Tomb 1	Cross Spinner Spoke 1		GE Rosa Tomb 1/Cross Spinner Spoke 1	white
+> GE Rosa Tomb 1	Cross Spinner Spoke 2		GE Rosa Tomb 1/Cross Spinner Spoke 2	white
+> GE Rosa Tomb 1	Cross Spinner Spoke 3		GE Rosa Tomb 1/Cross Spinner Spoke 3	white
+> GE Rosa Tomb 1	Cross Spinner Spoke 4		GE Rosa Tomb 1/Cross Spinner Spoke 4	white
+> GE Rosa Tomb 1	Cross Spinner Spoke 5		GE Rosa Tomb 1/Cross Spinner Spoke 5	white
+> GE Rosa Tomb 1	Cross Spinner Spoke 6		GE Rosa Tomb 1/Cross Spinner Spoke 6	white
+> GE Rosa Tomb 1	Cross Spinner Spoke 7		GE Rosa Tomb 1/Cross Spinner Spoke 7	white
+> GE Rosa Tomb 1	Cross Spinner Spoke 8		GE Rosa Tomb 1/Cross Spinner Spoke 8	white
+> GE Rosa Tomb 1	Cross Spinner Ring 1		GE Rosa Tomb 1/Cross Spinner Ring 1	white
+> GE Rosa Tomb 1	Cross Spinner Ring 2		GE Rosa Tomb 1/Cross Spinner Ring 2	white
+> GE Rosa Tomb 1	Cross Spinner Ring 3		GE Rosa Tomb 1/Cross Spinner Ring 3	white
+> GE Rosa Tomb 1	Cross Spinner Ring 4		GE Rosa Tomb 1/Cross Spinner Ring 4	white
+> GE Rosa Tomb 1	Cross Spinner Ring 5		GE Rosa Tomb 1/Cross Spinner Ring 5	white
+> GE Rosa Tomb 1	Tomb Spoke 1		GE Rosa Tomb 1/Tomb Spoke 1	white
+> GE Rosa Tomb 1	Tomb Spoke 2		GE Rosa Tomb 1/Tomb Spoke 2	white
+> GE Rosa Tomb 1	Tomb Spoke 3		GE Rosa Tomb 1/Tomb Spoke 3	white
+> GE Rosa Tomb 1	Tomb Spoke 4		GE Rosa Tomb 1/Tomb Spoke 4	white
+> GE Rosa Tomb 1	Tomb Spoke 5		GE Rosa Tomb 1/Tomb Spoke 5	white
+> GE Rosa Tomb 1	Tomb Spoke 6		GE Rosa Tomb 1/Tomb Spoke 6	white
+> GE Rosa Tomb 1	Tomb Spoke 7		GE Rosa Tomb 1/Tomb Spoke 7	white
+> GE Rosa Tomb 1	Tomb Spoke 8		GE Rosa Tomb 1/Tomb Spoke 8	white
+> GE Rosa Tomb 1	Tomb Ring 1		GE Rosa Tomb 1/Tomb Ring 1	white
+> GE Rosa Tomb 1	Tomb Ring 2		GE Rosa Tomb 1/Tomb Ring 2	white
+> GE Rosa Tomb 1	Tomb Ring 3		GE Rosa Tomb 1/Tomb Ring 3	white
+> GE Rosa Tomb 1	Tomb Ring 4		GE Rosa Tomb 1/Tomb Ring 4	white
+> GE Rosa Tomb 1	Tomb Ring 5		GE Rosa Tomb 1/Tomb Ring 5	white
+> GE Rosa Tomb 1	Tomb Ring 6		GE Rosa Tomb 1/Tomb Ring 6	white
+> GE Rosa Tomb 1	Tomb Ring 7		GE Rosa Tomb 1/Tomb Ring 7	white
+> GE Rosa Tomb 1	Flake Outline		GE Rosa Tomb 1/Flake Outline	white
+> GE Rosa Tomb 1	Paddle Arm 1		GE Rosa Tomb 1/Paddle Arm 1	white
+> GE Rosa Tomb 1	Paddle Arm 2		GE Rosa Tomb 1/Paddle Arm 2	white
+> GE Rosa Tomb 1	Paddle Arm 3		GE Rosa Tomb 1/Paddle Arm 3	white
+> GE Rosa Tomb 1	Paddle Arm 4		GE Rosa Tomb 1/Paddle Arm 4	white
+> GE Rosa Tomb 1	Paddle Arm 5		GE Rosa Tomb 1/Paddle Arm 5	white
+> GE Rosa Tomb 1	Paddle Arm 6		GE Rosa Tomb 1/Paddle Arm 6	white
+> GE Rosa Tomb 1	Paddle Arm 7		GE Rosa Tomb 1/Paddle Arm 7	white
+> GE Rosa Tomb 1	Paddle Arm 8		GE Rosa Tomb 1/Paddle Arm 8	white
+> GE Rosa Tomb 1	Star		GE Rosa Tomb 1/Star	white
+> GE Rosa Tomb 1	Warp 1		GE Rosa Tomb 1/Warp 1	white
+> GE Rosa Tomb 1	Warp 2		GE Rosa Tomb 1/Warp 2	white
+> GE Rosa Tomb 1	Warp 3		GE Rosa Tomb 1/Warp 3	white
+> GE Rosa Tomb 1	Warp 4		GE Rosa Tomb 1/Warp 4	white
+> GE Rosa Tomb 1	Warp 5		GE Rosa Tomb 1/Warp 5	white
+> GE Rosa Tomb 1	Warp 6		GE Rosa Tomb 1/Warp 6	white
+> GE Rosa Tomb 1	Warp 7		GE Rosa Tomb 1/Warp 7	white
+> GE Rosa Tomb 1	Warp 8		GE Rosa Tomb 1/Warp 8	white
+> GE Rosa Tomb 1	Tombstone Lower		GE Rosa Tomb 1/Tombstone Lower	white
+> GE Rosa Tomb 1	Gourds		GE Rosa Tomb 1/Gourds	white
+> GE Rosa Tomb 1	Gourds-01		GE Rosa Tomb 1/Gourds-01	white
+> GE Rosa Tomb 1	Gourds-02		GE Rosa Tomb 1/Gourds-02	white
+> GE Rosa Tomb 1	Gourds-03		GE Rosa Tomb 1/Gourds-03	white
+> GE Rosa Tomb 1	Gourds-04		GE Rosa Tomb 1/Gourds-04	white
+> GE Rosa Tomb 1	Gourds-05		GE Rosa Tomb 1/Gourds-05	white
+> GE Rosa Tomb 1	Gourds-06		GE Rosa Tomb 1/Gourds-06	white
+> GE Rosa Tomb 1	Gourds-07		GE Rosa Tomb 1/Gourds-07	white
+> GE Rosa Tomb 1	Gourds-08		GE Rosa Tomb 1/Gourds-08	white
+> GE Rosa Tomb 1	Cross Highlights Fix		GE Rosa Tomb 1/Cross Highlights Fix	white
+> GE Rosa Tomb 1	Default		GE Rosa Tomb 1/Default	white
+> GE Rosa Tomb 1	BatUp		GE Rosa Tomb 1/BatUp	white
+> GE Rosa Tomb 1	BatOutlineUp		GE Rosa Tomb 1/BatOutlineUp	white
+> GE Rosa Tomb 1	BatDown		GE Rosa Tomb 1/BatDown	white
+> GE Rosa Tomb 1	BatOutlineDown		GE Rosa Tomb 1/BatOutlineDown	white
+> GE Rosa Tomb 1	UpperAlert		GE Rosa Tomb 1/UpperAlert	white
+> GE Rosa Tomb 1	UpperAlert-01		GE Rosa Tomb 1/UpperAlert-01	white
+> GE Rosa Tomb 1	UpperAlert-02		GE Rosa Tomb 1/UpperAlert-02	white
+> GE Rosa Tomb 1	UpperAlert-03		GE Rosa Tomb 1/UpperAlert-03	white
+> GE Rosa Tomb 1	UpperAlert-04		GE Rosa Tomb 1/UpperAlert-04	white
+> GE Rosa Tomb 1	UpperAlert-05		GE Rosa Tomb 1/UpperAlert-05	white
+> GE Rosa Tomb 1	UpperAlert-06		GE Rosa Tomb 1/UpperAlert-06	white
+> GE Rosa Tomb 1	UpperAlert-07		GE Rosa Tomb 1/UpperAlert-07	white
+> GE Rosa Tomb 1	UpperAlert-08		GE Rosa Tomb 1/UpperAlert-08	white
+> GE Rosa Tomb 1	Cross Highlights Strand		GE Rosa Tomb 1/Cross Highlights Strand	white
+> GE Rosa Tomb 1	Balls		GE Rosa Tomb 1/Balls	white
+> GE Rosa Tomb 1	SmArrows		GE Rosa Tomb 1/SmArrows	white
+> GE Rosa Tomb 1	GourdsNE		GE Rosa Tomb 1/GourdsNE	white
+> GE Rosa Tomb 1	PetalsLg		GE Rosa Tomb 1/PetalsLg	white
+> GE Rosa Tomb 1	PetalsSm		GE Rosa Tomb 1/PetalsSm	white
+> GE Rosa Tomb 1	Cross Spinner		GE Rosa Tomb 1/Cross Spinner	white
+> GE Rosa Tomb 1	TombSpinner		GE Rosa Tomb 1/TombSpinner	white
+> GE Rosa Tomb 1	TombSpinnerOutline		GE Rosa Tomb 1/TombSpinnerOutline	white
+> GE Rosa Tomb 1	HooksCW		GE Rosa Tomb 1/HooksCW	white
+> GE Rosa Tomb 1	HooksLongCW		GE Rosa Tomb 1/HooksLongCW	white
+> GE Rosa Tomb 1	HooksCCW		GE Rosa Tomb 1/HooksCCW	white
+> GE Rosa Tomb 1	HooksLongCCW		GE Rosa Tomb 1/HooksLongCCW	white
+> GE Rosa Tomb 2			GE Rosa Tomb 2	white
+> GE Rosa Tomb 2	Bat Body		GE Rosa Tomb 2/Bat Body	white
+> GE Rosa Tomb 2	Bat Eyes		GE Rosa Tomb 2/Bat Eyes	white
+> GE Rosa Tomb 2	Bat Flying Wings Up		GE Rosa Tomb 2/Bat Flying Wings Up	white
+> GE Rosa Tomb 2	Bat Flying Wings Down		GE Rosa Tomb 2/Bat Flying Wings Down	white
+> GE Rosa Tomb 2	Tomb Full Outline		GE Rosa Tomb 2/Tomb Full Outline	white
+> GE Rosa Tomb 2	Cross Outline		GE Rosa Tomb 2/Cross Outline	white
+> GE Rosa Tomb 2	Cross Highlights		GE Rosa Tomb 2/Cross Highlights	white
+> GE Rosa Tomb 2	Cross Spinner Outline		GE Rosa Tomb 2/Cross Spinner Outline	white
+> GE Rosa Tomb 2	Cross Spinner Spoke 1		GE Rosa Tomb 2/Cross Spinner Spoke 1	white
+> GE Rosa Tomb 2	Cross Spinner Spoke 2		GE Rosa Tomb 2/Cross Spinner Spoke 2	white
+> GE Rosa Tomb 2	Cross Spinner Spoke 3		GE Rosa Tomb 2/Cross Spinner Spoke 3	white
+> GE Rosa Tomb 2	Cross Spinner Spoke 4		GE Rosa Tomb 2/Cross Spinner Spoke 4	white
+> GE Rosa Tomb 2	Cross Spinner Spoke 5		GE Rosa Tomb 2/Cross Spinner Spoke 5	white
+> GE Rosa Tomb 2	Cross Spinner Spoke 6		GE Rosa Tomb 2/Cross Spinner Spoke 6	white
+> GE Rosa Tomb 2	Cross Spinner Spoke 7		GE Rosa Tomb 2/Cross Spinner Spoke 7	white
+> GE Rosa Tomb 2	Cross Spinner Spoke 8		GE Rosa Tomb 2/Cross Spinner Spoke 8	white
+> GE Rosa Tomb 2	Cross Spinner Ring 1		GE Rosa Tomb 2/Cross Spinner Ring 1	white
+> GE Rosa Tomb 2	Cross Spinner Ring 2		GE Rosa Tomb 2/Cross Spinner Ring 2	white
+> GE Rosa Tomb 2	Cross Spinner Ring 3		GE Rosa Tomb 2/Cross Spinner Ring 3	white
+> GE Rosa Tomb 2	Cross Spinner Ring 4		GE Rosa Tomb 2/Cross Spinner Ring 4	white
+> GE Rosa Tomb 2	Cross Spinner Ring 5		GE Rosa Tomb 2/Cross Spinner Ring 5	white
+> GE Rosa Tomb 2	Tomb Spoke 1		GE Rosa Tomb 2/Tomb Spoke 1	white
+> GE Rosa Tomb 2	Tomb Spoke 2		GE Rosa Tomb 2/Tomb Spoke 2	white
+> GE Rosa Tomb 2	Tomb Spoke 3		GE Rosa Tomb 2/Tomb Spoke 3	white
+> GE Rosa Tomb 2	Tomb Spoke 4		GE Rosa Tomb 2/Tomb Spoke 4	white
+> GE Rosa Tomb 2	Tomb Spoke 5		GE Rosa Tomb 2/Tomb Spoke 5	white
+> GE Rosa Tomb 2	Tomb Spoke 6		GE Rosa Tomb 2/Tomb Spoke 6	white
+> GE Rosa Tomb 2	Tomb Spoke 7		GE Rosa Tomb 2/Tomb Spoke 7	white
+> GE Rosa Tomb 2	Tomb Spoke 8		GE Rosa Tomb 2/Tomb Spoke 8	white
+> GE Rosa Tomb 2	Tomb Ring 1		GE Rosa Tomb 2/Tomb Ring 1	white
+> GE Rosa Tomb 2	Tomb Ring 2		GE Rosa Tomb 2/Tomb Ring 2	white
+> GE Rosa Tomb 2	Tomb Ring 3		GE Rosa Tomb 2/Tomb Ring 3	white
+> GE Rosa Tomb 2	Tomb Ring 4		GE Rosa Tomb 2/Tomb Ring 4	white
+> GE Rosa Tomb 2	Tomb Ring 5		GE Rosa Tomb 2/Tomb Ring 5	white
+> GE Rosa Tomb 2	Tomb Ring 6		GE Rosa Tomb 2/Tomb Ring 6	white
+> GE Rosa Tomb 2	Tomb Ring 7		GE Rosa Tomb 2/Tomb Ring 7	white
+> GE Rosa Tomb 2	Flake Outline		GE Rosa Tomb 2/Flake Outline	white
+> GE Rosa Tomb 2	Paddle Arm 1		GE Rosa Tomb 2/Paddle Arm 1	white
+> GE Rosa Tomb 2	Paddle Arm 2		GE Rosa Tomb 2/Paddle Arm 2	white
+> GE Rosa Tomb 2	Paddle Arm 3		GE Rosa Tomb 2/Paddle Arm 3	white
+> GE Rosa Tomb 2	Paddle Arm 4		GE Rosa Tomb 2/Paddle Arm 4	white
+> GE Rosa Tomb 2	Paddle Arm 5		GE Rosa Tomb 2/Paddle Arm 5	white
+> GE Rosa Tomb 2	Paddle Arm 6		GE Rosa Tomb 2/Paddle Arm 6	white
+> GE Rosa Tomb 2	Paddle Arm 7		GE Rosa Tomb 2/Paddle Arm 7	white
+> GE Rosa Tomb 2	Paddle Arm 8		GE Rosa Tomb 2/Paddle Arm 8	white
+> GE Rosa Tomb 2	Star		GE Rosa Tomb 2/Star	white
+> GE Rosa Tomb 2	Warp 1		GE Rosa Tomb 2/Warp 1	white
+> GE Rosa Tomb 2	Warp 2		GE Rosa Tomb 2/Warp 2	white
+> GE Rosa Tomb 2	Warp 3		GE Rosa Tomb 2/Warp 3	white
+> GE Rosa Tomb 2	Warp 4		GE Rosa Tomb 2/Warp 4	white
+> GE Rosa Tomb 2	Warp 5		GE Rosa Tomb 2/Warp 5	white
+> GE Rosa Tomb 2	Warp 6		GE Rosa Tomb 2/Warp 6	white
+> GE Rosa Tomb 2	Warp 7		GE Rosa Tomb 2/Warp 7	white
+> GE Rosa Tomb 2	Warp 8		GE Rosa Tomb 2/Warp 8	white
+> GE Rosa Tomb 2	Tombstone Lower		GE Rosa Tomb 2/Tombstone Lower	white
+> GE Rosa Tomb 2	Gourds		GE Rosa Tomb 2/Gourds	white
+> GE Rosa Tomb 2	Gourds-01		GE Rosa Tomb 2/Gourds-01	white
+> GE Rosa Tomb 2	Gourds-02		GE Rosa Tomb 2/Gourds-02	white
+> GE Rosa Tomb 2	Gourds-03		GE Rosa Tomb 2/Gourds-03	white
+> GE Rosa Tomb 2	Gourds-04		GE Rosa Tomb 2/Gourds-04	white
+> GE Rosa Tomb 2	Gourds-05		GE Rosa Tomb 2/Gourds-05	white
+> GE Rosa Tomb 2	Gourds-06		GE Rosa Tomb 2/Gourds-06	white
+> GE Rosa Tomb 2	Gourds-07		GE Rosa Tomb 2/Gourds-07	white
+> GE Rosa Tomb 2	Gourds-08		GE Rosa Tomb 2/Gourds-08	white
+> GE Rosa Tomb 2	Cross Highlights Fix		GE Rosa Tomb 2/Cross Highlights Fix	white
+> GE Rosa Tomb 2	Default		GE Rosa Tomb 2/Default	white
+> GE Rosa Tomb 2	BatUp		GE Rosa Tomb 2/BatUp	white
+> GE Rosa Tomb 2	BatOutlineUp		GE Rosa Tomb 2/BatOutlineUp	white
+> GE Rosa Tomb 2	BatDown		GE Rosa Tomb 2/BatDown	white
+> GE Rosa Tomb 2	BatOutlineDown		GE Rosa Tomb 2/BatOutlineDown	white
+> GE Rosa Tomb 2	UpperAlert		GE Rosa Tomb 2/UpperAlert	white
+> GE Rosa Tomb 2	UpperAlert-01		GE Rosa Tomb 2/UpperAlert-01	white
+> GE Rosa Tomb 2	UpperAlert-02		GE Rosa Tomb 2/UpperAlert-02	white
+> GE Rosa Tomb 2	UpperAlert-03		GE Rosa Tomb 2/UpperAlert-03	white
+> GE Rosa Tomb 2	UpperAlert-04		GE Rosa Tomb 2/UpperAlert-04	white
+> GE Rosa Tomb 2	UpperAlert-05		GE Rosa Tomb 2/UpperAlert-05	white
+> GE Rosa Tomb 2	UpperAlert-06		GE Rosa Tomb 2/UpperAlert-06	white
+> GE Rosa Tomb 2	UpperAlert-07		GE Rosa Tomb 2/UpperAlert-07	white
+> GE Rosa Tomb 2	UpperAlert-08		GE Rosa Tomb 2/UpperAlert-08	white
+> GE Rosa Tomb 2	Cross Highlights Strand		GE Rosa Tomb 2/Cross Highlights Strand	white
+> GE Rosa Tomb 2	Balls		GE Rosa Tomb 2/Balls	white
+> GE Rosa Tomb 2	SmArrows		GE Rosa Tomb 2/SmArrows	white
+> GE Rosa Tomb 2	GourdsNE		GE Rosa Tomb 2/GourdsNE	white
+> GE Rosa Tomb 2	PetalsLg		GE Rosa Tomb 2/PetalsLg	white
+> GE Rosa Tomb 2	PetalsSm		GE Rosa Tomb 2/PetalsSm	white
+> GE Rosa Tomb 2	Cross Spinner		GE Rosa Tomb 2/Cross Spinner	white
+> GE Rosa Tomb 2	TombSpinner		GE Rosa Tomb 2/TombSpinner	white
+> GE Rosa Tomb 2	TombSpinnerOutline		GE Rosa Tomb 2/TombSpinnerOutline	white
+> GE Rosa Tomb 2	HooksCW		GE Rosa Tomb 2/HooksCW	white
+> GE Rosa Tomb 2	HooksLongCW		GE Rosa Tomb 2/HooksLongCW	white
+> GE Rosa Tomb 2	HooksCCW		GE Rosa Tomb 2/HooksCCW	white
+> GE Rosa Tomb 2	HooksLongCCW		GE Rosa Tomb 2/HooksLongCCW	white
+> GE Rosa Tomb 3			GE Rosa Tomb 3	white
+> GE Rosa Tomb 3	Bat Body		GE Rosa Tomb 3/Bat Body	white
+> GE Rosa Tomb 3	Bat Eyes		GE Rosa Tomb 3/Bat Eyes	white
+> GE Rosa Tomb 3	Bat Flying Wings Up		GE Rosa Tomb 3/Bat Flying Wings Up	white
+> GE Rosa Tomb 3	Bat Flying Wings Down		GE Rosa Tomb 3/Bat Flying Wings Down	white
+> GE Rosa Tomb 3	Tomb Full Outline		GE Rosa Tomb 3/Tomb Full Outline	white
+> GE Rosa Tomb 3	Cross Outline		GE Rosa Tomb 3/Cross Outline	white
+> GE Rosa Tomb 3	Cross Highlights		GE Rosa Tomb 3/Cross Highlights	white
+> GE Rosa Tomb 3	Cross Spinner Outline		GE Rosa Tomb 3/Cross Spinner Outline	white
+> GE Rosa Tomb 3	Cross Spinner Spoke 1		GE Rosa Tomb 3/Cross Spinner Spoke 1	white
+> GE Rosa Tomb 3	Cross Spinner Spoke 2		GE Rosa Tomb 3/Cross Spinner Spoke 2	white
+> GE Rosa Tomb 3	Cross Spinner Spoke 3		GE Rosa Tomb 3/Cross Spinner Spoke 3	white
+> GE Rosa Tomb 3	Cross Spinner Spoke 4		GE Rosa Tomb 3/Cross Spinner Spoke 4	white
+> GE Rosa Tomb 3	Cross Spinner Spoke 5		GE Rosa Tomb 3/Cross Spinner Spoke 5	white
+> GE Rosa Tomb 3	Cross Spinner Spoke 6		GE Rosa Tomb 3/Cross Spinner Spoke 6	white
+> GE Rosa Tomb 3	Cross Spinner Spoke 7		GE Rosa Tomb 3/Cross Spinner Spoke 7	white
+> GE Rosa Tomb 3	Cross Spinner Spoke 8		GE Rosa Tomb 3/Cross Spinner Spoke 8	white
+> GE Rosa Tomb 3	Cross Spinner Ring 1		GE Rosa Tomb 3/Cross Spinner Ring 1	white
+> GE Rosa Tomb 3	Cross Spinner Ring 2		GE Rosa Tomb 3/Cross Spinner Ring 2	white
+> GE Rosa Tomb 3	Cross Spinner Ring 3		GE Rosa Tomb 3/Cross Spinner Ring 3	white
+> GE Rosa Tomb 3	Cross Spinner Ring 4		GE Rosa Tomb 3/Cross Spinner Ring 4	white
+> GE Rosa Tomb 3	Cross Spinner Ring 5		GE Rosa Tomb 3/Cross Spinner Ring 5	white
+> GE Rosa Tomb 3	Tomb Spoke 1		GE Rosa Tomb 3/Tomb Spoke 1	white
+> GE Rosa Tomb 3	Tomb Spoke 2		GE Rosa Tomb 3/Tomb Spoke 2	white
+> GE Rosa Tomb 3	Tomb Spoke 3		GE Rosa Tomb 3/Tomb Spoke 3	white
+> GE Rosa Tomb 3	Tomb Spoke 4		GE Rosa Tomb 3/Tomb Spoke 4	white
+> GE Rosa Tomb 3	Tomb Spoke 5		GE Rosa Tomb 3/Tomb Spoke 5	white
+> GE Rosa Tomb 3	Tomb Spoke 6		GE Rosa Tomb 3/Tomb Spoke 6	white
+> GE Rosa Tomb 3	Tomb Spoke 7		GE Rosa Tomb 3/Tomb Spoke 7	white
+> GE Rosa Tomb 3	Tomb Spoke 8		GE Rosa Tomb 3/Tomb Spoke 8	white
+> GE Rosa Tomb 3	Tomb Ring 1		GE Rosa Tomb 3/Tomb Ring 1	white
+> GE Rosa Tomb 3	Tomb Ring 2		GE Rosa Tomb 3/Tomb Ring 2	white
+> GE Rosa Tomb 3	Tomb Ring 3		GE Rosa Tomb 3/Tomb Ring 3	white
+> GE Rosa Tomb 3	Tomb Ring 4		GE Rosa Tomb 3/Tomb Ring 4	white
+> GE Rosa Tomb 3	Tomb Ring 5		GE Rosa Tomb 3/Tomb Ring 5	white
+> GE Rosa Tomb 3	Tomb Ring 6		GE Rosa Tomb 3/Tomb Ring 6	white
+> GE Rosa Tomb 3	Tomb Ring 7		GE Rosa Tomb 3/Tomb Ring 7	white
+> GE Rosa Tomb 3	Flake Outline		GE Rosa Tomb 3/Flake Outline	white
+> GE Rosa Tomb 3	Paddle Arm 1		GE Rosa Tomb 3/Paddle Arm 1	white
+> GE Rosa Tomb 3	Paddle Arm 2		GE Rosa Tomb 3/Paddle Arm 2	white
+> GE Rosa Tomb 3	Paddle Arm 3		GE Rosa Tomb 3/Paddle Arm 3	white
+> GE Rosa Tomb 3	Paddle Arm 4		GE Rosa Tomb 3/Paddle Arm 4	white
+> GE Rosa Tomb 3	Paddle Arm 5		GE Rosa Tomb 3/Paddle Arm 5	white
+> GE Rosa Tomb 3	Paddle Arm 6		GE Rosa Tomb 3/Paddle Arm 6	white
+> GE Rosa Tomb 3	Paddle Arm 7		GE Rosa Tomb 3/Paddle Arm 7	white
+> GE Rosa Tomb 3	Paddle Arm 8		GE Rosa Tomb 3/Paddle Arm 8	white
+> GE Rosa Tomb 3	Star		GE Rosa Tomb 3/Star	white
+> GE Rosa Tomb 3	Warp 1		GE Rosa Tomb 3/Warp 1	white
+> GE Rosa Tomb 3	Warp 2		GE Rosa Tomb 3/Warp 2	white
+> GE Rosa Tomb 3	Warp 3		GE Rosa Tomb 3/Warp 3	white
+> GE Rosa Tomb 3	Warp 4		GE Rosa Tomb 3/Warp 4	white
+> GE Rosa Tomb 3	Warp 5		GE Rosa Tomb 3/Warp 5	white
+> GE Rosa Tomb 3	Warp 6		GE Rosa Tomb 3/Warp 6	white
+> GE Rosa Tomb 3	Warp 7		GE Rosa Tomb 3/Warp 7	white
+> GE Rosa Tomb 3	Warp 8		GE Rosa Tomb 3/Warp 8	white
+> GE Rosa Tomb 3	Tombstone Lower		GE Rosa Tomb 3/Tombstone Lower	white
+> GE Rosa Tomb 3	Gourds		GE Rosa Tomb 3/Gourds	white
+> GE Rosa Tomb 3	Gourds-01		GE Rosa Tomb 3/Gourds-01	white
+> GE Rosa Tomb 3	Gourds-02		GE Rosa Tomb 3/Gourds-02	white
+> GE Rosa Tomb 3	Gourds-03		GE Rosa Tomb 3/Gourds-03	white
+> GE Rosa Tomb 3	Gourds-04		GE Rosa Tomb 3/Gourds-04	white
+> GE Rosa Tomb 3	Gourds-05		GE Rosa Tomb 3/Gourds-05	white
+> GE Rosa Tomb 3	Gourds-06		GE Rosa Tomb 3/Gourds-06	white
+> GE Rosa Tomb 3	Gourds-07		GE Rosa Tomb 3/Gourds-07	white
+> GE Rosa Tomb 3	Gourds-08		GE Rosa Tomb 3/Gourds-08	white
+> GE Rosa Tomb 3	Cross Highlights Fix		GE Rosa Tomb 3/Cross Highlights Fix	white
+> GE Rosa Tomb 3	Default		GE Rosa Tomb 3/Default	white
+> GE Rosa Tomb 3	BatUp		GE Rosa Tomb 3/BatUp	white
+> GE Rosa Tomb 3	BatOutlineUp		GE Rosa Tomb 3/BatOutlineUp	white
+> GE Rosa Tomb 3	BatDown		GE Rosa Tomb 3/BatDown	white
+> GE Rosa Tomb 3	BatOutlineDown		GE Rosa Tomb 3/BatOutlineDown	white
+> GE Rosa Tomb 3	UpperAlert		GE Rosa Tomb 3/UpperAlert	white
+> GE Rosa Tomb 3	UpperAlert-01		GE Rosa Tomb 3/UpperAlert-01	white
+> GE Rosa Tomb 3	UpperAlert-02		GE Rosa Tomb 3/UpperAlert-02	white
+> GE Rosa Tomb 3	UpperAlert-03		GE Rosa Tomb 3/UpperAlert-03	white
+> GE Rosa Tomb 3	UpperAlert-04		GE Rosa Tomb 3/UpperAlert-04	white
+> GE Rosa Tomb 3	UpperAlert-05		GE Rosa Tomb 3/UpperAlert-05	white
+> GE Rosa Tomb 3	UpperAlert-06		GE Rosa Tomb 3/UpperAlert-06	white
+> GE Rosa Tomb 3	UpperAlert-07		GE Rosa Tomb 3/UpperAlert-07	white
+> GE Rosa Tomb 3	UpperAlert-08		GE Rosa Tomb 3/UpperAlert-08	white
+> GE Rosa Tomb 3	Cross Highlights Strand		GE Rosa Tomb 3/Cross Highlights Strand	white
+> GE Rosa Tomb 3	Balls		GE Rosa Tomb 3/Balls	white
+> GE Rosa Tomb 3	SmArrows		GE Rosa Tomb 3/SmArrows	white
+> GE Rosa Tomb 3	GourdsNE		GE Rosa Tomb 3/GourdsNE	white
+> GE Rosa Tomb 3	PetalsLg		GE Rosa Tomb 3/PetalsLg	white
+> GE Rosa Tomb 3	PetalsSm		GE Rosa Tomb 3/PetalsSm	white
+> GE Rosa Tomb 3	Cross Spinner		GE Rosa Tomb 3/Cross Spinner	white
+> GE Rosa Tomb 3	TombSpinner		GE Rosa Tomb 3/TombSpinner	white
+> GE Rosa Tomb 3	TombSpinnerOutline		GE Rosa Tomb 3/TombSpinnerOutline	white
+> GE Rosa Tomb 3	HooksCW		GE Rosa Tomb 3/HooksCW	white
+> GE Rosa Tomb 3	HooksLongCW		GE Rosa Tomb 3/HooksLongCW	white
+> GE Rosa Tomb 3	HooksCCW		GE Rosa Tomb 3/HooksCCW	white
+> GE Rosa Tomb 3	HooksLongCCW		GE Rosa Tomb 3/HooksLongCCW	white
+> GE Rosa Tomb 4			GE Rosa Tomb 4	white
+> GE Rosa Tomb 4	Bat Body		GE Rosa Tomb 4/Bat Body	white
+> GE Rosa Tomb 4	Bat Eyes		GE Rosa Tomb 4/Bat Eyes	white
+> GE Rosa Tomb 4	Bat Flying Wings Up		GE Rosa Tomb 4/Bat Flying Wings Up	white
+> GE Rosa Tomb 4	Bat Flying Wings Down		GE Rosa Tomb 4/Bat Flying Wings Down	white
+> GE Rosa Tomb 4	Tomb Full Outline		GE Rosa Tomb 4/Tomb Full Outline	white
+> GE Rosa Tomb 4	Cross Outline		GE Rosa Tomb 4/Cross Outline	white
+> GE Rosa Tomb 4	Cross Highlights		GE Rosa Tomb 4/Cross Highlights	white
+> GE Rosa Tomb 4	Cross Spinner Outline		GE Rosa Tomb 4/Cross Spinner Outline	white
+> GE Rosa Tomb 4	Cross Spinner Spoke 1		GE Rosa Tomb 4/Cross Spinner Spoke 1	white
+> GE Rosa Tomb 4	Cross Spinner Spoke 2		GE Rosa Tomb 4/Cross Spinner Spoke 2	white
+> GE Rosa Tomb 4	Cross Spinner Spoke 3		GE Rosa Tomb 4/Cross Spinner Spoke 3	white
+> GE Rosa Tomb 4	Cross Spinner Spoke 4		GE Rosa Tomb 4/Cross Spinner Spoke 4	white
+> GE Rosa Tomb 4	Cross Spinner Spoke 5		GE Rosa Tomb 4/Cross Spinner Spoke 5	white
+> GE Rosa Tomb 4	Cross Spinner Spoke 6		GE Rosa Tomb 4/Cross Spinner Spoke 6	white
+> GE Rosa Tomb 4	Cross Spinner Spoke 7		GE Rosa Tomb 4/Cross Spinner Spoke 7	white
+> GE Rosa Tomb 4	Cross Spinner Spoke 8		GE Rosa Tomb 4/Cross Spinner Spoke 8	white
+> GE Rosa Tomb 4	Cross Spinner Ring 1		GE Rosa Tomb 4/Cross Spinner Ring 1	white
+> GE Rosa Tomb 4	Cross Spinner Ring 2		GE Rosa Tomb 4/Cross Spinner Ring 2	white
+> GE Rosa Tomb 4	Cross Spinner Ring 3		GE Rosa Tomb 4/Cross Spinner Ring 3	white
+> GE Rosa Tomb 4	Cross Spinner Ring 4		GE Rosa Tomb 4/Cross Spinner Ring 4	white
+> GE Rosa Tomb 4	Cross Spinner Ring 5		GE Rosa Tomb 4/Cross Spinner Ring 5	white
+> GE Rosa Tomb 4	Tomb Spoke 1		GE Rosa Tomb 4/Tomb Spoke 1	white
+> GE Rosa Tomb 4	Tomb Spoke 2		GE Rosa Tomb 4/Tomb Spoke 2	white
+> GE Rosa Tomb 4	Tomb Spoke 3		GE Rosa Tomb 4/Tomb Spoke 3	white
+> GE Rosa Tomb 4	Tomb Spoke 4		GE Rosa Tomb 4/Tomb Spoke 4	white
+> GE Rosa Tomb 4	Tomb Spoke 5		GE Rosa Tomb 4/Tomb Spoke 5	white
+> GE Rosa Tomb 4	Tomb Spoke 6		GE Rosa Tomb 4/Tomb Spoke 6	white
+> GE Rosa Tomb 4	Tomb Spoke 7		GE Rosa Tomb 4/Tomb Spoke 7	white
+> GE Rosa Tomb 4	Tomb Spoke 8		GE Rosa Tomb 4/Tomb Spoke 8	white
+> GE Rosa Tomb 4	Tomb Ring 1		GE Rosa Tomb 4/Tomb Ring 1	white
+> GE Rosa Tomb 4	Tomb Ring 2		GE Rosa Tomb 4/Tomb Ring 2	white
+> GE Rosa Tomb 4	Tomb Ring 3		GE Rosa Tomb 4/Tomb Ring 3	white
+> GE Rosa Tomb 4	Tomb Ring 4		GE Rosa Tomb 4/Tomb Ring 4	white
+> GE Rosa Tomb 4	Tomb Ring 5		GE Rosa Tomb 4/Tomb Ring 5	white
+> GE Rosa Tomb 4	Tomb Ring 6		GE Rosa Tomb 4/Tomb Ring 6	white
+> GE Rosa Tomb 4	Tomb Ring 7		GE Rosa Tomb 4/Tomb Ring 7	white
+> GE Rosa Tomb 4	Flake Outline		GE Rosa Tomb 4/Flake Outline	white
+> GE Rosa Tomb 4	Paddle Arm 1		GE Rosa Tomb 4/Paddle Arm 1	white
+> GE Rosa Tomb 4	Paddle Arm 2		GE Rosa Tomb 4/Paddle Arm 2	white
+> GE Rosa Tomb 4	Paddle Arm 3		GE Rosa Tomb 4/Paddle Arm 3	white
+> GE Rosa Tomb 4	Paddle Arm 4		GE Rosa Tomb 4/Paddle Arm 4	white
+> GE Rosa Tomb 4	Paddle Arm 5		GE Rosa Tomb 4/Paddle Arm 5	white
+> GE Rosa Tomb 4	Paddle Arm 6		GE Rosa Tomb 4/Paddle Arm 6	white
+> GE Rosa Tomb 4	Paddle Arm 7		GE Rosa Tomb 4/Paddle Arm 7	white
+> GE Rosa Tomb 4	Paddle Arm 8		GE Rosa Tomb 4/Paddle Arm 8	white
+> GE Rosa Tomb 4	Star		GE Rosa Tomb 4/Star	white
+> GE Rosa Tomb 4	Warp 1		GE Rosa Tomb 4/Warp 1	white
+> GE Rosa Tomb 4	Warp 2		GE Rosa Tomb 4/Warp 2	white
+> GE Rosa Tomb 4	Warp 3		GE Rosa Tomb 4/Warp 3	white
+> GE Rosa Tomb 4	Warp 4		GE Rosa Tomb 4/Warp 4	white
+> GE Rosa Tomb 4	Warp 5		GE Rosa Tomb 4/Warp 5	white
+> GE Rosa Tomb 4	Warp 6		GE Rosa Tomb 4/Warp 6	white
+> GE Rosa Tomb 4	Warp 7		GE Rosa Tomb 4/Warp 7	white
+> GE Rosa Tomb 4	Warp 8		GE Rosa Tomb 4/Warp 8	white
+> GE Rosa Tomb 4	Tombstone Lower		GE Rosa Tomb 4/Tombstone Lower	white
+> GE Rosa Tomb 4	Gourds		GE Rosa Tomb 4/Gourds	white
+> GE Rosa Tomb 4	Gourds-01		GE Rosa Tomb 4/Gourds-01	white
+> GE Rosa Tomb 4	Gourds-02		GE Rosa Tomb 4/Gourds-02	white
+> GE Rosa Tomb 4	Gourds-03		GE Rosa Tomb 4/Gourds-03	white
+> GE Rosa Tomb 4	Gourds-04		GE Rosa Tomb 4/Gourds-04	white
+> GE Rosa Tomb 4	Gourds-05		GE Rosa Tomb 4/Gourds-05	white
+> GE Rosa Tomb 4	Gourds-06		GE Rosa Tomb 4/Gourds-06	white
+> GE Rosa Tomb 4	Gourds-07		GE Rosa Tomb 4/Gourds-07	white
+> GE Rosa Tomb 4	Gourds-08		GE Rosa Tomb 4/Gourds-08	white
+> GE Rosa Tomb 4	Cross Highlights Fix		GE Rosa Tomb 4/Cross Highlights Fix	white
+> GE Rosa Tomb 4	Default		GE Rosa Tomb 4/Default	white
+> GE Rosa Tomb 4	BatUp		GE Rosa Tomb 4/BatUp	white
+> GE Rosa Tomb 4	BatOutlineUp		GE Rosa Tomb 4/BatOutlineUp	white
+> GE Rosa Tomb 4	BatDown		GE Rosa Tomb 4/BatDown	white
+> GE Rosa Tomb 4	BatOutlineDown		GE Rosa Tomb 4/BatOutlineDown	white
+> GE Rosa Tomb 4	UpperAlert		GE Rosa Tomb 4/UpperAlert	white
+> GE Rosa Tomb 4	UpperAlert-01		GE Rosa Tomb 4/UpperAlert-01	white
+> GE Rosa Tomb 4	UpperAlert-02		GE Rosa Tomb 4/UpperAlert-02	white
+> GE Rosa Tomb 4	UpperAlert-03		GE Rosa Tomb 4/UpperAlert-03	white
+> GE Rosa Tomb 4	UpperAlert-04		GE Rosa Tomb 4/UpperAlert-04	white
+> GE Rosa Tomb 4	UpperAlert-05		GE Rosa Tomb 4/UpperAlert-05	white
+> GE Rosa Tomb 4	UpperAlert-06		GE Rosa Tomb 4/UpperAlert-06	white
+> GE Rosa Tomb 4	UpperAlert-07		GE Rosa Tomb 4/UpperAlert-07	white
+> GE Rosa Tomb 4	UpperAlert-08		GE Rosa Tomb 4/UpperAlert-08	white
+> GE Rosa Tomb 4	Cross Highlights Strand		GE Rosa Tomb 4/Cross Highlights Strand	white
+> GE Rosa Tomb 4	Balls		GE Rosa Tomb 4/Balls	white
+> GE Rosa Tomb 4	SmArrows		GE Rosa Tomb 4/SmArrows	white
+> GE Rosa Tomb 4	GourdsNE		GE Rosa Tomb 4/GourdsNE	white
+> GE Rosa Tomb 4	PetalsLg		GE Rosa Tomb 4/PetalsLg	white
+> GE Rosa Tomb 4	PetalsSm		GE Rosa Tomb 4/PetalsSm	white
+> GE Rosa Tomb 4	Cross Spinner		GE Rosa Tomb 4/Cross Spinner	white
+> GE Rosa Tomb 4	TombSpinner		GE Rosa Tomb 4/TombSpinner	white
+> GE Rosa Tomb 4	TombSpinnerOutline		GE Rosa Tomb 4/TombSpinnerOutline	white
+> GE Rosa Tomb 4	HooksCW		GE Rosa Tomb 4/HooksCW	white
+> GE Rosa Tomb 4	HooksLongCW		GE Rosa Tomb 4/HooksLongCW	white
+> GE Rosa Tomb 4	HooksCCW		GE Rosa Tomb 4/HooksCCW	white
+> GE Rosa Tomb 4	HooksLongCCW		GE Rosa Tomb 4/HooksLongCCW	white
+> GE Rosa Tomb 5			GE Rosa Tomb 5	white
+> GE Rosa Tomb 5	Bat Body		GE Rosa Tomb 5/Bat Body	white
+> GE Rosa Tomb 5	Bat Eyes		GE Rosa Tomb 5/Bat Eyes	white
+> GE Rosa Tomb 5	Bat Flying Wings Up		GE Rosa Tomb 5/Bat Flying Wings Up	white
+> GE Rosa Tomb 5	Bat Flying Wings Down		GE Rosa Tomb 5/Bat Flying Wings Down	white
+> GE Rosa Tomb 5	Tomb Full Outline		GE Rosa Tomb 5/Tomb Full Outline	white
+> GE Rosa Tomb 5	Cross Outline		GE Rosa Tomb 5/Cross Outline	white
+> GE Rosa Tomb 5	Cross Highlights		GE Rosa Tomb 5/Cross Highlights	white
+> GE Rosa Tomb 5	Cross Spinner Outline		GE Rosa Tomb 5/Cross Spinner Outline	white
+> GE Rosa Tomb 5	Cross Spinner Spoke 1		GE Rosa Tomb 5/Cross Spinner Spoke 1	white
+> GE Rosa Tomb 5	Cross Spinner Spoke 2		GE Rosa Tomb 5/Cross Spinner Spoke 2	white
+> GE Rosa Tomb 5	Cross Spinner Spoke 3		GE Rosa Tomb 5/Cross Spinner Spoke 3	white
+> GE Rosa Tomb 5	Cross Spinner Spoke 4		GE Rosa Tomb 5/Cross Spinner Spoke 4	white
+> GE Rosa Tomb 5	Cross Spinner Spoke 5		GE Rosa Tomb 5/Cross Spinner Spoke 5	white
+> GE Rosa Tomb 5	Cross Spinner Spoke 6		GE Rosa Tomb 5/Cross Spinner Spoke 6	white
+> GE Rosa Tomb 5	Cross Spinner Spoke 7		GE Rosa Tomb 5/Cross Spinner Spoke 7	white
+> GE Rosa Tomb 5	Cross Spinner Spoke 8		GE Rosa Tomb 5/Cross Spinner Spoke 8	white
+> GE Rosa Tomb 5	Cross Spinner Ring 1		GE Rosa Tomb 5/Cross Spinner Ring 1	white
+> GE Rosa Tomb 5	Cross Spinner Ring 2		GE Rosa Tomb 5/Cross Spinner Ring 2	white
+> GE Rosa Tomb 5	Cross Spinner Ring 3		GE Rosa Tomb 5/Cross Spinner Ring 3	white
+> GE Rosa Tomb 5	Cross Spinner Ring 4		GE Rosa Tomb 5/Cross Spinner Ring 4	white
+> GE Rosa Tomb 5	Cross Spinner Ring 5		GE Rosa Tomb 5/Cross Spinner Ring 5	white
+> GE Rosa Tomb 5	Tomb Spoke 1		GE Rosa Tomb 5/Tomb Spoke 1	white
+> GE Rosa Tomb 5	Tomb Spoke 2		GE Rosa Tomb 5/Tomb Spoke 2	white
+> GE Rosa Tomb 5	Tomb Spoke 3		GE Rosa Tomb 5/Tomb Spoke 3	white
+> GE Rosa Tomb 5	Tomb Spoke 4		GE Rosa Tomb 5/Tomb Spoke 4	white
+> GE Rosa Tomb 5	Tomb Spoke 5		GE Rosa Tomb 5/Tomb Spoke 5	white
+> GE Rosa Tomb 5	Tomb Spoke 6		GE Rosa Tomb 5/Tomb Spoke 6	white
+> GE Rosa Tomb 5	Tomb Spoke 7		GE Rosa Tomb 5/Tomb Spoke 7	white
+> GE Rosa Tomb 5	Tomb Spoke 8		GE Rosa Tomb 5/Tomb Spoke 8	white
+> GE Rosa Tomb 5	Tomb Ring 1		GE Rosa Tomb 5/Tomb Ring 1	white
+> GE Rosa Tomb 5	Tomb Ring 2		GE Rosa Tomb 5/Tomb Ring 2	white
+> GE Rosa Tomb 5	Tomb Ring 3		GE Rosa Tomb 5/Tomb Ring 3	white
+> GE Rosa Tomb 5	Tomb Ring 4		GE Rosa Tomb 5/Tomb Ring 4	white
+> GE Rosa Tomb 5	Tomb Ring 5		GE Rosa Tomb 5/Tomb Ring 5	white
+> GE Rosa Tomb 5	Tomb Ring 6		GE Rosa Tomb 5/Tomb Ring 6	white
+> GE Rosa Tomb 5	Tomb Ring 7		GE Rosa Tomb 5/Tomb Ring 7	white
+> GE Rosa Tomb 5	Flake Outline		GE Rosa Tomb 5/Flake Outline	white
+> GE Rosa Tomb 5	Paddle Arm 1		GE Rosa Tomb 5/Paddle Arm 1	white
+> GE Rosa Tomb 5	Paddle Arm 2		GE Rosa Tomb 5/Paddle Arm 2	white
+> GE Rosa Tomb 5	Paddle Arm 3		GE Rosa Tomb 5/Paddle Arm 3	white
+> GE Rosa Tomb 5	Paddle Arm 4		GE Rosa Tomb 5/Paddle Arm 4	white
+> GE Rosa Tomb 5	Paddle Arm 5		GE Rosa Tomb 5/Paddle Arm 5	white
+> GE Rosa Tomb 5	Paddle Arm 6		GE Rosa Tomb 5/Paddle Arm 6	white
+> GE Rosa Tomb 5	Paddle Arm 7		GE Rosa Tomb 5/Paddle Arm 7	white
+> GE Rosa Tomb 5	Paddle Arm 8		GE Rosa Tomb 5/Paddle Arm 8	white
+> GE Rosa Tomb 5	Star		GE Rosa Tomb 5/Star	white
+> GE Rosa Tomb 5	Warp 1		GE Rosa Tomb 5/Warp 1	white
+> GE Rosa Tomb 5	Warp 2		GE Rosa Tomb 5/Warp 2	white
+> GE Rosa Tomb 5	Warp 3		GE Rosa Tomb 5/Warp 3	white
+> GE Rosa Tomb 5	Warp 4		GE Rosa Tomb 5/Warp 4	white
+> GE Rosa Tomb 5	Warp 5		GE Rosa Tomb 5/Warp 5	white
+> GE Rosa Tomb 5	Warp 6		GE Rosa Tomb 5/Warp 6	white
+> GE Rosa Tomb 5	Warp 7		GE Rosa Tomb 5/Warp 7	white
+> GE Rosa Tomb 5	Warp 8		GE Rosa Tomb 5/Warp 8	white
+> GE Rosa Tomb 5	Tombstone Lower		GE Rosa Tomb 5/Tombstone Lower	white
+> GE Rosa Tomb 5	Gourds		GE Rosa Tomb 5/Gourds	white
+> GE Rosa Tomb 5	Gourds-01		GE Rosa Tomb 5/Gourds-01	white
+> GE Rosa Tomb 5	Gourds-02		GE Rosa Tomb 5/Gourds-02	white
+> GE Rosa Tomb 5	Gourds-03		GE Rosa Tomb 5/Gourds-03	white
+> GE Rosa Tomb 5	Gourds-04		GE Rosa Tomb 5/Gourds-04	white
+> GE Rosa Tomb 5	Gourds-05		GE Rosa Tomb 5/Gourds-05	white
+> GE Rosa Tomb 5	Gourds-06		GE Rosa Tomb 5/Gourds-06	white
+> GE Rosa Tomb 5	Gourds-07		GE Rosa Tomb 5/Gourds-07	white
+> GE Rosa Tomb 5	Gourds-08		GE Rosa Tomb 5/Gourds-08	white
+> GE Rosa Tomb 5	Cross Highlights Fix		GE Rosa Tomb 5/Cross Highlights Fix	white
+> GE Rosa Tomb 5	Default		GE Rosa Tomb 5/Default	white
+> GE Rosa Tomb 5	BatUp		GE Rosa Tomb 5/BatUp	white
+> GE Rosa Tomb 5	BatOutlineUp		GE Rosa Tomb 5/BatOutlineUp	white
+> GE Rosa Tomb 5	BatDown		GE Rosa Tomb 5/BatDown	white
+> GE Rosa Tomb 5	BatOutlineDown		GE Rosa Tomb 5/BatOutlineDown	white
+> GE Rosa Tomb 5	UpperAlert		GE Rosa Tomb 5/UpperAlert	white
+> GE Rosa Tomb 5	UpperAlert-01		GE Rosa Tomb 5/UpperAlert-01	white
+> GE Rosa Tomb 5	UpperAlert-02		GE Rosa Tomb 5/UpperAlert-02	white
+> GE Rosa Tomb 5	UpperAlert-03		GE Rosa Tomb 5/UpperAlert-03	white
+> GE Rosa Tomb 5	UpperAlert-04		GE Rosa Tomb 5/UpperAlert-04	white
+> GE Rosa Tomb 5	UpperAlert-05		GE Rosa Tomb 5/UpperAlert-05	white
+> GE Rosa Tomb 5	UpperAlert-06		GE Rosa Tomb 5/UpperAlert-06	white
+> GE Rosa Tomb 5	UpperAlert-07		GE Rosa Tomb 5/UpperAlert-07	white
+> GE Rosa Tomb 5	UpperAlert-08		GE Rosa Tomb 5/UpperAlert-08	white
+> GE Rosa Tomb 5	Cross Highlights Strand		GE Rosa Tomb 5/Cross Highlights Strand	white
+> GE Rosa Tomb 5	Balls		GE Rosa Tomb 5/Balls	white
+> GE Rosa Tomb 5	SmArrows		GE Rosa Tomb 5/SmArrows	white
+> GE Rosa Tomb 5	GourdsNE		GE Rosa Tomb 5/GourdsNE	white
+> GE Rosa Tomb 5	PetalsLg		GE Rosa Tomb 5/PetalsLg	white
+> GE Rosa Tomb 5	PetalsSm		GE Rosa Tomb 5/PetalsSm	white
+> GE Rosa Tomb 5	Cross Spinner		GE Rosa Tomb 5/Cross Spinner	white
+> GE Rosa Tomb 5	TombSpinner		GE Rosa Tomb 5/TombSpinner	white
+> GE Rosa Tomb 5	TombSpinnerOutline		GE Rosa Tomb 5/TombSpinnerOutline	white
+> GE Rosa Tomb 5	HooksCW		GE Rosa Tomb 5/HooksCW	white
+> GE Rosa Tomb 5	HooksLongCW		GE Rosa Tomb 5/HooksLongCW	white
+> GE Rosa Tomb 5	HooksCCW		GE Rosa Tomb 5/HooksCCW	white
+> GE Rosa Tomb 5	HooksLongCCW		GE Rosa Tomb 5/HooksLongCCW	white
+> GE Rosa Tomb 6			GE Rosa Tomb 6	white
+> GE Rosa Tomb 6	Bat Body		GE Rosa Tomb 6/Bat Body	white
+> GE Rosa Tomb 6	Bat Eyes		GE Rosa Tomb 6/Bat Eyes	white
+> GE Rosa Tomb 6	Bat Flying Wings Up		GE Rosa Tomb 6/Bat Flying Wings Up	white
+> GE Rosa Tomb 6	Bat Flying Wings Down		GE Rosa Tomb 6/Bat Flying Wings Down	white
+> GE Rosa Tomb 6	Tomb Full Outline		GE Rosa Tomb 6/Tomb Full Outline	white
+> GE Rosa Tomb 6	Cross Outline		GE Rosa Tomb 6/Cross Outline	white
+> GE Rosa Tomb 6	Cross Highlights		GE Rosa Tomb 6/Cross Highlights	white
+> GE Rosa Tomb 6	Cross Spinner Outline		GE Rosa Tomb 6/Cross Spinner Outline	white
+> GE Rosa Tomb 6	Cross Spinner Spoke 1		GE Rosa Tomb 6/Cross Spinner Spoke 1	white
+> GE Rosa Tomb 6	Cross Spinner Spoke 2		GE Rosa Tomb 6/Cross Spinner Spoke 2	white
+> GE Rosa Tomb 6	Cross Spinner Spoke 3		GE Rosa Tomb 6/Cross Spinner Spoke 3	white
+> GE Rosa Tomb 6	Cross Spinner Spoke 4		GE Rosa Tomb 6/Cross Spinner Spoke 4	white
+> GE Rosa Tomb 6	Cross Spinner Spoke 5		GE Rosa Tomb 6/Cross Spinner Spoke 5	white
+> GE Rosa Tomb 6	Cross Spinner Spoke 6		GE Rosa Tomb 6/Cross Spinner Spoke 6	white
+> GE Rosa Tomb 6	Cross Spinner Spoke 7		GE Rosa Tomb 6/Cross Spinner Spoke 7	white
+> GE Rosa Tomb 6	Cross Spinner Spoke 8		GE Rosa Tomb 6/Cross Spinner Spoke 8	white
+> GE Rosa Tomb 6	Cross Spinner Ring 1		GE Rosa Tomb 6/Cross Spinner Ring 1	white
+> GE Rosa Tomb 6	Cross Spinner Ring 2		GE Rosa Tomb 6/Cross Spinner Ring 2	white
+> GE Rosa Tomb 6	Cross Spinner Ring 3		GE Rosa Tomb 6/Cross Spinner Ring 3	white
+> GE Rosa Tomb 6	Cross Spinner Ring 4		GE Rosa Tomb 6/Cross Spinner Ring 4	white
+> GE Rosa Tomb 6	Cross Spinner Ring 5		GE Rosa Tomb 6/Cross Spinner Ring 5	white
+> GE Rosa Tomb 6	Tomb Spoke 1		GE Rosa Tomb 6/Tomb Spoke 1	white
+> GE Rosa Tomb 6	Tomb Spoke 2		GE Rosa Tomb 6/Tomb Spoke 2	white
+> GE Rosa Tomb 6	Tomb Spoke 3		GE Rosa Tomb 6/Tomb Spoke 3	white
+> GE Rosa Tomb 6	Tomb Spoke 4		GE Rosa Tomb 6/Tomb Spoke 4	white
+> GE Rosa Tomb 6	Tomb Spoke 5		GE Rosa Tomb 6/Tomb Spoke 5	white
+> GE Rosa Tomb 6	Tomb Spoke 6		GE Rosa Tomb 6/Tomb Spoke 6	white
+> GE Rosa Tomb 6	Tomb Spoke 7		GE Rosa Tomb 6/Tomb Spoke 7	white
+> GE Rosa Tomb 6	Tomb Spoke 8		GE Rosa Tomb 6/Tomb Spoke 8	white
+> GE Rosa Tomb 6	Tomb Ring 1		GE Rosa Tomb 6/Tomb Ring 1	white
+> GE Rosa Tomb 6	Tomb Ring 2		GE Rosa Tomb 6/Tomb Ring 2	white
+> GE Rosa Tomb 6	Tomb Ring 3		GE Rosa Tomb 6/Tomb Ring 3	white
+> GE Rosa Tomb 6	Tomb Ring 4		GE Rosa Tomb 6/Tomb Ring 4	white
+> GE Rosa Tomb 6	Tomb Ring 5		GE Rosa Tomb 6/Tomb Ring 5	white
+> GE Rosa Tomb 6	Tomb Ring 6		GE Rosa Tomb 6/Tomb Ring 6	white
+> GE Rosa Tomb 6	Tomb Ring 7		GE Rosa Tomb 6/Tomb Ring 7	white
+> GE Rosa Tomb 6	Flake Outline		GE Rosa Tomb 6/Flake Outline	white
+> GE Rosa Tomb 6	Paddle Arm 1		GE Rosa Tomb 6/Paddle Arm 1	white
+> GE Rosa Tomb 6	Paddle Arm 2		GE Rosa Tomb 6/Paddle Arm 2	white
+> GE Rosa Tomb 6	Paddle Arm 3		GE Rosa Tomb 6/Paddle Arm 3	white
+> GE Rosa Tomb 6	Paddle Arm 4		GE Rosa Tomb 6/Paddle Arm 4	white
+> GE Rosa Tomb 6	Paddle Arm 5		GE Rosa Tomb 6/Paddle Arm 5	white
+> GE Rosa Tomb 6	Paddle Arm 6		GE Rosa Tomb 6/Paddle Arm 6	white
+> GE Rosa Tomb 6	Paddle Arm 7		GE Rosa Tomb 6/Paddle Arm 7	white
+> GE Rosa Tomb 6	Paddle Arm 8		GE Rosa Tomb 6/Paddle Arm 8	white
+> GE Rosa Tomb 6	Star		GE Rosa Tomb 6/Star	white
+> GE Rosa Tomb 6	Warp 1		GE Rosa Tomb 6/Warp 1	white
+> GE Rosa Tomb 6	Warp 2		GE Rosa Tomb 6/Warp 2	white
+> GE Rosa Tomb 6	Warp 3		GE Rosa Tomb 6/Warp 3	white
+> GE Rosa Tomb 6	Warp 4		GE Rosa Tomb 6/Warp 4	white
+> GE Rosa Tomb 6	Warp 5		GE Rosa Tomb 6/Warp 5	white
+> GE Rosa Tomb 6	Warp 6		GE Rosa Tomb 6/Warp 6	white
+> GE Rosa Tomb 6	Warp 7		GE Rosa Tomb 6/Warp 7	white
+> GE Rosa Tomb 6	Warp 8		GE Rosa Tomb 6/Warp 8	white
+> GE Rosa Tomb 6	Tombstone Lower		GE Rosa Tomb 6/Tombstone Lower	white
+> GE Rosa Tomb 6	Gourds		GE Rosa Tomb 6/Gourds	white
+> GE Rosa Tomb 6	Gourds-01		GE Rosa Tomb 6/Gourds-01	white
+> GE Rosa Tomb 6	Gourds-02		GE Rosa Tomb 6/Gourds-02	white
+> GE Rosa Tomb 6	Gourds-03		GE Rosa Tomb 6/Gourds-03	white
+> GE Rosa Tomb 6	Gourds-04		GE Rosa Tomb 6/Gourds-04	white
+> GE Rosa Tomb 6	Gourds-05		GE Rosa Tomb 6/Gourds-05	white
+> GE Rosa Tomb 6	Gourds-06		GE Rosa Tomb 6/Gourds-06	white
+> GE Rosa Tomb 6	Gourds-07		GE Rosa Tomb 6/Gourds-07	white
+> GE Rosa Tomb 6	Gourds-08		GE Rosa Tomb 6/Gourds-08	white
+> GE Rosa Tomb 6	Cross Highlights Fix		GE Rosa Tomb 6/Cross Highlights Fix	white
+> GE Rosa Tomb 6	Default		GE Rosa Tomb 6/Default	white
+> GE Rosa Tomb 6	BatUp		GE Rosa Tomb 6/BatUp	white
+> GE Rosa Tomb 6	BatOutlineUp		GE Rosa Tomb 6/BatOutlineUp	white
+> GE Rosa Tomb 6	BatDown		GE Rosa Tomb 6/BatDown	white
+> GE Rosa Tomb 6	BatOutlineDown		GE Rosa Tomb 6/BatOutlineDown	white
+> GE Rosa Tomb 6	UpperAlert		GE Rosa Tomb 6/UpperAlert	white
+> GE Rosa Tomb 6	UpperAlert-01		GE Rosa Tomb 6/UpperAlert-01	white
+> GE Rosa Tomb 6	UpperAlert-02		GE Rosa Tomb 6/UpperAlert-02	white
+> GE Rosa Tomb 6	UpperAlert-03		GE Rosa Tomb 6/UpperAlert-03	white
+> GE Rosa Tomb 6	UpperAlert-04		GE Rosa Tomb 6/UpperAlert-04	white
+> GE Rosa Tomb 6	UpperAlert-05		GE Rosa Tomb 6/UpperAlert-05	white
+> GE Rosa Tomb 6	UpperAlert-06		GE Rosa Tomb 6/UpperAlert-06	white
+> GE Rosa Tomb 6	UpperAlert-07		GE Rosa Tomb 6/UpperAlert-07	white
+> GE Rosa Tomb 6	UpperAlert-08		GE Rosa Tomb 6/UpperAlert-08	white
+> GE Rosa Tomb 6	Cross Highlights Strand		GE Rosa Tomb 6/Cross Highlights Strand	white
+> GE Rosa Tomb 6	Balls		GE Rosa Tomb 6/Balls	white
+> GE Rosa Tomb 6	SmArrows		GE Rosa Tomb 6/SmArrows	white
+> GE Rosa Tomb 6	GourdsNE		GE Rosa Tomb 6/GourdsNE	white
+> GE Rosa Tomb 6	PetalsLg		GE Rosa Tomb 6/PetalsLg	white
+> GE Rosa Tomb 6	PetalsSm		GE Rosa Tomb 6/PetalsSm	white
+> GE Rosa Tomb 6	Cross Spinner		GE Rosa Tomb 6/Cross Spinner	white
+> GE Rosa Tomb 6	TombSpinner		GE Rosa Tomb 6/TombSpinner	white
+> GE Rosa Tomb 6	TombSpinnerOutline		GE Rosa Tomb 6/TombSpinnerOutline	white
+> GE Rosa Tomb 6	HooksCW		GE Rosa Tomb 6/HooksCW	white
+> GE Rosa Tomb 6	HooksLongCW		GE Rosa Tomb 6/HooksLongCW	white
+> GE Rosa Tomb 6	HooksCCW		GE Rosa Tomb 6/HooksCCW	white
+> GE Rosa Tomb 6	HooksLongCCW		GE Rosa Tomb 6/HooksLongCCW	white
+> GE Rosa Tomb 7			GE Rosa Tomb 7	white
+> GE Rosa Tomb 7	Bat Body		GE Rosa Tomb 7/Bat Body	white
+> GE Rosa Tomb 7	Bat Eyes		GE Rosa Tomb 7/Bat Eyes	white
+> GE Rosa Tomb 7	Bat Flying Wings Up		GE Rosa Tomb 7/Bat Flying Wings Up	white
+> GE Rosa Tomb 7	Bat Flying Wings Down		GE Rosa Tomb 7/Bat Flying Wings Down	white
+> GE Rosa Tomb 7	Tomb Full Outline		GE Rosa Tomb 7/Tomb Full Outline	white
+> GE Rosa Tomb 7	Cross Outline		GE Rosa Tomb 7/Cross Outline	white
+> GE Rosa Tomb 7	Cross Highlights		GE Rosa Tomb 7/Cross Highlights	white
+> GE Rosa Tomb 7	Cross Spinner Outline		GE Rosa Tomb 7/Cross Spinner Outline	white
+> GE Rosa Tomb 7	Cross Spinner Spoke 1		GE Rosa Tomb 7/Cross Spinner Spoke 1	white
+> GE Rosa Tomb 7	Cross Spinner Spoke 2		GE Rosa Tomb 7/Cross Spinner Spoke 2	white
+> GE Rosa Tomb 7	Cross Spinner Spoke 3		GE Rosa Tomb 7/Cross Spinner Spoke 3	white
+> GE Rosa Tomb 7	Cross Spinner Spoke 4		GE Rosa Tomb 7/Cross Spinner Spoke 4	white
+> GE Rosa Tomb 7	Cross Spinner Spoke 5		GE Rosa Tomb 7/Cross Spinner Spoke 5	white
+> GE Rosa Tomb 7	Cross Spinner Spoke 6		GE Rosa Tomb 7/Cross Spinner Spoke 6	white
+> GE Rosa Tomb 7	Cross Spinner Spoke 7		GE Rosa Tomb 7/Cross Spinner Spoke 7	white
+> GE Rosa Tomb 7	Cross Spinner Spoke 8		GE Rosa Tomb 7/Cross Spinner Spoke 8	white
+> GE Rosa Tomb 7	Cross Spinner Ring 1		GE Rosa Tomb 7/Cross Spinner Ring 1	white
+> GE Rosa Tomb 7	Cross Spinner Ring 2		GE Rosa Tomb 7/Cross Spinner Ring 2	white
+> GE Rosa Tomb 7	Cross Spinner Ring 3		GE Rosa Tomb 7/Cross Spinner Ring 3	white
+> GE Rosa Tomb 7	Cross Spinner Ring 4		GE Rosa Tomb 7/Cross Spinner Ring 4	white
+> GE Rosa Tomb 7	Cross Spinner Ring 5		GE Rosa Tomb 7/Cross Spinner Ring 5	white
+> GE Rosa Tomb 7	Tomb Spoke 1		GE Rosa Tomb 7/Tomb Spoke 1	white
+> GE Rosa Tomb 7	Tomb Spoke 2		GE Rosa Tomb 7/Tomb Spoke 2	white
+> GE Rosa Tomb 7	Tomb Spoke 3		GE Rosa Tomb 7/Tomb Spoke 3	white
+> GE Rosa Tomb 7	Tomb Spoke 4		GE Rosa Tomb 7/Tomb Spoke 4	white
+> GE Rosa Tomb 7	Tomb Spoke 5		GE Rosa Tomb 7/Tomb Spoke 5	white
+> GE Rosa Tomb 7	Tomb Spoke 6		GE Rosa Tomb 7/Tomb Spoke 6	white
+> GE Rosa Tomb 7	Tomb Spoke 7		GE Rosa Tomb 7/Tomb Spoke 7	white
+> GE Rosa Tomb 7	Tomb Spoke 8		GE Rosa Tomb 7/Tomb Spoke 8	white
+> GE Rosa Tomb 7	Tomb Ring 1		GE Rosa Tomb 7/Tomb Ring 1	white
+> GE Rosa Tomb 7	Tomb Ring 2		GE Rosa Tomb 7/Tomb Ring 2	white
+> GE Rosa Tomb 7	Tomb Ring 3		GE Rosa Tomb 7/Tomb Ring 3	white
+> GE Rosa Tomb 7	Tomb Ring 4		GE Rosa Tomb 7/Tomb Ring 4	white
+> GE Rosa Tomb 7	Tomb Ring 5		GE Rosa Tomb 7/Tomb Ring 5	white
+> GE Rosa Tomb 7	Tomb Ring 6		GE Rosa Tomb 7/Tomb Ring 6	white
+> GE Rosa Tomb 7	Tomb Ring 7		GE Rosa Tomb 7/Tomb Ring 7	white
+> GE Rosa Tomb 7	Flake Outline		GE Rosa Tomb 7/Flake Outline	white
+> GE Rosa Tomb 7	Paddle Arm 1		GE Rosa Tomb 7/Paddle Arm 1	white
+> GE Rosa Tomb 7	Paddle Arm 2		GE Rosa Tomb 7/Paddle Arm 2	white
+> GE Rosa Tomb 7	Paddle Arm 3		GE Rosa Tomb 7/Paddle Arm 3	white
+> GE Rosa Tomb 7	Paddle Arm 4		GE Rosa Tomb 7/Paddle Arm 4	white
+> GE Rosa Tomb 7	Paddle Arm 5		GE Rosa Tomb 7/Paddle Arm 5	white
+> GE Rosa Tomb 7	Paddle Arm 6		GE Rosa Tomb 7/Paddle Arm 6	white
+> GE Rosa Tomb 7	Paddle Arm 7		GE Rosa Tomb 7/Paddle Arm 7	white
+> GE Rosa Tomb 7	Paddle Arm 8		GE Rosa Tomb 7/Paddle Arm 8	white
+> GE Rosa Tomb 7	Star		GE Rosa Tomb 7/Star	white
+> GE Rosa Tomb 7	Warp 1		GE Rosa Tomb 7/Warp 1	white
+> GE Rosa Tomb 7	Warp 2		GE Rosa Tomb 7/Warp 2	white
+> GE Rosa Tomb 7	Warp 3		GE Rosa Tomb 7/Warp 3	white
+> GE Rosa Tomb 7	Warp 4		GE Rosa Tomb 7/Warp 4	white
+> GE Rosa Tomb 7	Warp 5		GE Rosa Tomb 7/Warp 5	white
+> GE Rosa Tomb 7	Warp 6		GE Rosa Tomb 7/Warp 6	white
+> GE Rosa Tomb 7	Warp 7		GE Rosa Tomb 7/Warp 7	white
+> GE Rosa Tomb 7	Warp 8		GE Rosa Tomb 7/Warp 8	white
+> GE Rosa Tomb 7	Tombstone Lower		GE Rosa Tomb 7/Tombstone Lower	white
+> GE Rosa Tomb 7	Gourds		GE Rosa Tomb 7/Gourds	white
+> GE Rosa Tomb 7	Gourds-01		GE Rosa Tomb 7/Gourds-01	white
+> GE Rosa Tomb 7	Gourds-02		GE Rosa Tomb 7/Gourds-02	white
+> GE Rosa Tomb 7	Gourds-03		GE Rosa Tomb 7/Gourds-03	white
+> GE Rosa Tomb 7	Gourds-04		GE Rosa Tomb 7/Gourds-04	white
+> GE Rosa Tomb 7	Gourds-05		GE Rosa Tomb 7/Gourds-05	white
+> GE Rosa Tomb 7	Gourds-06		GE Rosa Tomb 7/Gourds-06	white
+> GE Rosa Tomb 7	Gourds-07		GE Rosa Tomb 7/Gourds-07	white
+> GE Rosa Tomb 7	Gourds-08		GE Rosa Tomb 7/Gourds-08	white
+> GE Rosa Tomb 7	Cross Highlights Fix		GE Rosa Tomb 7/Cross Highlights Fix	white
+> GE Rosa Tomb 7	Default		GE Rosa Tomb 7/Default	white
+> GE Rosa Tomb 7	BatUp		GE Rosa Tomb 7/BatUp	white
+> GE Rosa Tomb 7	BatOutlineUp		GE Rosa Tomb 7/BatOutlineUp	white
+> GE Rosa Tomb 7	BatDown		GE Rosa Tomb 7/BatDown	white
+> GE Rosa Tomb 7	BatOutlineDown		GE Rosa Tomb 7/BatOutlineDown	white
+> GE Rosa Tomb 7	UpperAlert		GE Rosa Tomb 7/UpperAlert	white
+> GE Rosa Tomb 7	UpperAlert-01		GE Rosa Tomb 7/UpperAlert-01	white
+> GE Rosa Tomb 7	UpperAlert-02		GE Rosa Tomb 7/UpperAlert-02	white
+> GE Rosa Tomb 7	UpperAlert-03		GE Rosa Tomb 7/UpperAlert-03	white
+> GE Rosa Tomb 7	UpperAlert-04		GE Rosa Tomb 7/UpperAlert-04	white
+> GE Rosa Tomb 7	UpperAlert-05		GE Rosa Tomb 7/UpperAlert-05	white
+> GE Rosa Tomb 7	UpperAlert-06		GE Rosa Tomb 7/UpperAlert-06	white
+> GE Rosa Tomb 7	UpperAlert-07		GE Rosa Tomb 7/UpperAlert-07	white
+> GE Rosa Tomb 7	UpperAlert-08		GE Rosa Tomb 7/UpperAlert-08	white
+> GE Rosa Tomb 7	Cross Highlights Strand		GE Rosa Tomb 7/Cross Highlights Strand	white
+> GE Rosa Tomb 7	Balls		GE Rosa Tomb 7/Balls	white
+> GE Rosa Tomb 7	SmArrows		GE Rosa Tomb 7/SmArrows	white
+> GE Rosa Tomb 7	GourdsNE		GE Rosa Tomb 7/GourdsNE	white
+> GE Rosa Tomb 7	PetalsLg		GE Rosa Tomb 7/PetalsLg	white
+> GE Rosa Tomb 7	PetalsSm		GE Rosa Tomb 7/PetalsSm	white
+> GE Rosa Tomb 7	Cross Spinner		GE Rosa Tomb 7/Cross Spinner	white
+> GE Rosa Tomb 7	TombSpinner		GE Rosa Tomb 7/TombSpinner	white
+> GE Rosa Tomb 7	TombSpinnerOutline		GE Rosa Tomb 7/TombSpinnerOutline	white
+> GE Rosa Tomb 7	HooksCW		GE Rosa Tomb 7/HooksCW	white
+> GE Rosa Tomb 7	HooksLongCW		GE Rosa Tomb 7/HooksLongCW	white
+> GE Rosa Tomb 7	HooksCCW		GE Rosa Tomb 7/HooksCCW	white
+> GE Rosa Tomb 7	HooksLongCCW		GE Rosa Tomb 7/HooksLongCCW	white
+> GE Rosa Tomb 8			GE Rosa Tomb 8	white
+> GE Rosa Tomb 8	Bat Body		GE Rosa Tomb 8/Bat Body	white
+> GE Rosa Tomb 8	Bat Eyes		GE Rosa Tomb 8/Bat Eyes	white
+> GE Rosa Tomb 8	Bat Flying Wings Up		GE Rosa Tomb 8/Bat Flying Wings Up	white
+> GE Rosa Tomb 8	Bat Flying Wings Down		GE Rosa Tomb 8/Bat Flying Wings Down	white
+> GE Rosa Tomb 8	Tomb Full Outline		GE Rosa Tomb 8/Tomb Full Outline	white
+> GE Rosa Tomb 8	Cross Outline		GE Rosa Tomb 8/Cross Outline	white
+> GE Rosa Tomb 8	Cross Highlights		GE Rosa Tomb 8/Cross Highlights	white
+> GE Rosa Tomb 8	Cross Spinner Outline		GE Rosa Tomb 8/Cross Spinner Outline	white
+> GE Rosa Tomb 8	Cross Spinner Spoke 1		GE Rosa Tomb 8/Cross Spinner Spoke 1	white
+> GE Rosa Tomb 8	Cross Spinner Spoke 2		GE Rosa Tomb 8/Cross Spinner Spoke 2	white
+> GE Rosa Tomb 8	Cross Spinner Spoke 3		GE Rosa Tomb 8/Cross Spinner Spoke 3	white
+> GE Rosa Tomb 8	Cross Spinner Spoke 4		GE Rosa Tomb 8/Cross Spinner Spoke 4	white
+> GE Rosa Tomb 8	Cross Spinner Spoke 5		GE Rosa Tomb 8/Cross Spinner Spoke 5	white
+> GE Rosa Tomb 8	Cross Spinner Spoke 6		GE Rosa Tomb 8/Cross Spinner Spoke 6	white
+> GE Rosa Tomb 8	Cross Spinner Spoke 7		GE Rosa Tomb 8/Cross Spinner Spoke 7	white
+> GE Rosa Tomb 8	Cross Spinner Spoke 8		GE Rosa Tomb 8/Cross Spinner Spoke 8	white
+> GE Rosa Tomb 8	Cross Spinner Ring 1		GE Rosa Tomb 8/Cross Spinner Ring 1	white
+> GE Rosa Tomb 8	Cross Spinner Ring 2		GE Rosa Tomb 8/Cross Spinner Ring 2	white
+> GE Rosa Tomb 8	Cross Spinner Ring 3		GE Rosa Tomb 8/Cross Spinner Ring 3	white
+> GE Rosa Tomb 8	Cross Spinner Ring 4		GE Rosa Tomb 8/Cross Spinner Ring 4	white
+> GE Rosa Tomb 8	Cross Spinner Ring 5		GE Rosa Tomb 8/Cross Spinner Ring 5	white
+> GE Rosa Tomb 8	Tomb Spoke 1		GE Rosa Tomb 8/Tomb Spoke 1	white
+> GE Rosa Tomb 8	Tomb Spoke 2		GE Rosa Tomb 8/Tomb Spoke 2	white
+> GE Rosa Tomb 8	Tomb Spoke 3		GE Rosa Tomb 8/Tomb Spoke 3	white
+> GE Rosa Tomb 8	Tomb Spoke 4		GE Rosa Tomb 8/Tomb Spoke 4	white
+> GE Rosa Tomb 8	Tomb Spoke 5		GE Rosa Tomb 8/Tomb Spoke 5	white
+> GE Rosa Tomb 8	Tomb Spoke 6		GE Rosa Tomb 8/Tomb Spoke 6	white
+> GE Rosa Tomb 8	Tomb Spoke 7		GE Rosa Tomb 8/Tomb Spoke 7	white
+> GE Rosa Tomb 8	Tomb Spoke 8		GE Rosa Tomb 8/Tomb Spoke 8	white
+> GE Rosa Tomb 8	Tomb Ring 1		GE Rosa Tomb 8/Tomb Ring 1	white
+> GE Rosa Tomb 8	Tomb Ring 2		GE Rosa Tomb 8/Tomb Ring 2	white
+> GE Rosa Tomb 8	Tomb Ring 3		GE Rosa Tomb 8/Tomb Ring 3	white
+> GE Rosa Tomb 8	Tomb Ring 4		GE Rosa Tomb 8/Tomb Ring 4	white
+> GE Rosa Tomb 8	Tomb Ring 5		GE Rosa Tomb 8/Tomb Ring 5	white
+> GE Rosa Tomb 8	Tomb Ring 6		GE Rosa Tomb 8/Tomb Ring 6	white
+> GE Rosa Tomb 8	Tomb Ring 7		GE Rosa Tomb 8/Tomb Ring 7	white
+> GE Rosa Tomb 8	Flake Outline		GE Rosa Tomb 8/Flake Outline	white
+> GE Rosa Tomb 8	Paddle Arm 1		GE Rosa Tomb 8/Paddle Arm 1	white
+> GE Rosa Tomb 8	Paddle Arm 2		GE Rosa Tomb 8/Paddle Arm 2	white
+> GE Rosa Tomb 8	Paddle Arm 3		GE Rosa Tomb 8/Paddle Arm 3	white
+> GE Rosa Tomb 8	Paddle Arm 4		GE Rosa Tomb 8/Paddle Arm 4	white
+> GE Rosa Tomb 8	Paddle Arm 5		GE Rosa Tomb 8/Paddle Arm 5	white
+> GE Rosa Tomb 8	Paddle Arm 6		GE Rosa Tomb 8/Paddle Arm 6	white
+> GE Rosa Tomb 8	Paddle Arm 7		GE Rosa Tomb 8/Paddle Arm 7	white
+> GE Rosa Tomb 8	Paddle Arm 8		GE Rosa Tomb 8/Paddle Arm 8	white
+> GE Rosa Tomb 8	Star		GE Rosa Tomb 8/Star	white
+> GE Rosa Tomb 8	Warp 1		GE Rosa Tomb 8/Warp 1	white
+> GE Rosa Tomb 8	Warp 2		GE Rosa Tomb 8/Warp 2	white
+> GE Rosa Tomb 8	Warp 3		GE Rosa Tomb 8/Warp 3	white
+> GE Rosa Tomb 8	Warp 4		GE Rosa Tomb 8/Warp 4	white
+> GE Rosa Tomb 8	Warp 5		GE Rosa Tomb 8/Warp 5	white
+> GE Rosa Tomb 8	Warp 6		GE Rosa Tomb 8/Warp 6	white
+> GE Rosa Tomb 8	Warp 7		GE Rosa Tomb 8/Warp 7	white
+> GE Rosa Tomb 8	Warp 8		GE Rosa Tomb 8/Warp 8	white
+> GE Rosa Tomb 8	Tombstone Lower		GE Rosa Tomb 8/Tombstone Lower	white
+> GE Rosa Tomb 8	Gourds		GE Rosa Tomb 8/Gourds	white
+> GE Rosa Tomb 8	Gourds-01		GE Rosa Tomb 8/Gourds-01	white
+> GE Rosa Tomb 8	Gourds-02		GE Rosa Tomb 8/Gourds-02	white
+> GE Rosa Tomb 8	Gourds-03		GE Rosa Tomb 8/Gourds-03	white
+> GE Rosa Tomb 8	Gourds-04		GE Rosa Tomb 8/Gourds-04	white
+> GE Rosa Tomb 8	Gourds-05		GE Rosa Tomb 8/Gourds-05	white
+> GE Rosa Tomb 8	Gourds-06		GE Rosa Tomb 8/Gourds-06	white
+> GE Rosa Tomb 8	Gourds-07		GE Rosa Tomb 8/Gourds-07	white
+> GE Rosa Tomb 8	Gourds-08		GE Rosa Tomb 8/Gourds-08	white
+> GE Rosa Tomb 8	Cross Highlights Fix		GE Rosa Tomb 8/Cross Highlights Fix	white
+> GE Rosa Tomb 8	Default		GE Rosa Tomb 8/Default	white
+> GE Rosa Tomb 8	BatUp		GE Rosa Tomb 8/BatUp	white
+> GE Rosa Tomb 8	BatOutlineUp		GE Rosa Tomb 8/BatOutlineUp	white
+> GE Rosa Tomb 8	BatDown		GE Rosa Tomb 8/BatDown	white
+> GE Rosa Tomb 8	BatOutlineDown		GE Rosa Tomb 8/BatOutlineDown	white
+> GE Rosa Tomb 8	UpperAlert		GE Rosa Tomb 8/UpperAlert	white
+> GE Rosa Tomb 8	UpperAlert-01		GE Rosa Tomb 8/UpperAlert-01	white
+> GE Rosa Tomb 8	UpperAlert-02		GE Rosa Tomb 8/UpperAlert-02	white
+> GE Rosa Tomb 8	UpperAlert-03		GE Rosa Tomb 8/UpperAlert-03	white
+> GE Rosa Tomb 8	UpperAlert-04		GE Rosa Tomb 8/UpperAlert-04	white
+> GE Rosa Tomb 8	UpperAlert-05		GE Rosa Tomb 8/UpperAlert-05	white
+> GE Rosa Tomb 8	UpperAlert-06		GE Rosa Tomb 8/UpperAlert-06	white
+> GE Rosa Tomb 8	UpperAlert-07		GE Rosa Tomb 8/UpperAlert-07	white
+> GE Rosa Tomb 8	UpperAlert-08		GE Rosa Tomb 8/UpperAlert-08	white
+> GE Rosa Tomb 8	Cross Highlights Strand		GE Rosa Tomb 8/Cross Highlights Strand	white
+> GE Rosa Tomb 8	Balls		GE Rosa Tomb 8/Balls	white
+> GE Rosa Tomb 8	SmArrows		GE Rosa Tomb 8/SmArrows	white
+> GE Rosa Tomb 8	GourdsNE		GE Rosa Tomb 8/GourdsNE	white
+> GE Rosa Tomb 8	PetalsLg		GE Rosa Tomb 8/PetalsLg	white
+> GE Rosa Tomb 8	PetalsSm		GE Rosa Tomb 8/PetalsSm	white
+> GE Rosa Tomb 8	Cross Spinner		GE Rosa Tomb 8/Cross Spinner	white
+> GE Rosa Tomb 8	TombSpinner		GE Rosa Tomb 8/TombSpinner	white
+> GE Rosa Tomb 8	TombSpinnerOutline		GE Rosa Tomb 8/TombSpinnerOutline	white
+> GE Rosa Tomb 8	HooksCW		GE Rosa Tomb 8/HooksCW	white
+> GE Rosa Tomb 8	HooksLongCW		GE Rosa Tomb 8/HooksLongCW	white
+> GE Rosa Tomb 8	HooksCCW		GE Rosa Tomb 8/HooksCCW	white
+> GE Rosa Tomb 8	HooksLongCCW		GE Rosa Tomb 8/HooksLongCCW	white
+> GE Rosa Tomb Bat Body GRP			GE Rosa Tomb Bat Body GRP	white
+> GE Rosa Tomb Cross Ring GRP			GE Rosa Tomb Cross Ring GRP	white
+> GE Rosa Tomb Cross Spinner GRP			GE Rosa Tomb Cross Spinner GRP	white
+> GE Rosa Tomb Eyes GRP			GE Rosa Tomb Eyes GRP	white
+> GE Rosa Tomb Flake GRP			GE Rosa Tomb Flake GRP	white
+> GE Rosa Tomb GRP			GE Rosa Tomb GRP	white
+> GE Rosa Tomb Gourds GRP			GE Rosa Tomb Gourds GRP	white
+> GE Rosa Tomb Highlilghts GRP			GE Rosa Tomb Highlilghts GRP	white
+> GE Rosa Tomb Outline GRP			GE Rosa Tomb Outline GRP	white
+> GE Rosa Tomb Paddles GRP			GE Rosa Tomb Paddles GRP	white
+> GE Rosa Tomb Rings GRP			GE Rosa Tomb Rings GRP	white
+> GE Rosa Tomb Spokes GRP			GE Rosa Tomb Spokes GRP	white
+> GE Rosa Tomb Stars GRP			GE Rosa Tomb Stars GRP	white
+> GE Rosa Tomb Tomb Ring GRP			GE Rosa Tomb Tomb Ring GRP	white
+> GE Rosa Tomb Tomb Spokes GRP			GE Rosa Tomb Tomb Spokes GRP	white
+> GE Rosa Tomb Tombstone Lower GRP			GE Rosa Tomb Tombstone Lower GRP	white
+> GE Rosa Tomb Warp GRP			GE Rosa Tomb Warp GRP	white
+> GE Rosa Tomb Wings Down GRP			GE Rosa Tomb Wings Down GRP	white
+> GE Rosa Tomb Wings GRP			GE Rosa Tomb Wings GRP	white
+> GE Rosa Tomb Wings Up GRP			GE Rosa Tomb Wings Up GRP	white
+> GE Rosa Tombs Bats			GE Rosa Tombs Bats	white
+> GE Rosa Tombs Bats Eyes			GE Rosa Tombs Bats Eyes	white
+> GE Rosa Tombs Bats Outline			GE Rosa Tombs Bats Outline	white
+> GE Rosa Tombs Bats Wings Down			GE Rosa Tombs Bats Wings Down	white
+> GE Rosa Tombs Bats Wings Up			GE Rosa Tombs Bats Wings Up	white
+> GE Rosa Tombs Crosses			GE Rosa Tombs Crosses	white
+> GE Rosa Tombs Crosses Highlights			GE Rosa Tombs Crosses Highlights	white
+> GE Rosa Tombs Rosa			GE Rosa Tombs Rosa	white
+> GE Rosa Tombs Rosa Arms			GE Rosa Tombs Rosa Arms	white
+> GE Rosa Tombs Rosa Balls			GE Rosa Tombs Rosa Balls	white
+> GE Rosa Tombs Rosa Hook CCW			GE Rosa Tombs Rosa Hook CCW	white
+> GE Rosa Tombs Rosa Hook CW			GE Rosa Tombs Rosa Hook CW	white
+> GE Rosa Tombs Rosa Outline			GE Rosa Tombs Rosa Outline	white
+> GE Rosa Tombs Rosa Petals Lg			GE Rosa Tombs Rosa Petals Lg	white
+> GE Rosa Tombs Rosa Petals Sm			GE Rosa Tombs Rosa Petals Sm	white
+> GE Rosa Tombs Rosa Rings			GE Rosa Tombs Rosa Rings	white
+> GE Rosa Tombs Rosa Sm			GE Rosa Tombs Rosa Sm	white
+> GE Rosa Tombs Rosa Spiral CCW			GE Rosa Tombs Rosa Spiral CCW	white
+> GE Rosa Tombs Rosa Spiral CW			GE Rosa Tombs Rosa Spiral CW	white
+> GE Rosa Tombs Rosa Spokes			GE Rosa Tombs Rosa Spokes	white
+> GE Rosa Tombs Rosa Star			GE Rosa Tombs Rosa Star	white
+> GE Rosa Tombs Rosa Wavy			GE Rosa Tombs Rosa Wavy	white
+> GE Rosa Tombs Spinner			GE Rosa Tombs Spinner	white
+> GE Rosa Tombs Spinner Alert			GE Rosa Tombs Spinner Alert	white
+> GE Rosa Tombs Spinner Outline			GE Rosa Tombs Spinner Outline	white
+> GE Rosa Tombs Spinner Rings			GE Rosa Tombs Spinner Rings	white
+> GE Rosa Tombs Spinner Spokes			GE Rosa Tombs Spinner Spokes	white
+> GE Rosa Tombs Tomb Design			GE Rosa Tombs Tomb Design	white
+> GE Rosa Tombs Tomb Full			GE Rosa Tombs Tomb Full	white
+> GE Rosa Tombs Tomb Short			GE Rosa Tombs Tomb Short	white
+8595a10188,10267
+> MegaMiniTree-L1			MegaMiniTree-L1	white
+> MegaMiniTree-L2			MegaMiniTree-L2	white
+> MoCWeb 2000			MoCWeb 2000	white
+> MoCWeb 2000	Default		MoCWeb 2000/Default	white
+> MoCWeb 2000	Outline		MoCWeb 2000/Outline	white
+> MoCWeb 2000	Spokes		MoCWeb 2000/Spokes	white
+> MoCWeb 2000	Rings		MoCWeb 2000/Rings	white
+> MoCWeb 2000	Alert		MoCWeb 2000/Alert	white
+> MoCWeb 2000	Blade		MoCWeb 2000/Blade	white
+> MoCWeb 2000	Sections		MoCWeb 2000/Sections	white
+> MoCWeb 2000	Fill		MoCWeb 2000/Fill	white
+> MoCWeb 2000	ZigZag		MoCWeb 2000/ZigZag	white
+> MoCWeb 2000	Ring1		MoCWeb 2000/Ring1	white
+> MoCWeb 2000	Ring2		MoCWeb 2000/Ring2	white
+> MoCWeb 2000	Ring3		MoCWeb 2000/Ring3	white
+> MoCWeb 2000	Ring4		MoCWeb 2000/Ring4	white
+> MoCWeb 2000	Ring5		MoCWeb 2000/Ring5	white
+> MoCWeb 2000	Ring6		MoCWeb 2000/Ring6	white
+> MoCWeb 2000	Ring7		MoCWeb 2000/Ring7	white
+> MoCWeb 2000	Ring8		MoCWeb 2000/Ring8	white
+> MoCWeb 2000	Spokes-01		MoCWeb 2000/Spokes-01	white
+> MoCWeb 2000	Spokes-02		MoCWeb 2000/Spokes-02	white
+> MoCWeb 2000	Spokes-03		MoCWeb 2000/Spokes-03	white
+> MoCWeb 2000	Spokes-04		MoCWeb 2000/Spokes-04	white
+> MoCWeb 2000	Spokes-05		MoCWeb 2000/Spokes-05	white
+> MoCWeb 2000	Spokes-06		MoCWeb 2000/Spokes-06	white
+> MoCWeb 2000	Spokes-07		MoCWeb 2000/Spokes-07	white
+> MoCWeb 2000	Spokes-08		MoCWeb 2000/Spokes-08	white
+> MoCWeb 2000	Spokes-09		MoCWeb 2000/Spokes-09	white
+> MoCWeb 2000	Spokes-10		MoCWeb 2000/Spokes-10	white
+> MoCWeb 2000	Alert-01		MoCWeb 2000/Alert-01	white
+> MoCWeb 2000	Alert-02		MoCWeb 2000/Alert-02	white
+> MoCWeb 2000	Alert-03		MoCWeb 2000/Alert-03	white
+> MoCWeb 2000	Alert-04		MoCWeb 2000/Alert-04	white
+> MoCWeb 2000	Alert-05		MoCWeb 2000/Alert-05	white
+> MoCWeb 2000	Alert-06		MoCWeb 2000/Alert-06	white
+> MoCWeb 2000	Alert-07		MoCWeb 2000/Alert-07	white
+> MoCWeb 2000	Alert-08		MoCWeb 2000/Alert-08	white
+> MoCWeb 2000	Alert-09		MoCWeb 2000/Alert-09	white
+> MoCWeb 2000	Alert-10		MoCWeb 2000/Alert-10	white
+> MoCWeb 2000	Blade-01		MoCWeb 2000/Blade-01	white
+> MoCWeb 2000	Blade-02		MoCWeb 2000/Blade-02	white
+> MoCWeb 2000	Blade-03		MoCWeb 2000/Blade-03	white
+> MoCWeb 2000	Blade-04		MoCWeb 2000/Blade-04	white
+> MoCWeb 2000	Blade-05		MoCWeb 2000/Blade-05	white
+> MoCWeb 2000	Blade-06		MoCWeb 2000/Blade-06	white
+> MoCWeb 2000	Blade-07		MoCWeb 2000/Blade-07	white
+> MoCWeb 2000	Blade-08		MoCWeb 2000/Blade-08	white
+> MoCWeb 2000	Blade-09		MoCWeb 2000/Blade-09	white
+> MoCWeb 2000	Blade-10		MoCWeb 2000/Blade-10	white
+> MoCWeb 2000	Sections-01		MoCWeb 2000/Sections-01	white
+> MoCWeb 2000	Sections-02		MoCWeb 2000/Sections-02	white
+> MoCWeb 2000	Sections-03		MoCWeb 2000/Sections-03	white
+> MoCWeb 2000	Sections-04		MoCWeb 2000/Sections-04	white
+> MoCWeb 2000	Sections-05		MoCWeb 2000/Sections-05	white
+> MoCWeb 2000	Sections-06		MoCWeb 2000/Sections-06	white
+> MoCWeb 2000	Sections-07		MoCWeb 2000/Sections-07	white
+> MoCWeb 2000	Sections-08		MoCWeb 2000/Sections-08	white
+> MoCWeb 2000	Sections-09		MoCWeb 2000/Sections-09	white
+> MoCWeb 2000	Sections-10		MoCWeb 2000/Sections-10	white
+> MoCWeb 2000	Fill-01		MoCWeb 2000/Fill-01	white
+> MoCWeb 2000	Fill-02		MoCWeb 2000/Fill-02	white
+> MoCWeb 2000	Fill-03		MoCWeb 2000/Fill-03	white
+> MoCWeb 2000	Fill-04		MoCWeb 2000/Fill-04	white
+> MoCWeb 2000	Fill-05		MoCWeb 2000/Fill-05	white
+> MoCWeb 2000	Fill-06		MoCWeb 2000/Fill-06	white
+> MoCWeb 2000	Fill-07		MoCWeb 2000/Fill-07	white
+> MoCWeb 2000	Fill-08		MoCWeb 2000/Fill-08	white
+> MoCWeb 2000	Fill-09		MoCWeb 2000/Fill-09	white
+> MoCWeb 2000	Fill-10		MoCWeb 2000/Fill-10	white
+> MoCWeb 2000	ZigZag-01		MoCWeb 2000/ZigZag-01	white
+> MoCWeb 2000	ZigZag-02		MoCWeb 2000/ZigZag-02	white
+> MoCWeb 2000	ZigZag-03		MoCWeb 2000/ZigZag-03	white
+> MoCWeb 2000	ZigZag-04		MoCWeb 2000/ZigZag-04	white
+> MoCWeb 2000	ZigZag-05		MoCWeb 2000/ZigZag-05	white
+> MoCWeb 2000	ZigZag-06		MoCWeb 2000/ZigZag-06	white
+> MoCWeb 2000	ZigZag-07		MoCWeb 2000/ZigZag-07	white
+> MoCWeb 2000	ZigZag-08		MoCWeb 2000/ZigZag-08	white
+> MoCWeb 2000	ZigZag-09		MoCWeb 2000/ZigZag-09	white
+> MoCWeb 2000	ZigZag-10		MoCWeb 2000/ZigZag-10	white
+9287a10960,10972
+> PPD GE BOAW DR	Spokes		PPD GE BOAW DR/Spokes	white
+> PPD GE BOAW DR	Spokes (V)		PPD GE BOAW DR/Spokes (V)	white
+> PPD GE BOAW DR	Hooks CCW		PPD GE BOAW DR/Hooks CCW	white
+> PPD GE BOAW DR	Hooks CW		PPD GE BOAW DR/Hooks CW	white
+> PPD GE BOAW DR	Zig Zags		PPD GE BOAW DR/Zig Zags	white
+> PPD GE BOAW DR	Snowflake Spoke 01		PPD GE BOAW DR/Snowflake Spoke 01	white
+> PPD GE BOAW DR	Snowflake Spoke 02		PPD GE BOAW DR/Snowflake Spoke 02	white
+> PPD GE BOAW DR	Snowflake Spoke 03		PPD GE BOAW DR/Snowflake Spoke 03	white
+> PPD GE BOAW DR	Snowflake Spoke 04		PPD GE BOAW DR/Snowflake Spoke 04	white
+> PPD GE BOAW DR	Snowflake Spoke 05		PPD GE BOAW DR/Snowflake Spoke 05	white
+> PPD GE BOAW DR	Snowflake Spoke 06		PPD GE BOAW DR/Snowflake Spoke 06	white
+> PPD GE BOAW DR	Snowflake Spokes		PPD GE BOAW DR/Snowflake Spokes	white
+> PPD GE BOAW DR	Rings		PPD GE BOAW DR/Rings	white
+9650a11336,11348
+> PPD GE BOAW Land	Spokes		PPD GE BOAW Land/Spokes	white
+> PPD GE BOAW Land	Spokes (V)		PPD GE BOAW Land/Spokes (V)	white
+> PPD GE BOAW Land	Hooks CCW		PPD GE BOAW Land/Hooks CCW	white
+> PPD GE BOAW Land	Hooks CW		PPD GE BOAW Land/Hooks CW	white
+> PPD GE BOAW Land	Zig Zags		PPD GE BOAW Land/Zig Zags	white
+> PPD GE BOAW Land	Snowflake Spoke 01		PPD GE BOAW Land/Snowflake Spoke 01	white
+> PPD GE BOAW Land	Snowflake Spoke 02		PPD GE BOAW Land/Snowflake Spoke 02	white
+> PPD GE BOAW Land	Snowflake Spoke 03		PPD GE BOAW Land/Snowflake Spoke 03	white
+> PPD GE BOAW Land	Snowflake Spoke 04		PPD GE BOAW Land/Snowflake Spoke 04	white
+> PPD GE BOAW Land	Snowflake Spoke 05		PPD GE BOAW Land/Snowflake Spoke 05	white
+> PPD GE BOAW Land	Snowflake Spoke 06		PPD GE BOAW Land/Snowflake Spoke 06	white
+> PPD GE BOAW Land	Snowflake Spokes		PPD GE BOAW Land/Snowflake Spokes	white
+> PPD GE BOAW Land	Rings		PPD GE BOAW Land/Rings	white
+10051a11750,11754
+> PPD GE Baby Grand Illusion L	Snowflake Spokes		PPD GE Baby Grand Illusion L/Snowflake Spokes	white
+> PPD GE Baby Grand Illusion L	Hooks CCW		PPD GE Baby Grand Illusion L/Hooks CCW	white
+> PPD GE Baby Grand Illusion L	Hooks CW		PPD GE Baby Grand Illusion L/Hooks CW	white
+> PPD GE Baby Grand Illusion L	Spoke  (V)		PPD GE Baby Grand Illusion L/Spoke  (V)	white
+> PPD GE Baby Grand Illusion L	Rings		PPD GE Baby Grand Illusion L/Rings	white
+10452a12156,12160
+> PPD GE Baby Grand Illusion R	Snowflake Spokes		PPD GE Baby Grand Illusion R/Snowflake Spokes	white
+> PPD GE Baby Grand Illusion R	Hooks CCW		PPD GE Baby Grand Illusion R/Hooks CCW	white
+> PPD GE Baby Grand Illusion R	Hooks CW		PPD GE Baby Grand Illusion R/Hooks CW	white
+> PPD GE Baby Grand Illusion R	Spoke  (V)		PPD GE Baby Grand Illusion R/Spoke  (V)	white
+> PPD GE Baby Grand Illusion R	Rings		PPD GE Baby Grand Illusion R/Rings	white
+11412a13121,13130
+> PPD GE MOAW	Spokes		PPD GE MOAW/Spokes	white
+> PPD GE MOAW	Spokes (V)		PPD GE MOAW/Spokes (V)	white
+> PPD GE MOAW	Hooks CCW		PPD GE MOAW/Hooks CCW	white
+> PPD GE MOAW	Hooks CW		PPD GE MOAW/Hooks CW	white
+> PPD GE MOAW	Feathers		PPD GE MOAW/Feathers	white
+> PPD GE MOAW	Radiation Even		PPD GE MOAW/Radiation Even	white
+> PPD GE MOAW	Zig Zags		PPD GE MOAW/Zig Zags	white
+> PPD GE MOAW	Radiation Odd		PPD GE MOAW/Radiation Odd	white
+> PPD GE MOAW	Rings		PPD GE MOAW/Rings	white
+> PPD GE MOAW	Matrix		PPD GE MOAW/Matrix	white
+11899a13618,13661
+> PPD GE Rosa Grande	OuterBalls (V)		PPD GE Rosa Grande/OuterBalls (V)	white
+> PPD GE Rosa Grande	Peacock Feathers		PPD GE Rosa Grande/Peacock Feathers	white
+> PPD GE Rosa Grande	Cascade		PPD GE Rosa Grande/Cascade	white
+> PPD GE Rosa Grande	Cascade Odd		PPD GE Rosa Grande/Cascade Odd	white
+> PPD GE Rosa Grande	Cascade (V)		PPD GE Rosa Grande/Cascade (V)	white
+> PPD GE Rosa Grande	Cascade Even		PPD GE Rosa Grande/Cascade Even	white
+> PPD GE Rosa Grande	Burst		PPD GE Rosa Grande/Burst	white
+> PPD GE Rosa Grande	Burst Odd		PPD GE Rosa Grande/Burst Odd	white
+> PPD GE Rosa Grande	Burst Even		PPD GE Rosa Grande/Burst Even	white
+> PPD GE Rosa Grande	Flower - Large		PPD GE Rosa Grande/Flower - Large	white
+> PPD GE Rosa Grande	Cascade Odd (V)		PPD GE Rosa Grande/Cascade Odd (V)	white
+> PPD GE Rosa Grande	Cascade Even (V)		PPD GE Rosa Grande/Cascade Even (V)	white
+> PPD GE Rosa Grande	Fountain 2 (V)		PPD GE Rosa Grande/Fountain 2 (V)	white
+> PPD GE Rosa Grande	Center Swirl Left		PPD GE Rosa Grande/Center Swirl Left	white
+> PPD GE Rosa Grande	Center Swirl Right		PPD GE Rosa Grande/Center Swirl Right	white
+> PPD GE Rosa Grande	Spokes		PPD GE Rosa Grande/Spokes	white
+> PPD GE Rosa Grande	Spokes (V)		PPD GE Rosa Grande/Spokes (V)	white
+> PPD GE Rosa Grande	Twist		PPD GE Rosa Grande/Twist	white
+> PPD GE Rosa Grande	Balls Stacked Odd		PPD GE Rosa Grande/Balls Stacked Odd	white
+> PPD GE Rosa Grande	Balls Stacked		PPD GE Rosa Grande/Balls Stacked	white
+> PPD GE Rosa Grande	Fountain 1 (V)		PPD GE Rosa Grande/Fountain 1 (V)	white
+> PPD GE Rosa Grande	Fountan 1B (V)		PPD GE Rosa Grande/Fountan 1B (V)	white
+> PPD GE Rosa Grande	Extended Peacock		PPD GE Rosa Grande/Extended Peacock	white
+> PPD GE Rosa Grande	Full Peacock		PPD GE Rosa Grande/Full Peacock	white
+> PPD GE Rosa Grande	Outer Decorations		PPD GE Rosa Grande/Outer Decorations	white
+> PPD GE Rosa Grande	Scoops		PPD GE Rosa Grande/Scoops	white
+> PPD GE Rosa Grande	Snowflake1		PPD GE Rosa Grande/Snowflake1	white
+> PPD GE Rosa Grande	Snowflake2		PPD GE Rosa Grande/Snowflake2	white
+> PPD GE Rosa Grande	Stacked Balls		PPD GE Rosa Grande/Stacked Balls	white
+> PPD GE Rosa Grande	Arrows - Cupid		PPD GE Rosa Grande/Arrows - Cupid	white
+> PPD GE Rosa Grande	Cupid Arrows		PPD GE Rosa Grande/Cupid Arrows	white
+> PPD GE Rosa Grande	Arrows - Cupid Long		PPD GE Rosa Grande/Arrows - Cupid Long	white
+> PPD GE Rosa Grande	Cupid Arrows Long		PPD GE Rosa Grande/Cupid Arrows Long	white
+> PPD GE Rosa Grande	Arrows - Double		PPD GE Rosa Grande/Arrows - Double	white
+> PPD GE Rosa Grande	Feather Filled Long		PPD GE Rosa Grande/Feather Filled Long	white
+> PPD GE Rosa Grande	Feather Filled Long Odd		PPD GE Rosa Grande/Feather Filled Long Odd	white
+> PPD GE Rosa Grande	Feather Filled Long Even		PPD GE Rosa Grande/Feather Filled Long Even	white
+> PPD GE Rosa Grande	Feather Filled Short		PPD GE Rosa Grande/Feather Filled Short	white
+> PPD GE Rosa Grande	Feather Filled Short Odd		PPD GE Rosa Grande/Feather Filled Short Odd	white
+> PPD GE Rosa Grande	Feather Filled Short Even		PPD GE Rosa Grande/Feather Filled Short Even	white
+> PPD GE Rosa Grande	Long Stem Tulip		PPD GE Rosa Grande/Long Stem Tulip	white
+> PPD GE Rosa Grande	Tulip		PPD GE Rosa Grande/Tulip	white
+> PPD GE Rosa Grande	Daisy		PPD GE Rosa Grande/Daisy	white
+> PPD GE Rosa Grande	Double Daisy		PPD GE Rosa Grande/Double Daisy	white
+12069d13830
+< PPD GE RosaWreath Lg	Balls - Stacked		PPD GE RosaWreath Lg/Balls - Stacked	white
+12077d13837
+< PPD GE RosaWreath Lg	Flower - Medium		PPD GE RosaWreath Lg/Flower - Medium	white
+12081d13840
+< PPD GE RosaWreath Lg	Flower - Big Petals		PPD GE RosaWreath Lg/Flower - Big Petals	white
+12095d13853
+< PPD GE RosaWreath Lg	Zig Zag		PPD GE RosaWreath Lg/Zig Zag	white
+12171d13928
+< PPD GE RosaWreath Lg	Burst		PPD GE RosaWreath Lg/Burst	white
+12173d13929
+< PPD GE RosaWreath Lg	Burst - Even		PPD GE RosaWreath Lg/Burst - Even	white
+12216a13973,13991
+> PPD GE RosaWreath Lg	Burst		PPD GE RosaWreath Lg/Burst	white
+> PPD GE RosaWreath Lg	Cascade (V)		PPD GE RosaWreath Lg/Cascade (V)	white
+> PPD GE RosaWreath Lg	Burst - Even		PPD GE RosaWreath Lg/Burst - Even	white
+> PPD GE RosaWreath Lg	Cascade - Odd (V)		PPD GE RosaWreath Lg/Cascade - Odd (V)	white
+> PPD GE RosaWreath Lg	Cascade Even (V)		PPD GE RosaWreath Lg/Cascade Even (V)	white
+> PPD GE RosaWreath Lg	Snowflake 1		PPD GE RosaWreath Lg/Snowflake 1	white
+> PPD GE RosaWreath Lg	Snowflake 2		PPD GE RosaWreath Lg/Snowflake 2	white
+> PPD GE RosaWreath Lg	Twist		PPD GE RosaWreath Lg/Twist	white
+> PPD GE RosaWreath Lg	Flower - Medium		PPD GE RosaWreath Lg/Flower - Medium	white
+> PPD GE RosaWreath Lg	Flower - Big Petals		PPD GE RosaWreath Lg/Flower - Big Petals	white
+> PPD GE RosaWreath Lg	Balls - Stacked		PPD GE RosaWreath Lg/Balls - Stacked	white
+> PPD GE RosaWreath Lg	Long Stem Tulip		PPD GE RosaWreath Lg/Long Stem Tulip	white
+> PPD GE RosaWreath Lg	Half Moons		PPD GE RosaWreath Lg/Half Moons	white
+> PPD GE RosaWreath Lg	Inner Ring		PPD GE RosaWreath Lg/Inner Ring	white
+> PPD GE RosaWreath Lg	Zig Zag		PPD GE RosaWreath Lg/Zig Zag	white
+> PPD GE RosaWreath Lg	Bowling Pin		PPD GE RosaWreath Lg/Bowling Pin	white
+> PPD GE RosaWreath Lg	Center Swirl Right		PPD GE RosaWreath Lg/Center Swirl Right	white
+> PPD GE RosaWreath Lg	Center Swirl Left		PPD GE RosaWreath Lg/Center Swirl Left	white
+> PPD GE RosaWreath Lg	Double Zig Zag		PPD GE RosaWreath Lg/Double Zig Zag	white
+12386d14160
+< PPD GE RosaWreath Sm Up SW	Balls - Stacked		PPD GE RosaWreath Sm Up SW/Balls - Stacked	white
+12394d14167
+< PPD GE RosaWreath Sm Up SW	Flower - Medium		PPD GE RosaWreath Sm Up SW/Flower - Medium	white
+12398d14170
+< PPD GE RosaWreath Sm Up SW	Flower - Big Petals		PPD GE RosaWreath Sm Up SW/Flower - Big Petals	white
+12412d14183
+< PPD GE RosaWreath Sm Up SW	Zig Zag		PPD GE RosaWreath Sm Up SW/Zig Zag	white
+12488d14258
+< PPD GE RosaWreath Sm Up SW	Burst		PPD GE RosaWreath Sm Up SW/Burst	white
+12490d14259
+< PPD GE RosaWreath Sm Up SW	Burst - Even		PPD GE RosaWreath Sm Up SW/Burst - Even	white
+12533a14303,14321
+> PPD GE RosaWreath Sm Up SW	Burst		PPD GE RosaWreath Sm Up SW/Burst	white
+> PPD GE RosaWreath Sm Up SW	Cascade (V)		PPD GE RosaWreath Sm Up SW/Cascade (V)	white
+> PPD GE RosaWreath Sm Up SW	Burst - Even		PPD GE RosaWreath Sm Up SW/Burst - Even	white
+> PPD GE RosaWreath Sm Up SW	Cascade - Odd (V)		PPD GE RosaWreath Sm Up SW/Cascade - Odd (V)	white
+> PPD GE RosaWreath Sm Up SW	Cascade Even (V)		PPD GE RosaWreath Sm Up SW/Cascade Even (V)	white
+> PPD GE RosaWreath Sm Up SW	Snowflake 1		PPD GE RosaWreath Sm Up SW/Snowflake 1	white
+> PPD GE RosaWreath Sm Up SW	Snowflake 2		PPD GE RosaWreath Sm Up SW/Snowflake 2	white
+> PPD GE RosaWreath Sm Up SW	Twist		PPD GE RosaWreath Sm Up SW/Twist	white
+> PPD GE RosaWreath Sm Up SW	Flower - Medium		PPD GE RosaWreath Sm Up SW/Flower - Medium	white
+> PPD GE RosaWreath Sm Up SW	Flower - Big Petals		PPD GE RosaWreath Sm Up SW/Flower - Big Petals	white
+> PPD GE RosaWreath Sm Up SW	Balls - Stacked		PPD GE RosaWreath Sm Up SW/Balls - Stacked	white
+> PPD GE RosaWreath Sm Up SW	Long Stem Tulip		PPD GE RosaWreath Sm Up SW/Long Stem Tulip	white
+> PPD GE RosaWreath Sm Up SW	Half Moons		PPD GE RosaWreath Sm Up SW/Half Moons	white
+> PPD GE RosaWreath Sm Up SW	Inner Ring		PPD GE RosaWreath Sm Up SW/Inner Ring	white
+> PPD GE RosaWreath Sm Up SW	Zig Zag		PPD GE RosaWreath Sm Up SW/Zig Zag	white
+> PPD GE RosaWreath Sm Up SW	Bowling Pin		PPD GE RosaWreath Sm Up SW/Bowling Pin	white
+> PPD GE RosaWreath Sm Up SW	Center Swirl Right		PPD GE RosaWreath Sm Up SW/Center Swirl Right	white
+> PPD GE RosaWreath Sm Up SW	Center Swirl Left		PPD GE RosaWreath Sm Up SW/Center Swirl Left	white
+> PPD GE RosaWreath Sm Up SW	Double Zig Zag		PPD GE RosaWreath Sm Up SW/Double Zig Zag	white
+12909a14698,14699
+> PPD GE Square Peg	Spokes (V)		PPD GE Square Peg/Spokes (V)	white
+> PPD GE Square Peg	FlakeArmsAll (V)		PPD GE Square Peg/FlakeArmsAll (V)	white
+13001d14790
+< PPD Wreath  - W	Ring5		PPD Wreath  - W/Ring5	white
+13008d14796
+< PPD Wreath  - W	Ring12		PPD Wreath  - W/Ring12	white
+13084d14871
+< PPD Wreath  - W	Petals		PPD Wreath  - W/Petals	white
+13086d14872
+< PPD Wreath  - W	Petals1		PPD Wreath  - W/Petals1	white
+13088,13095d14873
+< PPD Wreath  - W	Valley1		PPD Wreath  - W/Valley1	white
+< PPD Wreath  - W	Valley2		PPD Wreath  - W/Valley2	white
+< PPD Wreath  - W	Valley3		PPD Wreath  - W/Valley3	white
+< PPD Wreath  - W	Valley4		PPD Wreath  - W/Valley4	white
+< PPD Wreath  - W	Valley5		PPD Wreath  - W/Valley5	white
+< PPD Wreath  - W	Valley6		PPD Wreath  - W/Valley6	white
+< PPD Wreath  - W	Valley7		PPD Wreath  - W/Valley7	white
+< PPD Wreath  - W	Valley8		PPD Wreath  - W/Valley8	white
+13100,13102d14877
+< PPD Wreath  - W	Triangles		PPD Wreath  - W/Triangles	white
+< PPD Wreath  - W	Triangles 2		PPD Wreath  - W/Triangles 2	white
+< PPD Wreath  - W	Trees		PPD Wreath  - W/Trees	white
+13105d14879
+< PPD Wreath  - W	Wreath		PPD Wreath  - W/Wreath	white
+13231a15006,15035
+> PPD Wreath  - W	Flake-2		PPD Wreath  - W/Flake-2	white
+> PPD Wreath  - W	Flake-3		PPD Wreath  - W/Flake-3	white
+> PPD Wreath  - W	Flake-4		PPD Wreath  - W/Flake-4	white
+> PPD Wreath  - W	Flake-5		PPD Wreath  - W/Flake-5	white
+> PPD Wreath  - W	WaveCCW		PPD Wreath  - W/WaveCCW	white
+> PPD Wreath  - W	WaveCW		PPD Wreath  - W/WaveCW	white
+> PPD Wreath  - W	Valleys		PPD Wreath  - W/Valleys	white
+> PPD Wreath  - W	Linear Valleys		PPD Wreath  - W/Linear Valleys	white
+> PPD Wreath  - W	Petals1		PPD Wreath  - W/Petals1	white
+> PPD Wreath  - W	Diamond Arms		PPD Wreath  - W/Diamond Arms	white
+> PPD Wreath  - W	Wreath		PPD Wreath  - W/Wreath	white
+> PPD Wreath  - W	Triangles 2		PPD Wreath  - W/Triangles 2	white
+> PPD Wreath  - W	PetalsInside		PPD Wreath  - W/PetalsInside	white
+> PPD Wreath  - W	Petals		PPD Wreath  - W/Petals	white
+> PPD Wreath  - W	Inner Petals		PPD Wreath  - W/Inner Petals	white
+> PPD Wreath  - W	PetalsMiddle		PPD Wreath  - W/PetalsMiddle	white
+> PPD Wreath  - W	Trees		PPD Wreath  - W/Trees	white
+> PPD Wreath  - W	Triangles		PPD Wreath  - W/Triangles	white
+> PPD Wreath  - W	Ring5		PPD Wreath  - W/Ring5	white
+> PPD Wreath  - W	Ring12		PPD Wreath  - W/Ring12	white
+> PPD Wreath  - W	Ring23		PPD Wreath  - W/Ring23	white
+> PPD Wreath  - W	Valley1		PPD Wreath  - W/Valley1	white
+> PPD Wreath  - W	Valley2		PPD Wreath  - W/Valley2	white
+> PPD Wreath  - W	Valley3		PPD Wreath  - W/Valley3	white
+> PPD Wreath  - W	Valley4		PPD Wreath  - W/Valley4	white
+> PPD Wreath  - W	Valley5		PPD Wreath  - W/Valley5	white
+> PPD Wreath  - W	Valley6		PPD Wreath  - W/Valley6	white
+> PPD Wreath  - W	Valley7		PPD Wreath  - W/Valley7	white
+> PPD Wreath  - W	Valley8		PPD Wreath  - W/Valley8	white
+> PPD Wreath  - W	SubModel-1		PPD Wreath  - W/SubModel-1	white
+13246a15051
+> PPD Wreath DiamondArms - Dazzler			PPD Wreath DiamondArms - Dazzler	white
+13248a15054
+> PPD Wreath DiamondArms - StarGazer			PPD Wreath DiamondArms - StarGazer	white
+13465a15272,15292
+> RBL Drive L 1			RBL Drive L 1	white
+> RBL Drive L 2			RBL Drive L 2	white
+> RBL Drive L 3			RBL Drive L 3	white
+> RBL Drive L 4			RBL Drive L 4	white
+> RBL Front 1			RBL Front 1	white
+> RBL Front 2			RBL Front 2	white
+> RBL Front 3			RBL Front 3	white
+> RBL Front 4			RBL Front 4	white
+> RBL Front 5			RBL Front 5	white
+> RBL Front 6			RBL Front 6	white
+> RBL Hedge 1			RBL Hedge 1	white
+> RBL Hedge 2			RBL Hedge 2	white
+> RBL Hedge 3			RBL Hedge 3	white
+> RBL Hedge 4			RBL Hedge 4	white
+> RBL Hedge 5			RBL Hedge 5	white
+> RBL Hedge 6			RBL Hedge 6	white
+> RBL Hedge High 1			RBL Hedge High 1	white
+> RBL Hedge High 2			RBL Hedge High 2	white
+> RBL Hedge High 3			RBL Hedge High 3	white
+> RBL Hedge High 4			RBL Hedge High 4	white
+> RBL Hedge High 5			RBL Hedge High 5	white
+14319,14320d16145
+< StarFence	Arms		StarFence/Arms	white
+< StarFence	Tips		StarFence/Tips	white
+14323a16149,16187
+> StarFence	Arms		StarFence/Arms	white
+> StarFence	Tips		StarFence/Tips	white
+> StarFence	ArmsSSS		StarFence/ArmsSSS	white
+> StarFence	Explosion		StarFence/Explosion	white
+> StarFence	Tailed Explosion		StarFence/Tailed Explosion	white
+> StarFence	Half L		StarFence/Half L	white
+> StarFence	Half R		StarFence/Half R	white
+> StarFence	Half and Half		StarFence/Half and Half	white
+> StarFence	Outer Star 1		StarFence/Outer Star 1	white
+> StarFence	Layer 2 From Outside		StarFence/Layer 2 From Outside	white
+> StarFence	Layer 3 From Outside		StarFence/Layer 3 From Outside	white
+> StarFence	Layer 4 From Outside		StarFence/Layer 4 From Outside	white
+> StarFence	Layer 5 From Outside		StarFence/Layer 5 From Outside	white
+> StarFence	Inner Star 6		StarFence/Inner Star 6	white
+> StarFence	Outer 3 Layers		StarFence/Outer 3 Layers	white
+> StarFence	Inner 3 Layers		StarFence/Inner 3 Layers	white
+> StarFence	Odd Layers		StarFence/Odd Layers	white
+> StarFence	Even Layers		StarFence/Even Layers	white
+> StarFence	Thick Star Tips		StarFence/Thick Star Tips	white
+> StarFence	Star Tips - Nested		StarFence/Star Tips - Nested	white
+> StarFence	Center Spinner		StarFence/Center Spinner	white
+> StarFence	Arm Spinner		StarFence/Arm Spinner	white
+> StarFence	Arcs1		StarFence/Arcs1	white
+> StarFence	Arcs2		StarFence/Arcs2	white
+> StarFence	Arcs3		StarFence/Arcs3	white
+> StarFence	Arcs4		StarFence/Arcs4	white
+> StarFence	Arcs5		StarFence/Arcs5	white
+> StarFence	Arcs6		StarFence/Arcs6	white
+> StarFence	Arcs7		StarFence/Arcs7	white
+> StarFence	Arcs8		StarFence/Arcs8	white
+> StarFence	Arcs1S		StarFence/Arcs1S	white
+> StarFence	Arcs2S		StarFence/Arcs2S	white
+> StarFence	Arcs3S		StarFence/Arcs3S	white
+> StarFence	Arcs4S		StarFence/Arcs4S	white
+> StarFence	Arcs5S		StarFence/Arcs5S	white
+> StarFence	Arcs6S		StarFence/Arcs6S	white
+> StarFence	Arcs7S		StarFence/Arcs7S	white
+> StarFence	Arcs8S		StarFence/Arcs8S	white
+> StarFence	Peaks		StarFence/Peaks	white
+14335a16200,16248
+> StarFlowerBed	ArmsSSS		StarFlowerBed/ArmsSSS	white
+> StarFlowerBed	Explosion		StarFlowerBed/Explosion	white
+> StarFlowerBed	Tailed Explosion		StarFlowerBed/Tailed Explosion	white
+> StarFlowerBed	Half L		StarFlowerBed/Half L	white
+> StarFlowerBed	Half R		StarFlowerBed/Half R	white
+> StarFlowerBed	Half and Half		StarFlowerBed/Half and Half	white
+> StarFlowerBed	Outer Star 1		StarFlowerBed/Outer Star 1	white
+> StarFlowerBed	Layer 2 From Outside		StarFlowerBed/Layer 2 From Outside	white
+> StarFlowerBed	Layer 3 From Outside		StarFlowerBed/Layer 3 From Outside	white
+> StarFlowerBed	Layer 4 From Outside		StarFlowerBed/Layer 4 From Outside	white
+> StarFlowerBed	Layer 5 From Outside		StarFlowerBed/Layer 5 From Outside	white
+> StarFlowerBed	Inner Star 6		StarFlowerBed/Inner Star 6	white
+> StarFlowerBed	Outer 3 Layers		StarFlowerBed/Outer 3 Layers	white
+> StarFlowerBed	Inner 3 Layers		StarFlowerBed/Inner 3 Layers	white
+> StarFlowerBed	Odd Layers		StarFlowerBed/Odd Layers	white
+> StarFlowerBed	Even Layers		StarFlowerBed/Even Layers	white
+> StarFlowerBed	Thick Star Tips		StarFlowerBed/Thick Star Tips	white
+> StarFlowerBed	Star Tips - Nested		StarFlowerBed/Star Tips - Nested	white
+> StarFlowerBed	Center Spinner		StarFlowerBed/Center Spinner	white
+> StarFlowerBed	Arm Spinner		StarFlowerBed/Arm Spinner	white
+> StarFlowerBed	Arcs1		StarFlowerBed/Arcs1	white
+> StarFlowerBed	Arcs2		StarFlowerBed/Arcs2	white
+> StarFlowerBed	Arcs3		StarFlowerBed/Arcs3	white
+> StarFlowerBed	Arcs4		StarFlowerBed/Arcs4	white
+> StarFlowerBed	Arcs5		StarFlowerBed/Arcs5	white
+> StarFlowerBed	Arcs6		StarFlowerBed/Arcs6	white
+> StarFlowerBed	Arcs7		StarFlowerBed/Arcs7	white
+> StarFlowerBed	Arcs8		StarFlowerBed/Arcs8	white
+> StarFlowerBed	Arcs1S		StarFlowerBed/Arcs1S	white
+> StarFlowerBed	Arcs2S		StarFlowerBed/Arcs2S	white
+> StarFlowerBed	Arcs3S		StarFlowerBed/Arcs3S	white
+> StarFlowerBed	Arcs4S		StarFlowerBed/Arcs4S	white
+> StarFlowerBed	Arcs5S		StarFlowerBed/Arcs5S	white
+> StarFlowerBed	Arcs6S		StarFlowerBed/Arcs6S	white
+> StarFlowerBed	Arcs7S		StarFlowerBed/Arcs7S	white
+> StarFlowerBed	Arcs8S		StarFlowerBed/Arcs8S	white
+> StarFlowerBed	Peaks		StarFlowerBed/Peaks	white
+> StarInsanePoleL1			StarInsanePoleL1	white
+> StarInsanePoleL2			StarInsanePoleL2	white
+> StarInsanePoleL3			StarInsanePoleL3	white
+> StarInsanePoleL4			StarInsanePoleL4	white
+> StarInsanePoleL5			StarInsanePoleL5	white
+> StarInsanePoleR1			StarInsanePoleR1	white
+> StarInsanePoleR2			StarInsanePoleR2	white
+> StarInsanePoleR3			StarInsanePoleR3	white
+> StarInsanePoleR4			StarInsanePoleR4	white
+> StarInsanePoleR5			StarInsanePoleR5	white
+> StarMegaMini L1			StarMegaMini L1	white
+> StarMegaMini L2			StarMegaMini L2	white
+14339a16253,16256
+> StarMiniMega1			StarMiniMega1	white
+> StarMiniMega2			StarMiniMega2	white
+> StarMiniMega3			StarMiniMega3	white
+> StarMiniMega4			StarMiniMega4	white
+14451a16369,16372
+> TreeMiniMega 1			TreeMiniMega 1	white
+> TreeMiniMega 2			TreeMiniMega 2	white
+> TreeMiniMega 3			TreeMiniMega 3	white
+> TreeMiniMega 4			TreeMiniMega 4	white
