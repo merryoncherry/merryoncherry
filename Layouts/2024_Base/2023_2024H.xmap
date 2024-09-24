@@ -7615,6 +7615,35 @@ GE Rosa Grande Web Ring GRP			GE Rosa Grande Web Ring GRP	white
 GE Rosa Grande Web Spoke GRP			GE Rosa Grande Web Spoke GRP	white
 GE Rosa Grande Wreath Rings Inner			GE Rosa Grande Wreath Rings Inner	white
 GE Rosa Wreath GRP			GE Rosa Wreath GRP	white
+GE Rosa Tomb - GRP			All Tombs Primary	white
+GE Rosa Tomb 1	Default		GE Tombwarp W Skull LL 1	white
+GE Rosa Tomb 2	Default		GE Tomb Warp RIP L	white
+GE Rosa Tomb 3	Default		GE Tombwarp W Skull L	white
+GE Rosa Tomb 4	Default		GE Tomb Warp RIP LR 4	white
+GE Rosa Tomb 5	Default		GE Tomb Warp RIP RL 5	white
+GE Rosa Tomb 6	Default		GE Tombwarp W Skull R	white
+GE Rosa Tomb 7	Default		GE Tomb Warp RIP R	white
+GE Rosa Tomb 8	Default		GE Tombwarp W Skull RR 8	white
+GE Rosa Tombs Crosses			All Crosses Dedicated	white
+GE Rosa Tombs Crosses Highlights			All Stars Except Mega	white
+GE Rosa Tombs Rosa			PPD Wreath - GRP	white
+GE Rosa Tombs Rosa Arms			PPD Wreath DiamondArms	white
+GE Rosa Tombs Rosa Balls			PPD Wreath Outer Diamonds	white
+GE Rosa Tombs Rosa Outline			PPD Wreath Outline	white
+GE Rosa Tombs Rosa Petals Lg			PPD Wreath Petals Large	white
+GE Rosa Tombs Rosa Petals Sm			PPD Wreath Petals	white
+GE Rosa Tombs Rosa Rings			PPD Wreath Rings	white
+GE Rosa Tombs Rosa Spiral CCW			PPD Wreath Spiral CClockwise	white
+GE Rosa Tombs Rosa Spiral CW			PPD Wreath Spiral Clockwise	white
+GE Rosa Tombs Rosa Star			PPD Wreath Star	white
+GE Rosa Tombs Rosa Wavy			PPD Wreath Star Offset	white
+GE Rosa Tombs Spinner			All Spinners Quartet As Groups	white
+GE Rosa Tombs Spinner Alert			All Spinners Radiation Quartet	white
+GE Rosa Tombs Spinner Outline			All Spinners Rings Outer	white
+GE Rosa Tombs Spinner Rings			All Spinners Rings Inner Quartet Outer	white
+GE Rosa Tombs Spinner Spokes			All Spinners Spokes Quartet Outer	white
+GE Rosa Tombs Tomb Design			All Tombs Primary Designs	white
+GE Rosa Tombs Tomb Full			All Tombs Primary Frame
 GE RosaWreath - GRP			GE RosaWreath - GRP	white
 GE RosaWreath Arrows - Cupid GRP			GE RosaWreath Arrows - Cupid GRP	white
 GE RosaWreath Arrows - Double GRP			GE RosaWreath Arrows - Double GRP	white
@@ -8802,6 +8831,11 @@ MatrixUnderHedgeR	VertWired		MatrixUnderHedgeR/VertWired	white
 MatrixWFence			MatrixWFence	white
 MatrixWWall			MatrixWWall	white
 MatrixWWall	Outline		MatrixWWall/Outline	white
+MegaMiniTree-L1			TreeFence	white
+MegaMiniTree-L2			TreeFence	white
+MoCWeb 2000			GE Web MOA	white
+MoCWeb 2000	Outline		GE Web MOA	Ring 7	white
+MoCWeb 2000	Spokes		GE Web MOA	Spinners	white
 NorthPole			NorthPole	white
 NorthPole	Pole		NorthPole/Pole	white
 NorthPole	Bulb		NorthPole/Bulb	white
@@ -14542,10 +14576,26 @@ StarFlowerBed	ThirdMiddle		StarFlowerBed/ThirdMiddle	white
 StarFlowerBed	ThirdInner		StarFlowerBed/ThirdInner	white
 StarFlowerBed	Arms		StarFlowerBed/Arms	white
 StarFlowerBed	Tips		StarFlowerBed/Tips	white
+StarInsanePoleL1			StarPeaceLgL1	white
+StarInsanePoleL2			StarPeaceLgL2	white
+StarInsanePoleL3			StarPeaceLgL3	white
+StarInsanePoleL4			StarPeaceLgL4	white
+StarInsanePoleL5			StarPeaceLgL5	white
+StarInsanePoleR1			StarPeaceLgR1	white
+StarInsanePoleR2			StarPeaceLgR2	white
+StarInsanePoleR3			StarPeaceLgR3	white
+StarInsanePoleR4			StarPeaceLgR4	white
+StarInsanePoleR5			StarPeaceLgR5	white
+StarMegaMini L1			StarFence	white
+StarMegaMini L2			StarFence	white
 StarMiniLg1			StarMiniLg1	white
 StarMiniLg2			StarMiniLg2	white
 StarMiniLg3			StarMiniLg3	white
 StarMiniLg4			StarMiniLg4	white
+StarMiniMega1			StarMiniLg1	white
+StarMiniMega2			StarMiniLg2	white
+StarMiniMega3			StarMiniLg3	white
+StarMiniMega4			StarMiniLg4	white
 StarMiniSm1			StarMiniSm1	white
 StarMiniSm2			StarMiniSm2	white
 StarMiniSm3			StarMiniSm3	white
@@ -14658,6 +14708,10 @@ TreeMiniLg1			TreeMiniLg1	white
 TreeMiniLg2			TreeMiniLg2	white
 TreeMiniLg3			TreeMiniLg3	white
 TreeMiniLg4			TreeMiniLg4	white
+TreeMiniMega 1			TreeMiniLg1	white
+TreeMiniMega 2			TreeMiniLg2	white
+TreeMiniMega 3			TreeMiniLg3	white
+TreeMiniMega 4			TreeMiniLg4	white
 TreeMiniSm1			TreeMiniSm1	white
 TreeMiniSm2			TreeMiniSm2	white
 TreeMiniSm3			TreeMiniSm3	white
