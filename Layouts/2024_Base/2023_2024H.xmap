@@ -2569,11 +2569,12 @@ All Webs Fill			All Webs Fill	white
 All Webs Half			All Webs Half	white
 All Webs MOAW			All Webs MOAW	white
 All Webs MoC			All Webs MOAW	white
-All Webs MoC Alert			All Webs Spokes MOAW Odd	white
 All Webs MoC Rings			All Webs Rings MOAW	white
+All Webs MoC Rings Outer			All Webs Rings MOAW Outer	white
 All Webs MoC Spinner			All Webs Spinners MOA	white
 All Webs MoC Spokes			All Webs Spokes MOAW	white
-All Webs MoC Zigzag			All Webs Spokes MOAW Even	white
+All Webs MoC Spokes Even			All Webs Spokes MOAW Even	white
+All Webs MoC Spokes Odd			All Webs Spokes MOAW Odd	white
 All Webs Rings			All Webs Rings	white
 All Webs Rings Corner			All Webs Rings Corner	white
 All Webs Rings Corner BP S			All Webs Rings Corner BP S	white
