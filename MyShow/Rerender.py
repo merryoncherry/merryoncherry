@@ -1,16 +1,16 @@
 import subprocess
 import xlAutomation.xlDo
 
-srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_networks.xml"
-intnet="c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
-dstnet="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_networks.xml"
+srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2024_Base\\xlights_networks.xml"
+intnet="c:\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\xlights_networks.xml"
+dstnet="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\xlights_networks.xml"
 
-srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Base\\xlights_rgbeffects.xml"
-intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
-dstrgb="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\xlights_rgbeffects.xml"
+srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2024_Base\\xlights_rgbeffects.xml"
+intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\xlights_rgbeffects.xml"
+dstrgb="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\xlights_rgbeffects.xml"
 
 xlenv = xlAutomation.xlDo.XLEnv()
-xlenv.data = 'c:\\Users\\Chuck\\Documents\\xlightsShows\\2023_Halloween'
+xlenv.data = 'c:\\Users\\Chuck\\Documents\\xlightsShows\\2024_Halloween'
 
 wasRunning = xlenv.isXLightsRunning(True)
 
@@ -24,7 +24,7 @@ xlenv.changeShowFolder()
 doall = False
 #doall = True
 
-if doall or False:
+if doall or True:
     msg = xlenv.batchRenderSeqList([
     "Announcement.xsq",
     "BackgroundTuneTo.xsq",
@@ -33,7 +33,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or False:
+if doall or True:
     msg = xlenv.batchRenderSeqList([
     "1983In3.xsq",
     "30 Second Jeopardy Spooky.xsq",
@@ -53,7 +53,6 @@ if doall or False:
     "BooToYou.xsq",
     "BringMeToLife.xsq",
     "Bruno.xsq",
-    #"Casper the Friendly Ghost 1950   Intro Opening Lilly.xsq",
     "CottonEyeJoe.xsq",
     "CryLittleSister.xsq",
     "Degradation.xsq",
@@ -79,8 +78,6 @@ if doall or False:
     "GhostBustersIntro.xsq",
     "Ghostbusters.xsq",
     "GrimGrinningGhosts.xsq",
-    #"HalloweenHorrorLights_2020_V0.xsq",
-    #"HalloweenHorrorLights_2022_V1.xsq",
     "HalloweenTheme.xsq",
     ])
     print (msg)
