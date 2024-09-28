@@ -21,8 +21,8 @@ print("xLights now running.")
 
 xlenv.changeShowFolder()
 
-doall = False
-#doall = True
+#doall = False
+doall = True
 
 if doall or True:
     msg = xlenv.batchRenderSeqList([
@@ -152,33 +152,33 @@ if doall or False:
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
-        "SBSpooky_YouRang_Faster.xsq",
-        "SBSpooky_YouRang_V1.xsq",
-        "SBSpooky_UnderThatStone.xsq",
-        "SBSpooky_ThatTickles.xsq",
-        "SBSpooky_AsFunAsWatchingYouSleep.xsq",
-        "SBSpooky_KeepWalkingThisWay.xsq",
-        "SBSpooky_IAmWarningYou.xsq",
-        "SBSpooky_HeyScram.xsq",
-        "SBSpooky_HaveAHappyHalloweenHaHa.xsq",
-        "SBSpooky_TheyAreWatchingYou.xsq",
-        "SBSpooky_KaChow.xsq",
-        "SBSpooky_SkeletonInsideYou.xsq",
-        "SBSpooky_MonsterMash.xsq",
-        "SBSpooky_GhostJoke.xsq",
+        "SBSpooky_YouRang_Faster.xsq", #
+        "SBSpooky_YouRang_V1.xsq", #
+        "SBSpooky_UnderThatStone.xsq", #
+        "SBSpooky_ThatTickles.xsq", #
+        "SBSpooky_AsFunAsWatchingYouSleep.xsq", #
+        "SBSpooky_KeepWalkingThisWay.xsq", #
+        "SBSpooky_IAmWarningYou.xsq", #
+        "SBSpooky_HeyScram.xsq", #
+        "SBSpooky_HaveAHappyHalloweenHaHa.xsq", #
+        "SBSpooky_TheyAreWatchingYou.xsq", #
+        "SBSpooky_KaChow.xsq", #
+        "SBSpooky_SkeletonInsideYou.xsq", #
+        "SBSpooky_MonsterMash.xsq", #
+        "SBSpooky_GhostJoke.xsq", #
 
-        "SBBarbie.xsq",
-        "SBBubbles.xsq",
+        "SBBarbie.xsq", #
+        "SBBubbles.xsq", #
         "SBCoffin.xsq",
-        "SBGhoulFriend.xsq",
+        "SBGhoulFriend.xsq", #
         "SBLightEmUp.xsq",
-        "SBPainInTheNeck.xsq",
-        "SBShopping.xsq",
+        "SBPainInTheNeck.xsq", #
+        "SBShopping.xsq", #
         "SBSquash.xsq",
         "SBVampirates.xsq",
-        "SBWarts.xsq",
-        "SBWhichWitch.xsq",
-        "SBWitchesGetStitches.xsq",
+        "SBWarts.xsq", #
+        "SBWhichWitch.xsq", #
+        "SBWitchesGetStitches.xsq", #
     ])
     print (msg)
 
@@ -187,6 +187,6 @@ if not wasRunning:
 
 subprocess.run([
     "copy", "/Y",
-    "c:\\users\\chuck\\documents\\xlightsShows\\2023_Halloween\\*.fseq",
-    "\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2023_Halloween"], shell=True, check=True)
+    "c:\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\*.fseq",
+    "\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2024_Halloween"], shell=True, check=True)
 
