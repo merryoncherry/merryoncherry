@@ -21,8 +21,8 @@ print("xLights now running.")
 
 xlenv.changeShowFolder()
 
-#doall = False
-doall = True
+doall = False
+#doall = True
 
 if doall or True:
     msg = xlenv.batchRenderSeqList([
@@ -33,7 +33,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "1983In3.xsq",
     "30 Second Jeopardy Spooky.xsq",
