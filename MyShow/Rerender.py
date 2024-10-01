@@ -21,8 +21,8 @@ print("xLights now running.")
 
 xlenv.changeShowFolder()
 
-doall = False
-#doall = True
+#doall = False
+doall = True
 
 if doall or True:
     msg = xlenv.batchRenderSeqList([
