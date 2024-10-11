@@ -24,16 +24,17 @@ xlenv.changeShowFolder()
 doall = False
 #doall = True
 
-if doall or False:
+if doall or True:
     msg = xlenv.batchRenderSeqList([
     "Announcement.xsq",
     "BackgroundTuneTo.xsq",
     "BackgroundTuneToParkOnRight.xsq",
+    "BackgroundTuneToParkWings.xsq",
     "StaticIntroSeq.xsq",
     ])
     print (msg)
 
-if doall or False:
+if doall or True:
     msg = xlenv.batchRenderSeqList([
     "1983In3.xsq",
     "30 Second Jeopardy Spooky.xsq",
@@ -50,7 +51,7 @@ if doall or False:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "BloodyMary_HHL.xsq",
     "Bluey.xsq", # Abended once
@@ -65,7 +66,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "DevilWentDownToGeorgia_xS.xsq",
     "DontLetMeDown.xsq",
@@ -80,6 +81,7 @@ if doall or True:
     "EyeOfTheTiger.xsq",
     "Frankenstein.xsq",
     "FriendLikeMe.xsq",
+    "Gasoline.xsq",
     "GhostBustersIntro.xsq",
     "Ghostbusters.xsq",
     "GrimGrinningGhosts.xsq",
@@ -87,7 +89,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "HauntedHeart.xsq",
     "Heathens.xsq",
@@ -108,7 +110,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "Monster_PPS.xsq",
     "MonsterMash_xS.xsq",
@@ -130,7 +132,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "SmoothCriminal.xsq",
     "SomebodysWatchingMe.xsq",
@@ -147,7 +149,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "Tocatta.xsq",
     "ToxicRemix.xsq",
@@ -165,7 +167,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
         "SBSpooky_YouRang_Faster.xsq", #
         "SBSpooky_YouRang_V1.xsq", #
@@ -185,7 +187,7 @@ if doall or True:
     ])
     print (msg)
 
-if doall or True:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
         "SBBarbie.xsq", #
         "SBBubbles.xsq", #
