@@ -849,11 +849,13 @@ if __name__ == '__main__':
         cf = frames[i]
         pf = frames[i-1]
         if args.brightjumpamt > 0 and cf.pctLit >= args.brightjumparea and cf.vAvg - (pf.vAvg * pf.pctLit / cf.pctLit) >= args.brightjumpamt:
+            #print(f"Brightness jump @{cf.ms}");
             es = SeqEnt(cf)
             es.event = True
             es.colorFidelity = True
             ss.insertIfSpaced(es, reqgap)
         if args.brightdropamt > 0 and pf.pctLit >= args.brightdroparea and pf.vAvg - (cf.vAvg * cf.pctLit / pf.pctLit) >= args.brightdropamt:
+            #print(f"Brightness drop @{cf.ms}");
             es = SeqEnt(cf)
             es.event = True
             ss.insertIfSpaced(es, reqgap)
@@ -862,11 +864,14 @@ if __name__ == '__main__':
             amtpopular = 100 * cf.choices[0].popularity / cf.nPixels
             if amtpopular > args.colorjumparea:
                 pctpopular = 100 * cf.choices[0].popularity / cf.nLit
+                # print (f"At {cf.ms} color is popular {amtpopular} {pctpopular}");
                 prevpop = 0
                 for c in pf.choices:
                     if not c.isDifferent(cf.choices[0], args) and c.popularity > 0:
                         prevpop = 100 * c.popularity / pf.nLit
+                        #print(f"  Prev pop was {prevpop}")
                 if pctpopular - prevpop >= args.colorjumpamt:
+                    print(f"Color jump @{cf.ms}  - {pctpopular - prevpop} vs {args.colorjumpamt}; {amtpopular} vs {args.colorjumparea}");
                     es = SeqEnt(cf)
                     es.event = True
                     es.colorFidelity = True
