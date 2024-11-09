@@ -11,7 +11,7 @@
     <network ComPort="192.168.25.5" BaudRate="500" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="15200" Name="Kulp12V32_Attic" Description="Kulp Attic N" Type="Ethernet" Vendor="KulpLights" Model="K32A-B" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.152" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.152" BaudRate="15200" NetworkType="DDP" MaxChannels="11460"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.152" BaudRate="15200" NetworkType="DDP" MaxChannels="11310"/>
   </Controller>
   <Controller Id="1" Name="HP12V32_AtticW" Description="HinksPro 12V 32 4 Attic West" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.180" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
     <network ComPort="192.168.25.180" BaudRate="18000" NetworkType="E131" MaxChannels="510"/>
@@ -217,7 +217,7 @@
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.130" BaudRate="13000" NetworkType="DDP" MaxChannels="9951"/>
   </Controller>
   <Controller Id="13100" Name="Wally16_Porch_W_S" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.131" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.131" BaudRate="13100" NetworkType="DDP" MaxChannels="4794"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.131" BaudRate="13100" NetworkType="DDP" MaxChannels="4788"/>
   </Controller>
   <Controller Id="-1" Name="HP12V32_PorchRoof" Description="HinksPro 12V 32 4 Porch Roof" Type="Ethernet" Vendor="HinksPix" Model="PRO V1/V2" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.30" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="TRUE" ForceLocalIP="">
     <network ComPort="192.168.25.30" BaudRate="3000" NetworkType="E131" MaxChannels="510"/>
@@ -332,24 +332,23 @@
     <network ComPort="192.168.25.90" BaudRate="9027" NetworkType="E131" MaxChannels="270"/>
     <network ComPort="192.168.25.90" BaudRate="9028" NetworkType="E131" MaxChannels="330"/>
     <network ComPort="192.168.25.90" BaudRate="9029" NetworkType="E131" MaxChannels="210"/>
-    <network ComPort="192.168.25.90" BaudRate="9030" NetworkType="E131" MaxChannels="300"/>
-    <network ComPort="192.168.25.90" BaudRate="9031" NetworkType="E131" MaxChannels="300"/>
-    <network ComPort="192.168.25.90" BaudRate="9032" NetworkType="E131" MaxChannels="30"/>
-    <network ComPort="192.168.25.90" BaudRate="9033" NetworkType="E131" MaxChannels="267"/>
-    <network ComPort="192.168.25.90" BaudRate="9034" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.90" BaudRate="9035" NetworkType="E131" MaxChannels="120"/>
-    <network ComPort="192.168.25.90" BaudRate="9036" NetworkType="E131" MaxChannels="240"/>
-    <network ComPort="192.168.25.90" BaudRate="9037" NetworkType="E131" MaxChannels="120"/>
+    <network ComPort="192.168.25.90" BaudRate="9030" NetworkType="E131" MaxChannels="30"/>
+    <network ComPort="192.168.25.90" BaudRate="9031" NetworkType="E131" MaxChannels="267"/>
+    <network ComPort="192.168.25.90" BaudRate="9032" NetworkType="E131" MaxChannels="450"/>
+    <network ComPort="192.168.25.90" BaudRate="9033" NetworkType="E131" MaxChannels="60"/>
+    <network ComPort="192.168.25.90" BaudRate="9034" NetworkType="E131" MaxChannels="120"/>
+    <network ComPort="192.168.25.90" BaudRate="9035" NetworkType="E131" MaxChannels="240"/>
+    <network ComPort="192.168.25.90" BaudRate="9036" NetworkType="E131" MaxChannels="120"/>
+    <network ComPort="192.168.25.90" BaudRate="9037" NetworkType="E131" MaxChannels="300"/>
     <network ComPort="192.168.25.90" BaudRate="9038" NetworkType="E131" MaxChannels="300"/>
     <network ComPort="192.168.25.90" BaudRate="9039" NetworkType="E131" MaxChannels="300"/>
-    <network ComPort="192.168.25.90" BaudRate="9040" NetworkType="E131" MaxChannels="300"/>
-    <network ComPort="192.168.25.90" BaudRate="9041" NetworkType="E131" MaxChannels="84"/>
-    <network ComPort="192.168.25.90" BaudRate="9042" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.90" BaudRate="9043" NetworkType="E131" MaxChannels="90"/>
-    <network ComPort="192.168.25.90" BaudRate="9044" NetworkType="E131" MaxChannels="60"/>
-    <network ComPort="192.168.25.90" BaudRate="9045" NetworkType="E131" MaxChannels="90"/>
-    <network ComPort="192.168.25.90" BaudRate="9046" NetworkType="E131" MaxChannels="510"/>
-    <network ComPort="192.168.25.90" BaudRate="9047" NetworkType="E131" MaxChannels="138"/>
+    <network ComPort="192.168.25.90" BaudRate="9040" NetworkType="E131" MaxChannels="84"/>
+    <network ComPort="192.168.25.90" BaudRate="9041" NetworkType="E131" MaxChannels="60"/>
+    <network ComPort="192.168.25.90" BaudRate="9042" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.90" BaudRate="9043" NetworkType="E131" MaxChannels="60"/>
+    <network ComPort="192.168.25.90" BaudRate="9044" NetworkType="E131" MaxChannels="90"/>
+    <network ComPort="192.168.25.90" BaudRate="9045" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.90" BaudRate="9046" NetworkType="E131" MaxChannels="138"/>
   </Controller>
   <Controller Id="19100" Name="Experience16_SideStair" Description="" Type="Ethernet" Vendor="Experience Lights" Model="Genius Pixel 16" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.191" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.191" BaudRate="19100" NetworkType="DDP" MaxChannels="10893"/>
@@ -573,6 +572,13 @@
     <network ComPort="192.168.25.80" BaudRate="8021" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.80" BaudRate="8022" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.80" BaudRate="8023" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.80" BaudRate="8024" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.80" BaudRate="8025" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.80" BaudRate="8026" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.80" BaudRate="8027" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.80" BaudRate="8028" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.80" BaudRate="8029" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.80" BaudRate="8030" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="19300" Name="Experience32_EYard" Description="" Type="Ethernet" Vendor="Experience Lights" Model="Genius Pro 32 Port" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.193" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.193" BaudRate="19300" NetworkType="DDP" MaxChannels="25227"/>
@@ -653,9 +659,6 @@
   </Controller>
   <Controller Id="600" Name="Falcon48_EFenceTrees" Description="" Type="Ethernet" Vendor="Falcon" Model="F48V4" Variant="4 + 4 + 4 Smart Receiver Chains" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.6" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.6" BaudRate="600" NetworkType="DDP" MaxChannels="32160"/>
-  </Controller>
-  <Controller Id="60000" Name="Holding" Description="" Type="Null" Vendor="" Model="" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1">
-    <network NetworkType="NULL" MaxChannels="1"/>
   </Controller>
   <Controller Id="61000" Name="Aspirational" Description="" Type="Null" Vendor="" Model="" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1">
     <network NetworkType="NULL" MaxChannels="1"/>
