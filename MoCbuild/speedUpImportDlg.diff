@@ -1,0 +1,73 @@
+diff --git a/macOS b/macOS
+index bc7c7c922..d38efaefc 160000
+--- a/macOS
++++ b/macOS
+@@ -1 +1 @@
+-Subproject commit bc7c7c922a18bbddb94ee0d1fba608b948c5056b
++Subproject commit d38efaefc9f189543ea0286378b6fa36d9e61a3e
+diff --git a/xLights/xLightsImportChannelMapDialog.cpp b/xLights/xLightsImportChannelMapDialog.cpp
+index 120b4037c..e1623b68b 100644
+--- a/xLights/xLightsImportChannelMapDialog.cpp
++++ b/xLights/xLightsImportChannelMapDialog.cpp
+@@ -1375,6 +1375,32 @@ void xLightsImportChannelMapDialog::LoadJSONMapping(wxString const& filename, bo
+     }
+ }
+ 
++static void buildItemsMap(
++    std::map <std::string, wxDataViewItem> &map,
++    xLightsImportTreeModel * _dataModel
++)
++{
++    wxDataViewItemArray models;
++    _dataModel->GetChildren(wxDataViewItem(0), models);
++    for (size_t i = 0; i < models.size(); ++i) {
++        xLightsImportModelNode* amodel = (xLightsImportModelNode*)models[i].GetID();
++        map[amodel->_model] = models[i];
++
++        wxDataViewItemArray strands;
++        _dataModel->GetChildren(models[i], strands);
++        for (size_t j = 0; j < strands.size(); ++j) {
++            xLightsImportModelNode* astrand = (xLightsImportModelNode*)strands[j].GetID();
++            map[std::string(amodel->_model) + "|" + astrand->_strand] = strands[j];
++            wxDataViewItemArray nodes;
++            _dataModel->GetChildren(strands[j], nodes);
++            for (size_t k = 0; k < nodes.size(); ++k) {
++                xLightsImportModelNode* anode = (xLightsImportModelNode*)nodes[k].GetID();
++                map[std::string(amodel->_model) + "|" + astrand->_strand + "|" + anode->_node] = nodes[k];
++            }
++        }
++    }
++}
++
+ void xLightsImportChannelMapDialog::LoadXMapMapping(wxString const& filename, bool hideWarnings)
+ {
+     static log4cpp::Category &logger_base = log4cpp::Category::getInstance(std::string("log_base"));
+@@ -1401,6 +1427,10 @@ void xLightsImportChannelMapDialog::LoadXMapMapping(wxString const& filename, bo
+             }
+         }
+     }
++
++    std::map<std::string, wxDataViewItem> namesMap;
++    buildItemsMap(namesMap, _dataModel);
++
+     wxString line = text.ReadLine();
+     while (line != "") {
+         wxString model;
+@@ -1421,6 +1451,7 @@ void xLightsImportChannelMapDialog::LoadXMapMapping(wxString const& filename, bo
+             node = FindTab(line);
+             mapping = FindTab(line);
+         }
++
+         Element *modelEl = mSequenceElements->GetElement(model.ToStdString());
+ 
+         // This code adds the model into the sequence ... it is useful if the model was previously only
+@@ -1457,7 +1488,8 @@ void xLightsImportChannelMapDialog::LoadXMapMapping(wxString const& filename, bo
+             } else {
+                 if (mapping != "") {
+                     if (mni != nullptr) {
+-                        wxDataViewItem item = FindItem(model.ToStdString(), strand.ToStdString(), node.ToStdString());
++                        wxDataViewItem item =
++                            namesMap.contains(model.ToStdString()) ? namesMap[model.ToStdString()] : FindItem(model.ToStdString(), strand.ToStdString(), node.ToStdString());
+                         TreeListCtrl_Mapping->GetModel()->SetValue(wxVariant(mapping), item, 1);
+                         ((xLightsImportTreeModel*)TreeListCtrl_Mapping->GetModel())->SetMappingExists(item, ListCtrl_Available->FindItem(0, mapping) >= 0);
+                         TreeListCtrl_Mapping->GetModel()->SetValue(wxVariant(color.GetAsString()), item, 2);
