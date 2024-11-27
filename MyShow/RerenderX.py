@@ -40,6 +40,7 @@ if doall and False:
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
+    "ShowStarts.xsq",
     #"BackgroundPleaseParkWings.xsq",
     #"BackgroundTuneToEndOfStreet.xsq",
     #"BackgroundTuneToParking.xsq",
@@ -178,50 +179,50 @@ if doall or False:
     "LittleMermaidMashup_VLS.xsq",
     "LittleStNick_PPD.xsq",
     "Mambo5_PPD.xsq",
-    #"MarshmallowWorld_Dean.xsq",
-    #"MarshmallowWorld_FB_PPD.xsq",
+    "MarshmallowWorld_Dean.xsq",
+    "MarshmallowWorld_FB_PPD.xsq",
     ])
     print (msg)
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
-    #"MeleKalikimaka_SSS.xsq",
-    #"Memories_PPD.xsq",
-    #"Misers_SeqSol.xsq",
-    #"Mistletoe_Bieber_xS.xsq",
-    #"MrSanta_PPD.xsq",
-    #"MyFavoriteThings_SSS.xsq",
-    #"NutcrackerDubstep_xS.xsq",
-    #"NutcrackerRussianDance_VLS.xsq",
-    #"Nutrocker_PPD.xsq",
-    #"OfficiallyChristmas_RGB.xsq",
-    #"OComeEmmanuel_SSS.xsq",
-    #"PleaseSantaPlease_PPD.xsq",
-    #"PokerFace_PPD.xsq",
-    #"QueenOfTheWinterNight_TSO_PPD.xsq",
-    #"RockinAround_Duffield_PPD.xsq",
-    #"RockinAround_Newsong_PPD.xsq",
-    #"RockinAroundTheChristmasTree_SSS.xsq",
-    #"RTRNRD_RC_RGB.xsq",
-    #"RudolphTRNRD_SSS.xsq",
-    #"RunRunRudolph_Berry.xsq",
-    #"RunRunRudolph_KC_EFL.xsq",
-    #"RunRunRudolph_KC_PPD.xsq",
-    #"SantaBringMyBabyBack_Train_PPD.xsq",
-    #"SantaCantYouHearMe_PPD.xsq",
-    #"SantaClaus_MC_RGB.xsq",
-    #"SantaClaus_Panama_PPD.xsq",
-    #"SantaShark_MLS.xsq",
-    #"SantaSings_BS.xsq",
+    "MeleKalikimaka_SSS.xsq",
+    "Memories_PPD.xsq",
+    "Misers_SeqSol.xsq",
+    "Mistletoe_Bieber_xS.xsq",
+    "MrSanta_PPD.xsq",
+    "MyFavoriteThings_SSS.xsq",
+    "NutcrackerDubstep_xS.xsq",
+    "NutcrackerRussianDance_VLS.xsq",
+    "Nutrocker_PPD.xsq",
+    "OComeEmmanuel_SSS.xsq",
+    "OfficiallyChristmas_RGB.xsq",
+    "PleaseSantaPlease_PPD.xsq",
+    "PokerFace_PPD.xsq",
+    "QueenOfTheWinterNight_TSO_PPD.xsq",
+    "RockinAround_Duffield_PPD.xsq",
+    "RockinAround_Newsong_PPD.xsq",
+    "RockinAroundTheChristmasTree_SSS.xsq",
+    "RTRNRD_RC_RGB.xsq",
+    "RudolphTRNRD_SSS.xsq",
+    "RunRunRudolph_Berry.xsq",
+    "RunRunRudolph_KC_EFL.xsq",
+    "RunRunRudolph_KC_PPD.xsq",
+    "SantaBringMyBabyBack_Train_PPD.xsq",
+    "SantaCantYouHearMe_PPD.xsq",
+    "SantaClaus_MC_RGB.xsq",
+    "SantaClaus_Panama_PPD.xsq",
+    "SantaShark_MLS.xsq",
+    "SantaSings_BS.xsq",
+    ])
+    print (msg)
+
+if doall or False:
+    msg = xlenv.batchRenderSeqList([
     #"SantaTellMe_SSS.xsq",
     #"Sarajevo_SSS.xsq",
     #"SB-ChuckBLilJohnWet.xsq",
     #"SeasonsUponUs.xsq",
-    ])
-    print (msg)
-
-if doall or False:
-    msg = xlenv.batchRenderSeqList([
     #"ShakeUpChristmas_PPD.xsq",
     #"ShelfishElf_xS.xsq",
     #"ShutUpAndDance_PPD.xsq",
