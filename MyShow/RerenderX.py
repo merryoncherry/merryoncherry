@@ -42,14 +42,8 @@ if doall and False:
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     "ShowStarts.xsq",
-    #"BackgroundPleaseParkWings.xsq",
-    #"BackgroundTuneToEndOfStreet.xsq",
-    #"BackgroundTuneToParking.xsq",
-    #"BackgroundTuneToParkingWings.xsq",
-    #"BackgroundTuneToParkingWingsVary.xsq",
-    #"StaticSeq.xsq",
-    #"StaticSeq_Short.xsq",
-    #"XmasBG_V1.xsq",
+    "Background_Xmas.xsq",
+    "Background_Xmas_RF.xsq",
     ])
     print (msg)
 
