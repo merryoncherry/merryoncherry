@@ -633,27 +633,31 @@ class LayoutTransformVisitor(Visitor):
             (wx, wy, wz) = self.get3(m, 'WorldPosX', 'WorldPosY', 'WorldPosZ')
             npts = int(m.getAttribute('NumPoints'))
             pcs = m.getAttribute("PointData").split(",")
-            dx = float(pcs[0])
-            dy = float(pcs[1])
-            dz = float(pcs[2])
+            sx = float(m.getAttribute('ScaleX'))
+            sy = float(m.getAttribute('ScaleY'))
+            sz = float(m.getAttribute('ScaleZ'))
             # We will canonicalize these so point 1 is at world X,Y,Z
-            wx = wx+dx
-            wy = wy+dy
-            wz = wz+dz
-            (twx, twy, twz) = self.doTx(wx, wy, wz)
+            # TODO: ScaleX, ScaleY, ScaleZ - is this for drops?
+            nwx = wx+float(pcs[0])*sx
+            nwy = wy+float(pcs[1])*sy
+            nwz = wz+float(pcs[2])*sz
+            (twx, twy, twz) = self.doTx(nwx, nwy, nwz)
             sdata = ""
             for i in range(0, npts):
-                x = float(pcs[i * 3 + 0]) - dx
-                y = float(pcs[i * 3 + 1]) - dy
-                z = float(pcs[i * 3 + 2]) - dz
+                x = float(pcs[i * 3 + 0])
+                y = float(pcs[i * 3 + 1])
+                z = float(pcs[i * 3 + 2])
                 # There is a different way to do this, for linear transforms
-                (tx, ty, tz) = self.doTx(x+wx, y+wy, z+wz)
+                (tx, ty, tz) = self.doTx(x*sx+wx, y*sy+wy, z*sz+wz)
                 if len(sdata):
                     sdata = sdata + ','
                 sdata = sdata + str(tx-twx) + ',' + str(ty-twy) + ',' + str(tz-twz)
             self.set3(m, 'WorldPosX', 'WorldPosY', 'WorldPosZ', twx, twy, twz)
             m.setAttribute('PointData', sdata)
-            # TODO: ScaleX, ScaleY, ScaleZ - is this for drops?
+            m.setAttribute('ScaleX', "1")
+            m.setAttribute('ScaleY', "1")
+            m.setAttribute('ScaleZ', "1")
+            # TODO: Control Points
         else:
             self.printNode(m)
             raise Exception("Didn't know how to process layout model type: "+mtype)
