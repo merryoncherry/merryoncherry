@@ -1,13 +1,13 @@
 import subprocess
 import xlAutomation.xlDo
 
-srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2024_Base\\xlights_networks.xml"
-intnet="c:\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\xlights_networks.xml"
-dstnet="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\xlights_networks.xml"
+srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2025_Base\\xlights_networks.xml"
+intnet="c:\\users\\chuck\\documents\\xlightsShows\\2025_Halloween\\xlights_networks.xml"
+dstnet="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2025_Halloween\\xlights_networks.xml"
 
-srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2024_Base\\xlights_rgbeffects.xml"
-intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\xlights_rgbeffects.xml"
-dstrgb="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2024_Halloween\\xlights_rgbeffects.xml"
+srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2025_Base\\xlights_rgbeffects.xml"
+intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2025_Halloween\\xlights_rgbeffects.xml"
+dstrgb="\\\\192.168.1.133\\users\\chuck\\documents\\xlightsShows\\2025_Halloween\\xlights_rgbeffects.xml"
 
 subprocess.run([
     "python",

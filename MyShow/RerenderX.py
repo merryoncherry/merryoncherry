@@ -25,9 +25,9 @@ if not wasRunning:
 xlenv.changeShowFolder()
 
 doall = False
-doall = True
+#doall = True
 
-if doall and False:
+if doall or False:
     msg = xlenv.batchRenderSeqList([
     "BlessTheUSA.xsq",
     "GodBlessTheUSA_ArmedForcesMedley.xsq",
@@ -50,17 +50,14 @@ if doall or False:
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     "12Days_SNC_PPD.xsq",
-    "1983_Vivid.xsq",
     "1986_Vivid.xsq",
     "AChristmasWish_RGBS.xsq",
-    "AllIReallyWantForChristmas.xsq",
     "AllIWantForChristmas_RGBS.xsq",
     "AllTheSmallThings_PPD.xsq",
     "AuldLangSyne_MC_PPD.xsq",
     "AWholeNewWorld_RGB.xsq",
     "BecauseImSanta.xsq",
     "BeOurGuest_SeqSol.xsq",
-    "BlueChristmas_SSS.xsq",
     "CarolOfTheBells_Barlowgirl.xsq",
     "CarolOfTheBells_DCB_RGB.xsq",
     "CarolOfTheBells_Epic_SeqSol.xsq",
@@ -68,7 +65,6 @@ if doall or False:
     "ChildrenChristmasMix_xS.xsq",
     "ChristmasCanCan_MLS.xsq",
     "ChristmasCanon_SSS.xsq",
-    "ChristmasDontBeLate.xsq",
     "ChristmasEve_PPD.xsq",
     "ChristmasEveryDay_xS.xsq",
     "ChristmasInParadise.xsq",
@@ -77,14 +73,12 @@ if doall or False:
     "ChristmasMedleyVoctave_PPS.xsq",
     "ChristmasNutchracker_PPD.xsq",
     "ChristmasOfLove_PPD.xsq",
-    "ChristmasParadise_Vivid.xsq",
     "ChristmasRickRoll.xsq",
     "ChristmasStorm_SSS.xsq",
     "ChristmastimeAgain_RGB.xsq",
     "ChristmasTreat_SSS.xsq",
     "ChristmasTreeFarm_PPD.xsq",
     "ChristmasTwist_SSS.xsq",
-    "ChristmasWithoutYou_AvaMax_RGB.xsq",
     "ChristmasWithoutYou_SSS.xsq",
     "ClarkIntro.xsq",
     "ComeOnChristmas_SSS.xsq",
@@ -102,7 +96,6 @@ if doall or False:
     "Crystallize_LS_SeqSol.xsq",
     "Crystallize_xS.xsq",
     "DanceofTheSugarPlum_FPD.xsq",
-    "DangerZone_BF.xsq",
     "DarleneLoveBabyPleaseComeHome.xsq",
     "DeckTheHalls_WarPigs.xsq",
     "DiddlySquat_Vivid.xsq",
@@ -116,17 +109,15 @@ if doall or False:
     "DontStopTheSantaMan.xsq",
     "DubstepSnowman_VLS.xsq",
     "EverybodyLovesXmas_xS.xsq",
-    "FancyLike_SSS.xsq",
     "FavoriteTimeOfYear_PPD.xsq",
     "FeelsLikeChristmas.xsq",
     "FelizNavidad_SSS.xsq",
     "FinalCountdown_PPD.xsq",
     "Footloose_PPD.xsq",
-    "FrostyTheSnowman.xsq",
     "GetThisPartyStarted_SSS.xsq",
     "GoTellSantaBaby_PPD.xsq",
     "GrandmaGotRunOver_PPD.xsq",
-    "GreatestShow_XATW.xsq",
+    "Grinch_PPD_Storyline.xsq",
     "GrinchClassic_xS.xsq",
     "GroovyXmas_SeqSol.xsq",
     "Happy_MLS.xsq",
@@ -145,7 +136,6 @@ if doall or False:
 if doall or False:
     msg = xlenv.batchRenderSeqList([
     "HollyJollyChristmas_Ives_xS.xsq",
-    "HollyJollyChristmas_SSS.xsq",
     "HomeForTheHolidays_PerryComo_PPD.xsq",
     "HowFarIllGo_PPD.xsq",
     "IBelieveInSanta_RGB.xsq",
@@ -157,7 +147,6 @@ if doall or False:
     "ImGood_BF.xsq",
     "ItMustBeSanta_PPD.xsq",
     "ItsTheMostWonderfulTimeOfTheYear_SSS.xsq",
-    "IWantYouForXmas_xS.xsq",
     "JingleBellRock_SSS.xsq",
     "JingleBells_Denver_PPD.xsq",
     "JingleBells_Glee_PPD.xsq",
@@ -181,7 +170,6 @@ if doall or False:
 
 if doall or False:
     msg = xlenv.batchRenderSeqList([
-    "MeleKalikimaka_SSS.xsq",
     "Memories_PPD.xsq",
     "Misers_SeqSol.xsq",
     "Mistletoe_Bieber_xS.xsq",
@@ -199,7 +187,6 @@ if doall or False:
     "RockinAround_Newsong_PPD.xsq",
     "RockinAroundTheChristmasTree_SSS.xsq",
     "RTRNRD_RC_RGB.xsq",
-    "RudolphTRNRD_SSS.xsq",
     "RunRunRudolph_Berry.xsq",
     "RunRunRudolph_KC_EFL.xsq",
     "RunRunRudolph_KC_PPD.xsq",
@@ -222,7 +209,6 @@ if doall or False:
     "ShelfishElf_xS.xsq",
     "ShutUpAndDance_PPD.xsq",
     "SiberianSleighRide.xsq",
-    "SilverBells_xS.xsq",
     "SkinnySanta_PPD.xsq",
     "SleighRide_Mathis_xS.xsq",
     "SleighRide_Ptx_PPD.xsq",
@@ -236,11 +222,9 @@ if doall or False:
     "SugarAndBooze_PPD.xsq",
     "SWOTRB_xS.xsq",
     "TakinCareOfChristmas_xS.xsq",
-    "ThatTimeOfYear.xsq",
     "TheChristmasSong_EFL.xsq",
     "TheChristmasSong_xS.xsq",
     "ToySack_BobRivers_xS.xsq",
-    "Trolls_RGB.xsq",
     "TSOChistmasMedley_xS.xsq",
     ])
     print (msg)
@@ -257,7 +241,6 @@ if doall or False:
     "WhatChristmasMeansToMe_EFL.xsq",
     "WhatChristmasMeansToMe_SW_PPD.xsq",
     "WhatElseCanIDo_PPD.xsq",
-    "WhenIAmOlder.xsq",
     "WhenYouBelieve_PPD.xsq",
     "WhereAreYouChristmasFaithHillPPD.xsq",
     "WhiteChristmas_Drifters_PPD.xsq",
@@ -266,7 +249,6 @@ if doall or False:
     "WizardsInWinter_PPD.xsq",
     "WizardsInWinter_SSS.xsq",
     "WonderfulChristmastime_UsTheDuo_PPD.xsq",
-    "WrapMeUp_Innovative.xsq",
     "WWW_HCSC_PPD.xsq",
     "WWWDWBH_xS.xsq",
     "xSClassicMedley.xsq",
@@ -277,8 +259,28 @@ if doall or False:
     ])
     print (msg)
 
-if doall or False:
+# These are here because we know they have matrix faces
+if doall or True:
     msg = xlenv.batchRenderSeqList([
+    "1983_Vivid.xsq",
+    "AllIReallyWantForChristmas.xsq",
+    "BlueChristmas_SSS.xsq",
+    "ChristmasDontBeLate.xsq",
+    "ChristmasParadise_Vivid.xsq",
+    "ChristmasWithoutYou_AvaMax_RGB.xsq",
+    "DangerZone_BF.xsq",
+    "FancyLike_SSS.xsq",
+    "FrostyTheSnowman.xsq",
+    "GreatestShow_XATW.xsq",
+    "HollyJollyChristmas_SSS.xsq",
+    "IWantYouForXmas_xS.xsq",
+    "MeleKalikimaka_SSS.xsq",
+    "RudolphTRNRD_SSS.xsq",
+    "SilverBells_xS.xsq",
+    "ThatTimeOfYear.xsq",
+    "Trolls_RGB.xsq",
+    "WhenIAmOlder.xsq",
+    "WrapMeUp_Innovative.xsq",
     ])
     print (msg)
 
