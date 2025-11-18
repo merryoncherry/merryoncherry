@@ -179,6 +179,9 @@
     <network ComPort="192.168.25.30" BaudRate="24" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.30" BaudRate="25" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.30" BaudRate="26" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.30" BaudRate="27" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.30" BaudRate="28" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.30" BaudRate="29" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="13300" Name="Wally16_Porch_S_W" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.133" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.133" BaudRate="13300" NetworkType="DDP" MaxChannels="9000"/>
@@ -267,19 +270,19 @@
     <network ComPort="192.168.25.90" BaudRate="27" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="19100" Name="Wally16_SideStair" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.191" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.191" BaudRate="19100" NetworkType="DDP" MaxChannels="4749"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.191" BaudRate="19100" NetworkType="DDP" MaxChannels="5013"/>
   </Controller>
   <Controller Id="5000" Name="K32_SWFrontYard" Description="32Port 4LR K Front Yard Left SW" Type="Ethernet" Vendor="KulpLights" Model="K32" Variant="K32A-B" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="0" IP="192.168.25.50" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.50" BaudRate="5000" NetworkType="DDP" MaxChannels="20229"/>
   </Controller>
   <Controller Id="19200" Name="Wally16_FrontStair" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.192" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.192" BaudRate="19200" NetworkType="DDP" MaxChannels="5772"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.192" BaudRate="19200" NetworkType="DDP" MaxChannels="6036"/>
   </Controller>
   <Controller Id="19400" Name="WB48_FrontTrees" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB48" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.194" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.194" BaudRate="19400" NetworkType="DDP" MaxChannels="19200"/>
   </Controller>
   <Controller Id="11000" Name="K32_SEFrontYard" Description="K 32 4LRR East Front Yard" Type="Ethernet" Vendor="KulpLights" Model="K32" Variant="K32A-B" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.110" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.110" BaudRate="11000" NetworkType="DDP" MaxChannels="20708"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.110" BaudRate="11000" NetworkType="DDP" MaxChannels="20972"/>
   </Controller>
   <Controller Id="13900" Name="Wally16_EastSide" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.139" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.139" BaudRate="13900" NetworkType="DDP" MaxChannels="3324"/>
@@ -327,6 +330,9 @@
   <Controller Id="13600" Name="Wally_NMBCProps" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.136" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.136" BaudRate="13600" NetworkType="DDP" MaxChannels="8718"/>
   </Controller>
+  <Controller Id="13800" Name="Wally_EDriveProps" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.138" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.138" BaudRate="13800" NetworkType="DDP" MaxChannels="14733"/>
+  </Controller>
   <Controller Id="22000" Name="Baldrick8_Tree1" Description="" Type="Ethernet" Vendor="ILightThat" Model="Baldrick 8 Port v1" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.220" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.220" BaudRate="22000" NetworkType="DDP" MaxChannels="4800"/>
   </Controller>
@@ -346,7 +352,7 @@
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.154" BaudRate="15400" NetworkType="DDP" MaxChannels="7986"/>
   </Controller>
   <Controller Id="19600" Name="Wally16_WalkR" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.196" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.196" BaudRate="19600" NetworkType="DDP" MaxChannels="6576"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.196" BaudRate="19600" NetworkType="DDP" MaxChannels="6840"/>
   </Controller>
   <Controller Id="1" Name="HP12V48_SEFrontYard" Description="HinksPro 12V 48" Type="Ethernet" Vendor="HinksPix" Model="PRO V3" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.80" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ComPort="192.168.25.80" BaudRate="1" NetworkType="E131" MaxChannels="510"/>
@@ -370,16 +376,15 @@
     <network ComPort="192.168.25.80" BaudRate="19" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.80" BaudRate="20" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.80" BaudRate="21" NetworkType="E131" MaxChannels="510"/>
-    <network ComPort="192.168.25.80" BaudRate="22" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="22200" Name="BaldrickFYardHelper" Description="" Type="Ethernet" Vendor="ILightThat" Model="Baldrick 8 Port v1" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.222" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.222" BaudRate="22200" NetworkType="DDP" MaxChannels="3354"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.222" BaudRate="22200" NetworkType="DDP" MaxChannels="3972"/>
   </Controller>
   <Controller Id="700" Name="WB48_Yard_Slow" Description="50FPS [MFT:20]" Type="Ethernet" Vendor="Wallys Lights" Model="WB48" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.7" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.7" BaudRate="700" NetworkType="DDP" MaxChannels="24576"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.7" BaudRate="700" NetworkType="DDP" MaxChannels="49152"/>
   </Controller>
   <Controller Id="19300" Name="K32_EYard" Description="" Type="Ethernet" Vendor="KulpLights" Model="K32" Variant="K32A-B" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.193" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.193" BaudRate="19300" NetworkType="DDP" MaxChannels="22578"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.193" BaudRate="19300" NetworkType="DDP" MaxChannels="23928"/>
   </Controller>
   <Controller Id="14500" Name="WallyEYardCube" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Inactive" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.145" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.145" BaudRate="14500" NetworkType="DDP" MaxChannels="5760"/>
@@ -429,6 +434,9 @@
   </Controller>
   <Controller Id="600" Name="WB48_EFenceTrees" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB48" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.6" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.6" BaudRate="600" NetworkType="DDP" MaxChannels="32160"/>
+  </Controller>
+  <Controller Id="86" Name="B17_ESpiralTrees" Description="" Type="Ethernet" Vendor="ILightThat" Model="Baldrick8" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.223" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ComPort="192.168.25.223" BaudRate="1" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <testpreset name="Christmas2015"/>
   <testpreset name="2015 house"/>
