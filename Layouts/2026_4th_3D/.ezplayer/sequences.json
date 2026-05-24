@@ -1,0 +1,120 @@
+{
+    "data": {
+        "allSongs": [
+            {
+                "id": "207cd731-7c9b-4202-9352-a901e45a8832",
+                "instanceId": "207cd731-7c9b-4202-9352-a901e45a8832",
+                "deleted": false,
+                "updatedAt": 1779557044155,
+                "work": {
+                    "title": "God Bless the USA Armed Force Medley",
+                    "artist": "The American Patriots",
+                    "length": 264.385
+                },
+                "files": {
+                    "fseq": "God Bless the USA Armed Force Medley-The American Patriots-PPD.fseq",
+                    "audio": "God Bless the USA Armed Force Medley-The American Patriots-PPD.mp3",
+                    "thumb": "God Bless the USA Armed Force Medley-The American Patriots-PPD.webp"
+                },
+                "sequence": {
+                    "vendor": "PPD"
+                }
+            },
+            {
+                "id": "5c25de00-8144-4ec8-8722-515a00c65508",
+                "instanceId": "5c25de00-8144-4ec8-8722-515a00c65508",
+                "deleted": false,
+                "updatedAt": 1779557114259,
+                "work": {
+                    "title": "God Bless the U.S.A.",
+                    "artist": "Lee Greenwood",
+                    "length": 190.542
+                },
+                "files": {
+                    "fseq": "God Bless the USA-Lee Greenwood-PPD.fseq",
+                    "audio": "God Bless the USA-Lee Greenwood-PPD.mp3",
+                    "thumb": "God Bless the USA-Lee Greenwood-PPD.webp"
+                },
+                "sequence": {
+                    "vendor": "PPD"
+                }
+            },
+            {
+                "id": "f3864706-514c-40ae-8b95-db019bd9deb2",
+                "instanceId": "f3864706-514c-40ae-8b95-db019bd9deb2",
+                "deleted": false,
+                "updatedAt": 1779557179647,
+                "work": {
+                    "title": "Fear Is a Liar",
+                    "artist": "Zach Williams",
+                    "length": 265.143
+                },
+                "files": {
+                    "fseq": "Fear Is a Liar-Zach Williams-PPD.fseq",
+                    "audio": "Fear Is a Liar-Zach Williams-PPD.mp3",
+                    "thumb": "Fear Is a Liar-Zach Williams-PPD.jpg"
+                },
+                "sequence": {
+                    "vendor": "PPD"
+                }
+            },
+            {
+                "id": "3532889d-8932-442c-bd48-360624db692e",
+                "instanceId": "3532889d-8932-442c-bd48-360624db692e",
+                "deleted": false,
+                "updatedAt": 1779557209476,
+                "work": {
+                    "title": "My America",
+                    "artist": "Danny Gokey",
+                    "length": 242.88653
+                },
+                "files": {
+                    "fseq": "My America-Danny Gokey-PPD.fseq",
+                    "audio": "My America-Danny Gokey-PPD.mp3",
+                    "thumb": "My America-Danny Gokey-PPD.webp"
+                },
+                "sequence": {
+                    "vendor": "PPD"
+                }
+            },
+            {
+                "id": "ac50088e-6e38-435b-a904-e1bb89a754cb",
+                "instanceId": "ac50088e-6e38-435b-a904-e1bb89a754cb",
+                "deleted": false,
+                "updatedAt": 1779557281747,
+                "work": {
+                    "title": "R.O.C.K. in the USA",
+                    "artist": "John Mellencamp",
+                    "length": 174.36
+                },
+                "files": {
+                    "fseq": "ROCK in the USA-John Mellencamp-PPD.fseq",
+                    "audio": "ROCK in the USA-John Mellencamp-PPD.mp3",
+                    "thumb": "ROCK in the USA-John Mellencamp-PPD.webp"
+                },
+                "sequence": {
+                    "vendor": "PPD"
+                }
+            },
+            {
+                "id": "c434dcbd-883a-41c3-94a8-159ff6a4fd15",
+                "instanceId": "c434dcbd-883a-41c3-94a8-159ff6a4fd15",
+                "deleted": false,
+                "updatedAt": 1779557283477,
+                "work": {
+                    "title": "Party in the USA",
+                    "artist": "Miley Cyrus",
+                    "length": 202.066
+                },
+                "files": {
+                    "fseq": "Party in the USA-Miley Cyrus-PPD.fseq",
+                    "audio": "Party in the USA-Miley Cyrus-PPD.mp3",
+                    "thumb": "Party in the USA-Miley Cyrus-PPD.webp"
+                },
+                "sequence": {
+                    "vendor": "PPD"
+                }
+            }
+        ]
+    }
+}
