@@ -1,0 +1,37 @@
+{
+    "data": {
+        "allSongs": [
+            {
+                "instanceId": "f1342315-7625-4a32-a34f-c7e073cc5ea3",
+                "id": "f1342315-7625-4a32-a34f-c7e073cc5ea3",
+                "work": {
+                    "title": "Eagle",
+                    "artist": "State",
+                    "length": 30,
+                    "description": "",
+                    "tags": [],
+                    "genre": "",
+                    "music_url": ""
+                },
+                "sequence": {
+                    "vendor": "",
+                    "variant": "",
+                    "sku": "",
+                    "vendor_url": "",
+                    "preview_url": ""
+                },
+                "files": {
+                    "fseq": "EagleState.fseq"
+                },
+                "updatedAt": 1772309319303,
+                "deleted": false,
+                "settings": {
+                    "lead_time": 0,
+                    "trail_time": 0,
+                    "volume_adj": 0,
+                    "tags": []
+                }
+            }
+        ]
+    }
+}
