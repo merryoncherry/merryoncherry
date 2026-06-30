@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsequence BaseChannel="0" ChanCtrlBasic="0" ChanCtrlColor="0" FixedPointTiming="1" ModelBlending="true">
+  <head>
+    <version>2026.01.1</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <song></song>
+    <artist></artist>
+    <album></album>
+    <MusicURL></MusicURL>
+    <comment></comment>
+    <sequenceTiming>25 ms</sequenceTiming>
+    <sequenceType>Animation</sequenceType>
+    <mediaFile/>
+    <sequenceDuration>30.000</sequenceDuration>
+    <imageDir/>
+  </head>
+  <nextid>1</nextid>
+  <Jukebox/>
+  <ColorPalettes>
+    <ColorPalette>C_BUTTON_Palette1=#FF0000,C_BUTTON_Palette2=#FFFFFF,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette1=1,C_CHECKBOX_Palette2=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette4=1</ColorPalette>
+    <ColorPalette>C_BUTTON_Palette1=#FFFFFF,C_BUTTON_Palette2=#FF0000,C_BUTTON_Palette3=#00FF00,C_BUTTON_Palette4=#0000FF,C_BUTTON_Palette5=#FFFF00,C_BUTTON_Palette6=#000000,C_BUTTON_Palette7=#00FFFF,C_BUTTON_Palette8=#FF00FF,C_CHECKBOX_Palette2=1</ColorPalette>
+  </ColorPalettes>
+  <EffectDB>
+    <Effect>B_CHOICE_BufferStyle=Per Model Default Deep,E_CHECKBOX_Chase_Group_All=0,E_CHOICE_Chase_Type1=Left-Right,E_CHOICE_Fade_Type=None,E_CHOICE_SingleStrand_Colors=Palette,E_CHOICE_SingleStrand_FX=Fireworks 1D,E_CHOICE_SingleStrand_FX_Palette=* Colors Only,E_CHOICE_Skips_Direction=Right,E_NOTEBOOK_SSEFFECT_TYPE=Chase,E_SLIDER_Color_Mix1=40,E_SLIDER_FX_Intensity=128,E_SLIDER_FX_Speed=128,E_SLIDER_Number_Chases=2,E_SLIDER_Skips_Advance=100,E_SLIDER_Skips_BandSize=4,E_SLIDER_Skips_SkipSize=1,E_SLIDER_Skips_StartPos=1,E_TEXTCTRL_Chase_Offset=0.0,E_TEXTCTRL_Chase_Rotations=6</Effect>
+    <Effect>E_CHOICE_State_Color=Graduate,E_CHOICE_State_State=&lt;ALL&gt;,E_CHOICE_State_StateDefinition=Static,E_SLIDER_State_Fade_Time=0</Effect>
+    <Effect>E_CHOICE_State_Color=Graduate,E_CHOICE_State_State=&lt;ALL&gt;,E_CHOICE_State_StateDefinition=BrightStar,E_SLIDER_State_Fade_Time=0</Effect>
+    <Effect>E_CHOICE_State_Color=Graduate,E_CHOICE_State_State=&lt;ALL&gt;,E_CHOICE_State_StateDefinition=RedWhiteBlue2,E_SLIDER_State_Fade_Time=0</Effect>
+    <Effect></Effect>
+    <Effect>E_TEXTCTRL_On_Transparency=70</Effect>
+    <Effect>E_TEXTCTRL_On_Transparency=50</Effect>
+    <Effect>E_TEXTCTRL_On_Transparency=20</Effect>
+    <Effect>E_CHECKBOX_Faces_Outline=1,E_CHOICE_Faces_EyeBlinkDuration=Normal,E_CHOICE_Faces_EyeBlinkFrequency=Normal,E_CHOICE_Faces_Eyes=Auto,E_CHOICE_Faces_FaceDefinition=DefaultState,E_CHOICE_Faces_Phoneme=AI,E_CHOICE_Faces_UseState=Sing</Effect>
+    <Effect>E_CHOICE_State_Color=Graduate,E_CHOICE_State_State=&lt;ALL&gt;,E_CHOICE_State_StateDefinition=RWB,E_SLIDER_State_Fade_Time=0</Effect>
+    <Effect>E_CHOICE_State_Color=Graduate,E_CHOICE_State_State=&lt;ALL&gt;,E_CHOICE_State_StateDefinition=StaticWRB,E_SLIDER_State_Fade_Time=0</Effect>
+    <Effect>E_CHECKBOX_Chase_Group_All=0,E_CHOICE_Chase_Type1=Left-Right,E_CHOICE_Fade_Type=None,E_CHOICE_SingleStrand_Colors=Palette,E_CHOICE_SingleStrand_FX=Fireworks 1D,E_CHOICE_SingleStrand_FX_Palette=* Colors Only,E_CHOICE_Skips_Direction=Right,E_NOTEBOOK_SSEFFECT_TYPE=Chase,E_SLIDER_Color_Mix1=30,E_SLIDER_FX_Intensity=128,E_SLIDER_FX_Speed=128,E_SLIDER_Number_Chases=3,E_SLIDER_Skips_Advance=100,E_SLIDER_Skips_BandSize=4,E_SLIDER_Skips_SkipSize=1,E_SLIDER_Skips_StartPos=1,E_TEXTCTRL_Chase_Offset=0.0,E_TEXTCTRL_Chase_Rotations=6</Effect>
+    <Effect>E_CHOICE_State_Color=Graduate,E_CHOICE_State_State=&lt;ALL&gt;,E_CHOICE_State_StateDefinition=StaticBRW,E_SLIDER_State_Fade_Time=0</Effect>
+    <Effect>E_CHOICE_State_Color=Graduate,E_CHOICE_State_State=&lt;ALL&gt;,E_CHOICE_State_StateDefinition=RadialWide,E_SLIDER_State_Fade_Time=0</Effect>
+    <Effect>E_CHOICE_State_Color=Graduate,E_CHOICE_State_State=&lt;ALL&gt;,E_CHOICE_State_StateDefinition=BWR,E_SLIDER_State_Fade_Time=0</Effect>
+    <Effect>B_CHOICE_BufferStyle=Per Model Default Deep,E_CHECKBOX_Chase_Group_All=0,E_CHOICE_Chase_Type1=Left-Right,E_CHOICE_Fade_Type=None,E_CHOICE_SingleStrand_Colors=Palette,E_CHOICE_SingleStrand_FX=Fireworks 1D,E_CHOICE_SingleStrand_FX_Palette=* Colors Only,E_CHOICE_Skips_Direction=Right,E_NOTEBOOK_SSEFFECT_TYPE=Chase,E_SLIDER_Color_Mix1=30,E_SLIDER_FX_Intensity=128,E_SLIDER_FX_Speed=128,E_SLIDER_Number_Chases=3,E_SLIDER_Skips_Advance=100,E_SLIDER_Skips_BandSize=4,E_SLIDER_Skips_SkipSize=1,E_SLIDER_Skips_StartPos=1,E_TEXTCTRL_Chase_Offset=0.0,E_TEXTCTRL_Chase_Rotations=6</Effect>
+  </EffectDB>
+  <DataLayers>
+    <DataLayer lor_params="2000" channel_offset="0" num_channels="0" num_frames="0" data="&lt;rendered: erase-mode&gt;" source="&lt;auto-generated&gt;" name="Nutcracker"/>
+  </DataLayers>
+  <DisplayElements>
+    <Element collapsed="0" type="timing" name="New Timing" visible="1" views="Master View,Ordered" active="1"/>
+    <Element collapsed="0" type="model" name="1_All Display" visible="1"/>
+    <Element collapsed="0" type="model" name="2_All Display Left" visible="1"/>
+    <Element collapsed="0" type="model" name="2_All Display Lower" visible="1"/>
+    <Element collapsed="0" type="model" name="2_All Display Right" visible="1"/>
+    <Element collapsed="0" type="model" name="2_All Display Upper" visible="1"/>
+    <Element collapsed="0" type="model" name="3_All Roof" visible="1"/>
+    <Element collapsed="0" type="model" name="4_All Roof Lower" visible="1"/>
+    <Element collapsed="0" type="model" name="4_All Roof Upper" visible="1"/>
+    <Element collapsed="0" type="model" name="All Stars" visible="1"/>
+    <Element collapsed="0" type="model" name="All Stars Dedicated" visible="1"/>
+    <Element collapsed="0" type="model" name="All Stars Even" visible="1"/>
+    <Element collapsed="0" type="model" name="All Stars Odd" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third G 1" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third G 2" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third G 3" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third H 1" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third H 2" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third H 3" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third U 1" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third U 2" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third U 3" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third V 1" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third V 2" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third V 3" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third W 1" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third W 2" visible="1"/>
+    <Element collapsed="0" type="model" name="All Third W 3" visible="1"/>
+    <Element collapsed="0" type="model" name="All Verticals" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Army Letters GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Army Outline GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Army Star GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting  GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Centers GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Edge Top GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Extended Spokes GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Other GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Rings  GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Rings Inner GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Rings Middle GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Rings Outer GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Ruffles GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Spokes GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Bunting Stars GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Coast Guard Anchors GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Coast Guard Flag GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Coast Guard GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Coast Guard Rings GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Coast Guard Shield GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Cost Guard Letters GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Marines Letters GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Navy Letters GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE US Air Force Emblem GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE US Air Force Letters GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE US Space Force Letters GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="GE US Space Force Logo GRP" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 2" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 3" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 4" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 5" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 6" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 7" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 8" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 9" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 10" visible="1"/>
+    <Element collapsed="0" type="model" name="150 Star Left" visible="1"/>
+    <Element collapsed="0" type="model" name="150 Star Right" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches-2" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches-3" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches-4" visible="1"/>
+    <Element collapsed="0" type="model" name="Eagle_Flying" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Army" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Coast Guard" visible="1"/>
+    <Element collapsed="0" type="model" name="GE Space Force" visible="1"/>
+    <Element collapsed="0" type="model" name="GE US Air Force" visible="1"/>
+    <Element collapsed="0" type="model" name="GE US Marines" visible="1"/>
+    <Element collapsed="0" type="model" name="GE US Navy" visible="1"/>
+    <Element collapsed="0" type="model" name="GE_USA_8_Ft" visible="1"/>
+    <Element collapsed="0" type="model" name="MoCFlag 10000" visible="1"/>
+    <Element collapsed="0" type="model" name="RoofLowerL" visible="1"/>
+    <Element collapsed="0" type="model" name="RoofLowerR" visible="1"/>
+    <Element collapsed="0" type="model" name="RoofUpperL" visible="1"/>
+    <Element collapsed="0" type="model" name="RoofUpperR" visible="1"/>
+    <Element collapsed="0" type="model" name="SingingFirework-2" visible="1"/>
+    <Element collapsed="0" type="model" name="SingingFirework-3" visible="1"/>
+    <Element collapsed="0" type="model" name="SingingFirework-4" visible="1"/>
+    <Element collapsed="0" type="model" name="Stamped 4th July High Density Spinner-2" visible="1"/>
+    <Element collapsed="0" type="model" name="Stamped 4th July Spinner 2" visible="1"/>
+    <Element collapsed="0" type="model" name="Stamped 4th July Spinner 3" visible="1"/>
+    <Element collapsed="0" type="model" name="Stamped 4th July Spinner 4" visible="1"/>
+    <Element collapsed="0" type="model" name="Stamped Singing Scared Firework" visible="1"/>
+    <Element collapsed="0" type="model" name="Star-2" visible="1"/>
+    <Element collapsed="0" type="model" name="Star-3" visible="1"/>
+    <Element collapsed="0" type="model" name="Star-4" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree-2" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree-3" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree-4" visible="1"/>
+    <Element collapsed="0" type="model" name="UpperRailing" visible="1"/>
+    <Element collapsed="0" type="model" name="Vert1B" visible="1"/>
+    <Element collapsed="0" type="model" name="Vert2B" visible="1"/>
+    <Element collapsed="0" type="model" name="Vert3B" visible="1"/>
+    <Element collapsed="0" type="model" name="Vert4B" visible="1"/>
+    <Element collapsed="0" type="model" name="ZZZ All Stars" visible="1"/>
+    <Element collapsed="0" type="model" name="ZZZ All Display" visible="1"/>
+    <Element collapsed="0" type="model" name="Star Spinner L" visible="1"/>
+    <Element collapsed="0" type="model" name="Star Spinner R" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Spinner 24 L" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Spinner 24 R" visible="1"/>
+    <Element collapsed="0" type="model" name="4th July Star 1" visible="1"/>
+    <Element collapsed="0" type="model" name="Arches-1" visible="1"/>
+    <Element collapsed="0" type="model" name="Star-1" visible="1"/>
+    <Element collapsed="0" type="model" name="SingingFirework-1" visible="1"/>
+    <Element collapsed="0" type="model" name="Stamped 4th July Spinner 1" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree-1" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree Spiral 1" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree Spiral 2" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree Spiral 3" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree Spiral 4" visible="1"/>
+    <Element collapsed="0" type="model" name="Star Spiral 4" visible="1"/>
+    <Element collapsed="0" type="model" name="Star Spiral 3" visible="1"/>
+    <Element collapsed="0" type="model" name="Star Spiral 2" visible="1"/>
+    <Element collapsed="0" type="model" name="Star Spiral 1" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick V 1" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick V 2" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick V 3" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick V 4" visible="1"/>
+    <Element collapsed="0" type="model" name="GE_Bunting UD L" visible="1"/>
+    <Element collapsed="0" type="model" name="GE_Bunting UD R" visible="1"/>
+    <Element collapsed="0" type="model" name="GE_Bunting UD N" visible="1"/>
+    <Element collapsed="0" type="model" name="GE_Bunting FD" visible="1"/>
+    <Element collapsed="0" type="model" name="Stamped 4th July High Density Spinner L" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick H 1" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick H 2" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick H 3" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick H 4" visible="1"/>
+    <Element collapsed="0" type="model" name="FrontRail" visible="1"/>
+    <Element collapsed="0" type="model" name="Rooflines" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel_Corner UL" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel_Corner UR" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel_Half UL" visible="1"/>
+    <Element collapsed="0" type="model" name="Star Spiral 5" visible="1"/>
+    <Element collapsed="0" type="model" name="Tree Spiral 5" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel Stick H 5" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel_Corner NL" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel_Corner NR" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel_Half NL" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel_Half NR" visible="1"/>
+    <Element collapsed="0" type="model" name="Twizzel_Half UR" visible="1"/>
+    <Element collapsed="0" type="model" name="Vert1S" visible="1"/>
+    <Element collapsed="0" type="model" name="Vert2S" visible="1"/>
+    <Element collapsed="0" type="model" name="Vert3S" visible="1"/>
+    <Element collapsed="0" type="model" name="Vert4S" visible="1"/>
+  </DisplayElements>
+  <ElementEffects>
+    <Element type="timing" name="New Timing">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="1_All Display">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="2_All Display Left">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="2_All Display Lower">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="2_All Display Right">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="2_All Display Upper">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="3_All Roof">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="4_All Roof Lower">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="4_All Roof Upper">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Stars">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Stars Dedicated">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Stars Even">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Stars Odd">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third G 1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third G 2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third G 3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third H 1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third H 2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third H 3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third U 1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third U 2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third U 3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third V 1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third V 2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third V 3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third W 1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third W 2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Third W 3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="All Verticals">
+      <EffectLayer>
+        <Effect ref="0" name="SingleStrand" selected="1" startTime="0" endTime="30000" palette="0"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE Army Letters GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Army Outline GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Army Star GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting  GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Centers GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Edge Top GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Extended Spokes GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Other GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Rings  GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Rings Inner GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Rings Middle GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Rings Outer GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Ruffles GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Spokes GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Bunting Stars GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Coast Guard Anchors GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Coast Guard Flag GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Coast Guard GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Coast Guard Rings GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Coast Guard Shield GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Cost Guard Letters GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Marines Letters GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE Navy Letters GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE US Air Force Emblem GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE US Air Force Letters GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE US Space Force Letters GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="GE US Space Force Logo GRP">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="4th July Star 2">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 3">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 4">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 5">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 6">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 7">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 8">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 9">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 10">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="150 Star Left">
+      <EffectLayer>
+        <Effect ref="2" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="150 Star Right">
+      <EffectLayer>
+        <Effect ref="2" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Arches-2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Arches-3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Arches-4">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Eagle_Flying">
+      <EffectLayer>
+        <Effect ref="3" name="State" startTime="0" endTime="30025" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE Army">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE Coast Guard">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE Space Force">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE US Air Force">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE US Marines">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE US Navy">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="2"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE_USA_8_Ft">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="MoCFlag 10000">
+      <EffectLayer/>
+      <SubModelEffectLayer name="MatrixCornerAll">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="3"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe01">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="4"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe02">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe03">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="4"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe04">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe05">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="4"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe06">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe07">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="4"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe08">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe09">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="4"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe10">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe11">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="4"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe12">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="Stripe13">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="4"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-02-YES-RTip">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-03-LOW-ExtremeBR">
+        <Effect ref="5" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-04-YES-UnderarmR">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-06-YES-RLeg">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-07-HALF-RArmpit">
+        <Effect ref="6" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-08-YES-ArmTCR">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-09-YES-RThigh">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-10-YES-RCore">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-11-LOW-RShoulder">
+        <Effect ref="7" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-14-YES-CenterLower">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-15-YES-CenterInsideUp">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-16-YES-CenterTopTipCore">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-17-HALF-ExtremeT">
+        <Effect ref="6" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-18-YES-LThigh">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-19-YES-LCore">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-20-LOW-LShoulder">
+        <Effect ref="7" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-22-YES-LLeg">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-23-HALF-LArmpit">
+        <Effect ref="6" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-24-YES-TopArmL">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-25-LOW-ExtremeBL">
+        <Effect ref="5" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-26-YES-UnderArmL">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+      <SubModelEffectLayer name="StarsByPoint-28-YES-LTip">
+        <Effect ref="4" name="On" startTime="0" endTime="30000" palette="2"/>
+      </SubModelEffectLayer>
+    </Element>
+    <Element type="model" name="RoofLowerL">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="RoofLowerR">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="RoofUpperL">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="RoofUpperR">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="SingingFirework-2">
+      <EffectLayer>
+        <Effect ref="8" name="Faces" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="SingingFirework-3">
+      <EffectLayer>
+        <Effect ref="8" name="Faces" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="SingingFirework-4">
+      <EffectLayer>
+        <Effect ref="8" name="Faces" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Stamped 4th July High Density Spinner-2">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Stamped 4th July Spinner 2">
+      <EffectLayer>
+        <Effect ref="10" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Stamped 4th July Spinner 3">
+      <EffectLayer>
+        <Effect ref="10" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Stamped 4th July Spinner 4">
+      <EffectLayer>
+        <Effect ref="10" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Stamped Singing Scared Firework">
+      <EffectLayer>
+        <Effect ref="8" name="Faces" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Star-2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star-3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star-4">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree-2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree-3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree-4">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="UpperRailing">
+      <EffectLayer>
+        <Effect ref="11" name="SingleStrand" startTime="0" endTime="30000" palette="0"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Vert1B">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Vert2B">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Vert3B">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Vert4B">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="ZZZ All Stars">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="ZZZ All Display">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star Spinner L">
+      <EffectLayer>
+        <Effect ref="12" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Star Spinner R">
+      <EffectLayer>
+        <Effect ref="12" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Spinner 24 L">
+      <EffectLayer>
+        <Effect ref="13" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Spinner 24 R">
+      <EffectLayer>
+        <Effect ref="13" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="4th July Star 1">
+      <EffectLayer>
+        <Effect ref="1" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Arches-1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star-1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="SingingFirework-1">
+      <EffectLayer>
+        <Effect ref="8" name="Faces" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Stamped 4th July Spinner 1">
+      <EffectLayer>
+        <Effect ref="10" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Tree-1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree Spiral 1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree Spiral 2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree Spiral 3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree Spiral 4">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star Spiral 4">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star Spiral 3">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star Spiral 2">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Star Spiral 1">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Twizzel Stick V 1">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel Stick V 2">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel Stick V 3">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel Stick V 4">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE_Bunting UD L">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE_Bunting UD R">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE_Bunting UD N">
+      <EffectLayer>
+        <Effect ref="14" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="GE_Bunting FD">
+      <EffectLayer>
+        <Effect ref="14" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Stamped 4th July High Density Spinner L">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel Stick H 1">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel Stick H 2">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel Stick H 3">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel Stick H 4">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="FrontRail">
+      <EffectLayer>
+        <Effect ref="11" name="SingleStrand" startTime="0" endTime="30000" palette="0"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Rooflines">
+      <EffectLayer>
+        <Effect ref="15" name="SingleStrand" startTime="0" endTime="30000" palette="0"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel_Corner UL">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel_Corner UR">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel_Half UL">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Star Spiral 5">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Tree Spiral 5">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Twizzel Stick H 5">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel_Corner NL">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel_Corner NR">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel_Half NL">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel_Half NR">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Twizzel_Half UR">
+      <EffectLayer>
+        <Effect ref="9" name="State" startTime="0" endTime="30025" palette="1"/>
+      </EffectLayer>
+    </Element>
+    <Element type="model" name="Vert1S">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Vert2S">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Vert3S">
+      <EffectLayer/>
+    </Element>
+    <Element type="model" name="Vert4S">
+      <EffectLayer/>
+    </Element>
+  </ElementEffects>
+  <lastView>1</lastView>
+  <TimingTags>
+    <Tag number="0" position="-1"/>
+    <Tag number="1" position="-1"/>
+    <Tag number="2" position="-1"/>
+    <Tag number="3" position="-1"/>
+    <Tag number="4" position="-1"/>
+    <Tag number="5" position="-1"/>
+    <Tag number="6" position="-1"/>
+    <Tag number="7" position="-1"/>
+    <Tag number="8" position="-1"/>
+    <Tag number="9" position="-1"/>
+  </TimingTags>
+</xsequence>
