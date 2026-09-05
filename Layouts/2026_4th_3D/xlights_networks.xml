@@ -72,10 +72,10 @@
     <network ComPort="192.168.25.100" BaudRate="67" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="10200" Name="BB17 Side" Description="B17 Roof" Type="Ethernet" Vendor="ILightThat" Model="Baldrick17" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.102" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.102" BaudRate="10200" NetworkType="DDP" MaxChannels="7347"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.102" BaudRate="10200" NetworkType="DDP" MaxChannels="6567"/>
   </Controller>
-  <Controller Id="68" Name="K16Deck" Description="" Type="Ethernet" Vendor="KulpLights" Model="K16" Variant="K16-Pro" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="xLights Only" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.130" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.130" BaudRate="68" NetworkType="DDP" MaxChannels="6600"/>
+  <Controller Id="68" Name="K16Deck" Description="" Type="Ethernet" Vendor="KulpLights" Model="K16" Variant="K16-Pro" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.130" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.130" BaudRate="68" NetworkType="DDP" MaxChannels="7380"/>
   </Controller>
   <Controller Id="10100" Name="K32LRRoof" Description="" Type="Ethernet" Vendor="KulpLights" Model="K32" Variant="K32-Pro" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.101" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.101" BaudRate="10100" NetworkType="DDP" MaxChannels="12105"/>
@@ -114,7 +114,7 @@
     <network ComPort="192.168.25.110" BaudRate="31" NetworkType="E131" MaxChannels="510"/>
   </Controller>
   <Controller Id="12000" Name="WB48Trees" Description="" Type="Ethernet" Vendor="Wallys Lights" Model="WB48" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="0" IP="192.168.25.120" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="0" ComPort="192.168.25.120" BaudRate="12000" NetworkType="DDP" MaxChannels="19200"/>
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.120" BaudRate="12000" NetworkType="DDP" MaxChannels="19200"/>
   </Controller>
   <testpreset name="Christmas2015"/>
   <testpreset name="2015 house"/>

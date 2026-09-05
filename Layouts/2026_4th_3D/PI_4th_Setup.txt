@@ -1,0 +1,23 @@
+The 0, 0, 0 point is 5' below the first floor line, at the junction of the deck and the house.
+
+Important Z values:
+   0 - front wall
+-152 - US R wall
+  62 - Upper deck front
+
+Important X values:
+   0 - L/R house split
+-188 - L side of decks
+-126 - Kit / RB wall
+ 125 - Roof middle
+ 255 - F Wall
+ 304 - F Rail
+
+Important Y Values
+ 210 - Upper roof bottom
+ 235 - Upper roof BR peak
+ 165 - Upper deck railing
+ 135 - Upper deck floor
+ 130 - Upper deck floor bottom
+ 125 - LR Roof bottom
+
