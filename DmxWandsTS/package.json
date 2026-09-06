@@ -1,0 +1,25 @@
+{
+  "name": "dmxwandsts",
+  "version": "0.1.0",
+  "description": "Generate xLights color + trigger effects for DMX wireless wands / bracelets / floods from a rendered .fseq",
+  "private": true,
+  "main": "dist/cli.js",
+  "bin": {
+    "dmxwands": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "example": "tsc && node dist/cli.js --showdir ../xLTS/ShowFolders/EffectsOnStars --fseq ../xLTS/ShowFolders/EffectsOnStars/EffectsOnStars.fseq --inxsq ../xLTS/ShowFolders/EffectsOnStars/EffectsOnStars.xsq --timingtrack SectionLabel --outxsq ../xLTS/TempResults/DmxWands_EffectsOnStars.xsq"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "commander": "^11.1.0",
+    "xllayoutcalcs": "file:libs/xllayoutcalcs-0.3.3.tgz",
+    "zstddec": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.3"
+  }
+}
