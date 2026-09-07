@@ -1,0 +1,24 @@
+{
+  "name": "layoututilsts",
+  "version": "0.1.0",
+  "description": "xLights layout (xlights_rgbeffects.xml) bulk editing, 3D transforms, and format conversion",
+  "private": true,
+  "main": "dist/cli.js",
+  "bin": {
+    "xllayout": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "example": "tsc && node dist/cli.js --layout ../Layouts/2026_Base/xlights_rgbeffects.xml --outlayout ../xLTS/TempResults/LayoutUtilsTS_example.xml --transform \"translate:0,0,-300;roty:30\" --edit \"Type=Obj:Brighten:30;Model=Arch Hedge.*:dimcurveall:-60,2.2\""
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "commander": "^11.1.0",
+    "xllayoutcalcs": "file:libs/xllayoutcalcs-0.4.0-dev.1.tgz"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.3"
+  }
+}
