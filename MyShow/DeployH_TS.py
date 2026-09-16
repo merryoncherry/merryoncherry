@@ -12,7 +12,7 @@
 
 import subprocess
 
-DEPLOY = False
+DEPLOY = True # False
 OUTFORMAT = "keep"
 
 srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2026_Base\\xlights_networks.xml"
