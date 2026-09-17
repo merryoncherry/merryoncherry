@@ -128,7 +128,6 @@ export class FSeqReader {
         hdr.majver = b0[7];
         const fixedHeaderLen = u16(b0, 8);
         hdr.channels = u32(b0, 10);
-        hdr.stepSize = Math.floor((hdr.channels + 3) / 4) * 4;
         hdr.frames = u32(b0, 14);
         hdr.msPerFrame = b0[18];
 
@@ -136,9 +135,15 @@ export class FSeqReader {
 
         if (hdr.majver === 1) {
             // V1: no compression, no sparse ranges; data is one big block.
+            // xLights pads a full-sequence render to a multiple of 4 channels before writing.
+            hdr.stepSize = Math.floor((hdr.channels + 3) / 4) * 4;
             hdr.blocks.push({ frameNum: 0, blockSize: hdr.frames * hdr.stepSize });
             hdr.ranges.push({ start: 0, count: hdr.channels });
         } else {
+            // V2: the stored channel count is exactly the bytes per frame, with no padding.
+            // For a sparse file (e.g. xLights "Export Model" -> FSEQ) it is the sum of the range
+            // lengths, which need not be a multiple of 4. Rounding it up misaligns every frame.
+            hdr.stepSize = hdr.channels;
             const compAndBlocks = full[20];
             hdr.compression = compAndBlocks & 15;
             let nblocks = (compAndBlocks & 240) * 16;
