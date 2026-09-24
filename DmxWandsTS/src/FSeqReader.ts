@@ -131,19 +131,20 @@ export class FSeqReader {
         hdr.frames = u32(b0, 14);
         hdr.msPerFrame = b0[18];
 
+        // Bytes per frame is exactly the stored channel count, as FPP's own reader treats it.
+        // xLights pads full renders to a multiple of 4 before writing, but sparse v2 files
+        // (Export Model -> "FPP Compressed Sub sequence", or a Save with the "V2 ZSTD/sparse"
+        // preference) store the sum of the sparse range lengths, which is not padded.
+        // Rounding up here misaligned every frame of such files.
+        hdr.stepSize = hdr.channels;
+
         const full = await this.readAt(hdr.chdataOffset, 0);
 
         if (hdr.majver === 1) {
             // V1: no compression, no sparse ranges; data is one big block.
-            // xLights pads a full-sequence render to a multiple of 4 channels before writing.
-            hdr.stepSize = Math.floor((hdr.channels + 3) / 4) * 4;
             hdr.blocks.push({ frameNum: 0, blockSize: hdr.frames * hdr.stepSize });
             hdr.ranges.push({ start: 0, count: hdr.channels });
         } else {
-            // V2: the stored channel count is exactly the bytes per frame, with no padding.
-            // For a sparse file (e.g. xLights "Export Model" -> FSEQ) it is the sum of the range
-            // lengths, which need not be a multiple of 4. Rounding it up misaligns every frame.
-            hdr.stepSize = hdr.channels;
             const compAndBlocks = full[20];
             hdr.compression = compAndBlocks & 15;
             let nblocks = (compAndBlocks & 240) * 16;
