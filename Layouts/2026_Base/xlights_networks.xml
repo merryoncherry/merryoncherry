@@ -8,9 +8,6 @@
   <Controller Id="800" Name="Wally_Lab" Description="WB1616_12V_DMX Lab" Type="Ethernet" Vendor="Wallys Lights" Model="WB1616" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Inactive" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.8" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.8" BaudRate="800" NetworkType="DDP" MaxChannels="1"/>
   </Controller>
-  <Controller Id="22200" Name="B8 Spare" Description="B8 F Yard Helper (Former)" Type="Ethernet" Vendor="ILightThat" Model="Baldrick8" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Inactive" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.222" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
-    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.222" BaudRate="22200" NetworkType="DDP" MaxChannels="1"/>
-  </Controller>
   <Controller Id="1" Name="Falcon16_DMX" Description="" Type="Ethernet" Vendor="Falcon" Model="F16V4" Variant="16 Local Ports" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.5" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ComPort="192.168.25.5" BaudRate="500" NetworkType="E131" MaxChannels="510"/>
   </Controller>
@@ -241,6 +238,15 @@
     <network ComPort="192.168.25.60" BaudRate="25" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.60" BaudRate="26" NetworkType="E131" MaxChannels="510"/>
     <network ComPort="192.168.25.60" BaudRate="27" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.60" BaudRate="28" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.60" BaudRate="29" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.60" BaudRate="30" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.60" BaudRate="31" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.60" BaudRate="32" NetworkType="E131" MaxChannels="510"/>
+    <network ComPort="192.168.25.60" BaudRate="33" NetworkType="E131" MaxChannels="510"/>
+  </Controller>
+  <Controller Id="22200" Name="B8 Spare" Description="B8 F Yard Helper (Former)" Type="Ethernet" Vendor="ILightThat" Model="Baldrick8" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.222" Protocol="DDP" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
+    <network ChannelsPerPacket="1440" KeepChannelNumbers="1" ComPort="192.168.25.222" BaudRate="22200" NetworkType="DDP" MaxChannels="5940"/>
   </Controller>
   <Controller Id="45" Name="HP12V48_WFenceFlag" Description="W Fence Flag" Type="Ethernet" Vendor="HinksPix" Model="PRO V3" Variant="" AutoSize="1" FromBase="0" FullxLightsControl="TRUE" DefaultBrightnessUnderFullControl="100" DefaultGammaUnderFullControl="1" ActiveState="Active" AutoLayout="1" AutoUpload="0" SuppressDuplicates="0" Monitor="1" IP="192.168.25.100" Protocol="E131" FPPProxy="" Priority="100" Version="1" Expanded="FALSE" UPS="FALSE" ForceLocalIP="">
     <network ComPort="192.168.25.100" BaudRate="1" NetworkType="E131" MaxChannels="510"/>
