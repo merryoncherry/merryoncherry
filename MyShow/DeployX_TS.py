@@ -21,16 +21,16 @@
 import os
 import subprocess
 
-DEPLOY = False
+DEPLOY = True
 OUTFORMAT = "keep"
 
 srcnet="c:\\users\\chuck\\documents\\xlightsShows\\2026_Base\\xlights_networks.xml"
 intnet="c:\\users\\chuck\\documents\\xlightsShows\\2026_Xmas\\xlights_networks.xml"
-dstnet="\\\\asustuf\\c\\users\\ezrgb\\documents\\xlightsShows\\2026_Xmas\\xlights_networks.xml"
+dstnet="\\\\asustuf.local\\c\\users\\ezrgb\\documents\\xlightsShows\\2026_Xmas\\xlights_networks.xml"
 
 srcrgb="c:\\users\\chuck\\documents\\xlightsShows\\2026_Base\\xlights_rgbeffects.xml"
 intrgb="c:\\users\\chuck\\documents\\xlightsShows\\2026_Xmas\\xlights_rgbeffects.xml"
-dstrgb="\\\\asustuf\\c\\users\\ezrgb\\documents\\xlightsShows\\2026_Xmas\\xlights_rgbeffects.xml"
+dstrgb="\\\\asustuf.local\\c\\users\\ezrgb\\documents\\xlightsShows\\2026_Xmas\\xlights_rgbeffects.xml"
 
 os.makedirs(os.path.dirname(intrgb), exist_ok=True)
 
